@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026 자소서 바이트 계산기 및 블라인드 금칙어 검사기</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 760px; margin: 40px auto; padding: 0 20px; color: #333; line-height: 1.6; }
+    h1 { font-size: 1.6rem; color: #111; margin-bottom: 8px; }
+    p.desc { color: #666; margin-bottom: 20px; font-size: 0.95rem; }
+    textarea { width: 100%; height: 220px; padding: 14px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; box-sizing: border-box; resize: vertical; }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 20px 0; }
+    .stat-card { background: #f8f9fa; border: 1px solid #eee; border-radius: 8px; padding: 14px; text-align: center; }
+    .stat-card span { display: block; font-size: 0.85rem; color: #666; margin-bottom: 4px; }
+    .stat-card strong { font-size: 1.25rem; color: #2563eb; }
+    .alert-box { background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 14px; margin-top: 15px; display: none; }
+    .alert-title { font-weight: bold; color: #991b1b; margin-bottom: 6px; }
+    .alert-words { color: #dc2626; font-size: 0.95rem; word-break: break-all; }
+    .content-area { margin-top: 40px; border-top: 1px solid #eee; padding-top: 25px; }
+    .content-area h2 { font-size: 1.2rem; color: #222; margin-top: 20px; }
+  </style>
+</head>
+<body>
+
+  <h1>자소서 바이트(Byte) 및 블라인드 금칙어 검사기</h1>
+  <p class="desc">글자 수와 바이트(EUC-KR 2Byte / UTF-8 3Byte)를 실시간으로 확인하고, 블라인드 채용 위반 요소를 점검하세요.</p>
+
+  <textarea id="textInput" placeholder="자기소개서 본문을 입력하세요..."></textarea>
+
+  <div class="stats-grid">
+    <div class="stat-card"><span>공백 포함</span><strong id="charWithSpace">0</strong>자</div>
+    <div class="stat-card"><span>공백 제외</span><strong id="charWithoutSpace">0</strong>자</div>
+    <div class="stat-card"><span>일반 바이트 (2Byte)</span><strong id="byte2">0</strong>B</div>
+    <div class="stat-card"><span>웹 바이트 (3Byte)</span><strong id="byte3">0</strong>B</div>
+  </div>
+
+  <div id="alertBox" class="alert-box">
+    <div class="alert-title">⚠️ 블라인드 주의 단어가 감지되었습니다:</div>
+    <div id="alertWords" class="alert-words"></div>
+  </div>
+
+  <div class="content-area">
+    <h2>채용 사이트별 바이트(Byte) 기준 차이</h2>
+    <p>사람인, 잡코리아, 공공기관 채용 포털 등 사이트마다 한글을 처리하는 바이트 단위가 다릅니다. 전통적인 <strong>EUC-KR 방식은 한글 1글자를 2바이트</strong>로 계산하며, 최신 웹 표준인 <strong>UTF-8 방식은 한글 1글자를 3바이트</strong>로 계산합니다. 본 검사기에서는 두 기준을 실시간으로 함께 제공하므로 마감 직전 입력 초과 오류를 방지할 수 있습니다.</p>
+
+    <h2>블라인드 채용 위반 방지 가이드</h2>
+    <p>공공기관 및 주요 대기업의 블라인드 채용 규정상 부모의 직업(공무원, 대학교수, 의사 등), 출신 지역(서울, 부산, 호남 등), 가족 관계 등을 간접적으로 유추할 수 있는 키워드를 서술할 경우 감점 또는 불합격 처리될 수 있습니다. 작성 후 반드시 위 검사 창을 통해 위험 단어가 포함되어 있는지 확인하시기 바랍니다.</p>
+  </div>
+
+  <script>
+    const forbiddenKeywords = ['아버지', '어머니', '부모님', '공무원', '의사', '교수', '변호사', '서울대', '연세대', '고려대', '지방대', '외삼촌', '친척'];
+
+    const textInput = document.getElementById('textInput');
+    const charWithSpace = document.getElementById('charWithSpace');
+    const charWithoutSpace = document.getElementById('charWithoutSpace');
+    const byte2 = document.getElementById('byte2');
+    const byte3 = document.getElementById('byte3');
+    const alertBox = document.getElementById('alertBox');
+    const alertWords = document.getElementById('alertWords');
+
+    textInput.addEventListener('input', () => {
+      const val = textInput.value;
+      charWithSpace.textContent = val.length;
+      charWithoutSpace.textContent = val.replace(/\s/g, '').length;
+
+      let b2 = 0;
+      let b3 = 0;
+      for (let i = 0; i < val.length; i++) {
+        const code = val.charCodeAt(i);
+        if (code <= 0x007f) {
+          b2 += 1;
+          b3 += 1;
+        } else if (code <= 0x07ff) {
+          b2 += 2;
+          b3 += 2;
+        } else if (code <= 0xffff) {
+          b2 += 2;
+          b3 += 3;
+        } else {
+          b2 += 2;
+          b3 += 4;
+        }
+      }
+      byte2.textContent = b2;
+      byte3.textContent = b3;
+
+      const detected = forbiddenKeywords.filter(k => val.includes(k));
+      if (detected.length > 0 && val.trim().length > 0) {
+        alertBox.style.display = 'block';
+        alertWords.textContent = detected.join(', ');
+      } else {
+        alertBox.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
