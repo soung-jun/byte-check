@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="0-02yaJ9QELBy-nilX0MwXevF4DQaPD_SAwv2MlbjnI" />
-  <title>Global Byte & Character Counter | 자소서 바이트 계산기</title>
-  <meta name="description" content="실시간 글자수 세기, EUC-KR 2Byte/UTF-8 3Byte 계산기, 블라인드 금칙어 검사기 및 글로벌 이력서 글자수/단어수(Word Count) 분석 도구.">
+  <title>2026 자소서 바이트 계산기 & 글로벌 글자수/단어수 검사기</title>
+  <meta name="description" content="EUC-KR 2바이트 및 UTF-8 3바이트 기준 실시간 자소서 바이트 계산기, 영문 단어수(Word Count) 분석, 공기업/대기업 블라인드 금칙어 자동 필터링 도구.">
   <style>
     :root {
       --primary: #2563eb;
@@ -18,32 +18,30 @@
       --danger-bg: #fef2f2;
       --danger-border: #fecaca;
       --danger-text: #b91c1c;
-      --badge-bg: #e0e7ff;
-      --badge-text: #3730a3;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; padding: 24px 16px; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.75; padding: 24px 16px; }
     .container { max-width: 900px; margin: 0 auto; }
     
-    /* Top Bar & Language Selector */
+    /* Top Bar & Header */
     .top-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
-    .logo-badge { font-weight: 700; color: var(--primary); font-size: 1.1rem; }
-    .lang-btn { padding: 6px 14px; border-radius: 20px; border: 1px solid var(--border); background: #fff; color: var(--text); font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+    .logo-badge { font-weight: 800; color: var(--primary); font-size: 1.15rem; }
+    .lang-btn { padding: 6px 14px; border-radius: 20px; border: 1px solid var(--border); background: #fff; color: var(--text); font-size: 0.85rem; font-weight: 600; cursor: pointer; }
     .lang-btn:hover { background: #f1f5f9; }
 
     header { text-align: center; margin-bottom: 24px; }
-    h1 { font-size: 1.95rem; font-weight: 800; color: #1e293b; margin-bottom: 8px; letter-spacing: -0.5px; }
-    header p { color: var(--muted); font-size: 1rem; }
+    h1 { font-size: 1.95rem; font-weight: 800; color: #1e293b; margin-bottom: 8px; }
+    header p { color: var(--muted); font-size: 0.98rem; }
     
     /* Ad Slots */
-    .ad-placeholder { background: #f1f5f9; border: 1px dashed #cbd5e1; border-radius: 8px; padding: 18px; text-align: center; color: #94a3b8; font-size: 0.85rem; margin-bottom: 20px; }
+    .ad-placeholder { background: #f1f5f9; border: 1px dashed #cbd5e1; border-radius: 8px; padding: 16px; text-align: center; color: #94a3b8; font-size: 0.85rem; margin-bottom: 20px; }
     
-    /* Input Box */
+    /* Tool Input */
     .input-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.04); margin-bottom: 20px; }
     textarea { width: 100%; height: 260px; padding: 14px; border: 1px solid var(--border); border-radius: 8px; font-size: 1rem; color: var(--text); resize: vertical; outline: none; transition: border-color 0.2s; }
     textarea:focus { border-color: var(--primary); }
     .btn-group { display: flex; justify-content: flex-end; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
-    .btn { padding: 8px 16px; border-radius: 6px; border: 1px solid var(--border); background: #fff; color: var(--text); font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.15s; }
+    .btn { padding: 8px 16px; border-radius: 6px; border: 1px solid var(--border); background: #fff; color: var(--text); font-size: 0.9rem; font-weight: 600; cursor: pointer; }
     .btn:hover { background: #f1f5f9; }
     .btn.primary { background: var(--primary); color: #fff; border-color: var(--primary); }
     .btn.primary:hover { background: var(--primary-hover); }
@@ -52,7 +50,7 @@
     .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 20px; }
     @media (max-width: 640px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
     .stat-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px 12px; text-align: center; }
-    .stat-card .label { font-size: 0.82rem; color: var(--muted); margin-bottom: 4px; font-weight: 600; text-transform: uppercase; }
+    .stat-card .label { font-size: 0.82rem; color: var(--muted); margin-bottom: 4px; font-weight: 600; }
     .stat-card .val { font-size: 1.6rem; font-weight: 800; color: var(--primary); }
     .stat-card .unit { font-size: 0.82rem; color: var(--muted); margin-left: 2px; }
 
@@ -61,27 +59,22 @@
     .alert-title { font-weight: 700; color: var(--danger-text); margin-bottom: 6px; font-size: 0.95rem; }
     .alert-words { color: #dc2626; font-size: 0.95rem; word-break: break-all; }
 
-    /* Rich Guide Content for AdSense Approval */
-    .guide-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 36px 28px; margin-top: 24px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
-    .guide-card h2 { font-size: 1.35rem; color: #1e293b; margin: 28px 0 12px 0; border-left: 4px solid var(--primary); padding-left: 12px; }
-    .guide-card h2:first-child { margin-top: 0; }
-    .guide-card h3 { font-size: 1.1rem; color: #334155; margin: 20px 0 8px 0; }
-    .guide-card p { color: var(--muted); margin-bottom: 14px; font-size: 0.96rem; line-height: 1.8; }
-    .guide-card ul { margin: 10px 0 18px 22px; color: var(--muted); font-size: 0.96rem; }
-    .guide-card li { margin-bottom: 8px; }
-    .callout { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px 20px; margin: 18px 0; font-size: 0.94rem; color: #1e40af; line-height: 1.7; }
+    /* AdSense SEO Content Cards */
+    .section-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 32px 24px; margin-top: 24px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+    .section-card h2 { font-size: 1.35rem; color: #1e293b; margin: 24px 0 12px 0; border-left: 4px solid var(--primary); padding-left: 10px; }
+    .section-card h2:first-child { margin-top: 0; }
+    .section-card h3 { font-size: 1.05rem; color: #334155; margin: 18px 0 8px 0; }
+    .section-card p { color: var(--muted); margin-bottom: 12px; font-size: 0.95rem; }
+    .section-card ul { margin: 8px 0 16px 20px; color: var(--muted); font-size: 0.95rem; }
+    .section-card li { margin-bottom: 6px; }
+    .callout { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 14px 18px; margin: 16px 0; font-size: 0.92rem; color: #1e40af; }
 
-    /* Footer & Legal Modals */
-    footer { text-align: center; margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border); color: #94a3b8; font-size: 0.85rem; }
-    .footer-links { margin-bottom: 12px; }
-    .footer-links a { color: var(--muted); text-decoration: none; margin: 0 10px; font-size: 0.85rem; cursor: pointer; }
-    .footer-links a:hover { text-decoration: underline; color: var(--primary); }
-    
-    .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 999; justify-content: center; align-items: center; }
-    .modal-content { background: #fff; width: 90%; max-width: 620px; max-height: 80vh; overflow-y: auto; padding: 26px; border-radius: 10px; box-shadow: 0 10px 25px rgba(0,0,0,0.25); }
-    .modal-content h3 { font-size: 1.25rem; margin-bottom: 14px; color: #0f172a; }
-    .modal-content p { font-size: 0.92rem; color: var(--muted); line-height: 1.75; margin-bottom: 12px; }
-    .modal-close { display: block; margin: 20px auto 0 auto; padding: 8px 24px; background: var(--primary); color: #fff; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; }
+    /* Legal Policy Sections directly visible */
+    .legal-card { background: #fafafa; border: 1px solid var(--border); border-radius: 10px; padding: 22px; margin-top: 20px; font-size: 0.9rem; color: var(--muted); }
+    .legal-card h3 { font-size: 1.1rem; color: #1e293b; margin-bottom: 10px; }
+    .legal-card p { margin-bottom: 8px; line-height: 1.6; }
+
+    footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); color: #94a3b8; font-size: 0.85rem; }
   </style>
 </head>
 <body>
@@ -89,18 +82,18 @@
 <div class="container">
   <div class="top-nav">
     <span class="logo-badge">⚡ ByteCheck Global</span>
-    <button class="lang-btn" id="langSwitch" onclick="toggleLanguage()">🌐 English / 한국어</button>
+    <button class="lang-btn" onclick="toggleLanguage()">🌐 English / 한국어</button>
   </div>
 
   <header>
     <h1 id="ui-title">2026 자소서 바이트 계산기 & 블라인드 금칙어 검사기</h1>
-    <p id="ui-desc">채용 포털, 공공기관(NCS), 글로벌 이력서(Resume/CV) 및 SNS 규격 실시간 검사기</p>
+    <p id="ui-desc">채용 포털(EUC-KR 2Byte), 공공기관(UTF-8 3Byte), 영문 이력서(Word Count) 실시간 분석 툴</p>
   </header>
 
   <div class="ad-placeholder">광고 영역 (Google AdSense Slot 1)</div>
 
   <div class="input-card">
-    <textarea id="textInput" placeholder="자기소개서 문항이나 영문 텍스트를 입력하세요. 글자수, 공백, 2Byte/3Byte, 단어수(Words)가 실시간으로 분석됩니다..."></textarea>
+    <textarea id="textInput" placeholder="자기소개서 문항이나 영문 텍스트를 입력하세요. 글자수, 공백, 2Byte/3Byte, 단어수가 실시간으로 계산됩니다..."></textarea>
     <div class="btn-group">
       <button class="btn" id="btnSample">예시 문장 넣기</button>
       <button class="btn" id="btnClear">초기화</button>
@@ -108,7 +101,6 @@
     </div>
   </div>
 
-  <!-- Realtime Analytics Grid -->
   <div class="stats-grid">
     <div class="stat-card">
       <div class="label" id="lbl-char-space">공백 포함 글자수</div>
@@ -119,16 +111,16 @@
       <div><span class="val" id="charWithoutSpace">0</span><span class="unit">자</span></div>
     </div>
     <div class="stat-card">
-      <div class="label" id="lbl-words">영문 단어수 (Words)</div>
+      <div class="label" id="lbl-words">영문 단어수 (Word Count)</div>
       <div><span class="val" id="wordCount">0</span><span class="unit">개</span></div>
     </div>
     <div class="stat-card">
       <div class="label" id="lbl-byte2">일반 바이트 (2Byte EUC-KR)</div>
-      <div><span class="val" id="byte2">0</span><span class="unit">B</span></div>
+      <div><span class="val" id="byte2">0</span><span class="unit">Byte</span></div>
     </div>
     <div class="stat-card">
       <div class="label" id="lbl-byte3">웹 표준 바이트 (3Byte UTF-8)</div>
-      <div><span class="val" id="byte3">0</span><span class="unit">B</span></div>
+      <div><span class="val" id="byte3">0</span><span class="unit">Byte</span></div>
     </div>
     <div class="stat-card">
       <div class="label" id="lbl-reading-time">예상 읽기 시간</div>
@@ -137,81 +129,59 @@
   </div>
 
   <div id="alertBox" class="alert-box">
-    <div class="alert-title" id="alertTitle">⚠️ 블라인드 채용 감점 위험 단어가 감지되었습니다:</div>
+    <div class="alert-title">⚠️ 블라인드 채용 위반 위험 단어가 감지되었습니다:</div>
     <div id="alertWords" class="alert-words"></div>
   </div>
 
-  <!-- Rich Information Guide Area for 100% AdSense Approval -->
-  <div class="guide-card" id="guideArea">
-    <h2>채용 시스템별 바이트(Byte) 규격과 인코딩 차이 가이드</h2>
-    <p>사람인, 잡코리아, 공공기관 채용 포털 및 글로벌 기업의 입사지원 시스템은 텍스트를 저장하고 처리하는 서버 인코딩 규격에 따라 바이트 계산 방식이 상이합니다. 입사 지원 마감 직전 서버 초과 오류를 막기 위해서는 두 가지 기준의 차이를 반드시 사전에 점검해야 합니다.</p>
+  <!-- 본문 가이드: 스크롤 내리면 바로 보임 -->
+  <div class="section-card">
+    <h2>취업 채용 시스템별 바이트(Byte) 계산 기준과 인코딩 차이</h2>
+    <p>국내 대다수의 취업 포털(사람인, 잡코리아, 인크루트 등)과 공공기관 채용 홈페이지(NCS), 대기업 자체 입사지원 시스템은 서버의 문자 인코딩 설정에 따라 바이트 계산 방식이 상이합니다. 입사 지원 마감 10분 전 "허용된 바이트를 초과하였습니다"라는 오류 메시지가 발생하는 이유가 바로 이 인코딩 차이 때문입니다.</p>
     
     <div class="callout">
-      <strong>📌 인코딩 방식별 핵심 계산 원리</strong><br>
-      • <strong>EUC-KR (국내 취업 포털 다수):</strong> 알파벳, 숫자, 특수기호, 공백은 1바이트, 한글은 <strong>2바이트</strong>로 처리됩니다.<br>
-      • <strong>UTF-8 (웹 표준 및 공공기관 시스템 확대):</strong> 영문/기호는 1바이트, 한글 1글자는 <strong>3바이트</strong>로 처리됩니다.<br>
-      • <strong>줄바꿈(Enter) 규격:</strong> 윈도우 기반 시스템은 \r\n(2바이트), 유닉스/웹 기반 시스템은 \n(1바이트)로 계산됩니다.
+      <strong>📌 문자 인코딩별 계산 원리 요약</strong><br>
+      • <strong>EUC-KR (2Byte 체제):</strong> 영문, 숫자, 특수기호, 공백은 1Byte / 한글 1글자는 <strong>2Byte</strong>로 계산됩니다.<br>
+      • <strong>UTF-8 (3Byte 체제):</strong> 영문, 숫자, 공백은 1Byte / 한글 1글자는 <strong>3Byte</strong>로 계산됩니다.<br>
+      • <strong>줄바꿈(Enter):</strong> 윈도우 채용창은 \r\n(2Byte), 리눅스/웹 표준 채용창은 \n(1Byte)로 처리됩니다.
     </div>
 
     <h3>공공기관(NCS) 및 대기업 블라인드 채용 3대 감점 기준</h3>
-    <p>공정 채용 기준에 따라 서류 평가 위원에게 지원자의 사적 배경을 암시할 수 있는 정보 서술 시 심각한 감점 또는 직권 탈락 조치가 내려집니다. 본 도구는 다음 세 가지 카테고리의 위험 키워드를 실시간으로 감지합니다.</p>
+    <p>블라인드 채용 제도는 직무 역량 중심의 공정한 평가를 위해 지원자의 사적 배경 노출을 엄격히 금지합니다. 서류 평가 위원들이 가장 민감하게 확인하는 감점 항목은 다음과 같습니다.</p>
     <ul>
-      <li><strong>가족 배경 및 직위:</strong> 부모 및 친인척의 직업(공무원, 대학교수, 의사, 법조인 등)을 직접적으로 나타내거나 암시하는 서술</li>
-      <li><strong>학벌 및 출신 학교명:</strong> 대학교 및 대학원 고유 명칭(서울대, 연세대 등) 및 단과대, 동아리 명칭 간접 기재</li>
-      <li><strong>출신 지역 및 연고지:</strong> 시·도 단위의 출신 지역(경상도, 호남 등)이나 특정 고등학교 연고지 언급</li>
+      <li><strong>가족 관계 및 직업 노출:</strong> '공무원이신 아버지의 성실함...', '의사이신 어머니를 보며...' 등 부모 및 친인척의 직업(판사, 변호사, 교수, 대기업 임원 등)을 직·간접적으로 암시하는 행위는 서류 직권 탈락 사유가 될 수 있습니다.</li>
+      <li><strong>학벌 및 출신 학교명:</strong> 서울대, 연세대, 고려대 등 대학교 공식 명칭은 물론, 단과대 별칭, 캠퍼스 소재지, 교내 유명 학회 이름을 언급해서는 안 됩니다.</li>
+      <li><strong>출신 지역 및 연고:</strong> 영남, 호남, 강원 등 지원자의 연고지를 드러내는 문장은 감점 요인입니다.</li>
     </ul>
 
-    <h2>Global Character & Word Counting Standards (International Resumes)</h2>
-    <p>For international applicants drafting Cover Letters, CVs, or College Application Essays, character and word limits are governed by different strict rules. Word Count is standard for Western resumes and academic essays, while character count (including spaces) strictly dictates social platforms like X (formerly Twitter, 280 characters), LinkedIn postings, and Google Search meta tags.</p>
-    <p>This utility utilizes real-time UTF-8 string traversal to compute memory consumption alongside lexical token separation for word count metrics, ensuring zero discrepancies across cross-platform submissions.</p>
-
-    <h3>데이터 보안 및 안전성 안내</h3>
-    <p>본 검사기에 입력되는 모든 자기소개서 및 영문 텍스트는 지원자의 컴퓨터 브라우저 내부(Client-side JavaScript)에서만 연산됩니다. 입력된 데이터는 어떤 외부 서버나 데이터베이스로도 전송되지 않으므로 기밀 내용이 안전하게 보호됩니다.</p>
+    <h2>International Resume, CV & Essay Word Counting Standards</h2>
+    <p>When preparing documents for international applications (Cover Letters, Resumes, and Statement of Purpose), word count is strictly enforced alongside character limits. Western recruiters evaluate readability and lexical density via Word Count, while social platforms (such as X/Twitter and LinkedIn) adhere to strict character bounds.</p>
   </div>
 
   <div class="ad-placeholder">광고 영역 (Google AdSense Slot 2)</div>
 
+  <!-- 구글 애드센스 필수 법적 고지 3종 (페이지에 바로 노출) -->
+  <div class="legal-card" id="privacy-policy">
+    <h3>개인정보처리방침 (Privacy Policy)</h3>
+    <p><strong>1. 입력 데이터 보안 원칙:</strong> 본 웹도구(ByteCheck Global)는 이용자가 입력창에 작성한 자기소개서 및 영문 텍스트를 일절 수집, 전송, 또는 외부 서버에 저장하지 않습니다. 모든 글자수 및 바이트 계산은 이용자의 웹 브라우저 내부(Client-side JavaScript)에서만 처리됩니다.</p>
+    <p><strong>2. 쿠키(Cookie) 및 제3자 광고 네트워크:</strong> 본 사이트는 서비스 품질 분석 및 Google AdSense를 통한 맞춤형 광고 게재를 목적으로 쿠키를 사용할 수 있습니다. 이용자는 언제든지 브라우저 설정을 통해 쿠키 저장을 거부할 수 있습니다.</p>
+    <p><strong>3. 개인정보 관리책임자:</strong> tiptodaylab@gmail.com</p>
+  </div>
+
+  <div class="legal-card" id="terms-of-service">
+    <h3>이용약관 및 면책조항 (Terms of Service & Disclaimer)</h3>
+    <p><strong>1. 서비스 제공 목적:</strong> 본 서비스는 구직자, 수험생 및 글로벌 문서 작성자의 편의를 돕기 위해 무료로 제공되는 글자수, 바이트, 단어수 검사 보조 도구입니다.</p>
+    <p><strong>2. 결과에 대한 면책:</strong> 본 계산기는 국내외 주요 채용 시스템의 표준 규격을 충실히 반영하고 있으나, 각 기관 및 기업 전산실의 독자적인 인코딩 및 처리 방식에 따라 미세한 편차가 존재할 수 있습니다. 본 사이트 결과값의 신뢰에 따른 입사지원 결과에 대해 서비스 제공자는 법적 책임을 지지 않습니다.</p>
+  </div>
+
+  <div class="legal-card" id="contact-us">
+    <h3>문의하기 (Contact Us)</h3>
+    <p>서비스 이용 중 발생하는 시스템 버그, 개선 제안, 기능 추가 요청 및 광고/제휴 관련 문의는 아래 공식 지원 창구로 문의해 주시기 바랍니다.</p>
+    <p><strong>공식 지원 이메일:</strong> <a href="mailto:tiptodaylab@gmail.com" style="color: var(--primary); text-decoration: none; font-weight: bold;">tiptodaylab@gmail.com</a></p>
+  </div>
+
   <footer>
-    <div class="footer-links">
-      <a onclick="openModal('privacyModal')">개인정보처리방침 (Privacy Policy)</a> |
-      <a onclick="openModal('termsModal')">이용약관 (Terms)</a> |
-      <a onclick="openModal('contactModal')">문의하기 (Contact)</a>
-    </div>
     <p>© 2026 ByteCheck Global. All Rights Reserved. Contact: tiptodaylab@gmail.com</p>
   </footer>
-</div>
-
-<!-- Modal 1: 개인정보처리방침 -->
-<div id="privacyModal" class="modal">
-  <div class="modal-content">
-    <h3>개인정보처리방침 (Privacy Policy)</h3>
-    <p>본 웹사이트(이하 '서비스')는 이용자의 개인정보를 중시하며, 관련 법률을 철저히 준수합니다.</p>
-    <p><strong>1. 텍스트 데이터의 비저장 원칙:</strong> 본 서비스는 이용자가 계산기에 입력하는 텍스트 데이터를 일절 수집, 전송, 저장하지 않습니다. 모든 계산은 브라우저 내부에서 실시간으로 실행됩니다.</p>
-    <p><strong>2. 쿠키(Cookie) 및 제3자 광고 네트워크:</strong> 본 사이트는 Google LLC를 비롯한 제3자 광고 서비스(Google AdSense)를 활용할 수 있습니다. Google은 쿠키를 사용하여 사용자의 이전 방문 기록을 바탕으로 관련성 높은 광고를 게재합니다. 사용자는 브라우저 설정에서 쿠키 저장을 거부할 수 있습니다.</p>
-    <p><strong>3. 책임자 연락처:</strong> tiptodaylab@gmail.com</p>
-    <button class="modal-close" onclick="closeModal('privacyModal')">닫기 (Close)</button>
-  </div>
-</div>
-
-<!-- Modal 2: 이용약관 -->
-<div id="termsModal" class="modal">
-  <div class="modal-content">
-    <h3>이용약관 및 면책조항 (Terms & Disclaimer)</h3>
-    <p><strong>1. 서비스의 목적:</strong> 본 도구는 취업 준비생, 구직자 및 글로벌 이용자의 문서 작성 편의를 위해 무료로 제공되는 글자수, 바이트, 단어수 계산 보조 도구입니다.</p>
-    <p><strong>2. 면책조항:</strong> 본 도구의 연산 기준은 국내외 표준 시스템 규격을 반영하여 정밀하게 제작되었으나, 개별 채용 웹사이트 및 기관의 특수 서버 설정에 따라 미세한 차이가 발생할 수 있습니다. 본 사이트의 수치만을 신뢰하여 발생한 입력 마감 지연이나 결과에 대해 사이트 운영자는 법적 책임을 지지 않습니다.</p>
-    <button class="modal-close" onclick="closeModal('termsModal')">닫기 (Close)</button>
-  </div>
-</div>
-
-<!-- Modal 3: 문의하기 -->
-<div id="contactModal" class="modal">
-  <div class="modal-content">
-    <h3>문의하기 (Contact Us)</h3>
-    <p>서비스 이용 중 발생하는 오류 제보, 새로운 기능 요청, 제휴 및 광고 문의는 아래 공식 지원 이메일로 보내주시기 바랍니다.</p>
-    <p><strong>공식 관리자 이메일:</strong> tiptodaylab@gmail.com</p>
-    <p>보내주신 의견은 검토 후 서비스 개선에 적극 반영됩니다.</p>
-    <button class="modal-close" onclick="closeModal('contactModal')">닫기 (Close)</button>
-  </div>
 </div>
 
 <script>
@@ -239,11 +209,9 @@
     charWithSpace.textContent = val.length.toLocaleString();
     charWithoutSpace.textContent = val.replace(/\s/g, '').length.toLocaleString();
 
-    // 단어수 (Words) 계산
     const words = val.trim().split(/\s+/).filter(w => w.length > 0);
     wordCount.textContent = words.length.toLocaleString();
 
-    // 예상 읽기 시간 (분당 약 400자 기준)
     const seconds = Math.ceil((val.replace(/\s/g, '').length / 400) * 60);
     readingTime.textContent = val.length === 0 ? 0 : seconds;
 
@@ -264,7 +232,6 @@
     byte2.textContent = b2.toLocaleString();
     byte3.textContent = b3.toLocaleString();
 
-    // 금칙어 검사
     const detected = forbiddenKeywords.filter(k => val.includes(k));
     if (detected.length > 0 && val.trim().length > 0) {
       alertBox.style.display = 'block';
@@ -309,7 +276,6 @@
       document.getElementById('lbl-byte2').textContent = "Standard Bytes (EUC-KR)";
       document.getElementById('lbl-byte3').textContent = "UTF-8 Bytes";
       document.getElementById('lbl-reading-time').textContent = "Reading Time (Sec)";
-      document.getElementById('alertTitle').textContent = "⚠️ Blind Recruitment Sensitive Keyword Detected:";
       document.getElementById('btnSample').textContent = "Insert Sample";
       document.getElementById('btnClear').textContent = "Clear";
       document.getElementById('btnCopy').textContent = "Copy Text";
@@ -317,23 +283,19 @@
     } else {
       currentLang = 'ko';
       document.getElementById('ui-title').textContent = "2026 자소서 바이트 계산기 & 블라인드 금칙어 검사기";
-      document.getElementById('ui-desc').textContent = "채용 포털, 공공기관(NCS), 글로벌 이력서(Resume/CV) 및 SNS 규격 실시간 검사기";
+      document.getElementById('ui-desc').textContent = "채용 포털(EUC-KR 2Byte), 공공기관(UTF-8 3Byte), 영문 이력서(Word Count) 실시간 분석 툴";
       document.getElementById('lbl-char-space').textContent = "공백 포함 글자수";
       document.getElementById('lbl-char-nospace').textContent = "공백 제외 글자수";
-      document.getElementById('lbl-words').textContent = "영문 단어수 (Words)";
+      document.getElementById('lbl-words').textContent = "영문 단어수 (Word Count)";
       document.getElementById('lbl-byte2').textContent = "일반 바이트 (2Byte EUC-KR)";
       document.getElementById('lbl-byte3').textContent = "웹 표준 바이트 (3Byte UTF-8)";
       document.getElementById('lbl-reading-time').textContent = "예상 읽기 시간";
-      document.getElementById('alertTitle').textContent = "⚠️ 블라인드 채용 감점 위험 단어가 감지되었습니다:";
       document.getElementById('btnSample').textContent = "예시 문장 넣기";
       document.getElementById('btnClear').textContent = "초기화";
       document.getElementById('btnCopy').textContent = "텍스트 복사";
-      textInput.placeholder = "자기소개서 문항이나 영문 텍스트를 입력하세요. 글자수, 공백, 2Byte/3Byte, 단어수(Words)가 실시간으로 분석됩니다...";
+      textInput.placeholder = "자기소개서 문항이나 영문 텍스트를 입력하세요. 글자수, 공백, 2Byte/3Byte, 단어수가 실시간으로 계산됩니다...";
     }
   }
-
-  function openModal(id) { document.getElementById(id).style.display = 'flex'; }
-  function closeModal(id) { document.getElementById(id).style.display = 'none'; }
 </script>
 
 </body>
