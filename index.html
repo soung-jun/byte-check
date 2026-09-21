@@ -1,98 +1,306 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta name="google-site-verification" content="googlec0ce30aaa4b89eef" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2026 자소서 바이트 계산기 및 블라인드 금칙어 검사기</title>
+  <meta name="google-site-verification" content="googlec0ce30aaa4b89eef" />
+  <title>2026 자소서 바이트 계산기 & 블라인드 금칙어 검사기</title>
+  <meta name="description" content="EUC-KR 2바이트 및 UTF-8 3바이트 기준 실시간 자소서 바이트 계산기, 공백 포함/제외 글자수 세기, 공공기관 및 대기업 블라인드 금칙어 필터링 무료 제공.">
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 760px; margin: 40px auto; padding: 0 20px; color: #333; line-height: 1.6; }
-    h1 { font-size: 1.6rem; color: #111; margin-bottom: 8px; }
-    p.desc { color: #666; margin-bottom: 20px; font-size: 0.95rem; }
-    textarea { width: 100%; height: 220px; padding: 14px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; box-sizing: border-box; resize: vertical; }
-    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 20px 0; }
-    .stat-card { background: #f8f9fa; border: 1px solid #eee; border-radius: 8px; padding: 14px; text-align: center; }
-    .stat-card span { display: block; font-size: 0.85rem; color: #666; margin-bottom: 4px; }
-    .stat-card strong { font-size: 1.25rem; color: #2563eb; }
-    .alert-box { background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 14px; margin-top: 15px; display: none; }
-    .alert-title { font-weight: bold; color: #991b1b; margin-bottom: 6px; }
+    :root {
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --bg-gray: #f8fafc;
+      --card-bg: #ffffff;
+      --border-color: #e2e8f0;
+      --text-main: #0f172a;
+      --text-sub: #475569;
+      --danger-bg: #fef2f2;
+      --danger-border: #fecaca;
+      --danger-text: #b91c1c;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg-gray);
+      color: var(--text-main);
+      line-height: 1.65;
+      padding: 30px 16px;
+    }
+    .container { max-width: 860px; margin: 0 auto; }
+    header { text-align: center; margin-bottom: 24px; }
+    h1 { font-size: 1.85rem; font-weight: 800; color: #1e293b; margin-bottom: 8px; }
+    header p { color: var(--text-sub); font-size: 0.98rem; }
+    .ad-placeholder {
+      background: #f1f5f9;
+      border: 1px dashed #cbd5e1;
+      border-radius: 8px;
+      padding: 16px;
+      text-align: center;
+      color: #94a3b8;
+      font-size: 0.85rem;
+      margin-bottom: 20px;
+    }
+    .input-wrapper {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      margin-bottom: 20px;
+    }
+    textarea {
+      width: 100%;
+      height: 250px;
+      padding: 14px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      font-size: 1rem;
+      color: var(--text-main);
+      resize: vertical;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    textarea:focus { border-color: var(--primary); }
+    .btn-group {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .btn {
+      padding: 8px 16px;
+      border-radius: 6px;
+      border: 1px solid var(--border-color);
+      background: #fff;
+      color: var(--text-main);
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s ease-in-out;
+    }
+    .btn:hover { background: #f1f5f9; }
+    .btn.primary { background: var(--primary); color: #fff; border-color: var(--primary); }
+    .btn.primary:hover { background: var(--primary-hover); }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    @media (max-width: 640px) {
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .stat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 16px 12px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+    }
+    .stat-card .label { font-size: 0.85rem; color: var(--text-sub); margin-bottom: 4px; font-weight: 500; }
+    .stat-card .val { font-size: 1.6rem; font-weight: 700; color: var(--primary); }
+    .stat-card .unit { font-size: 0.85rem; color: var(--text-sub); margin-left: 2px; }
+    .alert-box {
+      background: var(--danger-bg);
+      border: 1px solid var(--danger-border);
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-bottom: 30px;
+      display: none;
+    }
+    .alert-title { font-weight: 700; color: var(--danger-text); margin-bottom: 6px; font-size: 0.95rem; }
     .alert-words { color: #dc2626; font-size: 0.95rem; word-break: break-all; }
-    .content-area { margin-top: 40px; border-top: 1px solid #eee; padding-top: 25px; }
-    .content-area h2 { font-size: 1.2rem; color: #222; margin-top: 20px; }
+    .guide-section {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 30px 24px;
+      margin-top: 24px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    }
+    .guide-section h2 {
+      font-size: 1.3rem;
+      color: #1e293b;
+      margin: 24px 0 10px 0;
+      border-left: 4px solid var(--primary);
+      padding-left: 10px;
+    }
+    .guide-section h2:first-child { margin-top: 0; }
+    .guide-section h3 { font-size: 1.05rem; color: #334155; margin: 18px 0 8px 0; }
+    .guide-section p { color: #475569; margin-bottom: 12px; font-size: 0.95rem; line-height: 1.7; }
+    .guide-section ul { margin: 8px 0 16px 20px; color: #475569; font-size: 0.95rem; }
+    .guide-section li { margin-bottom: 6px; }
+    .info-callout {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: 0.92rem;
+      color: #1e40af;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-color);
+      color: #94a3b8;
+      font-size: 0.85rem;
+    }
   </style>
 </head>
 <body>
 
-  <h1>자소서 바이트(Byte) 및 블라인드 금칙어 검사기</h1>
-  <p class="desc">글자 수와 바이트(EUC-KR 2Byte / UTF-8 3Byte)를 실시간으로 확인하고, 블라인드 채용 위반 요소를 점검하세요.</p>
+<div class="container">
+  <header>
+    <h1>2026 자소서 바이트(Byte) & 블라인드 금칙어 검사기</h1>
+    <p>포털 및 공공기관 채용 규격에 맞춘 2Byte/3Byte 실시간 계산 및 감점 방지 툴</p>
+  </header>
 
-  <textarea id="textInput" placeholder="자기소개서 본문을 입력하세요..."></textarea>
+  <div class="ad-placeholder">광고 영역 (Google AdSense Area)</div>
+
+  <div class="input-wrapper">
+    <textarea id="textInput" placeholder="자기소개서 문항 본문을 여기에 입력하거나 붙여넣으세요. 글자수, 공백, 2Byte/3Byte 용량과 블라인드 금칙어가 실시간으로 계산됩니다..."></textarea>
+    <div class="btn-group">
+      <button class="btn" id="btnSample">예시 문장 넣기</button>
+      <button class="btn" id="btnClear">초기화</button>
+      <button class="btn primary" id="btnCopy">텍스트 복사</button>
+    </div>
+  </div>
 
   <div class="stats-grid">
-    <div class="stat-card"><span>공백 포함</span><strong id="charWithSpace">0</strong>자</div>
-    <div class="stat-card"><span>공백 제외</span><strong id="charWithoutSpace">0</strong>자</div>
-    <div class="stat-card"><span>일반 바이트 (2Byte)</span><strong id="byte2">0</strong>B</div>
-    <div class="stat-card"><span>웹 바이트 (3Byte)</span><strong id="byte3">0</strong>B</div>
+    <div class="stat-card">
+      <div class="label">공백 포함 글자수</div>
+      <div><span class="val" id="charWithSpace">0</span><span class="unit">자</span></div>
+    </div>
+    <div class="stat-card">
+      <div class="label">공백 제외 글자수</div>
+      <div><span class="val" id="charWithoutSpace">0</span><span class="unit">자</span></div>
+    </div>
+    <div class="stat-card">
+      <div class="label">일반 바이트 (2Byte)</div>
+      <div><span class="val" id="byte2">0</span><span class="unit">Byte</span></div>
+    </div>
+    <div class="stat-card">
+      <div class="label">웹 표준 바이트 (3Byte)</div>
+      <div><span class="val" id="byte3">0</span><span class="unit">Byte</span></div>
+    </div>
   </div>
 
   <div id="alertBox" class="alert-box">
-    <div class="alert-title">⚠️ 블라인드 주의 단어가 감지되었습니다:</div>
+    <div class="alert-title">⚠️ 블라인드 채용 위반 위험 단어가 감지되었습니다:</div>
     <div id="alertWords" class="alert-words"></div>
   </div>
 
-  <div class="content-area">
-    <h2>채용 사이트별 바이트(Byte) 기준 차이</h2>
-    <p>사람인, 잡코리아, 공공기관 채용 포털 등 사이트마다 한글을 처리하는 바이트 단위가 다릅니다. 전통적인 <strong>EUC-KR 방식은 한글 1글자를 2바이트</strong>로 계산하며, 최신 웹 표준인 <strong>UTF-8 방식은 한글 1글자를 3바이트</strong>로 계산합니다. 본 검사기에서는 두 기준을 실시간으로 함께 제공하므로 마감 직전 입력 초과 오류를 방지할 수 있습니다.</p>
+  <div class="guide-section">
+    <h2>자소서 바이트(Byte) 계산 기준과 사이트별 차이 완벽 정리</h2>
+    <p>채용 포털과 각 공기업, 대기업 채용 사이트는 한글과 영문, 기호를 처리하는 서버의 문자 인코딩 규격이 서로 다릅니다. 입사지원서 작성란에 명시된 '바이트(Byte)' 제한을 채우다 마감 직전 제출 시 '입력 허용 용량을 초과하였습니다'라는 경고창이 뜨는 원인이 바로 여기에 있습니다.</p>
+    
+    <div class="info-callout">
+      <strong>💡 바이트 계산 핵심 요약</strong><br>
+      - <strong>EUC-KR 기준 (일반 채용 포털):</strong> 영문/숫자/특수문자/공백은 1Byte, 한글은 <strong>2Byte</strong>로 처리됩니다.<br>
+      - <strong>UTF-8 기준 (글로벌 표준 및 공공 포털):</strong> 영문/숫자/공백은 1Byte이지만, 한글 1글자는 <strong>3Byte</strong>로 계산됩니다.
+    </div>
 
-    <h2>블라인드 채용 위반 방지 가이드</h2>
-    <p>공공기관 및 주요 대기업의 블라인드 채용 규정상 부모의 직업(공무원, 대학교수, 의사 등), 출신 지역(서울, 부산, 호남 등), 가족 관계 등을 간접적으로 유추할 수 있는 키워드를 서술할 경우 감점 또는 불합격 처리될 수 있습니다. 작성 후 반드시 위 검사 창을 통해 위험 단어가 포함되어 있는지 확인하시기 바랍니다.</p>
+    <h3>사람인, 잡코리아 vs 공공기관 입사지원 시스템 비교</h3>
+    <p>사람인과 잡코리아 등 국내 주요 채용 포털은 전통적인 2바이트 방식을 주로 채택하고 있습니다. 그러나 최근 클라우드 및 글로벌 웹 표준을 따르는 공공기관(NCS) 채용 홈페이지나 대기업 독자 채용 시스템의 경우 UTF-8(한글 3바이트)을 기준으로 삼는 경우가 점차 확대되고 있습니다. 따라서 공고에 '1,000 Byte 제한'이라고 적혀 있다면 한글 기준 약 330자(UTF-8)에서 500자(EUC-KR) 사이가 되므로, 본 검사기에서 제공하는 두 가지 수치를 모두 확인한 뒤 안전한 마진을 두고 작성하는 것이 가장 안전합니다.</p>
+
+    <h2>공공기관 및 대기업 블라인드 채용 위반 방지 수칙</h2>
+    <p>블라인드 채용은 지원자의 실력과 직무 역량 중심 평가를 목적으로 하므로, 개인의 배경을 유추할 수 있는 일체의 인적 사항 서술을 감점 또는 심각한 경우 서류 탈락 사유로 규정하고 있습니다. 지원서 검토 위원들이 가장 엄격하게 감점하는 3대 금기 사항은 다음과 같습니다.</p>
+    
+    <ul>
+      <li><strong>가족 관계 및 직업 유추 키워드:</strong> '아버지는 공무원으로 평생을...', '의사이신 어머니를 보며...'와 같이 부모 및 친인척의 직업(변호사, 교수, 판검사, 대기업 임원 등)을 기재하는 행위는 직권 탈락 사유입니다.</li>
+      <li><strong>학벌 및 출신 학교명 간접 노출:</strong> 직접적인 학교명(서울대, 연세대, 고려대 등)은 물론, 학교를 유추할 수 있는 단과대 명칭, 동아리 고유명칭, 캠퍼스 소재지 등을 작성해서는 안 됩니다.</li>
+      <li><strong>출신 지역 및 연고지 서술:</strong> '호남 태생으로', '대구에서 초중고를 졸업하고' 등 출신 지역을 명시하는 문장은 원칙적으로 삭제해야 합니다.</li>
+    </ul>
+
+    <h3>자소서 바이트 여유분 관리 팁</h3>
+    <p>시스템에 따라 줄바꿈(엔터키)을 1바이트(\n)로 계산하는 곳이 있는 반면, 윈도우 표준인 2바이트(\r\n)로 계산하는 플랫폼도 존재합니다. 따라서 제한 규격의 95% 내외(예: 1,000바이트 기준 약 950~970바이트)로 문장을 정리하고 단락을 마무리하는 것이 마감 10분 전 서버 에러를 방지하는 최선의 작성 전략입니다.</p>
   </div>
 
-  <script>
-    const forbiddenKeywords = ['아버지', '어머니', '부모님', '공무원', '의사', '교수', '변호사', '서울대', '연세대', '고려대', '지방대', '외삼촌', '친척'];
+  <div class="ad-placeholder">광고 영역 (Google AdSense Area)</div>
 
-    const textInput = document.getElementById('textInput');
-    const charWithSpace = document.getElementById('charWithSpace');
-    const charWithoutSpace = document.getElementById('charWithoutSpace');
-    const byte2 = document.getElementById('byte2');
-    const byte3 = document.getElementById('byte3');
-    const alertBox = document.getElementById('alertBox');
-    const alertWords = document.getElementById('alertWords');
+  <footer>
+    <p>© 2026 자소서 바이트 계산기 & 블라인드 검사기. All Rights Reserved.</p>
+    <p>본 사이트의 데이터는 지원자의 기기 내 브라우저에서만 실시간으로 연산되며, 어떤 텍스트도 서버에 저장되지 않아 보안상 안전합니다.</p>
+  </footer>
+</div>
 
-    textInput.addEventListener('input', () => {
-      const val = textInput.value;
-      charWithSpace.textContent = val.length;
-      charWithoutSpace.textContent = val.replace(/\s/g, '').length;
+<script>
+  const forbiddenKeywords = [
+    '아버지', '어머니', '부모님', '아빠', '엄마', '외삼촌', '친척',
+    '공무원', '의사', '교수', '변호사', '판사', '검사', '회계사',
+    '서울대', '연세대', '고려대', '한양대', '성균관대', '지방대', '명문대',
+    '경상도', '전라도', '강원도', '충청도', '서울 출신', '부산 출신'
+  ];
 
-      let b2 = 0;
-      let b3 = 0;
-      for (let i = 0; i < val.length; i++) {
-        const code = val.charCodeAt(i);
-        if (code <= 0x007f) {
-          b2 += 1;
-          b3 += 1;
-        } else if (code <= 0x07ff) {
-          b2 += 2;
-          b3 += 2;
-        } else if (code <= 0xffff) {
-          b2 += 2;
-          b3 += 3;
-        } else {
-          b2 += 2;
-          b3 += 4;
-        }
-      }
-      byte2.textContent = b2;
-      byte3.textContent = b3;
+  const textInput = document.getElementById('textInput');
+  const charWithSpace = document.getElementById('charWithSpace');
+  const charWithoutSpace = document.getElementById('charWithoutSpace');
+  const byte2 = document.getElementById('byte2');
+  const byte3 = document.getElementById('byte3');
+  const alertBox = document.getElementById('alertBox');
+  const alertWords = document.getElementById('alertWords');
 
-      const detected = forbiddenKeywords.filter(k => val.includes(k));
-      if (detected.length > 0 && val.trim().length > 0) {
-        alertBox.style.display = 'block';
-        alertWords.textContent = detected.join(', ');
+  function updateCounts() {
+    const val = textInput.value;
+    charWithSpace.textContent = val.length.toLocaleString();
+    charWithoutSpace.textContent = val.replace(/\s/g, '').length.toLocaleString();
+
+    let b2 = 0;
+    let b3 = 0;
+
+    for (let i = 0; i < val.length; i++) {
+      const code = val.charCodeAt(i);
+      if (code <= 0x007f) {
+        b2 += 1;
+        b3 += 1;
+      } else if (code <= 0x07ff) {
+        b2 += 2;
+        b3 += 2;
+      } else if (code <= 0xffff) {
+        b2 += 2;
+        b3 += 3;
       } else {
-        alertBox.style.display = 'none';
+        b2 += 2;
+        b3 += 4;
       }
+    }
+
+    byte2.textContent = b2.toLocaleString();
+    byte3.textContent = b3.toLocaleString();
+
+    const detected = forbiddenKeywords.filter(k => val.includes(k));
+    if (detected.length > 0 && val.trim().length > 0) {
+      alertBox.style.display = 'block';
+      alertWords.textContent = detected.join(', ');
+    } else {
+      alertBox.style.display = 'none';
+    }
+  }
+
+  textInput.addEventListener('input', updateCounts);
+
+  document.getElementById('btnClear').addEventListener('click', () => {
+    textInput.value = '';
+    updateCounts();
+    textInput.focus();
+  });
+
+  document.getElementById('btnCopy').addEventListener('click', () => {
+    if (!textInput.value) return;
+    navigator.clipboard.writeText(textInput.value).then(() => {
+      alert('입력된 텍스트가 클립보드에 복사되었습니다.');
     });
-  </script>
+  });
+
+  document.getElementById('btnSample').addEventListener('click', () => {
+    textInput.value = "안녕하십니까. 데이터 분석 직무에 지원한 홍길동입니다. 학부 시절 공공데이터를 활용한 프로젝트를 주도하며 분석 역량을 길렀습니다. 아버지는 공무원으로 30년간 재직하시며 저에게 정직과 원칙을 강조하셨습니다. 서울대 캠퍼스에서 열린 연합 학술제에 참여하여 최우수상을 수상한 경험이 있습니다.";
+    updateCounts();
+  });
+</script>
+
 </body>
 </html>
