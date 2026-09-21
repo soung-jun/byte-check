@@ -64,17 +64,30 @@
     .alert-title { font-weight: 700; color: var(--danger-text); margin-bottom: 6px; font-size: 0.95rem; }
     .alert-words { color: #dc2626; font-size: 0.95rem; word-break: break-all; }
 
-    /* AdSense SEO Content Cards */
+    /* Section Card */
     .section-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 32px 24px; margin-top: 24px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
-    .section-card h2 { font-size: 1.35rem; color: #1e293b; margin: 24px 0 12px 0; border-left: 4px solid var(--primary); padding-left: 10px; }
+    .section-card h2 { font-size: 1.35rem; color: #1e293b; margin: 26px 0 14px 0; border-left: 4px solid var(--primary); padding-left: 10px; }
     .section-card h2:first-child { margin-top: 0; }
-    .section-card h3 { font-size: 1.05rem; color: #334155; margin: 18px 0 8px 0; }
-    .section-card p { color: var(--muted); margin-bottom: 12px; font-size: 0.95rem; }
-    .section-card ul { margin: 8px 0 16px 20px; color: var(--muted); font-size: 0.95rem; }
-    .section-card li { margin-bottom: 6px; }
-    .callout { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 14px 18px; margin: 16px 0; font-size: 0.92rem; color: #1e40af; }
+    .section-card h3 { font-size: 1.08rem; color: #334155; margin: 20px 0 10px 0; }
+    .section-card p { color: var(--muted); margin-bottom: 14px; font-size: 0.96rem; }
+    .section-card ul { margin: 10px 0 18px 22px; color: var(--muted); font-size: 0.95rem; }
+    .section-card li { margin-bottom: 8px; }
+    .callout { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px 20px; margin: 18px 0; font-size: 0.93rem; color: #1e40af; }
 
-    /* Legal Policy Sections directly visible */
+    /* Comparison Table */
+    .table-container { overflow-x: auto; margin: 18px 0; }
+    table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.92rem; }
+    th, td { padding: 12px 14px; border: 1px solid var(--border); }
+    th { background: #f8fafc; color: #1e293b; font-weight: 700; }
+    td { color: var(--muted); }
+
+    /* FAQ Section */
+    .faq-item { border-bottom: 1px solid var(--border); padding: 14px 0; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-weight: 700; color: #1e293b; cursor: pointer; display: flex; justify-content: space-between; font-size: 0.98rem; }
+    .faq-a { margin-top: 8px; color: var(--muted); font-size: 0.93rem; }
+
+    /* Legal Policy Sections */
     .legal-card { background: #fafafa; border: 1px solid var(--border); border-radius: 10px; padding: 22px; margin-top: 20px; font-size: 0.9rem; color: var(--muted); }
     .legal-card h3 { font-size: 1.1rem; color: #1e293b; margin-bottom: 10px; }
     .legal-card p { margin-bottom: 8px; line-height: 1.6; }
@@ -138,28 +151,77 @@
     <div id="alertWords" class="alert-words"></div>
   </div>
 
-  <!-- 본문 가이드: 스크롤 내리면 바로 노출 -->
+  <!-- 본문 가이드: 텍스트 전문성 강화 -->
   <div class="section-card">
-    <h2>취업 채용 시스템별 바이트(Byte) 계산 기준과 인코딩 차이</h2>
-    <p>국내 대다수의 취업 포털(사람인, 잡코리아, 인크루트 등)과 공공기관 채용 홈페이지(NCS), 대기업 자체 입사지원 시스템은 서버의 문자 인코딩 설정에 따라 바이트 계산 방식이 상이합니다. 입사 지원 마감 10분 전 "허용된 바이트를 초과하였습니다"라는 오류 메시지가 발생하는 이유가 바로 이 인코딩 차이 때문입니다.</p>
+    <h2>채용 시스템별 바이트(Byte) 및 인코딩 체계 완벽 분석</h2>
+    <p>국내 주요 대기업 채용 사이트(삼성 커리어스, 현대자동차 채용, SK 채용 등)와 공공기관 채용 전산망(NCS 기준)은 서버의 데이터베이스 문자셋(Charset) 구성에 따라 텍스트의 바이트를 완전히 다른 공식으로 계산합니다. 마감 직전 입력창에서 초과 오류가 발생하는 것을 방지하기 위해 각 기관의 인코딩 기준을 사전에 숙지해야 합니다.</p>
     
-    <div class="callout">
-      <strong>📌 문자 인코딩별 계산 원리 요약</strong><br>
-      • <strong>EUC-KR (2Byte 체제):</strong> 영문, 숫자, 특수기호, 공백은 1Byte / 한글 1글자는 <strong>2Byte</strong>로 계산됩니다.<br>
-      • <strong>UTF-8 (3Byte 체제):</strong> 영문, 숫자, 공백은 1Byte / 한글 1글자는 <strong>3Byte</strong>로 계산됩니다.<br>
-      • <strong>줄바꿈(Enter):</strong> 윈도우 채용창은 \r\n(2Byte), 리눅스/웹 표준 채용창은 \n(1Byte)로 처리됩니다.
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>적용 대상 (대표 채용처)</th>
+            <th>한글 1글자</th>
+            <th>영문/숫자/공백</th>
+            <th>줄바꿈 (Enter)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>2Byte (EUC-KR)</strong></td>
+            <td>사람인, 잡코리아, 인크루트, 일부 대기업 자체 채용창</td>
+            <td>2 Byte</td>
+            <td>1 Byte</td>
+            <td>2 Byte (\r\n)</td>
+          </tr>
+          <tr>
+            <td><strong>3Byte (UTF-8)</strong></td>
+            <td>공공기관/공기업 NCS 채용망, 금융권, 웹 표준 시스템</td>
+            <td>3 Byte</td>
+            <td>1 Byte</td>
+            <td>1 Byte 또는 2 Byte</td>
+          </tr>
+          <tr>
+            <td><strong>글자수 기준</strong></td>
+            <td>네이버, 카카오 등 빅테크 IT 기업</td>
+            <td>1 자</td>
+            <td>1 자</td>
+            <td>포털 정책에 따라 상이</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
-    <h3>공공기관(NCS) 및 대기업 블라인드 채용 3대 감점 기준</h3>
-    <p>블라인드 채용 제도는 직무 역량 중심의 공정한 평가를 위해 지원자의 사적 배경 노출을 엄격히 금지합니다. 서류 평가 위원들이 가장 민감하게 확인하는 감점 항목은 다음과 같습니다.</p>
+    <h3>공공기관 블라인드 채용 평가 가이드라인 및 주의사항</h3>
+    <p>공공기관 블라인드 평가 제도는 학연, 지연, 혈연 등 편견을 유발할 수 있는 요소를 배제하는 데 목적이 있습니다. 사소한 실수로 서류 전형에서 부적격(감점 또는 직권 탈락) 처리되지 않도록 아래 항목을 반드시 사전 검증해야 합니다.</p>
     <ul>
-      <li><strong>가족 관계 및 직업 노출:</strong> '공무원이신 아버지의 성실함...', '의사이신 어머니를 보며...' 등 부모 및 친인척의 직업(판사, 변호사, 교수, 대기업 임원 등)을 직·간접적으로 암시하는 행위는 서류 직권 탈락 사유가 될 수 있습니다.</li>
-      <li><strong>학벌 및 출신 학교명:</strong> 서울대, 연세대, 고려대 등 대학교 공식 명칭은 물론, 단과대 별칭, 캠퍼스 소재지, 교내 유명 학회 이름을 언급해서는 안 됩니다.</li>
-      <li><strong>출신 지역 및 연고:</strong> 영남, 호남, 강원 등 지원자의 연고지를 드러내는 문장은 감점 요인입니다.</li>
+      <li><strong>가족 배경 및 친인척 직업:</strong> 부모의 사회적 지위나 직업군(의사, 변호사, 공무원, 대기업 임원 등)을 기술하는 문장은 원천 금지됩니다.</li>
+      <li><strong>출신 학교 및 학맥:</strong> 대학명뿐 아니라 캠퍼스 위치(예: 신촌, 안암, 관악 등), 특정 단과대학의 별칭, 지도교수 성명 등의 기술을 지양해야 합니다.</li>
+      <li><strong>출신 지역 및 연고:</strong> 특정 광역시도 및 지자체 연고를 드러내는 표현은 감점 기준에 해당합니다.</li>
     </ul>
 
     <h2>International Resume, CV & Essay Word Counting Standards</h2>
     <p>When preparing documents for international applications (Cover Letters, Resumes, and Statement of Purpose), word count is strictly enforced alongside character limits. Western recruiters evaluate readability and lexical density via Word Count, while social platforms (such as X/Twitter and LinkedIn) adhere to strict character bounds.</p>
+
+    <!-- FAQ Accordion (구글 SEO 핵심 점수 항목) -->
+    <h2>자주 묻는 질문 (FAQ)</h2>
+    <div class="faq-item">
+      <div class="faq-q">Q1. 워드나 한글 프로그램의 글자수와 왜 차이가 나나요?</div>
+      <div class="faq-a">워드프로세서는 줄바꿈(엔터)이나 문장부호, 특수기호의 바이트 처리 규격이 독자적입니다. 반면 채용 웹사이트는 웹 브라우저 표준(HTML/JavaScript) 기반으로 데이터를 전송하므로, 웹 기반 검사기(ByteCheck)의 수치가 실제 채용 서버 입력창과 가장 일치합니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q2. 줄바꿈(엔터키)은 몇 바이트로 계산되나요?</div>
+      <div class="faq-a">윈도우 기반 서버 환경의 채용창은 캐리지 리턴(\r)과 라인 피드(\n)가 결합되어 2Byte로 계산되는 경우가 많으며, 유닉스/리눅스 표준 서버 환경에서는 1Byte로 처리됩니다. 안전한 입사지원을 위해 여유분(5~10바이트)을 두고 작성하시는 것을 권장합니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q3. 작성 중인 자기소개서 내용이 서버에 저장되거나 유출되지 않나요?</div>
+      <div class="faq-a">절대 저장되지 않습니다. 본 서비스는 작성자의 개인정보와 취업 서류 보안을 위해 서버로 데이터를 전송하지 않으며, 이용자의 웹 브라우저 내에서만 연산이 수행되는 클라이언트 사이드 스크립트로 구동됩니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q4. 영문 에세이나 이력서의 Word Count 기준은 무엇인가요?</div>
+      <div class="faq-a">영미권 입사지원 및 대학교 입학 전형(Common App 등)에서는 띄어쓰기(공백)를 기준으로 구분된 단어(Word)의 총 개수를 표준 심사 기준으로 삼습니다. 본 툴은 실시간 단어 분석기를 통해 이를 정확히 카운트합니다.</div>
+    </div>
   </div>
 
   <div class="ad-placeholder">광고 영역 (Google AdSense Slot 2)</div>
