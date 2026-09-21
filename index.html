@@ -92,7 +92,12 @@
     .legal-card h3 { font-size: 1.1rem; color: #1e293b; margin-bottom: 10px; }
     .legal-card p { margin-bottom: 8px; line-height: 1.6; }
 
-    footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); color: #94a3b8; font-size: 0.85rem; }
+    /* Visitor Counter Badge Styling */
+    .counter-section { margin-top: 30px; text-align: center; }
+    .counter-badge-box { display: inline-flex; align-items: center; justify-content: center; background: #ffffff; border: 1px solid var(--border); border-radius: 30px; padding: 6px 16px; box-shadow: 0 2px 4px rgba(0,0,0,0.03); }
+    .counter-label { font-size: 0.85rem; font-weight: 600; color: var(--muted); margin-right: 10px; }
+
+    footer { text-align: center; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border); color: #94a3b8; font-size: 0.85rem; }
   </style>
 </head>
 <body>
@@ -151,7 +156,7 @@
     <div id="alertWords" class="alert-words"></div>
   </div>
 
-  <!-- 본문 가이드: 텍스트 전문성 강화 -->
+  <!-- 본문 가이드 -->
   <div class="section-card">
     <h2>채용 시스템별 바이트(Byte) 및 인코딩 체계 완벽 분석</h2>
     <p>국내 주요 대기업 채용 사이트(삼성 커리어스, 현대자동차 채용, SK 채용 등)와 공공기관 채용 전산망(NCS 기준)은 서버의 데이터베이스 문자셋(Charset) 구성에 따라 텍스트의 바이트를 완전히 다른 공식으로 계산합니다. 마감 직전 입력창에서 초과 오류가 발생하는 것을 방지하기 위해 각 기관의 인코딩 기준을 사전에 숙지해야 합니다.</p>
@@ -204,7 +209,7 @@
     <h2>International Resume, CV & Essay Word Counting Standards</h2>
     <p>When preparing documents for international applications (Cover Letters, Resumes, and Statement of Purpose), word count is strictly enforced alongside character limits. Western recruiters evaluate readability and lexical density via Word Count, while social platforms (such as X/Twitter and LinkedIn) adhere to strict character bounds.</p>
 
-    <!-- FAQ Accordion (구글 SEO 핵심 점수 항목) -->
+    <!-- FAQ Accordion -->
     <h2>자주 묻는 질문 (FAQ)</h2>
     <div class="faq-item">
       <div class="faq-q">Q1. 워드나 한글 프로그램의 글자수와 왜 차이가 나나요?</div>
@@ -226,7 +231,7 @@
 
   <div class="ad-placeholder">광고 영역 (Google AdSense Slot 2)</div>
 
-  <!-- 구글 애드센스 필수 법적 고지 3종 -->
+  <!-- 법적 고지 3종 -->
   <div class="legal-card" id="privacy-policy">
     <h3>개인정보처리방침 (Privacy Policy)</h3>
     <p><strong>1. 입력 데이터 보안 원칙:</strong> 본 웹도구(ByteCheck Global)는 이용자가 입력창에 작성한 자기소개서 및 영문 텍스트를 일절 수집, 전송, 또는 외부 서버에 저장하지 않습니다. 모든 글자수 및 바이트 계산은 이용자의 웹 브라우저 내부(Client-side JavaScript)에서만 처리됩니다.</p>
@@ -244,6 +249,16 @@
     <h3>문의하기 (Contact Us)</h3>
     <p>서비스 이용 중 발생하는 시스템 버그, 개선 제안, 기능 추가 요청 및 광고/제휴 관련 문의는 아래 공식 지원 창구로 문의해 주시기 바랍니다.</p>
     <p><strong>공식 지원 이메일:</strong> <a href="mailto:tiptodaylab@gmail.com" style="color: var(--primary); text-decoration: none; font-weight: bold;">tiptodaylab@gmail.com</a></p>
+  </div>
+
+  <!-- 실시간 누적/일일 방문자수 카운터 뱃지 영역 -->
+  <div class="counter-section">
+    <div class="counter-badge-box">
+      <span class="counter-label">👥 Visitors (Today / Total):</span>
+      <a href="https://hits.sh/bytechecktool.com/" target="_blank" rel="noopener noreferrer">
+        <img alt="Hits" src="https://hits.sh/bytechecktool.com.svg?view=today-total&style=flat-square&label=Visitors&color=2563eb&labelColor=0f172a" />
+      </a>
+    </div>
   </div>
 
   <footer>
