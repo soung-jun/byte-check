@@ -139,6 +139,7 @@
       <div class="nav-links">
         <a href="/" class="active">자소서 바이트 검사기</a>
         <a href="/salary.html"><span class="auto-year"></span> 연봉 계산기</a>
+        <a href="/dday.html">어학 만료 & D-Day 계산기</a>
       </div>
     </div>
     <button class="lang-btn" onclick="toggleLanguage()">🌐 English / 한국어</button>
@@ -398,7 +399,7 @@
   document.getElementById('btnCopy').addEventListener('click', () => {
     if (!textInput.value) return;
     navigator.clipboard.writeText(textInput.value).then(() => {
-      alert(currentLang === 'ko' ? `텍스트가 클립보드에 복사되었습니다!\n\n💡 지원 시즌 꿀팁: 상단 [${currentYear} 연봉 계산기]에서 희망 기업 실수령액도 함께 확인해보세요.` : 'Copied to clipboard!');
+      alert(currentLang === 'ko' ? `텍스트가 클립보드에 복사되었습니다!\n\n💡 지원 시즌 꿀팁: 상단 메뉴에서 희망 기업 실수령액과 어학 만료 D-Day도 함께 확인해보세요.` : 'Copied to clipboard!');
     });
   });
 
