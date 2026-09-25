@@ -9,8 +9,8 @@
   <!-- Google AdSense Verification Script -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6840623754388286" crossorigin="anonymous"></script>
 
-  <title>2026 자소서 바이트 계산기 & 글로벌 글자수/단어수 검사기</title>
-  <meta name="description" content="EUC-KR 2바이트 및 UTF-8 3바이트 기준 실시간 자소서 바이트 계산기, 영문 단어수(Word Count) 분석, 공기업/대기업 블라인드 금칙어 자동 필터링 도구.">
+  <title id="doc-title">자소서 바이트 계산기 & 글로벌 글자수/단어수 검사기</title>
+  <meta name="description" id="doc-desc" content="EUC-KR 2바이트 및 UTF-8 3바이트 기준 실시간 자소서 바이트 계산기, 영문 단어수(Word Count) 분석, 공기업/대기업 블라인드 금칙어 자동 필터링 도구.">
   <style>
     :root {
       --primary: #2563eb;
@@ -58,7 +58,7 @@
     .btn.primary { background: var(--primary); color: #fff; border-color: var(--primary); }
     .btn.primary:hover { background: var(--primary-hover); }
 
-    /* 고수익 CPA 카드 (자소서 메인용) */
+    /* 고수익 CPA 카드 */
     .cpa-mini-card { background: linear-gradient(135deg, #ffffff 0%, #fff7ed 100%); border: 1.5px solid var(--accent-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
     .cpa-mini-info { display: flex; align-items: center; gap: 10px; flex: 1; min-width: 260px; }
     .cpa-badge { background: var(--accent); color: #fff; font-size: 0.72rem; font-weight: 800; padding: 3px 7px; border-radius: 4px; white-space: nowrap; }
@@ -88,7 +88,6 @@
     .section-card p { color: var(--muted); margin-bottom: 14px; font-size: 0.96rem; }
     .section-card ul { margin: 10px 0 18px 22px; color: var(--muted); font-size: 0.95rem; }
     .section-card li { margin-bottom: 8px; }
-    .callout { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px 20px; margin: 18px 0; font-size: 0.93rem; color: #1e40af; }
 
     /* Comparison Table */
     .table-container { overflow-x: auto; margin: 18px 0; }
@@ -124,14 +123,14 @@
       <a href="/" class="logo-badge">⚡ ByteCheck Global</a>
       <div class="nav-links">
         <a href="/" class="active">자소서 바이트 검사기</a>
-        <a href="/salary.html">2026 연봉 계산기</a>
+        <a href="/salary.html"><span class="auto-year"></span> 연봉 계산기</a>
       </div>
     </div>
     <button class="lang-btn" onclick="toggleLanguage()">🌐 English / 한국어</button>
   </div>
 
   <header>
-    <h1 id="ui-title">2026 자소서 바이트 계산기 & 블라인드 금칙어 검사기</h1>
+    <h1 id="ui-title"><span class="auto-year"></span> 자소서 바이트 계산기 & 블라인드 금칙어 검사기</h1>
     <p id="ui-desc">채용 포털(EUC-KR 2Byte), 공공기관(UTF-8 3Byte), 영문 이력서(Word Count) 실시간 분석 툴</p>
   </header>
 
@@ -146,7 +145,7 @@
     </div>
   </div>
 
-  <!-- 취준생·대학생 타겟 고수익 제휴 혜택 바 -->
+  <!-- 제휴 카드 -->
   <div class="cpa-mini-card">
     <div class="cpa-mini-info">
       <span class="cpa-badge">혜택 지원</span>
@@ -190,10 +189,10 @@
     <div id="alertWords" class="alert-words"></div>
   </div>
 
-  <!-- 본문 가이드 -->
+  <!-- 가이드 -->
   <div class="section-card">
     <h2>채용 시스템별 바이트(Byte) 및 인코딩 체계 완벽 분석</h2>
-    <p>국내 주요 대기업 채용 사이트(삼성 커리어스, 현대자동차 채용, SK 채용 등)와 공공기관 채용 전산망(NCS 기준)은 서버의 데이터베이스 문자셋(Charset) 구성에 따라 텍스트의 바이트를 완전히 다른 공식으로 계산합니다. 마감 직전 입력창에서 초과 오류가 발생하는 것을 방지하기 위해 각 기관의 인코딩 기준을 사전에 숙지해야 합니다.</p>
+    <p>국내 주요 대기업 채용 사이트와 공공기관 채용 전산망은 서버 데이터베이스 문자셋 구성에 따라 바이트를 완전히 다른 공식으로 계산합니다. 마감 직전 초과 오류를 방지하기 위해 각 기관의 인코딩 기준을 사전에 숙지해야 합니다.</p>
     
     <div class="table-container">
       <table>
@@ -233,33 +232,33 @@
     </div>
 
     <h3>공공기관 블라인드 채용 평가 가이드라인 및 주의사항</h3>
-    <p>공공기관 블라인드 평가 제도는 학연, 지연, 혈연 등 편견을 유발할 수 있는 요소를 배제하는 데 목적이 있습니다. 사소한 실수로 서류 전형에서 부적격(감점 또는 직권 탈락) 처리되지 않도록 아래 항목을 반드시 사전 검증해야 합니다.</p>
+    <p>공공기관 블라인드 평가 제도는 편견을 유발할 수 있는 요소를 배제하는 데 목적이 있습니다. 사소한 실수로 서류 전형에서 부적격 처리되지 않도록 아래 항목을 반드시 사전 검증해야 합니다.</p>
     <ul>
-      <li><strong>가족 배경 및 친인척 직업:</strong> 부모의 사회적 지위나 직업군(의사, 변호사, 공무원, 대기업 임원 등)을 기술하는 문장은 원천 금지됩니다.</li>
-      <li><strong>출신 학교 및 학맥:</strong> 대학명뿐 아니라 캠퍼스 위치(예: 신촌, 안암, 관악 등), 특정 단과대학의 별칭, 지도교수 성명 등의 기술을 지양해야 합니다.</li>
-      <li><strong>출신 지역 및 연고:</strong> 특정 광역시도 및 지자체 연고를 드러내는 표현은 감점 기준에 해당합니다.</li>
+      <li><strong>가족 배경 및 친인척 직업:</strong> 부모의 사회적 지위나 직업군 기술 금지</li>
+      <li><strong>출신 학교 및 학맥:</strong> 대학명 및 캠퍼스 위치 기술 지양</li>
+      <li><strong>출신 지역 및 연고:</strong> 특정 연고지 표현 감점 대상</li>
     </ul>
 
     <h2>International Resume, CV & Essay Word Counting Standards</h2>
-    <p>When preparing documents for international applications (Cover Letters, Resumes, and Statement of Purpose), word count is strictly enforced alongside character limits. Western recruiters evaluate readability and lexical density via Word Count, while social platforms (such as X/Twitter and LinkedIn) adhere to strict character bounds.</p>
+    <p>When preparing documents for international applications (Cover Letters, Resumes, and Statement of Purpose), word count is strictly enforced alongside character limits.</p>
 
-    <!-- FAQ Accordion -->
+    <!-- FAQ -->
     <h2>자주 묻는 질문 (FAQ)</h2>
     <div class="faq-item">
       <div class="faq-q">Q1. 워드나 한글 프로그램의 글자수와 왜 차이가 나나요?</div>
-      <div class="faq-a">워드프로세서는 줄바꿈(엔터)이나 문장부호, 특수기호의 바이트 처리 규격이 독자적입니다. 반면 채용 웹사이트는 웹 브라우저 표준(HTML/JavaScript) 기반으로 데이터를 전송하므로, 웹 기반 검사기(ByteCheck)의 수치가 실제 채용 서버 입력창과 가장 일치합니다.</div>
+      <div class="faq-a">워드프로세서는 줄바꿈이나 문장부호 처리 규격이 독자적입니다. 반면 본 검사기(ByteCheck)는 웹 브라우저 표준 기반으로 계산하므로 채용 서버 입력창과 가장 일치합니다.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">Q2. 줄바꿈(엔터키)은 몇 바이트로 계산되나요?</div>
-      <div class="faq-a">윈도우 기반 서버 환경의 채용창은 캐리지 리턴(\r)과 라인 피드(\n)가 결합되어 2Byte로 계산되는 경우가 많으며, 유닉스/리눅스 표준 서버 환경에서는 1Byte로 처리됩니다. 안전한 입사지원을 위해 여유분(5~10바이트)을 두고 작성하시는 것을 권장합니다.</div>
+      <div class="faq-a">윈도우 기반 서버 환경은 2Byte, 유닉스/리눅스 표준 환경에서는 1Byte로 처리됩니다. 안전을 위해 5~10바이트 여유를 두고 작성하시는 것을 권장합니다.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">Q3. 작성 중인 자기소개서 내용이 서버에 저장되거나 유출되지 않나요?</div>
-      <div class="faq-a">절대 저장되지 않습니다. 본 서비스는 작성자의 개인정보와 취업 서류 보안을 위해 서버로 데이터를 전송하지 않으며, 이용자의 웹 브라우저 내에서만 연산이 수행되는 클라이언트 사이드 스크립트로 구동됩니다.</div>
+      <div class="faq-a">절대 저장되지 않습니다. 본 서비스는 서버로 데이터를 전송하지 않으며, 이용자의 웹 브라우저 내에서만 연산이 수행되는 클라이언트 사이드 스크립트로 구동됩니다.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">Q4. 영문 에세이나 이력서의 Word Count 기준은 무엇인가요?</div>
-      <div class="faq-a">영미권 입사지원 및 대학교 입학 전형(Common App 등)에서는 띄어쓰기(공백)를 기준으로 구분된 단어(Word)의 총 개수를 표준 심사 기준으로 삼습니다. 본 툴은 실시간 단어 분석기를 통해 이를 정확히 카운트합니다.</div>
+      <div class="faq-a">영미권 입사지원 및 대학교 입학 전형에서는 공백으로 구분된 단어의 총 개수를 표준 심사 기준으로 삼습니다.</div>
     </div>
   </div>
 
@@ -268,24 +267,23 @@
   <!-- 법적 고지 3종 -->
   <div class="legal-card" id="privacy-policy">
     <h3>개인정보처리방침 (Privacy Policy)</h3>
-    <p><strong>1. 입력 데이터 보안 원칙:</strong> 본 웹도구(ByteCheck Global)는 이용자가 입력창에 작성한 자기소개서 및 영문 텍스트를 일절 수집, 전송, 또는 외부 서버에 저장하지 않습니다. 모든 글자수 및 바이트 계산은 이용자의 웹 브라우저 내부(Client-side JavaScript)에서만 처리됩니다.</p>
-    <p><strong>2. 쿠키(Cookie) 및 제3자 광고 네트워크:</strong> 본 사이트는 서비스 품질 분석 및 Google AdSense를 통한 맞춤형 광고 게재를 목적으로 쿠키를 사용할 수 있습니다. 이용자는 언제든지 브라우저 설정을 통해 쿠키 저장을 거부할 수 있습니다.</p>
+    <p><strong>1. 입력 데이터 보안 원칙:</strong> 본 웹도구는 이용자가 입력한 텍스트를 일절 수집하거나 외부 서버에 저장하지 않습니다.</p>
+    <p><strong>2. 쿠키(Cookie):</strong> Google AdSense를 통한 맞춤형 광고 게재를 목적으로 쿠키를 사용할 수 있습니다.</p>
     <p><strong>3. 개인정보 관리책임자:</strong> tiptodaylab@gmail.com</p>
   </div>
 
   <div class="legal-card" id="terms-of-service">
     <h3>이용약관 및 면책조항 (Terms of Service & Disclaimer)</h3>
-    <p><strong>1. 서비스 제공 목적:</strong> 본 서비스는 구직자, 수험생 및 글로벌 문서 작성자의 편의를 돕기 위해 무료로 제공되는 글자수, 바이트, 단어수 검사 보조 도구입니다.</p>
-    <p><strong>2. 결과에 대한 면책:</strong> 본 계산기는 국내외 주요 채용 시스템의 표준 규격을 충실히 반영하고 있으나, 각 기관 및 기업 전산실의 독자적인 인코딩 및 처리 방식에 따라 미세한 편차가 존재할 수 있습니다. 본 사이트 결과값의 신뢰에 따른 입사지원 결과에 대해 서비스 제공자는 법적 책임을 지지 않습니다.</p>
+    <p><strong>1. 서비스 제공 목적:</strong> 무료로 제공되는 글자수, 바이트, 단어수 검사 보조 도구입니다.</p>
+    <p><strong>2. 결과에 대한 면책:</strong> 각 기관 전산실의 독자적 인코딩에 따라 미세한 편차가 존재할 수 있으며, 입사지원 결과에 대해 법적 책임을 지지 않습니다.</p>
   </div>
 
   <div class="legal-card" id="contact-us">
     <h3>문의하기 (Contact Us)</h3>
-    <p>서비스 이용 중 발생하는 시스템 버그, 개선 제안, 기능 추가 요청 및 광고/제휴 관련 문의는 아래 공식 지원 창구로 문의해 주시기 바랍니다.</p>
     <p><strong>공식 지원 이메일:</strong> <a href="mailto:tiptodaylab@gmail.com" style="color: var(--primary); text-decoration: none; font-weight: bold;">tiptodaylab@gmail.com</a></p>
   </div>
 
-  <!-- 실시간 누적/일일 방문자수 카운터 -->
+  <!-- 카운터 -->
   <div class="counter-section">
     <div class="counter-badge-box">
       <span class="counter-label">👥 Visitors (Today / Total):</span>
@@ -296,11 +294,17 @@
   </div>
 
   <footer>
-    <p>© 2026 ByteCheck Global. All Rights Reserved. Contact: tiptodaylab@gmail.com</p>
+    <p>© <span class="auto-year"></span> ByteCheck Global. All Rights Reserved. Contact: tiptodaylab@gmail.com</p>
   </footer>
 </div>
 
 <script>
+  // 연도 평생 자동 갱신 엔진
+  const currentYear = new Date().getFullYear();
+  document.querySelectorAll('.auto-year').forEach(el => el.textContent = currentYear);
+  document.getElementById('doc-title').textContent = `${currentYear} 자소서 바이트 계산기 & 글로벌 글자수/단어수 검사기`;
+  document.getElementById('doc-desc').setAttribute('content', `${currentYear}년 최신 EUC-KR 2바이트 및 UTF-8 3바이트 기준 실시간 자소서 바이트 계산기, 영문 단어수(Word Count) 분석 도구.`);
+
   let currentLang = 'ko';
 
   const forbiddenKeywords = [
@@ -368,7 +372,7 @@
   document.getElementById('btnCopy').addEventListener('click', () => {
     if (!textInput.value) return;
     navigator.clipboard.writeText(textInput.value).then(() => {
-      alert(currentLang === 'ko' ? '텍스트가 클립보드에 복사되었습니다!\n\n💡 지원 시즌 꿀팁: 상단 [2026 연봉 계산기]에서 희망 기업 실수령액도 함께 확인해보세요.' : 'Copied to clipboard!');
+      alert(currentLang === 'ko' ? `텍스트가 클립보드에 복사되었습니다!\n\n💡 지원 시즌 꿀팁: 상단 [${currentYear} 연봉 계산기]에서 희망 기업 실수령액도 함께 확인해보세요.` : 'Copied to clipboard!');
     });
   });
 
@@ -398,7 +402,7 @@
       textInput.placeholder = "Paste your text, essay, resume or personal statement here...";
     } else {
       currentLang = 'ko';
-      document.getElementById('ui-title').textContent = "2026 자소서 바이트 계산기 & 블라인드 금칙어 검사기";
+      document.getElementById('ui-title').innerHTML = `<span class="auto-year">${currentYear}</span> 자소서 바이트 계산기 & 블라인드 금칙어 검사기`;
       document.getElementById('ui-desc').textContent = "채용 포털(EUC-KR 2Byte), 공공기관(UTF-8 3Byte), 영문 이력서(Word Count) 실시간 분석 툴";
       document.getElementById('lbl-char-space').textContent = "공백 포함 글자수";
       document.getElementById('lbl-char-nospace').textContent = "공백 제외 글자수";
