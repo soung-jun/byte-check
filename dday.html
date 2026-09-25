@@ -34,7 +34,8 @@
     
     .top-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; flex-wrap: wrap; gap: 10px; }
     .logo-link { font-weight: 800; color: var(--primary); text-decoration: none; font-size: 1.15rem; }
-    .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.9rem; font-weight: 600; margin-left: 12px; }
+    .nav-links { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.9rem; font-weight: 600; margin-left: 0; }
     .nav-links a:hover { color: var(--primary); }
     .nav-links a.active { color: var(--primary); font-weight: 800; }
 
@@ -98,6 +99,7 @@
       <a href="/">자소서 바이트 검사기</a>
       <a href="/salary.html"><span class="auto-year"></span> 연봉 계산기</a>
       <a href="/dday.html" class="active">어학 만료 & D-Day 계산기</a>
+      <a href="/recruit-guide.html"><span class="auto-year"></span> 기업별 글자수 가이드</a>
     </div>
   </div>
 
@@ -129,7 +131,6 @@
       <div class="result-highlight" id="resHighlight">-</div>
       <div class="result-sub" id="resSub">-</div>
 
-      <!-- 제휴 배너 2종 (토익 어학 시험 타겟 최적화) -->
       <div class="monetize-grid">
         <div class="monetize-card card-orange">
           <div>
