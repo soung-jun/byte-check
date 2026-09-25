@@ -52,7 +52,7 @@
     .result-highlight { font-size: 2rem; font-weight: 900; color: var(--primary); margin: 10px 0; }
     .result-sub { font-size: 0.95rem; color: #334155; }
 
-    /* 제휴 카드 */
+    /* 타겟 맞춤 제휴 카드 그리드 */
     .monetize-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 24px; }
     @media (max-width: 680px) { .monetize-grid { grid-template-columns: 1fr; } }
     .monetize-card { border-radius: 12px; padding: 16px 18px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 2px 6px rgba(0,0,0,0.03); }
@@ -62,10 +62,11 @@
     .tag-orange { background: var(--accent); }
     .tag-red { background: var(--coupang-red); }
     .card-title { font-size: 1rem; font-weight: 800; color: #1e293b; margin-bottom: 4px; }
-    .card-desc { font-size: 0.84rem; color: var(--muted); margin-bottom: 12px; }
-    .card-btn { display: block; text-align: center; font-size: 0.88rem; font-weight: 700; padding: 10px; border-radius: 8px; text-decoration: none; color: #fff; }
+    .card-desc { font-size: 0.84rem; color: var(--muted); margin-bottom: 12px; line-height: 1.5; }
+    .card-btn { display: block; text-align: center; font-size: 0.88rem; font-weight: 700; padding: 10px; border-radius: 8px; text-decoration: none; color: #fff; transition: opacity 0.2s; }
     .btn-orange { background: var(--accent); }
     .btn-red { background: var(--coupang-red); }
+    .card-btn:hover { opacity: 0.9; }
     .affiliate-notice { font-size: 0.75rem; color: #94a3b8; text-align: right; margin-top: 10px; }
 
     .content-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 28px; margin-top: 24px; }
@@ -82,7 +83,7 @@
   <div class="top-nav">
     <a href="/" class="logo-link">⚡ ByteCheck Global</a>
     <div class="nav-links">
-      <a href="/">자소서 검사기</a>
+      <a href="/">자소서 바이트 검사기</a>
       <a href="/salary.html"><span class="auto-year"></span> 연봉 계산기</a>
       <a href="/dday.html" class="active">어학 만료 & D-Day 계산기</a>
     </div>
@@ -114,7 +115,7 @@
       <div class="result-highlight" id="resHighlight">-</div>
       <div class="result-sub" id="resSub">-</div>
 
-      <!-- 제휴 배너 2종 -->
+      <!-- 제휴 배너 2종 (토익 어학 시험 타겟 최적화) -->
       <div class="monetize-grid">
         <div class="monetize-card card-orange">
           <div>
@@ -127,11 +128,11 @@
 
         <div class="monetize-card card-red">
           <div>
-            <span class="card-tag tag-red">단기 점수 완성</span>
-            <div class="card-title">토익·오픽 베스트셀러 최저가</div>
-            <div class="card-desc">만료 전 목표 점수 달성! 최신 기출문제집 바로가기</div>
+            <span class="card-tag tag-red">토익 목표 점수 단기 완성</span>
+            <div class="card-title"><span class="auto-year"></span> 토익 최신 기출문제집</div>
+            <div class="card-desc">성적 만료 전 목표 점수 달성! 해커스 토익 최신 기출 1000제 최저가</div>
           </div>
-          <a href="https://link.coupang.com/a/hkOKv7RtuK" target="_blank" rel="noopener noreferrer sponsored" class="card-btn btn-red">수험서 최저가 조회 →</a>
+          <a href="https://link.coupang.com/a/hkRqRCXynJ" target="_blank" rel="noopener noreferrer sponsored" class="card-btn btn-red">토익 기출 베스트셀러 조회 →</a>
         </div>
       </div>
       <div class="affiliate-notice">※ 이 포스팅은 쿠팡 파트너스 및 제휴 활동의 일환으로 일정액의 수수료를 제공받을 수 있습니다.</div>
@@ -150,11 +151,9 @@
 </div>
 
 <script>
-  // 연도 자동 갱신
   const currentYear = new Date().getFullYear();
   document.querySelectorAll('.auto-year').forEach(el => el.textContent = currentYear);
 
-  // 기본 오늘 날짜 세팅
   const todayStr = new Date().toISOString().split('T')[0];
   document.getElementById('targetDate').value = todayStr;
 
@@ -183,10 +182,9 @@
     const resSub = document.getElementById('resSub');
 
     if (type === 'toeic') {
-      // 2년 뒤 만료일 계산
       const expiry = new Date(selectedDate);
       expiry.setFullYear(expiry.getFullYear() + 2);
-      expiry.setDate(expiry.getDate() - 1); // 응시일 전날 자정 만료 기준
+      expiry.setDate(expiry.getDate() - 1);
 
       const y = expiry.getFullYear();
       const m = String(expiry.getMonth() + 1).padStart(2, '0');
@@ -204,7 +202,6 @@
         resSub.textContent = `유효기간이 ${Math.abs(diffDays)}일 전에 만료되었습니다. 재응시가 필요합니다.`;
       }
     } else {
-      // D-Day 계산
       const diffTime = selectedDate - today;
       const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
@@ -224,7 +221,6 @@
     resBox.style.display = 'block';
   }
 
-  // 초기 1회 자동 실행
   calculateDday();
 </script>
 
