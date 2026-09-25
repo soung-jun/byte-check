@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="e2Xv_NBgGvblX0V8f9y4zCfq69IzqaWOJ7M26LolfEk" />
+  <meta name="naver-site-verification" content="9b89f279e57a207c6e69f649c1aa92852159b071" />
+  
+  <title id="doc-title">주요 대기업·공기업 자소서 바이트(Byte) 및 글자수 규격 총정리 가이드 - ByteCheck</title>
+  <meta name="description" id="doc-desc" content="삼성전자, SK, 현대차, 한국전력공사, 국민건강보험공단 등 주요 20대 기업 및 공공기관 채용 전산망별 자소서 바이트(2Byte/3Byte) 및 줄바꿈 계산 규격 완벽 가이드.">
+
+  <!-- Google AdSense Code -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6840623754388286" crossorigin="anonymous"></script>
+
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --border: #e2e8f0;
+      --text: #0f172a;
+      --muted: #475569;
+      --accent: #f97316;
+      --accent-bg: #fff7ed;
+      --accent-border: #ffedd5;
+      --coupang-red: #e11d48;
+      --coupang-bg: #fff1f2;
+      --coupang-border: #ffe4e6;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.75; padding: 24px 16px; }
+    .container { max-width: 900px; margin: 0 auto; }
+    
+    .top-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; flex-wrap: wrap; gap: 10px; }
+    .logo-link { font-weight: 800; color: var(--primary); text-decoration: none; font-size: 1.15rem; }
+    .nav-links { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.9rem; font-weight: 600; }
+    .nav-links a:hover { color: var(--primary); }
+    .nav-links a.active { color: var(--primary); font-weight: 800; }
+
+    header { text-align: center; margin-bottom: 28px; }
+    .badge { display: inline-block; background: #dbeafe; color: #1e40af; font-size: 0.8rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin-bottom: 10px; }
+    h1 { font-size: 1.85rem; font-weight: 800; color: #1e293b; margin-bottom: 10px; }
+    header p { color: var(--muted); font-size: 0.96rem; }
+
+    .ad-placeholder { background: #f1f5f9; border: 1px dashed #cbd5e1; border-radius: 8px; padding: 16px; text-align: center; color: #94a3b8; font-size: 0.85rem; margin-bottom: 24px; }
+
+    .quick-cta-card { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 12px; padding: 20px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; }
+    .quick-cta-text h3 { font-size: 1.05rem; color: #1e3a8a; margin-bottom: 4px; }
+    .quick-cta-text p { font-size: 0.88rem; color: #3b82f6; }
+    .btn-tool { background: var(--primary); color: #fff; text-decoration: none; font-weight: 700; padding: 10px 20px; border-radius: 8px; font-size: 0.92rem; transition: background 0.2s; }
+    .btn-tool:hover { background: var(--primary-hover); }
+
+    .content-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 30px; margin-bottom: 24px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+    .content-card h2 { font-size: 1.35rem; color: #1e293b; margin: 26px 0 14px 0; border-left: 4px solid var(--primary); padding-left: 10px; }
+    .content-card h2:first-child { margin-top: 0; }
+    .content-card h3 { font-size: 1.1rem; color: #334155; margin: 20px 0 10px 0; }
+    .content-card p { color: var(--muted); font-size: 0.96rem; margin-bottom: 14px; }
+
+    .filter-tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+    .tab-btn { padding: 8px 16px; border-radius: 6px; border: 1px solid var(--border); background: #fff; color: var(--muted); font-size: 0.88rem; font-weight: 600; cursor: pointer; }
+    .tab-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+    .table-container { overflow-x: auto; margin: 18px 0; }
+    table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem; }
+    th, td { padding: 12px 14px; border: 1px solid var(--border); }
+    th { background: #f8fafc; color: #1e293b; font-weight: 700; white-space: nowrap; }
+    td { color: var(--muted); }
+    .highlight-byte { font-weight: 700; color: #2563eb; }
+
+    .monetize-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 24px 0; }
+    @media (max-width: 680px) { .monetize-grid { grid-template-columns: 1fr; } }
+    .monetize-card { border-radius: 12px; padding: 16px 18px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 2px 6px rgba(0,0,0,0.03); }
+    .card-orange { background: linear-gradient(135deg, #ffffff 0%, var(--accent-bg) 100%); border: 1.5px solid var(--accent-border); }
+    .card-red { background: linear-gradient(135deg, #ffffff 0%, var(--coupang-bg) 100%); border: 1.5px solid var(--coupang-border); }
+    .card-tag { display: inline-block; font-size: 0.72rem; font-weight: 800; padding: 2px 8px; border-radius: 4px; color: #fff; margin-bottom: 6px; }
+    .tag-orange { background: var(--accent); }
+    .tag-red { background: var(--coupang-red); }
+    .card-title { font-size: 1rem; font-weight: 800; color: #1e293b; margin-bottom: 4px; }
+    .card-desc { font-size: 0.84rem; color: var(--muted); margin-bottom: 12px; line-height: 1.5; }
+    .card-btn { display: block; text-align: center; font-size: 0.88rem; font-weight: 700; padding: 10px; border-radius: 8px; text-decoration: none; color: #fff; transition: opacity 0.2s; }
+    .btn-orange { background: var(--accent); }
+    .btn-red { background: var(--coupang-red); }
+    .card-btn:hover { opacity: 0.9; }
+    .affiliate-notice { font-size: 0.75rem; color: #94a3b8; text-align: right; margin-top: -12px; margin-bottom: 20px; }
+
+    .faq-item { border-bottom: 1px solid var(--border); padding: 14px 0; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-weight: 700; color: #1e293b; font-size: 0.98rem; }
+    .faq-a { margin-top: 6px; color: var(--muted); font-size: 0.92rem; }
+
+    footer { text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--border); color: #94a3b8; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="top-nav">
+    <a href="/" class="logo-link">⚡ ByteCheck Global</a>
+    <div class="nav-links">
+      <a href="/">자소서 바이트 검사기</a>
+      <a href="/salary.html"><span class="auto-year"></span> 연봉 계산기</a>
+      <a href="/dday.html">어학 만료 & D-Day 계산기</a>
+      <a href="/recruit-guide.html" class="active"><span class="auto-year"></span> 기업별 글자수 가이드</a>
+    </div>
+  </div>
+
+  <header>
+    <div class="badge">채용 시스템 공식 가이드</div>
+    <h1><span class="auto-year"></span> 주요 대기업·공기업 자소서 바이트 규격 총정리</h1>
+    <p>채용 포털과 실제 기업 전산망의 바이트 계산 차이로 인한 서류 마감 직전 초과 탈락 방지 안내서</p>
+  </header>
+
+  <div class="ad-placeholder">광고 영역 (Google AdSense Slot 1)</div>
+
+  <div class="quick-cta-card">
+    <div class="quick-cta-text">
+      <h3>⚡ 내 자소서 실시간 바이트 즉시 검사하기</h3>
+      <p>작성 중인 자소서를 붙여넣으면 2Byte/3Byte와 블라인드 금칙어를 0.1초 만에 자동 분석합니다.</p>
+    </div>
+    <a href="/" class="btn-tool">바이트 검사기 바로가기 →</a>
+  </div>
+
+  <div class="content-card">
+    <h2>왜 채용 포털과 실제 기업 제출창의 바이트가 다를까요?</h2>
+    <p>사람인이나 잡코리아의 일반 글자수 세기 프로그램은 대다수 <strong>EUC-KR 기준(한글 1자 = 2Byte)</strong>으로 설계되어 있습니다. 하지만 최근 공공기관 및 주요 대기업 채용 시스템은 국제 웹 표준인 <strong>UTF-8(한글 1자 = 3Byte)</strong> 데이터베이스를 채택하고 있습니다.</p>
+    <p>이로 인해 포털에서 1,000자(2,000Byte)를 딱 맞춰 작성했더라도, 실제 공기업 채용 홈페이지에 붙여넣으면 3,000Byte로 초과 인식되어 <strong>마감 10분 전 제출 버튼이 비활성화되는 비상사태</strong>가 발생합니다.</p>
+
+    <h2>주요 20대 기업 및 공공기관 채용 전산 규격 분석표</h2>
+    <p>각 기업 채용 전산망의 최근 공채 기준 인코딩 체계와 줄바꿈(엔터) 처리 규격입니다.</p>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>기업 및 기관명</th>
+            <th>한글 1글자 기준</th>
+            <th>줄바꿈(Enter)</th>
+            <th>주요 제한 형식</th>
+            <th>권장 안전 마진</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>대기업</strong></td>
+            <td>삼성전자 / 삼성그룹</td>
+            <td>글자수 기준 (문항별 상이)</td>
+            <td>1자 처리</td>
+            <td>공백 포함 글자수 표기</td>
+            <td>10자 여유 권장</td>
+          </tr>
+          <tr>
+            <td><strong>대기업</strong></td>
+            <td>현대자동차그룹</td>
+            <td class="highlight-byte">2 Byte (EUC-KR)</td>
+            <td>2 Byte (\r\n)</td>
+            <td>바이트(Byte) 제한</td>
+            <td>20 Byte 여유</td>
+          </tr>
+          <tr>
+            <td><strong>대기업</strong></td>
+            <td>SK그룹 (SK이노베이션/하이닉스)</td>
+            <td>글자수 기준 (공백 포함)</td>
+            <td>1자 처리</td>
+            <td>700~1,000자 내외</td>
+            <td>5자 여유 권장</td>
+          </tr>
+          <tr>
+            <td><strong>대기업</strong></td>
+            <td>LG그룹 (LG전자/화학)</td>
+            <td class="highlight-byte">2 Byte (EUC-KR)</td>
+            <td>2 Byte</td>
+            <td>문항당 1,000~2,000 Byte</td>
+            <td>15 Byte 여유</td>
+          </tr>
+          <tr>
+            <td><strong>대기업</strong></td>
+            <td>포스코 (POSCO)</td>
+            <td class="highlight-byte">2 Byte (EUC-KR)</td>
+            <td>2 Byte</td>
+            <td>바이트(Byte) 기준</td>
+            <td>20 Byte 여유</td>
+          </tr>
+          <tr>
+            <td><strong>IT빅테크</strong></td>
+            <td>네이버 / 카카오 / 라인</td>
+            <td>글자수 기준 (단어수 검증)</td>
+            <td>1자 처리</td>
+            <td>공백 포함/제외 명시</td>
+            <td>정확한 글자수 준수</td>
+          </tr>
+          <tr>
+            <td><strong>공기업</strong></td>
+            <td>한국전력공사 (KEPCO)</td>
+            <td class="highlight-byte">3 Byte (UTF-8)</td>
+            <td>1 Byte 또는 2 Byte</td>
+            <td>NCS 기반 직무기술서</td>
+            <td>30 Byte 여유 권장</td>
+          </tr>
+          <tr>
+            <td><strong>공기업</strong></td>
+            <td>국민건강보험공단</td>
+            <td class="highlight-byte">3 Byte (UTF-8)</td>
+            <td>2 Byte</td>
+            <td>블라인드 금칙어 정밀 필터링</td>
+            <td>사전 검증 필수</td>
+          </tr>
+          <tr>
+            <td><strong>공기업</strong></td>
+            <td>한국철도공사 (코레일)</td>
+            <td class="highlight-byte">3 Byte (UTF-8)</td>
+            <td>1 Byte</td>
+            <td>직무능력소개서 바이트 제한</td>
+            <td>25 Byte 여유</td>
+          </tr>
+          <tr>
+            <td><strong>공기업</strong></td>
+            <td>한국토지주택공사 (LH)</td>
+            <td class="highlight-byte">3 Byte (UTF-8)</td>
+            <td>2 Byte</td>
+            <td>NCS 경험기술서 기준</td>
+            <td>30 Byte 여유</td>
+          </tr>
+          <tr>
+            <td><strong>금융권</strong></td>
+            <td>국민/신한/하나/우리은행</td>
+            <td class="highlight-byte">3 Byte (UTF-8) 병행</td>
+            <td>2 Byte</td>
+            <td>문항별 글자수 및 바이트 혼용</td>
+            <td>20 Byte 여유</td>
+          </tr>
+          <tr>
+            <td><strong>금융공기업</strong></td>
+            <td>한국수출입은행 / 산업은행</td>
+            <td class="highlight-byte">3 Byte (UTF-8)</td>
+            <td>2 Byte</td>
+            <td>논술형 문항 바이트 준수</td>
+            <td>30 Byte 여유</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 맞춤형 제휴 배너 -->
+    <div class="monetize-grid">
+      <div class="monetize-card card-orange">
+        <div>
+          <span class="card-tag tag-orange"><span class="auto-year"></span> 취준생 생활비</span>
+          <div class="card-title">조건 없는 머니트리카드</div>
+          <div class="card-desc">서류 전형 준비 생활비 절약! 복잡한 발급 심사 없이 즉시 신청하고 혜택 받기</div>
+        </div>
+        <a href="https://iryan.kr/t8g4b86mhz" target="_blank" rel="noopener noreferrer sponsored" class="card-btn btn-orange">혜택 확인하고 신청하기 →</a>
+      </div>
+
+      <div class="monetize-card card-red">
+        <div>
+          <span class="card-tag tag-red">공채 필기 완벽 대비</span>
+          <div class="card-title"><span class="auto-year"></span> 대기업·공기업 인적성 수험서</div>
+          <div class="card-desc">서류 합격 후 바로 이어지는 GSAT·NCS 필기시험! 최신 기출 대표 수험서 최저가</div>
+        </div>
+        <a href="https://link.coupang.com/a/hkOKv7RtuK" target="_blank" rel="noopener noreferrer sponsored" class="card-btn btn-red">필기 수험서 최저가 조회 →</a>
+      </div>
+    </div>
+    <div class="affiliate-notice">※ 이 포스팅은 쿠팡 파트너스 및 제휴 활동의 일환으로 일정액의 수수료를 제공받을 수 있습니다.</div>
+
+    <h2>블라인드 채용 위반 시 불이익 및 대표 감점 키워드</h2>
+    <p>공공기관 및 공기업에서는 공정 채용 정책에 따라 편견을 유발할 수 있는 인적 사항 기술을 법적으로 엄격히 금지합니다. 단 한 단어의 실수로도 서류 심사에서 과락(0점) 또는 감점 처리됩니다.</p>
+    <ul>
+      <li><strong>가족 및 친인척 정보:</strong> '아버지', '어머니', '부모님', '삼촌', '공무원인 친척' 등 직업이나 신분을 유추할 수 있는 표현 일체</li>
+      <li><strong>출신 학교 및 연고지:</strong> 특정 대학교 이름, 캠퍼스 소재지, 출신 고등학교, 특정 지역명('부산 출신', '강원도 출신' 등)</li>
+      <li><strong>신체 조건 및 개인 신상:</strong> 성별, 연령, 외모, 신체 조건에 대한 언급</li>
+    </ul>
+
+    <h2>자주 묻는 질문 (FAQ)</h2>
+    <div class="faq-item">
+      <div class="faq-q">Q1. 마감 직전 글자수가 초과된다고 뜰 때 가장 빠른 해결책은?</div>
+      <div class="faq-a">불필요한 줄바꿈(엔터)을 1회 줄이고, 접속부사(그리고, 그러나, 따라서)를 축약하세요. 또한 특수문자나 따옴표("")를 줄이면 바이트를 즉시 10~30바이트가량 절약할 수 있습니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q2. MS 워드와 한글 프로그램에서 센 글자수와 왜 다른가요?</div>
+      <div class="faq-a">문서 작성 프로그램은 개행 문자(\r\n)와 스페이스바 공백 처리 방식이 웹 브라우저 폼 전송 규격과 다릅니다. 실제 채용 시스템과 가장 오차가 없는 것은 본 도구(ByteCheck)와 같은 웹 표준 기반 계산기입니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q3. 지원 기업이 2Byte인지 3Byte인지 확실하지 않을 때는 어떻게 하나요?</div>
+      <div class="faq-a">ByteCheck 계산기에서 2Byte와 3Byte 중 더 큰 값(보통 3Byte UTF-8)을 기준으로 문항 제한에 맞추어 작성하시면 어떤 서버 전산망에서도 초과 오류가 나지 않습니다.</div>
+    </div>
+  </div>
+
+  <div class="ad-placeholder">광고 영역 (Google AdSense Slot 2)</div>
+
+  <footer>
+    <p>© <span class="auto-year"></span> ByteCheck Global. All Rights Reserved. Contact: tiptodaylab@gmail.com</p>
+  </footer>
+</div>
+
+<script>
+  const currentYear = new Date().getFullYear();
+  document.querySelectorAll('.auto-year').forEach(el => el.textContent = currentYear);
+  document.getElementById('doc-title').textContent = `${currentYear} 주요 대기업·공기업 자소서 바이트(Byte) 및 글자수 규격 총정리 가이드 - ByteCheck`;
+  document.getElementById('doc-desc').setAttribute('content', `${currentYear}년 최신 삼성, SK, 현대차, 공기업 채용 전산망별 자소서 바이트(2Byte/3Byte) 및 줄바꿈 계산 규격 완벽 가이드.`);
+</script>
+
+</body>
+</html>
