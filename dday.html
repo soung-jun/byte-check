@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="doc-title">토익·오픽 어학 성적 만료일 & 채용 D-Day 계산기 - ByteCheck</title>
+  <meta name="description" id="doc-desc" content="토익(TOEIC), 토익스피킹, 오픽(OPIc) 유효기간 2년 만료일 자동 계산 및 공기업 대기업 입사지원 채용 D-Day 카운트다운 무료 도구.">
+
+  <!-- Google AdSense Code -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6840623754388286" crossorigin="anonymous"></script>
+
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --border: #e2e8f0;
+      --text: #0f172a;
+      --muted: #475569;
+      --accent: #f97316;
+      --accent-bg: #fff7ed;
+      --accent-border: #ffedd5;
+      --coupang-red: #e11d48;
+      --coupang-bg: #fff1f2;
+      --coupang-border: #ffe4e6;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; padding: 24px 16px; }
+    .container { max-width: 860px; margin: 0 auto; }
+    
+    .top-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; flex-wrap: wrap; gap: 10px; }
+    .logo-link { font-weight: 800; color: var(--primary); text-decoration: none; font-size: 1.15rem; }
+    .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.9rem; font-weight: 600; margin-left: 12px; }
+    .nav-links a:hover { color: var(--primary); }
+    .nav-links a.active { color: var(--primary); font-weight: 800; }
+
+    header { text-align: center; margin-bottom: 24px; }
+    h1 { font-size: 1.85rem; font-weight: 800; color: #1e293b; margin-bottom: 8px; }
+    header p { color: var(--muted); font-size: 0.95rem; }
+
+    .calc-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.04); margin-bottom: 24px; }
+    .form-group { margin-bottom: 16px; }
+    label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 6px; color: #334155; }
+    input[type="date"], select { width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 1rem; outline: none; }
+    input:focus, select:focus { border-color: var(--primary); }
+    .btn-calc { width: 100%; background: var(--primary); color: #fff; border: none; padding: 14px; border-radius: 8px; font-size: 1.05rem; font-weight: 700; cursor: pointer; margin-top: 10px; }
+    .btn-calc:hover { background: var(--primary-hover); }
+
+    .result-box { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 12px; padding: 24px; margin-top: 24px; text-align: center; display: none; }
+    .result-title { font-size: 0.9rem; color: #1e40af; font-weight: 600; }
+    .result-highlight { font-size: 2rem; font-weight: 900; color: var(--primary); margin: 10px 0; }
+    .result-sub { font-size: 0.95rem; color: #334155; }
+
+    /* 제휴 카드 */
+    .monetize-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 24px; }
+    @media (max-width: 680px) { .monetize-grid { grid-template-columns: 1fr; } }
+    .monetize-card { border-radius: 12px; padding: 16px 18px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 2px 6px rgba(0,0,0,0.03); }
+    .card-orange { background: linear-gradient(135deg, #ffffff 0%, var(--accent-bg) 100%); border: 1.5px solid var(--accent-border); }
+    .card-red { background: linear-gradient(135deg, #ffffff 0%, var(--coupang-bg) 100%); border: 1.5px solid var(--coupang-border); }
+    .card-tag { display: inline-block; font-size: 0.72rem; font-weight: 800; padding: 2px 8px; border-radius: 4px; color: #fff; margin-bottom: 6px; }
+    .tag-orange { background: var(--accent); }
+    .tag-red { background: var(--coupang-red); }
+    .card-title { font-size: 1rem; font-weight: 800; color: #1e293b; margin-bottom: 4px; }
+    .card-desc { font-size: 0.84rem; color: var(--muted); margin-bottom: 12px; }
+    .card-btn { display: block; text-align: center; font-size: 0.88rem; font-weight: 700; padding: 10px; border-radius: 8px; text-decoration: none; color: #fff; }
+    .btn-orange { background: var(--accent); }
+    .btn-red { background: var(--coupang-red); }
+    .affiliate-notice { font-size: 0.75rem; color: #94a3b8; text-align: right; margin-top: 10px; }
+
+    .content-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 28px; margin-top: 24px; }
+    .content-card h2 { font-size: 1.3rem; color: #1e293b; margin: 20px 0 10px 0; border-left: 4px solid var(--primary); padding-left: 10px; }
+    .content-card h2:first-child { margin-top: 0; }
+    .content-card p { color: var(--muted); font-size: 0.95rem; margin-bottom: 12px; }
+
+    footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); color: #94a3b8; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="top-nav">
+    <a href="/" class="logo-link">⚡ ByteCheck Global</a>
+    <div class="nav-links">
+      <a href="/">자소서 검사기</a>
+      <a href="/salary.html"><span class="auto-year"></span> 연봉 계산기</a>
+      <a href="/dday.html" class="active">어학 만료 & D-Day 계산기</a>
+    </div>
+  </div>
+
+  <header>
+    <h1>어학 성적 유효기간 & 채용 D-Day 계산기</h1>
+    <p>토익·오픽·토스 2년 유효기간 자동 만료일 계산 및 공채 서류 마감 D-Day 카운트다운</p>
+  </header>
+
+  <div class="calc-card">
+    <div class="form-group">
+      <label for="examType">시험 구분</label>
+      <select id="examType" onchange="toggleMode()">
+        <option value="toeic" selected>어학 성적 유효기간 계산 (토익 / 오픽 / 토스 - 2년)</option>
+        <option value="dday">목표 채용 서류 마감 D-Day 계산</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label id="dateLabel" for="targetDate">시험 응시일 (시험 본 날짜)</label>
+      <input type="date" id="targetDate">
+    </div>
+
+    <button class="btn-calc" onclick="calculateDday()">계산하기</button>
+
+    <div id="resultBox" class="result-box">
+      <div class="result-title" id="resTitle">유효기간 만료 예정일</div>
+      <div class="result-highlight" id="resHighlight">-</div>
+      <div class="result-sub" id="resSub">-</div>
+
+      <!-- 제휴 배너 2종 -->
+      <div class="monetize-grid">
+        <div class="monetize-card card-orange">
+          <div>
+            <span class="card-tag tag-orange"><span class="auto-year"></span> 취준생 생활비</span>
+            <div class="card-title">조건 없는 머니트리카드</div>
+            <div class="card-desc">응시료·교재비 절약! 간편 발급 및 생활비 캐시백</div>
+          </div>
+          <a href="https://iryan.kr/t8g4b86mhz" target="_blank" rel="noopener noreferrer sponsored" class="card-btn btn-orange">혜택 신청하기 →</a>
+        </div>
+
+        <div class="monetize-card card-red">
+          <div>
+            <span class="card-tag tag-red">단기 점수 완성</span>
+            <div class="card-title">토익·오픽 베스트셀러 최저가</div>
+            <div class="card-desc">만료 전 목표 점수 달성! 최신 기출문제집 바로가기</div>
+          </div>
+          <a href="https://link.coupang.com/a/hkOKv7RtuK" target="_blank" rel="noopener noreferrer sponsored" class="card-btn btn-red">수험서 최저가 조회 →</a>
+        </div>
+      </div>
+      <div class="affiliate-notice">※ 이 포스팅은 쿠팡 파트너스 및 제휴 활동의 일환으로 일정액의 수수료를 제공받을 수 있습니다.</div>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <h2>어학 성적 유효기간 규정 안내 (토익 / 오픽 / 텝스)</h2>
+    <p>국내 주요 공인 어학시험(TOEIC, OPIc, TOEIC Speaking 등)의 법적 유효기간은 <strong>응시일로부터 만 2년</strong>입니다. 주요 공기업 및 국가기관 입사 지원 시에는 서류 접수 마감일 기준으로 유효기간이 유효해야 정상 인정됩니다.</p>
+    <p>• <strong>인사혁신처 사이버국가고시센터:</strong> 공무원 수험생의 경우 사전 등록 시 최대 5년까지 인정되는 제도가 있으므로 사전에 유효기간 만료 전 등록을 완료해야 합니다.</p>
+  </div>
+
+  <footer>
+    <p>© <span class="auto-year"></span> ByteCheck Global. All Rights Reserved. Contact: tiptodaylab@gmail.com</p>
+  </footer>
+</div>
+
+<script>
+  // 연도 자동 갱신
+  const currentYear = new Date().getFullYear();
+  document.querySelectorAll('.auto-year').forEach(el => el.textContent = currentYear);
+
+  // 기본 오늘 날짜 세팅
+  const todayStr = new Date().toISOString().split('T')[0];
+  document.getElementById('targetDate').value = todayStr;
+
+  function toggleMode() {
+    const type = document.getElementById('examType').value;
+    const label = document.getElementById('dateLabel');
+    if (type === 'toeic') {
+      label.textContent = "시험 응시일 (시험 본 날짜)";
+    } else {
+      label.textContent = "채용 서류 마감일 (목표 날짜)";
+    }
+  }
+
+  function calculateDday() {
+    const type = document.getElementById('examType').value;
+    const inputVal = document.getElementById('targetDate').value;
+    if (!inputVal) return;
+
+    const selectedDate = new Date(inputVal);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const resBox = document.getElementById('resultBox');
+    const resTitle = document.getElementById('resTitle');
+    const resHighlight = document.getElementById('resHighlight');
+    const resSub = document.getElementById('resSub');
+
+    if (type === 'toeic') {
+      // 2년 뒤 만료일 계산
+      const expiry = new Date(selectedDate);
+      expiry.setFullYear(expiry.getFullYear() + 2);
+      expiry.setDate(expiry.getDate() - 1); // 응시일 전날 자정 만료 기준
+
+      const y = expiry.getFullYear();
+      const m = String(expiry.getMonth() + 1).padStart(2, '0');
+      const d = String(expiry.getDate()).padStart(2, '0');
+
+      const diffDays = Math.ceil((expiry - today) / (1000 * 60 * 60 * 24));
+
+      resTitle.textContent = "공식 성적 유효기간 만료일";
+      resHighlight.textContent = `${y}년 ${m}월 ${d}일`;
+      if (diffDays > 0) {
+        resSub.textContent = `유효기간 만료까지 앞으로 ${diffDays}일 남았습니다.`;
+      } else if (diffDays === 0) {
+        resSub.textContent = "오늘 자정으로 유효기간이 만료됩니다!";
+      } else {
+        resSub.textContent = `유효기간이 ${Math.abs(diffDays)}일 전에 만료되었습니다. 재응시가 필요합니다.`;
+      }
+    } else {
+      // D-Day 계산
+      const diffTime = selectedDate - today;
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+      resTitle.textContent = "서류 접수 마감까지";
+      if (diffDays > 0) {
+        resHighlight.textContent = `D - ${diffDays}`;
+        resSub.textContent = `마감일까지 ${diffDays}일 남았습니다. 서류 완성을 서두르세요!`;
+      } else if (diffDays === 0) {
+        resHighlight.textContent = "D - DAY";
+        resSub.textContent = "오늘이 바로 마감일입니다!";
+      } else {
+        resHighlight.textContent = `D + ${Math.abs(diffDays)}`;
+        resSub.textContent = "이미 접수가 마감된 공고입니다.";
+      }
+    }
+
+    resBox.style.display = 'block';
+  }
+
+  // 초기 1회 자동 실행
+  calculateDday();
+</script>
+
+</body>
+</html>
