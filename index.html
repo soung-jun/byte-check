@@ -26,6 +26,9 @@
       --accent: #f97316;
       --accent-bg: #fff7ed;
       --accent-border: #ffedd5;
+      --green: #10b981;
+      --green-bg: #ecfdf5;
+      --green-border: #a7f3d0;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.75; padding: 24px 16px; }
@@ -58,14 +61,26 @@
     .btn.primary { background: var(--primary); color: #fff; border-color: var(--primary); }
     .btn.primary:hover { background: var(--primary-hover); }
 
-    /* 고수익 CPA 카드 */
-    .cpa-mini-card { background: linear-gradient(135deg, #ffffff 0%, #fff7ed 100%); border: 1.5px solid var(--accent-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
-    .cpa-mini-info { display: flex; align-items: center; gap: 10px; flex: 1; min-width: 260px; }
-    .cpa-badge { background: var(--accent); color: #fff; font-size: 0.72rem; font-weight: 800; padding: 3px 7px; border-radius: 4px; white-space: nowrap; }
-    .cpa-text { font-size: 0.92rem; font-weight: 700; color: #1e293b; }
-    .cpa-sub { font-size: 0.8rem; color: var(--muted); font-weight: normal; margin-left: 4px; }
-    .cpa-action-btn { background: var(--accent); color: #fff; text-decoration: none; font-size: 0.85rem; font-weight: 700; padding: 8px 16px; border-radius: 6px; white-space: nowrap; }
-    .cpa-action-btn:hover { background: #ea580c; }
+    /* 제휴 혜택 카드 그리드 (2종 탑재) */
+    .cpa-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 20px; }
+    @media (max-width: 680px) { .cpa-container { grid-template-columns: 1fr; } }
+    
+    .cpa-card { border-radius: 10px; padding: 14px 16px; display: flex; flex-direction: column; justify-content: space-between; gap: 10px; }
+    .cpa-card.card-orange { background: linear-gradient(135deg, #ffffff 0%, #fff7ed 100%); border: 1.5px solid var(--accent-border); }
+    .cpa-card.card-green { background: linear-gradient(135deg, #ffffff 0%, #ecfdf5 100%); border: 1.5px solid var(--green-border); }
+    
+    .cpa-header { display: flex; align-items: center; justify-content: space-between; }
+    .cpa-badge { font-size: 0.72rem; font-weight: 800; padding: 2px 7px; border-radius: 4px; color: #fff; }
+    .badge-orange { background: var(--accent); }
+    .badge-green { background: var(--green); }
+    
+    .cpa-card-title { font-size: 0.94rem; font-weight: 800; color: #1e293b; margin-top: 4px; }
+    .cpa-card-desc { font-size: 0.82rem; color: var(--muted); }
+    
+    .cpa-btn-link { display: block; text-align: center; font-size: 0.85rem; font-weight: 700; padding: 8px 12px; border-radius: 6px; text-decoration: none; color: #fff; transition: opacity 0.2s; }
+    .cpa-btn-orange { background: var(--accent); }
+    .cpa-btn-green { background: var(--green); }
+    .cpa-btn-link:hover { opacity: 0.9; }
 
     /* Stats Grid */
     .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 20px; }
@@ -145,16 +160,29 @@
     </div>
   </div>
 
-  <!-- 제휴 카드 -->
-  <div class="cpa-mini-card">
-    <div class="cpa-mini-info">
-      <span class="cpa-badge">혜택 지원</span>
-      <div class="cpa-text">
-        발급 조건 없는 머니트리카드 혜택 조회
-        <span class="cpa-sub">취준생·대학생 생활비 캐시백 지원</span>
+  <!-- 취준생 듀얼 고수익 제휴 파이프라인 (카드 + 영어인강 22%) -->
+  <div class="cpa-container">
+    <div class="cpa-card card-orange">
+      <div>
+        <div class="cpa-header">
+          <span class="cpa-badge badge-orange">생활비 지원</span>
+        </div>
+        <div class="cpa-card-title">조건 없는 머니트리카드 발급</div>
+        <div class="cpa-card-desc">취준생·대학생 필수 생활비 캐시백 카드</div>
       </div>
+      <a href="https://iryan.kr/t8g4b86mhz" target="_blank" rel="noopener noreferrer sponsored" class="cpa-btn-link cpa-btn-orange">카드 혜택 조회하기 →</a>
     </div>
-    <a href="https://iryan.kr/t8g4b86mhz" target="_blank" rel="noopener noreferrer sponsored" class="cpa-action-btn">혜택 확인 →</a>
+
+    <div class="cpa-card card-green">
+      <div>
+        <div class="cpa-header">
+          <span class="cpa-badge badge-green">취업 스펙 혜택</span>
+        </div>
+        <div class="cpa-card-title">오케이마스터영어 912강 마스터</div>
+        <div class="cpa-card-desc">영문 이력서 & 면접·오픽 완벽 대비 특별 수강</div>
+      </div>
+      <a href="https://iryan.kr/t8g4b9a4jk" target="_blank" rel="noopener noreferrer sponsored" class="cpa-btn-link cpa-btn-green">912강 수강 혜택 확인 →</a>
+    </div>
   </div>
 
   <div class="stats-grid">
