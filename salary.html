@@ -34,7 +34,8 @@
     
     .top-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; flex-wrap: wrap; gap: 10px; }
     .logo-link { font-weight: 800; color: var(--primary); text-decoration: none; font-size: 1.15rem; }
-    .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.9rem; font-weight: 600; margin-left: 12px; }
+    .nav-links { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.9rem; font-weight: 600; }
     .nav-links a:hover { color: var(--primary); }
     .nav-links a.active { color: var(--primary); font-weight: 800; }
 
@@ -106,6 +107,7 @@
       <a href="/">자소서 바이트 검사기</a>
       <a href="/salary.html" class="active"><span class="auto-year"></span> 연봉 계산기</a>
       <a href="/dday.html">어학 만료 & D-Day 계산기</a>
+      <a href="/recruit-guide.html"><span class="auto-year"></span> 기업별 글자수 가이드</a>
     </div>
   </div>
 
@@ -152,7 +154,6 @@
         </tbody>
       </table>
 
-      <!-- 직장인 및 취업 성공자 타겟 최적화 제휴 배너 -->
       <div class="monetize-grid">
         <div class="monetize-card card-orange">
           <div>
@@ -224,15 +225,13 @@
     const monthlyNonTax = nonTaxMan * 10000;
     const taxableIncome = Math.max(0, monthlyGross - monthlyNonTax);
 
-    // 4대 보험 계산 (근로자 부담분)
     let nps = Math.floor(taxableIncome * 0.045);
-    if (nps > 271350) nps = 271350; // 국민연금 상한액 캡
+    if (nps > 271350) nps = 271350;
 
     const nhi = Math.floor(taxableIncome * 0.03545);
     const ltc = Math.floor(nhi * 0.1295);
     const ei = Math.floor(taxableIncome * 0.009);
 
-    // 간이소득세 추정 모델 (보수적 근사치 계산)
     let incomeTax = 0;
     if (taxableIncome > 1060000) {
       const taxableYear = taxableIncome * 12;
@@ -253,7 +252,6 @@
     const totalDeduction = nps + nhi + ltc + ei + totalTax;
     const netPay = monthlyGross - totalDeduction;
 
-    // UI 반영
     document.getElementById('monthlyNet').textContent = `${netPay.toLocaleString()} 원`;
     document.getElementById('annualSummary').textContent = `연간 예상 실수령 총액: 약 ${(netPay * 12).toLocaleString()} 원`;
 
@@ -268,7 +266,6 @@
     document.getElementById('resultBox').style.display = 'block';
   }
 
-  // 초기 4,000만원 기준 자동 실행
   calculateSalary();
 </script>
 
