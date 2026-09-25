@@ -3,13 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Google Search Console Verification (bytechecktool.com) -->
   <meta name="google-site-verification" content="e2Xv_NBgGvblX0V8f9y4zCfq69IzqaWOJ7M26LolfEk" />
-  
-  <!-- Naver Search Advisor Verification -->
   <meta name="naver-site-verification" content="9b89f279e57a207c6e69f649c1aa92852159b071" />
-
-  <!-- Google AdSense Verification Script -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6840623754388286" crossorigin="anonymous"></script>
 
   <title id="doc-title">자소서 바이트 계산기 & 글로벌 글자수/단어수 검사기</title>
@@ -32,18 +27,22 @@
       --coupang-red: #e11d48;
       --coupang-bg: #fff1f2;
       --coupang-border: #ffe4e6;
+      --success-bg: #f0fdf4;
+      --success-border: #bbf7d0;
+      --success-text: #166534;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.75; padding: 24px 16px; }
     .container { max-width: 900px; margin: 0 auto; }
-    
-    /* Top Bar & Header */
     .top-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px; }
     .logo-badge { font-weight: 800; color: var(--primary); font-size: 1.15rem; text-decoration: none; }
     .nav-links { display: flex; align-items: center; gap: 12px; }
     .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.9rem; font-weight: 600; }
     .nav-links a:hover { color: var(--primary); }
     .nav-links a.active { color: var(--primary); font-weight: 800; }
+    .nav-actions { display: flex; align-items: center; gap: 8px; }
+    .share-btn { padding: 6px 14px; border-radius: 20px; border: 1px solid #3b82f6; background: #eff6ff; color: var(--primary); font-size: 0.85rem; font-weight: 700; cursor: pointer; transition: all 0.2s; }
+    .share-btn:hover { background: #dbeafe; }
     .lang-btn { padding: 6px 14px; border-radius: 20px; border: 1px solid var(--border); background: #fff; color: var(--text); font-size: 0.85rem; font-weight: 600; cursor: pointer; }
     .lang-btn:hover { background: #f1f5f9; }
 
@@ -51,11 +50,15 @@
     h1 { font-size: 1.95rem; font-weight: 800; color: #1e293b; margin-bottom: 8px; }
     header p { color: var(--muted); font-size: 0.98rem; }
     
-    /* Ad Slots */
     .ad-placeholder { background: #f1f5f9; border: 1px dashed #cbd5e1; border-radius: 8px; padding: 16px; text-align: center; color: #94a3b8; font-size: 0.85rem; margin-bottom: 20px; }
     
-    /* Tool Input */
-    .input-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.04); margin-bottom: 16px; }
+    /* 복구 토스트 알림 */
+    .toast-restore { display: none; background: var(--success-bg); border: 1px solid var(--success-border); color: var(--success-text); padding: 12px 16px; border-radius: 8px; font-size: 0.88rem; font-weight: 600; margin-bottom: 14px; align-items: center; justify-content: space-between; }
+    .toast-restore.show { display: flex; }
+    .toast-close { background: none; border: none; font-size: 1.1rem; color: var(--success-text); cursor: pointer; margin-left: 10px; }
+
+    .input-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.04); margin-bottom: 16px; position: relative; }
+    .autosave-status { font-size: 0.78rem; color: #94a3b8; text-align: right; margin-bottom: 6px; font-weight: 500; }
     textarea { width: 100%; height: 260px; padding: 14px; border: 1px solid var(--border); border-radius: 8px; font-size: 1rem; color: var(--text); resize: vertical; outline: none; transition: border-color 0.2s; }
     textarea:focus { border-color: var(--primary); }
     .btn-group { display: flex; justify-content: flex-end; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
@@ -64,7 +67,6 @@
     .btn.primary { background: var(--primary); color: #fff; border-color: var(--primary); }
     .btn.primary:hover { background: var(--primary-hover); }
 
-    /* 멀티 수익화 카드 그리드 (텐핑 + 쿠팡 파트너스) */
     .monetize-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-bottom: 20px; }
     @media (max-width: 680px) { .monetize-grid { grid-template-columns: 1fr; } }
 
@@ -85,7 +87,6 @@
 
     .affiliate-notice { font-size: 0.75rem; color: #94a3b8; text-align: right; margin-top: -12px; margin-bottom: 18px; }
 
-    /* Stats Grid */
     .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 20px; }
     @media (max-width: 640px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
     .stat-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px 12px; text-align: center; }
@@ -93,12 +94,10 @@
     .stat-card .val { font-size: 1.6rem; font-weight: 800; color: var(--primary); }
     .stat-card .unit { font-size: 0.82rem; color: var(--muted); margin-left: 2px; }
 
-    /* Alert Box */
     .alert-box { background: var(--danger-bg); border: 1px solid var(--danger-border); border-radius: 8px; padding: 14px 18px; margin-bottom: 24px; display: none; }
     .alert-title { font-weight: 700; color: var(--danger-text); margin-bottom: 6px; font-size: 0.95rem; }
     .alert-words { color: #dc2626; font-size: 0.95rem; word-break: break-all; }
 
-    /* Section Card */
     .section-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 32px 24px; margin-top: 24px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
     .section-card h2 { font-size: 1.35rem; color: #1e293b; margin: 26px 0 14px 0; border-left: 4px solid var(--primary); padding-left: 10px; }
     .section-card h2:first-child { margin-top: 0; }
@@ -107,25 +106,21 @@
     .section-card ul { margin: 10px 0 18px 22px; color: var(--muted); font-size: 0.95rem; }
     .section-card li { margin-bottom: 8px; }
 
-    /* Comparison Table */
     .table-container { overflow-x: auto; margin: 18px 0; }
     table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.92rem; }
     th, td { padding: 12px 14px; border: 1px solid var(--border); }
     th { background: #f8fafc; color: #1e293b; font-weight: 700; }
     td { color: var(--muted); }
 
-    /* FAQ Section */
     .faq-item { border-bottom: 1px solid var(--border); padding: 14px 0; }
     .faq-item:last-child { border-bottom: none; }
     .faq-q { font-weight: 700; color: #1e293b; cursor: pointer; display: flex; justify-content: space-between; font-size: 0.98rem; }
     .faq-a { margin-top: 8px; color: var(--muted); font-size: 0.93rem; }
 
-    /* Legal Policy Sections */
     .legal-card { background: #fafafa; border: 1px solid var(--border); border-radius: 10px; padding: 22px; margin-top: 20px; font-size: 0.9rem; color: var(--muted); }
     .legal-card h3 { font-size: 1.1rem; color: #1e293b; margin-bottom: 10px; }
     .legal-card p { margin-bottom: 8px; line-height: 1.6; }
 
-    /* Counter */
     .counter-section { margin-top: 30px; text-align: center; }
     .counter-badge-box { display: inline-flex; align-items: center; justify-content: center; background: #ffffff; border: 1px solid var(--border); border-radius: 30px; padding: 6px 16px; box-shadow: 0 2px 4px rgba(0,0,0,0.03); }
     .counter-label { font-size: 0.85rem; font-weight: 600; color: var(--muted); margin-right: 10px; }
@@ -145,7 +140,10 @@
         <a href="/dday.html">어학 만료 & D-Day 계산기</a>
       </div>
     </div>
-    <button class="lang-btn" onclick="toggleLanguage()">🌐 English / 한국어</button>
+    <div class="nav-actions">
+      <button class="share-btn" onclick="shareWebsite()">🔗 친구/단톡방 공유</button>
+      <button class="lang-btn" onclick="toggleLanguage()">🌐 English / 한국어</button>
+    </div>
   </div>
 
   <header>
@@ -155,7 +153,14 @@
 
   <div class="ad-placeholder">광고 영역 (Google AdSense Slot 1)</div>
 
+  <!-- 자동 복원 알림 토스트 -->
+  <div id="toastRestore" class="toast-restore">
+    <span>💾 이전에 작성 중이던 자소서를 기기에서 안전하게 자동 복원했습니다.</span>
+    <button class="toast-close" onclick="closeToast()">&times;</button>
+  </div>
+
   <div class="input-card">
+    <div class="autosave-status" id="autoSaveStatus">🟢 실시간 자동 저장 켜짐 (내 브라우저에만 안전 보관)</div>
     <textarea id="textInput" placeholder="자기소개서 문항이나 영문 텍스트를 입력하세요. 글자수, 공백, 2Byte/3Byte, 단어수가 실시간으로 계산됩니다..."></textarea>
     <div class="btn-group">
       <button class="btn" id="btnSample">예시 문장 넣기</button>
@@ -164,7 +169,6 @@
     </div>
   </div>
 
-  <!-- 취준생 듀얼 수익화 파이프라인 (머니트리카드 CPA + 쿠팡 파트너스 수험서) -->
   <div class="monetize-grid">
     <div class="monetize-card card-orange">
       <div>
@@ -218,7 +222,6 @@
     <div id="alertWords" class="alert-words"></div>
   </div>
 
-  <!-- 가이드 -->
   <div class="section-card">
     <h2>채용 시스템별 바이트(Byte) 및 인코딩 체계 완벽 분석</h2>
     <p>국내 주요 대기업 채용 사이트와 공공기관 채용 전산망은 서버 데이터베이스 문자셋 구성에 따라 바이트를 완전히 다른 공식으로 계산합니다. 마감 직전 초과 오류를 방지하기 위해 각 기관의 인코딩 기준을 사전에 숙지해야 합니다.</p>
@@ -271,7 +274,6 @@
     <h2>International Resume, CV & Essay Word Counting Standards</h2>
     <p>When preparing documents for international applications (Cover Letters, Resumes, and Statement of Purpose), word count is strictly enforced alongside character limits.</p>
 
-    <!-- FAQ -->
     <h2>자주 묻는 질문 (FAQ)</h2>
     <div class="faq-item">
       <div class="faq-q">Q1. 워드나 한글 프로그램의 글자수와 왜 차이가 나나요?</div>
@@ -283,7 +285,7 @@
     </div>
     <div class="faq-item">
       <div class="faq-q">Q3. 작성 중인 자기소개서 내용이 서버에 저장되거나 유출되지 않나요?</div>
-      <div class="faq-a">절대 저장되지 않습니다. 본 서비스는 서버로 데이터를 전송하지 않으며, 이용자의 웹 브라우저 내에서만 연산이 수행되는 클라이언트 사이드 스크립트로 구동됩니다.</div>
+      <div class="faq-a">절대 저장되지 않습니다. 본 서비스는 서버로 데이터를 전송하지 않으며, 이용자의 기기(로컬스토리지) 내에서만 자동 백업 및 연산이 수행되는 클라이언트 사이드 스크립트로 구동됩니다.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">Q4. 영문 에세이나 이력서의 Word Count 기준은 무엇인가요?</div>
@@ -293,7 +295,6 @@
 
   <div class="ad-placeholder">광고 영역 (Google AdSense Slot 2)</div>
 
-  <!-- 법적 고지 3종 -->
   <div class="legal-card" id="privacy-policy">
     <h3>개인정보처리방침 (Privacy Policy)</h3>
     <p><strong>1. 입력 데이터 보안 원칙:</strong> 본 웹도구는 이용자가 입력한 텍스트를 일절 수집하거나 외부 서버에 저장하지 않습니다.</p>
@@ -313,7 +314,6 @@
     <p><strong>공식 지원 이메일:</strong> <a href="mailto:tiptodaylab@gmail.com" style="color: var(--primary); text-decoration: none; font-weight: bold;">tiptodaylab@gmail.com</a></p>
   </div>
 
-  <!-- 카운터 -->
   <div class="counter-section">
     <div class="counter-badge-box">
       <span class="counter-label">👥 Visitors (Today / Total):</span>
@@ -329,7 +329,6 @@
 </div>
 
 <script>
-  // 연도 평생 자동 갱신 엔진
   const currentYear = new Date().getFullYear();
   document.querySelectorAll('.auto-year').forEach(el => el.textContent = currentYear);
   document.getElementById('doc-title').textContent = `${currentYear} 자소서 바이트 계산기 & 글로벌 글자수/단어수 검사기`;
@@ -353,6 +352,35 @@
   const readingTime = document.getElementById('readingTime');
   const alertBox = document.getElementById('alertBox');
   const alertWords = document.getElementById('alertWords');
+  const toastRestore = document.getElementById('toastRestore');
+
+  // [로컬스토리지 실시간 자동 임시저장 & 복구 엔진]
+  const STORAGE_KEY = 'bytecheck_draft_v1';
+
+  function saveDraft() {
+    try {
+      localStorage.setItem(STORAGE_KEY, textInput.value);
+    } catch (e) {
+      console.warn('LocalStorage save failed', e);
+    }
+  }
+
+  function loadDraft() {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved && saved.trim().length > 0) {
+        textInput.value = saved;
+        updateCounts();
+        toastRestore.classList.add('show');
+      }
+    } catch (e) {
+      console.warn('LocalStorage load failed', e);
+    }
+  }
+
+  function closeToast() {
+    toastRestore.classList.remove('show');
+  }
 
   function updateCounts() {
     const val = textInput.value;
@@ -391,12 +419,20 @@
     }
   }
 
-  textInput.addEventListener('input', updateCounts);
+  // 실시간 입력 리스너 (계산 + 자동저장)
+  textInput.addEventListener('input', () => {
+    updateCounts();
+    saveDraft();
+  });
 
   document.getElementById('btnClear').addEventListener('click', () => {
-    textInput.value = '';
-    updateCounts();
-    textInput.focus();
+    if (textInput.value.trim().length > 0 && confirm('작성 중인 자소서 내용을 모두 지우시겠습니까?')) {
+      textInput.value = '';
+      try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
+      updateCounts();
+      closeToast();
+      textInput.focus();
+    }
   });
 
   document.getElementById('btnCopy').addEventListener('click', () => {
@@ -413,7 +449,20 @@
       textInput.value = "Dedicated software engineer with 4+ years of hands-on experience in building scalable microservices and real-time cloud data pipelines. Demonstrated track record of optimizing application throughput by 35% and mentoring junior associates.";
     }
     updateCounts();
+    saveDraft();
   });
+
+  // 원클릭 단톡방/링크 공유 기능
+  function shareWebsite() {
+    const shareText = `[⚡ ByteCheck] 자소서 2Byte/3Byte & 블라인드 금칙어 자동 계산기\n공기업 UTF-8 3바이트 및 채용 포털 글자수를 한눈에 확인하세요!\nhttps://bytechecktool.com`;
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(shareText).then(() => {
+        alert("🔗 추천 공유 문구와 링크가 복사되었습니다!\n\n취업 스터디 단톡방이나 지인에게 붙여넣기(Ctrl+V)하여 공유해 보세요.");
+      });
+    } else {
+      prompt("아래 사이트 주소를 복사하여 친구들에게 공유하세요:", "https://bytechecktool.com");
+    }
+  }
 
   function toggleLanguage() {
     if (currentLang === 'ko') {
@@ -446,6 +495,9 @@
       textInput.placeholder = "자기소개서 문항이나 영문 텍스트를 입력하세요. 글자수, 공백, 2Byte/3Byte, 단어수가 실시간으로 계산됩니다...";
     }
   }
+
+  // 초기화면 로드 시 저장된 글 자동 복원
+  window.addEventListener('DOMContentLoaded', loadDraft);
 </script>
 
 </body>
