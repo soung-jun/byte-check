@@ -25,10 +25,12 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; padding: 24px 16px; }
     .container { max-width: 860px; margin: 0 auto; }
-    .top-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+    
+    .top-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; flex-wrap: wrap; gap: 10px; }
     .logo-link { font-weight: 800; color: var(--primary); text-decoration: none; font-size: 1.15rem; }
-    .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.9rem; font-weight: 600; margin-left: 14px; }
+    .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.9rem; font-weight: 600; margin-left: 12px; }
     .nav-links a:hover { color: var(--primary); }
+    .nav-links a.active { color: var(--primary); font-weight: 800; }
 
     header { text-align: center; margin-bottom: 24px; }
     h1 { font-size: 1.85rem; font-weight: 800; color: #1e293b; margin-bottom: 8px; }
@@ -74,7 +76,8 @@
     <a href="/" class="logo-link">⚡ ByteCheck Global</a>
     <div class="nav-links">
       <a href="/">자소서 바이트 검사기</a>
-      <a href="/salary.html" style="color: var(--primary); font-weight: 800;"><span class="auto-year"></span> 연봉 계산기</a>
+      <a href="/salary.html" class="active"><span class="auto-year"></span> 연봉 계산기</a>
+      <a href="/dday.html">어학 만료 & D-Day 계산기</a>
     </div>
   </div>
 
