@@ -58,10 +58,6 @@
     .content-card h3 { font-size: 1.1rem; color: #334155; margin: 20px 0 10px 0; }
     .content-card p { color: var(--muted); font-size: 0.96rem; margin-bottom: 14px; }
 
-    .filter-tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
-    .tab-btn { padding: 8px 16px; border-radius: 6px; border: 1px solid var(--border); background: #fff; color: var(--muted); font-size: 0.88rem; font-weight: 600; cursor: pointer; }
-    .tab-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
-
     .table-container { overflow-x: auto; margin: 18px 0; }
     table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem; }
     th, td { padding: 12px 14px; border: 1px solid var(--border); }
@@ -108,7 +104,8 @@
 
   <header>
     <div class="badge">채용 시스템 공식 가이드</div>
-    <h1><span class="auto-year"></span> 주요 대기업·공기업 자소서 바이트 규격 총정리</h1>
+    <!-- 띄어쓰기 한 칸(&nbsp;)을 명시하여 글자 붙음 현상 원천 방지 -->
+    <h1><span class="auto-year"></span>년 주요 대기업·공기업 자소서 바이트 규격 총정리</h1>
     <p>채용 포털과 실제 기업 전산망의 바이트 계산 차이로 인한 서류 마감 직전 초과 탈락 방지 안내서</p>
   </header>
 
@@ -243,7 +240,6 @@
       </table>
     </div>
 
-    <!-- 맞춤형 제휴 배너 -->
     <div class="monetize-grid">
       <div class="monetize-card card-orange">
         <div>
@@ -298,7 +294,7 @@
 <script>
   const currentYear = new Date().getFullYear();
   document.querySelectorAll('.auto-year').forEach(el => el.textContent = currentYear);
-  document.getElementById('doc-title').textContent = `${currentYear} 주요 대기업·공기업 자소서 바이트(Byte) 및 글자수 규격 총정리 가이드 - ByteCheck`;
+  document.getElementById('doc-title').textContent = `${currentYear}년 주요 대기업·공기업 자소서 바이트(Byte) 및 글자수 규격 총정리 가이드 - ByteCheck`;
   document.getElementById('doc-desc').setAttribute('content', `${currentYear}년 최신 삼성, SK, 현대차, 공기업 채용 전산망별 자소서 바이트(2Byte/3Byte) 및 줄바꿈 계산 규격 완벽 가이드.`);
 </script>
 
