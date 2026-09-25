@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2026 연봉 실수령액 계산기 | 4대보험·소득세 자동 계산 - ByteCheck</title>
-  <meta name="description" content="2026년 최신 4대보험(국민연금, 건강보험, 장기요양, 고용보험) 및 근로소득세 간이세액표를 반영한 연봉별 월 실수령액 자동 계산기.">
-
-  <!-- Google AdSense Code -->
+  <!-- Google Search Console Verification (bytechecktool.com) -->
+  <meta name="google-site-verification" content="e2Xv_NBgGvblX0V8f9y4zCfq69IzqaWOJ7M26LolfEk" />
+  
+  <!-- Google AdSense Verification Script -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6840623754388286" crossorigin="anonymous"></script>
 
+  <title>2026 자소서 바이트 계산기 & 글로벌 글자수/단어수 검사기</title>
+  <meta name="description" content="EUC-KR 2바이트 및 UTF-8 3바이트 기준 실시간 자소서 바이트 계산기, 영문 단어수(Word Count) 분석, 공기업/대기업 블라인드 금칙어 자동 필터링 도구.">
   <style>
     :root {
       --primary: #2563eb;
@@ -18,123 +20,279 @@
       --border: #e2e8f0;
       --text: #0f172a;
       --muted: #475569;
+      --danger-bg: #fef2f2;
+      --danger-border: #fecaca;
+      --danger-text: #b91c1c;
       --accent: #f97316;
       --accent-bg: #fff7ed;
       --accent-border: #ffedd5;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; padding: 24px 16px; }
-    .container { max-width: 860px; margin: 0 auto; }
-    .top-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
-    .logo-link { font-weight: 800; color: var(--primary); text-decoration: none; font-size: 1.15rem; }
-    .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.9rem; font-weight: 600; margin-left: 14px; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.75; padding: 24px 16px; }
+    .container { max-width: 900px; margin: 0 auto; }
+    
+    /* Top Bar & Header */
+    .top-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px; }
+    .logo-badge { font-weight: 800; color: var(--primary); font-size: 1.15rem; text-decoration: none; }
+    .nav-links { display: flex; align-items: center; gap: 12px; }
+    .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.9rem; font-weight: 600; }
     .nav-links a:hover { color: var(--primary); }
+    .nav-links a.active { color: var(--primary); font-weight: 800; }
+    .lang-btn { padding: 6px 14px; border-radius: 20px; border: 1px solid var(--border); background: #fff; color: var(--text); font-size: 0.85rem; font-weight: 600; cursor: pointer; }
+    .lang-btn:hover { background: #f1f5f9; }
 
     header { text-align: center; margin-bottom: 24px; }
-    h1 { font-size: 1.85rem; font-weight: 800; color: #1e293b; margin-bottom: 8px; }
-    header p { color: var(--muted); font-size: 0.95rem; }
-
-    .calc-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.04); margin-bottom: 24px; }
-    .form-group { margin-bottom: 16px; }
-    label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 6px; color: #334155; }
-    input[type="number"], select { width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 1rem; outline: none; }
-    input:focus, select:focus { border-color: var(--primary); }
-    .btn-calc { width: 100%; background: var(--primary); color: #fff; border: none; padding: 14px; border-radius: 8px; font-size: 1.05rem; font-weight: 700; cursor: pointer; margin-top: 10px; }
-    .btn-calc:hover { background: var(--primary-hover); }
-
-    .result-box { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 12px; padding: 24px; margin-top: 24px; text-align: center; display: none; }
-    .result-title { font-size: 0.9rem; color: #1e40af; font-weight: 600; }
-    .result-amount { font-size: 2.2rem; font-weight: 900; color: var(--primary); margin: 8px 0; }
+    h1 { font-size: 1.95rem; font-weight: 800; color: #1e293b; margin-bottom: 8px; }
+    header p { color: var(--muted); font-size: 0.98rem; }
     
-    .breakdown-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.92rem; text-align: left; }
-    .breakdown-table th, .breakdown-table td { padding: 10px 12px; border-bottom: 1px solid #e2e8f0; }
-    .breakdown-table th { background: #f1f5f9; color: #334155; }
+    /* Ad Slots */
+    .ad-placeholder { background: #f1f5f9; border: 1px dashed #cbd5e1; border-radius: 8px; padding: 16px; text-align: center; color: #94a3b8; font-size: 0.85rem; margin-bottom: 20px; }
+    
+    /* Tool Input */
+    .input-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.04); margin-bottom: 16px; }
+    textarea { width: 100%; height: 260px; padding: 14px; border: 1px solid var(--border); border-radius: 8px; font-size: 1rem; color: var(--text); resize: vertical; outline: none; transition: border-color 0.2s; }
+    textarea:focus { border-color: var(--primary); }
+    .btn-group { display: flex; justify-content: flex-end; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+    .btn { padding: 8px 16px; border-radius: 6px; border: 1px solid var(--border); background: #fff; color: var(--text); font-size: 0.9rem; font-weight: 600; cursor: pointer; }
+    .btn:hover { background: #f1f5f9; }
+    .btn.primary { background: var(--primary); color: #fff; border-color: var(--primary); }
+    .btn.primary:hover { background: var(--primary-hover); }
 
-    /* 고수익 제휴 배너 카드 */
-    .cpa-benefit-card { background: linear-gradient(135deg, #ffffff 0%, #fff7ed 100%); border: 2px solid var(--accent-border); border-radius: 12px; padding: 20px 24px; margin-top: 24px; box-shadow: 0 4px 12px rgba(249, 115, 22, 0.08); display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-    .cpa-info { flex: 1; min-width: 250px; }
-    .cpa-badge { display: inline-block; background: var(--accent); color: #fff; font-size: 0.75rem; font-weight: 800; padding: 3px 8px; border-radius: 4px; margin-bottom: 6px; text-transform: uppercase; }
-    .cpa-title { font-size: 1.1rem; font-weight: 800; color: #1e293b; margin-bottom: 4px; }
-    .cpa-desc { font-size: 0.88rem; color: var(--muted); }
-    .cpa-btn { background: var(--accent); color: #fff; text-decoration: none; font-size: 0.95rem; font-weight: 700; padding: 12px 22px; border-radius: 8px; transition: background 0.2s; white-space: nowrap; }
-    .cpa-btn:hover { background: #ea580c; }
+    /* 고수익 CPA 카드 (자소서 메인용) */
+    .cpa-mini-card { background: linear-gradient(135deg, #ffffff 0%, #fff7ed 100%); border: 1.5px solid var(--accent-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .cpa-mini-info { display: flex; align-items: center; gap: 10px; flex: 1; min-width: 260px; }
+    .cpa-badge { background: var(--accent); color: #fff; font-size: 0.72rem; font-weight: 800; padding: 3px 7px; border-radius: 4px; white-space: nowrap; }
+    .cpa-text { font-size: 0.92rem; font-weight: 700; color: #1e293b; }
+    .cpa-sub { font-size: 0.8rem; color: var(--muted); font-weight: normal; margin-left: 4px; }
+    .cpa-action-btn { background: var(--accent); color: #fff; text-decoration: none; font-size: 0.85rem; font-weight: 700; padding: 8px 16px; border-radius: 6px; white-space: nowrap; }
+    .cpa-action-btn:hover { background: #ea580c; }
 
-    .content-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 28px; margin-top: 24px; }
-    .content-card h2 { font-size: 1.3rem; color: #1e293b; margin: 20px 0 10px 0; border-left: 4px solid var(--primary); padding-left: 10px; }
-    .content-card h2:first-child { margin-top: 0; }
-    .content-card p { color: var(--muted); font-size: 0.95rem; margin-bottom: 12px; }
+    /* Stats Grid */
+    .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 20px; }
+    @media (max-width: 640px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+    .stat-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px 12px; text-align: center; }
+    .stat-card .label { font-size: 0.82rem; color: var(--muted); margin-bottom: 4px; font-weight: 600; }
+    .stat-card .val { font-size: 1.6rem; font-weight: 800; color: var(--primary); }
+    .stat-card .unit { font-size: 0.82rem; color: var(--muted); margin-left: 2px; }
 
-    footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); color: #94a3b8; font-size: 0.85rem; }
+    /* Alert Box */
+    .alert-box { background: var(--danger-bg); border: 1px solid var(--danger-border); border-radius: 8px; padding: 14px 18px; margin-bottom: 24px; display: none; }
+    .alert-title { font-weight: 700; color: var(--danger-text); margin-bottom: 6px; font-size: 0.95rem; }
+    .alert-words { color: #dc2626; font-size: 0.95rem; word-break: break-all; }
+
+    /* Section Card */
+    .section-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 32px 24px; margin-top: 24px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+    .section-card h2 { font-size: 1.35rem; color: #1e293b; margin: 26px 0 14px 0; border-left: 4px solid var(--primary); padding-left: 10px; }
+    .section-card h2:first-child { margin-top: 0; }
+    .section-card h3 { font-size: 1.08rem; color: #334155; margin: 20px 0 10px 0; }
+    .section-card p { color: var(--muted); margin-bottom: 14px; font-size: 0.96rem; }
+    .section-card ul { margin: 10px 0 18px 22px; color: var(--muted); font-size: 0.95rem; }
+    .section-card li { margin-bottom: 8px; }
+    .callout { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px 20px; margin: 18px 0; font-size: 0.93rem; color: #1e40af; }
+
+    /* Comparison Table */
+    .table-container { overflow-x: auto; margin: 18px 0; }
+    table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.92rem; }
+    th, td { padding: 12px 14px; border: 1px solid var(--border); }
+    th { background: #f8fafc; color: #1e293b; font-weight: 700; }
+    td { color: var(--muted); }
+
+    /* FAQ Section */
+    .faq-item { border-bottom: 1px solid var(--border); padding: 14px 0; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-weight: 700; color: #1e293b; cursor: pointer; display: flex; justify-content: space-between; font-size: 0.98rem; }
+    .faq-a { margin-top: 8px; color: var(--muted); font-size: 0.93rem; }
+
+    /* Legal Policy Sections */
+    .legal-card { background: #fafafa; border: 1px solid var(--border); border-radius: 10px; padding: 22px; margin-top: 20px; font-size: 0.9rem; color: var(--muted); }
+    .legal-card h3 { font-size: 1.1rem; color: #1e293b; margin-bottom: 10px; }
+    .legal-card p { margin-bottom: 8px; line-height: 1.6; }
+
+    /* Counter */
+    .counter-section { margin-top: 30px; text-align: center; }
+    .counter-badge-box { display: inline-flex; align-items: center; justify-content: center; background: #ffffff; border: 1px solid var(--border); border-radius: 30px; padding: 6px 16px; box-shadow: 0 2px 4px rgba(0,0,0,0.03); }
+    .counter-label { font-size: 0.85rem; font-weight: 600; color: var(--muted); margin-right: 10px; }
+
+    footer { text-align: center; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border); color: #94a3b8; font-size: 0.85rem; }
   </style>
 </head>
 <body>
 
 <div class="container">
   <div class="top-nav">
-    <a href="/" class="logo-link">⚡ ByteCheck Global</a>
-    <div class="nav-links">
-      <a href="/">자소서 바이트 검사기</a>
-      <a href="/salary.html" style="color: var(--primary);">연봉 계산기</a>
+    <div style="display: flex; align-items: center; gap: 16px;">
+      <a href="/" class="logo-badge">⚡ ByteCheck Global</a>
+      <div class="nav-links">
+        <a href="/" class="active">자소서 바이트 검사기</a>
+        <a href="/salary.html">2026 연봉 계산기</a>
+      </div>
     </div>
+    <button class="lang-btn" onclick="toggleLanguage()">🌐 English / 한국어</button>
   </div>
 
   <header>
-    <h1>2026 연봉 실수령액 계산기</h1>
-    <p>2026년 최신 4대 보험요율 및 근로소득세 간이세액표 기준 월 실수령액 자동 계산</p>
+    <h1 id="ui-title">2026 자소서 바이트 계산기 & 블라인드 금칙어 검사기</h1>
+    <p id="ui-desc">채용 포털(EUC-KR 2Byte), 공공기관(UTF-8 3Byte), 영문 이력서(Word Count) 실시간 분석 툴</p>
   </header>
 
-  <div class="calc-card">
-    <div class="form-group">
-      <label for="annualSalary">연봉 (만원 단위 입력)</label>
-      <input type="number" id="annualSalary" placeholder="예: 4500 (4,500만원)" value="4000">
-    </div>
-    <div class="form-group">
-      <label for="nonTaxable">월 비과세액 (기본 식대 20만원)</label>
-      <input type="number" id="nonTaxable" value="20">
-    </div>
-    <div class="form-group">
-      <label for="dependents">부양가족 수 (본인 포함)</label>
-      <select id="dependents">
-        <option value="1" selected>1명 (본인)</option>
-        <option value="2">2명</option>
-        <option value="3">3명</option>
-        <option value="4">4명 이상</option>
-      </select>
-    </div>
-    <button class="btn-calc" onclick="calculateSalary()">실수령액 계산하기</button>
+  <div class="ad-placeholder">광고 영역 (Google AdSense Slot 1)</div>
 
-    <div id="resultBox" class="result-box">
-      <div class="result-title">예상 월 실수령액 (세후)</div>
-      <div class="result-amount" id="netPay">0 원</div>
-      
-      <table class="breakdown-table">
-        <tr><th>항목</th><th>공제 금액 (월)</th></tr>
-        <tr><td>국민연금 (4.5%)</td><td id="pension">0원</td></tr>
-        <tr><td>건강보험 (3.545%)</td><td id="health">0원</td></tr>
-        <tr><td>장기요양보험 (건보의 12.95%)</td><td id="care">0원</td></tr>
-        <tr><td>고용보험 (0.9%)</td><td id="employment">0원</td></tr>
-        <tr><td>근로소득세 (간이세액 추정)</td><td id="incomeTax">0원</td></tr>
-        <tr><td>지방소득세 (소득세의 10%)</td><td id="localTax">0원</td></tr>
-        <tr style="font-weight: 700; background: #e0f2fe;"><td>총 공제액 합계</td><td id="totalDeduction">0원</td></tr>
-      </table>
-
-      <!-- 고수익 CPA 혜택 연동 영역 -->
-      <div class="cpa-benefit-card">
-        <div class="cpa-info">
-          <span class="cpa-badge">2026 직장인 추천 혜택</span>
-          <div class="cpa-title">발급 조건 없는 머니트리카드 혜택 조회</div>
-          <div class="cpa-desc">사회초년생·직장인 필수! 까다로운 발급 조건 없이 즉시 신청하고 생활비 캐시백 혜택 받기</div>
-        </div>
-        <a href="https://iryan.kr/t8g4b86mhz" target="_blank" rel="noopener noreferrer sponsored" class="cpa-btn">혜택 확인하고 발급받기 →</a>
-      </div>
+  <div class="input-card">
+    <textarea id="textInput" placeholder="자기소개서 문항이나 영문 텍스트를 입력하세요. 글자수, 공백, 2Byte/3Byte, 단어수가 실시간으로 계산됩니다..."></textarea>
+    <div class="btn-group">
+      <button class="btn" id="btnSample">예시 문장 넣기</button>
+      <button class="btn" id="btnClear">초기화</button>
+      <button class="btn primary" id="btnCopy">텍스트 복사</button>
     </div>
   </div>
 
-  <div class="content-card">
-    <h2>2026년 4대 보험요율 적용 기준 가이드</h2>
-    <p>본 계산기는 근로기준법 및 최신 국민연금법, 국민건강보험법 시행령에 규정된 공제율을 충실히 반영하여 연봉 계약 시 실제 통장에 입금되는 금액을 정확히 추정합니다.</p>
-    <p>• <strong>식대 비과세 한도:</strong> 월 20만 원까지 소득세 및 4대보험 산정 기준 소득에서 비과세 처리됩니다.<br>
-    • <strong>근로소득세:</strong> 국세청 근로소득 간이세액표를 기준으로 부양가족 수에 맞추어 원천징수 세액을 추산합니다.</p>
+  <!-- 취준생·대학생 타겟 고수익 제휴 혜택 바 -->
+  <div class="cpa-mini-card">
+    <div class="cpa-mini-info">
+      <span class="cpa-badge">혜택 지원</span>
+      <div class="cpa-text">
+        발급 조건 없는 머니트리카드 혜택 조회
+        <span class="cpa-sub">취준생·대학생 생활비 캐시백 지원</span>
+      </div>
+    </div>
+    <a href="https://iryan.kr/t8g4b86mhz" target="_blank" rel="noopener noreferrer sponsored" class="cpa-action-btn">혜택 확인 →</a>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="label" id="lbl-char-space">공백 포함 글자수</div>
+      <div><span class="val" id="charWithSpace">0</span><span class="unit">자</span></div>
+    </div>
+    <div class="stat-card">
+      <div class="label" id="lbl-char-nospace">공백 제외 글자수</div>
+      <div><span class="val" id="charWithoutSpace">0</span><span class="unit">자</span></div>
+    </div>
+    <div class="stat-card">
+      <div class="label" id="lbl-words">영문 단어수 (Word Count)</div>
+      <div><span class="val" id="wordCount">0</span><span class="unit">개</span></div>
+    </div>
+    <div class="stat-card">
+      <div class="label" id="lbl-byte2">일반 바이트 (2Byte EUC-KR)</div>
+      <div><span class="val" id="byte2">0</span><span class="unit">Byte</span></div>
+    </div>
+    <div class="stat-card">
+      <div class="label" id="lbl-byte3">웹 표준 바이트 (3Byte UTF-8)</div>
+      <div><span class="val" id="byte3">0</span><span class="unit">Byte</span></div>
+    </div>
+    <div class="stat-card">
+      <div class="label" id="lbl-reading-time">예상 읽기 시간</div>
+      <div><span class="val" id="readingTime">0</span><span class="unit">초</span></div>
+    </div>
+  </div>
+
+  <div id="alertBox" class="alert-box">
+    <div class="alert-title">⚠️ 블라인드 채용 위반 위험 단어가 감지되었습니다:</div>
+    <div id="alertWords" class="alert-words"></div>
+  </div>
+
+  <!-- 본문 가이드 -->
+  <div class="section-card">
+    <h2>채용 시스템별 바이트(Byte) 및 인코딩 체계 완벽 분석</h2>
+    <p>국내 주요 대기업 채용 사이트(삼성 커리어스, 현대자동차 채용, SK 채용 등)와 공공기관 채용 전산망(NCS 기준)은 서버의 데이터베이스 문자셋(Charset) 구성에 따라 텍스트의 바이트를 완전히 다른 공식으로 계산합니다. 마감 직전 입력창에서 초과 오류가 발생하는 것을 방지하기 위해 각 기관의 인코딩 기준을 사전에 숙지해야 합니다.</p>
+    
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>적용 대상 (대표 채용처)</th>
+            <th>한글 1글자</th>
+            <th>영문/숫자/공백</th>
+            <th>줄바꿈 (Enter)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>2Byte (EUC-KR)</strong></td>
+            <td>사람인, 잡코리아, 인크루트, 일부 대기업 자체 채용창</td>
+            <td>2 Byte</td>
+            <td>1 Byte</td>
+            <td>2 Byte (\r\n)</td>
+          </tr>
+          <tr>
+            <td><strong>3Byte (UTF-8)</strong></td>
+            <td>공공기관/공기업 NCS 채용망, 금융권, 웹 표준 시스템</td>
+            <td>3 Byte</td>
+            <td>1 Byte</td>
+            <td>1 Byte 또는 2 Byte</td>
+          </tr>
+          <tr>
+            <td><strong>글자수 기준</strong></td>
+            <td>네이버, 카카오 등 빅테크 IT 기업</td>
+            <td>1 자</td>
+            <td>1 자</td>
+            <td>포털 정책에 따라 상이</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>공공기관 블라인드 채용 평가 가이드라인 및 주의사항</h3>
+    <p>공공기관 블라인드 평가 제도는 학연, 지연, 혈연 등 편견을 유발할 수 있는 요소를 배제하는 데 목적이 있습니다. 사소한 실수로 서류 전형에서 부적격(감점 또는 직권 탈락) 처리되지 않도록 아래 항목을 반드시 사전 검증해야 합니다.</p>
+    <ul>
+      <li><strong>가족 배경 및 친인척 직업:</strong> 부모의 사회적 지위나 직업군(의사, 변호사, 공무원, 대기업 임원 등)을 기술하는 문장은 원천 금지됩니다.</li>
+      <li><strong>출신 학교 및 학맥:</strong> 대학명뿐 아니라 캠퍼스 위치(예: 신촌, 안암, 관악 등), 특정 단과대학의 별칭, 지도교수 성명 등의 기술을 지양해야 합니다.</li>
+      <li><strong>출신 지역 및 연고:</strong> 특정 광역시도 및 지자체 연고를 드러내는 표현은 감점 기준에 해당합니다.</li>
+    </ul>
+
+    <h2>International Resume, CV & Essay Word Counting Standards</h2>
+    <p>When preparing documents for international applications (Cover Letters, Resumes, and Statement of Purpose), word count is strictly enforced alongside character limits. Western recruiters evaluate readability and lexical density via Word Count, while social platforms (such as X/Twitter and LinkedIn) adhere to strict character bounds.</p>
+
+    <!-- FAQ Accordion -->
+    <h2>자주 묻는 질문 (FAQ)</h2>
+    <div class="faq-item">
+      <div class="faq-q">Q1. 워드나 한글 프로그램의 글자수와 왜 차이가 나나요?</div>
+      <div class="faq-a">워드프로세서는 줄바꿈(엔터)이나 문장부호, 특수기호의 바이트 처리 규격이 독자적입니다. 반면 채용 웹사이트는 웹 브라우저 표준(HTML/JavaScript) 기반으로 데이터를 전송하므로, 웹 기반 검사기(ByteCheck)의 수치가 실제 채용 서버 입력창과 가장 일치합니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q2. 줄바꿈(엔터키)은 몇 바이트로 계산되나요?</div>
+      <div class="faq-a">윈도우 기반 서버 환경의 채용창은 캐리지 리턴(\r)과 라인 피드(\n)가 결합되어 2Byte로 계산되는 경우가 많으며, 유닉스/리눅스 표준 서버 환경에서는 1Byte로 처리됩니다. 안전한 입사지원을 위해 여유분(5~10바이트)을 두고 작성하시는 것을 권장합니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q3. 작성 중인 자기소개서 내용이 서버에 저장되거나 유출되지 않나요?</div>
+      <div class="faq-a">절대 저장되지 않습니다. 본 서비스는 작성자의 개인정보와 취업 서류 보안을 위해 서버로 데이터를 전송하지 않으며, 이용자의 웹 브라우저 내에서만 연산이 수행되는 클라이언트 사이드 스크립트로 구동됩니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q4. 영문 에세이나 이력서의 Word Count 기준은 무엇인가요?</div>
+      <div class="faq-a">영미권 입사지원 및 대학교 입학 전형(Common App 등)에서는 띄어쓰기(공백)를 기준으로 구분된 단어(Word)의 총 개수를 표준 심사 기준으로 삼습니다. 본 툴은 실시간 단어 분석기를 통해 이를 정확히 카운트합니다.</div>
+    </div>
+  </div>
+
+  <div class="ad-placeholder">광고 영역 (Google AdSense Slot 2)</div>
+
+  <!-- 법적 고지 3종 -->
+  <div class="legal-card" id="privacy-policy">
+    <h3>개인정보처리방침 (Privacy Policy)</h3>
+    <p><strong>1. 입력 데이터 보안 원칙:</strong> 본 웹도구(ByteCheck Global)는 이용자가 입력창에 작성한 자기소개서 및 영문 텍스트를 일절 수집, 전송, 또는 외부 서버에 저장하지 않습니다. 모든 글자수 및 바이트 계산은 이용자의 웹 브라우저 내부(Client-side JavaScript)에서만 처리됩니다.</p>
+    <p><strong>2. 쿠키(Cookie) 및 제3자 광고 네트워크:</strong> 본 사이트는 서비스 품질 분석 및 Google AdSense를 통한 맞춤형 광고 게재를 목적으로 쿠키를 사용할 수 있습니다. 이용자는 언제든지 브라우저 설정을 통해 쿠키 저장을 거부할 수 있습니다.</p>
+    <p><strong>3. 개인정보 관리책임자:</strong> tiptodaylab@gmail.com</p>
+  </div>
+
+  <div class="legal-card" id="terms-of-service">
+    <h3>이용약관 및 면책조항 (Terms of Service & Disclaimer)</h3>
+    <p><strong>1. 서비스 제공 목적:</strong> 본 서비스는 구직자, 수험생 및 글로벌 문서 작성자의 편의를 돕기 위해 무료로 제공되는 글자수, 바이트, 단어수 검사 보조 도구입니다.</p>
+    <p><strong>2. 결과에 대한 면책:</strong> 본 계산기는 국내외 주요 채용 시스템의 표준 규격을 충실히 반영하고 있으나, 각 기관 및 기업 전산실의 독자적인 인코딩 및 처리 방식에 따라 미세한 편차가 존재할 수 있습니다. 본 사이트 결과값의 신뢰에 따른 입사지원 결과에 대해 서비스 제공자는 법적 책임을 지지 않습니다.</p>
+  </div>
+
+  <div class="legal-card" id="contact-us">
+    <h3>문의하기 (Contact Us)</h3>
+    <p>서비스 이용 중 발생하는 시스템 버그, 개선 제안, 기능 추가 요청 및 광고/제휴 관련 문의는 아래 공식 지원 창구로 문의해 주시기 바랍니다.</p>
+    <p><strong>공식 지원 이메일:</strong> <a href="mailto:tiptodaylab@gmail.com" style="color: var(--primary); text-decoration: none; font-weight: bold;">tiptodaylab@gmail.com</a></p>
+  </div>
+
+  <!-- 실시간 누적/일일 방문자수 카운터 -->
+  <div class="counter-section">
+    <div class="counter-badge-box">
+      <span class="counter-label">👥 Visitors (Today / Total):</span>
+      <a href="https://hits.sh/bytechecktool.com/" target="_blank" rel="noopener noreferrer">
+        <img alt="Hits" src="https://hits.sh/bytechecktool.com.svg?view=today-total&style=flat-square&label=Visitors&color=2563eb&labelColor=0f172a" />
+      </a>
+    </div>
   </div>
 
   <footer>
@@ -143,44 +301,117 @@
 </div>
 
 <script>
-  function calculateSalary() {
-    const annual = parseFloat(document.getElementById('annualSalary').value) * 10000;
-    const nonTax = parseFloat(document.getElementById('nonTaxable').value) * 10000;
-    if (!annual || annual <= 0) return;
+  let currentLang = 'ko';
 
-    const monthlyGross = Math.floor(annual / 12);
-    const taxableIncome = Math.max(0, monthlyGross - nonTax);
+  const forbiddenKeywords = [
+    '아버지', '어머니', '부모님', '아빠', '엄마', '외삼촌', '친척',
+    '공무원', '의사', '교수', '변호사', '판사', '검사', '회계사',
+    '서울대', '연세대', '고려대', '한양대', '성균관대', '지방대', '명문대',
+    '경상도', '전라도', '강원도', '충청도', '서울 출신', '부산 출신'
+  ];
 
-    // 4대보험 요율
-    const pension = Math.min(Math.floor(taxableIncome * 0.045), 265500); // 국민연금 상한 반영
-    const health = Math.floor(taxableIncome * 0.03545); // 건강보험
-    const care = Math.floor(health * 0.1295); // 장기요양
-    const employment = Math.floor(taxableIncome * 0.009); // 고용보험
+  const textInput = document.getElementById('textInput');
+  const charWithSpace = document.getElementById('charWithSpace');
+  const charWithoutSpace = document.getElementById('charWithoutSpace');
+  const wordCount = document.getElementById('wordCount');
+  const byte2 = document.getElementById('byte2');
+  const byte3 = document.getElementById('byte3');
+  const readingTime = document.getElementById('readingTime');
+  const alertBox = document.getElementById('alertBox');
+  const alertWords = document.getElementById('alertWords');
 
-    // 간이소득세 추정
-    let incomeTax = 0;
-    if (taxableIncome > 1060000) {
-      incomeTax = Math.floor((taxableIncome - 1000000) * 0.05);
+  function updateCounts() {
+    const val = textInput.value;
+    charWithSpace.textContent = val.length.toLocaleString();
+    charWithoutSpace.textContent = val.replace(/\s/g, '').length.toLocaleString();
+
+    const words = val.trim().split(/\s+/).filter(w => w.length > 0);
+    wordCount.textContent = words.length.toLocaleString();
+
+    const seconds = Math.ceil((val.replace(/\s/g, '').length / 400) * 60);
+    readingTime.textContent = val.length === 0 ? 0 : seconds;
+
+    let b2 = 0;
+    let b3 = 0;
+    for (let i = 0; i < val.length; i++) {
+      const code = val.charCodeAt(i);
+      if (code <= 0x007f) {
+        b2 += 1; b3 += 1;
+      } else if (code <= 0x07ff) {
+        b2 += 2; b3 += 2;
+      } else if (code <= 0xffff) {
+        b2 += 2; b3 += 3;
+      } else {
+        b2 += 2; b3 += 4;
+      }
     }
-    const localTax = Math.floor(incomeTax * 0.1);
+    byte2.textContent = b2.toLocaleString();
+    byte3.textContent = b3.toLocaleString();
 
-    const totalDeductions = pension + health + care + employment + incomeTax + localTax;
-    const net = monthlyGross - totalDeductions;
-
-    document.getElementById('netPay').textContent = net.toLocaleString() + ' 원';
-    document.getElementById('pension').textContent = pension.toLocaleString() + ' 원';
-    document.getElementById('health').textContent = health.toLocaleString() + ' 원';
-    document.getElementById('care').textContent = care.toLocaleString() + ' 원';
-    document.getElementById('employment').textContent = employment.toLocaleString() + ' 원';
-    document.getElementById('incomeTax').textContent = incomeTax.toLocaleString() + ' 원';
-    document.getElementById('localTax').textContent = localTax.toLocaleString() + ' 원';
-    document.getElementById('totalDeduction').textContent = totalDeductions.toLocaleString() + ' 원';
-
-    document.getElementById('resultBox').style.display = 'block';
+    const detected = forbiddenKeywords.filter(k => val.includes(k));
+    if (detected.length > 0 && val.trim().length > 0) {
+      alertBox.style.display = 'block';
+      alertWords.textContent = detected.join(', ');
+    } else {
+      alertBox.style.display = 'none';
+    }
   }
 
-  // 초기 1회 실행
-  calculateSalary();
+  textInput.addEventListener('input', updateCounts);
+
+  document.getElementById('btnClear').addEventListener('click', () => {
+    textInput.value = '';
+    updateCounts();
+    textInput.focus();
+  });
+
+  document.getElementById('btnCopy').addEventListener('click', () => {
+    if (!textInput.value) return;
+    navigator.clipboard.writeText(textInput.value).then(() => {
+      alert(currentLang === 'ko' ? '텍스트가 클립보드에 복사되었습니다!\n\n💡 지원 시즌 꿀팁: 상단 [2026 연봉 계산기]에서 희망 기업 실수령액도 함께 확인해보세요.' : 'Copied to clipboard!');
+    });
+  });
+
+  document.getElementById('btnSample').addEventListener('click', () => {
+    if (currentLang === 'ko') {
+      textInput.value = "안녕하십니까. 데이터 분석 직무에 지원한 홍길동입니다. 학부 시절 공공데이터를 활용한 프로젝트를 주도하며 분석 역량을 길렀습니다. 아버지는 공무원으로 30년간 재직하시며 저에게 정직과 원칙을 강조하셨습니다. 서울대 캠퍼스에서 열린 연합 학술제에 참여하여 최우수상을 수상한 경험이 있습니다.";
+    } else {
+      textInput.value = "Dedicated software engineer with 4+ years of hands-on experience in building scalable microservices and real-time cloud data pipelines. Demonstrated track record of optimizing application throughput by 35% and mentoring junior associates.";
+    }
+    updateCounts();
+  });
+
+  function toggleLanguage() {
+    if (currentLang === 'ko') {
+      currentLang = 'en';
+      document.getElementById('ui-title').textContent = "Global Character, Word & Byte Counter";
+      document.getElementById('ui-desc').textContent = "Real-time Character Counter, Word Counter (CV/Resume), and Multi-byte String Analyzer";
+      document.getElementById('lbl-char-space').textContent = "Characters (With Spaces)";
+      document.getElementById('lbl-char-nospace').textContent = "Characters (No Spaces)";
+      document.getElementById('lbl-words').textContent = "Word Count";
+      document.getElementById('lbl-byte2').textContent = "Standard Bytes (EUC-KR)";
+      document.getElementById('lbl-byte3').textContent = "UTF-8 Bytes";
+      document.getElementById('lbl-reading-time').textContent = "Reading Time (Sec)";
+      document.getElementById('btnSample').textContent = "Insert Sample";
+      document.getElementById('btnClear').textContent = "Clear";
+      document.getElementById('btnCopy').textContent = "Copy Text";
+      textInput.placeholder = "Paste your text, essay, resume or personal statement here...";
+    } else {
+      currentLang = 'ko';
+      document.getElementById('ui-title').textContent = "2026 자소서 바이트 계산기 & 블라인드 금칙어 검사기";
+      document.getElementById('ui-desc').textContent = "채용 포털(EUC-KR 2Byte), 공공기관(UTF-8 3Byte), 영문 이력서(Word Count) 실시간 분석 툴";
+      document.getElementById('lbl-char-space').textContent = "공백 포함 글자수";
+      document.getElementById('lbl-char-nospace').textContent = "공백 제외 글자수";
+      document.getElementById('lbl-words').textContent = "영문 단어수 (Word Count)";
+      document.getElementById('lbl-byte2').textContent = "일반 바이트 (2Byte EUC-KR)";
+      document.getElementById('lbl-byte3').textContent = "웹 표준 바이트 (3Byte UTF-8)";
+      document.getElementById('lbl-reading-time').textContent = "예상 읽기 시간";
+      document.getElementById('btnSample').textContent = "예시 문장 넣기";
+      document.getElementById('btnClear').textContent = "초기화";
+      document.getElementById('btnCopy').textContent = "텍스트 복사";
+      textInput.placeholder = "자기소개서 문항이나 영문 텍스트를 입력하세요. 글자수, 공백, 2Byte/3Byte, 단어수가 실시간으로 계산됩니다...";
+    }
+  }
 </script>
 
 </body>
