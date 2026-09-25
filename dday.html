@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="e2Xv_NBgGvblX0V8f9y4zCfq69IzqaWOJ7M26LolfEk" />
+  <meta name="naver-site-verification" content="9b89f279e57a207c6e69f649c1aa92852159b071" />
+  
   <title id="doc-title">토익·오픽 어학 성적 만료일 & 채용 D-Day 계산기 - ByteCheck</title>
   <meta name="description" id="doc-desc" content="토익(TOEIC), 토익스피킹, 오픽(OPIc) 유효기간 2년 만료일 자동 계산 및 공기업 대기업 입사지원 채용 D-Day 카운트다운 무료 도구.">
 
@@ -39,6 +42,8 @@
     h1 { font-size: 1.85rem; font-weight: 800; color: #1e293b; margin-bottom: 8px; }
     header p { color: var(--muted); font-size: 0.95rem; }
 
+    .ad-placeholder { background: #f1f5f9; border: 1px dashed #cbd5e1; border-radius: 8px; padding: 16px; text-align: center; color: #94a3b8; font-size: 0.85rem; margin-bottom: 20px; }
+
     .calc-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.04); margin-bottom: 24px; }
     .form-group { margin-bottom: 16px; }
     label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 6px; color: #334155; }
@@ -52,10 +57,9 @@
     .result-highlight { font-size: 2rem; font-weight: 900; color: var(--primary); margin: 10px 0; }
     .result-sub { font-size: 0.95rem; color: #334155; }
 
-    /* 타겟 맞춤 제휴 카드 그리드 */
     .monetize-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 24px; }
     @media (max-width: 680px) { .monetize-grid { grid-template-columns: 1fr; } }
-    .monetize-card { border-radius: 12px; padding: 16px 18px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 2px 6px rgba(0,0,0,0.03); }
+    .monetize-card { border-radius: 12px; padding: 16px 18px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 2px 6px rgba(0,0,0,0.03); text-align: left; }
     .card-orange { background: linear-gradient(135deg, #ffffff 0%, var(--accent-bg) 100%); border: 1.5px solid var(--accent-border); }
     .card-red { background: linear-gradient(135deg, #ffffff 0%, var(--coupang-bg) 100%); border: 1.5px solid var(--coupang-border); }
     .card-tag { display: inline-block; font-size: 0.72rem; font-weight: 800; padding: 2px 8px; border-radius: 4px; color: #fff; margin-bottom: 6px; }
@@ -70,9 +74,17 @@
     .affiliate-notice { font-size: 0.75rem; color: #94a3b8; text-align: right; margin-top: 10px; }
 
     .content-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 28px; margin-top: 24px; }
-    .content-card h2 { font-size: 1.3rem; color: #1e293b; margin: 20px 0 10px 0; border-left: 4px solid var(--primary); padding-left: 10px; }
+    .content-card h2 { font-size: 1.3rem; color: #1e293b; margin: 24px 0 12px 0; border-left: 4px solid var(--primary); padding-left: 10px; }
     .content-card h2:first-child { margin-top: 0; }
+    .content-card h3 { font-size: 1.05rem; color: #334155; margin: 16px 0 8px 0; }
     .content-card p { color: var(--muted); font-size: 0.95rem; margin-bottom: 12px; }
+    .content-card ul { margin: 8px 0 16px 20px; color: var(--muted); font-size: 0.94rem; }
+    .content-card li { margin-bottom: 6px; }
+
+    .faq-item { border-bottom: 1px solid var(--border); padding: 12px 0; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-weight: 700; color: #1e293b; font-size: 0.96rem; }
+    .faq-a { margin-top: 6px; color: var(--muted); font-size: 0.92rem; }
 
     footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); color: #94a3b8; font-size: 0.85rem; }
   </style>
@@ -93,6 +105,8 @@
     <h1>어학 성적 유효기간 & 채용 D-Day 계산기</h1>
     <p>토익·오픽·토스 2년 유효기간 자동 만료일 계산 및 공채 서류 마감 D-Day 카운트다운</p>
   </header>
+
+  <div class="ad-placeholder">광고 영역 (Google AdSense Slot 1)</div>
 
   <div class="calc-card">
     <div class="form-group">
@@ -139,10 +153,32 @@
     </div>
   </div>
 
+  <div class="ad-placeholder">광고 영역 (Google AdSense Slot 2)</div>
+
   <div class="content-card">
-    <h2>어학 성적 유효기간 규정 안내 (토익 / 오픽 / 텝스)</h2>
-    <p>국내 주요 공인 어학시험(TOEIC, OPIc, TOEIC Speaking 등)의 법적 유효기간은 <strong>응시일로부터 만 2년</strong>입니다. 주요 공기업 및 국가기관 입사 지원 시에는 서류 접수 마감일 기준으로 유효기간이 유효해야 정상 인정됩니다.</p>
-    <p>• <strong>인사혁신처 사이버국가고시센터:</strong> 공무원 수험생의 경우 사전 등록 시 최대 5년까지 인정되는 제도가 있으므로 사전에 유효기간 만료 전 등록을 완료해야 합니다.</p>
+    <h2>공인 어학 성적 유효기간 가이드라인 (토익 / 오픽 / 토스)</h2>
+    <p>국내 주요 공인 어학시험(TOEIC, OPIc, TOEIC Speaking, TEPS)의 법적 유효기간은 <strong>응시일(시험일)로부터 만 2년</strong>입니다. 대다수 대기업 및 공공기관 서류 전형에서는 <strong>접수 마감일 당일까지 유효한 성적</strong>에 한해 공식 인정합니다.</p>
+    
+    <h3>공공기관 취업 꿀팁: 사이버국가고시센터 5년 인정 제도</h3>
+    <p>인사혁신처에서는 수험생의 경제적 부담을 줄이기 위해 공무원 및 공공기관 입사 시 어학 성적 인정 기간을 기존 2년에서 <strong>최대 5년까지 인정</strong>하는 제도를 시행 중입니다.</p>
+    <ul>
+      <li><strong>주의사항:</strong> 반드시 시험 주관사(YBM 등)의 <strong>기존 2년 유효기간이 만료되기 전에</strong> 사이버국가고시센터 시스템에 사전 등록을 완료해야 합니다.</li>
+      <li>만료 후에는 성적 조회가 불가능하여 5년 연장 혜택을 받을 수 없으므로, 시험 발표 직후 즉시 등록하는 것을 권장합니다.</li>
+    </ul>
+
+    <h2>자주 묻는 질문 (FAQ)</h2>
+    <div class="faq-item">
+      <div class="faq-q">Q. 유효기간 만료일의 기준 시간은 언제인가요?</div>
+      <div class="faq-a">만료일 당일 23시 59분 59초까지 인정되는 것이 일반적이나, 채용 공고 마감 시간이 17시 또는 18시인 경우 마감 시점까지 성적표 제출 및 진위확인이 가능해야 합니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q. 점수 발표일 기준이 아닌 시험 응시일 기준인가요?</div>
+      <div class="faq-a">네, 맞습니다. 모든 공식 어학성적의 2년 카운트는 성적 발표일이 아닌 '실제 시험을 치른 응시일자'를 기준으로 기산됩니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q. 만료일이 지난 성적표 재발급이 가능한가요?</div>
+      <div class="faq-a">규정상 2년이 지난 시험 데이터는 시행사 전산망에서 영구 삭제 처리되어 원본 재발급 및 진위 확인서 발급이 불가능합니다.</div>
+    </div>
   </div>
 
   <footer>
