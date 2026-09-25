@@ -36,7 +36,7 @@
     .container { max-width: 900px; margin: 0 auto; }
     .top-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px; }
     .logo-badge { font-weight: 800; color: var(--primary); font-size: 1.15rem; text-decoration: none; }
-    .nav-links { display: flex; align-items: center; gap: 12px; }
+    .nav-links { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
     .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.9rem; font-weight: 600; }
     .nav-links a:hover { color: var(--primary); }
     .nav-links a.active { color: var(--primary); font-weight: 800; }
@@ -52,7 +52,6 @@
     
     .ad-placeholder { background: #f1f5f9; border: 1px dashed #cbd5e1; border-radius: 8px; padding: 16px; text-align: center; color: #94a3b8; font-size: 0.85rem; margin-bottom: 20px; }
     
-    /* 복구 토스트 알림 */
     .toast-restore { display: none; background: var(--success-bg); border: 1px solid var(--success-border); color: var(--success-text); padding: 12px 16px; border-radius: 8px; font-size: 0.88rem; font-weight: 600; margin-bottom: 14px; align-items: center; justify-content: space-between; }
     .toast-restore.show { display: flex; }
     .toast-close { background: none; border: none; font-size: 1.1rem; color: var(--success-text); cursor: pointer; margin-left: 10px; }
@@ -102,7 +101,7 @@
     .section-card h2 { font-size: 1.35rem; color: #1e293b; margin: 26px 0 14px 0; border-left: 4px solid var(--primary); padding-left: 10px; }
     .section-card h2:first-child { margin-top: 0; }
     .section-card h3 { font-size: 1.08rem; color: #334155; margin: 20px 0 10px 0; }
-    .section-card p { color: var(--muted); margin-bottom: 14px; font-size: 0.96rem; }
+    .section-card p { color: var(--muted); font-size: 0.96rem; margin-bottom: 14px; }
     .section-card ul { margin: 10px 0 18px 22px; color: var(--muted); font-size: 0.95rem; }
     .section-card li { margin-bottom: 8px; }
 
@@ -138,6 +137,7 @@
         <a href="/" class="active">자소서 바이트 검사기</a>
         <a href="/salary.html"><span class="auto-year"></span> 연봉 계산기</a>
         <a href="/dday.html">어학 만료 & D-Day 계산기</a>
+        <a href="/recruit-guide.html"><span class="auto-year"></span> 기업별 글자수 가이드</a>
       </div>
     </div>
     <div class="nav-actions">
@@ -354,7 +354,6 @@
   const alertWords = document.getElementById('alertWords');
   const toastRestore = document.getElementById('toastRestore');
 
-  // [로컬스토리지 실시간 자동 임시저장 & 복구 엔진]
   const STORAGE_KEY = 'bytecheck_draft_v1';
 
   function saveDraft() {
@@ -419,7 +418,6 @@
     }
   }
 
-  // 실시간 입력 리스너 (계산 + 자동저장)
   textInput.addEventListener('input', () => {
     updateCounts();
     saveDraft();
@@ -438,7 +436,7 @@
   document.getElementById('btnCopy').addEventListener('click', () => {
     if (!textInput.value) return;
     navigator.clipboard.writeText(textInput.value).then(() => {
-      alert(currentLang === 'ko' ? `텍스트가 클립보드에 복사되었습니다!\n\n💡 지원 시즌 꿀팁: 상단 메뉴에서 희망 기업 실수령액과 어학 만료 D-Day도 함께 확인해보세요.` : 'Copied to clipboard!');
+      alert(currentLang === 'ko' ? `텍스트가 클립보드에 복사되었습니다!\n\n💡 지원 시즌 꿀팁: 상단 메뉴에서 기업별 바이트 가이드와 어학 만료 D-Day도 함께 확인해보세요.` : 'Copied to clipboard!');
     });
   });
 
@@ -452,9 +450,8 @@
     saveDraft();
   });
 
-  // 원클릭 단톡방/링크 공유 기능
   function shareWebsite() {
-    const shareText = `[⚡ ByteCheck] 자소서 2Byte/3Byte & 블라인드 금칙어 자동 계산기\n공기업 UTF-8 3바이트 및 채용 포털 글자수를 한눈에 확인하세요!\nhttps://bytechecktool.com`;
+    const shareText = `[⚡ ByteCheck] 자소서 2Byte/3Byte & 블라인드 금칙어 자동 계산기\n공기업 UTF-8 3바이트 및 기업별 글자수 가이드를 확인하세요!\nhttps://bytechecktool.com`;
     if (navigator.clipboard) {
       navigator.clipboard.writeText(shareText).then(() => {
         alert("🔗 추천 공유 문구와 링크가 복사되었습니다!\n\n취업 스터디 단톡방이나 지인에게 붙여넣기(Ctrl+V)하여 공유해 보세요.");
@@ -496,7 +493,6 @@
     }
   }
 
-  // 초기화면 로드 시 저장된 글 자동 복원
   window.addEventListener('DOMContentLoaded', loadDraft);
 </script>
 
