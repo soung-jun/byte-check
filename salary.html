@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2026 연봉 실수령액 계산기 (4대보험 요율 완벽 반영) | ByteCheck</title>
-  <meta name="description" content="2026년 국민연금, 건강보험, 장기요양보험, 고용보험 최신 요율이 자동 반영된 실수령액 모의 계산기입니다. 비과세 식대 20만원 및 부양가족 공제 완벽 지원.">
+  <title>2026 연봉 실수령액 계산기 | ByteCheck</title>
+  <meta name="description" content="2026년 4대보험 개정 요율 및 비과세 식대(20만원) 자동 반영 연봉 실수령액 모의 계산기.">
   
   <meta property="og:title" content="2026 연봉 실수령액 계산기 | ByteCheck">
-  <meta property="og:description" content="내 연봉의 실제 통장 입금액은? 2026년 최신 4대보험 및 소득세 자동 계산">
+  <meta property="og:description" content="내 연봉의 실제 통장 입금액은? 2026년 최신 4대보험 자동 계산">
   <meta property="og:url" content="https://bytechecktool.com/salary.html">
   <meta property="og:type" content="website">
 
@@ -16,235 +16,77 @@
 
   <style>
     :root {
-      --primary: #2563eb;
-      --bg: #f8fafc;
+      --primary: #1d4ed8;
+      --primary-light: #eff6ff;
+      --bg: #f1f5f9;
       --card-bg: #ffffff;
-      --text: #1e293b;
-      --text-muted: #64748b;
-      --border: #e2e8f0;
-      --accent: #059669;
+      --text: #0f172a;
+      --text-muted: #334155;
+      --border: #cbd5e1;
+      --border-dark: #94a3b8;
     }
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
-    }
-    body {
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      padding-bottom: 60px;
-    }
-    header {
-      background: var(--card-bg);
-      border-bottom: 1px solid var(--border);
-      padding: 14px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 1.2rem;
-      font-weight: 800;
-      color: var(--primary);
-      text-decoration: none;
-    }
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    nav a {
-      text-decoration: none;
-      color: var(--text);
-      font-size: 0.9rem;
-      font-weight: 600;
-      padding: 6px 12px;
-      border-radius: 6px;
-      transition: background 0.2s;
-    }
-    nav a:hover, nav a.active {
-      background: #eff6ff;
-      color: var(--primary);
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px 16px;
-    }
-    .hero {
-      text-align: center;
-      margin-bottom: 24px;
-    }
-    .hero h1 {
-      font-size: 1.85rem;
-      font-weight: 800;
-      margin-bottom: 8px;
-      word-break: keep-all;
-    }
-    .hero p {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      word-break: keep-all;
-    }
-    .card {
-      background: var(--card-bg);
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      padding: 24px;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-      margin-bottom: 24px;
-    }
-    .form-group {
-      margin-bottom: 18px;
-    }
-    .form-group label {
-      display: block;
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-    .input-box {
-      width: 100%;
-      padding: 12px 14px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      font-size: 1rem;
-      outline: none;
-    }
-    .input-box:focus {
-      border-color: var(--primary);
-    }
-    .result-display {
-      background: #eff6ff;
-      border: 1px solid #bfdbfe;
-      border-radius: 10px;
-      padding: 20px;
-      text-align: center;
-      margin-top: 20px;
-    }
-    .result-label {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-bottom: 4px;
-    }
-    .result-val {
-      font-size: 2.2rem;
-      font-weight: 800;
-      color: var(--primary);
-    }
-    .detail-list {
-      margin-top: 16px;
-      border-top: 1px dashed #cbd5e1;
-      padding-top: 16px;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      font-size: 0.88rem;
-    }
-    .detail-item {
-      display: flex;
-      justify-content: space-between;
-      color: var(--text-muted);
-    }
-    .detail-item span strong {
-      color: var(--text);
-    }
-    .ad-slot {
-      background: #f1f5f9;
-      border: 1px dashed #cbd5e1;
-      border-radius: 8px;
-      min-height: 90px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-    }
-    .partner-card {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 14px 18px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 16px;
-    }
-    .partner-btn {
-      background: var(--primary);
-      color: #fff;
-      text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 600;
-      padding: 8px 14px;
-      border-radius: 6px;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
+    body { background-color: var(--bg); color: var(--text); line-height: 1.6; }
 
-    /* 모바일 반응형 최적화 */
+    /* 헤더 화면 겹침 버그 제거 */
+    header { background: #ffffff; border-bottom: 2px solid var(--border); width: 100%; position: relative; }
+    .header-inner { max-width: 900px; margin: 0 auto; padding: 14px 20px; display: flex; justify-content: space-between; align-items: center; }
+    .brand { display: flex; align-items: center; gap: 8px; font-size: 1.3rem; font-weight: 800; color: var(--primary); text-decoration: none; }
+    nav { display: flex; align-items: center; gap: 8px; }
+    nav a { text-decoration: none; color: var(--text); font-size: 0.92rem; font-weight: 700; padding: 7px 14px; border-radius: 6px; }
+    nav a:hover { background: var(--primary-light); color: var(--primary); }
+    nav a.active { background: var(--primary); color: #ffffff; }
+
+    .container { max-width: 850px; margin: 0 auto; padding: 24px 16px 60px 16px; }
+    .hero { text-align: center; margin-bottom: 24px; }
+    .hero h1 { font-size: 2.1rem; font-weight: 900; margin-bottom: 8px; color: #0f172a; }
+    .hero p { font-size: 1rem; color: var(--text-muted); font-weight: 600; }
+
+    /* 카드 및 구분선 강화 */
+    .card { background: var(--card-bg); border-radius: 12px; border: 2px solid var(--border); padding: 24px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); margin-bottom: 24px; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 0.95rem; font-weight: 800; margin-bottom: 6px; color: #0f172a; }
+    .input-box { width: 100%; padding: 12px 14px; border: 2px solid var(--border); border-radius: 8px; font-size: 1.05rem; font-weight: 600; outline: none; }
+    .input-box:focus { border-color: var(--primary); }
+
+    .result-display { background: var(--primary-light); border: 2px solid #93c5fd; border-radius: 10px; padding: 24px; text-align: center; margin-top: 24px; }
+    .result-label { font-size: 0.95rem; color: var(--text-muted); font-weight: 700; margin-bottom: 4px; }
+    .result-val { font-size: 2.4rem; font-weight: 900; color: var(--primary); }
+
+    .detail-list { margin-top: 20px; border-top: 2px solid var(--border); padding-top: 20px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; font-size: 0.92rem; }
+    .detail-item { display: flex; justify-content: space-between; padding: 8px 12px; background: #f8fafc; border: 1.5px solid var(--border); border-radius: 6px; }
+    .detail-item span strong { color: var(--text); }
+
+    .partner-box { background: #ffffff; border: 2px solid var(--border); border-radius: 10px; padding: 16px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+    .partner-btn { background: var(--primary); color: #fff; text-decoration: none; font-size: 0.85rem; font-weight: 800; padding: 9px 14px; border-radius: 6px; }
+    .ad-slot { background: #e2e8f0; border: 2px dashed var(--border-dark); border-radius: 8px; min-height: 90px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; color: var(--text-muted); font-size: 0.9rem; font-weight: 700; }
+
+    footer { background: #ffffff; border-top: 2px solid var(--border); padding: 30px 20px; font-size: 0.85rem; color: var(--text-muted); line-height: 1.8; text-align: center; }
+    .footer-links { display: flex; justify-content: center; gap: 16px; margin-bottom: 12px; }
+    .footer-links a { color: var(--primary); text-decoration: none; font-weight: 700; }
+
+    .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 200; align-items: center; justify-content: center; padding: 20px; }
+    .modal-content { background: #fff; max-width: 600px; width: 100%; max-height: 80vh; overflow-y: auto; border-radius: 12px; border: 2px solid var(--border-dark); padding: 24px; position: relative; }
+    .modal-close { position: absolute; top: 16px; right: 16px; cursor: pointer; font-size: 1.4rem; font-weight: bold; }
+
     @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        gap: 12px;
-        padding: 12px 10px;
-      }
-      nav {
-        width: 100%;
-        overflow-x: auto;
-        white-space: nowrap;
-        padding-bottom: 4px;
-        justify-content: flex-start;
-        gap: 8px;
-        scrollbar-width: none;
-      }
-      nav::-webkit-scrollbar {
-        display: none;
-      }
-      nav a {
-        font-size: 0.82rem;
-        background: #f1f5f9;
-        border-radius: 20px;
-        padding: 6px 14px;
-      }
-      nav a.active {
-        background: var(--primary);
-        color: #fff;
-      }
-      .hero h1 {
-        font-size: 1.4rem;
-      }
-      .hero p {
-        font-size: 0.85rem;
-      }
-      .detail-list {
-        grid-template-columns: 1fr;
-      }
-      .partner-card {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-      }
+      .header-inner { flex-direction: column; gap: 10px; }
+      nav { width: 100%; overflow-x: auto; white-space: nowrap; justify-content: flex-start; }
+      .detail-list { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <a href="index.html" class="brand"><span>⚡</span> ByteCheck</a>
-    <nav>
-      <a href="index.html">자소서 바이트</a>
-      <a href="salary.html" class="active">2026 연봉 계산기</a>
-      <a href="dday.html">어학 만료 D-Day</a>
-      <a href="recruit-guide.html">기업별 바이트 가이드</a>
-    </nav>
+    <div class="header-inner">
+      <a href="index.html" class="brand"><span>⚡</span> ByteCheck</a>
+      <nav>
+        <a href="index.html">자소서 바이트 & 가이드</a>
+        <a href="salary.html" class="active">2026 연봉 계산기</a>
+        <a href="dday.html">어학 만료 D-Day</a>
+      </nav>
+    </div>
   </header>
 
   <div class="container">
@@ -277,19 +119,19 @@
       </div>
 
       <div class="detail-list">
-        <div class="detail-item"><span>국민연금 (4.5%)</span><span id="pension">0 원</strong></div>
-        <div class="detail-item"><span>건강보험 (3.545%)</span><span id="health">0 원</strong></div>
-        <div class="detail-item"><span>장기요양보험 (건보의 12.95%)</span><span id="care">0 원</strong></div>
-        <div class="detail-item"><span>고용보험 (0.9%)</span><span id="unemp">0 원</strong></div>
-        <div class="detail-item"><span>근로소득세 (간이세액)</span><span id="incomeTax">0 원</strong></div>
-        <div class="detail-item"><span>지방소득세 (소득세의 10%)</span><span id="localTax">0 원</strong></div>
+        <div class="detail-item"><span>국민연금 (4.5%)</span><span id="pension">0 원</span></div>
+        <div class="detail-item"><span>건강보험 (3.545%)</span><span id="health">0 원</span></div>
+        <div class="detail-item"><span>장기요양보험 (건보의 12.95%)</span><span id="care">0 원</span></div>
+        <div class="detail-item"><span>고용보험 (0.9%)</span><span id="unemp">0 원</span></div>
+        <div class="detail-item"><span>근로소득세 (간이세액)</span><span id="incomeTax">0 원</span></div>
+        <div class="detail-item"><span>지방소득세 (10%)</span><span id="localTax">0 원</span></div>
       </div>
     </main>
 
-    <div class="partner-card">
+    <div class="partner-box">
       <div>
-        <strong>💳 월급 통장 쪼개기 & 대중교통 할인 머니트리카드</strong>
-        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 2px;">사회초년생 필수 무실적 캐시백 카드</p>
+        <strong style="font-size: 1rem; color: #0f172a;">💳 월급 통장 쪼개기 & 대중교통 할인 머니트리카드</strong>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px; font-weight: 500;">사회초년생 필수 무실적 캐시백 카드</p>
       </div>
       <a href="https://tenten.im/s/moneytree" target="_blank" rel="noopener noreferrer" class="partner-btn">무료 신청</a>
     </div>
@@ -299,21 +141,40 @@
     </div>
   </div>
 
+  <footer>
+    <div class="footer-links">
+      <a href="javascript:void(0)" onclick="openModal('terms')">이용약관</a>
+      <span>|</span>
+      <a href="javascript:void(0)" onclick="openModal('privacy')">개인정보처리방침</a>
+      <span>|</span>
+      <a href="javascript:void(0)" onclick="openModal('disclaimer')">면책조항</a>
+      <span>|</span>
+      <a href="javascript:void(0)" onclick="openModal('contact')">문의하기</a>
+    </div>
+    <p>본 사이트의 연봉 모의 계산 결과는 법적 효력이 없는 참고용 추산치입니다.</p>
+    <p>© 2026 ByteCheck Global. All rights reserved.</p>
+  </footer>
+
+  <div id="legalModal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeModal()">&times;</span>
+      <h3 id="modalTitle" style="font-size: 1.2rem; font-weight: 800; margin-bottom: 12px; color: #0f172a;"></h3>
+      <div id="modalBody" style="font-size: 0.9rem; color: #334155; line-height: 1.7; white-space: pre-wrap;"></div>
+    </div>
+  </div>
+
   <script>
     function calculateSalary() {
       const annual = (parseFloat(document.getElementById('annualSalary').value) || 0) * 10000;
       const nonTax = parseFloat(document.getElementById('nonTax').value) || 0;
-      
       const monthlyGross = Math.floor(annual / 12);
       const taxable = Math.max(0, monthlyGross - nonTax);
 
-      // 2026 추산 요율 (근로자 부담분)
-      const pension = Math.min(Math.floor(taxable * 0.045), 265500); // 상한액 캡
+      const pension = Math.min(Math.floor(taxable * 0.045), 265500);
       const health = Math.floor(taxable * 0.03545);
       const care = Math.floor(health * 0.1295);
       const unemp = Math.floor(taxable * 0.009);
 
-      // 간이 근로소득세 모의 계산식
       let incomeTax = 0;
       if (taxable > 6000000) incomeTax = taxable * 0.15;
       else if (taxable > 4000000) incomeTax = taxable * 0.09;
@@ -334,9 +195,22 @@
       document.getElementById('localTax').innerText = localTax.toLocaleString() + ' 원';
     }
 
-    document.querySelectorAll('.input-box').forEach(input => {
-      input.addEventListener('input', calculateSalary);
-    });
+    const legalTexts = {
+      terms: { title: "이용약관", body: "본 연봉 계산기는 2026년 4대보험 개정 추산 요율을 바탕으로 제작된 모의 계산 툴입니다." },
+      privacy: { title: "개인정보처리방침", body: "입력하신 연봉 데이터는 서버로 전송되지 않으며 화면을 닫으면 소멸합니다." },
+      disclaimer: { title: "면책조항", body: "실제 원천징수 실수령액은 사업장별 수당 규정에 따라 다를 수 있습니다." },
+      contact: { title: "문의하기", body: "📧 공식 이메일: official.bytecheck@gmail.com" }
+    };
+
+    function openModal(type) {
+      document.getElementById('modalTitle').innerText = legalTexts[type].title;
+      document.getElementById('modalBody').innerText = legalTexts[type].body;
+      document.getElementById('legalModal').style.display = 'flex';
+    }
+    function closeModal() { document.getElementById('legalModal').style.display = 'none'; }
+    window.onclick = function(e) { if (e.target === document.getElementById('legalModal')) closeModal(); }
+
+    document.querySelectorAll('.input-box').forEach(input => input.addEventListener('input', calculateSalary));
     calculateSalary();
   </script>
 </body>
