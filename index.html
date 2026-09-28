@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ByteCheck - 2026 자소서 바이트 계산기 & 채용·면접 일정 캘린더</title>
-  <meta name="description" content="공기업 UTF-8 3Byte, 대기업 EUC-KR 2Byte 실시간 계산, 블라인드 금칙어 자동 필터링, 실시간 대기업·공기업 채용 및 면접 일정 보드 제공.">
-  <meta name="keywords" content="자소서 글자수 세기, 자소서 바이트 계산기, 공기업 3바이트, 2026 채용일정, 대기업 면접일정, 블라인드 금칙어, ByteCheck">
+  <title>ByteCheck - 2026 자소서 바이트 계산기 & 채용·면접 캘린더</title>
+  <meta name="description" content="공기업 UTF-8 3Byte, 대기업 EUC-KR 2Byte 실시간 계산, 블라인드 금칙어 필터링, 기업별 바이트 규격 족보 및 2026 채용·면접 캘린더.">
   
   <meta property="og:title" content="ByteCheck - 자소서 바이트 & 채용·면접 정보 허브">
-  <meta property="og:description" content="자소서 규격 계산, 블라인드 검사, 2026 대기업/공기업 공채·면접 일정 총정리">
+  <meta property="og:description" content="자소서 규격 계산, 블라인드 검사, 기업별 바이트 족보, 실시간 공채·면접 일정">
   <meta property="og:url" content="https://bytechecktool.com">
   <meta property="og:type" content="website">
 
@@ -17,451 +16,104 @@
 
   <style>
     :root {
-      --primary: #2563eb;
-      --primary-hover: #1d4ed8;
-      --bg: #f8fafc;
+      --primary: #1d4ed8;
+      --primary-light: #eff6ff;
+      --bg: #f1f5f9;
       --card-bg: #ffffff;
       --text: #0f172a;
-      --text-muted: #64748b;
-      --border: #e2e8f0;
-      --danger: #ef4444;
-      --success: #10b981;
-      --warning: #f59e0b;
+      --text-muted: #334155;
+      --border: #cbd5e1;
+      --border-dark: #94a3b8;
+      --danger: #dc2626;
+      --success: #15803d;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
+    body { background-color: var(--bg); color: var(--text); line-height: 1.6; }
 
-    body {
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
+    /* 헤더 */
+    header { background: #ffffff; border-bottom: 2px solid var(--border); width: 100%; }
+    .header-inner { max-width: 1000px; margin: 0 auto; padding: 14px 20px; display: flex; justify-content: space-between; align-items: center; }
+    .brand { display: flex; align-items: center; gap: 8px; font-size: 1.3rem; font-weight: 800; color: var(--primary); text-decoration: none; }
+    nav { display: flex; align-items: center; gap: 8px; }
+    nav a { text-decoration: none; color: var(--text); font-size: 0.92rem; font-weight: 700; padding: 7px 14px; border-radius: 6px; border: 1px solid transparent; transition: all 0.2s; }
+    nav a:hover { background: var(--primary-light); color: var(--primary); }
+    nav a.active { background: var(--primary); color: #ffffff; }
 
-    /* 최상단 헤더 (겹침 버그 완벽 수정) */
-    header {
-      background: #ffffff;
-      border-bottom: 1px solid var(--border);
-      width: 100%;
-      position: relative;
-      z-index: 50;
-    }
+    .container { max-width: 1000px; margin: 0 auto; padding: 24px 16px 60px 16px; }
 
-    .header-inner {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 14px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 1.25rem;
-      font-weight: 800;
-      color: var(--primary);
-      text-decoration: none;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: var(--text);
-      font-size: 0.9rem;
-      font-weight: 600;
-      padding: 6px 12px;
-      border-radius: 6px;
-      transition: all 0.2s;
-    }
-
-    nav a:hover, nav a.active {
-      background: #eff6ff;
-      color: var(--primary);
-    }
-
-    /* 컨테이너 */
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 24px 16px 60px 16px;
-    }
-
-    /* 타이틀 섹션 */
-    .hero {
-      text-align: center;
-      margin-bottom: 24px;
-    }
-
-    .hero h1 {
-      font-size: 2rem;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      margin-bottom: 8px;
-      color: #0f172a;
-    }
-
-    .hero p {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-    }
+    /* 타이틀 */
+    .hero { text-align: center; margin-bottom: 20px; }
+    .hero h1 { font-size: 2.1rem; font-weight: 900; letter-spacing: -0.5px; margin-bottom: 8px; color: #0f172a; }
+    .hero p { font-size: 1rem; color: var(--text-muted); font-weight: 600; }
 
     /* 액션 버튼 */
-    .top-actions {
-      display: flex;
-      justify-content: flex-end;
-      gap: 8px;
-      margin-bottom: 12px;
-    }
+    .top-actions { display: flex; justify-content: flex-end; gap: 8px; margin-bottom: 12px; }
+    .btn-action { background: #ffffff; border: 1.5px solid var(--border-dark); padding: 8px 16px; border-radius: 8px; font-size: 0.88rem; font-weight: 700; color: var(--text); cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+    .btn-action:hover { background: #e2e8f0; }
 
-    .btn-action {
-      background: #ffffff;
-      border: 1px solid var(--border);
-      padding: 8px 14px;
-      border-radius: 8px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--text);
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
+    /* 메인 카드 */
+    .card { background: var(--card-bg); border-radius: 12px; border: 2px solid var(--border); padding: 24px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); margin-bottom: 24px; }
+    .status-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-size: 0.9rem; }
+    .save-badge { color: var(--success); font-weight: 700; display: inline-flex; align-items: center; gap: 6px; }
 
-    .btn-action:hover {
-      background: #f1f5f9;
-    }
+    textarea { width: 100%; height: 320px; padding: 16px; border: 2px solid var(--border); border-radius: 8px; font-size: 1.05rem; line-height: 1.7; resize: vertical; outline: none; color: var(--text); }
+    textarea:focus { border-color: var(--primary); }
 
-    /* 검사기 카드 */
-    .card {
-      background: var(--card-bg);
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      padding: 24px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.03);
-      margin-bottom: 24px;
-    }
+    /* 통계 지표 */
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 18px; }
+    .stat-box { background: #f8fafc; border: 1.5px solid var(--border); padding: 14px 10px; border-radius: 8px; text-align: center; }
+    .stat-title { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 4px; font-weight: 700; }
+    .stat-value { font-size: 1.4rem; font-weight: 900; color: var(--text); }
+    .stat-value.highlight { color: var(--primary); }
 
-    .status-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 12px;
-      font-size: 0.85rem;
-    }
+    .warning-box { margin-top: 16px; padding: 14px; background: #fef2f2; border: 2px solid #f87171; border-radius: 8px; font-size: 0.92rem; display: none; }
+    .warning-box.active { display: block; }
 
-    .save-badge {
-      color: var(--success);
-      font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
+    /* 섹션 제목 및 테이블 */
+    .section-title { font-size: 1.3rem; font-weight: 800; display: flex; align-items: center; gap: 8px; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--border); }
+    .custom-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; margin-top: 10px; }
+    .custom-table th, .custom-table td { padding: 12px 14px; border: 1.5px solid var(--border); text-align: left; }
+    .custom-table th { background: #e2e8f0; color: #0f172a; font-weight: 800; }
+    .custom-table td { background: #ffffff; color: var(--text); }
 
-    textarea {
-      width: 100%;
-      height: 300px;
-      padding: 16px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      font-size: 1rem;
-      line-height: 1.7;
-      resize: vertical;
-      outline: none;
-      color: var(--text);
-    }
+    .badge-2b { background: #dbeafe; color: #1e40af; padding: 4px 8px; border-radius: 4px; font-weight: 700; border: 1px solid #bfdbfe; }
+    .badge-3b { background: #fef3c7; color: #92400e; padding: 4px 8px; border-radius: 4px; font-weight: 700; border: 1px solid #fde68a; }
 
-    textarea:focus {
-      border-color: var(--primary);
-    }
+    /* 채용 캘린더 */
+    .filter-group { display: flex; gap: 6px; }
+    .filter-btn { padding: 6px 14px; font-size: 0.82rem; font-weight: 700; border: 1.5px solid var(--border-dark); background: #fff; border-radius: 20px; cursor: pointer; }
+    .filter-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
 
-    /* 지표 그리드 */
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-      margin-top: 16px;
-    }
+    /* 제휴 파트너 */
+    .partner-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+    .partner-box { background: #ffffff; border: 2px solid var(--border); border-radius: 10px; padding: 16px; display: flex; justify-content: space-between; align-items: center; }
+    .partner-btn { background: var(--primary); color: #fff; text-decoration: none; font-size: 0.85rem; font-weight: 800; padding: 9px 14px; border-radius: 6px; white-space: nowrap; }
+    .partner-btn.coupang { background: #dc2626; }
 
-    .stat-box {
-      background: #f8fafc;
-      border: 1px solid var(--border);
-      padding: 14px 10px;
-      border-radius: 8px;
-      text-align: center;
-    }
+    .ad-slot { background: #e2e8f0; border: 2px dashed var(--border-dark); border-radius: 8px; min-height: 90px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; color: var(--text-muted); font-size: 0.9rem; font-weight: 700; }
 
-    .stat-title {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-bottom: 4px;
-      font-weight: 500;
-    }
+    /* 푸터 */
+    footer { background: #ffffff; border-top: 2px solid var(--border); padding: 30px 20px; font-size: 0.85rem; color: var(--text-muted); line-height: 1.8; text-align: center; }
+    .footer-links { display: flex; justify-content: center; gap: 16px; margin-bottom: 12px; }
+    .footer-links a { color: var(--primary); text-decoration: none; font-weight: 700; }
+    .footer-links a:hover { text-decoration: underline; }
 
-    .stat-value {
-      font-size: 1.3rem;
-      font-weight: 800;
-      color: var(--text);
-    }
+    /* 모달 */
+    .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 200; align-items: center; justify-content: center; padding: 20px; }
+    .modal-content { background: #fff; max-width: 600px; width: 100%; max-height: 80vh; overflow-y: auto; border-radius: 12px; border: 2px solid var(--border-dark); padding: 24px; position: relative; }
+    .modal-close { position: absolute; top: 16px; right: 16px; cursor: pointer; font-size: 1.4rem; font-weight: bold; }
 
-    .stat-value.highlight {
-      color: var(--primary);
-    }
-
-    /* 금칙어 박스 */
-    .warning-box {
-      margin-top: 16px;
-      padding: 14px;
-      background: #fef2f2;
-      border: 1px solid #fecaca;
-      border-radius: 8px;
-      font-size: 0.88rem;
-      display: none;
-    }
-
-    .warning-box.active {
-      display: block;
-    }
-
-    .warning-title {
-      color: var(--danger);
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-
-    /* 취업 카페 스타일: 실시간 채용 및 면접 보드 */
-    .board-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 16px;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .board-title {
-      font-size: 1.25rem;
-      font-weight: 800;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .filter-group {
-      display: flex;
-      gap: 6px;
-    }
-
-    .filter-btn {
-      padding: 6px 12px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      border: 1px solid var(--border);
-      background: #fff;
-      border-radius: 20px;
-      cursor: pointer;
-    }
-
-    .filter-btn.active {
-      background: var(--primary);
-      color: #fff;
-      border-color: var(--primary);
-    }
-
-    .schedule-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.88rem;
-    }
-
-    .schedule-table th, .schedule-table td {
-      padding: 12px 10px;
-      border-bottom: 1px solid var(--border);
-      text-align: left;
-    }
-
-    .schedule-table th {
-      background: #f8fafc;
-      color: var(--text-muted);
-      font-weight: 600;
-    }
-
-    .dday-badge {
-      display: inline-block;
-      padding: 2px 8px;
-      border-radius: 4px;
-      font-size: 0.75rem;
-      font-weight: 700;
-    }
-
-    .dday-urgent { background: #fee2e2; color: #b91c1c; }
-    .dday-normal { background: #e0f2fe; color: #0369a1; }
-    .dday-interview { background: #fef3c7; color: #b45309; }
-
-    /* 제휴 파트너 배너 (머니트리 & 쿠팡 복원) */
-    .partner-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-bottom: 24px;
-    }
-
-    .partner-box {
-      background: #ffffff;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 16px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .partner-btn {
-      background: var(--primary);
-      color: #fff;
-      text-decoration: none;
-      font-size: 0.82rem;
-      font-weight: 700;
-      padding: 8px 12px;
-      border-radius: 6px;
-      white-space: nowrap;
-    }
-
-    .partner-btn.coupang {
-      background: #ea1d2c;
-    }
-
-    /* 광고 슬롯 */
-    .ad-slot {
-      background: #f1f5f9;
-      border: 1px dashed #cbd5e1;
-      border-radius: 8px;
-      min-height: 90px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 24px;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-    }
-
-    /* 애드센스 필수 하단 푸터 (법적 고지 완벽 복원) */
-    footer {
-      background: #ffffff;
-      border-top: 1px solid var(--border);
-      padding: 30px 20px;
-      margin-top: 40px;
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-    }
-
-    .footer-inner {
-      max-width: 1000px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      margin-bottom: 14px;
-      flex-wrap: wrap;
-    }
-
-    .footer-links a {
-      color: #475569;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .footer-links a:hover {
-      text-decoration: underline;
-    }
-
-    /* 모달 팝업 (법적 고지문 뷰어) */
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.5);
-      z-index: 200;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-
-    .modal-content {
-      background: #fff;
-      max-width: 600px;
-      width: 100%;
-      max-height: 80vh;
-      overflow-y: auto;
-      border-radius: 12px;
-      padding: 24px;
-      position: relative;
-    }
-
-    .modal-close {
-      position: absolute;
-      top: 16px;
-      right: 16px;
-      cursor: pointer;
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-
-    /* 모바일 반응형 */
     @media (max-width: 768px) {
-      .header-inner {
-        flex-direction: column;
-        gap: 10px;
-        padding: 12px 10px;
-      }
-      nav {
-        width: 100%;
-        overflow-x: auto;
-        white-space: nowrap;
-        padding-bottom: 4px;
-        justify-content: flex-start;
-        scrollbar-width: none;
-      }
-      nav::-webkit-scrollbar { display: none; }
-      nav a {
-        font-size: 0.82rem;
-        background: #f1f5f9;
-        border-radius: 20px;
-        padding: 6px 12px;
-      }
-      .hero h1 { font-size: 1.4rem; }
-      .stats-grid { grid-template-columns: repeat(2, 1fr); }
-      .partner-grid { grid-template-columns: 1fr; }
-      textarea { height: 220px; }
+      .header-inner { flex-direction: column; gap: 10px; }
+      nav { width: 100%; overflow-x: auto; white-space: nowrap; justify-content: flex-start; }
+      .stats-grid, .partner-grid { grid-template-columns: 1fr; }
     }
 
-    /* A4 인쇄 / PDF 전용 */
     @media print {
       body { background: #fff; padding: 0; }
-      header, nav, .hero, .top-actions, .status-bar, .stats-grid, 
-      .warning-box, .ad-slot, .partner-grid, .board-card, footer, #resumeText {
-        display: none !important;
-      }
-      .card { border: none; box-shadow: none; padding: 0; }
+      header, nav, .hero, .top-actions, .status-bar, .stats-grid, .warning-box, .ad-slot, .partner-grid, .board-card, .guide-card, footer, #resumeText { display: none !important; }
+      .card { border: none; padding: 0; }
       .print-header { display: block !important; margin-bottom: 20px; border-bottom: 2px solid #000; padding-bottom: 10px; }
       .print-content { display: block !important; font-size: 11pt; line-height: 1.8; white-space: pre-wrap; font-family: "Batang", serif; }
       .print-footer { display: block !important; margin-top: 40px; border-top: 1px solid #ccc; padding-top: 8px; font-size: 9pt; color: #777; text-align: center; }
@@ -471,56 +123,48 @@
 </head>
 <body>
 
-  <!-- 상단 네비게이션 (화면 덮침 버그 제거) -->
   <header>
     <div class="header-inner">
       <a href="index.html" class="brand"><span>⚡</span> ByteCheck</a>
       <nav>
-        <a href="index.html" class="active">자소서 바이트</a>
+        <a href="index.html" class="active">자소서 바이트 & 가이드</a>
         <a href="salary.html">2026 연봉 계산기</a>
         <a href="dday.html">어학 만료 D-Day</a>
-        <a href="recruit-guide.html">기업별 글자수 가이드</a>
       </nav>
     </div>
   </header>
 
   <div class="container">
     
-    <!-- 인쇄 전용 머리말 -->
     <div class="print-header">
       <h2 style="font-size: 18pt;">2026 자기소개서 제출 최종본</h2>
       <p id="printDate" style="font-size: 10pt; color: #555; margin-top: 4px;">출력 일자: </p>
     </div>
 
-    <!-- 타이틀 -->
     <section class="hero">
       <h1>2026 자소서 바이트 & 채용 캘린더</h1>
       <p>공기업 UTF-8 3Byte, 대기업 EUC-KR 2Byte 실시간 계산 및 2026 채용·면접 타임라인</p>
     </section>
 
-    <!-- 구글 애드센스 상단 슬롯 -->
     <div class="ad-slot">
       <span>광고 영역 (Google AdSense Top)</span>
     </div>
 
-    <!-- 상단 도구 버튼 -->
     <div class="top-actions">
       <button class="btn-action" onclick="printDoc()">📄 깔끔 A4 인쇄 / PDF 저장</button>
-      <button class="btn-action" onclick="shareSite()">🔗 공유하기</button>
+      <button class="btn-action" onclick="shareSite()">🔗 단톡방 공유하기</button>
     </div>
 
-    <!-- 메인 자소서 바이트 카드 -->
     <main class="card">
       <div class="status-bar">
         <span class="save-badge">● 실시간 자동 저장 켜짐 (내 브라우저 안전 보관)</span>
-        <span id="charCountLabel" style="color: var(--text-muted); font-weight: 600;">0 자</span>
+        <span id="charCountLabel" style="color: var(--text); font-weight: 700;">0 자</span>
       </div>
 
-      <textarea id="resumeText" placeholder="자기소개서 문항이나 영문 텍스트를 입력하세요. 글자수, 공백, 2Byte/3Byte, 단어수가 실시간으로 계산되며 브라우저를 닫아도 복원됩니다..."></textarea>
+      <textarea id="resumeText" placeholder="자기소개서 문항이나 내용을 입력하세요. 글자수, 공백, 2Byte/3Byte가 실시간으로 계산되며 브라우저를 닫아도 안전하게 복원됩니다..."></textarea>
       
       <div id="printArea" class="print-content"></div>
 
-      <!-- 통계 지표 그리드 -->
       <div class="stats-grid">
         <div class="stat-box">
           <div class="stat-title">공백 포함 글자수</div>
@@ -540,43 +184,95 @@
         </div>
       </div>
 
-      <!-- 금칙어 경고창 -->
       <div class="warning-box" id="warningBox">
-        <div class="warning-title">⚠️ 블라인드 채용 감점 단어 감지됨!</div>
-        <div id="warningWords" style="color: #991b1b;"></div>
+        <strong style="color: var(--danger); font-size: 1rem;">⚠️ 블라인드 채용 감점 단어 감지됨!</strong>
+        <div id="warningWords" style="color: #991b1b; margin-top: 4px; font-weight: 600;"></div>
       </div>
     </main>
 
-    <!-- 인쇄 전용 바닥글 -->
     <div class="print-footer">
-      Document generated by ByteCheck (bytechecktool.com) - 취준생 취업 합격을 응원합니다.
+      Document generated by ByteCheck (bytechecktool.com)
     </div>
 
-    <!-- 제휴 머니 트랩 (머니트리 CPA + 쿠팡 파트너스 복원) -->
     <div class="partner-grid">
       <div class="partner-box">
         <div>
-          <strong style="font-size: 0.95rem;">💳 취준생 & 신입 출퇴근 머니트리카드</strong>
-          <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 2px;">연회비 0원 즉시 발급 + 대중교통 캐시백</p>
+          <strong style="font-size: 1rem; color: #0f172a;">💳 취준생 & 신입 출퇴근 머니트리카드</strong>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px; font-weight: 500;">연회비 0원 즉시 발급 + 대중교통 캐시백</p>
         </div>
         <a href="https://tenten.im/s/moneytree" target="_blank" rel="noopener noreferrer" class="partner-btn">무료 발급</a>
       </div>
 
       <div class="partner-box">
         <div>
-          <strong style="font-size: 0.95rem;">📚 2026 NCS·대기업 인적성 기출 수험서</strong>
-          <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 2px;">서류 합격 직후 필수 대비 베스트셀러</p>
+          <strong style="font-size: 1rem; color: #0f172a;">📚 2026 NCS·대기업 인적성 기출 수험서</strong>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px; font-weight: 500;">서류 합격 직후 필수 대비 베스트셀러</p>
         </div>
         <a href="https://link.coupang.com" target="_blank" rel="noopener noreferrer" class="partner-btn coupang">교재 보기</a>
       </div>
     </div>
 
-    <!-- 취준생 카페형 알짜배기: 2026 주요 기업 실시간 채용 & 면접 일정 보드 -->
+    <!-- 통합 흡수: 기업별 자소서 바이트 규격 족보 -->
+    <section class="card guide-card">
+      <div class="section-title">
+        <span>📖</span> 2026 주요 기업별 글자수·바이트 규격 족보
+      </div>
+      <div style="overflow-x: auto;">
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th>기업 / 기관명</th>
+              <th>연산 규격</th>
+              <th>엔터(줄바꿈)</th>
+              <th>특이사항 및 주의점</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>삼성그룹</strong></td>
+              <td><span class="badge-2b">EUC-KR (2Byte)</span></td>
+              <td>2Byte</td>
+              <td>문항당 1,000자 / 영문·숫자 1Byte 계산</td>
+            </tr>
+            <tr>
+              <td><strong>현대자동차</strong></td>
+              <td><span class="badge-2b">글자수 기준</span></td>
+              <td>1자 취급</td>
+              <td>공백 포함 순수 글자수로 제한</td>
+            </tr>
+            <tr>
+              <td><strong>SK그룹</strong></td>
+              <td><span class="badge-2b">EUC-KR (2Byte)</span></td>
+              <td>2Byte</td>
+              <td>문항별 1,000자 내외 / 맞춤법 검사기 연동</td>
+            </tr>
+            <tr>
+              <td><strong>한국전력공사</strong></td>
+              <td><span class="badge-3b">UTF-8 (3Byte)</span></td>
+              <td>2Byte</td>
+              <td>포털 글자수 계산기 대비 바이트 1.5배 초과 주의</td>
+            </tr>
+            <tr>
+              <td><strong>국민건강보험공단</strong></td>
+              <td><span class="badge-3b">UTF-8 (3Byte)</span></td>
+              <td>2Byte</td>
+              <td>공공기관 표준 UTF-8 채택</td>
+            </tr>
+            <tr>
+              <td><strong>코레일 (한국철도)</strong></td>
+              <td><span class="badge-2b">글자수 기준</span></td>
+              <td>1자 취급</td>
+              <td>띄어쓰기 포함 순수 글자수 엄격 마감</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 채용 & 면접 캘린더 보드 -->
     <section class="card board-card">
-      <div class="board-header">
-        <div class="board-title">
-          <span>📢</span> 2026 주요 기업 채용 & 면접 캘린더 (실시간 업데이트)
-        </div>
+      <div class="section-title" style="justify-content: space-between; flex-wrap: wrap;">
+        <div><span>📢</span> 2026 주요 기업 채용 & 면접 캘린더</div>
         <div class="filter-group">
           <button class="filter-btn active" onclick="filterSchedule('all')">전체</button>
           <button class="filter-btn" onclick="filterSchedule('major')">대기업</button>
@@ -586,7 +282,7 @@
       </div>
 
       <div style="overflow-x: auto;">
-        <table class="schedule-table">
+        <table class="custom-table">
           <thead>
             <tr>
               <th>기업명</th>
@@ -600,81 +296,68 @@
             <tr data-type="major">
               <td><strong>삼성그룹 (3급 신입)</strong></td>
               <td>면접 전형</td>
-              <td>직무적합성 및 임원/직무 면접 순차 진행</td>
-              <td><span class="dday-badge dday-interview">면접 시즌</span></td>
-              <td><a href="https://www.samsungcareers.com" target="_blank" rel="noopener" style="color: var(--primary); font-weight: 600;">공고 확인</a></td>
+              <td>직무적합성 및 직무/임원 면접 진행</td>
+              <td><span class="badge-3b">면접 시즌</span></td>
+              <td><a href="https://www.samsungcareers.com" target="_blank" rel="noopener" style="color: var(--primary); font-weight: 700;">공고 확인</a></td>
             </tr>
             <tr data-type="major">
               <td><strong>현대자동차</strong></td>
               <td>수시 채용</td>
-              <td>연구개발(R&D)/생산 직무 상시 접수</td>
-              <td><span class="dday-badge dday-normal">상시 접수</span></td>
-              <td><a href="https://talent.hyundai.com" target="_blank" rel="noopener" style="color: var(--primary); font-weight: 600;">공고 확인</a></td>
+              <td>연구개발(R&D)/생산 부문 상시 접수</td>
+              <td><span class="badge-2b">상시 접수</span></td>
+              <td><a href="https://talent.hyundai.com" target="_blank" rel="noopener" style="color: var(--primary); font-weight: 700;">공고 확인</a></td>
             </tr>
             <tr data-type="public">
               <td><strong>한국전력공사</strong></td>
               <td>서류 / 필기</td>
               <td>NCS 직무능력검사 및 종합면접</td>
-              <td><span class="dday-badge dday-urgent">서류 마감임박</span></td>
-              <td><a href="https://recruit.kepco.co.kr" target="_blank" rel="noopener" style="color: var(--primary); font-weight: 600;">공고 확인</a></td>
+              <td><span style="background: #fee2e2; color: #b91c1c; padding: 4px 8px; border-radius: 4px; font-weight: 700;">마감 임박</span></td>
+              <td><a href="https://recruit.kepco.co.kr" target="_blank" rel="noopener" style="color: var(--primary); font-weight: 700;">공고 확인</a></td>
             </tr>
             <tr data-type="public">
               <td><strong>국민건강보험공단</strong></td>
               <td>면접 전형</td>
               <td>토론 및 다대일 인성/경험 면접</td>
-              <td><span class="dday-badge dday-interview">면접 진행</span></td>
-              <td><a href="https://nhis.ncsys.co.kr" target="_blank" rel="noopener" style="color: var(--primary); font-weight: 600;">공고 확인</a></td>
+              <td><span class="badge-3b">면접 진행</span></td>
+              <td><a href="https://nhis.ncsys.co.kr" target="_blank" rel="noopener" style="color: var(--primary); font-weight: 700;">공고 확인</a></td>
             </tr>
             <tr data-type="finance">
               <td><strong>IBK기업은행</strong></td>
               <td>실무 / 임원면접</td>
               <td>역량면접 및 최종 임원면접</td>
-              <td><span class="dday-badge dday-interview">면접 대비</span></td>
-              <td><a href="https://ibk.recruitin.co.kr" target="_blank" rel="noopener" style="color: var(--primary); font-weight: 600;">공고 확인</a></td>
-            </tr>
-            <tr data-type="public">
-              <td><strong>한국철도공사 (코레일)</strong></td>
-              <td>신입 공채</td>
-              <td>원서 접수 및 적격자 필기시험 배정</td>
-              <td><span class="dday-badge dday-normal">접수 예정</span></td>
-              <td><a href="https://info.korail.com" target="_blank" rel="noopener" style="color: var(--primary); font-weight: 600;">공고 확인</a></td>
+              <td><span class="badge-3b">면접 대비</span></td>
+              <td><a href="https://ibk.recruitin.co.kr" target="_blank" rel="noopener" style="color: var(--primary); font-weight: 700;">공고 확인</a></td>
             </tr>
           </tbody>
         </table>
       </div>
-      <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 12px; text-align: right;">※ 일정은 각 사 공식 채용 공고에 따라 변경될 수 있습니다.</p>
     </section>
 
-    <!-- 구글 애드센스 하단 슬롯 -->
     <div class="ad-slot">
       <span>광고 영역 (Google AdSense Bottom)</span>
     </div>
 
   </div>
 
-  <!-- 애드센스 승인 필수 하단 푸터 (법적 페이지 링크 완벽 복구) -->
   <footer>
-    <div class="footer-inner">
-      <div class="footer-links">
-        <a href="javascript:void(0)" onclick="openModal('terms')">이용약관</a>
-        <span>|</span>
-        <a href="javascript:void(0)" onclick="openModal('privacy')">개인정보처리방침</a>
-        <span>|</span>
-        <a href="javascript:void(0)" onclick="openModal('disclaimer')">면책조항</a>
-        <span>|</span>
-        <a href="javascript:void(0)" onclick="openModal('contact')">문의하기</a>
-      </div>
-      <p>본 사이트에서 제공하는 자소서 글자수, 연봉 실수령액, 어학 D-Day 및 채용 일정 정보는 법적 효력이 없는 참고용 모의 데이터입니다.</p>
-      <p style="margin-top: 4px;">© 2026 ByteCheck Global. All rights reserved. | Contact: official.bytecheck@gmail.com</p>
+    <div class="footer-links">
+      <a href="javascript:void(0)" onclick="openModal('terms')">이용약관</a>
+      <span>|</span>
+      <a href="javascript:void(0)" onclick="openModal('privacy')">개인정보처리방침</a>
+      <span>|</span>
+      <a href="javascript:void(0)" onclick="openModal('disclaimer')">면책조항</a>
+      <span>|</span>
+      <a href="javascript:void(0)" onclick="openModal('contact')">문의하기</a>
     </div>
+    <p>본 사이트에서 제공하는 글자수 계산 및 채용 일정은 참고용 정보이며 법적 효력이 없습니다.</p>
+    <p>© 2026 ByteCheck Global. All rights reserved. | Contact: official.bytecheck@gmail.com</p>
   </footer>
 
-  <!-- 법적 고지문 모달 팝업 -->
   <div id="legalModal" class="modal">
     <div class="modal-content">
       <span class="modal-close" onclick="closeModal()">&times;</span>
-      <h3 id="modalTitle" style="font-size: 1.2rem; font-weight: 700; margin-bottom: 12px;"></h3>
-      <div id="modalBody" style="font-size: 0.88rem; color: #475569; line-height: 1.7; white-space: pre-wrap;"></div>
+      <h3 id="modalTitle" style="font-size: 1.2rem; font-weight: 800; margin-bottom: 12px; color: #0f172a;"></h3>
+      <div id="modalBody" style="font-size: 0.9rem; color: #334155; line-height: 1.7; white-space: pre-wrap;"></div>
     </div>
   </div>
 
@@ -689,15 +372,12 @@
     const warningWords = document.getElementById('warningWords');
     const printArea = document.getElementById('printArea');
 
-    // 블라인드 감점 주의 키워드
     const prohibitedKeywords = [
       '아빠', '엄마', '아버지', '어머니', '부모님', '삼촌', '이모',
       '서울대', '연세대', '고려대', '한양대', '성균관대', '경북대', '부산대', '전남대',
-      '외고', '과학고', '자사고',
-      '고향', '출신지', '전라도', '경상도', '충청도', '강원도'
+      '외고', '과학고', '자사고', '고향', '출신지', '전라도', '경상도', '충청도', '강원도'
     ];
 
-    // 실시간 글자수/바이트 계산
     function analyzeText() {
       const text = textarea.value;
       localStorage.setItem('bytecheck_saved_text', text);
@@ -710,16 +390,9 @@
 
       for (let i = 0; i < text.length; i++) {
         const code = text.charCodeAt(i);
-        if (code <= 0x007f) {
-          bytes2 += 1;
-          bytes3 += 1;
-        } else if (code <= 0x07ff) {
-          bytes2 += 2;
-          bytes3 += 2;
-        } else {
-          bytes2 += 2; // 대기업 2Byte (EUC-KR)
-          bytes3 += 3; // 공기업 3Byte (UTF-8)
-        }
+        if (code <= 0x007f) { bytes2 += 1; bytes3 += 1; }
+        else if (code <= 0x07ff) { bytes2 += 2; bytes3 += 2; }
+        else { bytes2 += 2; bytes3 += 3; }
       }
 
       countWithSpace.innerText = lenWithSpace.toLocaleString();
@@ -728,29 +401,23 @@
       count3Byte.innerText = bytes3.toLocaleString() + ' B';
       charCountLabel.innerText = lenWithSpace.toLocaleString() + ' 자 작성 중';
 
-      // 금칙어 감지
       const detected = prohibitedKeywords.filter(k => text.includes(k));
       if (detected.length > 0) {
         warningBox.classList.add('active');
-        warningWords.innerHTML = `검출된 주의 단어: <strong>${detected.join(', ')}</strong> (가족, 출신 학교, 지역명 감점 주의)`;
+        warningWords.innerHTML = `검출된 주의 단어: <strong>${detected.join(', ')}</strong> (가족, 출신 학교, 출신지 감점 주의)`;
       } else {
         warningBox.classList.remove('active');
       }
     }
 
-    // A4 인쇄 / PDF 저장
     function printDoc() {
       const text = textarea.value;
-      if (!text.trim()) {
-        alert('인쇄할 자기소개서 내용을 먼저 입력해 주세요.');
-        return;
-      }
+      if (!text.trim()) { alert('인쇄할 자기소개서 내용을 먼저 입력해 주세요.'); return; }
       printArea.innerText = text;
       document.getElementById('printDate').innerText = '출력 일자: ' + new Date().toLocaleDateString('ko-KR');
       window.print();
     }
 
-    // 공유하기
     function shareSite() {
       if (navigator.share) {
         navigator.share({ title: 'ByteCheck 자소서 바이트 & 채용 캘린더', url: window.location.href }).catch(() => {});
@@ -760,39 +427,22 @@
       }
     }
 
-    // 채용 일정 필터링
     function filterSchedule(category) {
       document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
       event.target.classList.add('active');
 
       const rows = document.querySelectorAll('#scheduleBody tr');
       rows.forEach(row => {
-        if (category === 'all' || row.getAttribute('data-type') === category) {
-          row.style.display = '';
-        } else {
-          row.style.display = 'none';
-        }
+        if (category === 'all' || row.getAttribute('data-type') === category) row.style.display = '';
+        else row.style.display = 'none';
       });
     }
 
-    // 법적 고지 텍스트 데이터 (애드센스 통과 필수 항목)
     const legalTexts = {
-      terms: {
-        title: "이용약관 (Terms of Service)",
-        body: "제1조 (목적)\n본 약관은 ByteCheck(이하 '서비스')가 제공하는 모든 계산 도구 및 채용 정보의 이용 조건과 절차를 규정합니다.\n\n제2조 (서비스의 제공 및 한계)\n본 서비스의 글자수 계산, 연봉 실수령액 모의 계산, 채용 일정 정보는 참고용으로 제공되며 기술적 오차가 있을 수 있습니다. 이용자는 최종 제출 전 지원 기관의 공식 채용 공고를 직접 확인해야 합니다."
-      },
-      privacy: {
-        title: "개인정보처리방침 (Privacy Policy)",
-        body: "1. 수집하는 개인정보 항목\nByteCheck는 이용자의 회원가입을 받지 않으며, 어떠한 개인 식별 정보도 서버에 저장하지 않습니다.\n\n2. 브라우저 로컬 저장소 활용\n작성 중인 자소서 텍스트는 이용자의 기기(로컬 브라우저)에만 임시 저장되며, 외부 서버로 전송되지 않습니다.\n\n3. 쿠키 및 광고\n구글 애드센스 등 제3자 광고 사업자가 맞춤형 광고 제공을 위해 쿠키를 사용할 수 있습니다."
-      },
-      disclaimer: {
-        title: "면책조항 (Disclaimer)",
-        body: "본 웹사이트에서 제공되는 모든 데이터(자소서 바이트 수치, 연봉 세후 금액, 기업별 채용 및 면접 일정)는 정보 제공만을 목적으로 하며, 그 완전성이나 정확성을 보증하지 않습니다. 본 사이트의 데이터를 신뢰하여 발생한 서류 탈락, 일정 착오 등의 결과에 대해 운영자는 어떠한 법적 책임도 부담하지 않습니다."
-      },
-      contact: {
-        title: "문의하기 (Contact Us)",
-        body: "오류 신고, 채용 일정 제보, 비즈니스 제휴 문의는 아래 공식 이메일로 접수해 주시기 바랍니다.\n\n📧 공식 이메일: official.bytecheck@gmail.com\n(영업일 기준 24~48시간 이내에 회신드립니다.)"
-      }
+      terms: { title: "이용약관 (Terms of Service)", body: "제1조 (목적)\n본 약관은 ByteCheck가 제공하는 글자수 계산, 연봉 계산, 채용 일정 정보의 이용 조건을 규정합니다.\n\n제2조 (책임 한계)\n본 사이트에서 제공되는 모든 데이터는 참고용이며, 공식 공고를 통해 최종 확인하시기 바랍니다." },
+      privacy: { title: "개인정보처리방침 (Privacy Policy)", body: "1. 수집 항목\n본 서비스는 회원가입을 받지 않으며 일체의 개인정보를 서버에 저장하지 않습니다.\n\n2. 로컬 브라우저 저장\n작성 중인 자소서 텍스트는 이용자의 기기(로컬 브라우저)에만 임시 보관됩니다." },
+      disclaimer: { title: "면책조항 (Disclaimer)", body: "본 사이트의 모의 계산 결과 및 채용 일정 데이터를 신뢰하여 발생한 서류 탈락, 일정 착오 등의 결과에 대해 운영자는 법적 책임을 지지 않습니다." },
+      contact: { title: "문의하기 (Contact Us)", body: "오류 제보 및 제휴 문의는 아래 공식 이메일로 접수해 주시기 바랍니다.\n\n📧 공식 이메일: official.bytecheck@gmail.com" }
     };
 
     function openModal(type) {
@@ -801,20 +451,12 @@
       document.getElementById('legalModal').style.display = 'flex';
     }
 
-    function closeModal() {
-      document.getElementById('legalModal').style.display = 'none';
-    }
-
-    window.onclick = function(e) {
-      if (e.target === document.getElementById('legalModal')) closeModal();
-    }
+    function closeModal() { document.getElementById('legalModal').style.display = 'none'; }
+    window.onclick = function(e) { if (e.target === document.getElementById('legalModal')) closeModal(); }
 
     window.addEventListener('DOMContentLoaded', () => {
       const saved = localStorage.getItem('bytecheck_saved_text');
-      if (saved) {
-        textarea.value = saved;
-        analyzeText();
-      }
+      if (saved) { textarea.value = saved; analyzeText(); }
     });
 
     textarea.addEventListener('input', analyzeText);
