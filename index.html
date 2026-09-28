@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ByteCheck - 2026 자소서 바이트 계산기, 무료 표준 입사지원서 양식 & 채용 캘린더</title>
-  <meta name="description" content="공기업 UTF-8 3Byte, 대기업 EUC-KR 2Byte 실시간 계산, 블라인드 금칙어 검출, 표준 이력서·자기소개서 양식 무료 다운로드, 2026 채용·면접 일정 총정리.">
-  <meta name="keywords" content="자기소개서 양식 무료 다운로드, 이력서 서식, 표준 입사지원서, 자소서 글자수 세기, 자소서 바이트 계산기, 공기업 3바이트, 2026 채용일정, ByteCheck">
+  <title>ByteCheck - 2026 자소서 바이트 계산기, 무료 입사지원서 양식 & 취업·이직 가이드</title>
+  <meta name="description" content="공기업 UTF-8 3Byte, 대기업 EUC-KR 2Byte 실시간 계산, 블라인드 금칙어 검출, 표준 이력서 양식 다운로드, 경력직 이직 기술서 및 연봉 협상 팁.">
+  <meta name="keywords" content="자소서 바이트 계산기, 자기소개서 양식, 경력기술서 작성법, 이직 연봉협상, 공기업 3바이트, 2026 채용일정, ByteCheck">
   
-  <meta property="og:title" content="ByteCheck - 자소서 바이트 계산기 & 표준 서식 다운로드">
-  <meta property="og:description" content="자소서 바이트 검사, 표준 입사지원서 다운로드, 합격 문항 템플릿, 채용·면접 캘린더">
+  <meta property="og:title" content="ByteCheck - 자소서 바이트 계산기 & 취업·이직 종합 정보소">
+  <meta property="og:description" content="자소서 규격 계산, 무료 입사지원서 서식, 신입 합격 공식 및 경력직 이직 가이드 총정리">
   <meta property="og:url" content="https://bytechecktool.com">
   <meta property="og:type" content="website">
 
@@ -32,7 +32,6 @@
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
     body { background-color: var(--bg); color: var(--text); line-height: 1.6; }
 
-    /* 헤더 */
     header { background: #ffffff; border-bottom: 2px solid var(--border); width: 100%; position: relative; }
     .header-inner { max-width: 1000px; margin: 0 auto; padding: 14px 20px; display: flex; justify-content: space-between; align-items: center; }
     .brand { display: flex; align-items: center; gap: 8px; font-size: 1.3rem; font-weight: 800; color: var(--primary); text-decoration: none; }
@@ -43,17 +42,14 @@
 
     .container { max-width: 1000px; margin: 0 auto; padding: 24px 16px 60px 16px; }
 
-    /* 타이틀 */
     .hero { text-align: center; margin-bottom: 20px; }
     .hero h1 { font-size: 2.1rem; font-weight: 900; letter-spacing: -0.5px; margin-bottom: 8px; color: #0f172a; }
     .hero p { font-size: 1rem; color: var(--text-muted); font-weight: 600; }
 
-    /* 액션 버튼 */
     .top-actions { display: flex; justify-content: flex-end; gap: 8px; margin-bottom: 12px; }
     .btn-action { background: #ffffff; border: 1.5px solid var(--border-dark); padding: 8px 16px; border-radius: 8px; font-size: 0.88rem; font-weight: 700; color: var(--text); cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
     .btn-action:hover { background: #e2e8f0; }
 
-    /* 메인 카드 */
     .card { background: var(--card-bg); border-radius: 12px; border: 2px solid var(--border); padding: 24px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); margin-bottom: 24px; }
     .status-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-size: 0.9rem; }
     .save-badge { color: var(--success); font-weight: 700; display: inline-flex; align-items: center; gap: 6px; }
@@ -61,7 +57,6 @@
     textarea { width: 100%; height: 320px; padding: 16px; border: 2px solid var(--border); border-radius: 8px; font-size: 1.05rem; line-height: 1.7; resize: vertical; outline: none; color: var(--text); }
     textarea:focus { border-color: var(--primary); }
 
-    /* 통계 지표 */
     .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 18px; }
     .stat-box { background: #f8fafc; border: 1.5px solid var(--border); padding: 14px 10px; border-radius: 8px; text-align: center; }
     .stat-title { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 4px; font-weight: 700; }
@@ -71,21 +66,26 @@
     .warning-box { margin-top: 16px; padding: 14px; background: #fef2f2; border: 2px solid #f87171; border-radius: 8px; font-size: 0.92rem; display: none; }
     .warning-box.active { display: block; }
 
-    /* 서식 다운로드 센터 */
     .section-title { font-size: 1.25rem; font-weight: 800; display: flex; align-items: center; gap: 8px; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--border); }
+
+    /* 서식 다운로드 */
     .download-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 12px; }
     .download-item { background: #f8fafc; border: 2px solid var(--border); border-radius: 10px; padding: 20px; text-align: left; display: flex; flex-direction: column; justify-content: space-between; }
     .download-item h4 { font-size: 1.05rem; font-weight: 800; margin-bottom: 6px; color: #0f172a; }
     .download-item p { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px; font-weight: 500; line-height: 1.5; }
-    .btn-download-main { background: #0f172a; color: #ffffff; text-decoration: none; padding: 12px 18px; border-radius: 8px; font-size: 0.9rem; font-weight: 800; cursor: pointer; border: none; text-align: center; transition: background 0.2s; }
+    .btn-download-main { background: #0f172a; color: #ffffff; text-decoration: none; padding: 12px 18px; border-radius: 8px; font-size: 0.9rem; font-weight: 800; cursor: pointer; border: none; text-align: center; }
     .btn-download-main:hover { background: #334155; }
 
-    /* 빈출 문항 템플릿 */
-    .template-box { background: #f8fafc; border: 1.5px solid var(--border); border-radius: 8px; padding: 14px; margin-bottom: 10px; }
-    .template-header { display: flex; justify-content: space-between; align-items: center; }
-    .template-header strong { font-size: 0.92rem; color: #0f172a; }
-    .btn-insert { background: var(--primary); color: #fff; border: none; padding: 5px 10px; border-radius: 4px; font-size: 0.78rem; font-weight: 700; cursor: pointer; }
-    .template-desc { font-size: 0.82rem; color: var(--text-muted); margin-top: 6px; line-height: 1.5; }
+    /* 신규: 취업 & 이직 꿀팁 아티클 피드 스타일 */
+    .article-item { background: #f8fafc; border: 2px solid var(--border); border-radius: 10px; padding: 20px; margin-bottom: 16px; }
+    .article-tag { display: inline-block; padding: 4px 10px; border-radius: 20px; font-size: 0.78rem; font-weight: 800; margin-bottom: 10px; }
+    .tag-recruit { background: #dbeafe; color: #1e40af; }
+    .tag-career { background: #fef3c7; color: #92400e; }
+    .tag-interview { background: #dcfce7; color: #166534; }
+    .article-title { font-size: 1.15rem; font-weight: 800; color: #0f172a; margin-bottom: 10px; }
+    .article-body { font-size: 0.92rem; color: #334155; line-height: 1.75; font-weight: 500; }
+    .article-body strong { color: #0f172a; }
+    .article-tip-box { margin-top: 12px; padding: 12px; background: #ffffff; border: 1.5px dashed var(--border-dark); border-radius: 6px; font-size: 0.88rem; color: #1e293b; }
 
     /* 제휴 파트너 */
     .partner-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
@@ -107,7 +107,6 @@
 
     .ad-slot { background: #e2e8f0; border: 2px dashed var(--border-dark); border-radius: 8px; min-height: 90px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; color: var(--text-muted); font-size: 0.9rem; font-weight: 700; }
 
-    /* 푸터 */
     footer { background: #ffffff; border-top: 2px solid var(--border); padding: 30px 20px; font-size: 0.85rem; color: var(--text-muted); line-height: 1.8; text-align: center; }
     .footer-links { display: flex; justify-content: center; gap: 16px; margin-bottom: 12px; }
     .footer-links a { color: var(--primary); text-decoration: none; font-weight: 700; }
@@ -124,7 +123,7 @@
 
     @media print {
       body { background: #fff; padding: 0; }
-      header, nav, .hero, .top-actions, .status-bar, .stats-grid, .warning-box, .ad-slot, .partner-grid, .board-card, .guide-card, .download-card, .template-card, footer, #resumeText { display: none !important; }
+      header, nav, .hero, .top-actions, .status-bar, .stats-grid, .warning-box, .ad-slot, .partner-grid, .board-card, .guide-card, .download-card, .article-card, footer, #resumeText { display: none !important; }
       .card { border: none; padding: 0; }
       .print-header { display: block !important; margin-bottom: 20px; border-bottom: 2px solid #000; padding-bottom: 10px; }
       .print-content { display: block !important; font-size: 11pt; line-height: 1.8; white-space: pre-wrap; font-family: "Batang", serif; }
@@ -154,8 +153,8 @@
     </div>
 
     <section class="hero">
-      <h1>2026 자소서 바이트 & 서식 다운로드 센터</h1>
-      <p>공기업 3Byte, 대기업 2Byte 실시간 계산, 표준 서식 무료 다운로드 및 채용 캘린더</p>
+      <h1>2026 자소서 바이트 & 취업·이직 정보 허브</h1>
+      <p>공기업 3Byte, 대기업 2Byte 실시간 계산, 정규 서식 다운로드 및 이직·연봉 가이드</p>
     </section>
 
     <div class="ad-slot">
@@ -207,13 +206,13 @@
       Document generated by ByteCheck (bytechecktool.com)
     </div>
 
-    <!-- 1. 표준 자기소개서 & 입사지원서 서식 다운로드 센터 (정규 표 규격) -->
+    <!-- 정규 서식 다운로드 센터 -->
     <section class="card download-card">
       <div class="section-title">
         <span>📥</span> 2026 표준 입사지원서 & 자기소개서 무료 다운로드
       </div>
       <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px; font-weight: 500;">
-        워드(Word)와 한글(HWP) 프로그램에서 열어 바로 작성하고 인쇄할 수 있는 <strong>정식 표(테이블) 규격 양식</strong>입니다.
+        워드(Word)와 한글(HWP)에서 열어 바로 작성하고 인쇄할 수 있는 <strong>정식 표(테이블) 규격 양식</strong>입니다.
       </p>
       <div class="download-grid">
         <div class="download-item">
@@ -234,40 +233,59 @@
       </div>
     </section>
 
-    <!-- 2. 합격 자소서 빈출 문항 구조화 템플릿 -->
-    <section class="card template-card">
+    <!-- 💡 신규 탑재: 취업 준비생 & 이직러를 위한 실전 필독 칼럼 허브 -->
+    <section class="card article-card">
       <div class="section-title">
-        <span>⭐</span> 2026 합격 자소서 빈출 문항 STAR 작성 공식 & 템플릿
-      </div>
-      <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 14px; font-weight: 500;">
-        [에디터에 복사]를 누르면 상단 검사기 창에 기본 틀이 바로 입력됩니다.
-      </p>
-
-      <div class="template-box">
-        <div class="template-header">
-          <strong>1. 지원동기 및 입사 후 포부 (회사 비전 + 직무 기여도)</strong>
-          <button class="btn-insert" onclick="insertTemplate(1)">에디터에 복사</button>
-        </div>
-        <div class="template-desc">
-          [소제목: 목표를 현실로 만드는 직무 역량]<br>
-          OO기업의 [최근 핵심 사업/방향성]에 주목하여 지원하게 되었습니다. 저는 [관련 학과/경험]을 통해 [핵심 역량 1]을 다져왔으며, 입사 후 1년 차에는 실무 시스템을 빠르게 숙지하고, 3년 차에는 [구체적 기여 목표]를 달성하는 핵심 인재로 성장하겠습니다.
-        </div>
+        <span>💡</span> 취업·이직 성공을 위한 실전 전략 칼럼 (체류 필독서)
       </div>
 
-      <div class="template-box">
-        <div class="template-header">
-          <strong>2. 직무 관련 문제 해결 경험 (STAR 공식 기반)</strong>
-          <button class="btn-insert" onclick="insertTemplate(2)">에디터에 복사</button>
+      <!-- 칼럼 1 -->
+      <article class="article-item">
+        <span class="article-tag tag-recruit">신입 공채</span>
+        <h3 class="article-title">1. 서류 탈락을 피하는 자소서 '첫 문장' 두괄식 작성 공식</h3>
+        <p class="article-body">
+          수천 장의 서류를 읽는 인사담당자는 지원자의 첫 2~3줄에서 합격 여부를 직감합니다. 
+          "저는 화목한 가정에서 자라 성실함을 배웠습니다"와 같은 진부한 도입부는 즉시 탈락 대상입니다.
+          <strong>[직무 핵심 역량 키워드 + 달성한 정량적 수치]</strong>를 첫 문장에 배치하는 두괄식 구조를 취해야 합니다.
+        </p>
+        <div class="article-tip-box">
+          <strong>✍️ 실전 예시 교정:</strong><br>
+          (수정 전) "저는 평소 꼼꼼한 성격으로 동아리에서 회계를 맡아 열심히 일했습니다."<br>
+          (수정 후) <strong>"[데이터 분석 역량으로 예산 누수 18% 절감] 1년간 4,000만 원 규모의 예산을 집행하며 단 한 건의 오차 없이 마감한 경험이 있습니다."</strong>
         </div>
-        <div class="template-desc">
-          [상황(Situation) & 과제(Task)]: [프로젝트/인턴 활동] 진행 중 [발생한 문제/일정 지연] 상황이 발생했습니다.<br>
-          [행동(Action)]: 이를 해결하고자 원인을 [데이터/소통]으로 분석하고, [구체적으로 실행한 방안]을 시도했습니다.<br>
-          [결과(Result)]: 그 결과 [수치화된 성과/달성률 %]를 기록하며 성공적으로 마무리할 수 있었습니다.
+      </article>
+
+      <!-- 칼럼 2 -->
+      <article class="article-item">
+        <span class="article-tag tag-career">이직 & 경력직</span>
+        <h3 class="article-title">2. 이직러 필수: 신입 자소서와 경력기술서의 결정적 차이 3가지</h3>
+        <p class="article-body">
+          회사를 옮기려는 경력직 지원자가 가장 많이 하는 실수가 <strong>'신입 공채 스타일의 감성적 자소서'</strong>를 그대로 내는 것입니다.
+          이직 시장에서 기업이 원하는 것은 잠재력이 아닌 <strong>"당장 내일부터 투입되어 돈을 벌어다 줄 수 있는가"</strong>입니다.
+        </p>
+        <div class="article-tip-box">
+          <strong>📌 경력직 핵심 체크포인트:</strong><br>
+          1. <strong>과정보다 성과 중심:</strong> "어떤 툴을 썼다"가 아니라 "그 툴로 전환율 몇 % 상승, 개발 기간 몇 주 단축"을 명시하세요.<br>
+          2. <strong>연봉 협상 카드 확보:</strong> 전 직장 원천징수영수증과 성과 포트폴리오를 대조하여 목표 실수령액(본 사이트 '연봉 계산기' 탭 참조)을 산출해 두어야 협상 주도권을 잡습니다.
         </div>
-      </div>
+      </article>
+
+      <!-- 칼럼 3 -->
+      <article class="article-item">
+        <span class="article-tag tag-interview">면접 전형</span>
+        <h3 class="article-title">3. "마지막으로 하고 싶은 말 있나요?" 합격을 결정짓는 역질문</h3>
+        <p class="article-body">
+          면접 말미에 나오는 이 질문에 "특별히 없습니다"라고 답하는 것은 기회를 스스로 버리는 행위입니다.
+          반대로 "야근이 많은가요?" 같은 처우 질문은 감점 요인입니다. <strong>해당 부서가 당면한 과제에 내가 어떻게 기여할지</strong>를 묻는 역질문을 던져야 합니다.
+        </p>
+        <div class="article-tip-box">
+          <strong>🎯 추천 역질문 모범 답안:</strong><br>
+          "제가 입사하게 된다면, 팀장님과 부서원분들께서 저에게 <strong>입사 후 3개월 이내에 가장 우선적으로 기대하시는 핵심 과제</strong>는 무엇인지 여쭙고 싶습니다."
+        </div>
+      </article>
     </section>
 
-    <!-- 제휴 파트너 (실제 텐핑 고유 링크 탑재 완료) -->
+    <!-- 제휴 파트너 (실제 텐핑 고유 링크 탑재) -->
     <div class="partner-grid">
       <div class="partner-box">
         <div>
@@ -423,7 +441,7 @@
       <span>|</span>
       <a href="javascript:void(0)" onclick="openModal('contact')">문의하기</a>
     </div>
-    <p>본 사이트에서 제공하는 글자수 계산 및 채용 일정, 표준 서식은 참고용 정보이며 법적 효력이 없습니다.</p>
+    <p>본 사이트에서 제공하는 글자수 계산 및 채용 일정, 취업 칼럼은 참고용 정보이며 법적 효력이 없습니다.</p>
     <p>© 2026 ByteCheck Global. All rights reserved. | Contact: official.bytecheck@gmail.com</p>
   </footer>
 
@@ -484,19 +502,6 @@
       }
     }
 
-    function insertTemplate(type) {
-      let templateText = "";
-      if (type === 1) {
-        templateText = "[지원동기 및 입사 후 포부]\n\n1. 지원 동기\n[기업명]의 [최근 추진 사업 또는 핵심 비전]을 보며 [해당 직무] 전문가로서 함께 성장하고자 지원하였습니다. 학부 시절 [관련 과목 수강/프로젝트]를 통해 [핵심 지식/역량]을 탄탄히 다졌습니다.\n\n2. 입사 후 목표\n입사 후 1년 이내에 전산 및 기본 프로세스를 완벽히 습득하고, 3년 이내에는 [담당 직무에서의 구체적 성과 목표]를 달성하여 회사의 생산성 향상에 기여하겠습니다.";
-      } else if (type === 2) {
-        templateText = "[직무 관련 문제 해결 경험 (STAR 공식)]\n\n1. 상황 (Situation)\n[활동명/인턴/프로젝트] 당시 [달성해야 할 목표 및 기한]이 정해져 있었으나, [예상치 못한 문제 또는 자원 부족]으로 난관에 부딪혔습니다.\n\n2. 해결 행동 (Action)\n문제를 객관적으로 진단하기 위해 [데이터 수집/팀원 간 소통]을 우선 진행했습니다. 이후 [내가 직접 주도한 실행 방안]을 도입하여 리스크를 최소화했습니다.\n\n3. 결과 (Result)\n그 결과 기한 내에 [수치화된 성과: 예 15% 개선, 비용 절감 등]을 달성하며 성공적으로 마무리했습니다.";
-      }
-      
-      textarea.value = templateText;
-      analyzeText();
-      window.scrollTo({ top: textarea.offsetTop - 80, behavior: 'smooth' });
-    }
-
     function triggerDownload(content, filename, type) {
       const blob = new Blob([content], { type: type });
       const link = document.createElement('a');
@@ -506,7 +511,6 @@
       URL.revokeObjectURL(link.href);
     }
 
-    // 1. 진짜 표준 입사지원서 & 자기소개서 (MS Word / 한글 호환 정규 격자표 서식)
     function downloadStandardResumeDoc() {
       const htmlDoc = `
       <html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
@@ -651,7 +655,6 @@
       triggerDownload(htmlDoc, '2026_표준_입사지원서_자기소개서.doc', 'application/msword;charset=utf-8');
     }
 
-    // 2. 공공기관 블라인드 채용 입사지원서 (사진/출신 배제 정규 규격 서식)
     function downloadBlindResumeDoc() {
       const htmlDoc = `
       <html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
@@ -745,7 +748,7 @@
 
     function shareSite() {
       if (navigator.share) {
-        navigator.share({ title: 'ByteCheck 자소서 바이트 & 서식 다운로드', url: window.location.href }).catch(() => {});
+        navigator.share({ title: 'ByteCheck 자소서 바이트 & 취업 정보 허브', url: window.location.href }).catch(() => {});
       } else {
         navigator.clipboard.writeText(window.location.href);
         alert('사이트 주소가 복사되었습니다. 단톡방에 공유해 보세요!');
@@ -764,9 +767,9 @@
     }
 
     const legalTexts = {
-      terms: { title: "이용약관 (Terms of Service)", body: "제1조 (목적)\n본 약관은 ByteCheck가 제공하는 글자수 계산, 무료 서식 다운로드, 채용 일정 정보의 이용 조건을 규정합니다.\n\n제2조 (책임 한계)\n본 사이트에서 제공되는 모든 서식과 데이터는 참고용이며, 공식 공고를 통해 최종 확인하시기 바랍니다." },
+      terms: { title: "이용약관 (Terms of Service)", body: "제1조 (목적)\n본 약관은 ByteCheck가 제공하는 글자수 계산, 무료 서식 다운로드, 취업 칼럼, 채용 일정 정보의 이용 조건을 규정합니다.\n\n제2조 (책임 한계)\n본 사이트에서 제공되는 모든 서식과 정보는 참고용이며, 공식 공고를 통해 최종 확인하시기 바랍니다." },
       privacy: { title: "개인정보처리방침 (Privacy Policy)", body: "1. 수집 항목\n본 서비스는 회원가입을 받지 않으며 일체의 개인정보를 서버에 저장하지 않습니다.\n\n2. 로컬 브라우저 저장\n작성 중인 자소서 텍스트는 이용자의 기기(로컬 브라우저)에만 임시 보관됩니다." },
-      disclaimer: { title: "면책조항 (Disclaimer)", body: "본 사이트의 무료 서식 및 채용 일정 데이터를 신뢰하여 발생한 서류 탈락, 일정 착오 등의 결과에 대해 운영자는 법적 책임을 지지 않습니다." },
+      disclaimer: { title: "면책조항 (Disclaimer)", body: "본 사이트의 무료 서식 및 전략 칼럼, 채용 일정을 신뢰하여 발생한 서류 탈락, 일정 착오 등의 결과에 대해 운영자는 법적 책임을 지지 않습니다." },
       contact: { title: "문의하기 (Contact Us)", body: "오류 제보 및 제휴 문의는 아래 공식 이메일로 접수해 주시기 바랍니다.\n\n📧 공식 이메일: official.bytecheck@gmail.com" }
     };
 
