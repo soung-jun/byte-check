@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ByteCheck - 2026 자소서 바이트 계산기 & 채용·면접 캘린더</title>
-  <meta name="description" content="공기업 UTF-8 3Byte, 대기업 EUC-KR 2Byte 실시간 계산, 블라인드 금칙어 필터링, 기업별 바이트 규격 족보 및 2026 채용·면접 캘린더.">
+  <title>ByteCheck - 2026 자소서 바이트 계산기, 무료 양식 서식 & 채용 캘린더</title>
+  <meta name="description" content="공기업 UTF-8 3Byte, 대기업 EUC-KR 2Byte 실시간 계산, 블라인드 금칙어 검출, 표준 자기소개서 양식 무료 다운로드, 2026 채용·면접 일정 총정리.">
+  <meta name="keywords" content="자소서 양식 무료 다운로드, 자기소개서 양식, 이력서 서식, 자소서 글자수 세기, 자소서 바이트 계산기, 공기업 3바이트, 2026 채용일정, ByteCheck">
   
-  <meta property="og:title" content="ByteCheck - 자소서 바이트 & 채용·면접 정보 허브">
-  <meta property="og:description" content="자소서 규격 계산, 블라인드 검사, 기업별 바이트 족보, 실시간 공채·면접 일정">
+  <meta property="og:title" content="ByteCheck - 자소서 바이트 계산기 & 무료 양식 다운로드">
+  <meta property="og:description" content="자소서 바이트 검사, 표준 서식 다운로드, 합격 문항 템플릿, 채용·면접 캘린더">
   <meta property="og:url" content="https://bytechecktool.com">
   <meta property="og:type" content="website">
 
@@ -32,11 +33,11 @@
     body { background-color: var(--bg); color: var(--text); line-height: 1.6; }
 
     /* 헤더 */
-    header { background: #ffffff; border-bottom: 2px solid var(--border); width: 100%; }
+    header { background: #ffffff; border-bottom: 2px solid var(--border); width: 100%; position: relative; }
     .header-inner { max-width: 1000px; margin: 0 auto; padding: 14px 20px; display: flex; justify-content: space-between; align-items: center; }
     .brand { display: flex; align-items: center; gap: 8px; font-size: 1.3rem; font-weight: 800; color: var(--primary); text-decoration: none; }
     nav { display: flex; align-items: center; gap: 8px; }
-    nav a { text-decoration: none; color: var(--text); font-size: 0.92rem; font-weight: 700; padding: 7px 14px; border-radius: 6px; border: 1px solid transparent; transition: all 0.2s; }
+    nav a { text-decoration: none; color: var(--text); font-size: 0.92rem; font-weight: 700; padding: 7px 14px; border-radius: 6px; transition: all 0.2s; }
     nav a:hover { background: var(--primary-light); color: var(--primary); }
     nav a.active { background: var(--primary); color: #ffffff; }
 
@@ -47,7 +48,7 @@
     .hero h1 { font-size: 2.1rem; font-weight: 900; letter-spacing: -0.5px; margin-bottom: 8px; color: #0f172a; }
     .hero p { font-size: 1rem; color: var(--text-muted); font-weight: 600; }
 
-    /* 액션 버튼 */
+    /* 상단 액션 버튼 */
     .top-actions { display: flex; justify-content: flex-end; gap: 8px; margin-bottom: 12px; }
     .btn-action { background: #ffffff; border: 1.5px solid var(--border-dark); padding: 8px 16px; border-radius: 8px; font-size: 0.88rem; font-weight: 700; color: var(--text); cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
     .btn-action:hover { background: #e2e8f0; }
@@ -70,8 +71,8 @@
     .warning-box { margin-top: 16px; padding: 14px; background: #fef2f2; border: 2px solid #f87171; border-radius: 8px; font-size: 0.92rem; display: none; }
     .warning-box.active { display: block; }
 
-    /* 섹션 제목 및 테이블 */
-    .section-title { font-size: 1.3rem; font-weight: 800; display: flex; align-items: center; gap: 8px; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--border); }
+    /* 섹션 공통 스타일 */
+    .section-title { font-size: 1.25rem; font-weight: 800; display: flex; align-items: center; gap: 8px; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--border); }
     .custom-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; margin-top: 10px; }
     .custom-table th, .custom-table td { padding: 12px 14px; border: 1.5px solid var(--border); text-align: left; }
     .custom-table th { background: #e2e8f0; color: #0f172a; font-weight: 800; }
@@ -80,10 +81,20 @@
     .badge-2b { background: #dbeafe; color: #1e40af; padding: 4px 8px; border-radius: 4px; font-weight: 700; border: 1px solid #bfdbfe; }
     .badge-3b { background: #fef3c7; color: #92400e; padding: 4px 8px; border-radius: 4px; font-weight: 700; border: 1px solid #fde68a; }
 
-    /* 채용 캘린더 */
-    .filter-group { display: flex; gap: 6px; }
-    .filter-btn { padding: 6px 14px; font-size: 0.82rem; font-weight: 700; border: 1.5px solid var(--border-dark); background: #fff; border-radius: 20px; cursor: pointer; }
-    .filter-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+    /* 서식 다운로드 센터 */
+    .download-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 12px; }
+    .download-item { background: #f8fafc; border: 1.5px solid var(--border); border-radius: 8px; padding: 16px; text-align: center; display: flex; flex-direction: column; justify-content: space-between; }
+    .download-item h4 { font-size: 0.95rem; font-weight: 800; margin-bottom: 6px; color: #0f172a; }
+    .download-item p { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px; font-weight: 500; }
+    .btn-download { background: #0f172a; color: #ffffff; text-decoration: none; padding: 8px 12px; border-radius: 6px; font-size: 0.82rem; font-weight: 700; cursor: pointer; border: none; }
+    .btn-download:hover { background: #334155; }
+
+    /* 빈출 문항 템플릿 아코디언 */
+    .template-box { background: #f8fafc; border: 1.5px solid var(--border); border-radius: 8px; padding: 14px; margin-bottom: 10px; }
+    .template-header { display: flex; justify-content: space-between; align-items: center; }
+    .template-header strong { font-size: 0.92rem; color: #0f172a; }
+    .btn-insert { background: var(--primary); color: #fff; border: none; padding: 5px 10px; border-radius: 4px; font-size: 0.78rem; font-weight: 700; cursor: pointer; }
+    .template-desc { font-size: 0.82rem; color: var(--text-muted); margin-top: 6px; line-height: 1.5; }
 
     /* 제휴 파트너 */
     .partner-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
@@ -97,9 +108,7 @@
     footer { background: #ffffff; border-top: 2px solid var(--border); padding: 30px 20px; font-size: 0.85rem; color: var(--text-muted); line-height: 1.8; text-align: center; }
     .footer-links { display: flex; justify-content: center; gap: 16px; margin-bottom: 12px; }
     .footer-links a { color: var(--primary); text-decoration: none; font-weight: 700; }
-    .footer-links a:hover { text-decoration: underline; }
 
-    /* 모달 */
     .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 200; align-items: center; justify-content: center; padding: 20px; }
     .modal-content { background: #fff; max-width: 600px; width: 100%; max-height: 80vh; overflow-y: auto; border-radius: 12px; border: 2px solid var(--border-dark); padding: 24px; position: relative; }
     .modal-close { position: absolute; top: 16px; right: 16px; cursor: pointer; font-size: 1.4rem; font-weight: bold; }
@@ -107,12 +116,12 @@
     @media (max-width: 768px) {
       .header-inner { flex-direction: column; gap: 10px; }
       nav { width: 100%; overflow-x: auto; white-space: nowrap; justify-content: flex-start; }
-      .stats-grid, .partner-grid { grid-template-columns: 1fr; }
+      .stats-grid, .partner-grid, .download-grid { grid-template-columns: 1fr; }
     }
 
     @media print {
       body { background: #fff; padding: 0; }
-      header, nav, .hero, .top-actions, .status-bar, .stats-grid, .warning-box, .ad-slot, .partner-grid, .board-card, .guide-card, footer, #resumeText { display: none !important; }
+      header, nav, .hero, .top-actions, .status-bar, .stats-grid, .warning-box, .ad-slot, .partner-grid, .board-card, .guide-card, .download-card, .template-card, footer, #resumeText { display: none !important; }
       .card { border: none; padding: 0; }
       .print-header { display: block !important; margin-bottom: 20px; border-bottom: 2px solid #000; padding-bottom: 10px; }
       .print-content { display: block !important; font-size: 11pt; line-height: 1.8; white-space: pre-wrap; font-family: "Batang", serif; }
@@ -127,7 +136,7 @@
     <div class="header-inner">
       <a href="index.html" class="brand"><span>⚡</span> ByteCheck</a>
       <nav>
-        <a href="index.html" class="active">자소서 바이트 & 가이드</a>
+        <a href="index.html" class="active">자소서 바이트 & 서식</a>
         <a href="salary.html">2026 연봉 계산기</a>
         <a href="dday.html">어학 만료 D-Day</a>
       </nav>
@@ -142,8 +151,8 @@
     </div>
 
     <section class="hero">
-      <h1>2026 자소서 바이트 & 채용 캘린더</h1>
-      <p>공기업 UTF-8 3Byte, 대기업 EUC-KR 2Byte 실시간 계산 및 2026 채용·면접 타임라인</p>
+      <h1>2026 자소서 바이트 & 서식 다운로드 센터</h1>
+      <p>공기업 3Byte, 대기업 2Byte 실시간 계산, 표준 서식 무료 다운로드 및 채용 캘린더</p>
     </section>
 
     <div class="ad-slot">
@@ -155,13 +164,14 @@
       <button class="btn-action" onclick="shareSite()">🔗 단톡방 공유하기</button>
     </div>
 
+    <!-- 메인 바이트 검사기 카드 -->
     <main class="card">
       <div class="status-bar">
         <span class="save-badge">● 실시간 자동 저장 켜짐 (내 브라우저 안전 보관)</span>
         <span id="charCountLabel" style="color: var(--text); font-weight: 700;">0 자</span>
       </div>
 
-      <textarea id="resumeText" placeholder="자기소개서 문항이나 내용을 입력하세요. 글자수, 공백, 2Byte/3Byte가 실시간으로 계산되며 브라우저를 닫아도 안전하게 복원됩니다..."></textarea>
+      <textarea id="resumeText" placeholder="자기소개서 문항이나 내용을 입력하세요. 아래 템플릿의 [에디터에 복사] 버튼을 누르면 추천 문항이 바로 채워집니다..."></textarea>
       
       <div id="printArea" class="print-content"></div>
 
@@ -194,6 +204,73 @@
       Document generated by ByteCheck (bytechecktool.com)
     </div>
 
+    <!-- 1. 신규 기능: 2026 표준 자소서 & 이력서 무료 서식 다운로드 센터 -->
+    <section class="card download-card">
+      <div class="section-title">
+        <span>📥</span> 2026 표준 자기소개서 & 입사지원서 무료 다운로드
+      </div>
+      <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 12px; font-weight: 500;">
+        취준생 및 구직자를 위해 표준 규격으로 작성된 서식을 회원가입 없이 즉시 다운로드할 수 있습니다.
+      </p>
+      <div class="download-grid">
+        <div class="download-item">
+          <div>
+            <h4>📄 표준 입사지원서 (Word)</h4>
+            <p>대기업, 중견기업, 사기업 범용 표준 이력서 및 4대 문항 서식</p>
+          </div>
+          <button class="btn-download" onclick="downloadDocTemplate()">MS Word (.doc) 받기</button>
+        </div>
+        <div class="download-item">
+          <div>
+            <h4>📋 공공기관 블라인드 서식 (TXT)</h4>
+            <p>인적사항 배제, 직무능력 기반 NCS 서술형 표준 텍스트 서식</p>
+          </div>
+          <button class="btn-download" onclick="downloadTxtTemplate()">표준 서식 (.txt) 받기</button>
+        </div>
+        <div class="download-item">
+          <div>
+            <h4>📊 문항별 바이트 관리 시트</h4>
+            <p>복수 기업 지원 시 문항별 2B/3B 규격을 기록하는 오프라인 텍스트</p>
+          </div>
+          <button class="btn-download" onclick="downloadManagementSheet()">관리 템플릿 받기</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. 신규 기능: 검색량 폭발 합격 자소서 빈출 문항 구조화 템플릿 -->
+    <section class="card template-card">
+      <div class="section-title">
+        <span>⭐</span> 2026 합격 자소서 빈출 문항 STAR 작성 공식 & 템플릿
+      </div>
+      <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 14px; font-weight: 500;">
+        [에디터에 복사]를 누르면 상단 검사기 창에 기본 틀이 바로 입력됩니다. (괄호 내용만 본인 경험으로 수정)
+      </p>
+
+      <div class="template-box">
+        <div class="template-header">
+          <strong>1. 지원동기 및 입사 후 포부 (회사 비전 + 직무 기여도)</strong>
+          <button class="btn-insert" onclick="insertTemplate(1)">에디터에 복사</button>
+        </div>
+        <div class="template-desc">
+          [소제목: 목표를 현실로 만드는 직무 역량]<br>
+          OO기업의 [최근 핵심 사업/방향성]에 주목하여 지원하게 되었습니다. 저는 [관련 학과/경험]을 통해 [핵심 역량 1]을 다져왔으며, 입사 후 1년 차에는 실무 시스템을 빠르게 숙지하고, 3년 차에는 [구체적 기여 목표]를 달성하는 핵심 인재로 성장하겠습니다.
+        </div>
+      </div>
+
+      <div class="template-box">
+        <div class="template-header">
+          <strong>2. 직무 관련 문제 해결 경험 (STAR 공식 기반)</strong>
+          <button class="btn-insert" onclick="insertTemplate(2)">에디터에 복사</button>
+        </div>
+        <div class="template-desc">
+          [상황(Situation) & 과제(Task)]: [프로젝트/인턴 활동] 진행 중 [발생한 문제/일정 지연] 상황이 발생했습니다.<br>
+          [행동(Action)]: 이를 해결하고자 원인을 [데이터/소통]으로 분석하고, [구체적으로 실행한 방안]을 시도했습니다.<br>
+          [결과(Result)]: 그 결과 [수치화된 성과/달성률 %]를 기록하며 성공적으로 마무리할 수 있었습니다.
+        </div>
+      </div>
+    </section>
+
+    <!-- 제휴 파트너 -->
     <div class="partner-grid">
       <div class="partner-box">
         <div>
@@ -212,7 +289,7 @@
       </div>
     </div>
 
-    <!-- 통합 흡수: 기업별 자소서 바이트 규격 족보 -->
+    <!-- 기업별 자소서 바이트 규격 족보 -->
     <section class="card guide-card">
       <div class="section-title">
         <span>📖</span> 2026 주요 기업별 글자수·바이트 규격 족보
@@ -349,7 +426,7 @@
       <span>|</span>
       <a href="javascript:void(0)" onclick="openModal('contact')">문의하기</a>
     </div>
-    <p>본 사이트에서 제공하는 글자수 계산 및 채용 일정은 참고용 정보이며 법적 효력이 없습니다.</p>
+    <p>본 사이트에서 제공하는 글자수 계산 및 채용 일정, 표준 서식은 참고용 정보이며 법적 효력이 없습니다.</p>
     <p>© 2026 ByteCheck Global. All rights reserved. | Contact: official.bytecheck@gmail.com</p>
   </footer>
 
@@ -410,6 +487,101 @@
       }
     }
 
+    // 템플릿 에디터 복사 기능
+    function insertTemplate(type) {
+      let templateText = "";
+      if (type === 1) {
+        templateText = "[지원동기 및 입사 후 포부]\n\n1. 지원 동기\n[기업명]의 [최근 추진 사업 또는 핵심 비전]을 보며 [해당 직무] 전문가로서 함께 성장하고자 지원하였습니다. 학부 시절 [관련 과목 수강/프로젝트]를 통해 [핵심 지식/역량]을 탄탄히 다졌습니다.\n\n2. 입사 후 목표\n입사 후 1년 이내에 전산 및 기본 프로세스를 완벽히 습득하고, 3년 이내에는 [담당 직무에서의 구체적 성과 목표]를 달성하여 회사의 생산성 향상에 기여하겠습니다.";
+      } else if (type === 2) {
+        templateText = "[직무 관련 문제 해결 경험 (STAR 공식)]\n\n1. 상황 (Situation)\n[활동명/인턴/프로젝트] 당시 [달성해야 할 목표 및 기한]이 정해져 있었으나, [예상치 못한 문제 또는 자원 부족]으로 난관에 부딪혔습니다.\n\n2. 해결 행동 (Action)\n문제를 객관적으로 진단하기 위해 [데이터 수집/팀원 간 소통]을 우선 진행했습니다. 이후 [내가 직접 주도한 실행 방안]을 도입하여 리스크를 최소화했습니다.\n\n3. 결과 (Result)\n그 결과 기한 내에 [수치화된 성과: 예 15% 개선, 비용 절감 등]을 달성하며 성공적으로 마무리했습니다.";
+      }
+      
+      textarea.value = templateText;
+      analyzeText();
+      window.scrollTo({ top: textarea.offsetTop - 80, behavior: 'smooth' });
+    }
+
+    // 파일 다운로드 함수들
+    function triggerDownload(content, filename, type) {
+      const blob = new Blob([content], { type: type });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = filename;
+      link.click();
+      URL.revokeObjectURL(link.href);
+    }
+
+    function downloadDocTemplate() {
+      const content = `\uFEFF
+=====================================================
+2026 표준 자기소개서 및 입사지원서 서식
+제작 및 배포: ByteCheck (bytechecktool.com)
+=====================================================
+
+1. 인적 사항
+- 성 명: 
+- 생년월일: 
+- 연락처: 
+- 이메일: 
+
+2. 학력 및 직무 자격
+- 최종 학력: 
+- 보유 자격증: 
+- 공인 어학 성적: 
+
+[자기소개서 작성란]
+
+■ 문항 1. 지원 직무에 관심을 갖게 된 계기와 이를 위해 노력한 경험을 서술해 주십시오.
+(내용을 입력하세요)
+
+
+■ 문항 2. 예상치 못한 문제에 직면했을 때 창의적이거나 논리적으로 해결한 경험을 서술해 주십시오.
+(내용을 입력하세요)
+
+
+■ 문항 3. 공동의 목표를 달성하기 위해 타인과 협력하고 배려했던 경험을 서술해 주십시오.
+(내용을 입력하세요)
+
+
+■ 문항 4. 입사 후 직무 전문가로서 이루고자 하는 구체적인 포부를 서술해 주십시오.
+(내용을 입력하세요)
+
+* 제출 전 bytechecktool.com 에서 2Byte/3Byte 규격을 꼭 확인하세요.
+`;
+      triggerDownload(content, '2026_표준_자기소개서_서식_ByteCheck.doc', 'application/msword;charset=utf-8');
+    }
+
+    function downloadTxtTemplate() {
+      const content = `[2026 공공기관 블라인드 채용 표준 입사지원 템플릿]
+* 블라인드 채용 시 학교명, 가족관계, 출신지 명시 절대 불가 (ByteCheck 검사기 검증 필수)
+
+[문항 1] 지원 직무와 관련된 경력 및 경험 활동에 대해 서술해 주십시오.
+- 작성 팁: 직무기술서 상의 '필요 지식/기술'을 중심으로 STAR 구조화 서술
+
+[문항 2] 원칙을 준수하며 정직하게 업무를 수행했던 경험을 기술해 주십시오.
+
+[문항 3] 조직 내 갈등이 발생했을 때 상호 배려를 통해 원만히 해결한 사례를 기술해 주십시오.
+
+출처: bytechecktool.com (실시간 UTF-8 3Byte 계산 도구)`;
+      triggerDownload(content, '2026_블라인드_표준서식_ByteCheck.txt', 'text/plain;charset=utf-8');
+    }
+
+    function downloadManagementSheet() {
+      const content = `[기업별 자소서 문항 & 바이트 관리 템플릿]
+
+기업명 / 지원 직무 / 접수 마감일 / 바이트 규격(2B/3B) / 문항별 글자수 현황
+
+1. 삼성전자 / DX부문 / ~03.20 / EUC-KR 2Byte
+- 문항 1: 지원동기 (1,000자 / 2,000Byte) -> 작성완료
+- 문항 2: 성장과정 (1,500자 / 3,000Byte) -> 작성중
+
+2. 한국전력공사 / 사무 / ~04.05 / UTF-8 3Byte
+- 문항 1: 직무역량 (800자 / 2,400Byte 주의) -> 작성중
+
+* 자소서 글자수/바이트 실시간 점검: bytechecktool.com`;
+      triggerDownload(content, '자소서_기업별_바이트관리시트.txt', 'text/plain;charset=utf-8');
+    }
+
     function printDoc() {
       const text = textarea.value;
       if (!text.trim()) { alert('인쇄할 자기소개서 내용을 먼저 입력해 주세요.'); return; }
@@ -420,7 +592,7 @@
 
     function shareSite() {
       if (navigator.share) {
-        navigator.share({ title: 'ByteCheck 자소서 바이트 & 채용 캘린더', url: window.location.href }).catch(() => {});
+        navigator.share({ title: 'ByteCheck 자소서 바이트 & 서식 다운로드', url: window.location.href }).catch(() => {});
       } else {
         navigator.clipboard.writeText(window.location.href);
         alert('사이트 주소가 복사되었습니다. 단톡방에 공유해 보세요!');
@@ -439,9 +611,9 @@
     }
 
     const legalTexts = {
-      terms: { title: "이용약관 (Terms of Service)", body: "제1조 (목적)\n본 약관은 ByteCheck가 제공하는 글자수 계산, 연봉 계산, 채용 일정 정보의 이용 조건을 규정합니다.\n\n제2조 (책임 한계)\n본 사이트에서 제공되는 모든 데이터는 참고용이며, 공식 공고를 통해 최종 확인하시기 바랍니다." },
+      terms: { title: "이용약관 (Terms of Service)", body: "제1조 (목적)\n본 약관은 ByteCheck가 제공하는 글자수 계산, 무료 서식 다운로드, 채용 일정 정보의 이용 조건을 규정합니다.\n\n제2조 (책임 한계)\n본 사이트에서 제공되는 모든 서식과 데이터는 참고용이며, 공식 공고를 통해 최종 확인하시기 바랍니다." },
       privacy: { title: "개인정보처리방침 (Privacy Policy)", body: "1. 수집 항목\n본 서비스는 회원가입을 받지 않으며 일체의 개인정보를 서버에 저장하지 않습니다.\n\n2. 로컬 브라우저 저장\n작성 중인 자소서 텍스트는 이용자의 기기(로컬 브라우저)에만 임시 보관됩니다." },
-      disclaimer: { title: "면책조항 (Disclaimer)", body: "본 사이트의 모의 계산 결과 및 채용 일정 데이터를 신뢰하여 발생한 서류 탈락, 일정 착오 등의 결과에 대해 운영자는 법적 책임을 지지 않습니다." },
+      disclaimer: { title: "면책조항 (Disclaimer)", body: "본 사이트의 무료 서식 및 채용 일정 데이터를 신뢰하여 발생한 서류 탈락, 일정 착오 등의 결과에 대해 운영자는 법적 책임을 지지 않습니다." },
       contact: { title: "문의하기 (Contact Us)", body: "오류 제보 및 제휴 문의는 아래 공식 이메일로 접수해 주시기 바랍니다.\n\n📧 공식 이메일: official.bytecheck@gmail.com" }
     };
 
