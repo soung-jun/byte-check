@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>어학 성적 유효기간 & 채용 마감 D-Day 계산기 | ByteCheck</title>
-  <meta name="description" content="토익, 오픽, 토익스피킹 2년 만료 예정일과 공공기관 5년 사전등록 잔여일을 실시간 계산합니다. 목표 채용 마감 D-Day 카운트다운 무료 제공.">
+  <meta name="description" content="토익, 오픽, 토익스피킹 응시일 기준 2년 만료 시점 및 목표 공고 마감 D-Day 카운트다운.">
   
   <meta property="og:title" content="토익/오픽 유효기간 & D-Day 계산기 | ByteCheck">
   <meta property="og:description" content="내 토익 성적 언제 만료될까? 서류 마감일 기준 실시간 잔여 D-Day 계산">
@@ -16,226 +16,79 @@
 
   <style>
     :root {
-      --primary: #2563eb;
-      --bg: #f8fafc;
+      --primary: #1d4ed8;
+      --primary-light: #eff6ff;
+      --bg: #f1f5f9;
       --card-bg: #ffffff;
-      --text: #1e293b;
-      --text-muted: #64748b;
-      --border: #e2e8f0;
-      --danger: #ef4444;
-      --success: #10b981;
+      --text: #0f172a;
+      --text-muted: #334155;
+      --border: #cbd5e1;
+      --border-dark: #94a3b8;
+      --danger: #dc2626;
     }
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
-    }
-    body {
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      padding-bottom: 60px;
-    }
-    header {
-      background: var(--card-bg);
-      border-bottom: 1px solid var(--border);
-      padding: 14px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 1.2rem;
-      font-weight: 800;
-      color: var(--primary);
-      text-decoration: none;
-    }
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    nav a {
-      text-decoration: none;
-      color: var(--text);
-      font-size: 0.9rem;
-      font-weight: 600;
-      padding: 6px 12px;
-      border-radius: 6px;
-    }
-    nav a:hover, nav a.active {
-      background: #eff6ff;
-      color: var(--primary);
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px 16px;
-    }
-    .hero {
-      text-align: center;
-      margin-bottom: 24px;
-    }
-    .hero h1 {
-      font-size: 1.85rem;
-      font-weight: 800;
-      margin-bottom: 8px;
-      word-break: keep-all;
-    }
-    .hero p {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      word-break: keep-all;
-    }
-    .card {
-      background: var(--card-bg);
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      padding: 24px;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-      margin-bottom: 24px;
-    }
-    .form-group {
-      margin-bottom: 18px;
-    }
-    .form-group label {
-      display: block;
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-    .input-box {
-      width: 100%;
-      padding: 12px 14px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      font-size: 1rem;
-      outline: none;
-    }
-    .input-box:focus {
-      border-color: var(--primary);
-    }
-    .result-display {
-      background: #eff6ff;
-      border: 1px solid #bfdbfe;
-      border-radius: 10px;
-      padding: 20px;
-      text-align: center;
-      margin-top: 20px;
-    }
-    .result-label {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-bottom: 4px;
-    }
-    .result-val {
-      font-size: 2.2rem;
-      font-weight: 800;
-      color: var(--primary);
-    }
-    .info-list {
-      margin-top: 16px;
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-    }
-    .ad-slot {
-      background: #f1f5f9;
-      border: 1px dashed #cbd5e1;
-      border-radius: 8px;
-      min-height: 90px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-    }
-    .partner-card {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 14px 18px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 16px;
-    }
-    .partner-btn {
-      background: var(--primary);
-      color: #fff;
-      text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 600;
-      padding: 8px 14px;
-      border-radius: 6px;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
+    body { background-color: var(--bg); color: var(--text); line-height: 1.6; }
+
+    header { background: #ffffff; border-bottom: 2px solid var(--border); width: 100%; position: relative; }
+    .header-inner { max-width: 900px; margin: 0 auto; padding: 14px 20px; display: flex; justify-content: space-between; align-items: center; }
+    .brand { display: flex; align-items: center; gap: 8px; font-size: 1.3rem; font-weight: 800; color: var(--primary); text-decoration: none; }
+    nav { display: flex; align-items: center; gap: 8px; }
+    nav a { text-decoration: none; color: var(--text); font-size: 0.92rem; font-weight: 700; padding: 7px 14px; border-radius: 6px; }
+    nav a:hover { background: var(--primary-light); color: var(--primary); }
+    nav a.active { background: var(--primary); color: #ffffff; }
+
+    .container { max-width: 850px; margin: 0 auto; padding: 24px 16px 60px 16px; }
+    .hero { text-align: center; margin-bottom: 24px; }
+    .hero h1 { font-size: 2.1rem; font-weight: 900; margin-bottom: 8px; color: #0f172a; }
+    .hero p { font-size: 1rem; color: var(--text-muted); font-weight: 600; }
+
+    .card { background: var(--card-bg); border-radius: 12px; border: 2px solid var(--border); padding: 24px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); margin-bottom: 24px; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 0.95rem; font-weight: 800; margin-bottom: 6px; color: #0f172a; }
+    .input-box { width: 100%; padding: 12px 14px; border: 2px solid var(--border); border-radius: 8px; font-size: 1.05rem; font-weight: 600; outline: none; }
+    .input-box:focus { border-color: var(--primary); }
+
+    .result-display { background: var(--primary-light); border: 2px solid #93c5fd; border-radius: 10px; padding: 24px; text-align: center; margin-top: 24px; }
+    .result-label { font-size: 0.95rem; color: var(--text-muted); font-weight: 700; margin-bottom: 4px; }
+    .result-val { font-size: 2.4rem; font-weight: 900; color: var(--primary); }
+
+    .info-list { margin-top: 18px; padding: 14px; background: #f8fafc; border: 1.5px solid var(--border); border-radius: 8px; font-size: 0.92rem; color: var(--text-muted); line-height: 1.7; font-weight: 600; }
+
+    .partner-box { background: #ffffff; border: 2px solid var(--border); border-radius: 10px; padding: 16px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+    .partner-btn { background: #dc2626; color: #fff; text-decoration: none; font-size: 0.85rem; font-weight: 800; padding: 9px 14px; border-radius: 6px; }
+    .ad-slot { background: #e2e8f0; border: 2px dashed var(--border-dark); border-radius: 8px; min-height: 90px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; color: var(--text-muted); font-size: 0.9rem; font-weight: 700; }
+
+    footer { background: #ffffff; border-top: 2px solid var(--border); padding: 30px 20px; font-size: 0.85rem; color: var(--text-muted); line-height: 1.8; text-align: center; }
+    .footer-links { display: flex; justify-content: center; gap: 16px; margin-bottom: 12px; }
+    .footer-links a { color: var(--primary); text-decoration: none; font-weight: 700; }
+
+    .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 200; align-items: center; justify-content: center; padding: 20px; }
+    .modal-content { background: #fff; max-width: 600px; width: 100%; max-height: 80vh; overflow-y: auto; border-radius: 12px; border: 2px solid var(--border-dark); padding: 24px; position: relative; }
+    .modal-close { position: absolute; top: 16px; right: 16px; cursor: pointer; font-size: 1.4rem; font-weight: bold; }
 
     @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        gap: 12px;
-        padding: 12px 10px;
-      }
-      nav {
-        width: 100%;
-        overflow-x: auto;
-        white-space: nowrap;
-        padding-bottom: 4px;
-        justify-content: flex-start;
-        gap: 8px;
-        scrollbar-width: none;
-      }
-      nav::-webkit-scrollbar {
-        display: none;
-      }
-      nav a {
-        font-size: 0.82rem;
-        background: #f1f5f9;
-        border-radius: 20px;
-        padding: 6px 14px;
-      }
-      nav a.active {
-        background: var(--primary);
-        color: #fff;
-      }
-      .hero h1 {
-        font-size: 1.4rem;
-      }
-      .hero p {
-        font-size: 0.85rem;
-      }
-      .partner-card {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-      }
+      .header-inner { flex-direction: column; gap: 10px; }
+      nav { width: 100%; overflow-x: auto; white-space: nowrap; justify-content: flex-start; }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <a href="index.html" class="brand"><span>⚡</span> ByteCheck</a>
-    <nav>
-      <a href="index.html">자소서 바이트</a>
-      <a href="salary.html">2026 연봉 계산기</a>
-      <a href="dday.html" class="active">어학 만료 D-Day</a>
-      <a href="recruit-guide.html">기업별 바이트 가이드</a>
-    </nav>
+    <div class="header-inner">
+      <a href="index.html" class="brand"><span>⚡</span> ByteCheck</a>
+      <nav>
+        <a href="index.html">자소서 바이트 & 가이드</a>
+        <a href="salary.html">2026 연봉 계산기</a>
+        <a href="dday.html" class="active">어학 만료 D-Day</a>
+      </nav>
+    </div>
   </header>
 
   <div class="container">
     <section class="hero">
       <h1>토익·어학 만료일 & 채용 D-Day 계산기</h1>
-      <p>응시일 기준 정확한 2년 만료 시점 및 목표 공고 마감 D-Day 실시간 조회</p>
+      <p>응시일 기준 정확한 2년 만료 시점 및 서류 마감 D-Day 실시간 조회</p>
     </section>
 
     <div class="ad-slot">
@@ -251,18 +104,18 @@
       <div class="result-display">
         <div class="result-label">공식 성적 만료 예정일 (2년)</div>
         <div class="result-val" id="expireDateText">-</div>
-        <div style="margin-top: 8px; font-weight: 600; color: var(--danger);" id="remainingDaysText">응시일을 선택해 주세요</div>
+        <div style="margin-top: 8px; font-weight: 800; font-size: 1.15rem; color: var(--danger);" id="remainingDaysText">응시일을 선택해 주세요</div>
       </div>
 
       <div class="info-list">
-        <p>💡 <strong>공공기관 5년 연장 주의:</strong> 2년 유효기간이 지나기 전 사이버국가고시센터에 사전 등록해야 전산 인정됩니다.</p>
+        💡 <strong>공공기관 5년 연장 팁:</strong> 기존 2년 유효기간이 만료되기 전에 사이버국가고시센터에 사전 등록을 완료하셔야 공기업 전산망에서 5년 인정 혜택을 받을 수 있습니다.
       </div>
     </main>
 
-    <div class="partner-card">
+    <div class="partner-box">
       <div>
-        <strong>📚 단기 토익 850+ 목표 기출 최신개정판</strong>
-        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 2px;">만료 직전 재응시생 추천 최단기 점수 완성팩</p>
+        <strong style="font-size: 1rem; color: #0f172a;">📚 단기 토익 850+ 목표 기출 최신개정판</strong>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px; font-weight: 500;">만료 직전 재응시생 추천 최단기 완성팩</p>
       </div>
       <a href="https://link.coupang.com" target="_blank" rel="noopener noreferrer" class="partner-btn">교재 보기</a>
     </div>
@@ -272,12 +125,33 @@
     </div>
   </div>
 
+  <footer>
+    <div class="footer-links">
+      <a href="javascript:void(0)" onclick="openModal('terms')">이용약관</a>
+      <span>|</span>
+      <a href="javascript:void(0)" onclick="openModal('privacy')">개인정보처리방침</a>
+      <span>|</span>
+      <a href="javascript:void(0)" onclick="openModal('disclaimer')">면책조항</a>
+      <span>|</span>
+      <a href="javascript:void(0)" onclick="openModal('contact')">문의하기</a>
+    </div>
+    <p>본 사이트의 어학 만료 D-Day 계산 결과는 참고용 데이터입니다.</p>
+    <p>© 2026 ByteCheck Global. All rights reserved.</p>
+  </footer>
+
+  <div id="legalModal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeModal()">&times;</span>
+      <h3 id="modalTitle" style="font-size: 1.2rem; font-weight: 800; margin-bottom: 12px; color: #0f172a;"></h3>
+      <div id="modalBody" style="font-size: 0.9rem; color: #334155; line-height: 1.7; white-space: pre-wrap;"></div>
+    </div>
+  </div>
+
   <script>
     const examDateInput = document.getElementById('examDate');
     const expireDateText = document.getElementById('expireDateText');
     const remainingDaysText = document.getElementById('remainingDaysText');
 
-    // 기본값 오늘 날짜
     const today = new Date();
     examDateInput.value = today.toISOString().substring(0, 10);
 
@@ -285,7 +159,6 @@
       const selected = new Date(examDateInput.value);
       if (isNaN(selected)) return;
 
-      // 만료일: 응시일로부터 2년 뒤
       const expire = new Date(selected);
       expire.setFullYear(expire.getFullYear() + 2);
 
@@ -312,6 +185,21 @@
         remainingDaysText.style.color = 'var(--primary)';
       }
     }
+
+    const legalTexts = {
+      terms: { title: "이용약관", body: "본 도구는 공인 어학시험의 일반적 유효기간 기준(응시일로부터 2년)을 기준으로 일수를 환산해 제공합니다." },
+      privacy: { title: "개인정보처리방침", body: "선택하신 날짜 정보는 어떠한 서버에도 저장되지 않습니다." },
+      disclaimer: { title: "면책조항", body: "채용 기관별 서류 접수 마감 시각에 따른 인정 여부는 지원 기업 채용 공고를 직접 확인하셔야 합니다." },
+      contact: { title: "문의하기", body: "📧 공식 이메일: official.bytecheck@gmail.com" }
+    };
+
+    function openModal(type) {
+      document.getElementById('modalTitle').innerText = legalTexts[type].title;
+      document.getElementById('modalBody').innerText = legalTexts[type].body;
+      document.getElementById('legalModal').style.display = 'flex';
+    }
+    function closeModal() { document.getElementById('legalModal').style.display = 'none'; }
+    window.onclick = function(e) { if (e.target === document.getElementById('legalModal')) closeModal(); }
 
     examDateInput.addEventListener('change', calcDday);
     calcDday();
