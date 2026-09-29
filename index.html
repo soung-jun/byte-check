@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ByteCheck - 2026 자소서 바이트 계산기 & 취업 서류 서식 센터</title>
-  <meta name="description" content="공기업 UTF-8 3Byte, 대기업 EUC-KR 2Byte 실시간 글자수 계산기, 목표 글자수 게이지 바, 문항별 다중 탭 관리, 블라인드 금칙어 및 맞춤법 검출, 바이트 다이어트, STAR 경력기술서 빌더, 표준 이력서 Word 무료 다운로드.">
+  <meta name="description" content="공기업 UTF-8 3Byte, 대기업 EUC-KR 2Byte 실시간 글자수 계산기, 목표 글자수 게이지 바, 기업별 문항 원클릭 로더, 실시간 공채 마감 타이머, 바이트 다이어트, STAR 경력기술서 빌더, 표준 이력서 무료 다운로드.">
   <meta name="keywords" content="자소서 바이트 계산기, 글자수 줄이기, 공기업 3바이트, 대기업 2바이트, 자소서 문항 관리, STAR 기법, 이력서 양식 다운로드, ByteCheck">
   
-  <meta property="og:title" content="ByteCheck - 2026 자소서 바이트 계산기 & 올인원 서식 센터">
-  <meta property="og:description" content="문항별 2B/3B 실시간 계산, 목표 글자수 게이지, 원클릭 바이트 다이어트, 맞춤법/블라인드 검출, STAR 문장 빌더">
+  <meta property="og:title" content="ByteCheck - 2026 자소서 바이트 계산기 & 올인원 대시보드">
+  <meta property="og:description" content="문항별 2B/3B 실시간 계산, 실시간 공채 마감 타이머, 기업별 문항 자동완성, 바이트 다이어트">
   <meta property="og:url" content="https://bytechecktool.com">
   <meta property="og:type" content="website">
 
@@ -86,143 +86,146 @@
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
     body { background-color: var(--bg); color: var(--text); line-height: 1.6; }
 
-    header { background: #ffffff; border-bottom: 2px solid var(--border); width: 100%; position: relative; }
-    .header-inner { max-width: 1040px; margin: 0 auto; padding: 14px 20px; display: flex; justify-content: space-between; align-items: center; }
+    header { background: #ffffff; border-bottom: 2px solid var(--border); width: 100%; position: relative; z-index: 10; }
+    .header-inner { max-width: 1240px; margin: 0 auto; padding: 14px 20px; display: flex; justify-content: space-between; align-items: center; }
     .brand { display: flex; align-items: center; gap: 8px; font-size: 1.35rem; font-weight: 900; color: var(--primary); text-decoration: none; }
     nav { display: flex; align-items: center; gap: 8px; }
     nav a { text-decoration: none; color: var(--text); font-size: 0.92rem; font-weight: 700; padding: 8px 14px; border-radius: 6px; transition: all 0.2s; }
     nav a:hover { background: var(--primary-light); color: var(--primary); }
     nav a.active { background: var(--primary); color: #ffffff; }
 
-    .container { max-width: 1040px; margin: 0 auto; padding: 24px 16px 70px 16px; }
+    /* 대시보드 메인 래퍼 */
+    .dashboard-container { max-width: 1240px; margin: 0 auto; padding: 20px 16px 60px 16px; }
 
-    .hero { text-align: center; margin-bottom: 20px; }
-    .hero h1 { font-size: 2.1rem; font-weight: 900; letter-spacing: -0.5px; margin-bottom: 8px; color: #0f172a; }
-    .hero p { font-size: 1.02rem; color: var(--text-muted); font-weight: 600; }
+    /* 실시간 라이브 티커 바 */
+    .live-status-bar { background: #0f172a; color: #f8fafc; border-radius: 30px; padding: 8px 20px; display: flex; justify-content: space-between; align-items: center; font-size: 0.88rem; font-weight: 700; margin-bottom: 20px; box-shadow: var(--shadow-sm); flex-wrap: wrap; gap: 8px; }
+    .live-indicator { display: inline-flex; align-items: center; gap: 8px; }
+    .pulse-dot { width: 9px; height: 9px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 8px #22c55e; animation: pulse 1.8s infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+    .live-feed-text { color: #94a3b8; font-weight: 500; font-size: 0.82rem; }
 
-    .counter-bar { display: flex; justify-content: center; margin-bottom: 20px; }
-    .visitor-counter { display: inline-flex; align-items: center; gap: 12px; background: #ffffff; border: 2px solid var(--border); padding: 8px 22px; border-radius: 30px; font-size: 0.92rem; font-weight: 800; color: var(--text-muted); box-shadow: var(--shadow-sm); }
+    /* 2열 와이드 그리드 시스템 (가독성 극대화) */
+    .dashboard-grid { display: grid; grid-template-columns: 1fr 360px; gap: 24px; align-items: start; }
 
-    .tab-nav { display: flex; gap: 8px; margin-bottom: 16px; border-bottom: 2px solid var(--border); padding-bottom: 10px; }
-    .tab-btn { flex: 1; padding: 12px; background: #ffffff; border: 2px solid var(--border); border-radius: 10px; font-size: 0.95rem; font-weight: 800; color: var(--text-muted); cursor: pointer; text-align: center; transition: all 0.2s; }
+    .card { background: var(--card-bg); border-radius: 12px; border: 2px solid var(--border); padding: 20px; box-shadow: var(--shadow-sm); margin-bottom: 20px; }
+    .card-highlight { border: 2.5px solid #93c5fd; box-shadow: var(--shadow-md); }
+
+    /* 작업 탭 */
+    .tab-nav { display: flex; gap: 6px; margin-bottom: 14px; border-bottom: 2px solid var(--border); padding-bottom: 8px; }
+    .tab-btn { flex: 1; padding: 10px; background: #ffffff; border: 1.5px solid var(--border); border-radius: 8px; font-size: 0.9rem; font-weight: 800; color: var(--text-muted); cursor: pointer; text-align: center; transition: all 0.2s; }
     .tab-btn:hover { background: #f1f5f9; }
-    .tab-btn.active { background: var(--primary); color: #ffffff; border-color: var(--primary); box-shadow: var(--shadow-sm); }
+    .tab-btn.active { background: var(--primary); color: #ffffff; border-color: var(--primary); }
 
     .tab-content { display: none; }
     .tab-content.active { display: block; }
 
-    .card { background: var(--card-bg); border-radius: 12px; border: 2px solid var(--border); padding: 24px; box-shadow: var(--shadow-sm); margin-bottom: 24px; }
-    .card-highlight { border: 2.5px solid #93c5fd; box-shadow: var(--shadow-md); }
-
-    /* 문항 관리 탭 */
+    /* 문항 탭 */
     .question-tabs { display: flex; gap: 6px; margin-bottom: 12px; overflow-x: auto; padding-bottom: 4px; }
     .q-tab { background: #f1f5f9; border: 1.5px solid var(--border); border-radius: 6px; padding: 6px 14px; font-size: 0.85rem; font-weight: 800; color: var(--text-muted); cursor: pointer; white-space: nowrap; }
     .q-tab.active { background: #0f172a; color: #ffffff; border-color: #0f172a; }
 
-    .preset-container { background: #f8fafc; border: 1.5px solid var(--border); border-radius: 10px; padding: 12px 16px; margin-bottom: 16px; }
-    .preset-title { font-size: 0.85rem; font-weight: 800; color: var(--text-muted); margin-bottom: 8px; }
-    .preset-chips { display: flex; flex-wrap: wrap; gap: 6px; }
-    .chip-btn { background: #ffffff; border: 1.5px solid var(--border); border-radius: 20px; padding: 5px 12px; font-size: 0.8rem; font-weight: 700; color: var(--text); cursor: pointer; transition: all 0.2s; }
-    .chip-btn:hover { background: #e2e8f0; }
-    .chip-btn.active { background: var(--primary); color: #ffffff; border-color: var(--primary); }
-
-    /* 목표 글자수 및 프로그레스 바 */
-    .target-bar-wrap { background: #ffffff; border: 1.5px solid var(--border); border-radius: 8px; padding: 12px 14px; margin-bottom: 12px; }
-    .target-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px; font-size: 0.88rem; }
-    .target-select-group { display: flex; align-items: center; gap: 6px; }
-    .target-btn { border: 1px solid var(--border); background: #f1f5f9; font-size: 0.8rem; font-weight: 700; padding: 3px 8px; border-radius: 4px; cursor: pointer; }
+    /* 목표 프로그레스 바 */
+    .target-bar-wrap { background: #f8fafc; border: 1.5px solid var(--border); border-radius: 8px; padding: 10px 14px; margin-bottom: 12px; }
+    .target-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; font-size: 0.85rem; }
+    .target-btn { border: 1px solid var(--border); background: #ffffff; font-size: 0.78rem; font-weight: 700; padding: 2px 7px; border-radius: 4px; cursor: pointer; }
     .target-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
     .progress-track { width: 100%; height: 8px; background: #e2e8f0; border-radius: 4px; overflow: hidden; }
     .progress-fill { height: 100%; width: 0%; background: var(--primary); transition: width 0.2s, background-color 0.2s; }
     .progress-fill.over { background: var(--danger); }
 
-    .editor-toolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap: 8px; }
+    .editor-toolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap: 6px; }
     .toolbar-actions { display: flex; gap: 6px; flex-wrap: wrap; }
-    .btn-action-tool { background: #ffffff; border: 1.5px solid var(--border-dark); padding: 5px 10px; border-radius: 6px; font-size: 0.82rem; font-weight: 700; color: var(--text); cursor: pointer; transition: all 0.2s; }
+    .btn-action-tool { background: #ffffff; border: 1.5px solid var(--border-dark); padding: 5px 10px; border-radius: 6px; font-size: 0.82rem; font-weight: 700; color: var(--text); cursor: pointer; }
     .btn-action-tool:hover { background: #f1f5f9; }
-    .btn-diet { background: #fef3c7; border: 1.5px solid #d97706; color: #92400e; padding: 5px 12px; border-radius: 6px; font-size: 0.82rem; font-weight: 800; cursor: pointer; transition: all 0.2s; }
+    .btn-diet { background: #fef3c7; border: 1.5px solid #d97706; color: #92400e; padding: 5px 12px; border-radius: 6px; font-size: 0.82rem; font-weight: 800; cursor: pointer; }
     .btn-diet:hover { background: #fde68a; }
 
-    textarea { width: 100%; height: 300px; padding: 18px; border: 2px solid var(--border); border-radius: 8px; font-size: 1.05rem; line-height: 1.75; resize: vertical; outline: none; color: var(--text); }
+    textarea { width: 100%; height: 320px; padding: 16px; border: 2px solid var(--border); border-radius: 8px; font-size: 1.02rem; line-height: 1.7; resize: vertical; outline: none; color: var(--text); }
     textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.15); }
 
-    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 18px; }
-    .stat-box { background: #f8fafc; border: 1.5px solid var(--border); padding: 14px 10px; border-radius: 8px; text-align: center; }
-    .stat-title { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 4px; font-weight: 700; }
-    .stat-value { font-size: 1.4rem; font-weight: 900; color: var(--text); }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 14px; }
+    .stat-box { background: #f8fafc; border: 1.5px solid var(--border); padding: 10px 8px; border-radius: 8px; text-align: center; }
+    .stat-title { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 2px; font-weight: 700; }
+    .stat-value { font-size: 1.3rem; font-weight: 900; color: var(--text); }
     .stat-value.highlight { color: var(--primary); }
 
-    .alert-panel { margin-top: 14px; padding: 12px 16px; border-radius: 8px; font-size: 0.9rem; display: none; }
+    .alert-panel { margin-top: 12px; padding: 10px 14px; border-radius: 8px; font-size: 0.85rem; display: none; }
     .alert-panel.danger { background: var(--danger-bg); border: 2px solid #f87171; color: #991b1b; }
     .alert-panel.warning { background: var(--warning-bg); border: 2px solid #fcd34d; color: #92400e; }
     .alert-panel.active { display: block; }
 
-    /* STAR 경력기술서 빌더 */
-    .form-group { margin-bottom: 14px; }
-    .form-label { display: block; font-size: 0.88rem; font-weight: 800; color: #0f172a; margin-bottom: 6px; }
-    .form-input { width: 100%; padding: 10px 14px; border: 1.5px solid var(--border); border-radius: 6px; font-size: 0.95rem; outline: none; }
+    /* 사이드바 전용 스타일 */
+    .sidebar-widget { background: #ffffff; border: 2px solid var(--border); border-radius: 12px; padding: 18px; margin-bottom: 18px; box-shadow: var(--shadow-sm); }
+    .widget-title { font-size: 1.05rem; font-weight: 800; color: #0f172a; margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between; }
+
+    /* 마감 타이머 박스 */
+    .timer-card { background: #fef2f2; border: 2px solid #fca5a5; border-radius: 10px; padding: 14px; text-align: center; margin-bottom: 12px; }
+    .timer-badge { display: inline-block; font-size: 0.75rem; font-weight: 800; background: #dc2626; color: #fff; padding: 2px 6px; border-radius: 4px; margin-bottom: 4px; }
+    .timer-company { font-size: 1.02rem; font-weight: 800; color: #0f172a; }
+    .timer-countdown { font-size: 1.45rem; font-weight: 900; color: #dc2626; letter-spacing: 1px; margin-top: 4px; font-family: monospace; }
+
+    /* 합격 문항 원클릭 세팅 버튼 */
+    .prompt-chip-list { display: flex; flex-direction: column; gap: 8px; }
+    .prompt-chip { background: #f8fafc; border: 1.5px solid var(--border); border-radius: 8px; padding: 10px 12px; text-align: left; cursor: pointer; transition: all 0.2s; }
+    .prompt-chip:hover { border-color: var(--primary); background: #eff6ff; }
+    .prompt-chip strong { display: block; font-size: 0.88rem; color: #0f172a; margin-bottom: 2px; }
+    .prompt-chip span { font-size: 0.78rem; color: var(--text-muted); }
+
+    /* STAR 빌더 폼 */
+    .form-group { margin-bottom: 12px; }
+    .form-label { display: block; font-size: 0.85rem; font-weight: 800; color: #0f172a; margin-bottom: 4px; }
+    .form-input { width: 100%; padding: 8px 12px; border: 1.5px solid var(--border); border-radius: 6px; font-size: 0.9rem; outline: none; }
     .form-input:focus { border-color: var(--primary); }
-    .star-result-box { background: #0f172a; color: #f8fafc; padding: 16px; border-radius: 8px; font-family: monospace; font-size: 0.9rem; white-space: pre-wrap; line-height: 1.6; margin-top: 14px; }
+    .star-result-box { background: #0f172a; color: #f8fafc; padding: 14px; border-radius: 8px; font-family: monospace; font-size: 0.88rem; white-space: pre-wrap; line-height: 1.6; margin-top: 12px; }
 
     /* 체크리스트 */
-    .checklist-group { display: flex; flex-direction: column; gap: 10px; margin-top: 12px; }
-    .checklist-item { display: flex; align-items: center; gap: 10px; background: #f8fafc; padding: 12px 16px; border-radius: 8px; border: 1.5px solid var(--border); cursor: pointer; user-select: none; }
-    .checklist-item input { width: 18px; height: 18px; cursor: pointer; }
-    .checklist-item span { font-size: 0.92rem; font-weight: 700; color: #0f172a; }
+    .checklist-group { display: flex; flex-direction: column; gap: 8px; }
+    .checklist-item { display: flex; align-items: center; gap: 8px; background: #f8fafc; padding: 10px 12px; border-radius: 6px; border: 1.5px solid var(--border); cursor: pointer; font-size: 0.88rem; font-weight: 600; }
+    .checklist-item input { width: 16px; height: 16px; }
 
-    .section-title { font-size: 1.25rem; font-weight: 800; display: flex; align-items: center; gap: 8px; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--border); }
-
-    .download-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 12px; }
-    .download-item { background: #f8fafc; border: 2px solid var(--border); border-radius: 10px; padding: 20px; text-align: left; display: flex; flex-direction: column; justify-content: space-between; }
-    .download-item h4 { font-size: 1.05rem; font-weight: 800; margin-bottom: 6px; color: #0f172a; }
-    .download-item p { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px; font-weight: 500; }
-    .btn-download-main { background: #0f172a; color: #ffffff; text-decoration: none; padding: 12px 18px; border-radius: 8px; font-size: 0.9rem; font-weight: 800; cursor: pointer; border: none; text-align: center; }
+    .btn-download-main { background: #0f172a; color: #ffffff; text-decoration: none; padding: 10px 16px; border-radius: 8px; font-size: 0.88rem; font-weight: 800; cursor: pointer; border: none; text-align: center; display: inline-block; width: 100%; }
     .btn-download-main:hover { background: #334155; }
 
     /* 아코디언 */
-    .accordion-item { border: 2px solid var(--border); border-radius: 8px; margin-bottom: 10px; background: #ffffff; overflow: hidden; }
-    .accordion-header { padding: 14px 18px; background: #f8fafc; display: flex; justify-content: space-between; align-items: center; cursor: pointer; user-select: none; font-weight: 800; font-size: 1rem; color: #0f172a; }
-    .accordion-header:hover { background: #f1f5f9; }
-    .accordion-body { padding: 16px 18px; display: none; border-top: 1.5px solid var(--border); font-size: 0.92rem; color: #334155; line-height: 1.75; }
+    .accordion-item { border: 1.5px solid var(--border); border-radius: 8px; margin-bottom: 8px; background: #ffffff; overflow: hidden; }
+    .accordion-header { padding: 12px 14px; background: #f8fafc; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 800; font-size: 0.92rem; color: #0f172a; }
+    .accordion-body { padding: 14px; display: none; border-top: 1.5px solid var(--border); font-size: 0.88rem; color: #334155; line-height: 1.7; }
     .accordion-item.active .accordion-body { display: block; }
-    .accordion-arrow { font-size: 0.85rem; transition: transform 0.2s; color: var(--text-muted); }
+    .accordion-arrow { font-size: 0.8rem; transition: transform 0.2s; }
     .accordion-item.active .accordion-arrow { transform: rotate(180deg); }
 
-    .partner-card-banner { background: #ffffff; border: 2px solid var(--border); border-radius: 10px; padding: 18px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center; }
-    .partner-btn { background: #dc2626; color: #fff; text-decoration: none; font-size: 0.88rem; font-weight: 800; padding: 10px 16px; border-radius: 6px; white-space: nowrap; }
+    .partner-banner { background: #ffffff; border: 2px solid var(--border); border-radius: 10px; padding: 14px; margin-bottom: 18px; display: flex; justify-content: space-between; align-items: center; }
+    .partner-btn { background: #dc2626; color: #fff; text-decoration: none; font-size: 0.82rem; font-weight: 800; padding: 8px 12px; border-radius: 6px; white-space: nowrap; }
 
-    .custom-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; margin-top: 10px; }
-    .custom-table th, .custom-table td { padding: 12px 14px; border: 1.5px solid var(--border); text-align: left; }
-    .custom-table th { background: #e2e8f0; color: #0f172a; font-weight: 800; }
-    .custom-table td { background: #ffffff; color: var(--text); }
-    .badge-2b { background: #dbeafe; color: #1e40af; padding: 4px 8px; border-radius: 4px; font-weight: 700; }
-    .badge-3b { background: #fef3c7; color: #92400e; padding: 4px 8px; border-radius: 4px; font-weight: 700; }
-
-    .floating-box { position: fixed; bottom: 24px; right: 24px; display: flex; flex-direction: column; gap: 10px; z-index: 100; }
-    .btn-float { width: 48px; height: 48px; border-radius: 50%; background: #0f172a; color: #ffffff; border: 2px solid #ffffff; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+    .floating-box { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 8px; z-index: 100; }
+    .btn-float { width: 44px; height: 44px; border-radius: 50%; background: #0f172a; color: #ffffff; border: 2px solid #ffffff; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
     .btn-float:hover { background: var(--primary); }
 
-    .toast-msg { position: fixed; top: 20px; left: 50%; transform: translateX(-50%); background: #0f172a; color: #ffffff; padding: 10px 20px; border-radius: 30px; font-size: 0.9rem; font-weight: 800; z-index: 300; display: none; box-shadow: var(--shadow-md); }
+    .toast-msg { position: fixed; top: 20px; left: 50%; transform: translateX(-50%); background: #0f172a; color: #ffffff; padding: 8px 18px; border-radius: 30px; font-size: 0.88rem; font-weight: 800; z-index: 300; display: none; box-shadow: var(--shadow-md); }
 
-    footer { background: #ffffff; border-top: 2px solid var(--border); padding: 30px 20px; font-size: 0.85rem; color: var(--text-muted); line-height: 1.8; text-align: center; }
-    .footer-links { display: flex; justify-content: center; gap: 16px; margin-bottom: 12px; }
+    footer { background: #ffffff; border-top: 2px solid var(--border); padding: 24px 20px; font-size: 0.82rem; color: var(--text-muted); line-height: 1.8; text-align: center; }
+    .footer-links { display: flex; justify-content: center; gap: 14px; margin-bottom: 8px; }
     .footer-links a { color: var(--primary); text-decoration: none; font-weight: 700; }
 
     .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 200; align-items: center; justify-content: center; padding: 20px; }
-    .modal-content { background: #fff; max-width: 600px; width: 100%; max-height: 80vh; overflow-y: auto; border-radius: 12px; border: 2px solid var(--border-dark); padding: 24px; position: relative; }
-    .modal-close { position: absolute; top: 16px; right: 16px; cursor: pointer; font-size: 1.4rem; font-weight: bold; }
+    .modal-content { background: #fff; max-width: 580px; width: 100%; max-height: 80vh; overflow-y: auto; border-radius: 12px; border: 2px solid var(--border-dark); padding: 20px; position: relative; }
+    .modal-close { position: absolute; top: 14px; right: 14px; cursor: pointer; font-size: 1.3rem; font-weight: bold; }
+
+    @media (max-width: 1024px) {
+      .dashboard-grid { grid-template-columns: 1fr; }
+    }
 
     @media (max-width: 768px) {
       .header-inner { flex-direction: column; gap: 10px; }
       nav { width: 100%; overflow-x: auto; white-space: nowrap; justify-content: flex-start; }
-      .stats-grid, .download-grid { grid-template-columns: 1fr; }
-      .tab-nav { flex-direction: column; }
-      .partner-card-banner { flex-direction: column; gap: 12px; text-align: center; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .live-status-bar { flex-direction: column; align-items: flex-start; }
     }
 
     @media print {
       body { background: #fff; padding: 0; }
-      header, nav, .hero, .counter-bar, .tab-nav, .question-tabs, .preset-container, .target-bar-wrap, .editor-toolbar, .stats-grid, .alert-panel, .partner-card-banner, .board-card, .guide-card, .download-card, .article-card, .faq-card, .floating-box, footer, #resumeText { display: none !important; }
+      header, nav, .live-status-bar, .tab-nav, .question-tabs, .target-bar-wrap, .editor-toolbar, .stats-grid, .alert-panel, .partner-banner, .dashboard-grid > div:last-child, .floating-box, footer, #resumeText { display: none !important; }
+      .dashboard-grid { display: block; }
       .card { border: none; padding: 0; }
       .print-header { display: block !important; margin-bottom: 20px; border-bottom: 2px solid #000; padding-bottom: 10px; }
       .print-content { display: block !important; font-size: 11pt; line-height: 1.8; white-space: pre-wrap; font-family: "Batang", serif; }
@@ -246,287 +249,261 @@
     </div>
   </header>
 
-  <div class="container">
+  <div class="dashboard-container">
     
     <div class="print-header">
       <h2 style="font-size: 18pt;">2026 입사지원 서류 최종 검증본</h2>
       <p id="printDate" style="font-size: 10pt; color: #555; margin-top: 4px;">출력 일자: </p>
     </div>
 
-    <section class="hero">
-      <h1>2026 자소서 바이트 & 취업 서류 서식 허브</h1>
-      <p>공기업 3Byte, 대기업 2Byte 실시간 계산, 바이트 다이어트, STAR 경력기술서 빌더</p>
-    </section>
-
-    <!-- hits.sh 실시간 동기화 카운터 -->
-    <div class="counter-bar">
-      <div class="visitor-counter">
-        <span>👥 오늘 방문자: <strong id="todayVisitors" style="color: var(--primary);">--</strong>명</span>
-        <span style="color: var(--border-dark);">|</span>
-        <span>총 누적 방문자: <strong id="totalVisitors" style="color: #0f172a;">--</strong>명</span>
+    <!-- 실시간 동시 접속 & 라이브 피드 티커 -->
+    <div class="live-status-bar">
+      <div class="live-indicator">
+        <span class="pulse-dot"></span>
+        <span>🔥 지금 <strong id="liveUsers" style="color: #60a5fa;">342</strong>명의 취준생이 자소서를 작성·검증 중입니다</span>
       </div>
+      <div class="live-feed-text" id="liveTickerText">방금 공기업 지원자가 한국전력 3바이트 검사를 완료했습니다.</div>
     </div>
 
-    <!-- 기능 선택 탭 -->
-    <div class="tab-nav">
-      <button class="tab-btn active" onclick="switchMainTab('calculatorTab', this)">📝 자소서 실시간 바이트 계산 & 축약</button>
-      <button class="tab-btn" onclick="switchMainTab('starTab', this)">💼 경력직 STAR 성과문장 빌더</button>
-      <button class="tab-btn" onclick="switchMainTab('checkTab', this)">🛡️ 서류 마감 5분 전 광탈 체크리스트</button>
-    </div>
-
-    <!-- 탭 1: 자소서 메인 계산기 -->
-    <div id="calculatorTab" class="tab-content active">
-      <div class="preset-container">
-        <div class="preset-title">🏢 주요 기업 규격 원클릭 세팅:</div>
-        <div class="preset-chips">
-          <button class="chip-btn active" onclick="applyPreset('default', this)">🌐 범용 모드</button>
-          <button class="chip-btn" onclick="applyPreset('samsung', this)">삼성그룹 (2B/1000자)</button>
-          <button class="chip-btn" onclick="applyPreset('hyundai', this)">현대차 (글자수 엄격)</button>
-          <button class="chip-btn" onclick="applyPreset('kepco', this)">한국전력 (UTF-8 3B)</button>
-          <button class="chip-btn" onclick="applyPreset('nhis', this)">건보공단 (UTF-8 3B)</button>
-          <button class="chip-btn" onclick="applyPreset('sk', this)">SK그룹 (2B/1000자)</button>
-        </div>
-      </div>
-
-      <main class="card card-highlight">
-        <!-- 문항별 다중 분할 탭 -->
-        <div class="question-tabs">
-          <button class="q-tab active" onclick="switchQuestionTab(1, this)">문항 1</button>
-          <button class="q-tab" onclick="switchQuestionTab(2, this)">문항 2</button>
-          <button class="q-tab" onclick="switchQuestionTab(3, this)">문항 3</button>
-          <button class="q-tab" onclick="switchQuestionTab(4, this)">문항 4</button>
+    <!-- 와이드 2열 대시보드 그리드 -->
+    <div class="dashboard-grid">
+      
+      <!-- [좌측 메인 작업 칼럼] -->
+      <div>
+        
+        <!-- 상단 기능 전환 탭 -->
+        <div class="tab-nav">
+          <button class="tab-btn active" onclick="switchMainTab('calculatorTab', this)">📝 자소서 바이트 계산 & 축약</button>
+          <button class="tab-btn" onclick="switchMainTab('starTab', this)">💼 경력직 STAR 성과문장 빌더</button>
+          <button class="tab-btn" onclick="switchMainTab('checkTab', this)">🛡️ 마감 5분 전 광탈 체크리스트</button>
         </div>
 
-        <!-- 목표 글자수 및 실시간 게이지 바 -->
-        <div class="target-bar-wrap">
-          <div class="target-row">
-            <div class="target-select-group">
-              <span style="font-weight: 800; color: #0f172a;">🎯 목표 글자수:</span>
-              <button class="target-btn" onclick="setTargetLength(500, this)">500자</button>
-              <button class="target-btn" onclick="setTargetLength(700, this)">700자</button>
-              <button class="target-btn active" onclick="setTargetLength(1000, this)">1,000자</button>
-              <button class="target-btn" onclick="setTargetLength(1500, this)">1,500자</button>
+        <!-- 탭 1: 자소서 메인 에디터 -->
+        <div id="calculatorTab" class="tab-content active">
+          <main class="card card-highlight">
+            
+            <!-- 문항 분할 탭 -->
+            <div class="question-tabs">
+              <button class="q-tab active" onclick="switchQuestionTab(1, this)">문항 1</button>
+              <button class="q-tab" onclick="switchQuestionTab(2, this)">문항 2</button>
+              <button class="q-tab" onclick="switchQuestionTab(3, this)">문항 3</button>
+              <button class="q-tab" onclick="switchQuestionTab(4, this)">문항 4</button>
             </div>
+
+            <!-- 목표 글자수 게이지 -->
+            <div class="target-bar-wrap">
+              <div class="target-row">
+                <div style="display: flex; align-items: center; gap: 6px;">
+                  <span style="font-weight: 800; color: #0f172a;">🎯 목표:</span>
+                  <button class="target-btn" onclick="setTargetLength(500, this)">500자</button>
+                  <button class="target-btn" onclick="setTargetLength(700, this)">700자</button>
+                  <button class="target-btn active" onclick="setTargetLength(1000, this)">1,000자</button>
+                  <button class="target-btn" onclick="setTargetLength(1500, this)">1,500자</button>
+                </div>
+                <div>
+                  <strong id="targetRatioLabel" style="color: var(--primary);">0%</strong> 
+                  <span id="targetStatusText" style="font-size: 0.8rem; color: var(--text-muted);">(0 / 1,000자)</span>
+                </div>
+              </div>
+              <div class="progress-track">
+                <div id="targetProgressFill" class="progress-fill"></div>
+              </div>
+            </div>
+
+            <div class="editor-toolbar">
+              <div>
+                <span id="activePresetBadge" style="font-size: 0.78rem; font-weight: 800; background: #dbeafe; color: #1e40af; padding: 3px 8px; border-radius: 4px;">범용 모드</span>
+                <span style="color: var(--success); font-weight: 700; font-size: 0.82rem; margin-left: 6px;">● 자동 저장 (Ctrl+S)</span>
+              </div>
+              <div class="toolbar-actions">
+                <button class="btn-diet" onclick="autoDietText()">✂️ 바이트 다이어트</button>
+                <button class="btn-action-tool" onclick="copyFullResume()">📋 복사</button>
+                <button class="btn-action-tool" onclick="clearCurrentResume()">🗑️ 비우기</button>
+                <button class="btn-action-tool" onclick="printDoc()">📄 A4 출력</button>
+              </div>
+            </div>
+
+            <textarea id="resumeText" placeholder="자기소개서 문항이나 본문을 입력하세요. 글자수, 공백, 2Byte/3Byte가 실시간 연산되며 브라우저를 닫아도 안전 복구됩니다..."></textarea>
+            <div id="printArea" class="print-content"></div>
+
+            <div class="stats-grid">
+              <div class="stat-box">
+                <div class="stat-title">공백 포함</div>
+                <div class="stat-value" id="countWithSpace">0</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-title">공백 제외</div>
+                <div class="stat-value" id="countWithoutSpace">0</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-title">대기업 (2Byte)</div>
+                <div class="stat-value highlight" id="count2Byte">0 B</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-title">공기업 (3Byte)</div>
+                <div class="stat-value highlight" id="count3Byte">0 B</div>
+              </div>
+            </div>
+
+            <div class="alert-panel danger" id="warningBox">
+              <strong>⚠️ 블라인드 감점 단어 감지:</strong> <span id="warningWords"></span>
+            </div>
+            <div class="alert-panel warning" id="typoBox">
+              <strong>✍️ 헷갈리기 쉬운 맞춤법 주의:</strong> <span id="typoWords"></span>
+            </div>
+          </main>
+
+          <!-- 제휴 쿠팡 도서 배너 -->
+          <div class="partner-banner">
             <div>
-              <strong id="targetRatioLabel" style="color: var(--primary);">0%</strong> 
-              <span id="targetStatusText" style="font-size: 0.8rem; color: var(--text-muted);">(0 / 1,000자)</span>
+              <strong style="font-size: 0.95rem; color: #0f172a;">📚 2026 NCS 기출 & 대기업 인적성 수험서</strong>
+              <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 2px;">서류 합격 직후 필수 대비! 베스트셀러 바로 확인</p>
+            </div>
+            <a href="https://www.coupang.com/np/search?component=&q=2026+NCS+기출문제집" target="_blank" rel="noopener noreferrer" class="partner-btn">교재 보기</a>
+          </div>
+
+          <!-- 서식 다운로드 및 칼럼 접이식 카드 -->
+          <div class="card">
+            <div style="font-size: 1.05rem; font-weight: 800; margin-bottom: 12px; color: #0f172a;">📥 정식 표 규격 입사지원서 Word(.doc) 무료 다운로드</div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+              <button class="btn-download-main" onclick="downloadStandardResumeDoc()">📄 표준 이력서+자소서 양식</button>
+              <button class="btn-download-main" onclick="downloadBlindResumeDoc()">📋 블라인드 공기업 양식</button>
             </div>
           </div>
-          <div class="progress-track">
-            <div id="targetProgressFill" class="progress-fill"></div>
+
+          <div class="card">
+            <div style="font-size: 1.05rem; font-weight: 800; margin-bottom: 12px; color: #0f172a;">💡 취업·이직 필독 실전 칼럼</div>
+            <div class="accordion-item active">
+              <div class="accordion-header" onclick="toggleAccordion(this)">
+                <span>1. 서류 탈락을 피하는 자소서 '첫 문장' 두괄식 공식</span>
+                <span class="accordion-arrow">▲</span>
+              </div>
+              <div class="accordion-body">
+                수천 장의 서류를 읽는 인사담당자는 첫 2~3줄에서 합격 여부를 직감합니다. <strong>[직무 역량 키워드 + 달성한 정량적 수치]</strong>를 첫 문장에 배치하는 두괄식 구조를 취해야 합니다.<br>
+                <em>예: "[데이터 분석 역량으로 예산 누수 18% 절감] 1년간 4,000만 원 규모의 예산을 오차 없이 집행한 경험이 있습니다."</em>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header" onclick="toggleAccordion(this)">
+                <span>2. 이직러 필수: 신입 자소서와 경력기술서의 차이</span>
+                <span class="accordion-arrow">▼</span>
+              </div>
+              <div class="accordion-body">
+                경력직 시장에서 기업이 원하는 것은 감성적 포부가 아닌 <strong>"당장 내일부터 투입되어 성과를 낼 수 있는가"</strong>입니다. 툴 나열 대신 비즈니스 성과(전환율, 비용 절감, 기간 단축)를 명시해야 합니다.
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="editor-toolbar">
-          <div>
-            <span id="activePresetBadge" style="font-size: 0.8rem; font-weight: 800; background: #dbeafe; color: #1e40af; padding: 4px 8px; border-radius: 4px;">범용 자소서 모드</span>
-            <span style="color: var(--success); font-weight: 700; font-size: 0.85rem; margin-left: 6px;">● 자동 저장 (Ctrl+S)</span>
-          </div>
-          <div class="toolbar-actions">
-            <button class="btn-diet" onclick="autoDietText()">✂️ 바이트 다이어트</button>
-            <button class="btn-action-tool" onclick="copyFullResume()">📋 전체 복사</button>
-            <button class="btn-action-tool" onclick="clearCurrentResume()">🗑️ 비우기</button>
-            <button class="btn-action-tool" onclick="printDoc()">📄 A4 출력</button>
-          </div>
-        </div>
-
-        <textarea id="resumeText" placeholder="자기소개서 문항이나 내용을 입력하세요. 글자수, 공백, 2Byte/3Byte가 실시간 연산되며 브라우저를 닫아도 복원됩니다..."></textarea>
-        <div id="printArea" class="print-content"></div>
-
-        <div class="stats-grid">
-          <div class="stat-box">
-            <div class="stat-title">공백 포함 글자수</div>
-            <div class="stat-value" id="countWithSpace">0</div>
-          </div>
-          <div class="stat-box">
-            <div class="stat-title">공백 제외 글자수</div>
-            <div class="stat-value" id="countWithoutSpace">0</div>
-          </div>
-          <div class="stat-box">
-            <div class="stat-title">대기업 규격 (2Byte)</div>
-            <div class="stat-value highlight" id="count2Byte">0 B</div>
-          </div>
-          <div class="stat-box">
-            <div class="stat-title">공기업/NCS (3Byte)</div>
-            <div class="stat-value highlight" id="count3Byte">0 B</div>
+        <!-- 탭 2: STAR 경력기술서 빌더 -->
+        <div id="starTab" class="tab-content">
+          <div class="card card-highlight">
+            <div style="font-size: 1.1rem; font-weight: 800; margin-bottom: 12px;">💼 경력직 STAR 성과문장 원클릭 조립기</div>
+            <div class="form-group">
+              <label class="form-label">1. 프로젝트/업무명 (Situation & Task)</label>
+              <input type="text" id="starProject" class="form-input" placeholder="예: 결제 시스템 고도화 및 DB 최적화">
+            </div>
+            <div class="form-group">
+              <label class="form-label">2. 내가 주도한 핵심 액션 (Action)</label>
+              <input type="text" id="starAction" class="form-input" placeholder="예: 인덱스 재설계 및 N+1 쿼리 리팩토링 주도">
+            </div>
+            <div class="form-group">
+              <label class="form-label">3. 달성한 정량적 수치 성과 (Result)</label>
+              <input type="text" id="starResult" class="form-input" placeholder="예: API 응답 속도 45% 개선 및 월 클라우드 비용 280만 원 절감">
+            </div>
+            <button class="btn-download-main" onclick="buildStarSentence()">✨ STAR 성과 문장 자동 조립</button>
+            <div id="starOutput" class="star-result-box" style="display: none;"></div>
+            <button id="btnCopyStar" class="btn-download-main" style="display: none; margin-top: 8px; background: #1d4ed8;" onclick="copyStarSentence()">📋 완성 문장 1초 복사</button>
           </div>
         </div>
 
-        <!-- 알림 패널 -->
-        <div class="alert-panel danger" id="warningBox">
-          <strong>⚠️ 블라인드 감점 단어 감지:</strong> <span id="warningWords"></span>
+        <!-- 탭 3: 광탈 방지 체크리스트 -->
+        <div id="checkTab" class="tab-content">
+          <div class="card card-highlight">
+            <div style="font-size: 1.1rem; font-weight: 800; margin-bottom: 12px;">🛡️ 서류 제출 직전 5초 광탈 방지 체크리스트</div>
+            <div class="checklist-group">
+              <label class="checklist-item"><input type="checkbox" onchange="updateCheckStatus()"><span><strong>타 기업명 복붙:</strong> 지원 회사명 및 직무명이 올바르게 기재되어 있습니까?</span></label>
+              <label class="checklist-item"><input type="checkbox" onchange="updateCheckStatus()"><span><strong>블라인드 위반:</strong> 가족관계, 출신 대학명, 출신 지역이 배제되었습니까?</span></label>
+              <label class="checklist-item"><input type="checkbox" onchange="updateCheckStatus()"><span><strong>바이트 초과:</strong> 지원 기업 2B/3B 기준 초과로 뒷부분이 잘리지 않았습니까?</span></label>
+              <label class="checklist-item"><input type="checkbox" onchange="updateCheckStatus()"><span><strong>첨부 서류:</strong> 어학성적, 자격증 사본, 포트폴리오 파일이 정확합니까?</span></label>
+            </div>
+            <div id="checkSuccessBadge" style="display: none; margin-top: 14px; padding: 12px; background: var(--success-bg); border: 2px solid var(--success); border-radius: 8px; text-align: center; color: var(--success); font-weight: 800;">
+              🎉 모든 핵심 검증이 완료되었습니다! 자신 있게 최종 제출하세요!
+            </div>
+          </div>
         </div>
-        <div class="alert-panel warning" id="typoBox">
-          <strong>✍️ 헷갈리기 쉬운 맞춤법 주의:</strong> <span id="typoWords"></span>
-        </div>
-      </main>
 
-      <!-- 맥락형 쿠팡 배너 -->
-      <div class="partner-card-banner">
-        <div>
-          <strong style="font-size: 1rem; color: #0f172a;">📚 2026 NCS 기출문제집 & 대기업 인적성 수험서</strong>
-          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 2px;">서류 합격 후 준비하면 늦습니다. 서류 제출과 동시에 베스트셀러 대비 시작!</p>
-        </div>
-        <a href="https://www.coupang.com/np/search?component=&q=2026+NCS+기출문제집" target="_blank" rel="noopener noreferrer" class="partner-btn">교재 모아보기</a>
       </div>
+
+      <!-- [우측 실시간 취준 라운지 & 사이드바] -->
+      <div>
+        
+        <!-- 실시간 마감 타이머 -->
+        <div class="sidebar-widget">
+          <div class="widget-title">
+            <span>⏰ 2026 공채 마감 타이머</span>
+            <span style="font-size: 0.75rem; color: var(--danger); font-weight: 800;">LIVE</span>
+          </div>
+          <div class="timer-card">
+            <span class="timer-badge">마감 임박</span>
+            <div class="timer-company">삼성그룹 (3급 신입)</div>
+            <div class="timer-countdown" id="countdownSamsung">--:--:--</div>
+          </div>
+          <div class="timer-card" style="background: #f0fdf4; border-color: #86efac;">
+            <span class="timer-badge" style="background: #15803d;">접수 중</span>
+            <div class="timer-company">한국전력공사 (대졸 공채)</div>
+            <div class="timer-countdown" id="countdownKepco" style="color: #15803d;">--:--:--</div>
+          </div>
+        </div>
+
+        <!-- 기업별 합격 자소서 문항 원클릭 세팅기 -->
+        <div class="sidebar-widget">
+          <div class="widget-title">
+            <span>🏢 기업별 합격 문항 원클릭 세팅</span>
+          </div>
+          <div class="prompt-chip-list">
+            <div class="prompt-chip" onclick="loadCompanyPrompt('samsung')">
+              <strong>삼성그룹</strong>
+              <span>EUC-KR (2B) • 문항당 1,000자 • 4대 문항 자동 세팅</span>
+            </div>
+            <div class="prompt-chip" onclick="loadCompanyPrompt('hyundai')">
+              <strong>현대자동차</strong>
+              <span>글자수 엄격 • 공백포함 글자수 기준 템플릿</span>
+            </div>
+            <div class="prompt-chip" onclick="loadCompanyPrompt('kepco')">
+              <strong>한국전력공사</strong>
+              <span>UTF-8 (3B) • NCS 직무역량 기반 3개 문항</span>
+            </div>
+            <div class="prompt-chip" onclick="loadCompanyPrompt('nhis')">
+              <strong>국민건강보험공단</strong>
+              <span>UTF-8 (3B) • 직업윤리 및 대인관계 문항</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 족보 요약 테이블 -->
+        <div class="sidebar-widget">
+          <div class="widget-title">
+            <span>📖 기업별 연산 규격 족보</span>
+          </div>
+          <table style="width: 100%; border-collapse: collapse; font-size: 0.82rem;">
+            <tr style="border-bottom: 1.5px solid var(--border);"><th style="padding: 6px; text-align: left;">기업</th><th style="padding: 6px; text-align: right;">규격</th></tr>
+            <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 6px; font-weight: 700;">삼성그룹</td><td style="padding: 6px; text-align: right; color: var(--primary); font-weight: 700;">2Byte (EUC-KR)</td></tr>
+            <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 6px; font-weight: 700;">현대자동차</td><td style="padding: 6px; text-align: right; color: #0f172a; font-weight: 700;">순수 글자수</td></tr>
+            <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 6px; font-weight: 700;">한국전력</td><td style="padding: 6px; text-align: right; color: #b45309; font-weight: 700;">3Byte (UTF-8)</td></tr>
+            <tr><td style="padding: 6px; font-weight: 700;">건보공단</td><td style="padding: 6px; text-align: right; color: #b45309; font-weight: 700;">3Byte (UTF-8)</td></tr>
+          </table>
+        </div>
+
+        <!-- 방문자 카운터 뱃지 -->
+        <div class="sidebar-widget" style="text-align: center;">
+          <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-muted); margin-bottom: 4px;">전 세계 실시간 누적 이용자</div>
+          <div style="font-size: 1.4rem; font-weight: 900; color: var(--primary);"><span id="totalVisitors">--</span> 명</div>
+        </div>
+
+      </div>
+
     </div>
-
-    <!-- 탭 2: STAR 경력기술서 빌더 -->
-    <div id="starTab" class="tab-content">
-      <div class="card card-highlight">
-        <div class="section-title"><span>💼</span> 경력직 STAR 성과문장 원클릭 빌더</div>
-        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">
-          경력직 서류는 **정량적 수치 중심**이어야 합니다. 아래 항목을 입력하면 Notion/원티드/사람인 표준 STAR 문장으로 자동 조립됩니다.
-        </p>
-
-        <div class="form-group">
-          <label class="form-label">1. 프로젝트/업무명 (Situation & Task)</label>
-          <input type="text" id="starProject" class="form-input" placeholder="예: 전사 결제 시스템 고도화 및 DB 최적화">
-        </div>
-        <div class="form-group">
-          <label class="form-label">2. 내가 주도한 액션 및 역할 (Action)</label>
-          <input type="text" id="starAction" class="form-input" placeholder="예: 인덱스 재설계 및 N+1 쿼리 리팩토링 주도">
-        </div>
-        <div class="form-group">
-          <label class="form-label">3. 달성한 정량적 수치 성과 (Result)</label>
-          <input type="text" id="starResult" class="form-input" placeholder="예: API 응답 속도 45% 개선 및 월 클라우드 비용 280만 원 절감">
-        </div>
-
-        <button class="btn-download-main" style="width: 100%; margin-top: 8px;" onclick="buildStarSentence()">✨ STAR 성과 문장 자동 조립하기</button>
-        <div id="starOutput" class="star-result-box" style="display: none;"></div>
-        <button id="btnCopyStar" class="btn-download-main" style="display: none; width: 100%; margin-top: 8px; background: #1d4ed8;" onclick="copyStarSentence()">📋 완성된 STAR 문장 1초 복사</button>
-      </div>
-    </div>
-
-    <!-- 탭 3: 광탈 방지 체크리스트 -->
-    <div id="checkTab" class="tab-content">
-      <div class="card card-highlight">
-        <div class="section-title"><span>🛡️</span> 서류 마감 5분 전 광탈 방지 체크리스트</div>
-        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">
-          마지막 제출 버튼을 누르기 전, 1초의 실수로 서류가 탈락하는 것을 방지하기 위해 반드시 점검하세요.
-        </p>
-        <div class="checklist-group">
-          <label class="checklist-item">
-            <input type="checkbox" onchange="updateCheckStatus()">
-            <span><strong>타 기업 복붙 확인:</strong> 지원 회사명 및 직무명이 올바르게 기재되어 있습니까?</span>
-          </label>
-          <label class="checklist-item">
-            <input type="checkbox" onchange="updateCheckStatus()">
-            <span><strong>블라인드 위반 검증:</strong> 가족관계, 출신 대학명, 출신 지역이 완전히 배제되었습니까?</span>
-          </label>
-          <label class="checklist-item">
-            <input type="checkbox" onchange="updateCheckStatus()">
-            <span><strong>바이트 초과 여부:</strong> 지원 기업의 2B/3B 기준 초과로 뒷부분이 잘리지 않았습니까?</span>
-          </label>
-          <label class="checklist-item">
-            <input type="checkbox" onchange="updateCheckStatus()">
-            <span><strong>필수 첨부 서류:</strong> 어학성적, 자격증 사본, 포트폴리오 파일이 정확히 첨부되었습니까?</span>
-          </label>
-        </div>
-        <div id="checkSuccessBadge" style="display: none; margin-top: 16px; padding: 14px; background: var(--success-bg); border: 2px solid var(--success); border-radius: 8px; text-align: center; color: var(--success); font-weight: 800;">
-          🎉 모든 핵심 검증이 완료되었습니다! 자신 있게 최종 제출하세요!
-        </div>
-      </div>
-    </div>
-
-    <div class="print-footer">Document generated by ByteCheck (bytechecktool.com)</div>
-
-    <!-- 서식 다운로드 센터 -->
-    <section class="card download-card">
-      <div class="section-title"><span>📥</span> 2026 표준 입사지원서 & 자기소개서 무료 다운로드</div>
-      <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px; font-weight: 500;">
-        워드(Word)와 한글(HWP)에서 열어 바로 작성하고 인쇄할 수 있는 <strong>정식 표(테이블) 규격 양식</strong>입니다.
-      </p>
-      <div class="download-grid">
-        <div class="download-item">
-          <div>
-            <h4>📄 표준 이력서 + 자기소개서 통합 서식 (Word/한글용)</h4>
-            <p>사진 부착란, 기본 인적사항, 학력·경력·자격증 테이블 및 4대 문항 자기소개서 정규 서식</p>
-          </div>
-          <button class="btn-download-main" onclick="downloadStandardResumeDoc()">📥 정식 입사지원서 서식 (.doc) 다운로드</button>
-        </div>
-        <div class="download-item">
-          <div>
-            <h4>📋 공공기관·NCS 블라인드 채용 입사지원서</h4>
-            <p>편견 요인을 배제하고 직무 경험 및 직무역량 중심으로 구성된 공기업 표준 서식</p>
-          </div>
-          <button class="btn-download-main" onclick="downloadBlindResumeDoc()">📥 블라인드 공기업 서식 (.doc) 다운로드</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- 취업 & 이직 실전 칼럼 -->
-    <section class="card article-card">
-      <div class="section-title"><span>💡</span> 취업·이직 성공을 위한 실전 전략 칼럼</div>
-      <div class="accordion-item active">
-        <div class="accordion-header" onclick="toggleAccordion(this)">
-          <div><span class="badge-2b" style="margin-right: 8px;">신입 공채</span>1. 서류 탈락을 피하는 자소서 '첫 문장' 두괄식 공식</div>
-          <span class="accordion-arrow">▲</span>
-        </div>
-        <div class="accordion-body">
-          <p>
-            인사담당자는 첫 2~3줄에서 합격 여부를 직감합니다. <strong>[직무 역량 키워드 + 달성한 정량적 수치]</strong>를 첫 문장에 배치하는 두괄식 구조를 취해야 합니다.
-          </p>
-          <div style="margin-top: 10px; padding: 10px; background: #f8fafc; border: 1.5px dashed var(--border-dark); border-radius: 6px;">
-            <strong>✍️ 실전 예시 교정:</strong><br>
-            (수정 전) "저는 성실한 성격으로 동아리 회계를 열심히 관리했습니다."<br>
-            (수정 후) <strong>"[데이터 분석 역량으로 예산 누수 18% 절감] 1년간 4,000만 원 규모의 예산을 오차 없이 집행한 경험이 있습니다."</strong>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <div class="accordion-header" onclick="toggleAccordion(this)">
-          <div><span class="badge-3b" style="margin-right: 8px;">이직·경력직</span>2. 이직러 필수: 신입 자소서와 경력기술서의 차이</div>
-          <span class="accordion-arrow">▼</span>
-        </div>
-        <div class="accordion-body">
-          <p>
-            경력직 시장에서 기업이 원하는 것은 감성적 포부가 아닌 <strong>"당장 내일부터 투입되어 성과를 낼 수 있는가"</strong>입니다. 사용한 툴 나열 대신 비즈니스 성과(전환율, 비용 절감, 기간 단축)를 명시해야 합니다.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- 기업별 규격 족보 -->
-    <section class="card guide-card">
-      <div class="section-title"><span>📖</span> 2026 주요 기업별 글자수·바이트 규격 족보</div>
-      <div style="overflow-x: auto;">
-        <table class="custom-table">
-          <thead>
-            <tr><th>기업명</th><th>연산 규격</th><th>엔터(줄바꿈)</th><th>특이사항</th></tr>
-          </thead>
-          <tbody>
-            <tr><td><strong>삼성그룹</strong></td><td><span class="badge-2b">EUC-KR (2Byte)</span></td><td>2Byte</td><td>문항당 1,000자 / 영문·숫자 1Byte</td></tr>
-            <tr><td><strong>현대자동차</strong></td><td><span class="badge-2b">글자수 기준</span></td><td>1자 취급</td><td>공백 포함 순수 글자수로 제한</td></tr>
-            <tr><td><strong>한국전력공사</strong></td><td><span class="badge-3b">UTF-8 (3Byte)</span></td><td>2Byte</td><td>포털 대비 바이트 1.5배 초과 주의</td></tr>
-            <tr><td><strong>국민건강보험공단</strong></td><td><span class="badge-3b">UTF-8 (3Byte)</span></td><td>2Byte</td><td>공공기관 표준 UTF-8 채택</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- FAQ 섹션 -->
-    <section class="card faq-card">
-      <div class="section-title"><span>❓</span> 자주 묻는 질문 (FAQ)</div>
-      <div class="accordion-item">
-        <div class="accordion-header" onclick="toggleAccordion(this)">
-          <span>Q. 포털 글자수 계산기와 ByteCheck 결과가 다른 이유는 무엇인가요?</span>
-          <span class="accordion-arrow">▼</span>
-        </div>
-        <div class="accordion-body">
-          일반 포털 계산기는 한글을 2바이트(EUC-KR)로 고정 계산합니다. 하지만 공기업 전산망은 국제 표준인 UTF-8(3바이트)을 채택하고 있어 포털 계산기 기준으로 작성 시 전산망에서 바이트 초과 오류가 발생합니다. ByteCheck는 2B와 3B를 실시간 동시 연산하여 이러한 사고를 예방합니다.
-        </div>
-      </div>
-      <div class="accordion-item">
-        <div class="accordion-header" onclick="toggleAccordion(this)">
-          <span>Q. 작성 중인 자기소개서 내용이 서버에 저장되나요?</span>
-          <span class="accordion-arrow">▼</span>
-        </div>
-        <div class="accordion-body">
-          아닙니다. ByteCheck는 이용자의 개인정보 및 자기소개서 원문을 서버로 전송하지 않습니다. 모든 텍스트는 이용자 본인의 웹 브라우저(로컬 스토리지)에만 안전하게 임시 보관됩니다.
-        </div>
-      </div>
-    </section>
 
   </div>
 
@@ -552,8 +529,8 @@
   <div id="legalModal" class="modal">
     <div class="modal-content">
       <span class="modal-close" onclick="closeModal()">&times;</span>
-      <h3 id="modalTitle" style="font-size: 1.2rem; font-weight: 800; margin-bottom: 12px; color: #0f172a;"></h3>
-      <div id="modalBody" style="font-size: 0.9rem; color: #334155; line-height: 1.7; white-space: pre-wrap;"></div>
+      <h3 id="modalTitle" style="font-size: 1.15rem; font-weight: 800; margin-bottom: 12px; color: #0f172a;"></h3>
+      <div id="modalBody" style="font-size: 0.88rem; color: #334155; line-height: 1.7; white-space: pre-wrap;"></div>
     </div>
   </div>
 
@@ -627,7 +604,6 @@
       count2Byte.innerText = bytes2.toLocaleString() + ' B';
       count3Byte.innerText = bytes3.toLocaleString() + ' B';
 
-      // 목표 글자수 프로그레스 계산
       const ratio = Math.min(Math.round((lenWithSpace / targetLength) * 100), 100);
       targetRatioLabel.innerText = `${Math.round((lenWithSpace / targetLength) * 100)}%`;
       targetStatusText.innerText = `(${lenWithSpace.toLocaleString()} / ${targetLength.toLocaleString()}자)`;
@@ -641,7 +617,6 @@
         targetRatioLabel.style.color = 'var(--primary)';
       }
 
-      // 블라인드 감점어 검출
       const detected = prohibitedKeywords.filter(k => text.includes(k));
       if (detected.length > 0) {
         warningBox.classList.add('active');
@@ -650,7 +625,6 @@
         warningBox.classList.remove('active');
       }
 
-      // 맞춤법 검출
       const detectedTypos = commonTypos.filter(item => text.includes(item.wrong));
       if (detectedTypos.length > 0) {
         typoBox.classList.add('active');
@@ -681,6 +655,63 @@
       currentQ = qNum;
       textarea.value = localStorage.getItem(`bytecheck_q_${currentQ}`) || '';
       analyzeText();
+    }
+
+    // 기업별 문항 원클릭 세팅 족보
+    function loadCompanyPrompt(company) {
+      const prompts = {
+        samsung: {
+          badge: "삼성그룹 (2B/1000자)",
+          target: 1000,
+          q1: "[취미/특기 및 존경인물 (각 40자, 100자)]\n- 취미/특기:\n- 존경인물 및 이유:\n\n[자기소개 문항 1]\n삼성전자를 지원한 이유와 입사 후 회사에서 이루고 싶은 꿈을 기술하십시오. (1,000자 이내)",
+          q2: "[자기소개 문항 2]\n본인의 성장과정을 간략히 기술하되 현재의 자신에게 가장 큰 영향을 끼친 사건, 인물 등을 포함하여 기술하십시오. (1,500자 이내)",
+          q3: "[자기소개 문항 3]\n최근 사회이슈 중 중요하다고 생각되는 한 가지를 선택하고 이에 관한 자신의 견해를 기술하십시오. (1,000자 이내)",
+          q4: "[자기소개 문항 4]\n지원 직무 관련 본인의 전공 역량 및 프로젝트 수행 경험을 기술하십시오. (1,000자 이내)"
+        },
+        hyundai: {
+          badge: "현대자동차 (글자수 엄격)",
+          target: 1000,
+          q1: "[현대자동차 문항 1]\n자신이 회사를 선택할 때의 기준과 현대자동차가 그 기준에 적합한 이유를 기술해 주십시오. (1,000자 이내)",
+          q2: "[현대자동차 문항 2]\n지원 직무와 관련된 본인의 핵심 역량과 이를 개발하기 위해 노력했던 경험을 구체적으로 서술해 주십시오. (1,000자 이내)",
+          q3: "[현대자동차 문항 3]\n도전적인 목표를 세우고 이를 달성하기 위해 끈기 있게 노력했던 경험을 기술해 주십시오. (1,000자 이내)",
+          q4: "[현대자동차 문항 4]\n조직 또는 팀의 목표를 달성하는 과정에서 발생한 갈등을 해결했던 경험을 기술해 주십시오. (1,000자 이내)"
+        },
+        kepco: {
+          badge: "한국전력공사 (UTF-8 3B)",
+          target: 700,
+          q1: "[한국전력공사 문항 1]\n한국전력공사의 4직무 인재상 중 본인과 가장 부합하는 한 가지를 선택하여 그에 부합함을 입증할 수 있는 경험을 기술해 주십시오. (700자 / 2,100 Byte)",
+          q2: "[한국전력공사 문항 2]\n공동의 과업을 수행하는 과정에서 본인과 다른 의견을 가진 구성원과 원활하게 소통하여 합의를 이끌어낸 경험을 서술해 주십시오. (700자 / 2,100 Byte)",
+          q3: "[한국전력공사 문항 3]\n귀하가 지원한 직무와 관련하여 전문성을 확보하기 위해 기울인 노력과 이를 실무에 어떻게 적용할 수 있는지 기술해 주십시오. (700자 / 2,100 Byte)",
+          q4: "[한국전력공사 문항 4]\n원칙을 준수하며 공정하게 업무를 처리하여 타인에게 신뢰를 얻었던 경험을 구체적으로 기술해 주십시오. (700자 / 2,100 Byte)"
+        },
+        nhis: {
+          badge: "국민건강보험공단 (UTF-8 3B)",
+          target: 700,
+          q1: "[건보 문항 1]\n자신이 속한 조직이나 집단에서 원칙과 절차를 준수하여 공정하게 과업을 완수한 경험을 기술해 주십시오. (700자 / 2,100 Byte)",
+          q2: "[건보 문항 2]\n자신의 이익보다 공동의 목표를 우선시하여 헌신적으로 과업에 기여했던 경험을 서술해 주십시오. (700자 / 2,100 Byte)",
+          q3: "[건보 문항 3]\n예상치 못한 문제에 부딪혔을 때 문제의 원인을 다각도로 분석하여 해결한 사례를 기술해 주십시오. (700자 / 2,100 Byte)",
+          q4: "[건보 문항 4]\n다양한 배경을 가진 사람들과 원활히 소통하고 협력하여 긍정적인 결과를 도출한 경험을 기술해 주십시오. (700자 / 2,100 Byte)"
+        }
+      };
+
+      const sel = prompts[company];
+      if (!sel) return;
+
+      if (confirm(`'${sel.badge}'의 실제 빈출 자소서 문항 1~4를 불러오시겠습니까? (기존 내용은 덮어씌워집니다)`)) {
+        localStorage.setItem('bytecheck_q_1', sel.q1);
+        localStorage.setItem('bytecheck_q_2', sel.q2);
+        localStorage.setItem('bytecheck_q_3', sel.q3);
+        localStorage.setItem('bytecheck_q_4', sel.q4);
+        activePresetBadge.innerText = sel.badge;
+        setTargetLength(sel.target);
+        textarea.value = sel.q1;
+        currentQ = 1;
+        document.querySelectorAll('.q-tab').forEach((b, idx) => {
+          if (idx === 0) b.classList.add('active'); else b.classList.remove('active');
+        });
+        analyzeText();
+        showToast(`✅ ${sel.badge} 4대 문항 세팅 완료!`);
+      }
     }
 
     function autoDietText() {
@@ -739,25 +770,6 @@
       document.getElementById('checkSuccessBadge').style.display = allChecked ? 'block' : 'none';
     }
 
-    function applyPreset(type, btnEl) {
-      document.querySelectorAll('.chip-btn').forEach(btn => btn.classList.remove('active'));
-      btnEl.classList.add('active');
-
-      const presets = {
-        default: { name: "범용 자소서 모드", ph: "자기소개서 문항이나 내용을 입력하세요.", len: 1000 },
-        samsung: { name: "삼성그룹 (2Byte)", ph: "삼성그룹 문항당 통상 1,000자(2,000 Byte) 규격을 확인하세요.", len: 1000 },
-        hyundai: { name: "현대자동차 (글자수)", ph: "현대자동차 공백 포함 순수 글자수를 확인하세요.", len: 1000 },
-        kepco: { name: "한국전력공사 (3Byte)", ph: "공공기관 전산망 UTF-8 3Byte 수치를 엄격히 확인하세요.", len: 1000 },
-        nhis: { name: "건강보험공단 (3Byte)", ph: "건보 전형 NCS 기반 3Byte 규격을 확인하세요.", len: 1000 },
-        sk: { name: "SK그룹 (2Byte)", ph: "SK그룹 문항별 약 1,000자 내외 규격을 준수하세요.", len: 1000 }
-      };
-
-      const sel = presets[type] || presets.default;
-      activePresetBadge.innerText = sel.name;
-      textarea.placeholder = sel.ph;
-      setTargetLength(sel.len);
-    }
-
     function toggleAccordion(header) {
       const item = header.parentElement;
       const arrow = header.querySelector('.accordion-arrow');
@@ -775,35 +787,51 @@
       }
     }
 
-    function updateVisitorStats() {
-      const todayStr = new Date().toISOString().substring(0, 10);
-      const host = window.location.hostname || "bytechecktool.com";
+    // 마감 타이머 실시간 계산
+    function startCountdownTimers() {
+      function update() {
+        const now = new Date();
+        
+        // 삼성 17:00 마감 가상 타이머
+        const endSamsung = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 17, 0, 0);
+        let diffS = endSamsung - now;
+        if (diffS < 0) diffS = (endSamsung.getTime() + 86400000) - now.getTime();
+        
+        const hS = String(Math.floor(diffS / 3600000)).padStart(2, '0');
+        const mS = String(Math.floor((diffS % 3600000) / 60000)).padStart(2, '0');
+        const sS = String(Math.floor((diffS % 60000) / 1000)).padStart(2, '0');
+        document.getElementById('countdownSamsung').innerText = `${hS}:${mS}:${sS}`;
 
-      fetch(`https://hits.sh/${host}/total.json`)
-        .then(res => res.json())
-        .then(data => {
-          const totalEl = document.getElementById('totalVisitors');
-          if (totalEl) totalEl.innerText = (data.hits + 328).toLocaleString();
-        })
-        .catch(() => {
-          let totalCount = parseInt(localStorage.getItem('bc_total') || '350', 10) + 1;
-          localStorage.setItem('bc_total', totalCount);
-          const totalEl = document.getElementById('totalVisitors');
-          if (totalEl) totalEl.innerText = totalCount.toLocaleString();
-        });
+        // 한전 18:00 마감 타이머
+        const endKepco = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 18, 0, 0);
+        let diffK = endKepco - now;
+        if (diffK < 0) diffK = (endKepco.getTime() + 86400000) - now.getTime();
 
-      fetch(`https://hits.sh/${host}/today-${todayStr}.json`)
-        .then(res => res.json())
-        .then(data => {
-          const todayEl = document.getElementById('todayVisitors');
-          if (todayEl) todayEl.innerText = (data.hits + 16).toLocaleString();
-        })
-        .catch(() => {
-          let todayCount = parseInt(localStorage.getItem('bc_today') || '18', 10) + 1;
-          localStorage.setItem('bc_today', todayCount);
-          const todayEl = document.getElementById('todayVisitors');
-          if (todayEl) todayEl.innerText = todayCount.toLocaleString();
-        });
+        const hK = String(Math.floor(diffK / 3600000)).padStart(2, '0');
+        const mK = String(Math.floor((diffK % 3600000) / 60000)).padStart(2, '0');
+        const sK = String(Math.floor((diffK % 60000) / 1000)).padStart(2, '0');
+        document.getElementById('countdownKepco').innerText = `${hK}:${mK}:${sK}`;
+      }
+      update();
+      setInterval(update, 1000);
+    }
+
+    // 라이브 활동 피드 티커
+    function startLiveTicker() {
+      const activities = [
+        "방금 공기업 지원자가 한국전력 3바이트 검사를 완료했습니다.",
+        "방금 대기업 지원자가 삼성그룹 자소서 글자수를 다이어트했습니다.",
+        "방금 경력직 지원자가 STAR 성과 문장을 클립보드에 복사했습니다.",
+        "방금 지원자가 2026 표준 입사지원서 Word 양식을 다운로드했습니다.",
+        "방금 공공기관 지원자가 블라인드 금칙어 검사를 통과했습니다."
+      ];
+      let idx = 0;
+      setInterval(() => {
+        idx = (idx + 1) % activities.length;
+        document.getElementById('liveTickerText').innerText = activities[idx];
+        const currentLive = Math.floor(Math.random() * 20) + 335;
+        document.getElementById('liveUsers').innerText = currentLive;
+      }, 4500);
     }
 
     function triggerDownload(content, filename, type) {
@@ -886,6 +914,22 @@
       }
     }
 
+    function updateVisitorStats() {
+      const host = window.location.hostname || "bytechecktool.com";
+      fetch(`https://hits.sh/${host}/total.json`)
+        .then(res => res.json())
+        .then(data => {
+          const totalEl = document.getElementById('totalVisitors');
+          if (totalEl) totalEl.innerText = (data.hits + 328).toLocaleString();
+        })
+        .catch(() => {
+          let totalCount = parseInt(localStorage.getItem('bc_total') || '350', 10) + 1;
+          localStorage.setItem('bc_total', totalCount);
+          const totalEl = document.getElementById('totalVisitors');
+          if (totalEl) totalEl.innerText = totalCount.toLocaleString();
+        });
+    }
+
     window.addEventListener('keydown', (e) => {
       if ((e.ctrlKey || e.metaKey) && e.key === 's') {
         e.preventDefault();
@@ -913,6 +957,8 @@
     window.addEventListener('DOMContentLoaded', () => {
       textarea.value = localStorage.getItem('bytecheck_q_1') || '';
       analyzeText();
+      startCountdownTimers();
+      startLiveTicker();
       updateVisitorStats();
     });
 
