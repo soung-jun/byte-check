@@ -4,13 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ByteCheck - 2026 자소서 바이트 계산기 & 취업 서류 서식 센터</title>
-  <meta name="description" content="공기업 UTF-8 3Byte, 대기업 EUC-KR 2Byte 실시간 글자수 계산기, 문항별 다중 탭 관리, 블라인드 금칙어 및 맞춤법 검출, 바이트 다이어트, STAR 경력기술서 빌더, 표준 이력서 Word 무료 다운로드.">
+  <meta name="description" content="공기업 UTF-8 3Byte, 대기업 EUC-KR 2Byte 실시간 글자수 계산기, 목표 글자수 게이지 바, 문항별 다중 탭 관리, 블라인드 금칙어 및 맞춤법 검출, 바이트 다이어트, STAR 경력기술서 빌더, 표준 이력서 Word 무료 다운로드.">
   <meta name="keywords" content="자소서 바이트 계산기, 글자수 줄이기, 공기업 3바이트, 대기업 2바이트, 자소서 문항 관리, STAR 기법, 이력서 양식 다운로드, ByteCheck">
   
   <meta property="og:title" content="ByteCheck - 2026 자소서 바이트 계산기 & 올인원 서식 센터">
-  <meta property="og:description" content="문항별 2B/3B 실시간 계산, 원클릭 바이트 다이어트, 맞춤법/블라인드 검출, STAR 문장 빌더">
+  <meta property="og:description" content="문항별 2B/3B 실시간 계산, 목표 글자수 게이지, 원클릭 바이트 다이어트, 맞춤법/블라인드 검출, STAR 문장 빌더">
   <meta property="og:url" content="https://bytechecktool.com">
   <meta property="og:type" content="website">
+
+  <!-- PWA 설정 -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1d4ed8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="ByteCheck">
 
   <!-- Schema.org JSON-LD (WebApplication + FAQPage) -->
   <script type="application/ld+json">
@@ -119,11 +126,24 @@
     .chip-btn:hover { background: #e2e8f0; }
     .chip-btn.active { background: var(--primary); color: #ffffff; border-color: var(--primary); }
 
+    /* 목표 글자수 및 프로그레스 바 */
+    .target-bar-wrap { background: #ffffff; border: 1.5px solid var(--border); border-radius: 8px; padding: 12px 14px; margin-bottom: 12px; }
+    .target-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px; font-size: 0.88rem; }
+    .target-select-group { display: flex; align-items: center; gap: 6px; }
+    .target-btn { border: 1px solid var(--border); background: #f1f5f9; font-size: 0.8rem; font-weight: 700; padding: 3px 8px; border-radius: 4px; cursor: pointer; }
+    .target-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+    .progress-track { width: 100%; height: 8px; background: #e2e8f0; border-radius: 4px; overflow: hidden; }
+    .progress-fill { height: 100%; width: 0%; background: var(--primary); transition: width 0.2s, background-color 0.2s; }
+    .progress-fill.over { background: var(--danger); }
+
     .editor-toolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap: 8px; }
-    .btn-diet { background: #fef3c7; border: 1.5px solid #d97706; color: #92400e; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 800; cursor: pointer; transition: all 0.2s; }
+    .toolbar-actions { display: flex; gap: 6px; flex-wrap: wrap; }
+    .btn-action-tool { background: #ffffff; border: 1.5px solid var(--border-dark); padding: 5px 10px; border-radius: 6px; font-size: 0.82rem; font-weight: 700; color: var(--text); cursor: pointer; transition: all 0.2s; }
+    .btn-action-tool:hover { background: #f1f5f9; }
+    .btn-diet { background: #fef3c7; border: 1.5px solid #d97706; color: #92400e; padding: 5px 12px; border-radius: 6px; font-size: 0.82rem; font-weight: 800; cursor: pointer; transition: all 0.2s; }
     .btn-diet:hover { background: #fde68a; }
 
-    textarea { width: 100%; height: 310px; padding: 18px; border: 2px solid var(--border); border-radius: 8px; font-size: 1.05rem; line-height: 1.75; resize: vertical; outline: none; color: var(--text); }
+    textarea { width: 100%; height: 300px; padding: 18px; border: 2px solid var(--border); border-radius: 8px; font-size: 1.05rem; line-height: 1.75; resize: vertical; outline: none; color: var(--text); }
     textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.15); }
 
     .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 18px; }
@@ -159,7 +179,7 @@
     .btn-download-main { background: #0f172a; color: #ffffff; text-decoration: none; padding: 12px 18px; border-radius: 8px; font-size: 0.9rem; font-weight: 800; cursor: pointer; border: none; text-align: center; }
     .btn-download-main:hover { background: #334155; }
 
-    /* 아코디언 칼럼 */
+    /* 아코디언 */
     .accordion-item { border: 2px solid var(--border); border-radius: 8px; margin-bottom: 10px; background: #ffffff; overflow: hidden; }
     .accordion-header { padding: 14px 18px; background: #f8fafc; display: flex; justify-content: space-between; align-items: center; cursor: pointer; user-select: none; font-weight: 800; font-size: 1rem; color: #0f172a; }
     .accordion-header:hover { background: #f1f5f9; }
@@ -202,7 +222,7 @@
 
     @media print {
       body { background: #fff; padding: 0; }
-      header, nav, .hero, .counter-bar, .tab-nav, .question-tabs, .preset-container, .editor-toolbar, .stats-grid, .alert-panel, .partner-card-banner, .board-card, .guide-card, .download-card, .article-card, .faq-card, .floating-box, footer, #resumeText { display: none !important; }
+      header, nav, .hero, .counter-bar, .tab-nav, .question-tabs, .preset-container, .target-bar-wrap, .editor-toolbar, .stats-grid, .alert-panel, .partner-card-banner, .board-card, .guide-card, .download-card, .article-card, .faq-card, .floating-box, footer, #resumeText { display: none !important; }
       .card { border: none; padding: 0; }
       .print-header { display: block !important; margin-bottom: 20px; border-bottom: 2px solid #000; padding-bottom: 10px; }
       .print-content { display: block !important; font-size: 11pt; line-height: 1.8; white-space: pre-wrap; font-family: "Batang", serif; }
@@ -238,7 +258,7 @@
       <p>공기업 3Byte, 대기업 2Byte 실시간 계산, 바이트 다이어트, STAR 경력기술서 빌더</p>
     </section>
 
-    <!-- hits.sh 중앙 서버 실시간 동기화 카운터 -->
+    <!-- hits.sh 실시간 동기화 카운터 -->
     <div class="counter-bar">
       <div class="visitor-counter">
         <span>👥 오늘 방문자: <strong id="todayVisitors" style="color: var(--primary);">--</strong>명</span>
@@ -277,14 +297,36 @@
           <button class="q-tab" onclick="switchQuestionTab(4, this)">문항 4</button>
         </div>
 
+        <!-- 목표 글자수 및 실시간 게이지 바 -->
+        <div class="target-bar-wrap">
+          <div class="target-row">
+            <div class="target-select-group">
+              <span style="font-weight: 800; color: #0f172a;">🎯 목표 글자수:</span>
+              <button class="target-btn" onclick="setTargetLength(500, this)">500자</button>
+              <button class="target-btn" onclick="setTargetLength(700, this)">700자</button>
+              <button class="target-btn active" onclick="setTargetLength(1000, this)">1,000자</button>
+              <button class="target-btn" onclick="setTargetLength(1500, this)">1,500자</button>
+            </div>
+            <div>
+              <strong id="targetRatioLabel" style="color: var(--primary);">0%</strong> 
+              <span id="targetStatusText" style="font-size: 0.8rem; color: var(--text-muted);">(0 / 1,000자)</span>
+            </div>
+          </div>
+          <div class="progress-track">
+            <div id="targetProgressFill" class="progress-fill"></div>
+          </div>
+        </div>
+
         <div class="editor-toolbar">
           <div>
             <span id="activePresetBadge" style="font-size: 0.8rem; font-weight: 800; background: #dbeafe; color: #1e40af; padding: 4px 8px; border-radius: 4px;">범용 자소서 모드</span>
-            <span style="color: var(--success); font-weight: 700; font-size: 0.85rem; margin-left: 6px;">● 브라우저 안전 자동 저장 (Ctrl+S)</span>
+            <span style="color: var(--success); font-weight: 700; font-size: 0.85rem; margin-left: 6px;">● 자동 저장 (Ctrl+S)</span>
           </div>
-          <div style="display: flex; gap: 8px;">
-            <button class="btn-diet" onclick="autoDietText()">✂️ 바이트 긴급 다이어트</button>
-            <button class="chip-btn" onclick="printDoc()">📄 A4 출력/PDF</button>
+          <div class="toolbar-actions">
+            <button class="btn-diet" onclick="autoDietText()">✂️ 바이트 다이어트</button>
+            <button class="btn-action-tool" onclick="copyFullResume()">📋 전체 복사</button>
+            <button class="btn-action-tool" onclick="clearCurrentResume()">🗑️ 비우기</button>
+            <button class="btn-action-tool" onclick="printDoc()">📄 A4 출력</button>
           </div>
         </div>
 
@@ -310,7 +352,7 @@
           </div>
         </div>
 
-        <!-- 경고 알림 패널 -->
+        <!-- 알림 패널 -->
         <div class="alert-panel danger" id="warningBox">
           <strong>⚠️ 블라인드 감점 단어 감지:</strong> <span id="warningWords"></span>
         </div>
@@ -319,7 +361,7 @@
         </div>
       </main>
 
-      <!-- 맥락형 쿠팡 배너 (서류 합격 직후 NCS/기출서 타깃) -->
+      <!-- 맥락형 쿠팡 배너 -->
       <div class="partner-card-banner">
         <div>
           <strong style="font-size: 1rem; color: #0f172a;">📚 2026 NCS 기출문제집 & 대기업 인적성 수험서</strong>
@@ -339,7 +381,7 @@
 
         <div class="form-group">
           <label class="form-label">1. 프로젝트/업무명 (Situation & Task)</label>
-          <input type="text" id="starProject" class="form-input" placeholder="예: 전사 구매 결제 시스템 고도화 및 DB 최적화">
+          <input type="text" id="starProject" class="form-input" placeholder="예: 전사 결제 시스템 고도화 및 DB 최적화">
         </div>
         <div class="form-group">
           <label class="form-label">2. 내가 주도한 액션 및 역할 (Action)</label>
@@ -389,7 +431,7 @@
 
     <div class="print-footer">Document generated by ByteCheck (bytechecktool.com)</div>
 
-    <!-- 정규 서식 다운로드 센터 -->
+    <!-- 서식 다운로드 센터 -->
     <section class="card download-card">
       <div class="section-title"><span>📥</span> 2026 표준 입사지원서 & 자기소개서 무료 다운로드</div>
       <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px; font-weight: 500;">
@@ -413,7 +455,7 @@
       </div>
     </section>
 
-    <!-- 취업 & 이직 실전 전략 칼럼 -->
+    <!-- 취업 & 이직 실전 칼럼 -->
     <section class="card article-card">
       <div class="section-title"><span>💡</span> 취업·이직 성공을 위한 실전 전략 칼럼</div>
       <div class="accordion-item active">
@@ -463,7 +505,7 @@
       </div>
     </section>
 
-    <!-- 구글 SEO 극대화 FAQ 섹션 -->
+    <!-- FAQ 섹션 -->
     <section class="card faq-card">
       <div class="section-title"><span>❓</span> 자주 묻는 질문 (FAQ)</div>
       <div class="accordion-item">
@@ -517,11 +559,16 @@
 
   <script>
     let currentQ = 1;
+    let targetLength = 1000;
+
     const textarea = document.getElementById('resumeText');
     const countWithSpace = document.getElementById('countWithSpace');
     const countWithoutSpace = document.getElementById('countWithoutSpace');
     const count2Byte = document.getElementById('count2Byte');
     const count3Byte = document.getElementById('count3Byte');
+    const targetProgressFill = document.getElementById('targetProgressFill');
+    const targetRatioLabel = document.getElementById('targetRatioLabel');
+    const targetStatusText = document.getElementById('targetStatusText');
     const warningBox = document.getElementById('warningBox');
     const warningWords = document.getElementById('warningWords');
     const typoBox = document.getElementById('typoBox');
@@ -541,8 +588,7 @@
       { wrong: '안되', correct: '안돼' },
       { wrong: '몇일', correct: '며칠' },
       { wrong: '바램', correct: '바람' },
-      { wrong: '어의없', correct: '어처구니없' },
-      { wrong: '일부러', correct: '일부러' }
+      { wrong: '어의없', correct: '어처구니없' }
     ];
 
     function showToast(msg) {
@@ -550,6 +596,13 @@
       t.innerText = msg;
       t.style.display = 'block';
       setTimeout(() => { t.style.display = 'none'; }, 2000);
+    }
+
+    function setTargetLength(val, btnEl) {
+      targetLength = val;
+      document.querySelectorAll('.target-btn').forEach(b => b.classList.remove('active'));
+      if (btnEl) btnEl.classList.add('active');
+      analyzeText();
     }
 
     function analyzeText() {
@@ -574,6 +627,20 @@
       count2Byte.innerText = bytes2.toLocaleString() + ' B';
       count3Byte.innerText = bytes3.toLocaleString() + ' B';
 
+      // 목표 글자수 프로그레스 계산
+      const ratio = Math.min(Math.round((lenWithSpace / targetLength) * 100), 100);
+      targetRatioLabel.innerText = `${Math.round((lenWithSpace / targetLength) * 100)}%`;
+      targetStatusText.innerText = `(${lenWithSpace.toLocaleString()} / ${targetLength.toLocaleString()}자)`;
+      targetProgressFill.style.width = `${ratio}%`;
+
+      if (lenWithSpace > targetLength) {
+        targetProgressFill.classList.add('over');
+        targetRatioLabel.style.color = 'var(--danger)';
+      } else {
+        targetProgressFill.classList.remove('over');
+        targetRatioLabel.style.color = 'var(--primary)';
+      }
+
       // 블라인드 감점어 검출
       const detected = prohibitedKeywords.filter(k => text.includes(k));
       if (detected.length > 0) {
@@ -590,6 +657,21 @@
         typoWords.innerHTML = detectedTypos.map(item => `<strong>${item.wrong}</strong>→<strong>${item.correct}</strong>`).join(' | ');
       } else {
         typoBox.classList.remove('active');
+      }
+    }
+
+    function copyFullResume() {
+      if (!textarea.value.trim()) { alert('복사할 내용이 없습니다.'); return; }
+      navigator.clipboard.writeText(textarea.value);
+      showToast('📋 현재 문항 내용이 클립보드에 복사되었습니다!');
+    }
+
+    function clearCurrentResume() {
+      if (!textarea.value.trim()) return;
+      if (confirm('현재 문항 작성 내용을 모두 비우시겠습니까?')) {
+        textarea.value = '';
+        analyzeText();
+        showToast('🗑️ 내용이 비워졌습니다.');
       }
     }
 
@@ -662,17 +744,18 @@
       btnEl.classList.add('active');
 
       const presets = {
-        default: { name: "범용 자소서 모드", ph: "자기소개서 문항이나 내용을 입력하세요." },
-        samsung: { name: "삼성그룹 (2Byte)", ph: "삼성그룹 문항당 통상 1,000자(2,000 Byte) 규격을 확인하세요." },
-        hyundai: { name: "현대자동차 (글자수)", ph: "현대자동차 공백 포함 순수 글자수를 확인하세요." },
-        kepco: { name: "한국전력공사 (3Byte)", ph: "공공기관 전산망 UTF-8 3Byte 수치를 엄격히 확인하세요." },
-        nhis: { name: "건강보험공단 (3Byte)", ph: "건보 전형 NCS 기반 3Byte 규격을 확인하세요." },
-        sk: { name: "SK그룹 (2Byte)", ph: "SK그룹 문항별 약 1,000자 내외 규격을 준수하세요." }
+        default: { name: "범용 자소서 모드", ph: "자기소개서 문항이나 내용을 입력하세요.", len: 1000 },
+        samsung: { name: "삼성그룹 (2Byte)", ph: "삼성그룹 문항당 통상 1,000자(2,000 Byte) 규격을 확인하세요.", len: 1000 },
+        hyundai: { name: "현대자동차 (글자수)", ph: "현대자동차 공백 포함 순수 글자수를 확인하세요.", len: 1000 },
+        kepco: { name: "한국전력공사 (3Byte)", ph: "공공기관 전산망 UTF-8 3Byte 수치를 엄격히 확인하세요.", len: 1000 },
+        nhis: { name: "건강보험공단 (3Byte)", ph: "건보 전형 NCS 기반 3Byte 규격을 확인하세요.", len: 1000 },
+        sk: { name: "SK그룹 (2Byte)", ph: "SK그룹 문항별 약 1,000자 내외 규격을 준수하세요.", len: 1000 }
       };
 
       const sel = presets[type] || presets.default;
       activePresetBadge.innerText = sel.name;
       textarea.placeholder = sel.ph;
+      setTargetLength(sel.len);
     }
 
     function toggleAccordion(header) {
@@ -723,7 +806,6 @@
         });
     }
 
-    // UTF-8 BOM(\uFEFF) 추가로 Word/한글에서 한글 깨짐 100% 방지
     function triggerDownload(content, filename, type) {
       const blob = new Blob(['\uFEFF' + content], { type: type });
       const link = document.createElement('a');
@@ -752,10 +834,7 @@
         <div class="main-title">입 사 지 원 서</div>
         <div class="sec-header">1. 기본 인적사항</div>
         <table>
-          <tr>
-            <th style="width:20%;">성 명</th><td style="width:30%;"></td>
-            <th style="width:20%;">생년월일</th><td style="width:30%;"></td>
-          </tr>
+          <tr><th style="width:20%;">성 명</th><td style="width:30%;"></td><th style="width:20%;">생년월일</th><td style="width:30%;"></td></tr>
           <tr><th>비상연락처</th><td></td><th>E-mail</th><td></td></tr>
         </table>
         <div class="sec-header">2. 자기소개서</div>
@@ -807,7 +886,6 @@
       }
     }
 
-    // Ctrl + S 저장 단축키 지원
     window.addEventListener('keydown', (e) => {
       if ((e.ctrlKey || e.metaKey) && e.key === 's') {
         e.preventDefault();
