@@ -3,30 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ByteCheck - 2026 자소서 바이트 계산기, 무료 입사지원서 양식 & 취업·이직 가이드</title>
-  <meta name="description" content="공기업 UTF-8 3Byte, 대기업 EUC-KR 2Byte 실시간 글자수 계산기, 블라인드 금칙어 필터링, 정규 이력서 Word 다운로드, 경력기술서 및 2026 채용일정 가이드.">
-  <meta name="keywords" content="자소서 바이트 계산기, 자기소개서 글자수, 공기업 3바이트, 대기업 2바이트, 이력서 양식 다운로드, 경력기술서 작성법, 블라인드 채용, ByteCheck">
+  <title>ByteCheck - 2026 자소서 바이트 계산기 & 경력기술서 STAR 빌더</title>
+  <meta name="description" content="공기업 UTF-8 3Byte, 대기업 EUC-KR 2Byte 실시간 글자수 계산기, 블라인드 금칙어 검출, 바이트 다이어트 필터, 경력기술서 STAR 생성기 및 표준 이력서 무료 다운로드.">
+  <meta name="keywords" content="자소서 바이트 계산기, 글자수 줄이기, 경력기술서 작성법, STAR 기법, 공기업 3바이트, 대기업 2바이트, 이력서 서식 다운로드, ByteCheck">
   
-  <meta property="og:title" content="ByteCheck - 2026 자소서 바이트 계산기 & 서식 센터">
-  <meta property="og:description" content="공기업 3Byte, 대기업 2Byte 실시간 계산, 블라인드 필터링 및 정규 입사지원서 서식 무료 다운로드">
+  <meta property="og:title" content="ByteCheck - 취업·이직 서류 올인원 솔루션">
+  <meta property="og:description" content="2B/3B 바이트 계산, 원클릭 바이트 다이어트, 경력직 STAR 문장 생성기, 표준 입사지원서 무료 다운로드">
   <meta property="og:url" content="https://bytechecktool.com">
   <meta property="og:type" content="website">
 
-  <!-- Schema.org JSON-LD SEO 구조화 데이터 -->
+  <!-- Schema.org JSON-LD 구조화 데이터 -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "ByteCheck 자소서 바이트 계산기",
+    "name": "ByteCheck 취업 이직 올인원 툴",
     "url": "https://bytechecktool.com",
-    "description": "공기업 UTF-8 3Byte, 대기업 EUC-KR 2Byte 실시간 연산 및 블라인드 감점 키워드 검출기",
+    "description": "실시간 자소서 2B/3B 바이트 계산 및 경력기술서 STAR 성과 조립 툴",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "All",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "KRW"
-    }
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
   }
   </script>
 
@@ -38,7 +34,7 @@
       --primary: #1d4ed8;
       --primary-hover: #1e40af;
       --primary-light: #eff6ff;
-      --accent: #2563eb;
+      --accent: #0ea5e9;
       --bg: #f8fafc;
       --card-bg: #ffffff;
       --text: #0f172a;
@@ -48,50 +44,56 @@
       --danger: #dc2626;
       --danger-bg: #fef2f2;
       --success: #15803d;
+      --success-bg: #f0fdf4;
       --shadow-sm: 0 2px 4px rgba(15, 23, 42, 0.05);
-      --shadow-md: 0 8px 20px rgba(15, 23, 42, 0.08);
+      --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
     body { background-color: var(--bg); color: var(--text); line-height: 1.6; }
 
     header { background: #ffffff; border-bottom: 2px solid var(--border); width: 100%; position: relative; }
-    .header-inner { max-width: 1000px; margin: 0 auto; padding: 14px 20px; display: flex; justify-content: space-between; align-items: center; }
-    .brand { display: flex; align-items: center; gap: 8px; font-size: 1.35rem; font-weight: 800; color: var(--primary); text-decoration: none; }
+    .header-inner { max-width: 1040px; margin: 0 auto; padding: 14px 20px; display: flex; justify-content: space-between; align-items: center; }
+    .brand { display: flex; align-items: center; gap: 8px; font-size: 1.35rem; font-weight: 900; color: var(--primary); text-decoration: none; }
     nav { display: flex; align-items: center; gap: 8px; }
-    nav a { text-decoration: none; color: var(--text); font-size: 0.92rem; font-weight: 700; padding: 7px 14px; border-radius: 6px; transition: all 0.2s; }
+    nav a { text-decoration: none; color: var(--text); font-size: 0.92rem; font-weight: 700; padding: 8px 14px; border-radius: 6px; transition: all 0.2s; }
     nav a:hover { background: var(--primary-light); color: var(--primary); }
     nav a.active { background: var(--primary); color: #ffffff; }
 
-    .container { max-width: 1000px; margin: 0 auto; padding: 24px 16px 60px 16px; }
+    .container { max-width: 1040px; margin: 0 auto; padding: 24px 16px 70px 16px; }
 
-    .hero { text-align: center; margin-bottom: 16px; }
+    .hero { text-align: center; margin-bottom: 20px; }
     .hero h1 { font-size: 2.1rem; font-weight: 900; letter-spacing: -0.5px; margin-bottom: 8px; color: #0f172a; }
-    .hero p { font-size: 1rem; color: var(--text-muted); font-weight: 600; }
+    .hero p { font-size: 1.02rem; color: var(--text-muted); font-weight: 600; }
 
     .counter-bar { display: flex; justify-content: center; margin-bottom: 20px; }
     .visitor-counter { display: inline-flex; align-items: center; gap: 12px; background: #ffffff; border: 2px solid var(--border); padding: 8px 22px; border-radius: 30px; font-size: 0.92rem; font-weight: 800; color: var(--text-muted); box-shadow: var(--shadow-sm); }
 
-    .preset-container { background: #ffffff; border: 2px solid var(--border); border-radius: 12px; padding: 14px 18px; margin-bottom: 16px; box-shadow: var(--shadow-sm); }
-    .preset-title { font-size: 0.88rem; font-weight: 800; color: var(--text-muted); margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
-    .preset-chips { display: flex; flex-wrap: wrap; gap: 8px; }
-    .chip-btn { background: #f1f5f9; border: 1.5px solid var(--border); border-radius: 20px; padding: 6px 14px; font-size: 0.82rem; font-weight: 700; color: var(--text); cursor: pointer; transition: all 0.2s; }
+    /* 메인 네비게이션 탭 (가독성 및 모바일 피로도 감소) */
+    .tab-nav { display: flex; gap: 8px; margin-bottom: 16px; border-bottom: 2px solid var(--border); padding-bottom: 10px; }
+    .tab-btn { flex: 1; padding: 12px; background: #ffffff; border: 2px solid var(--border); border-radius: 10px; font-size: 0.95rem; font-weight: 800; color: var(--text-muted); cursor: pointer; text-align: center; transition: all 0.2s; }
+    .tab-btn:hover { background: #f1f5f9; }
+    .tab-btn.active { background: var(--primary); color: #ffffff; border-color: var(--primary); box-shadow: var(--shadow-sm); }
+
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    .card { background: var(--card-bg); border-radius: 12px; border: 2px solid var(--border); padding: 24px; box-shadow: var(--shadow-sm); margin-bottom: 24px; }
+    .card-highlight { border: 2.5px solid #93c5fd; box-shadow: var(--shadow-md); }
+
+    /* 기업 규격 프리셋 칩 */
+    .preset-container { background: #f8fafc; border: 1.5px solid var(--border); border-radius: 10px; padding: 12px 16px; margin-bottom: 16px; }
+    .preset-title { font-size: 0.85rem; font-weight: 800; color: var(--text-muted); margin-bottom: 8px; }
+    .preset-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+    .chip-btn { background: #ffffff; border: 1.5px solid var(--border); border-radius: 20px; padding: 5px 12px; font-size: 0.8rem; font-weight: 700; color: var(--text); cursor: pointer; }
     .chip-btn:hover { background: #e2e8f0; }
     .chip-btn.active { background: var(--primary); color: #ffffff; border-color: var(--primary); }
 
-    .top-actions { display: flex; justify-content: flex-end; gap: 8px; margin-bottom: 12px; }
-    .btn-action { background: #ffffff; border: 1.5px solid var(--border-dark); padding: 8px 16px; border-radius: 8px; font-size: 0.88rem; font-weight: 700; color: var(--text); cursor: pointer; display: inline-flex; align-items: center; gap: 6px; transition: all 0.2s; }
-    .btn-action:hover { background: #e2e8f0; }
+    .editor-toolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap: 8px; }
+    .btn-diet { background: #fef3c7; border: 1.5px solid #d97706; color: #92400e; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 800; cursor: pointer; }
+    .btn-diet:hover { background: #fde68a; }
 
-    /* 메인 에디터 카드 강조 */
-    .card { background: var(--card-bg); border-radius: 12px; border: 2px solid var(--border); padding: 24px; box-shadow: var(--shadow-sm); margin-bottom: 24px; }
-    .card-highlight { border: 2.5px solid #93c5fd; box-shadow: var(--shadow-md); position: relative; }
-    .preset-indicator { display: inline-block; font-size: 0.8rem; font-weight: 800; padding: 3px 8px; border-radius: 4px; background: #dbeafe; color: #1e40af; margin-bottom: 6px; }
-
-    .status-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-size: 0.9rem; }
-    .save-badge { color: var(--success); font-weight: 700; display: inline-flex; align-items: center; gap: 6px; }
-
-    textarea { width: 100%; height: 320px; padding: 18px; border: 2px solid var(--border); border-radius: 8px; font-size: 1.05rem; line-height: 1.7; resize: vertical; outline: none; color: var(--text); transition: border-color 0.2s, box-shadow 0.2s; }
+    textarea { width: 100%; height: 310px; padding: 18px; border: 2px solid var(--border); border-radius: 8px; font-size: 1.05rem; line-height: 1.75; resize: vertical; outline: none; color: var(--text); }
     textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.15); }
 
     .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 18px; }
@@ -103,29 +105,36 @@
     .warning-box { margin-top: 16px; padding: 14px; background: var(--danger-bg); border: 2px solid #f87171; border-radius: 8px; font-size: 0.92rem; display: none; }
     .warning-box.active { display: block; }
 
+    /* STAR 경력기술서 빌더 폼 스타일 */
+    .form-group { margin-bottom: 14px; }
+    .form-label { display: block; font-size: 0.88rem; font-weight: 800; color: #0f172a; margin-bottom: 6px; }
+    .form-input { width: 100%; padding: 10px 14px; border: 1.5px solid var(--border); border-radius: 6px; font-size: 0.95rem; outline: none; }
+    .form-input:focus { border-color: var(--primary); }
+    .star-result-box { background: #0f172a; color: #f8fafc; padding: 16px; border-radius: 8px; font-family: monospace; font-size: 0.9rem; white-space: pre-wrap; line-height: 1.6; margin-top: 14px; }
+
+    /* 제출 전 체크리스트 */
+    .checklist-group { display: flex; flex-direction: column; gap: 10px; margin-top: 12px; }
+    .checklist-item { display: flex; align-items: center; gap: 10px; background: #f8fafc; padding: 12px 16px; border-radius: 8px; border: 1.5px solid var(--border); cursor: pointer; user-select: none; }
+    .checklist-item input { width: 18px; height: 18px; cursor: pointer; }
+    .checklist-item span { font-size: 0.92rem; font-weight: 700; color: #0f172a; }
+
     .section-title { font-size: 1.25rem; font-weight: 800; display: flex; align-items: center; gap: 8px; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--border); }
 
     .download-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 12px; }
     .download-item { background: #f8fafc; border: 2px solid var(--border); border-radius: 10px; padding: 20px; text-align: left; display: flex; flex-direction: column; justify-content: space-between; }
     .download-item h4 { font-size: 1.05rem; font-weight: 800; margin-bottom: 6px; color: #0f172a; }
-    .download-item p { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px; font-weight: 500; line-height: 1.5; }
-    .btn-download-main { background: #0f172a; color: #ffffff; text-decoration: none; padding: 12px 18px; border-radius: 8px; font-size: 0.9rem; font-weight: 800; cursor: pointer; border: none; text-align: center; transition: background 0.2s; }
+    .download-item p { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px; font-weight: 500; }
+    .btn-download-main { background: #0f172a; color: #ffffff; text-decoration: none; padding: 12px 18px; border-radius: 8px; font-size: 0.9rem; font-weight: 800; cursor: pointer; border: none; text-align: center; }
     .btn-download-main:hover { background: #334155; }
 
-    /* 아코디언 스타일 칼럼 */
-    .accordion-item { border: 2px solid var(--border); border-radius: 8px; margin-bottom: 12px; background: #ffffff; overflow: hidden; }
+    /* 아코디언 칼럼 */
+    .accordion-item { border: 2px solid var(--border); border-radius: 8px; margin-bottom: 10px; background: #ffffff; overflow: hidden; }
     .accordion-header { padding: 14px 18px; background: #f8fafc; display: flex; justify-content: space-between; align-items: center; cursor: pointer; user-select: none; font-weight: 800; font-size: 1rem; color: #0f172a; }
     .accordion-header:hover { background: #f1f5f9; }
     .accordion-body { padding: 16px 18px; display: none; border-top: 1.5px solid var(--border); font-size: 0.92rem; color: #334155; line-height: 1.75; }
     .accordion-item.active .accordion-body { display: block; }
     .accordion-arrow { font-size: 0.85rem; transition: transform 0.2s; color: var(--text-muted); }
     .accordion-item.active .accordion-arrow { transform: rotate(180deg); }
-
-    .article-tag { display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 800; margin-right: 8px; }
-    .tag-recruit { background: #dbeafe; color: #1e40af; }
-    .tag-career { background: #fef3c7; color: #92400e; }
-    .tag-interview { background: #dcfce7; color: #166534; }
-    .article-tip-box { margin-top: 12px; padding: 12px; background: #f8fafc; border: 1.5px dashed var(--border-dark); border-radius: 6px; font-size: 0.88rem; color: #1e293b; }
 
     .partner-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
     .partner-box { background: #ffffff; border: 2px solid var(--border); border-radius: 10px; padding: 16px; display: flex; justify-content: space-between; align-items: center; }
@@ -136,19 +145,14 @@
     .custom-table th, .custom-table td { padding: 12px 14px; border: 1.5px solid var(--border); text-align: left; }
     .custom-table th { background: #e2e8f0; color: #0f172a; font-weight: 800; }
     .custom-table td { background: #ffffff; color: var(--text); }
-    .badge-2b { background: #dbeafe; color: #1e40af; padding: 4px 8px; border-radius: 4px; font-weight: 700; border: 1px solid #bfdbfe; }
-    .badge-3b { background: #fef3c7; color: #92400e; padding: 4px 8px; border-radius: 4px; font-weight: 700; border: 1px solid #fde68a; }
-
-    .filter-group { display: flex; gap: 6px; }
-    .filter-btn { padding: 6px 14px; font-size: 0.82rem; font-weight: 700; border: 1.5px solid var(--border-dark); background: #fff; border-radius: 20px; cursor: pointer; }
-    .filter-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+    .badge-2b { background: #dbeafe; color: #1e40af; padding: 4px 8px; border-radius: 4px; font-weight: 700; }
+    .badge-3b { background: #fef3c7; color: #92400e; padding: 4px 8px; border-radius: 4px; font-weight: 700; }
 
     .ad-slot { background: #e2e8f0; border: 2px dashed var(--border-dark); border-radius: 8px; min-height: 90px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; color: var(--text-muted); font-size: 0.9rem; font-weight: 700; }
 
-    /* 플로팅 퀵 액션 */
     .floating-box { position: fixed; bottom: 24px; right: 24px; display: flex; flex-direction: column; gap: 10px; z-index: 100; }
-    .btn-float { width: 48px; height: 48px; border-radius: 50%; background: #0f172a; color: #ffffff; border: 2px solid #ffffff; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: transform 0.2s; }
-    .btn-float:hover { transform: scale(1.08); background: var(--primary); }
+    .btn-float { width: 48px; height: 48px; border-radius: 50%; background: #0f172a; color: #ffffff; border: 2px solid #ffffff; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+    .btn-float:hover { background: var(--primary); }
 
     footer { background: #ffffff; border-top: 2px solid var(--border); padding: 30px 20px; font-size: 0.85rem; color: var(--text-muted); line-height: 1.8; text-align: center; }
     .footer-links { display: flex; justify-content: center; gap: 16px; margin-bottom: 12px; }
@@ -162,12 +166,12 @@
       .header-inner { flex-direction: column; gap: 10px; }
       nav { width: 100%; overflow-x: auto; white-space: nowrap; justify-content: flex-start; }
       .stats-grid, .partner-grid, .download-grid { grid-template-columns: 1fr; }
-      .floating-box { bottom: 16px; right: 16px; }
+      .tab-nav { flex-direction: column; }
     }
 
     @media print {
       body { background: #fff; padding: 0; }
-      header, nav, .hero, .counter-bar, .preset-container, .top-actions, .status-bar, .stats-grid, .warning-box, .ad-slot, .partner-grid, .board-card, .guide-card, .download-card, .article-card, .floating-box, footer, #resumeText { display: none !important; }
+      header, nav, .hero, .counter-bar, .tab-nav, .preset-container, .editor-toolbar, .stats-grid, .warning-box, .ad-slot, .partner-grid, .board-card, .guide-card, .download-card, .article-card, .floating-box, footer, #resumeText { display: none !important; }
       .card { border: none; padding: 0; }
       .print-header { display: block !important; margin-bottom: 20px; border-bottom: 2px solid #000; padding-bottom: 10px; }
       .print-content { display: block !important; font-size: 11pt; line-height: 1.8; white-space: pre-wrap; font-family: "Batang", serif; }
@@ -192,16 +196,16 @@
   <div class="container">
     
     <div class="print-header">
-      <h2 style="font-size: 18pt;">2026 자기소개서 제출 최종본</h2>
+      <h2 style="font-size: 18pt;">2026 입사지원 서류 최종 검증본</h2>
       <p id="printDate" style="font-size: 10pt; color: #555; margin-top: 4px;">출력 일자: </p>
     </div>
 
     <section class="hero">
-      <h1>2026 자소서 바이트 & 취업·이직 정보 허브</h1>
-      <p>공기업 3Byte, 대기업 2Byte 실시간 계산, 정규 서식 다운로드 및 이직·연봉 가이드</p>
+      <h1>2026 자소서 바이트 & 취업·이직 올인원 허브</h1>
+      <p>공기업 3Byte, 대기업 2Byte 실시간 계산, 바이트 다이어트, 경력직 STAR 문장 빌더</p>
     </section>
 
-    <!-- 전 세계 실시간 연동 방문자 카운터 뱃지 -->
+    <!-- hits.sh 중앙 서버 실시간 동기화 카운터 -->
     <div class="counter-bar">
       <div class="visitor-counter">
         <span>👥 오늘 방문자: <strong id="todayVisitors" style="color: var(--primary);">--</strong>명</span>
@@ -210,70 +214,134 @@
       </div>
     </div>
 
-    <!-- 기업별 규격 퀵 프리셋 (SEO 롱테일 대응) -->
-    <div class="preset-container">
-      <div class="preset-title">🏢 주요 기업별 자소서 규격 원클릭 세팅:</div>
-      <div class="preset-chips">
-        <button class="chip-btn active" onclick="applyPreset('default')">🌐 범용 모드</button>
-        <button class="chip-btn" onclick="applyPreset('samsung')">삼성그룹 (2B/1000자)</button>
-        <button class="chip-btn" onclick="applyPreset('hyundai')">현대자동차 (글자수)</button>
-        <button class="chip-btn" onclick="applyPreset('kepco')">한국전력 (3B/UTF-8)</button>
-        <button class="chip-btn" onclick="applyPreset('nhis')">건강보험공단 (3B/UTF-8)</button>
-        <button class="chip-btn" onclick="applyPreset('sk')">SK그룹 (2B/1000자)</button>
-      </div>
+    <!-- 기능 선택 탭 -->
+    <div class="tab-nav">
+      <button class="tab-btn active" onclick="switchTab('calculatorTab')">📝 자소서 실시간 바이트 계산 & 축약</button>
+      <button class="tab-btn" onclick="switchTab('starTab')">💼 경력직 STAR 성과문장 빌더</button>
+      <button class="tab-btn" onclick="switchTab('checkTab')">🛡️ 서류 마감 5분 전 광탈 체크리스트</button>
     </div>
 
-    <div class="ad-slot">
-      <span>광고 영역 (Google AdSense Top)</span>
-    </div>
-
-    <div class="top-actions">
-      <button class="btn-action" onclick="printDoc()">📄 깔끔 A4 인쇄 / PDF 저장</button>
-      <button class="btn-action" onclick="shareSite()">🔗 단톡방 공유하기</button>
-    </div>
-
-    <!-- 메인 자소서 계산기 카드 -->
-    <main class="card card-highlight">
-      <div class="status-bar">
-        <div>
-          <span id="activePresetBadge" class="preset-indicator">범용 자소서 모드</span>
-          <span class="save-badge">● 실시간 로컬 안전 저장 중</span>
-        </div>
-        <span id="charCountLabel" style="color: var(--text); font-weight: 700;">0 자</span>
-      </div>
-
-      <textarea id="resumeText" placeholder="자기소개서 문항이나 내용을 입력하세요. 글자수, 공백, 2Byte/3Byte가 실시간으로 계산되며 브라우저를 닫아도 복원됩니다..."></textarea>
-      
-      <div id="printArea" class="print-content"></div>
-
-      <div class="stats-grid">
-        <div class="stat-box">
-          <div class="stat-title">공백 포함 글자수</div>
-          <div class="stat-value" id="countWithSpace">0</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-title">공백 제외 글자수</div>
-          <div class="stat-value" id="countWithoutSpace">0</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-title">대기업 규격 (2Byte)</div>
-          <div class="stat-value highlight" id="count2Byte">0 B</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-title">공기업/NCS (3Byte)</div>
-          <div class="stat-value highlight" id="count3Byte">0 B</div>
+    <!-- 탭 1: 메인 계산기 & 바이트 다이어트 -->
+    <div id="calculatorTab" class="tab-content active">
+      <div class="preset-container">
+        <div class="preset-title">🏢 주요 기업 규격 원클릭 세팅:</div>
+        <div class="preset-chips">
+          <button class="chip-btn active" onclick="applyPreset('default')">🌐 범용 모드</button>
+          <button class="chip-btn" onclick="applyPreset('samsung')">삼성그룹 (2B/1000자)</button>
+          <button class="chip-btn" onclick="applyPreset('hyundai')">현대차 (글자수 엄격)</button>
+          <button class="chip-btn" onclick="applyPreset('kepco')">한국전력 (UTF-8 3B)</button>
+          <button class="chip-btn" onclick="applyPreset('nhis')">건보공단 (UTF-8 3B)</button>
+          <button class="chip-btn" onclick="applyPreset('sk')">SK그룹 (2B/1000자)</button>
         </div>
       </div>
 
-      <div class="warning-box" id="warningBox">
-        <strong style="color: var(--danger); font-size: 1rem;">⚠️ 블라인드 채용 감점 단어 감지됨!</strong>
-        <div id="warningWords" style="color: #991b1b; margin-top: 4px; font-weight: 600;"></div>
-      </div>
-    </main>
+      <main class="card card-highlight">
+        <div class="editor-toolbar">
+          <div>
+            <span id="activePresetBadge" style="font-size: 0.8rem; font-weight: 800; background: #dbeafe; color: #1e40af; padding: 4px 8px; border-radius: 4px;">범용 자소서 모드</span>
+            <span style="color: var(--success); font-weight: 700; font-size: 0.85rem; margin-left: 6px;">● 브라우저 실시간 안전 저장</span>
+          </div>
+          <div style="display: flex; gap: 8px;">
+            <button class="btn-diet" onclick="autoDietText()">✂️ 바이트 긴급 다이어트 (군더더기 축약)</button>
+            <button class="chip-btn" onclick="printDoc()">📄 A4 출력/PDF</button>
+          </div>
+        </div>
 
-    <div class="print-footer">
-      Document generated by ByteCheck (bytechecktool.com)
+        <textarea id="resumeText" placeholder="자기소개서 문항이나 내용을 입력하세요. 글자수, 공백, 2Byte/3Byte가 실시간 연산되며 브라우저를 닫아도 복원됩니다..."></textarea>
+        <div id="printArea" class="print-content"></div>
+
+        <div class="stats-grid">
+          <div class="stat-box">
+            <div class="stat-title">공백 포함 글자수</div>
+            <div class="stat-value" id="countWithSpace">0</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-title">공백 제외 글자수</div>
+            <div class="stat-value" id="countWithoutSpace">0</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-title">대기업 규격 (2Byte)</div>
+            <div class="stat-value highlight" id="count2Byte">0 B</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-title">공기업/NCS (3Byte)</div>
+            <div class="stat-value highlight" id="count3Byte">0 B</div>
+          </div>
+        </div>
+
+        <div class="warning-box" id="warningBox">
+          <strong style="color: var(--danger); font-size: 1rem;">⚠️ 블라인드 채용 감점 단어 감지됨!</strong>
+          <div id="warningWords" style="color: #991b1b; margin-top: 4px; font-weight: 600;"></div>
+        </div>
+      </main>
     </div>
+
+    <!-- 탭 2: 경력기술서 STAR 성과 빌더 -->
+    <div id="starTab" class="tab-content">
+      <div class="card card-highlight">
+        <div class="section-title">
+          <span>💼</span> 경력직 STAR 합격 성과문장 원클릭 빌더
+        </div>
+        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">
+          신입과 달리 경력직 서류는 **정량적 성과 중심**이어야 합니다. 아래 항목을 입력하면 원티드/Notion/사람인 표준 STAR 문장으로 자동 조합됩니다.
+        </p>
+
+        <div class="form-group">
+          <label class="form-label">1. 프로젝트/업무명 (Situation & Task)</label>
+          <input type="text" id="starProject" class="form-input" placeholder="예: 전사 구매 시스템 고도화 및 DB 최적화">
+        </div>
+        <div class="form-group">
+          <label class="form-label">2. 내가 취한 핵심 액션 및 역할 (Action)</label>
+          <input type="text" id="starAction" class="form-input" placeholder="예: 인덱스 재설계 및 불필요 쿼리 튜닝 주도">
+        </div>
+        <div class="form-group">
+          <label class="form-label">3. 달성한 정량적 수치 성과 (Result)</label>
+          <input type="text" id="starResult" class="form-input" placeholder="예: 데이터 조회 응답 속도 42% 단축 및 서버 비용 월 300만 원 절감">
+        </div>
+
+        <button class="btn-download-main" style="width: 100%; margin-top: 8px;" onclick="buildStarSentence()">✨ STAR 성과 문장 자동 조립하기</button>
+
+        <div id="starOutput" class="star-result-box" style="display: none;"></div>
+        <button id="btnCopyStar" class="btn-action" style="display: none; width: 100%; margin-top: 8px; justify-content: center;" onclick="copyStarSentence()">📋 완성된 STAR 문장 1초 복사</button>
+      </div>
+    </div>
+
+    <!-- 탭 3: 서류 마감 5분 전 체크리스트 -->
+    <div id="checkTab" class="tab-content">
+      <div class="card card-highlight">
+        <div class="section-title">
+          <span>🛡️</span> 서류 제출 직전 5초 광탈 방지 체크리스트
+        </div>
+        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">
+          최종 제출 버튼을 누르기 전, 사소한 실수로 서류가 즉시 탈락되는 것을 방지하기 위해 반드시 점검하세요.
+        </p>
+
+        <div class="checklist-group">
+          <label class="checklist-item">
+            <input type="checkbox" onchange="updateCheckStatus()">
+            <span><strong>타사 복붙 실수 검증:</strong> 타 기업 이름이나 지원 직무가 오타로 남아있지 않습니까?</span>
+          </label>
+          <label class="checklist-item">
+            <input type="checkbox" onchange="updateCheckStatus()">
+            <span><strong>블라인드 위반 단어:</strong> 가족관계, 출신학교명, 지역명을 완벽히 제거하셨습니까?</span>
+          </label>
+          <label class="checklist-item">
+            <input type="checkbox" onchange="updateCheckStatus()">
+            <span><strong>맞춤법 및 띄어쓰기:</strong> 되/돼, 로서/로써, 며칠/몇일 등 치명적 맞춤법을 확인하셨습니까?</span>
+          </label>
+          <label class="checklist-item">
+            <input type="checkbox" onchange="updateCheckStatus()">
+            <span><strong>바이트 및 글자수 준수:</strong> 지원 기업의 2B/3B 기준 초과 경고가 뜨지 않습니까?</span>
+          </label>
+        </div>
+
+        <div id="checkSuccessBadge" style="display: none; margin-top: 16px; padding: 14px; background: var(--success-bg); border: 2px solid var(--success); border-radius: 8px; text-align: center; color: var(--success); font-weight: 800;">
+          🎉 모든 핵심 검증이 완료되었습니다! 자신 있게 제출하세요!
+        </div>
+      </div>
+    </div>
+
+    <div class="print-footer">Document generated by ByteCheck (bytechecktool.com)</div>
 
     <!-- 정규 서식 다운로드 센터 -->
     <section class="card download-card">
@@ -302,7 +370,7 @@
       </div>
     </section>
 
-    <!-- 취업 & 이직 실전 칼럼 (가독성 높은 아코디언 방식) -->
+    <!-- 취업 & 이직 실전 칼럼 (아코디언 방식) -->
     <section class="card article-card">
       <div class="section-title">
         <span>💡</span> 취업·이직 성공을 위한 실전 전략 칼럼 (체류 필독서)
@@ -310,10 +378,7 @@
 
       <div class="accordion-item active">
         <div class="accordion-header" onclick="toggleAccordion(this)">
-          <div>
-            <span class="article-tag tag-recruit">신입 공채</span>
-            <span>1. 서류 탈락을 피하는 자소서 '첫 문장' 두괄식 작성 공식</span>
-          </div>
+          <div><span class="badge-2b" style="margin-right: 8px;">신입 공채</span>1. 서류 탈락을 피하는 자소서 '첫 문장' 두괄식 작성 공식</div>
           <span class="accordion-arrow">▲</span>
         </div>
         <div class="accordion-body">
@@ -322,7 +387,7 @@
             "저는 화목한 가정에서 자라 성실함을 배웠습니다"와 같은 진부한 도입부는 즉시 탈락 대상입니다.
             <strong>[직무 핵심 역량 키워드 + 달성한 정량적 수치]</strong>를 첫 문장에 배치하는 두괄식 구조를 취해야 합니다.
           </p>
-          <div class="article-tip-box">
+          <div style="margin-top: 10px; padding: 10px; background: #f8fafc; border: 1.5px dashed var(--border-dark); border-radius: 6px;">
             <strong>✍️ 실전 예시 교정:</strong><br>
             (수정 전) "저는 평소 꼼꼼한 성격으로 동아리에서 회계를 맡아 열심히 일했습니다."<br>
             (수정 후) <strong>"[데이터 분석 역량으로 예산 누수 18% 절감] 1년간 4,000만 원 규모의 예산을 집행하며 단 한 건의 오차 없이 마감한 경험이 있습니다."</strong>
@@ -332,10 +397,7 @@
 
       <div class="accordion-item">
         <div class="accordion-header" onclick="toggleAccordion(this)">
-          <div>
-            <span class="article-tag tag-career">이직 & 경력직</span>
-            <span>2. 이직러 필수: 신입 자소서와 경력기술서의 결정적 차이 3가지</span>
-          </div>
+          <div><span class="badge-3b" style="margin-right: 8px;">이직·경력직</span>2. 이직러 필수: 신입 자소서와 경력기술서의 결정적 차이 3가지</div>
           <span class="accordion-arrow">▼</span>
         </div>
         <div class="accordion-body">
@@ -343,30 +405,10 @@
             회사를 옮기려는 경력직 지원자가 가장 많이 하는 실수가 <strong>'신입 공채 스타일의 감성적 자소서'</strong>를 그대로 내는 것입니다.
             이직 시장에서 기업이 원하는 것은 잠재력이 아닌 <strong>"당장 내일부터 투입되어 돈을 벌어다 줄 수 있는가"</strong>입니다.
           </p>
-          <div class="article-tip-box">
+          <div style="margin-top: 10px; padding: 10px; background: #f8fafc; border: 1.5px dashed var(--border-dark); border-radius: 6px;">
             <strong>📌 경력직 핵심 체크포인트:</strong><br>
             1. <strong>과정보다 성과 중심:</strong> "어떤 툴을 썼다"가 아니라 "그 툴로 전환율 몇 % 상승, 개발 기간 몇 주 단축"을 명시하세요.<br>
             2. <strong>연봉 협상 카드 확보:</strong> 전 직장 원천징수영수증과 성과 포트폴리오를 대조하여 목표 실수령액을 산출해 두어야 협상 주도권을 잡습니다.
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <div class="accordion-header" onclick="toggleAccordion(this)">
-          <div>
-            <span class="article-tag tag-interview">면접 전형</span>
-            <span>3. "마지막으로 하고 싶은 말 있나요?" 합격을 결정짓는 역질문</span>
-          </div>
-          <span class="accordion-arrow">▼</span>
-        </div>
-        <div class="accordion-body">
-          <p>
-            면접 말미에 나오는 이 질문에 "특별히 없습니다"라고 답하는 것은 기회를 스스로 버리는 행위입니다.
-            반대로 "야근이 많은가요?" 같은 처우 질문은 감점 요인입니다. <strong>해당 부서가 당면한 과제에 내가 어떻게 기여할지</strong>를 묻는 역질문을 던져야 합니다.
-          </p>
-          <div class="article-tip-box">
-            <strong>🎯 추천 역질문 모범 답안:</strong><br>
-            "제가 입사하게 된다면, 팀장님과 부서원분들께서 저에게 <strong>입사 후 3개월 이내에 가장 우선적으로 기대하시는 핵심 과제</strong>는 무엇인지 여쭙고 싶습니다."
           </div>
         </div>
       </div>
@@ -393,17 +435,15 @@
 
     <!-- 기업별 규격 족보 -->
     <section class="card guide-card">
-      <div class="section-title">
-        <span>📖</span> 2026 주요 기업별 글자수·바이트 규격 족보
-      </div>
+      <div class="section-title"><span>📖</span> 2026 주요 기업별 글자수·바이트 규격 족보</div>
       <div style="overflow-x: auto;">
         <table class="custom-table">
           <thead>
             <tr>
-              <th>기업 / 기관명</th>
+              <th>기업명</th>
               <th>연산 규격</th>
               <th>엔터(줄바꿈)</th>
-              <th>특이사항 및 주의점</th>
+              <th>특이사항</th>
             </tr>
           </thead>
           <tbody>
@@ -411,7 +451,7 @@
               <td><strong>삼성그룹</strong></td>
               <td><span class="badge-2b">EUC-KR (2Byte)</span></td>
               <td>2Byte</td>
-              <td>문항당 1,000자 / 영문·숫자 1Byte 계산</td>
+              <td>문항당 1,000자 / 영문·숫자 1Byte</td>
             </tr>
             <tr>
               <td><strong>현대자동차</strong></td>
@@ -420,16 +460,10 @@
               <td>공백 포함 순수 글자수로 제한</td>
             </tr>
             <tr>
-              <td><strong>SK그룹</strong></td>
-              <td><span class="badge-2b">EUC-KR (2Byte)</span></td>
-              <td>2Byte</td>
-              <td>문항별 1,000자 내외 / 맞춤법 검사기 연동</td>
-            </tr>
-            <tr>
               <td><strong>한국전력공사</strong></td>
               <td><span class="badge-3b">UTF-8 (3Byte)</span></td>
               <td>2Byte</td>
-              <td>포털 글자수 계산기 대비 바이트 1.5배 초과 주의</td>
+              <td>포털 대비 바이트 1.5배 초과 주의</td>
             </tr>
             <tr>
               <td><strong>국민건강보험공단</strong></td>
@@ -437,84 +471,12 @@
               <td>2Byte</td>
               <td>공공기관 표준 UTF-8 채택</td>
             </tr>
-            <tr>
-              <td><strong>코레일 (한국철도)</strong></td>
-              <td><span class="badge-2b">글자수 기준</span></td>
-              <td>1자 취급</td>
-              <td>띄어쓰기 포함 순수 글자수 엄격 마감</td>
-            </tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <!-- 채용 & 면접 캘린더 -->
-    <section class="card board-card">
-      <div class="section-title" style="justify-content: space-between; flex-wrap: wrap;">
-        <div><span>📢</span> 2026 주요 기업 채용 & 면접 캘린더</div>
-        <div class="filter-group">
-          <button class="filter-btn active" onclick="filterSchedule('all')">전체</button>
-          <button class="filter-btn" onclick="filterSchedule('major')">대기업</button>
-          <button class="filter-btn" onclick="filterSchedule('public')">공기업</button>
-          <button class="filter-btn" onclick="filterSchedule('finance')">금융권</button>
-        </div>
-      </div>
-
-      <div style="overflow-x: auto;">
-        <table class="custom-table">
-          <thead>
-            <tr>
-              <th>기업명</th>
-              <th>전형 구분</th>
-              <th>서류 마감 / 필기·면접 일자</th>
-              <th>남은 일정</th>
-              <th>공식 채용링크</th>
-            </tr>
-          </thead>
-          <tbody id="scheduleBody">
-            <tr data-type="major">
-              <td><strong>삼성그룹 (3급 신입)</strong></td>
-              <td>면접 전형</td>
-              <td>직무적합성 및 직무/임원 면접 진행</td>
-              <td><span class="badge-3b">면접 시즌</span></td>
-              <td><a href="https://www.samsungcareers.com" target="_blank" rel="noopener" style="color: var(--primary); font-weight: 700;">공고 확인</a></td>
-            </tr>
-            <tr data-type="major">
-              <td><strong>현대자동차</strong></td>
-              <td>수시 채용</td>
-              <td>연구개발(R&D)/생산 부문 상시 접수</td>
-              <td><span class="badge-2b">상시 접수</span></td>
-              <td><a href="https://talent.hyundai.com" target="_blank" rel="noopener" style="color: var(--primary); font-weight: 700;">공고 확인</a></td>
-            </tr>
-            <tr data-type="public">
-              <td><strong>한국전력공사</strong></td>
-              <td>서류 / 필기</td>
-              <td>NCS 직무능력검사 및 종합면접</td>
-              <td><span style="background: #fee2e2; color: #b91c1c; padding: 4px 8px; border-radius: 4px; font-weight: 700;">마감 임박</span></td>
-              <td><a href="https://recruit.kepco.co.kr" target="_blank" rel="noopener" style="color: var(--primary); font-weight: 700;">공고 확인</a></td>
-            </tr>
-            <tr data-type="public">
-              <td><strong>국민건강보험공단</strong></td>
-              <td>면접 전형</td>
-              <td>토론 및 다대일 인성/경험 면접</td>
-              <td><span class="badge-3b">면접 진행</span></td>
-              <td><a href="https://nhis.ncsys.co.kr" target="_blank" rel="noopener" style="color: var(--primary); font-weight: 700;">공고 확인</a></td>
-            </tr>
-            <tr data-type="finance">
-              <td><strong>IBK기업은행</strong></td>
-              <td>실무 / 임원면접</td>
-              <td>역량면접 및 최종 임원면접</td>
-              <td><span class="badge-3b">면접 대비</span></td>
-              <td><a href="https://ibk.recruitin.co.kr" target="_blank" rel="noopener" style="color: var(--primary); font-weight: 700;">공고 확인</a></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <div class="ad-slot">
-      <span>광고 영역 (Google AdSense Bottom)</span>
-    </div>
+    <div class="ad-slot"><span>광고 영역 (Google AdSense Bottom)</span></div>
 
   </div>
 
@@ -534,7 +496,7 @@
       <span>|</span>
       <a href="javascript:void(0)" onclick="openModal('contact')">문의하기</a>
     </div>
-    <p>본 사이트에서 제공하는 글자수 계산 및 채용 일정, 취업 칼럼은 참고용 정보이며 법적 효력이 없습니다.</p>
+    <p>본 사이트에서 제공하는 계산 및 서식, 채용 일정 정보는 참고용이며 법적 효력이 없습니다.</p>
     <p>© 2026 ByteCheck Global. All rights reserved. | Contact: official.bytecheck@gmail.com</p>
   </footer>
 
@@ -552,7 +514,6 @@
     const countWithoutSpace = document.getElementById('countWithoutSpace');
     const count2Byte = document.getElementById('count2Byte');
     const count3Byte = document.getElementById('count3Byte');
-    const charCountLabel = document.getElementById('charCountLabel');
     const warningBox = document.getElementById('warningBox');
     const warningWords = document.getElementById('warningWords');
     const printArea = document.getElementById('printArea');
@@ -585,15 +546,78 @@
       countWithoutSpace.innerText = lenWithoutSpace.toLocaleString();
       count2Byte.innerText = bytes2.toLocaleString() + ' B';
       count3Byte.innerText = bytes3.toLocaleString() + ' B';
-      charCountLabel.innerText = lenWithSpace.toLocaleString() + ' 자 작성 중';
 
       const detected = prohibitedKeywords.filter(k => text.includes(k));
       if (detected.length > 0) {
         warningBox.classList.add('active');
-        warningWords.innerHTML = `검출된 주의 단어: <strong>${detected.join(', ')}</strong> (가족, 출신 학교, 출신지 감점 주의)`;
+        warningWords.innerHTML = `검출된 주의 단어: <strong>${detected.join(', ')}</strong> (블라인드 감점 주의)`;
       } else {
         warningBox.classList.remove('active');
       }
+    }
+
+    // 🔥 킬러 기능 1: 바이트 긴급 다이어트 (군더더기 축약)
+    function autoDietText() {
+      let t = textarea.value;
+      if (!t.trim()) { alert('축약할 자기소개서 내용을 먼저 입력해 주세요.'); return; }
+
+      const dietRules = [
+        { from: /에 대하여/g, to: '에 대해' },
+        { from: /의 경우/g, to: '은' },
+        { from: /를 진행하였습니다/g, to: '를 수행했습니다' },
+        { from: /을 진행하였습니다/g, to: '을 수행했습니다' },
+        { from: /생각하고 있습니다/g, to: '생각합니다' },
+        { from: /할 수 있었습니다/g, to: '했습니다' },
+        { from: /다양한/g, to: '' },
+        { from: /매우 /g, to: '' },
+        { from: /정말로 /g, to: '' },
+        { from: /많은 /g, to: '' }
+      ];
+
+      const beforeLen = t.length;
+      dietRules.forEach(rule => { t = t.replace(rule.from, rule.to); });
+      textarea.value = t;
+      analyzeText();
+
+      const reduced = beforeLen - t.length;
+      alert(`✂️ 바이트 다이어트 완료: 군더더기 표현을 정제하여 총 ${reduced}자를 절감했습니다!`);
+    }
+
+    // 🔥 킬러 기능 2: STAR 성과 문장 빌더
+    function buildStarSentence() {
+      const p = document.getElementById('starProject').value.trim();
+      const a = document.getElementById('starAction').value.trim();
+      const r = document.getElementById('starResult').value.trim();
+
+      if (!p || !a || !r) { alert('프로젝트, 액션, 수치 성과 3가지를 모두 입력해 주세요.'); return; }
+
+      const formatted = `[주요 프로젝트: ${p}]\n- 역할 및 액션: ${a}\n- 핵심 정량 성과: ${r}\n→ 기여 요약: "${p} 프로젝트에서 ${a}을 주도하여, 최종적으로 ${r} 성과를 달성함."`;
+      
+      const out = document.getElementById('starOutput');
+      out.innerText = formatted;
+      out.style.display = 'block';
+      document.getElementById('btnCopyStar').style.display = 'inline-flex';
+    }
+
+    function copyStarSentence() {
+      const text = document.getElementById('starOutput').innerText;
+      navigator.clipboard.writeText(text);
+      alert('STAR 성과 문장이 클립보드에 복사되었습니다. 이력서/포트폴리오에 붙여넣으세요!');
+    }
+
+    // 🔥 킬러 기능 3: 탭 전환
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      event.target.classList.add('active');
+      document.getElementById(tabId).classList.add('active');
+    }
+
+    // 체크리스트 점검
+    function updateCheckStatus() {
+      const checks = document.querySelectorAll('#checkTab input[type="checkbox"]');
+      const allChecked = Array.from(checks).every(c => c.checked);
+      document.getElementById('checkSuccessBadge').style.display = allChecked ? 'block' : 'none';
     }
 
     function applyPreset(type) {
@@ -601,12 +625,12 @@
       event.target.classList.add('active');
 
       const presets = {
-        default: { name: "범용 자소서 모드", ph: "자기소개서 문항이나 내용을 입력하세요. 실시간 바이트 및 글자수 계산이 수행됩니다." },
-        samsung: { name: "삼성그룹 전용 (2Byte 기준)", ph: "삼성그룹 지원서 작성 중: 문항별 통상 1,000자(공백포함 2,000 Byte) 규격을 준수하세요." },
-        hyundai: { name: "현대자동차 전용 (순수 글자수)", ph: "현대자동차 지원서 작성 중: 공백 포함 순수 글자수를 기준으로 카운트됩니다." },
-        kepco: { name: "한국전력공사 전용 (UTF-8 3Byte)", ph: "한국전력공사 지원서 작성 중: 포털 대비 한글이 3바이트로 계산되므로 3Byte 수치를 확인하세요." },
-        nhis: { name: "건강보험공단 전용 (UTF-8 3Byte)", ph: "건보 지원서 작성 중: NCS 기반 공공기관 표준 3Byte 규격을 주의하세요." },
-        sk: { name: "SK그룹 전용 (2Byte 기준)", ph: "SK그룹 지원서 작성 중: 문항당 약 1,000자 내외의 2Byte 규격이 적용됩니다." }
+        default: { name: "범용 자소서 모드", ph: "자기소개서 문항이나 내용을 입력하세요." },
+        samsung: { name: "삼성그룹 (2Byte)", ph: "삼성그룹 문항당 통상 1,000자(2,000 Byte) 규격을 확인하세요." },
+        hyundai: { name: "현대자동차 (글자수)", ph: "현대자동차 공백 포함 순수 글자수를 확인하세요." },
+        kepco: { name: "한국전력공사 (3Byte)", ph: "공공기관 전산망 UTF-8 3Byte 수치를 엄격히 확인하세요." },
+        nhis: { name: "건강보험공단 (3Byte)", ph: "건보 전형 NCS 기반 3Byte 규격을 확인하세요." },
+        sk: { name: "SK그룹 (2Byte)", ph: "SK그룹 문항별 약 1,000자 내외 규격을 준수하세요." }
       };
 
       const sel = presets[type] || presets.default;
@@ -631,7 +655,6 @@
       }
     }
 
-    // hits.sh 중앙 서버 실시간 동기화
     function updateVisitorStats() {
       const todayStr = new Date().toISOString().substring(0, 10);
       const host = window.location.hostname || "bytechecktool.com";
@@ -679,141 +702,32 @@
         <meta charset='utf-8'>
         <title>2026 표준 입사지원서 및 자기소개서</title>
         <style>
-          body { font-family: '맑은 고딕', 'Malgun Gothic', 'Dotum', sans-serif; font-size: 10pt; line-height: 1.5; }
-          .main-title { font-size: 20pt; font-weight: bold; text-align: center; margin-bottom: 25px; letter-spacing: 8px; }
+          body { font-family: '맑은 고딕', 'Malgun Gothic', sans-serif; font-size: 10pt; line-height: 1.5; }
+          .main-title { font-size: 20pt; font-weight: bold; text-align: center; margin-bottom: 25px; }
           table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
           th, td { border: 1px solid #333333; padding: 7px 8px; font-size: 9.5pt; }
           th { background-color: #f1f5f9; text-align: center; font-weight: bold; }
-          .photo-box { width: 120px; height: 150px; text-align: center; vertical-align: middle; color: #888; font-size: 9pt; background: #fafafa; }
-          .sec-header { font-size: 11pt; font-weight: bold; margin-top: 15px; margin-bottom: 6px; border-left: 5px solid #1d4ed8; padding-left: 8px; color: #0f172a; }
-          .q-box { font-weight: bold; background-color: #f8fafc; padding: 8px 10px; border: 1px solid #333; margin-top: 15px; }
-          .a-box { border: 1px solid #333; border-top: none; height: 170px; padding: 10px; font-size: 9.5pt; color: #777; vertical-align: top; }
+          .sec-header { font-size: 11pt; font-weight: bold; margin-top: 15px; margin-bottom: 6px; border-left: 5px solid #1d4ed8; padding-left: 8px; }
         </style>
       </head>
       <body>
         <div class="main-title">입 사 지 원 서</div>
-
         <div class="sec-header">1. 기본 인적사항</div>
         <table>
           <tr>
-            <td rowspan="4" class="photo-box">사 진<br>(3cm × 4cm)</td>
-            <th>성 명</th>
-            <td>(한글)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(영문)</td>
-            <th>생년월일</th>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;년&nbsp;&nbsp;&nbsp;월&nbsp;&nbsp;&nbsp;일 (만&nbsp;&nbsp;&nbsp;세)</td>
+            <th style="width:20%;">성 명</th><td style="width:30%;"></td>
+            <th style="width:20%;">생년월일</th><td style="width:30%;"></td>
           </tr>
           <tr>
-            <th>비상연락처</th>
-            <td></td>
-            <th>E-mail</th>
-            <td></td>
-          </tr>
-          <tr>
-            <th>현 주 소</th>
-            <td colspan="3"></td>
-          </tr>
-          <tr>
-            <th>지원 직무</th>
-            <td></td>
-            <th>희망 연봉</th>
-            <td>회사 내규에 따름</td>
+            <th>비상연락처</th><td></td><th>E-mail</th><td></td>
           </tr>
         </table>
-
-        <div class="sec-header">2. 학력 사항</div>
-        <table>
-          <tr>
-            <th style="width:25%;">재학 기간</th>
-            <th style="width:25%;">학교명</th>
-            <th style="width:25%;">전공</th>
-            <th style="width:12%;">졸업구분</th>
-            <th style="width:13%;">학점</th>
-          </tr>
-          <tr>
-            <td style="text-align:center;">&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;~&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;</td>
-            <td></td>
-            <td></td>
-            <td style="text-align:center;">졸업</td>
-            <td style="text-align:center;">/ 4.5</td>
-          </tr>
-          <tr>
-            <td style="text-align:center;">&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;~&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;</td>
-            <td></td>
-            <td></td>
-            <td style="text-align:center;">졸업/재학</td>
-            <td style="text-align:center;">/ 4.5</td>
-          </tr>
-        </table>
-
-        <div class="sec-header">3. 직무 경력 및 사회활동</div>
-        <table>
-          <tr>
-            <th style="width:25%;">활동 기간</th>
-            <th style="width:25%;">기관 / 회사명</th>
-            <th style="width:20%;">직급 / 역할</th>
-            <th style="width:30%;">주요 수행 업무 및 성과</th>
-          </tr>
-          <tr>
-            <td style="text-align:center;">&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;~&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;</td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td style="text-align:center;">&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;~&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;</td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </table>
-
-        <div class="sec-header">4. 자격증 및 공인 어학성적</div>
-        <table>
-          <tr>
-            <th style="width:25%;">취득일자</th>
-            <th style="width:30%;">자격 / 어학시험명</th>
-            <th style="width:20%;">등급 / 점수</th>
-            <th style="width:25%;">발행처 / 주관기관</th>
-          </tr>
-          <tr>
-            <td style="text-align:center;">&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;</td>
-            <td></td>
-            <td style="text-align:center;"></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td style="text-align:center;">&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;</td>
-            <td></td>
-            <td style="text-align:center;"></td>
-            <td></td>
-          </tr>
-        </table>
-
-        <br style="page-break-before:always;" />
-
-        <div class="main-title" style="margin-top:20px;">자 기 소 개 서</div>
-
-        <div class="q-box">1. 지원 직무에 관심을 갖게 된 계기와 이를 위해 노력한 경험을 구체적으로 서술해 주십시오.</div>
-        <div class="a-box">내용을 입력하세요. (제출 전 bytechecktool.com에서 글자수 및 2Byte/3Byte 규격을 사전 검증하세요.)</div>
-
-        <div class="q-box">2. 예상치 못한 문제에 직면했을 때 창의적이거나 논리적으로 해결했던 경험을 서술해 주십시오.</div>
-        <div class="a-box">내용을 입력하세요.</div>
-
-        <div class="q-box">3. 공동의 목표를 달성하기 위해 타인과 협력하고 배려했던 경험을 서술해 주십시오.</div>
-        <div class="a-box">내용을 입력하세요.</div>
-
-        <div class="q-box">4. 입사 후 직무 전문가로서 이루고자 하는 구체적인 포부와 목표를 서술해 주십시오.</div>
-        <div class="a-box">내용을 입력하세요.</div>
-
-        <div style="margin-top:40px; text-align:center; font-size:10pt;">
-          위 기재 사항은 사실과 다름없음을 확인합니다.<br><br>
-          2026년&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;월&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;일<br><br>
-          지 원 자 : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(인)
-        </div>
+        <div class="sec-header">2. 자기소개서 (핵심 역량)</div>
+        <div style="border: 1px solid #333; height: 300px; padding: 10px;">내용을 입력하세요. (제출 전 bytechecktool.com에서 바이트 사전 검증 필수)</div>
       </body>
       </html>
       `;
-      triggerDownload(htmlDoc, '2026_표준_입사지원서_자기소개서.doc', 'application/msword;charset=utf-8');
+      triggerDownload(htmlDoc, '2026_표준_입사지원서.doc', 'application/msword;charset=utf-8');
     }
 
     function downloadBlindResumeDoc() {
@@ -821,78 +735,21 @@
       <html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
       <head>
         <meta charset='utf-8'>
-        <title>공공기관 블라인드 입사지원서</title>
+        <title>블라인드 입사지원서</title>
         <style>
-          body { font-family: '맑은 고딕', 'Malgun Gothic', 'Dotum', sans-serif; font-size: 10pt; line-height: 1.5; }
+          body { font-family: '맑은 고딕', 'Malgun Gothic', sans-serif; font-size: 10pt; line-height: 1.5; }
           .main-title { font-size: 20pt; font-weight: bold; text-align: center; margin-bottom: 25px; }
           table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
           th, td { border: 1px solid #333333; padding: 7px 8px; font-size: 9.5pt; }
           th { background-color: #f1f5f9; text-align: center; font-weight: bold; }
-          .notice-box { border: 2px solid #dc2626; padding: 10px; margin-bottom: 15px; font-size: 9pt; color: #991b1b; }
-          .sec-header { font-size: 11pt; font-weight: bold; margin-top: 15px; margin-bottom: 6px; border-left: 5px solid #1d4ed8; padding-left: 8px; }
-          .q-box { font-weight: bold; background-color: #f8fafc; padding: 8px 10px; border: 1px solid #333; margin-top: 15px; }
-          .a-box { border: 1px solid #333; border-top: none; height: 170px; padding: 10px; font-size: 9.5pt; color: #777; vertical-align: top; }
         </style>
       </head>
       <body>
-        <div class="main-title">블라인드 입사지원서 및 직무기술서</div>
-
-        <div class="notice-box">
-          <strong>※ 블라인드 채용 유의사항:</strong> 지원서 작성 시 출신학교, 출신지역, 가족관계, 성별, 연령을 유추할 수 있는 일체의 단어 기재가 금지됩니다. (위반 시 서류 평가 감점 및 불합격 처리)
-        </div>
-
-        <div class="sec-header">1. 지원자 식별정보</div>
+        <div class="main-title">블라인드 채용 입사지원서</div>
         <table>
-          <tr>
-            <th style="width:20%;">수험(접수)번호</th>
-            <td style="width:30%;"></td>
-            <th style="width:20%;">지원 분야(직무)</th>
-            <td style="width:30%;"></td>
-          </tr>
-          <tr>
-            <th>비상연락처</th>
-            <td></td>
-            <th>E-mail</th>
-            <td></td>
-          </tr>
+          <tr><th style="width:25%;">수험(접수)번호</th><td></td><th style="width:25%;">지원직무</th><td></td></tr>
         </table>
-
-        <div class="sec-header">2. 직무 관련 자격 및 교육 사항 (NCS 기반)</div>
-        <table>
-          <tr>
-            <th style="width:25%;">취득 / 수료일</th>
-            <th style="width:40%;">자격증명 / 직무 교육과정명</th>
-            <th style="width:35%;">발급 / 주관 기관</th>
-          </tr>
-          <tr>
-            <td style="text-align:center;">&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;</td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td style="text-align:center;">&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;</td>
-            <td></td>
-            <td></td>
-          </tr>
-        </table>
-
-        <br style="page-break-before:always;" />
-
-        <div class="main-title" style="margin-top:20px;">NCS 기반 직무수행 자기소개서</div>
-
-        <div class="q-box">[문항 1] 지원 직무와 관련된 본인의 역량 및 전문성을 개발하기 위해 노력했던 활동을 기술해 주십시오. (UTF-8 3Byte 기준)</div>
-        <div class="a-box">내용을 입력하세요. (공공기관 전산망은 UTF-8 3Byte를 사용하므로 bytechecktool.com에서 3바이트 수치를 반드시 확인하세요.)</div>
-
-        <div class="q-box">[문항 2] 원칙과 절차를 준수하여 공정하고 정직하게 과업을 완수한 경험을 구체적으로 기술해 주십시오.</div>
-        <div class="a-box">내용을 입력하세요.</div>
-
-        <div class="q-box">[문항 3] 공동의 과업 중 갈등이 발생했을 때 상호 존중과 배려를 바탕으로 해결한 사례를 기술해 주십시오.</div>
-        <div class="a-box">내용을 입력하세요.</div>
-
-        <div style="margin-top:40px; text-align:center; font-size:10pt;">
-          2026년&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;월&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;일<br><br>
-          지원자 성명 : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(인)
-        </div>
+        <div style="border: 1px solid #333; height: 300px; padding: 10px; margin-top: 20px;">[NCS 직무수행 자소서] 내용을 입력하세요. (UTF-8 3Byte 기준)</div>
       </body>
       </html>
       `;
@@ -909,29 +766,18 @@
 
     function shareSite() {
       if (navigator.share) {
-        navigator.share({ title: 'ByteCheck 자소서 바이트 & 취업 정보 허브', url: window.location.href }).catch(() => {});
+        navigator.share({ title: 'ByteCheck 취업·이직 올인원 허브', url: window.location.href }).catch(() => {});
       } else {
         navigator.clipboard.writeText(window.location.href);
-        alert('사이트 주소가 복사되었습니다. 단톡방에 공유해 보세요!');
+        alert('사이트 주소가 복사되었습니다. 취업 단톡방에 공유해 보세요!');
       }
     }
 
-    function filterSchedule(category) {
-      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-      event.target.classList.add('active');
-
-      const rows = document.querySelectorAll('#scheduleBody tr');
-      rows.forEach(row => {
-        if (category === 'all' || row.getAttribute('data-type') === category) row.style.display = '';
-        else row.style.display = 'none';
-      });
-    }
-
     const legalTexts = {
-      terms: { title: "이용약관 (Terms of Service)", body: "제1조 (목적)\n본 약관은 ByteCheck가 제공하는 글자수 계산, 무료 서식 다운로드, 취업 칼럼, 채용 일정 정보의 이용 조건을 규정합니다.\n\n제2조 (책임 한계)\n본 사이트에서 제공되는 모든 서식과 정보는 참고용이며, 공식 공고를 통해 최종 확인하시기 바랍니다." },
-      privacy: { title: "개인정보처리방침 (Privacy Policy)", body: "1. 수집 항목\n본 서비스는 회원가입을 받지 않으며 일체의 개인정보를 서버에 저장하지 않습니다.\n\n2. 로컬 브라우저 저장\n작성 중인 자소서 텍스트는 이용자의 기기(로컬 브라우저)에만 임시 보관됩니다." },
-      disclaimer: { title: "면책조항 (Disclaimer)", body: "본 사이트의 무료 서식 및 전략 칼럼, 채용 일정을 신뢰하여 발생한 서류 탈락, 일정 착오 등의 결과에 대해 운영자는 법적 책임을 지지 않습니다." },
-      contact: { title: "문의하기 (Contact Us)", body: "오류 제보 및 제휴 문의는 아래 공식 이메일로 접수해 주시기 바랍니다.\n\n📧 공식 이메일: official.bytecheck@gmail.com" }
+      terms: { title: "이용약관 (Terms of Service)", body: "제1조 (목적)\n본 약관은 ByteCheck가 제공하는 글자수 계산, 무료 서식 다운로드, 취업 정보의 이용 조건을 규정합니다." },
+      privacy: { title: "개인정보처리방침 (Privacy Policy)", body: "본 서비스는 일체의 개인정보를 서버에 저장하지 않으며 작성 텍스트는 로컬 브라우저에만 보관됩니다." },
+      disclaimer: { title: "면책조항 (Disclaimer)", body: "본 사이트의 모든 서식과 연산 결과는 참고용이며 법적 책임을 지지 않습니다." },
+      contact: { title: "문의하기 (Contact Us)", body: "공식 이메일: official.bytecheck@gmail.com" }
     };
 
     function openModal(type) {
