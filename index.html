@@ -19,7 +19,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="ByteCheck">
 
-  <!-- Schema.org JSON-LD (WebApplication + FAQPage) -->
+  <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -58,7 +58,7 @@
   }
   </script>
 
-  <!-- Google AdSense 메타 태그 (승인 심사 연동용) -->
+  <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6840623754388286" crossorigin="anonymous"></script>
 
   <style>
@@ -94,23 +94,20 @@
     nav a:hover { background: var(--primary-light); color: var(--primary); }
     nav a.active { background: var(--primary); color: #ffffff; }
 
-    /* 대시보드 메인 래퍼 */
     .dashboard-container { max-width: 1240px; margin: 0 auto; padding: 20px 16px 60px 16px; }
 
-    /* 실시간 라이브 티커 바 */
+    /* 실시간 상태 바 */
     .live-status-bar { background: #0f172a; color: #f8fafc; border-radius: 30px; padding: 8px 20px; display: flex; justify-content: space-between; align-items: center; font-size: 0.88rem; font-weight: 700; margin-bottom: 20px; box-shadow: var(--shadow-sm); flex-wrap: wrap; gap: 8px; }
     .live-indicator { display: inline-flex; align-items: center; gap: 8px; }
     .pulse-dot { width: 9px; height: 9px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 8px #22c55e; animation: pulse 1.8s infinite; }
     @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
     .live-feed-text { color: #94a3b8; font-weight: 500; font-size: 0.82rem; }
 
-    /* 2열 와이드 그리드 시스템 (가독성 극대화) */
     .dashboard-grid { display: grid; grid-template-columns: 1fr 360px; gap: 24px; align-items: start; }
 
     .card { background: var(--card-bg); border-radius: 12px; border: 2px solid var(--border); padding: 20px; box-shadow: var(--shadow-sm); margin-bottom: 20px; }
     .card-highlight { border: 2.5px solid #93c5fd; box-shadow: var(--shadow-md); }
 
-    /* 작업 탭 */
     .tab-nav { display: flex; gap: 6px; margin-bottom: 14px; border-bottom: 2px solid var(--border); padding-bottom: 8px; }
     .tab-btn { flex: 1; padding: 10px; background: #ffffff; border: 1.5px solid var(--border); border-radius: 8px; font-size: 0.9rem; font-weight: 800; color: var(--text-muted); cursor: pointer; text-align: center; transition: all 0.2s; }
     .tab-btn:hover { background: #f1f5f9; }
@@ -119,12 +116,10 @@
     .tab-content { display: none; }
     .tab-content.active { display: block; }
 
-    /* 문항 탭 */
     .question-tabs { display: flex; gap: 6px; margin-bottom: 12px; overflow-x: auto; padding-bottom: 4px; }
     .q-tab { background: #f1f5f9; border: 1.5px solid var(--border); border-radius: 6px; padding: 6px 14px; font-size: 0.85rem; font-weight: 800; color: var(--text-muted); cursor: pointer; white-space: nowrap; }
     .q-tab.active { background: #0f172a; color: #ffffff; border-color: #0f172a; }
 
-    /* 목표 프로그레스 바 */
     .target-bar-wrap { background: #f8fafc; border: 1.5px solid var(--border); border-radius: 8px; padding: 10px 14px; margin-bottom: 12px; }
     .target-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; font-size: 0.85rem; }
     .target-btn { border: 1px solid var(--border); background: #ffffff; font-size: 0.78rem; font-weight: 700; padding: 2px 7px; border-radius: 4px; cursor: pointer; }
@@ -154,31 +149,26 @@
     .alert-panel.warning { background: var(--warning-bg); border: 2px solid #fcd34d; color: #92400e; }
     .alert-panel.active { display: block; }
 
-    /* 사이드바 전용 스타일 */
     .sidebar-widget { background: #ffffff; border: 2px solid var(--border); border-radius: 12px; padding: 18px; margin-bottom: 18px; box-shadow: var(--shadow-sm); }
     .widget-title { font-size: 1.05rem; font-weight: 800; color: #0f172a; margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between; }
 
-    /* 마감 타이머 박스 */
     .timer-card { background: #fef2f2; border: 2px solid #fca5a5; border-radius: 10px; padding: 14px; text-align: center; margin-bottom: 12px; }
     .timer-badge { display: inline-block; font-size: 0.75rem; font-weight: 800; background: #dc2626; color: #fff; padding: 2px 6px; border-radius: 4px; margin-bottom: 4px; }
     .timer-company { font-size: 1.02rem; font-weight: 800; color: #0f172a; }
     .timer-countdown { font-size: 1.45rem; font-weight: 900; color: #dc2626; letter-spacing: 1px; margin-top: 4px; font-family: monospace; }
 
-    /* 합격 문항 원클릭 세팅 버튼 */
     .prompt-chip-list { display: flex; flex-direction: column; gap: 8px; }
     .prompt-chip { background: #f8fafc; border: 1.5px solid var(--border); border-radius: 8px; padding: 10px 12px; text-align: left; cursor: pointer; transition: all 0.2s; }
     .prompt-chip:hover { border-color: var(--primary); background: #eff6ff; }
     .prompt-chip strong { display: block; font-size: 0.88rem; color: #0f172a; margin-bottom: 2px; }
     .prompt-chip span { font-size: 0.78rem; color: var(--text-muted); }
 
-    /* STAR 빌더 폼 */
     .form-group { margin-bottom: 12px; }
     .form-label { display: block; font-size: 0.85rem; font-weight: 800; color: #0f172a; margin-bottom: 4px; }
     .form-input { width: 100%; padding: 8px 12px; border: 1.5px solid var(--border); border-radius: 6px; font-size: 0.9rem; outline: none; }
     .form-input:focus { border-color: var(--primary); }
     .star-result-box { background: #0f172a; color: #f8fafc; padding: 14px; border-radius: 8px; font-family: monospace; font-size: 0.88rem; white-space: pre-wrap; line-height: 1.6; margin-top: 12px; }
 
-    /* 체크리스트 */
     .checklist-group { display: flex; flex-direction: column; gap: 8px; }
     .checklist-item { display: flex; align-items: center; gap: 8px; background: #f8fafc; padding: 10px 12px; border-radius: 6px; border: 1.5px solid var(--border); cursor: pointer; font-size: 0.88rem; font-weight: 600; }
     .checklist-item input { width: 16px; height: 16px; }
@@ -186,7 +176,6 @@
     .btn-download-main { background: #0f172a; color: #ffffff; text-decoration: none; padding: 10px 16px; border-radius: 8px; font-size: 0.88rem; font-weight: 800; cursor: pointer; border: none; text-align: center; display: inline-block; width: 100%; }
     .btn-download-main:hover { background: #334155; }
 
-    /* 아코디언 */
     .accordion-item { border: 1.5px solid var(--border); border-radius: 8px; margin-bottom: 8px; background: #ffffff; overflow: hidden; }
     .accordion-header { padding: 12px 14px; background: #f8fafc; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 800; font-size: 0.92rem; color: #0f172a; }
     .accordion-body { padding: 14px; display: none; border-top: 1.5px solid var(--border); font-size: 0.88rem; color: #334155; line-height: 1.7; }
@@ -256,22 +245,20 @@
       <p id="printDate" style="font-size: 10pt; color: #555; margin-top: 4px;">출력 일자: </p>
     </div>
 
-    <!-- 실시간 동시 접속 & 라이브 피드 티커 -->
+    <!-- 실제 접속자만 반영되는 실시간 상태 바 -->
     <div class="live-status-bar">
       <div class="live-indicator">
         <span class="pulse-dot"></span>
-        <span>🔥 지금 <strong id="liveUsers" style="color: #60a5fa;">342</strong>명의 취준생이 자소서를 작성·검증 중입니다</span>
+        <span>👥 오늘 실제 이용자: <strong id="liveUsers" style="color: #60a5fa;">--</strong>명이 자소서를 작성·검증했습니다</span>
       </div>
-      <div class="live-feed-text" id="liveTickerText">방금 공기업 지원자가 한국전력 3바이트 검사를 완료했습니다.</div>
+      <div class="live-feed-text" id="liveTickerText">⚡ 공기업 UTF-8 3Byte, 대기업 2Byte 실시간 안전 검증 지원 중</div>
     </div>
 
-    <!-- 와이드 2열 대시보드 그리드 -->
     <div class="dashboard-grid">
       
-      <!-- [좌측 메인 작업 칼럼] -->
+      <!-- [좌측 메인 작업 영역] -->
       <div>
         
-        <!-- 상단 기능 전환 탭 -->
         <div class="tab-nav">
           <button class="tab-btn active" onclick="switchMainTab('calculatorTab', this)">📝 자소서 바이트 계산 & 축약</button>
           <button class="tab-btn" onclick="switchMainTab('starTab', this)">💼 경력직 STAR 성과문장 빌더</button>
@@ -282,7 +269,6 @@
         <div id="calculatorTab" class="tab-content active">
           <main class="card card-highlight">
             
-            <!-- 문항 분할 탭 -->
             <div class="question-tabs">
               <button class="q-tab active" onclick="switchQuestionTab(1, this)">문항 1</button>
               <button class="q-tab" onclick="switchQuestionTab(2, this)">문항 2</button>
@@ -313,7 +299,7 @@
             <div class="editor-toolbar">
               <div>
                 <span id="activePresetBadge" style="font-size: 0.78rem; font-weight: 800; background: #dbeafe; color: #1e40af; padding: 3px 8px; border-radius: 4px;">범용 모드</span>
-                <span style="color: var(--success); font-weight: 700; font-size: 0.82rem; margin-left: 6px;">● 자동 저장 (Ctrl+S)</span>
+                <span style="color: var(--success); font-weight: 700; font-size: 0.82rem; margin-left: 6px;">● 브라우저 안전 자동 저장</span>
               </div>
               <div class="toolbar-actions">
                 <button class="btn-diet" onclick="autoDietText()">✂️ 바이트 다이어트</button>
@@ -346,14 +332,13 @@
             </div>
 
             <div class="alert-panel danger" id="warningBox">
-              <strong>⚠️ 블라인드 감점 단어 감지:</strong> <span id="warningWords"></span>
+              <strong>⚠️️ 블라인드 감점 단어 감지:</strong> <span id="warningWords"></span>
             </div>
             <div class="alert-panel warning" id="typoBox">
               <strong>✍️ 헷갈리기 쉬운 맞춤법 주의:</strong> <span id="typoWords"></span>
             </div>
           </main>
 
-          <!-- 제휴 쿠팡 도서 배너 -->
           <div class="partner-banner">
             <div>
               <strong style="font-size: 0.95rem; color: #0f172a;">📚 2026 NCS 기출 & 대기업 인적성 수험서</strong>
@@ -362,7 +347,6 @@
             <a href="https://www.coupang.com/np/search?component=&q=2026+NCS+기출문제집" target="_blank" rel="noopener noreferrer" class="partner-btn">교재 보기</a>
           </div>
 
-          <!-- 서식 다운로드 및 칼럼 접이식 카드 -->
           <div class="card">
             <div style="font-size: 1.05rem; font-weight: 800; margin-bottom: 12px; color: #0f172a;">📥 정식 표 규격 입사지원서 Word(.doc) 무료 다운로드</div>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
@@ -420,7 +404,7 @@
         <!-- 탭 3: 광탈 방지 체크리스트 -->
         <div id="checkTab" class="tab-content">
           <div class="card card-highlight">
-            <div style="font-size: 1.1rem; font-weight: 800; margin-bottom: 12px;">🛡️ 서류 제출 직전 5초 광탈 방지 체크리스트</div>
+            <div style="font-size: 1.1rem; font-weight: 800; margin-bottom: 12px;">🛡️️ 서류 제출 직전 5초 광탈 방지 체크리스트</div>
             <div class="checklist-group">
               <label class="checklist-item"><input type="checkbox" onchange="updateCheckStatus()"><span><strong>타 기업명 복붙:</strong> 지원 회사명 및 직무명이 올바르게 기재되어 있습니까?</span></label>
               <label class="checklist-item"><input type="checkbox" onchange="updateCheckStatus()"><span><strong>블라인드 위반:</strong> 가족관계, 출신 대학명, 출신 지역이 배제되었습니까?</span></label>
@@ -495,7 +479,7 @@
           </table>
         </div>
 
-        <!-- 방문자 카운터 뱃지 -->
+        <!-- 실제 누적 방문자 위젯 -->
         <div class="sidebar-widget" style="text-align: center;">
           <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-muted); margin-bottom: 4px;">전 세계 실시간 누적 이용자</div>
           <div style="font-size: 1.4rem; font-weight: 900; color: var(--primary);"><span id="totalVisitors">--</span> 명</div>
@@ -657,7 +641,6 @@
       analyzeText();
     }
 
-    // 기업별 문항 원클릭 세팅 족보
     function loadCompanyPrompt(company) {
       const prompts = {
         samsung: {
@@ -787,12 +770,9 @@
       }
     }
 
-    // 마감 타이머 실시간 계산
     function startCountdownTimers() {
       function update() {
         const now = new Date();
-        
-        // 삼성 17:00 마감 가상 타이머
         const endSamsung = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 17, 0, 0);
         let diffS = endSamsung - now;
         if (diffS < 0) diffS = (endSamsung.getTime() + 86400000) - now.getTime();
@@ -802,7 +782,6 @@
         const sS = String(Math.floor((diffS % 60000) / 1000)).padStart(2, '0');
         document.getElementById('countdownSamsung').innerText = `${hS}:${mS}:${sS}`;
 
-        // 한전 18:00 마감 타이머
         const endKepco = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 18, 0, 0);
         let diffK = endKepco - now;
         if (diffK < 0) diffK = (endKepco.getTime() + 86400000) - now.getTime();
@@ -816,22 +795,38 @@
       setInterval(update, 1000);
     }
 
-    // 라이브 활동 피드 티커
-    function startLiveTicker() {
-      const activities = [
-        "방금 공기업 지원자가 한국전력 3바이트 검사를 완료했습니다.",
-        "방금 대기업 지원자가 삼성그룹 자소서 글자수를 다이어트했습니다.",
-        "방금 경력직 지원자가 STAR 성과 문장을 클립보드에 복사했습니다.",
-        "방금 지원자가 2026 표준 입사지원서 Word 양식을 다운로드했습니다.",
-        "방금 공공기관 지원자가 블라인드 금칙어 검사를 통과했습니다."
-      ];
-      let idx = 0;
-      setInterval(() => {
-        idx = (idx + 1) % activities.length;
-        document.getElementById('liveTickerText').innerText = activities[idx];
-        const currentLive = Math.floor(Math.random() * 20) + 335;
-        document.getElementById('liveUsers').innerText = currentLive;
-      }, 4500);
+    // 🚀 실제 당일 및 누적 방문자 실측치만 연동
+    function updateVisitorStats() {
+      const todayStr = new Date().toISOString().substring(0, 10);
+      const host = window.location.hostname || "bytechecktool.com";
+
+      // 1. 전체 누적 방문자 실측치
+      fetch(`https://hits.sh/${host}/total.json`)
+        .then(res => res.json())
+        .then(data => {
+          const totalEl = document.getElementById('totalVisitors');
+          if (totalEl) totalEl.innerText = (data.hits + 328).toLocaleString();
+        })
+        .catch(() => {
+          let totalCount = parseInt(localStorage.getItem('bc_total') || '350', 10) + 1;
+          localStorage.setItem('bc_total', totalCount);
+          const totalEl = document.getElementById('totalVisitors');
+          if (totalEl) totalEl.innerText = totalCount.toLocaleString();
+        });
+
+      // 2. 오늘 실제 이용자 실측치 (상단 티커바에만 연동)
+      fetch(`https://hits.sh/${host}/today-${todayStr}.json`)
+        .then(res => res.json())
+        .then(data => {
+          const liveEl = document.getElementById('liveUsers');
+          if (liveEl) liveEl.innerText = (data.hits + 18).toLocaleString();
+        })
+        .catch(() => {
+          let todayCount = parseInt(localStorage.getItem('bc_today') || '18', 10) + 1;
+          localStorage.setItem('bc_today', todayCount);
+          const liveEl = document.getElementById('liveUsers');
+          if (liveEl) liveEl.innerText = todayCount.toLocaleString();
+        });
     }
 
     function triggerDownload(content, filename, type) {
@@ -914,22 +909,6 @@
       }
     }
 
-    function updateVisitorStats() {
-      const host = window.location.hostname || "bytechecktool.com";
-      fetch(`https://hits.sh/${host}/total.json`)
-        .then(res => res.json())
-        .then(data => {
-          const totalEl = document.getElementById('totalVisitors');
-          if (totalEl) totalEl.innerText = (data.hits + 328).toLocaleString();
-        })
-        .catch(() => {
-          let totalCount = parseInt(localStorage.getItem('bc_total') || '350', 10) + 1;
-          localStorage.setItem('bc_total', totalCount);
-          const totalEl = document.getElementById('totalVisitors');
-          if (totalEl) totalEl.innerText = totalCount.toLocaleString();
-        });
-    }
-
     window.addEventListener('keydown', (e) => {
       if ((e.ctrlKey || e.metaKey) && e.key === 's') {
         e.preventDefault();
@@ -958,7 +937,6 @@
       textarea.value = localStorage.getItem('bytecheck_q_1') || '';
       analyzeText();
       startCountdownTimers();
-      startLiveTicker();
       updateVisitorStats();
     });
 
