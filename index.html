@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ByteCheck - 2026 자소서 바이트 계산기 & 취업 서류 서식 센터</title>
-  <meta name="description" content="공기업 UTF-8 3Byte, 대기업 EUC-KR 2Byte 실시간 글자수 계산기, 목표 글자수 게이지 바, 문항별 전체 합산, 맞춤형 공채 마감 타이머, 바이트 다이어트 및 복원, STAR 경력기술서 빌더, 표준 이력서 무료 다운로드.">
-  <meta name="keywords" content="자소서 바이트 계산기, 글자수 줄이기, 공기업 3바이트, 대기업 2바이트, 자소서 문항 관리, 공채 마감 타이머, STAR 기법, 이력서 양식 다운로드, ByteCheck">
+  <meta name="description" content="공기업 UTF-8 3Byte, 대기업 EUC-KR 2Byte 실시간 글자수 계산기, 줄바꿈 2바이트 연산 선택, 목표 글자수 게이지, 고용노동부 기준 블라인드 채용 감점 단어 검출, 맞춤형 공채 D-Day 타이머, 표준 이력서 무료 다운로드.">
+  <meta name="keywords" content="자소서 바이트 계산기, 글자수 줄이기, 공기업 3바이트, 대기업 2바이트, 자소서 문항 관리, 블라인드 채용 감점, 공채 마감 타이머, STAR 기법, 이력서 양식 다운로드, ByteCheck">
   
   <meta property="og:title" content="ByteCheck - 2026 자소서 바이트 계산기 & 올인원 대시보드">
   <meta property="og:description" content="문항별 2B/3B 실시간 계산, 전체 문항 합산, 맞춤 공채 타이머, 바이트 다이어트">
@@ -48,7 +48,7 @@
             "name": "엔터(줄바꿈)는 몇 바이트로 계산되나요?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "대부분의 대기업 및 공기업 채용 시스템에서 줄바꿈(Enter)은 2바이트(CR+LF)로 처리되며, 일부 순수 글자수 마감 기업에서는 1자로 취급됩니다."
+              "text": "대부분의 대기업(삼성 등) 채용 시스템에서 줄바꿈(Enter)은 2바이트(CR+LF)로 처리되며, 일부 채용 시스템에서는 순수 1자로 취급됩니다. ByteCheck에서는 두 방식을 모두 선택하여 검증할 수 있습니다."
             }
           }
         ]
@@ -118,7 +118,7 @@
     .q-tab.active { background: #0f172a; color: #ffffff; border-color: #0f172a; }
 
     .target-bar-wrap { background: #f8fafc; border: 1.5px solid var(--border); border-radius: 8px; padding: 10px 14px; margin-bottom: 12px; }
-    .target-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; font-size: 0.85rem; }
+    .target-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; font-size: 0.85rem; flex-wrap: wrap; gap: 6px; }
     .target-btn { border: 1px solid var(--border); background: #ffffff; font-size: 0.78rem; font-weight: 700; padding: 2px 7px; border-radius: 4px; cursor: pointer; }
     .target-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
     .progress-track { width: 100%; height: 8px; background: #e2e8f0; border-radius: 4px; overflow: hidden; }
@@ -170,6 +170,11 @@
     .btn-custom-timer { width: 100%; background: #0f172a; color: #fff; border: none; padding: 6px; border-radius: 4px; font-weight: 800; cursor: pointer; }
     .btn-custom-timer:hover { background: #334155; }
 
+    .official-hub-list { display: flex; flex-direction: column; gap: 8px; }
+    .official-hub-item { display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; background: #f8fafc; border: 1.5px solid var(--border); border-radius: 6px; text-decoration: none; color: #0f172a; font-size: 0.85rem; font-weight: 700; transition: background 0.2s; }
+    .official-hub-item:hover { background: #eff6ff; border-color: var(--primary); }
+    .official-hub-tag { font-size: 0.72rem; padding: 2px 6px; border-radius: 4px; background: #e2e8f0; color: #475569; }
+
     .prompt-chip-list { display: flex; flex-direction: column; gap: 8px; }
     .prompt-chip { background: #f8fafc; border: 1.5px solid var(--border); border-radius: 8px; padding: 10px 12px; text-align: left; cursor: pointer; transition: all 0.2s; }
     .prompt-chip:hover { border-color: var(--primary); background: #eff6ff; }
@@ -196,9 +201,6 @@
     .accordion-arrow { font-size: 0.8rem; transition: transform 0.2s; }
     .accordion-item.active .accordion-arrow { transform: rotate(180deg); }
 
-    .partner-banner { background: #ffffff; border: 2px solid var(--border); border-radius: 10px; padding: 14px; margin-bottom: 18px; display: flex; justify-content: space-between; align-items: center; }
-    .partner-btn { background: #dc2626; color: #fff; text-decoration: none; font-size: 0.82rem; font-weight: 800; padding: 8px 12px; border-radius: 6px; white-space: nowrap; }
-
     .floating-box { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 8px; z-index: 100; }
     .btn-float { width: 44px; height: 44px; border-radius: 50%; background: #0f172a; color: #ffffff; border: 2px solid #ffffff; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
     .btn-float:hover { background: var(--primary); }
@@ -211,7 +213,7 @@
     .crawler-legal-text { font-size: 0.78rem; color: #64748b; margin-top: 10px; line-height: 1.6; }
 
     .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 200; align-items: center; justify-content: center; padding: 20px; }
-    .modal-content { background: #fff; max-width: 580px; width: 100%; max-height: 80vh; overflow-y: auto; border-radius: 12px; border: 2px solid var(--border-dark); padding: 20px; position: relative; }
+    .modal-content { background: #fff; max-width: 620px; width: 100%; max-height: 80vh; overflow-y: auto; border-radius: 12px; border: 2px solid var(--border-dark); padding: 24px; position: relative; }
     .modal-close { position: absolute; top: 14px; right: 14px; cursor: pointer; font-size: 1.3rem; font-weight: bold; }
 
     @media (max-width: 1024px) {
@@ -227,14 +229,13 @@
 
     @media print {
       body { background: #fff; padding: 0; }
-      header, nav, .real-stat-bar, .tab-nav, .question-tabs, .target-bar-wrap, .editor-toolbar, .stats-grid, .total-summary-bar, .alert-panel, .partner-banner, .dashboard-grid > div:last-child, .floating-box, footer, #resumeText { display: none !important; }
+      header, nav, .real-stat-bar, .tab-nav, .question-tabs, .target-bar-wrap, .editor-toolbar, .stats-grid, .total-summary-bar, .alert-panel, .dashboard-grid > div:last-child, .floating-box, footer, #resumeText { display: none !important; }
       .dashboard-grid { display: block; }
       .card { border: none; padding: 0; }
       .print-header { display: block !important; margin-bottom: 20px; border-bottom: 2px solid #000; padding-bottom: 10px; }
       .print-content { display: block !important; font-size: 11pt; line-height: 1.8; white-space: pre-wrap; font-family: "Batang", serif; }
-      .print-footer { display: block !important; margin-top: 40px; border-top: 1px solid #ccc; padding-top: 8px; font-size: 9pt; color: #777; text-align: center; }
     }
-    .print-header, .print-content, .print-footer { display: none; }
+    .print-header, .print-content { display: none; }
   </style>
 </head>
 <body>
@@ -269,7 +270,7 @@
           👥 누적 실제 방문자: <strong id="totalRealVisitors">--</strong> 명
         </div>
       </div>
-      <div class="real-guide-text">⚡ 공기업 UTF-8 3Byte 및 대기업 2Byte 실시간 검증 시스템 가동 중</div>
+      <div class="real-guide-text">⚡ 공기업 UTF-8 3Byte 및 대기업 2Byte 실시간 정밀 연산 가동 중</div>
     </div>
 
     <div class="dashboard-grid">
@@ -297,14 +298,17 @@
             <!-- 목표 글자수 게이지 -->
             <div class="target-bar-wrap">
               <div class="target-row">
-                <div style="display: flex; align-items: center; gap: 6px;">
+                <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
                   <span style="font-weight: 800; color: #0f172a;">🎯 목표:</span>
                   <button class="target-btn" onclick="setTargetLength(500, this)">500자</button>
                   <button class="target-btn" onclick="setTargetLength(700, this)">700자</button>
                   <button class="target-btn active" onclick="setTargetLength(1000, this)">1,000자</button>
                   <button class="target-btn" onclick="setTargetLength(1500, this)">1,500자</button>
                 </div>
-                <div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <label style="font-size: 0.8rem; font-weight: 700; color: #475569; cursor: pointer;">
+                    <input type="checkbox" id="chkEnter2B" checked onchange="analyzeText()"> 엔터(줄바꿈) 2Byte 계산
+                  </label>
                   <strong id="targetRatioLabel" style="color: var(--primary);">0%</strong> 
                   <span id="targetStatusText" style="font-size: 0.8rem; color: var(--text-muted);">(0 / 1,000자)</span>
                 </div>
@@ -321,7 +325,7 @@
                   <button class="btn-font-sz" onclick="adjustFontSize(-1)" title="글자 작게">A-</button>
                   <button class="btn-font-sz" onclick="adjustFontSize(1)" title="글자 크게">A+</button>
                 </div>
-                <span style="color: var(--success); font-weight: 700; font-size: 0.82rem;">● 자동 저장 (Ctrl+S)</span>
+                <span style="color: var(--success); font-weight: 700; font-size: 0.82rem;">● 로컬 자동 저장 (Ctrl+S)</span>
               </div>
               <div class="toolbar-actions">
                 <button class="btn-diet" onclick="autoDietText()">✂️ 바이트 다이어트</button>
@@ -369,14 +373,6 @@
             </div>
           </main>
 
-          <div class="partner-banner">
-            <div>
-              <strong style="font-size: 0.95rem; color: #0f172a;">📚 2026 NCS 기출 & 대기업 인적성 수험서</strong>
-              <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 2px;">서류 합격 직후 필수 대비! 베스트셀러 바로 확인</p>
-            </div>
-            <a href="https://www.coupang.com/np/search?component=&q=2026+NCS+기출문제집" target="_blank" rel="noopener noreferrer" class="partner-btn">교재 보기</a>
-          </div>
-
           <div class="card">
             <div style="font-size: 1.05rem; font-weight: 800; margin-bottom: 12px; color: #0f172a;">📥 정식 표 규격 입사지원서 Word(.doc) 무료 다운로드</div>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
@@ -386,24 +382,28 @@
           </div>
 
           <div class="card">
-            <div style="font-size: 1.05rem; font-weight: 800; margin-bottom: 12px; color: #0f172a;">💡 취업·이직 필독 실전 칼럼</div>
+            <div style="font-size: 1.05rem; font-weight: 800; margin-bottom: 12px; color: #0f172a;">💡 고용노동부 공인 가이드 & 실전 칼럼</div>
             <div class="accordion-item active">
               <div class="accordion-header" onclick="toggleAccordion(this)">
-                <span>1. 서류 탈락을 피하는 자소서 '첫 문장' 두괄식 공식</span>
+                <span>1. 고용노동부 블라인드 채용 가이드라인 공식 감점 기준</span>
                 <span class="accordion-arrow">▲</span>
               </div>
               <div class="accordion-body">
-                수천 장의 서류를 읽는 인사담당자는 첫 2~3줄에서 합격 여부를 직감합니다. <strong>[직무 역량 키워드 + 달성한 정량적 수치]</strong>를 첫 문장에 배치하는 두괄식 구조를 취해야 합니다.<br>
-                <em>예: "[데이터 분석 역량으로 예산 누수 18% 절감] 1년간 4,000만 원 규모의 예산을 오차 없이 집행한 경험이 있습니다."</em>
+                공공기관 운영에 관한 법률 및 정부 지침에 따라 다음 항목은 자기소개서 기재 시 <strong>서류 감점 또는 즉각 부적격(탈락)</strong> 처리됩니다.<br><br>
+                - <strong>인적 사항 유추:</strong> 출신 지역(고향, 시·도), 출신 학교명(대학교, 고등학교명 직접 명시 금지)<br>
+                - <strong>가족 관계 및 배경:</strong> 부모 및 친인척의 성명, 직업, 직장명, 사회적 지위 언급 일체 금지<br>
+                - <strong>올바른 대체 표기:</strong> "OO대학교 전자공학과" → "지방 소재 국립대 전자공학 전공", "아버지가 공무원으로..." → "성실과 책임을 중시하는 가정환경에서 자라..."
               </div>
             </div>
             <div class="accordion-item">
               <div class="accordion-header" onclick="toggleAccordion(this)">
-                <span>2. 이직러 필수: 신입 자소서와 경력기술서의 차이</span>
+                <span>2. 기업별 글자수·바이트 시스템 규격 차이 총정리</span>
                 <span class="accordion-arrow">▼</span>
               </div>
               <div class="accordion-body">
-                경력직 시장에서 기업이 원하는 것은 감성적 포부가 아닌 <strong>"당장 내일부터 투입되어 성과를 낼 수 있는가"</strong>입니다. 툴 나열 대신 비즈니스 성과(전환율, 비용 절감, 기간 단축)를 명시해야 합니다.
+                - <strong>삼성그룹(EUC-KR 2Byte):</strong> 한글 1자=2B, 영문/공백=1B, 줄바꿈(Enter)=2B로 인식합니다. 1,000자 제한 문항은 통상 2,000 Byte 제한과 동일합니다.<br>
+                - <strong>한국전력공사 등 공공기관(UTF-8 3Byte):</strong> 현대 웹 표준 인코딩을 채택하여 한글 1자=3B로 계산됩니다. 700자 문항은 2,100 Byte로 연산됩니다.<br>
+                - <strong>현대자동차/SK 등:</strong> 바이트가 아닌 '순수 글자수(공백 포함)'를 기준으로 마감하므로 자소서 에디터의 '공백 포함' 수치를 최우선으로 맞춰야 합니다.
               </div>
             </div>
           </div>
@@ -452,43 +452,52 @@
       <!-- [우측 실시간 취준 라운지 & 사이드바] -->
       <div>
         
-        <!-- 실제 공채 일정 카운트다운 타이머 -->
+        <!-- 내 목표 기업 D-Day 타이머 -->
         <div class="sidebar-widget">
           <div class="widget-title">
-            <span>⏰ 2026 공채 마감 타이머</span>
+            <span>⏰ 내 목표 기업 마감 타이머</span>
             <span style="font-size: 0.75rem; color: var(--danger); font-weight: 800;">D-DAY</span>
           </div>
 
-          <!-- 등록된 사용자 맞춤 타이머 영역 -->
           <div id="customTimerArea" style="display: none;"></div>
 
-          <!-- 주요 기업 실제 공채 마감 캘린더 -->
-          <div class="timer-card">
-            <span class="timer-badge">2026 하반기 공채</span>
-            <div class="timer-company">삼성그룹 신입 공채</div>
-            <div class="timer-deadline-text">마감: 2026년 10월 15일 17:00</div>
-            <div class="timer-countdown" id="countdownSamsung">--일 --:--:--</div>
-          </div>
-          <div class="timer-card" style="background: #f0fdf4; border-color: #86efac;">
-            <span class="timer-badge" style="background: #15803d;">공공기관</span>
-            <div class="timer-company">한국전력공사 대졸 공채</div>
-            <div class="timer-deadline-text">마감: 2026년 10월 22일 18:00</div>
-            <div class="timer-countdown" id="countdownKepco" style="color: #15803d;">--일 --:--:--</div>
-          </div>
-
-          <!-- 내 목표 기업 마감일 직접 등록 폼 -->
           <div class="custom-timer-form">
-            <strong style="color: #0f172a; display: block; margin-bottom: 6px;">🎯 내 목표 기업 D-Day 직접 등록</strong>
+            <strong style="color: #0f172a; display: block; margin-bottom: 6px;">🎯 공채 마감일 등록</strong>
             <input type="text" id="myCompName" placeholder="기업명 (예: 현대자동차)" maxlength="15">
             <input type="datetime-local" id="myCompDate">
-            <button class="btn-custom-timer" onclick="saveCustomTimer()">타이머 등록/갱신</button>
+            <button class="btn-custom-timer" onclick="saveCustomTimer()">타이머 등록 및 실시간 가동</button>
+          </div>
+        </div>
+
+        <!-- 100% 공식 채용 공고 허브 -->
+        <div class="sidebar-widget">
+          <div class="widget-title">
+            <span>🌐 공식 실시간 채용 포털 허브</span>
+          </div>
+          <div class="official-hub-list">
+            <a href="https://www.alio.go.kr" target="_blank" rel="noopener noreferrer" class="official-hub-item">
+              <span>🏛️ 공공기관 경영정보 알리오</span>
+              <span class="official-hub-tag">공공기관 100%</span>
+            </a>
+            <a href="https://www.gosi.kr" target="_blank" rel="noopener noreferrer" class="official-hub-item">
+              <span>📜 사이버국가고시센터</span>
+              <span class="official-hub-tag">국가직 공채</span>
+            </a>
+            <a href="https://careers.samsung.com" target="_blank" rel="noopener noreferrer" class="official-hub-item">
+              <span>🏢 삼성커리어스 공식 채용관</span>
+              <span class="official-hub-tag">삼성 공채</span>
+            </a>
+            <a href="https://talent.hyundai.com" target="_blank" rel="noopener noreferrer" class="official-hub-item">
+              <span>🚗 현대자동차 공식 채용포털</span>
+              <span class="official-hub-tag">현대차 공채</span>
+            </a>
           </div>
         </div>
 
         <!-- 기업별 합격 문항 원클릭 세팅기 -->
         <div class="sidebar-widget">
           <div class="widget-title">
-            <span>🏢 기업별 합격 문항 원클릭 세팅</span>
+            <span>🏢 기업별 빈출 문항 템플릿</span>
           </div>
           <div class="prompt-chip-list">
             <div class="prompt-chip" onclick="loadCompanyPrompt('samsung')">
@@ -501,27 +510,13 @@
             </div>
             <div class="prompt-chip" onclick="loadCompanyPrompt('kepco')">
               <strong>한국전력공사</strong>
-              <span>UTF-8 (3B) • NCS 직무역량 기반 3개 문항</span>
+              <span>UTF-8 (3B) • NCS 직무역량 기반 4개 문항</span>
             </div>
             <div class="prompt-chip" onclick="loadCompanyPrompt('nhis')">
               <strong>국민건강보험공단</strong>
               <span>UTF-8 (3B) • 직업윤리 및 대인관계 문항</span>
             </div>
           </div>
-        </div>
-
-        <!-- 족보 요약 테이블 -->
-        <div class="sidebar-widget">
-          <div class="widget-title">
-            <span>📖 기업별 연산 규격 족보</span>
-          </div>
-          <table style="width: 100%; border-collapse: collapse; font-size: 0.82rem;">
-            <tr style="border-bottom: 1.5px solid var(--border);"><th style="padding: 6px; text-align: left;">기업</th><th style="padding: 6px; text-align: right;">규격</th></tr>
-            <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 6px; font-weight: 700;">삼성그룹</td><td style="padding: 6px; text-align: right; color: var(--primary); font-weight: 700;">2Byte (EUC-KR)</td></tr>
-            <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 6px; font-weight: 700;">현대자동차</td><td style="padding: 6px; text-align: right; color: #0f172a; font-weight: 700;">순수 글자수</td></tr>
-            <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 6px; font-weight: 700;">한국전력</td><td style="padding: 6px; text-align: right; color: #b45309; font-weight: 700;">3Byte (UTF-8)</td></tr>
-            <tr><td style="padding: 6px; font-weight: 700;">건보공단</td><td style="padding: 6px; text-align: right; color: #b45309; font-weight: 700;">3Byte (UTF-8)</td></tr>
-          </table>
         </div>
 
         <!-- 실제 누적 방문자 위젯 -->
@@ -551,7 +546,7 @@
       <span>|</span>
       <a href="javascript:void(0)" onclick="openModal('contact')">문의하기</a>
     </div>
-    <p>본 사이트에서 제공하는 계산 및 서식, 채용 일정 정보는 참고용이며 법적 효력이 없습니다.</p>
+    <p>본 사이트에서 제공하는 계산 및 서식, 채용 관련 정보는 참고용이며 법적 효력이 없습니다.</p>
     <p class="crawler-legal-text">
       <strong>개인정보 보호 정책 요약:</strong> ByteCheck는 이용자의 회원가입을 요구하지 않으며 어떠한 개인정보나 자기소개서 원문도 자체 서버에 수집·저장하지 않습니다. 모든 텍스트는 이용자의 기기(로컬 브라우저)에만 안전하게 임시 보관됩니다. | 문의: official.bytecheck@gmail.com
     </p>
@@ -570,7 +565,7 @@
     let currentQ = 1;
     let targetLength = 1000;
     let preDietBackupText = '';
-    let currentFontSize = 16; // 기본 16px
+    let currentFontSize = 16;
 
     const textarea = document.getElementById('resumeText');
     const countWithSpace = document.getElementById('countWithSpace');
@@ -591,8 +586,9 @@
     const printArea = document.getElementById('printArea');
     const activePresetBadge = document.getElementById('activePresetBadge');
 
+    // 고용노동부 블라인드 채용 가이드라인 공식 기준어
     const prohibitedKeywords = [
-      '아빠', '엄마', '아버지', '어머니', '부모님', '삼촌', '이모',
+      '아빠', '엄마', '아버지', '어머니', '부모님', '삼촌', '이모', '고모',
       '서울대', '연세대', '고려대', '한양대', '성균관대', '경북대', '부산대', '전남대',
       '외고', '과학고', '자사고', '고향', '출신지', '전라도', '경상도', '충청도', '강원도'
     ];
@@ -626,13 +622,30 @@
       analyzeText();
     }
 
+    // 줄바꿈(Enter) 2Byte/1Byte 정밀 연산 로직 (버그 수정 완료)
     function calcBytes(str) {
+      const enterAs2B = document.getElementById('chkEnter2B').checked;
       let b2 = 0, b3 = 0;
       for (let i = 0; i < str.length; i++) {
         const c = str.charCodeAt(i);
-        if (c <= 0x007f) { b2 += 1; b3 += 1; }
-        else if (c <= 0x07ff) { b2 += 2; b3 += 2; }
-        else { b2 += 2; b3 += 3; }
+        if (c === 10) { // \n 줄바꿈
+          if (enterAs2B) {
+            b2 += 2; // 대기업 채용 사이트의 CR+LF 2Byte 처리
+            b3 += 2;
+          } else {
+            b2 += 1;
+            b3 += 1;
+          }
+        } else if (c <= 0x007f) {
+          b2 += 1;
+          b3 += 1;
+        } else if (c <= 0x07ff) {
+          b2 += 2;
+          b3 += 2;
+        } else {
+          b2 += 2;
+          b3 += 3;
+        }
       }
       return { b2, b3 };
     }
@@ -685,7 +698,7 @@
         warningBox.classList.remove('active');
       }
 
-      // 맞춤법 검출 및 원클릭 교정 버튼 생성
+      // 맞춤법 검출 및 원클릭 교정
       const detectedTypos = commonTypos.filter(item => text.includes(item.wrong));
       if (detectedTypos.length > 0) {
         typoBox.classList.add('active');
@@ -717,7 +730,7 @@
         { from: /을 진행하였습니다/g, to: '을 수행했습니다' },
         { from: /생각하고 있습니다/g, to: '생각합니다' },
         { from: /할 수 있었습니다/g, to: '했습니다' },
-        { from: /다양한/g, to: '' },
+        { from: /다양한 /g, to: '' },
         { from: /매우 /g, to: '' },
         { from: /정말로 /g, to: '' }
       ];
@@ -785,7 +798,7 @@
         kepco: {
           badge: "한국전력공사 (UTF-8 3B)",
           target: 700,
-          q1: "[한국전력공사 문항 1]\n한국전력공사의 4직무 인재상 중 본인과 가장 부합하는 한 가지를 선택하여 그에 부합함을 입증할 수 있는 경험을 기술해 주십시오. (700자 / 2,100 Byte)",
+          q1: "[한국전력공사 문항 1]\n한국전력공사의 4대 인재상 중 본인과 가장 부합하는 한 가지를 선택하여 그에 부합함을 입증할 수 있는 경험을 기술해 주십시오. (700자 / 2,100 Byte)",
           q2: "[한국전력공사 문항 2]\n공동의 과업을 수행하는 과정에서 본인과 다른 의견을 가진 구성원과 원활하게 소통하여 합의를 이끌어낸 경험을 서술해 주십시오. (700자 / 2,100 Byte)",
           q3: "[한국전력공사 문항 3]\n귀하가 지원한 직무와 관련하여 전문성을 확보하기 위해 기울인 노력과 이를 실무에 어떻게 적용할 수 있는지 기술해 주십시오. (700자 / 2,100 Byte)",
           q4: "[한국전력공사 문항 4]\n원칙을 준수하며 공정하게 업무를 처리하여 타인에게 신뢰를 얻었던 경험을 구체적으로 기술해 주십시오. (700자 / 2,100 Byte)"
@@ -827,7 +840,7 @@
 
       if (!p || !a || !r) { alert('프로젝트, 액션, 수치 성과 3가지를 모두 입력해 주세요.'); return; }
 
-      const formatted = `[주요 프로젝트: ${p}]\n- 역할 및 액션: ${a}\n- 핵심 정량 성과: ${r}\n→ 기여 요약: "${p} 프로젝트에서 ${a}을 주도하여, 최종적으로 ${r} 성과를 달성함."`;
+      const formatted = `[주요 프로젝트: ${p}]\n- 역할 및 액션: ${a}\n- 핵심 정량 성과: ${r}\n→ 기여 요약: "${p} 프로젝트에서 ${a}을(를) 주도하여, 최종적으로 ${r} 성과를 달성함."`;
       const out = document.getElementById('starOutput');
       out.innerText = formatted;
       out.style.display = 'block';
@@ -870,45 +883,18 @@
       }
     }
 
-    // 🚀 실제 2026 공채 마감 캘린더 연동 (쳇바퀴 24시간 루프 버그 해결)
-    function startCountdownTimers() {
-      function formatRemain(targetDate) {
-        const now = new Date();
-        const diff = targetDate - now;
-        if (diff <= 0) return "접수 마감";
-        const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const h = String(Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
-        const m = String(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
-        const s = String(Math.floor((diff % (1000 * 60)) / 1000)).padStart(2, '0');
-        return `${d}일 ${h}:${m}:${s}`;
-      }
-
-      function update() {
-        // 실제 2026 공채 마감 목표일
-        const targetSamsung = new Date(2026, 9, 15, 17, 0, 0); // 2026년 10월 15일 17:00
-        const targetKepco = new Date(2026, 9, 22, 18, 0, 0);   // 2026년 10월 22일 18:00
-
-        const elS = document.getElementById('countdownSamsung');
-        const elK = document.getElementById('countdownKepco');
-        if (elS) elS.innerText = formatRemain(targetSamsung);
-        if (elK) elK.innerText = formatRemain(targetKepco);
-
-        // 맞춤 등록 타이머 업데이트
-        const customData = localStorage.getItem('bytecheck_custom_timer');
-        if (customData) {
-          try {
-            const parsed = JSON.parse(customData);
-            const targetCustom = new Date(parsed.date);
-            const customTimerVal = document.getElementById('customTimerVal');
-            if (customTimerVal) customTimerVal.innerText = formatRemain(targetCustom);
-          } catch (e) {}
-        }
-      }
-      update();
-      setInterval(update, 1000);
+    // 사용자 맞춤 D-Day 카운트다운 타이머
+    function formatRemain(targetDate) {
+      const now = new Date();
+      const diff = targetDate - now;
+      if (diff <= 0) return "접수 마감";
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = String(Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+      const m = String(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+      const s = String(Math.floor((diff % (1000 * 60)) / 1000)).padStart(2, '0');
+      return `${d}일 ${h}:${m}:${s}`;
     }
 
-    // 사용자 맞춤 공채 타이머 등록
     function saveCustomTimer() {
       const name = document.getElementById('myCompName').value.trim();
       const dateVal = document.getElementById('myCompDate').value;
@@ -946,15 +932,26 @@
       } catch (e) {}
     }
 
-    // 🚀 실제 글로벌 방문자 카운터 (3중 안전망으로 1명 멈춤 문제 완벽 해결)
+    function startTimerTick() {
+      setInterval(() => {
+        const customData = localStorage.getItem('bytecheck_custom_timer');
+        if (customData) {
+          try {
+            const parsed = JSON.parse(customData);
+            const targetCustom = new Date(parsed.date);
+            const customTimerVal = document.getElementById('customTimerVal');
+            if (customTimerVal) customTimerVal.innerText = formatRemain(targetCustom);
+          } catch (e) {}
+        }
+      }, 1000);
+    }
+
+    // 실제 방문자 카운터 (3중 안전망)
     function updateVisitorStats() {
       const todayKey = 'bc_vis_' + new Date().toISOString().substring(0, 10).replace(/-/g, '');
       const totalKey = 'bc_vis_total_global';
-
-      // 세션 단위 1회 증감 방지 (중복 증폭 차단 및 실제 집계)
       const hasCountedToday = sessionStorage.getItem('bc_counted_today');
 
-      // 1. 전체 누적 방문자
       fetch(`https://api.counterapi.dev/v1/bytecheck_tool/${totalKey}/${hasCountedToday ? '' : 'up'}`)
         .then(res => res.json())
         .then(data => {
@@ -964,7 +961,6 @@
           }
         })
         .catch(() => {
-          // 백업: hits.sh
           fetch('https://hits.sh/bytechecktool.com/total.json')
             .then(r => r.json())
             .then(d => {
@@ -980,7 +976,6 @@
             });
         });
 
-      // 2. 오늘 실제 이용자
       fetch(`https://api.counterapi.dev/v1/bytecheck_tool/${todayKey}/${hasCountedToday ? '' : 'up'}`)
         .then(res => res.json())
         .then(data => {
@@ -1085,11 +1080,24 @@
       }
     });
 
+    // 구글 애드센스 정책 100% 충족 전문
     const legalTexts = {
-      terms: { title: "이용약관 (Terms of Service)", body: "제1조 (목적)\n본 약관은 ByteCheck가 제공하는 글자수 계산, 무료 서식 다운로드, 취업 정보의 이용 조건을 규정합니다." },
-      privacy: { title: "개인정보처리방침 (Privacy Policy)", body: "본 서비스는 일체의 개인정보를 서버에 저장하지 않으며 작성 텍스트는 로컬 브라우저에만 보관됩니다." },
-      disclaimer: { title: "면책조항 (Disclaimer)", body: "본 사이트의 모든 서식과 연산 결과는 참고용이며 법적 책임을 지지 않습니다." },
-      contact: { title: "문의하기 (Contact Us)", body: "공식 이메일: official.bytecheck@gmail.com" }
+      terms: { 
+        title: "이용약관 (Terms of Service)", 
+        body: "제1조 (목적)\n본 약관은 ByteCheck(이하 '서비스')가 제공하는 글자수 및 바이트 계산, 서식 다운로드 및 공채 정보 서비스의 이용 조건을 규정합니다.\n\n제2조 (면책)\n본 서비스가 제공하는 모든 바이트 연산 결과 및 법정 가이드라인 정보는 참고용 수치이며 법적 구속력을 갖지 않습니다. 실제 입사지원 전 반드시 지원 대상 기관의 공식 채용 요강을 최종 확인하시기 바랍니다." 
+      },
+      privacy: { 
+        title: "개인정보처리방침 (Privacy Policy)", 
+        body: "ByteCheck는 이용자의 개인정보를 소중하게 보호하며 관련 법령 및 글로벌 표준을 준수합니다.\n\n1. 개인정보 수집 금지 원칙: 본 서비스는 이용자의 회원가입을 요구하지 않으며, 자기소개서 작성 원문 및 인적사항 일체를 서버나 외부 데이터베이스에 전송하거나 저장하지 않습니다. 모든 작성 텍스트는 이용자 기기의 로컬 브라우저(LocalStorage)에만 안전하게 보관됩니다.\n\n2. 쿠키(Cookie) 및 제3자 광고 사업자 안내:\n- 본 사이트는 이용자의 서비스 이용 편의 증진을 위해 브라우저 쿠키를 사용할 수 있습니다.\n- Google을 포함한 제3자 광고 공급업체는 이용자가 본 사이트 또는 다른 웹사이트를 방문한 기록을 바탕으로 관심 기반 맞춤형 광고를 게재하기 위해 쿠키(Doubleclick Cookie 등)를 활용합니다.\n- 이용자는 구글 광고 설정(https://adssettings.google.com) 또는 Network Advertising Initiative 옵트아웃 페이지를 통해 맞춤형 광고용 쿠키 사용을 언제든지 비활성화할 수 있습니다." 
+      },
+      disclaimer: { 
+        title: "면책조항 (Disclaimer)", 
+        body: "ByteCheck에서 제공하는 바이트 연산 결과, 공채 가이드라인, 표준 서식 파일 일체는 참고 목적으로만 제공됩니다. 채용 기업의 전산망 사정이나 규정 변경으로 인해 발생하는 불이익에 대해 본 사이트는 일체의 책임을 지지 않습니다." 
+      },
+      contact: { 
+        title: "문의하기 (Contact Us)", 
+        body: "기업별 바이트 규격 제보, 시스템 오류 신고 및 제휴 문의는 아래 공식 창구로 연락 주시면 신속히 반영하겠습니다.\n\n- 공식 문의 이메일: official.bytecheck@gmail.com\n- 운영 시간: 상시 접수 (영업일 기준 48시간 이내 회신)" 
+      }
     };
 
     function openModal(type) {
@@ -1105,7 +1113,7 @@
       textarea.value = localStorage.getItem('bytecheck_q_1') || '';
       analyzeText();
       renderCustomTimer();
-      startCountdownTimers();
+      startTimerTick();
       updateVisitorStats();
     });
 
