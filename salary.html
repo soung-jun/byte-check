@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ByteCheck - 2026 연봉 실수령액 계산기 & 세후 월급 역산·포괄임금 분석 센터</title>
   <meta name="description" content="2026년 4대 보험요율 및 국세청 근로소득 간이세액표 반영 실시간 연봉 계산기, 희망 세후 월급 기준 계약 연봉 역산(Net-to-Gross), 포괄임금제 고정 OT 통상시급 분리 계산, 법정 미사용 연차수당 계산기 무료 제공.">
-  <meta name="keywords" content="2026 연봉 실수령액, 연봉 역산 계산기, 실수령 300 연봉, 실수령 400 연봉, 포괄임금 계산기, 통상시급 계산, 연차수당 계산기, 4대보험 계산, 비과세 식대, ByteCheck">
+  <meta name="keywords" content="2026 연봉 실수령액, 연봉 역산 계산기, 실수령 300 연봉, 실수령 400 연봉, 포괄임금 계산기, 통상시급 계산, 연차수당 계산기, 4대보험 계산, 국세청 홈택스, 최저임금위원회, ByteCheck">
   
   <meta property="og:title" content="ByteCheck - 2026 연봉 실수령액 & 세후 역산 올인원 계산기">
   <meta property="og:description" content="2026 최신 4대보험, 세후 희망 월급 역산, 포괄임금 통상시급 분리, 연차수당 정산기">
@@ -94,6 +94,12 @@
     .deduct-item { display: flex; justify-content: space-between; font-weight: 600; color: var(--text-muted); }
     .deduct-item strong { color: var(--text); }
 
+    /* 정부 공식 사이트 연동 허브 */
+    .gov-link-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .gov-link-item { display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; background: #f8fafc; border: 1.5px solid var(--border); border-radius: 8px; text-decoration: none; color: #0f172a; font-size: 0.9rem; font-weight: 700; transition: all 0.2s; }
+    .gov-link-item:hover { background: #eff6ff; border-color: var(--primary); color: var(--primary); }
+    .gov-tag { font-size: 0.75rem; padding: 3px 8px; border-radius: 4px; background: #e2e8f0; color: #334155; font-weight: 800; }
+
     .custom-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; margin-top: 10px; }
     .custom-table th, .custom-table td { padding: 11px 14px; border: 1.5px solid var(--border); text-align: center; }
     .custom-table th { background: #e2e8f0; color: #0f172a; font-weight: 800; }
@@ -116,6 +122,7 @@
       nav { width: 100%; overflow-x: auto; white-space: nowrap; justify-content: flex-start; }
       .calc-grid { grid-template-columns: 1fr; }
       .module-nav { flex-direction: column; }
+      .gov-link-grid { grid-template-columns: 1fr; }
       .partner-card-banner { flex-direction: column; gap: 12px; text-align: center; }
     }
   </style>
@@ -272,7 +279,7 @@
     <!-- 모듈 4: 미사용 연차수당 정산기 -->
     <div id="tabLeave" class="mod-content">
       <div class="card card-highlight">
-        <div class="section-title"><span>🏖️</span> 근로기준법 기준 법정 미사용 연차수당 계산기</div>
+        <div class="section-title"><span>🏖️️</span> 근로기준법 기준 법정 미사용 연차수당 계산기</div>
         <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">
           미사용 연차휴가는 근로기준법 제60조에 따라 통상임금(1일 8시간분)을 기준으로 현금 보상해야 합니다. 퇴사 또는 연도 말 잔여 연차 보상액을 산출합니다.
         </p>
@@ -298,6 +305,27 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- 🏛️ 국세청 및 고용노동부 공식 포털 연동 허브 -->
+    <div class="card">
+      <div class="section-title"><span>🏛️</span> 과세·노무 기준 공인 출처 확인 포털</div>
+      <div class="gov-link-grid">
+        <a href="https://www.hometax.go.kr" target="_blank" rel="noopener noreferrer" class="gov-link-item">
+          <div>
+            <strong style="display: block; font-size: 0.95rem;">국세청 홈택스 (Hometax)</strong>
+            <span style="font-size: 0.8rem; color: var(--text-muted);">근로소득 간이세액표 원문 및 세액 조회</span>
+          </div>
+          <span class="gov-tag">국세청 공식 ↗</span>
+        </a>
+        <a href="https://www.minimumwage.go.kr" target="_blank" rel="noopener noreferrer" class="gov-link-item">
+          <div>
+            <strong style="display: block; font-size: 0.95rem;">고용노동부 최저임금위원회</strong>
+            <span style="font-size: 0.8rem; color: var(--text-muted);">2026 법정 최저임금 공식 고시 전문</span>
+          </div>
+          <span class="gov-tag">고용부 공식 ↗</span>
+        </a>
       </div>
     </div>
 
@@ -431,7 +459,6 @@
 
       if (isNaN(targetNet) || targetNet <= 0) return;
 
-      // 이진 탐색(Binary Search) 기반 고속 역산
       let low = targetNet;
       let high = targetNet * 2;
       let approxMonthly = targetNet;
@@ -461,7 +488,6 @@
       if (isNaN(annual) || annual <= 0) return;
 
       const monthlyGross = Math.floor(annual / 12);
-      // 포괄임금 공식: 기본급(209h) + 연장수당(OT시간 * 1.5배)
       const totalEquivalentHours = 209 + (otHours * 1.5);
       const pureHourly = Math.floor(monthlyGross / totalEquivalentHours);
       const basePay = pureHourly * 209;
@@ -489,8 +515,8 @@
       if (isNaN(annual) || annual <= 0) return;
 
       const monthly = Math.floor(annual / 12);
-      const hourly = monthly / 209; // 1시간 통상임금
-      const daily = Math.floor(hourly * 8); // 1일(8시간) 통상임금
+      const hourly = monthly / 209;
+      const daily = Math.floor(hourly * 8);
       const totalLeavePay = Math.floor(daily * days);
 
       document.getElementById('leaveMonthly').innerText = monthly.toLocaleString() + ' 원';
