@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ByteCheck - 토익/오픽 유효기간 2년 만료 D-Day & 공공기관 5년 사전등록 가이드</title>
-  <meta name="description" content="토익(TOEIC), 오픽(OPIc), 지텔프 공인 어학성적 2년 만료일 및 사이버국가고시센터 공공기관 5년 인정 기한(12월 31일) 자동 계산기, 성적 발표일 D-Day, 국가직 7급·군무원·공기업 어학 커트라인 패스 판정기 무료 제공.">
-  <meta name="keywords" content="토익 유효기간, 오픽 만료일, 어학 D-Day 계산기, 사이버국가고시센터 5년 사전등록, 토익 성적 발표일, 지텔프 점수 환산, 공무원 영어 대체, 토익 기출문제집, ByteCheck">
+  <meta name="description" content="토익(TOEIC), 오픽(OPIc), 지텔프 2년 만료일 및 정부 공인 5년 인정 기한(12월 31일) 자동 계산기, 성적 발표일 D-Day, 공무원·공기업 어학 가산점 시뮬레이터 및 점수 상호 변환기 무료 제공.">
+  <meta name="keywords" content="토익 유효기간, 오픽 만료일, 어학 D-Day 계산기, 어학성적 사전등록, 국가공무원 채용시스템, 토익 점수 변환, 지텔프 환산표, 공무원 영어 대체, 토익 기출문제집, ByteCheck">
   
   <meta property="og:title" content="ByteCheck - 어학성적 유효기간 D-Day & 공공기관 5년 만료 계산기">
-  <meta property="og:description" content="토익/오픽 2년 만료 카운트다운, 공공기관 5년 인정 기한, 성적 발표일 및 공무원 패스 판정">
+  <meta property="og:description" content="토익/오픽 2년 만료 카운트다운, 공공기관 5년 인정 기한, 점수 변환기 및 공기업 가산점 시뮬레이터">
   <meta property="og:url" content="https://bytechecktool.com/dday.html">
   <meta property="og:type" content="website">
 
@@ -48,45 +48,54 @@
     body { background-color: var(--bg); color: var(--text); line-height: 1.6; }
 
     header { background: #ffffff; border-bottom: 2px solid var(--border); width: 100%; position: relative; }
-    .header-inner { max-width: 1040px; margin: 0 auto; padding: 14px 20px; display: flex; justify-content: space-between; align-items: center; }
+    .header-inner { max-width: 1060px; margin: 0 auto; padding: 14px 20px; display: flex; justify-content: space-between; align-items: center; }
     .brand { display: flex; align-items: center; gap: 8px; font-size: 1.35rem; font-weight: 900; color: var(--primary); text-decoration: none; }
     nav { display: flex; align-items: center; gap: 8px; }
     nav a { text-decoration: none; color: var(--text); font-size: 0.92rem; font-weight: 700; padding: 8px 14px; border-radius: 6px; transition: all 0.2s; }
     nav a:hover { background: var(--primary-light); color: var(--primary); }
     nav a.active { background: var(--primary); color: #ffffff; }
 
-    .container { max-width: 1040px; margin: 0 auto; padding: 24px 16px 70px 16px; }
+    .container { max-width: 1060px; margin: 0 auto; padding: 24px 16px 70px 16px; }
 
     .hero { text-align: center; margin-bottom: 24px; }
     .hero h1 { font-size: 2.1rem; font-weight: 900; letter-spacing: -0.5px; margin-bottom: 8px; color: #0f172a; }
     .hero p { font-size: 1rem; color: var(--text-muted); font-weight: 600; }
 
-    .card { background: var(--card-bg); border-radius: 12px; border: 2px solid var(--border); padding: 24px; box-shadow: var(--shadow-sm); margin-bottom: 22px; }
+    .card { background: var(--card-bg); border-radius: 12px; border: 2px solid var(--border); padding: 22px; box-shadow: var(--shadow-sm); margin-bottom: 22px; }
     .card-highlight { border: 2.5px solid #93c5fd; box-shadow: var(--shadow-md); }
 
-    .section-title { font-size: 1.22rem; font-weight: 800; display: flex; align-items: center; gap: 8px; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--border); }
+    .section-title { font-size: 1.2rem; font-weight: 800; display: flex; align-items: center; gap: 8px; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--border); }
 
     .dday-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-    .form-group { margin-bottom: 16px; }
-    .form-label { display: block; font-size: 0.9rem; font-weight: 800; color: #0f172a; margin-bottom: 6px; }
-    .form-input { width: 100%; padding: 12px 14px; border: 2px solid var(--border); border-radius: 8px; font-size: 1rem; font-weight: 700; outline: none; }
+    .form-group { margin-bottom: 14px; }
+    .form-label { display: block; font-size: 0.88rem; font-weight: 800; color: #0f172a; margin-bottom: 5px; }
+    .form-input { width: 100%; padding: 11px 14px; border: 2px solid var(--border); border-radius: 8px; font-size: 1rem; font-weight: 700; outline: none; }
     .form-input:focus { border-color: var(--primary); }
 
-    .result-box { background: #f8fafc; border: 2px solid var(--border); border-radius: 10px; padding: 20px; text-align: center; display: flex; flex-direction: column; justify-content: center; }
-    .dday-badge { font-size: 2.4rem; font-weight: 900; color: var(--primary); margin: 6px 0; }
+    .result-box { background: #f8fafc; border: 2px solid var(--border); border-radius: 10px; padding: 18px; text-align: center; display: flex; flex-direction: column; justify-content: center; }
+    .dday-badge { font-size: 2.3rem; font-weight: 900; color: var(--primary); margin: 6px 0; }
 
     .sub-result-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 14px; padding-top: 12px; border-top: 1.5px dashed var(--border); text-align: left; }
     .sub-result-box { background: #ffffff; border: 1px solid var(--border); border-radius: 6px; padding: 8px 12px; }
     .sub-result-title { font-size: 0.76rem; color: var(--text-muted); font-weight: 700; }
     .sub-result-val { font-size: 0.95rem; font-weight: 800; color: #0f172a; margin-top: 2px; }
 
+    /* 모듈 전환 탭 */
+    .module-nav { display: flex; gap: 8px; margin-bottom: 16px; border-bottom: 2px solid var(--border); padding-bottom: 8px; }
+    .mod-btn { flex: 1; padding: 10px 8px; background: #ffffff; border: 1.5px solid var(--border); border-radius: 8px; font-size: 0.9rem; font-weight: 800; color: var(--text-muted); cursor: pointer; text-align: center; transition: all 0.2s; }
+    .mod-btn:hover { background: #f1f5f9; }
+    .mod-btn.active { background: var(--primary); color: #ffffff; border-color: var(--primary); }
+
+    .mod-content { display: none; }
+    .mod-content.active { display: block; }
+
     /* 쿠팡 파트너스 배너 */
     .partner-banner { background: #ffffff; border: 2px solid #fca5a5; border-radius: 10px; padding: 16px 20px; margin-bottom: 22px; display: flex; justify-content: space-between; align-items: center; background: #fff5f5; box-shadow: var(--shadow-sm); }
     .partner-btn { background: var(--danger); color: #fff; text-decoration: none; font-size: 0.88rem; font-weight: 800; padding: 10px 16px; border-radius: 6px; white-space: nowrap; }
     .partner-btn:hover { background: #b91c1c; }
 
-    .notice-card { background: #eff6ff; border: 2px solid #bfdbfe; border-radius: 10px; padding: 20px; margin-bottom: 22px; }
-    .notice-card h4 { font-size: 1.1rem; font-weight: 800; color: #1e40af; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+    .notice-card { background: #eff6ff; border: 2px solid #bfdbfe; border-radius: 10px; padding: 18px; margin-bottom: 22px; }
+    .notice-card h4 { font-size: 1.05rem; font-weight: 800; color: #1e40af; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
     .notice-card p { font-size: 0.9rem; color: #1e3a8a; line-height: 1.7; font-weight: 500; }
     .btn-gosi { background: #1d4ed8; color: #fff; text-decoration: none; font-size: 0.82rem; font-weight: 800; padding: 6px 12px; border-radius: 6px; display: inline-block; }
     .btn-gosi:hover { background: #1e40af; }
@@ -97,7 +106,7 @@
     .hub-tag { font-size: 0.75rem; padding: 3px 8px; border-radius: 4px; background: #e2e8f0; color: #334155; font-weight: 800; }
 
     .custom-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; margin-top: 10px; }
-    .custom-table th, .custom-table td { padding: 12px 14px; border: 1.5px solid var(--border); text-align: center; }
+    .custom-table th, .custom-table td { padding: 11px 14px; border: 1.5px solid var(--border); text-align: center; }
     .custom-table th { background: #e2e8f0; color: #0f172a; font-weight: 800; }
     .custom-table td { background: #ffffff; color: var(--text); font-weight: 600; }
 
@@ -114,6 +123,7 @@
       nav { width: 100%; overflow-x: auto; white-space: nowrap; justify-content: flex-start; }
       .dday-grid { grid-template-columns: 1fr; }
       .sub-result-row { grid-template-columns: 1fr; }
+      .module-nav { flex-direction: column; }
       .rule-grid { grid-template-columns: 1fr; }
       .hub-grid { grid-template-columns: 1fr; }
       .partner-banner { flex-direction: column; gap: 12px; text-align: center; }
@@ -137,7 +147,7 @@
     
     <section class="hero">
       <h1>토익·오픽 유효기간 2년 만료 D-Day & 등록 가이드</h1>
-      <p>공인 어학 성적 2년 만료일, 인사혁신처 5년 사전등록 인정 기한 및 국가고시 패스 판정기</p>
+      <p>공인 어학 성적 2년 만료일, 정부 5년 인정 기한 자동 계산, 점수 상호 변환 및 공기업 가산점 시뮬레이터</p>
     </section>
 
     <!-- D-Day 계산기 메인 카드 -->
@@ -167,10 +177,9 @@
           <div class="dday-badge" id="ddayCount">D - --</div>
           <p id="ddayStatus" style="font-size: 0.85rem; font-weight: 600; color: var(--text-muted);"></p>
 
-          <!-- 서브 정밀 연산 결과: 5년 기한 및 발표일 -->
           <div class="sub-result-row">
             <div class="sub-result-box">
-              <div class="sub-result-title">🏛️ 공공기관 5년 인정 만료일</div>
+              <div class="sub-result-title">🏛️ 공공기관 5년 인정 기한</div>
               <div class="sub-result-val" id="gosi5YearText" style="color: var(--primary);">--년 12월 31일</div>
             </div>
             <div class="sub-result-box">
@@ -191,36 +200,88 @@
       <a href="https://www.coupang.com/np/search?component=&q=2026+ETS+토익+기출문제집" target="_blank" rel="noopener noreferrer" class="partner-btn">최신 수험서 보기 ↗</a>
     </div>
 
-    <!-- 공무원/군무원/공기업 영어 대체 통과 여부 실시간 판정기 (실무 도구) -->
-    <section class="card">
-      <div class="section-title"><span>🎯</span> 내 어학 점수 기준 국가직·군무원·공기업 패스 판정기</div>
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: center;">
-        <div>
-          <div class="form-group">
-            <label class="form-label">내 토익(TOEIC) 점수 입력</label>
-            <input type="number" id="userScore" class="form-input" value="750" step="5" min="0" max="990" oninput="judgePassStatus()">
+    <!-- 신규 실무 기능 탭 영역 -->
+    <div class="card card-highlight">
+      <div class="module-nav">
+        <button class="mod-btn active" onclick="switchDdayModule('subTabConvert', this)">🔄 어학 시험 점수 상호 변환기</button>
+        <button class="mod-btn" onclick="switchDdayModule('subTabPublic', this)">🏢 공기업 어학 가산점 시뮬레이터</button>
+        <button class="mod-btn" onclick="switchDdayModule('subTabPass', this)">🎯 국가직 7급·군무원 패스 판정기</button>
+      </div>
+
+      <!-- 실무 프로그램 1: 어학 시험 점수 상호 변환기 -->
+      <div id="subTabConvert" class="mod-content active">
+        <div class="section-title"><span>🔄</span> 2026 시험별 공식 점수 상호 변환기</div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: center;">
+          <div>
+            <div class="form-group">
+              <label class="form-label">보유 토익(TOEIC) 점수 입력</label>
+              <input type="number" id="convertToeicInput" class="form-input" value="850" step="5" min="0" max="990" oninput="convertScoreAuto()">
+            </div>
+            <p style="font-size: 0.82rem; color: var(--text-muted);">
+              * 주요 대기업 및 공공기관 인사팀 채용 환산 기준표 적용
+            </p>
           </div>
-          <p style="font-size: 0.82rem; color: var(--text-muted);">
-            * 국가직 7급: 700점 | 군무원 7급: 570점 | 군무원 9급: 470점 | 공기업 사무직: 850점(만점 기준)
-          </p>
-        </div>
-        <div style="background: #f8fafc; border: 1.5px solid var(--border); border-radius: 8px; padding: 14px; text-align: left; font-size: 0.88rem;">
-          <div style="margin-bottom: 6px;"><strong>국가직 7급 공무원:</strong> <span id="pass7th" style="font-weight: 800; color: var(--success);">PASS (통과)</span></div>
-          <div style="margin-bottom: 6px;"><strong>군무원 7급 공채:</strong> <span id="passGun7th" style="font-weight: 800; color: var(--success);">PASS (통과)</span></div>
-          <div style="margin-bottom: 6px;"><strong>군무원 9급 공채:</strong> <span id="passGun9th" style="font-weight: 800; color: var(--success);">PASS (통과)</span></div>
-          <div><strong>공기업 일반 사무직(서류 가산):</strong> <span id="passPub" style="font-weight: 800; color: var(--success);">PASS (지원 가능)</span></div>
+          <div style="background: #f8fafc; border: 1.5px solid var(--border); border-radius: 8px; padding: 14px; font-size: 0.88rem;">
+            <div style="margin-bottom: 6px;"><strong>예상 오픽(OPIc):</strong> <strong id="resOpic" style="color: var(--primary);">IH</strong></div>
+            <div style="margin-bottom: 6px;"><strong>예상 토익스피킹:</strong> <strong id="resTos" style="color: var(--primary);">AM (160점)</strong></div>
+            <div style="margin-bottom: 6px;"><strong>지텔프(Level 2):</strong> <strong id="resGtelp" style="color: #0f172a;">약 77점 상당</strong></div>
+            <div><strong>뉴텝스(TEPS):</strong> <strong id="resTeps" style="color: #0f172a;">약 385점 상당</strong></div>
+          </div>
         </div>
       </div>
-    </section>
 
-    <!-- 공공기관 5년 인정 사전등록 공식 가이드 -->
+      <!-- 실무 프로그램 2: 공기업 어학 가산점 시뮬레이터 -->
+      <div id="subTabPublic" class="mod-content">
+        <div class="section-title"><span>🏢</span> 주요 공기업 어학 서류 가산점 판정기</div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: center;">
+          <div>
+            <div class="form-group">
+              <label class="form-label">지원 준비 중인 토익 점수</label>
+              <input type="number" id="publicToeicInput" class="form-input" value="850" step="5" min="0" max="990" oninput="judgePublicCompany()">
+            </div>
+            <p style="font-size: 0.82rem; color: var(--text-muted);">
+              * 공기업 일반 사무직은 통상 850점 만점 또는 900점 만점 차등 배점 적용
+            </p>
+          </div>
+          <div style="background: #f8fafc; border: 1.5px solid var(--border); border-radius: 8px; padding: 14px; font-size: 0.88rem;">
+            <div style="margin-bottom: 6px;"><strong>한국전력공사 (한전):</strong> <span id="pubKepco" style="font-weight: 800; color: var(--success);">만점 가산 (850점↑)</span></div>
+            <div style="margin-bottom: 6px;"><strong>국민건강보험공단:</strong> <span id="pubNhis" style="font-weight: 800; color: var(--success);">서류 적격 통과</span></div>
+            <div style="margin-bottom: 6px;"><strong>한국철도공사 (코레일):</strong> <span id="pubKorail" style="font-weight: 800; color: var(--success);">지원 자격 충족 (700점↑)</span></div>
+            <div><strong>인천국제공항공사:</strong> <span id="pubIncheon" style="font-weight: 800; color: var(--warning);">적정권 (800점 기본)</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 실무 프로그램 3: 국가직 7급·군무원 패스 판정기 -->
+      <div id="subTabPass" class="mod-content">
+        <div class="section-title"><span>🎯</span> 국가직 7급·군무원 영어 대체 통과 판정기</div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: center;">
+          <div>
+            <div class="form-group">
+              <label class="form-label">내 토익 점수 입력</label>
+              <input type="number" id="userScore" class="form-input" value="750" step="5" min="0" max="990" oninput="judgePassStatus()">
+            </div>
+            <p style="font-size: 0.82rem; color: var(--text-muted);">
+              * 국가직 7급: 700점 | 군무원 7급: 570점 | 군무원 9급: 470점
+            </p>
+          </div>
+          <div style="background: #f8fafc; border: 1.5px solid var(--border); border-radius: 8px; padding: 14px; text-align: left; font-size: 0.88rem;">
+            <div style="margin-bottom: 6px;"><strong>국가직 7급 공무원:</strong> <span id="pass7th" style="font-weight: 800; color: var(--success);">PASS (통과)</span></div>
+            <div style="margin-bottom: 6px;"><strong>군무원 7급 공채:</strong> <span id="passGun7th" style="font-weight: 800; color: var(--success);">PASS (통과)</span></div>
+            <div><strong>군무원 9급 공채:</strong> <span id="passGun9th" style="font-weight: 800; color: var(--success);">PASS (통과)</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 공공기관 5년 인정 사전등록 공식 가이드 (인사혁신처 공식 시스템 링크 100% 정상 작동) -->
     <div class="notice-card">
       <h4>
-        <span>💡 공공기관·공무원 준비생 필독: 어학 성적 5년 사전등록</span>
-        <a href="https://www.gosi.kr" target="_blank" rel="noopener noreferrer" class="btn-gosi">사이버국가고시센터 바로가기 ↗</a>
+        <span>💡 공공기관·공무원 필수: 인사혁신처 어학 성적 5년 사전등록</span>
+        <a href="https://gongmuwon.gosi.kr" target="_blank" rel="noopener noreferrer" class="btn-gosi">국가공무원 채용시스템 바로가기 ↗</a>
       </h4>
       <p>
-        인사혁신처 사이버국가고시센터(gosi.kr)에 <strong>어학 성적 유효기간(2년)이 만료되기 전 사전등록</strong>을 완료하면, 정부 부처 및 공공기관 채용 전산망에서 <strong>응시 연도로부터 5년이 되는 해의 12월 31일까지 성적이 공식 인정</strong>됩니다. 2년 만료 D-Day가 지나 주관사 DB 조회가 닫히면 사전등록이 영구 불가하므로 반드시 기한 내 등록하세요!
+        인사혁신처 공식 <strong>국가공무원 채용시스템(gongmuwon.gosi.kr)</strong>에 <strong>어학 성적 유효기간(2년)이 만료되기 전 사전등록</strong>을 완료하면, 정부 부처 및 공공기관 채용 전산망에서 <strong>응시 연도로부터 5년이 되는 해의 12월 31일까지 성적이 공식 인정</strong>됩니다. 2년 만료 D-Day가 지나 주관사 조회가 닫히면 사전등록이 영구 불가하므로 반드시 기한 내 등록하세요!
       </p>
     </div>
 
@@ -230,23 +291,23 @@
       <div class="rule-grid">
         <div class="rule-card">
           <strong>1. 상시 등록 가능 시험</strong>
-          토익(TOEIC), 토익스피킹, 텝스(TEPS), 텝스스피킹, 지텔프(G-TELP)는 유효기간 2년 이내라면 언제든지 사이버국가고시센터에서 상시 조회가 가능하여 즉시 사전등록할 수 있습니다.
+          토익(TOEIC), 토익스피킹, 텝스(TEPS), 텝스스피킹, 지텔프(G-TELP)는 주관사 자동 검증이 구축되어 유효기간 2년 이내라면 언제든지 국가공무원 채용시스템에서 상시 즉시 등록이 가능합니다.
         </div>
         <div class="rule-card">
           <strong>2. 매월 정기 등록 기간 운영 시험</strong>
-          오픽(OPIc), 토플(TOEFL), FLEX, SNULT, 新HSK, JPT 등은 주관사 검증 시스템 연계 방식에 따라 <strong>매월 1일 09:00 ~ 10일 24:00</strong> 사이에만 정기 등록 신청을 받습니다.
+          오픽(OPIc), 토플(TOEFL), FLEX, SNULT, 新HSK, JPT 등은 데이터 수기 검증 절차에 따라 <strong>매월 1일 09:00 ~ 10일 24:00</strong> 사이에만 정기 등록 신청을 접수합니다.
         </div>
       </div>
     </section>
 
-    <!-- 공식 시험 주관사 및 공인 성적조회 포털 허브 -->
+    <!-- 공식 시험 주관사 및 정부 채용 포털 허브 (보안 경고 0%) -->
     <div class="card">
       <div class="section-title"><span>🌐</span> 공인 어학시험 주관사 & 정부 채용 포털 바로가기</div>
       <div class="hub-grid">
         <a href="https://exam.toeic.co.kr" target="_blank" rel="noopener noreferrer" class="hub-item">
           <div>
             <strong style="display: block; font-size: 0.95rem;">YBM 한국TOEIC위원회</strong>
-            <span style="font-size: 0.8rem; color: var(--text-muted);">토익 성적표 발급 및 유효기간 확인</span>
+            <span style="font-size: 0.8rem; color: var(--text-muted);">토익 공식 성적표 발급 및 유효기간 확인</span>
           </div>
           <span class="hub-tag">토익 공식 ↗</span>
         </a>
@@ -257,17 +318,17 @@
           </div>
           <span class="hub-tag">오픽 공식 ↗</span>
         </a>
-        <a href="https://www.gosi.kr" target="_blank" rel="noopener noreferrer" class="hub-item">
+        <a href="https://gongmuwon.gosi.kr" target="_blank" rel="noopener noreferrer" class="hub-item">
           <div>
-            <strong style="display: block; font-size: 0.95rem;">사이버국가고시센터</strong>
-            <span style="font-size: 0.8rem; color: var(--text-muted);">공무원·공기업 어학 5년 사전등록 창구</span>
+            <strong style="display: block; font-size: 0.95rem;">국가공무원 채용시스템</strong>
+            <span style="font-size: 0.8rem; color: var(--text-muted);">인사혁신처 공무원·공기업 어학 5년 사전등록</span>
           </div>
           <span class="hub-tag">정부 공인 ↗</span>
         </a>
         <a href="https://www.work.go.kr" target="_blank" rel="noopener noreferrer" class="hub-item">
           <div>
             <strong style="display: block; font-size: 0.95rem;">고용노동부 워크넷</strong>
-            <span style="font-size: 0.8rem; color: var(--text-muted);">어학 커트라인 포함 채용공고 실시간 검색</span>
+            <span style="font-size: 0.8rem; color: var(--text-muted);">어학 커트라인 포함 공채 실시간 검색</span>
           </div>
           <span class="hub-tag">고용부 공식 ↗</span>
         </a>
@@ -323,6 +384,13 @@
   </footer>
 
   <script>
+    function switchDdayModule(tabId, btnEl) {
+      document.querySelectorAll('.mod-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.mod-content').forEach(c => c.classList.remove('active'));
+      btnEl.classList.add('active');
+      document.getElementById(tabId).classList.add('active');
+    }
+
     function calculateDday() {
       const dateVal = document.getElementById('examDate').value;
       const examType = document.getElementById('examType').value;
@@ -383,15 +451,102 @@
       }
     }
 
+    // 신규 실무 1: 토익 기반 타 어학 시험 점수 상호 변환기
+    function convertScoreAuto() {
+      const s = parseInt(document.getElementById('convertToeicInput').value, 10) || 0;
+      const elOpic = document.getElementById('resOpic');
+      const elTos = document.getElementById('resTos');
+      const elGtelp = document.getElementById('resGtelp');
+      const elTeps = document.getElementById('resTeps');
+
+      if (s >= 900) {
+        elOpic.innerText = "AL (Advanced Low)";
+        elTos.innerText = "AH (180~200점)";
+        elGtelp.innerText = "Level 2 85점 이상";
+        elTeps.innerText = "430점 이상";
+      } else if (s >= 850) {
+        elOpic.innerText = "IH (Intermediate High)";
+        elTos.innerText = "AM (160점)";
+        elGtelp.innerText = "Level 2 77~84점";
+        elTeps.innerText = "385~429점";
+      } else if (s >= 750) {
+        elOpic.innerText = "IM3";
+        elTos.innerText = "IM3 (140~150점)";
+        elGtelp.innerText = "Level 2 65~76점";
+        elTeps.innerText = "340~384점";
+      } else if (s >= 650) {
+        elOpic.innerText = "IM2";
+        elTos.innerText = "IM2 (120~130점)";
+        elGtelp.innerText = "Level 2 55~64점";
+        elTeps.innerText = "280~339점";
+      } else {
+        elOpic.innerText = "IM1 이하";
+        elTos.innerText = "IM1 이하";
+        elGtelp.innerText = "Level 2 50점 이하";
+        elTeps.innerText = "250점 이하";
+      }
+    }
+
+    // 신규 실무 2: 공기업 어학 가산점 시뮬레이터
+    function judgePublicCompany() {
+      const s = parseInt(document.getElementById('publicToeicInput').value, 10) || 0;
+      
+      const elKepco = document.getElementById('pubKepco');
+      const elNhis = document.getElementById('pubNhis');
+      const elKorail = document.getElementById('pubKorail');
+      const elIncheon = document.getElementById('pubIncheon');
+
+      // 한전 (850 만점)
+      if (s >= 850) {
+        elKepco.innerText = "만점 가산 (100점 환산)";
+        elKepco.style.color = "var(--success)";
+      } else if (s >= 700) {
+        elKepco.innerText = `부분 가산 (약 ${Math.round((s/850)*100)}점)`;
+        elKepco.style.color = "var(--warning)";
+      } else {
+        elKepco.innerText = "가산점 미달";
+        elKepco.style.color = "var(--danger)";
+      }
+
+      // 건보 (700 통과)
+      if (s >= 700) {
+        elNhis.innerText = "서류 기본 자격 통과";
+        elNhis.style.color = "var(--success)";
+      } else {
+        elNhis.innerText = "지원 자격 미달";
+        elNhis.style.color = "var(--danger)";
+      }
+
+      // 코레일 (700 기준)
+      if (s >= 700) {
+        elKorail.innerText = "지원 자격 충족";
+        elKorail.style.color = "var(--success)";
+      } else {
+        elKorail.innerText = "자격 미달 (700 필요)";
+        elKorail.style.color = "var(--danger)";
+      }
+
+      // 인국공 (800~900 고득점 경쟁)
+      if (s >= 900) {
+        elIncheon.innerText = "서류 안정권 (만점권)";
+        elIncheon.style.color = "var(--success)";
+      } else if (s >= 800) {
+        elIncheon.innerText = "기본 지원 가능";
+        elIncheon.style.color = "var(--warning)";
+      } else {
+        elIncheon.innerText = "기본 자격 미달";
+        elIncheon.style.color = "var(--danger)";
+      }
+    }
+
+    // 신규 실무 3: 국가직 7급/군무원 패스 판정
     function judgePassStatus() {
       const score = parseInt(document.getElementById('userScore').value, 10) || 0;
       
       const el7th = document.getElementById('pass7th');
       const elGun7th = document.getElementById('passGun7th');
       const elGun9th = document.getElementById('passGun9th');
-      const elPub = document.getElementById('passPub');
 
-      // 국가직 7급 (700)
       if (score >= 700) {
         el7th.innerText = 'PASS (통과 가능)';
         el7th.style.color = 'var(--success)';
@@ -400,7 +555,6 @@
         el7th.style.color = 'var(--danger)';
       }
 
-      // 군무원 7급 (570)
       if (score >= 570) {
         elGun7th.innerText = 'PASS (통과 가능)';
         elGun7th.style.color = 'var(--success)';
@@ -409,7 +563,6 @@
         elGun7th.style.color = 'var(--danger)';
       }
 
-      // 군무원 9급 (470)
       if (score >= 470) {
         elGun9th.innerText = 'PASS (통과 가능)';
         elGun9th.style.color = 'var(--success)';
@@ -417,21 +570,14 @@
         elGun9th.innerText = `FAIL (${470 - score}점 부족)`;
         elGun9th.style.color = 'var(--danger)';
       }
-
-      // 공기업 일반 사무직 기본 (850점 가산점 안정권)
-      if (score >= 850) {
-        elPub.innerText = 'PASS (가산점 만점권)';
-        elPub.style.color = 'var(--success)';
-      } else {
-        elPub.innerText = `보통 (만점까지 ${850 - score}점)`;
-        elPub.style.color = 'var(--warning)';
-      }
     }
 
     window.addEventListener('DOMContentLoaded', () => {
       const today = new Date();
       document.getElementById('examDate').value = today.toISOString().substring(0, 10);
       calculateDday();
+      convertScoreAuto();
+      judgePublicCompany();
       judgePassStatus();
     });
   </script>
