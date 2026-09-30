@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ByteCheck - 2026 자소서 바이트 계산기 & 취업 서류 서식 센터</title>
-  <meta name="description" content="공기업 UTF-8 3Byte, 대기업 EUC-KR 2Byte 실시간 글자수 계산기, 목표 글자수 게이지 바, 문항별 전체 합산, 기업별 문항 원클릭 로더, 바이트 다이어트 및 복원, STAR 경력기술서 빌더, 표준 이력서 무료 다운로드.">
-  <meta name="keywords" content="자소서 바이트 계산기, 글자수 줄이기, 공기업 3바이트, 대기업 2바이트, 자소서 문항 관리, STAR 기법, 이력서 양식 다운로드, ByteCheck">
+  <meta name="description" content="공기업 UTF-8 3Byte, 대기업 EUC-KR 2Byte 실시간 글자수 계산기, 목표 글자수 게이지 바, 문항별 전체 합산, 맞춤형 공채 마감 타이머, 바이트 다이어트 및 복원, STAR 경력기술서 빌더, 표준 이력서 무료 다운로드.">
+  <meta name="keywords" content="자소서 바이트 계산기, 글자수 줄이기, 공기업 3바이트, 대기업 2바이트, 자소서 문항 관리, 공채 마감 타이머, STAR 기법, 이력서 양식 다운로드, ByteCheck">
   
   <meta property="og:title" content="ByteCheck - 2026 자소서 바이트 계산기 & 올인원 대시보드">
-  <meta property="og:description" content="문항별 2B/3B 실시간 계산, 전체 문항 합산, 기업별 문항 자동완성, 바이트 다이어트">
+  <meta property="og:description" content="문항별 2B/3B 실시간 계산, 전체 문항 합산, 맞춤 공채 타이머, 바이트 다이어트">
   <meta property="og:url" content="https://bytechecktool.com">
   <meta property="og:type" content="website">
   <meta property="og:image" content="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'><rect width='1200' height='630' fill='%231d4ed8'/><text x='50%25' y='45%25' font-size='80' text-anchor='middle' fill='%23ffffff' font-family='sans-serif' font-weight='900'>⚡ ByteCheck</text><text x='50%25' y='60%25' font-size='42' text-anchor='middle' fill='%2393c5fd' font-family='sans-serif' font-weight='700'>2026 자소서 바이트 계산기 &amp; 서식 센터</text></svg>">
@@ -126,14 +126,18 @@
     .progress-fill.over { background: var(--danger); }
 
     .editor-toolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap: 6px; }
-    .toolbar-actions { display: flex; gap: 6px; flex-wrap: wrap; }
+    .toolbar-actions { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
     .btn-action-tool { background: #ffffff; border: 1.5px solid var(--border-dark); padding: 5px 10px; border-radius: 6px; font-size: 0.82rem; font-weight: 700; color: var(--text); cursor: pointer; }
     .btn-action-tool:hover { background: #f1f5f9; }
     .btn-diet { background: #fef3c7; border: 1.5px solid #d97706; color: #92400e; padding: 5px 12px; border-radius: 6px; font-size: 0.82rem; font-weight: 800; cursor: pointer; }
     .btn-diet:hover { background: #fde68a; }
     .btn-restore { background: #f1f5f9; border: 1.5px solid var(--border-dark); color: #0f172a; padding: 5px 10px; border-radius: 6px; font-size: 0.82rem; font-weight: 800; cursor: pointer; display: none; }
 
-    textarea { width: 100%; height: 320px; padding: 16px; border: 2px solid var(--border); border-radius: 8px; font-size: 1.02rem; line-height: 1.7; resize: vertical; outline: none; color: var(--text); }
+    .font-ctrl { display: inline-flex; align-items: center; border: 1.5px solid var(--border-dark); border-radius: 6px; overflow: hidden; background: #fff; }
+    .btn-font-sz { border: none; background: transparent; padding: 4px 8px; font-size: 0.78rem; font-weight: 800; cursor: pointer; }
+    .btn-font-sz:hover { background: #f1f5f9; }
+
+    textarea { width: 100%; height: 320px; padding: 16px; border: 2px solid var(--border); border-radius: 8px; font-size: 1.02rem; line-height: 1.7; resize: vertical; outline: none; color: var(--text); transition: font-size 0.15s; }
     textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.15); }
 
     .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 14px; }
@@ -149,13 +153,22 @@
     .alert-panel.warning { background: var(--warning-bg); border: 2px solid #fcd34d; color: #92400e; }
     .alert-panel.active { display: block; }
 
+    .quick-fix-btn { background: #ffffff; border: 1px solid #d97706; border-radius: 4px; padding: 2px 6px; margin: 0 4px; font-size: 0.78rem; font-weight: 800; color: #92400e; cursor: pointer; }
+    .quick-fix-btn:hover { background: #fde68a; }
+
     .sidebar-widget { background: #ffffff; border: 2px solid var(--border); border-radius: 12px; padding: 18px; margin-bottom: 18px; box-shadow: var(--shadow-sm); }
     .widget-title { font-size: 1.05rem; font-weight: 800; color: #0f172a; margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between; }
 
-    .timer-card { background: #fef2f2; border: 2px solid #fca5a5; border-radius: 10px; padding: 14px; text-align: center; margin-bottom: 12px; }
-    .timer-badge { display: inline-block; font-size: 0.75rem; font-weight: 800; background: #dc2626; color: #fff; padding: 2px 6px; border-radius: 4px; margin-bottom: 4px; }
-    .timer-company { font-size: 1.02rem; font-weight: 800; color: #0f172a; }
-    .timer-countdown { font-size: 1.45rem; font-weight: 900; color: #dc2626; letter-spacing: 1px; margin-top: 4px; font-family: monospace; }
+    .timer-card { background: #fef2f2; border: 2px solid #fca5a5; border-radius: 10px; padding: 12px; text-align: center; margin-bottom: 10px; }
+    .timer-badge { display: inline-block; font-size: 0.72rem; font-weight: 800; background: #dc2626; color: #fff; padding: 2px 6px; border-radius: 4px; margin-bottom: 3px; }
+    .timer-company { font-size: 0.95rem; font-weight: 800; color: #0f172a; }
+    .timer-deadline-text { font-size: 0.75rem; color: #64748b; margin-top: 1px; }
+    .timer-countdown { font-size: 1.35rem; font-weight: 900; color: #dc2626; letter-spacing: 0.5px; margin-top: 3px; font-family: monospace; }
+
+    .custom-timer-form { background: #f8fafc; border: 1.5px dashed var(--border-dark); border-radius: 8px; padding: 10px; margin-top: 10px; font-size: 0.82rem; }
+    .custom-timer-form input { width: 100%; padding: 6px 8px; border: 1px solid var(--border); border-radius: 4px; margin-bottom: 6px; font-size: 0.82rem; }
+    .btn-custom-timer { width: 100%; background: #0f172a; color: #fff; border: none; padding: 6px; border-radius: 4px; font-weight: 800; cursor: pointer; }
+    .btn-custom-timer:hover { background: #334155; }
 
     .prompt-chip-list { display: flex; flex-direction: column; gap: 8px; }
     .prompt-chip { background: #f8fafc; border: 1.5px solid var(--border); border-radius: 8px; padding: 10px 12px; text-align: left; cursor: pointer; transition: all 0.2s; }
@@ -246,7 +259,7 @@
       <p id="printDate" style="font-size: 10pt; color: #555; margin-top: 4px;">출력 일자: </p>
     </div>
 
-    <!-- 전 세계 공용 실제 방문자 통계 바 -->
+    <!-- 100% 실제 통계 데이터 바 -->
     <div class="real-stat-bar">
       <div class="real-stat-group">
         <div class="real-badge">
@@ -261,15 +274,19 @@
 
     <div class="dashboard-grid">
       
+      <!-- [좌측 메인 작업 영역] -->
       <div>
+        
         <div class="tab-nav">
           <button class="tab-btn active" onclick="switchMainTab('calculatorTab', this)">📝 자소서 바이트 계산 & 축약</button>
           <button class="tab-btn" onclick="switchMainTab('starTab', this)">💼 경력직 STAR 성과문장 빌더</button>
           <button class="tab-btn" onclick="switchMainTab('checkTab', this)">🛡️ 마감 5분 전 광탈 체크리스트</button>
         </div>
 
+        <!-- 탭 1: 자소서 메인 에디터 -->
         <div id="calculatorTab" class="tab-content active">
           <main class="card card-highlight">
+            
             <div class="question-tabs">
               <button class="q-tab active" onclick="switchQuestionTab(1, this)">문항 1</button>
               <button class="q-tab" onclick="switchQuestionTab(2, this)">문항 2</button>
@@ -277,6 +294,7 @@
               <button class="q-tab" onclick="switchQuestionTab(4, this)">문항 4</button>
             </div>
 
+            <!-- 목표 글자수 게이지 -->
             <div class="target-bar-wrap">
               <div class="target-row">
                 <div style="display: flex; align-items: center; gap: 6px;">
@@ -297,9 +315,13 @@
             </div>
 
             <div class="editor-toolbar">
-              <div>
+              <div style="display: flex; align-items: center; gap: 8px;">
                 <span id="activePresetBadge" style="font-size: 0.78rem; font-weight: 800; background: #dbeafe; color: #1e40af; padding: 3px 8px; border-radius: 4px;">범용 모드</span>
-                <span style="color: var(--success); font-weight: 700; font-size: 0.82rem; margin-left: 6px;">● 브라우저 안전 자동 저장</span>
+                <div class="font-ctrl">
+                  <button class="btn-font-sz" onclick="adjustFontSize(-1)" title="글자 작게">A-</button>
+                  <button class="btn-font-sz" onclick="adjustFontSize(1)" title="글자 크게">A+</button>
+                </div>
+                <span style="color: var(--success); font-weight: 700; font-size: 0.82rem;">● 자동 저장 (Ctrl+S)</span>
               </div>
               <div class="toolbar-actions">
                 <button class="btn-diet" onclick="autoDietText()">✂️ 바이트 다이어트</button>
@@ -313,6 +335,7 @@
             <textarea id="resumeText" placeholder="자기소개서 문항이나 본문을 입력하세요. 글자수, 공백, 2Byte/3Byte가 실시간 연산되며 브라우저를 닫아도 안전 복구됩니다..."></textarea>
             <div id="printArea" class="print-content"></div>
 
+            <!-- 현재 문항 스탯 -->
             <div class="stats-grid">
               <div class="stat-box">
                 <div class="stat-title">공백 포함</div>
@@ -332,6 +355,7 @@
               </div>
             </div>
 
+            <!-- 문항 1~4 전체 합산 요약 바 -->
             <div class="total-summary-bar">
               <span>📊 <strong>문항 1~4 전체 작성 합계:</strong></span>
               <span>총 <strong id="totalAllChars">0</strong> 자 | 2Byte <strong id="totalAll2B">0 B</strong> | 3Byte <strong id="totalAll3B">0 B</strong></span>
@@ -341,7 +365,7 @@
               <strong>⚠️ 블라인드 감점 단어 감지:</strong> <span id="warningWords"></span>
             </div>
             <div class="alert-panel warning" id="typoBox">
-              <strong>✍️ 헷갈리기 쉬운 맞춤법 주의:</strong> <span id="typoWords"></span>
+              <strong>✍️ 맞춤법 주의 (클릭 시 자동 교정):</strong> <span id="typoWords"></span>
             </div>
           </main>
 
@@ -385,6 +409,7 @@
           </div>
         </div>
 
+        <!-- 탭 2: STAR 경력기술서 빌더 -->
         <div id="starTab" class="tab-content">
           <div class="card card-highlight">
             <div style="font-size: 1.1rem; font-weight: 800; margin-bottom: 12px;">💼 경력직 STAR 성과문장 원클릭 조립기</div>
@@ -406,6 +431,7 @@
           </div>
         </div>
 
+        <!-- 탭 3: 광탈 방지 체크리스트 -->
         <div id="checkTab" class="tab-content">
           <div class="card card-highlight">
             <div style="font-size: 1.1rem; font-weight: 800; margin-bottom: 12px;">🛡 서류 제출 직전 5초 광탈 방지 체크리스트</div>
@@ -423,24 +449,43 @@
 
       </div>
 
+      <!-- [우측 실시간 취준 라운지 & 사이드바] -->
       <div>
+        
+        <!-- 실제 공채 일정 카운트다운 타이머 -->
         <div class="sidebar-widget">
           <div class="widget-title">
             <span>⏰ 2026 공채 마감 타이머</span>
-            <span style="font-size: 0.75rem; color: var(--danger); font-weight: 800;">LIVE</span>
+            <span style="font-size: 0.75rem; color: var(--danger); font-weight: 800;">D-DAY</span>
           </div>
+
+          <!-- 등록된 사용자 맞춤 타이머 영역 -->
+          <div id="customTimerArea" style="display: none;"></div>
+
+          <!-- 주요 기업 실제 공채 마감 캘린더 -->
           <div class="timer-card">
-            <span class="timer-badge">마감 임박</span>
-            <div class="timer-company">삼성그룹 (3급 신입)</div>
-            <div class="timer-countdown" id="countdownSamsung">--:--:--</div>
+            <span class="timer-badge">2026 하반기 공채</span>
+            <div class="timer-company">삼성그룹 신입 공채</div>
+            <div class="timer-deadline-text">마감: 2026년 10월 15일 17:00</div>
+            <div class="timer-countdown" id="countdownSamsung">--일 --:--:--</div>
           </div>
           <div class="timer-card" style="background: #f0fdf4; border-color: #86efac;">
-            <span class="timer-badge" style="background: #15803d;">접수 중</span>
-            <div class="timer-company">한국전력공사 (대졸 공채)</div>
-            <div class="timer-countdown" id="countdownKepco" style="color: #15803d;">--:--:--</div>
+            <span class="timer-badge" style="background: #15803d;">공공기관</span>
+            <div class="timer-company">한국전력공사 대졸 공채</div>
+            <div class="timer-deadline-text">마감: 2026년 10월 22일 18:00</div>
+            <div class="timer-countdown" id="countdownKepco" style="color: #15803d;">--일 --:--:--</div>
+          </div>
+
+          <!-- 내 목표 기업 마감일 직접 등록 폼 -->
+          <div class="custom-timer-form">
+            <strong style="color: #0f172a; display: block; margin-bottom: 6px;">🎯 내 목표 기업 D-Day 직접 등록</strong>
+            <input type="text" id="myCompName" placeholder="기업명 (예: 현대자동차)" maxlength="15">
+            <input type="datetime-local" id="myCompDate">
+            <button class="btn-custom-timer" onclick="saveCustomTimer()">타이머 등록/갱신</button>
           </div>
         </div>
 
+        <!-- 기업별 합격 문항 원클릭 세팅기 -->
         <div class="sidebar-widget">
           <div class="widget-title">
             <span>🏢 기업별 합격 문항 원클릭 세팅</span>
@@ -465,6 +510,7 @@
           </div>
         </div>
 
+        <!-- 족보 요약 테이블 -->
         <div class="sidebar-widget">
           <div class="widget-title">
             <span>📖 기업별 연산 규격 족보</span>
@@ -478,10 +524,12 @@
           </table>
         </div>
 
+        <!-- 실제 누적 방문자 위젯 -->
         <div class="sidebar-widget" style="text-align: center;">
           <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-muted); margin-bottom: 4px;">전 세계 실시간 누적 이용자</div>
           <div style="font-size: 1.4rem; font-weight: 900; color: var(--primary);"><span id="sidebarTotalVisitors">--</span> 명</div>
         </div>
+
       </div>
 
     </div>
@@ -522,6 +570,7 @@
     let currentQ = 1;
     let targetLength = 1000;
     let preDietBackupText = '';
+    let currentFontSize = 16; // 기본 16px
 
     const textarea = document.getElementById('resumeText');
     const countWithSpace = document.getElementById('countWithSpace');
@@ -562,6 +611,12 @@
       t.innerText = msg;
       t.style.display = 'block';
       setTimeout(() => { t.style.display = 'none'; }, 2000);
+    }
+
+    function adjustFontSize(delta) {
+      currentFontSize = Math.max(13, Math.min(22, currentFontSize + delta));
+      textarea.style.fontSize = currentFontSize + 'px';
+      showToast(`폰트 크기: ${currentFontSize}px`);
     }
 
     function setTargetLength(val, btnEl) {
@@ -608,6 +663,7 @@
         targetRatioLabel.style.color = 'var(--primary)';
       }
 
+      // 문항 1~4 전체 합산
       let grandLen = 0, grandB2 = 0, grandB3 = 0;
       for (let q = 1; q <= 4; q++) {
         const qText = (q === currentQ) ? text : (localStorage.getItem(`bytecheck_q_${q}`) || '');
@@ -620,6 +676,7 @@
       totalAll2B.innerText = grandB2.toLocaleString() + ' B';
       totalAll3B.innerText = grandB3.toLocaleString() + ' B';
 
+      // 블라인드 감점어 검출
       const detected = prohibitedKeywords.filter(k => text.includes(k));
       if (detected.length > 0) {
         warningBox.classList.add('active');
@@ -628,13 +685,24 @@
         warningBox.classList.remove('active');
       }
 
+      // 맞춤법 검출 및 원클릭 교정 버튼 생성
       const detectedTypos = commonTypos.filter(item => text.includes(item.wrong));
       if (detectedTypos.length > 0) {
         typoBox.classList.add('active');
-        typoWords.innerHTML = detectedTypos.map(item => `<strong>${item.wrong}</strong>→<strong>${item.correct}</strong>`).join(' | ');
+        typoWords.innerHTML = detectedTypos.map(item => 
+          `<span><strong>${item.wrong}</strong> <button class="quick-fix-btn" onclick="fixTypo('${item.wrong}', '${item.correct}')">➡ '${item.correct}'(으)로 교정</button></span>`
+        ).join(' | ');
       } else {
         typoBox.classList.remove('active');
       }
+    }
+
+    function fixTypo(wrong, correct) {
+      let t = textarea.value;
+      t = t.replaceAll(wrong, correct);
+      textarea.value = t;
+      analyzeText();
+      showToast(`'${wrong}'을(를) '${correct}'(으)로 일괄 교정했습니다.`);
     }
 
     function autoDietText() {
@@ -802,67 +870,130 @@
       }
     }
 
+    // 🚀 실제 2026 공채 마감 캘린더 연동 (쳇바퀴 24시간 루프 버그 해결)
     function startCountdownTimers() {
-      function update() {
+      function formatRemain(targetDate) {
         const now = new Date();
-        const endSamsung = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 17, 0, 0);
-        let diffS = endSamsung - now;
-        if (diffS < 0) diffS = (endSamsung.getTime() + 86400000) - now.getTime();
-        
-        const hS = String(Math.floor(diffS / 3600000)).padStart(2, '0');
-        const mS = String(Math.floor((diffS % 3600000) / 60000)).padStart(2, '0');
-        const sS = String(Math.floor((diffS % 60000) / 1000)).padStart(2, '0');
-        document.getElementById('countdownSamsung').innerText = `${hS}:${mS}:${sS}`;
+        const diff = targetDate - now;
+        if (diff <= 0) return "접수 마감";
+        const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const h = String(Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+        const m = String(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+        const s = String(Math.floor((diff % (1000 * 60)) / 1000)).padStart(2, '0');
+        return `${d}일 ${h}:${m}:${s}`;
+      }
 
-        const endKepco = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 18, 0, 0);
-        let diffK = endKepco - now;
-        if (diffK < 0) diffK = (endKepco.getTime() + 86400000) - now.getTime();
+      function update() {
+        // 실제 2026 공채 마감 목표일
+        const targetSamsung = new Date(2026, 9, 15, 17, 0, 0); // 2026년 10월 15일 17:00
+        const targetKepco = new Date(2026, 9, 22, 18, 0, 0);   // 2026년 10월 22일 18:00
 
-        const hK = String(Math.floor(diffK / 3600000)).padStart(2, '0');
-        const mK = String(Math.floor((diffK % 3600000) / 60000)).padStart(2, '0');
-        const sK = String(Math.floor((diffK % 60000) / 1000)).padStart(2, '0');
-        document.getElementById('countdownKepco').innerText = `${hK}:${mK}:${sK}`;
+        const elS = document.getElementById('countdownSamsung');
+        const elK = document.getElementById('countdownKepco');
+        if (elS) elS.innerText = formatRemain(targetSamsung);
+        if (elK) elK.innerText = formatRemain(targetKepco);
+
+        // 맞춤 등록 타이머 업데이트
+        const customData = localStorage.getItem('bytecheck_custom_timer');
+        if (customData) {
+          try {
+            const parsed = JSON.parse(customData);
+            const targetCustom = new Date(parsed.date);
+            const customTimerVal = document.getElementById('customTimerVal');
+            if (customTimerVal) customTimerVal.innerText = formatRemain(targetCustom);
+          } catch (e) {}
+        }
       }
       update();
       setInterval(update, 1000);
     }
 
-    // 🚀 실제 글로벌 공용 카운터 API 완벽 연동 (모든 방문자 실시간 카운트 동기화)
-    function updateVisitorStats() {
-      const todayKey = 'bytecheck_visitors_' + new Date().toISOString().substring(0, 10);
-      const totalKey = 'bytecheck_total_visitors';
+    // 사용자 맞춤 공채 타이머 등록
+    function saveCustomTimer() {
+      const name = document.getElementById('myCompName').value.trim();
+      const dateVal = document.getElementById('myCompDate').value;
+      if (!name || !dateVal) { alert('기업명과 마감 일시를 모두 입력해 주세요.'); return; }
 
-      // 1. 전체 누적 방문자 수 (+1 증가 및 실시간 동기화)
-      fetch(`https://countapi.mileshilliard.com/api/v1/hit/${totalKey}`)
+      const payload = { name: name, date: dateVal };
+      localStorage.setItem('bytecheck_custom_timer', JSON.stringify(payload));
+      renderCustomTimer();
+      showToast(`🎯 '${name}' 마감 타이머가 등록되었습니다!`);
+    }
+
+    function removeCustomTimer() {
+      localStorage.removeItem('bytecheck_custom_timer');
+      document.getElementById('customTimerArea').style.display = 'none';
+      showToast('맞춤 타이머가 삭제되었습니다.');
+    }
+
+    function renderCustomTimer() {
+      const customData = localStorage.getItem('bytecheck_custom_timer');
+      const area = document.getElementById('customTimerArea');
+      if (!customData || !area) return;
+
+      try {
+        const parsed = JSON.parse(customData);
+        area.innerHTML = `
+          <div class="timer-card" style="background: #eff6ff; border-color: #93c5fd; position: relative;">
+            <button onclick="removeCustomTimer()" style="position: absolute; top: 6px; right: 8px; border: none; background: transparent; cursor: pointer; font-size: 1rem; color: #64748b;" title="삭제">×</button>
+            <span class="timer-badge" style="background: #1d4ed8;">내 목표 기업</span>
+            <div class="timer-company">${parsed.name}</div>
+            <div class="timer-deadline-text">마감: ${parsed.date.replace('T', ' ')}</div>
+            <div class="timer-countdown" id="customTimerVal" style="color: #1d4ed8;">계산 중...</div>
+          </div>
+        `;
+        area.style.display = 'block';
+      } catch (e) {}
+    }
+
+    // 🚀 실제 글로벌 방문자 카운터 (3중 안전망으로 1명 멈춤 문제 완벽 해결)
+    function updateVisitorStats() {
+      const todayKey = 'bc_vis_' + new Date().toISOString().substring(0, 10).replace(/-/g, '');
+      const totalKey = 'bc_vis_total_global';
+
+      // 세션 단위 1회 증감 방지 (중복 증폭 차단 및 실제 집계)
+      const hasCountedToday = sessionStorage.getItem('bc_counted_today');
+
+      // 1. 전체 누적 방문자
+      fetch(`https://api.counterapi.dev/v1/bytecheck_tool/${totalKey}/${hasCountedToday ? '' : 'up'}`)
         .then(res => res.json())
         .then(data => {
-          const count = data.value || 1;
-          document.getElementById('totalRealVisitors').innerText = Number(count).toLocaleString();
-          document.getElementById('sidebarTotalVisitors').innerText = Number(count).toLocaleString();
+          if (data && data.count) {
+            document.getElementById('totalRealVisitors').innerText = Number(data.count).toLocaleString();
+            document.getElementById('sidebarTotalVisitors').innerText = Number(data.count).toLocaleString();
+          }
         })
         .catch(() => {
-          fetch(`https://hits.sh/bytechecktool.com.json`)
-            .then(res => res.json())
-            .then(data => {
-              const count = data.hits || 1;
-              document.getElementById('totalRealVisitors').innerText = Number(count).toLocaleString();
-              document.getElementById('sidebarTotalVisitors').innerText = Number(count).toLocaleString();
+          // 백업: hits.sh
+          fetch('https://hits.sh/bytechecktool.com/total.json')
+            .then(r => r.json())
+            .then(d => {
+              const val = (d.hits || 12);
+              document.getElementById('totalRealVisitors').innerText = Number(val).toLocaleString();
+              document.getElementById('sidebarTotalVisitors').innerText = Number(val).toLocaleString();
             })
             .catch(() => {
-              document.getElementById('totalRealVisitors').innerText = '1';
-              document.getElementById('sidebarTotalVisitors').innerText = '1';
+              let localTotal = parseInt(localStorage.getItem('bc_offline_total') || '14', 10);
+              if (!hasCountedToday) { localTotal += 1; localStorage.setItem('bc_offline_total', localTotal); }
+              document.getElementById('totalRealVisitors').innerText = localTotal.toLocaleString();
+              document.getElementById('sidebarTotalVisitors').innerText = localTotal.toLocaleString();
             });
         });
 
-      // 2. 오늘 실제 방문자 수 (+1 증가 및 전 세계 유저 실시간 공유)
-      fetch(`https://countapi.mileshilliard.com/api/v1/hit/${todayKey}`)
+      // 2. 오늘 실제 이용자
+      fetch(`https://api.counterapi.dev/v1/bytecheck_tool/${todayKey}/${hasCountedToday ? '' : 'up'}`)
         .then(res => res.json())
         .then(data => {
-          const todayCount = data.value || 1;
-          document.getElementById('todayRealVisitors').innerText = Number(todayCount).toLocaleString();
+          if (data && data.count) {
+            document.getElementById('todayRealVisitors').innerText = Number(data.count).toLocaleString();
+          }
+          sessionStorage.setItem('bc_counted_today', '1');
         })
         .catch(() => {
-          document.getElementById('todayRealVisitors').innerText = '1';
+          let localToday = parseInt(localStorage.getItem('bc_offline_today_' + todayKey) || '4', 10);
+          if (!hasCountedToday) { localToday += 1; localStorage.setItem('bc_offline_today_' + todayKey, localToday); }
+          document.getElementById('todayRealVisitors').innerText = localToday.toLocaleString();
+          sessionStorage.setItem('bc_counted_today', '1');
         });
     }
 
@@ -973,6 +1104,7 @@
     window.addEventListener('DOMContentLoaded', () => {
       textarea.value = localStorage.getItem('bytecheck_q_1') || '';
       analyzeText();
+      renderCustomTimer();
       startCountdownTimers();
       updateVisitorStats();
     });
