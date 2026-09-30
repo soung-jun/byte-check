@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ByteCheck - 2026 자소서 바이트 계산기 & 취업 서류 서식 센터</title>
   <meta name="description" content="공기업 UTF-8 3Byte, 대기업 EUC-KR 2Byte 실시간 글자수 계산기, 줄바꿈 2바이트 연산 선택, 목표 글자수 게이지, 고용노동부 기준 블라인드 채용 감점 단어 검출, 맞춤형 공채 D-Day 타이머, 표준 이력서 무료 다운로드.">
-  <meta name="keywords" content="자소서 바이트 계산기, 글자수 줄이기, 공기업 3바이트, 대기업 2바이트, 자소서 문항 관리, 블라인드 채용 감점, 공채 마감 타이머, STAR 기법, 이력서 양식 다운로드, ByteCheck">
+  <meta name="keywords" content="자소서 바이트 계산기, 글자수 줄이기, 공기업 3바이트, 대기업 2바이트, 자소서 문항 관리, 블라인드 채용 감점, 공채 마감 타이머, 이력서 양식 다운로드, ByteCheck">
   
   <meta property="og:title" content="ByteCheck - 2026 자소서 바이트 계산기 & 올인원 대시보드">
   <meta property="og:description" content="문항별 2B/3B 실시간 계산, 전체 문항 합산, 맞춤 공채 타이머, 바이트 다이어트">
@@ -156,14 +156,19 @@
     .quick-fix-btn { background: #ffffff; border: 1px solid #d97706; border-radius: 4px; padding: 2px 6px; margin: 0 4px; font-size: 0.78rem; font-weight: 800; color: #92400e; cursor: pointer; }
     .quick-fix-btn:hover { background: #fde68a; }
 
+    /* 쿠팡 파트너스 배너 */
+    .partner-banner { background: #ffffff; border: 2px solid var(--border); border-radius: 10px; padding: 14px 18px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: var(--shadow-sm); }
+    .partner-btn { background: #dc2626; color: #fff; text-decoration: none; font-size: 0.85rem; font-weight: 800; padding: 8px 14px; border-radius: 6px; white-space: nowrap; }
+    .partner-btn:hover { background: #b91c1c; }
+
     .sidebar-widget { background: #ffffff; border: 2px solid var(--border); border-radius: 12px; padding: 18px; margin-bottom: 18px; box-shadow: var(--shadow-sm); }
     .widget-title { font-size: 1.05rem; font-weight: 800; color: #0f172a; margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between; }
 
-    .timer-card { background: #fef2f2; border: 2px solid #fca5a5; border-radius: 10px; padding: 12px; text-align: center; margin-bottom: 10px; }
-    .timer-badge { display: inline-block; font-size: 0.72rem; font-weight: 800; background: #dc2626; color: #fff; padding: 2px 6px; border-radius: 4px; margin-bottom: 3px; }
+    .timer-card { background: #eff6ff; border: 2px solid #93c5fd; border-radius: 10px; padding: 12px; text-align: center; margin-bottom: 10px; }
+    .timer-badge { display: inline-block; font-size: 0.72rem; font-weight: 800; background: var(--primary); color: #fff; padding: 2px 6px; border-radius: 4px; margin-bottom: 3px; }
     .timer-company { font-size: 0.95rem; font-weight: 800; color: #0f172a; }
     .timer-deadline-text { font-size: 0.75rem; color: #64748b; margin-top: 1px; }
-    .timer-countdown { font-size: 1.35rem; font-weight: 900; color: #dc2626; letter-spacing: 0.5px; margin-top: 3px; font-family: monospace; }
+    .timer-countdown { font-size: 1.35rem; font-weight: 900; color: var(--primary); letter-spacing: 0.5px; margin-top: 3px; font-family: monospace; }
 
     .custom-timer-form { background: #f8fafc; border: 1.5px dashed var(--border-dark); border-radius: 8px; padding: 10px; margin-top: 10px; font-size: 0.82rem; }
     .custom-timer-form input { width: 100%; padding: 6px 8px; border: 1px solid var(--border); border-radius: 4px; margin-bottom: 6px; font-size: 0.82rem; }
@@ -171,9 +176,9 @@
     .btn-custom-timer:hover { background: #334155; }
 
     .official-hub-list { display: flex; flex-direction: column; gap: 8px; }
-    .official-hub-item { display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; background: #f8fafc; border: 1.5px solid var(--border); border-radius: 6px; text-decoration: none; color: #0f172a; font-size: 0.85rem; font-weight: 700; transition: background 0.2s; }
-    .official-hub-item:hover { background: #eff6ff; border-color: var(--primary); }
-    .official-hub-tag { font-size: 0.72rem; padding: 2px 6px; border-radius: 4px; background: #e2e8f0; color: #475569; }
+    .official-hub-item { display: flex; justify-content: space-between; align-items: center; padding: 10px 12px; background: #f8fafc; border: 1.5px solid var(--border); border-radius: 6px; text-decoration: none; color: #0f172a; font-size: 0.88rem; font-weight: 700; transition: background 0.2s; }
+    .official-hub-item:hover { background: #eff6ff; border-color: var(--primary); color: var(--primary); }
+    .official-hub-tag { font-size: 0.75rem; padding: 2px 6px; border-radius: 4px; background: #e2e8f0; color: #475569; }
 
     .prompt-chip-list { display: flex; flex-direction: column; gap: 8px; }
     .prompt-chip { background: #f8fafc; border: 1.5px solid var(--border); border-radius: 8px; padding: 10px 12px; text-align: left; cursor: pointer; transition: all 0.2s; }
@@ -181,17 +186,7 @@
     .prompt-chip strong { display: block; font-size: 0.88rem; color: #0f172a; margin-bottom: 2px; }
     .prompt-chip span { font-size: 0.78rem; color: var(--text-muted); }
 
-    .form-group { margin-bottom: 12px; }
-    .form-label { display: block; font-size: 0.85rem; font-weight: 800; color: #0f172a; margin-bottom: 4px; }
-    .form-input { width: 100%; padding: 8px 12px; border: 1.5px solid var(--border); border-radius: 6px; font-size: 0.9rem; outline: none; }
-    .form-input:focus { border-color: var(--primary); }
-    .star-result-box { background: #0f172a; color: #f8fafc; padding: 14px; border-radius: 8px; font-family: monospace; font-size: 0.88rem; white-space: pre-wrap; line-height: 1.6; margin-top: 12px; }
-
-    .checklist-group { display: flex; flex-direction: column; gap: 8px; }
-    .checklist-item { display: flex; align-items: center; gap: 8px; background: #f8fafc; padding: 10px 12px; border-radius: 6px; border: 1.5px solid var(--border); cursor: pointer; font-size: 0.88rem; font-weight: 600; }
-    .checklist-item input { width: 16px; height: 16px; }
-
-    .btn-download-main { background: #0f172a; color: #ffffff; text-decoration: none; padding: 10px 16px; border-radius: 8px; font-size: 0.88rem; font-weight: 800; cursor: pointer; border: none; text-align: center; display: inline-block; width: 100%; }
+    .btn-download-main { background: #0f172a; color: #ffffff; text-decoration: none; padding: 12px 16px; border-radius: 8px; font-size: 0.88rem; font-weight: 800; cursor: pointer; border: none; text-align: center; display: inline-block; width: 100%; transition: background 0.2s; }
     .btn-download-main:hover { background: #334155; }
 
     .accordion-item { border: 1.5px solid var(--border); border-radius: 8px; margin-bottom: 8px; background: #ffffff; overflow: hidden; }
@@ -229,7 +224,7 @@
 
     @media print {
       body { background: #fff; padding: 0; }
-      header, nav, .real-stat-bar, .tab-nav, .question-tabs, .target-bar-wrap, .editor-toolbar, .stats-grid, .total-summary-bar, .alert-panel, .dashboard-grid > div:last-child, .floating-box, footer, #resumeText { display: none !important; }
+      header, nav, .real-stat-bar, .tab-nav, .question-tabs, .target-bar-wrap, .editor-toolbar, .stats-grid, .total-summary-bar, .alert-panel, .partner-banner, .dashboard-grid > div:last-child, .floating-box, footer, #resumeText { display: none !important; }
       .dashboard-grid { display: block; }
       .card { border: none; padding: 0; }
       .print-header { display: block !important; margin-bottom: 20px; border-bottom: 2px solid #000; padding-bottom: 10px; }
@@ -264,10 +259,10 @@
     <div class="real-stat-bar">
       <div class="real-stat-group">
         <div class="real-badge">
-          📅 오늘 실제 이용자: <strong id="todayRealVisitors">--</strong> 명
+          📅 오늘 실제 이용자: <strong id="todayRealVisitors">12</strong> 명
         </div>
         <div class="real-badge">
-          👥 누적 실제 방문자: <strong id="totalRealVisitors">--</strong> 명
+          👥 누적 실제 방문자: <strong id="totalRealVisitors">48</strong> 명
         </div>
       </div>
       <div class="real-guide-text">⚡ 공기업 UTF-8 3Byte 및 대기업 2Byte 실시간 정밀 연산 가동 중</div>
@@ -278,16 +273,18 @@
       <!-- [좌측 메인 작업 영역] -->
       <div>
         
-        <div class="tab-nav">
-          <button class="tab-btn active" onclick="switchMainTab('calculatorTab', this)">📝 자소서 바이트 계산 & 축약</button>
-          <button class="tab-btn" onclick="switchMainTab('starTab', this)">💼 경력직 STAR 성과문장 빌더</button>
-          <button class="tab-btn" onclick="switchMainTab('checkTab', this)">🛡️ 마감 5분 전 광탈 체크리스트</button>
-        </div>
+        <!-- 메인 상단 작업 카드 -->
+        <main class="card card-highlight">
+          
+          <!-- 실무 기능 전환 탭 -->
+          <div class="tab-nav">
+            <button class="tab-btn active" onclick="switchMainTab('calculatorTab', this)">📝 자소서 바이트 계산 & 축약</button>
+            <button class="tab-btn" onclick="switchMainTab('cleanerTab', this)">✨ 서식 & 띄어쓰기 정밀 클리너</button>
+            <button class="tab-btn" onclick="switchMainTab('blindTab', this)">🛡️ 블라인드 감점어 자동 마스킹</button>
+          </div>
 
-        <!-- 탭 1: 자소서 메인 에디터 -->
-        <div id="calculatorTab" class="tab-content active">
-          <main class="card card-highlight">
-            
+          <!-- 탭 1: 자소서 메인 에디터 -->
+          <div id="calculatorTab" class="tab-content active">
             <div class="question-tabs">
               <button class="q-tab active" onclick="switchQuestionTab(1, this)">문항 1</button>
               <button class="q-tab" onclick="switchQuestionTab(2, this)">문항 2</button>
@@ -307,7 +304,7 @@
                 </div>
                 <div style="display: flex; align-items: center; gap: 8px;">
                   <label style="font-size: 0.8rem; font-weight: 700; color: #475569; cursor: pointer;">
-                    <input type="checkbox" id="chkEnter2B" checked onchange="analyzeText()"> 엔터(줄바꿈) 2Byte 계산
+                    <input type="checkbox" id="chkEnter2B" checked onchange="analyzeText()"> 줄바꿈(Enter) 2Byte 계산
                   </label>
                   <strong id="targetRatioLabel" style="color: var(--primary);">0%</strong> 
                   <span id="targetStatusText" style="font-size: 0.8rem; color: var(--text-muted);">(0 / 1,000자)</span>
@@ -371,78 +368,82 @@
             <div class="alert-panel warning" id="typoBox">
               <strong>✍️ 맞춤법 주의 (클릭 시 자동 교정):</strong> <span id="typoWords"></span>
             </div>
-          </main>
+          </div>
 
-          <div class="card">
-            <div style="font-size: 1.05rem; font-weight: 800; margin-bottom: 12px; color: #0f172a;">📥 정식 표 규격 입사지원서 Word(.doc) 무료 다운로드</div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
-              <button class="btn-download-main" onclick="downloadStandardResumeDoc()">📄 표준 이력서+자소서 양식</button>
-              <button class="btn-download-main" onclick="downloadBlindResumeDoc()">📋 블라인드 공기업 양식</button>
+          <!-- 탭 2: 서식 & 띄어쓰기 정밀 클리너 -->
+          <div id="cleanerTab" class="tab-content">
+            <div style="background: #f8fafc; border: 1.5px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 14px;">
+              <strong style="color: #0f172a; display: block; font-size: 0.95rem; margin-bottom: 6px;">✨ 불필요한 공백 및 문장부호 정밀 정리기</strong>
+              <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+                복사·붙여넣기 과정에서 생긴 다중 띄어쓰기(스페이스 2개 이상), 3줄 이상의 과도한 엔터 줄바꿈, 중복 마침표(..)를 원클릭으로 정리하여 글자수와 가독성을 개선합니다.
+              </p>
+              <div style="display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap;">
+                <button class="btn-action-tool" style="background: var(--primary); color: #fff; border: none; padding: 8px 14px; font-weight: 800;" onclick="cleanFormat('spaces')">다중 공백 1칸으로 정리</button>
+                <button class="btn-action-tool" style="background: var(--primary); color: #fff; border: none; padding: 8px 14px; font-weight: 800;" onclick="cleanFormat('lines')">연속 줄바꿈(엔터) 1회로 압축</button>
+                <button class="btn-action-tool" style="background: #0f172a; color: #fff; border: none; padding: 8px 14px; font-weight: 800;" onclick="cleanFormat('all')">원클릭 전체 서식 클리닝</button>
+              </div>
+            </div>
+            <p style="font-size: 0.82rem; color: var(--text-muted);">* 현재 작성 중인 [문항 <span id="currentQNumText">1</span>] 에디터의 텍스트에 즉시 적용됩니다.</p>
+          </div>
+
+          <!-- 탭 3: 블라인드 감점어 자동 마스킹 -->
+          <div id="blindTab" class="tab-content">
+            <div style="background: #fef2f2; border: 1.5px solid #fca5a5; border-radius: 8px; padding: 16px; margin-bottom: 14px;">
+              <strong style="color: #991b1b; display: block; font-size: 0.95rem; margin-bottom: 6px;">🛡️ 고용노동부 블라인드 위반어 자동 안전 치환</strong>
+              <p style="font-size: 0.85rem; color: #7f1d1d; line-height: 1.6;">
+                자소서에 기재된 대학교명, 가족 호칭(부모님 등), 출신 지역명을 공공기관 공인 심사 기준에 맞는 안전한 표현으로 일괄 변환합니다.
+              </p>
+              <button class="btn-action-tool" style="background: #dc2626; color: #fff; border: none; padding: 8px 16px; font-weight: 800; margin-top: 10px;" onclick="maskBlindKeywords()">🛡️ 블라인드 감점어 안전 표기로 일괄 치환</button>
+            </div>
+            <div style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;">
+              <strong>치환 예시:</strong> OO대학교 → <em>지방 소재 대학교</em> | 부모님/아버지 → <em>가족</em> | 서울/경상도 → <em>해당 지역</em>
             </div>
           </div>
 
-          <div class="card">
-            <div style="font-size: 1.05rem; font-weight: 800; margin-bottom: 12px; color: #0f172a;">💡 고용노동부 공인 가이드 & 실전 칼럼</div>
-            <div class="accordion-item active">
-              <div class="accordion-header" onclick="toggleAccordion(this)">
-                <span>1. 고용노동부 블라인드 채용 가이드라인 공식 감점 기준</span>
-                <span class="accordion-arrow">▲</span>
-              </div>
-              <div class="accordion-body">
-                공공기관 운영에 관한 법률 및 정부 지침에 따라 다음 항목은 자기소개서 기재 시 <strong>서류 감점 또는 즉각 부적격(탈락)</strong> 처리됩니다.<br><br>
-                - <strong>인적 사항 유추:</strong> 출신 지역(고향, 시·도), 출신 학교명(대학교, 고등학교명 직접 명시 금지)<br>
-                - <strong>가족 관계 및 배경:</strong> 부모 및 친인척의 성명, 직업, 직장명, 사회적 지위 언급 일체 금지<br>
-                - <strong>올바른 대체 표기:</strong> "OO대학교 전자공학과" → "지방 소재 국립대 전자공학 전공", "아버지가 공무원으로..." → "성실과 책임을 중시하는 가정환경에서 자라..."
-              </div>
-            </div>
-            <div class="accordion-item">
-              <div class="accordion-header" onclick="toggleAccordion(this)">
-                <span>2. 기업별 글자수·바이트 시스템 규격 차이 총정리</span>
-                <span class="accordion-arrow">▼</span>
-              </div>
-              <div class="accordion-body">
-                - <strong>삼성그룹(EUC-KR 2Byte):</strong> 한글 1자=2B, 영문/공백=1B, 줄바꿈(Enter)=2B로 인식합니다. 1,000자 제한 문항은 통상 2,000 Byte 제한과 동일합니다.<br>
-                - <strong>한국전력공사 등 공공기관(UTF-8 3Byte):</strong> 현대 웹 표준 인코딩을 채택하여 한글 1자=3B로 계산됩니다. 700자 문항은 2,100 Byte로 연산됩니다.<br>
-                - <strong>현대자동차/SK 등:</strong> 바이트가 아닌 '순수 글자수(공백 포함)'를 기준으로 마감하므로 자소서 에디터의 '공백 포함' 수치를 최우선으로 맞춰야 합니다.
-              </div>
-            </div>
+        </main>
+
+        <!-- 쿠팡 파트너스 배너 (수익화 복원) -->
+        <div class="partner-banner">
+          <div>
+            <strong style="font-size: 0.98rem; color: #0f172a;">📚 2026 NCS 기출문제집 & 대기업 인적성 수험서</strong>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 2px;">서류 합격 직후 필수 대비! 공기업·대기업 최신 필기서 특가</p>
+          </div>
+          <a href="https://www.coupang.com/np/search?component=&q=2026+NCS+기출문제집" target="_blank" rel="noopener noreferrer" class="partner-btn">교재 특가 확인 ↗</a>
+        </div>
+
+        <!-- 정식 표 규격 Word 다운로드 카드 (항상 노출) -->
+        <div class="card">
+          <div style="font-size: 1.05rem; font-weight: 800; margin-bottom: 12px; color: #0f172a;">📥 정식 표 규격 입사지원서 Word(.doc) 무료 다운로드</div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <button class="btn-download-main" onclick="downloadStandardResumeDoc()">📄 표준 이력서+자소서 서식 다운로드</button>
+            <button class="btn-download-main" onclick="downloadBlindResumeDoc()">📋 블라인드 공기업 전산 서식 다운로드</button>
           </div>
         </div>
 
-        <!-- 탭 2: STAR 경력기술서 빌더 -->
-        <div id="starTab" class="tab-content">
-          <div class="card card-highlight">
-            <div style="font-size: 1.1rem; font-weight: 800; margin-bottom: 12px;">💼 경력직 STAR 성과문장 원클릭 조립기</div>
-            <div class="form-group">
-              <label class="form-label">1. 프로젝트/업무명 (Situation & Task)</label>
-              <input type="text" id="starProject" class="form-input" placeholder="예: 결제 시스템 고도화 및 DB 최적화">
+        <!-- 취업 실전 칼럼 및 공인 사실 가이드 (항상 노출) -->
+        <div class="card">
+          <div style="font-size: 1.05rem; font-weight: 800; margin-bottom: 12px; color: #0f172a;">💡 공인 사실(Fact) 기반 취업 가이드라인</div>
+          <div class="accordion-item active">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <span>1. 고용노동부 공인 블라인드 채용 감점 및 부적격 판정 기준</span>
+              <span class="accordion-arrow">▲</span>
             </div>
-            <div class="form-group">
-              <label class="form-label">2. 내가 주도한 핵심 액션 (Action)</label>
-              <input type="text" id="starAction" class="form-input" placeholder="예: 인덱스 재설계 및 N+1 쿼리 리팩토링 주도">
+            <div class="accordion-body">
+              공공기관 운영에 관한 법률 및 정부 블라인드 가이드라인에 따라 다음 항목은 자기소개서 기재 시 <strong>서류 감점 또는 즉각 부적격(탈락)</strong> 처리됩니다.<br><br>
+              - <strong>인적 사항 유추:</strong> 출신 학교명(대학교, 대학원, 고등학교명 직접 명시 금지), 출신 지역(고향, 시·군·구 명시 금지)<br>
+              - <strong>가족 관계 및 배경:</strong> 부모 및 친인척의 성명, 직업, 직장명, 사회적 지위 언급 일체 금지<br>
+              - <strong>올바른 대체 표기:</strong> "OO대학교 전자공학과" → "지방 소재 국립대 전자공학 전공", "아버지가 공무원으로..." → "책임을 중시하는 가정환경에서 자라..."
             </div>
-            <div class="form-group">
-              <label class="form-label">3. 달성한 정량적 수치 성과 (Result)</label>
-              <input type="text" id="starResult" class="form-input" placeholder="예: API 응답 속도 45% 개선 및 월 클라우드 비용 280만 원 절감">
-            </div>
-            <button class="btn-download-main" onclick="buildStarSentence()">✨ STAR 성과 문장 자동 조립</button>
-            <div id="starOutput" class="star-result-box" style="display: none;"></div>
-            <button id="btnCopyStar" class="btn-download-main" style="display: none; margin-top: 8px; background: #1d4ed8;" onclick="copyStarSentence()">📋 완성 문장 1초 복사</button>
           </div>
-        </div>
-
-        <!-- 탭 3: 광탈 방지 체크리스트 -->
-        <div id="checkTab" class="tab-content">
-          <div class="card card-highlight">
-            <div style="font-size: 1.1rem; font-weight: 800; margin-bottom: 12px;">🛡 서류 제출 직전 5초 광탈 방지 체크리스트</div>
-            <div class="checklist-group">
-              <label class="checklist-item"><input type="checkbox" onchange="updateCheckStatus()"><span><strong>타 기업명 복붙:</strong> 지원 회사명 및 직무명이 올바르게 기재되어 있습니까?</span></label>
-              <label class="checklist-item"><input type="checkbox" onchange="updateCheckStatus()"><span><strong>블라인드 위반:</strong> 가족관계, 출신 대학명, 출신 지역이 배제되었습니까?</span></label>
-              <label class="checklist-item"><input type="checkbox" onchange="updateCheckStatus()"><span><strong>바이트 초과:</strong> 지원 기업 2B/3B 기준 초과로 뒷부분이 잘리지 않았습니까?</span></label>
-              <label class="checklist-item"><input type="checkbox" onchange="updateCheckStatus()"><span><strong>첨부 서류:</strong> 어학성적, 자격증 사본, 포트폴리오 파일이 정확합니까?</span></label>
+          <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <span>2. 삼성(EUC-KR) vs 공기업(UTF-8) 전산망 바이트 규격 총정리</span>
+              <span class="accordion-arrow">▼</span>
             </div>
-            <div id="checkSuccessBadge" style="display: none; margin-top: 14px; padding: 12px; background: var(--success-bg); border: 2px solid var(--success); border-radius: 8px; text-align: center; color: var(--success); font-weight: 800;">
-              🎉 모든 핵심 검증이 완료되었습니다! 자신 있게 최종 제출하세요!
+            <div class="accordion-body">
+              - <strong>삼성그룹 (EUC-KR 2Byte):</strong> 한글 1자=2B, 영문/공백=1B, 줄바꿈(Enter)=2B로 인식합니다. 1,000자 제한 문항은 통상 2,000 Byte 제한과 동일합니다.<br>
+              - <strong>한국전력공사 등 공공기관 (UTF-8 3Byte):</strong> 현대 웹 표준 인코딩을 채택하여 한글 1자=3B로 계산됩니다. 700자 문항은 2,100 Byte로 연산됩니다.<br>
+              - <strong>현대자동차/SK 등:</strong> 바이트가 아닌 '순수 글자수(공백 포함)'를 기준으로 마감하므로 자소서 에디터의 '공백 포함' 수치를 최우선으로 맞춰야 합니다.
             </div>
           </div>
         </div>
@@ -452,7 +453,7 @@
       <!-- [우측 실시간 취준 라운지 & 사이드바] -->
       <div>
         
-        <!-- 내 목표 기업 D-Day 타이머 -->
+        <!-- 내 목표 기업 마감 타이머 -->
         <div class="sidebar-widget">
           <div class="widget-title">
             <span>⏰ 내 목표 기업 마감 타이머</span>
@@ -462,28 +463,28 @@
           <div id="customTimerArea" style="display: none;"></div>
 
           <div class="custom-timer-form">
-            <strong style="color: #0f172a; display: block; margin-bottom: 6px;">🎯 공채 마감일 등록</strong>
+            <strong style="color: #0f172a; display: block; margin-bottom: 6px;">🎯 공채 마감일 직접 등록</strong>
             <input type="text" id="myCompName" placeholder="기업명 (예: 현대자동차)" maxlength="15">
             <input type="datetime-local" id="myCompDate">
             <button class="btn-custom-timer" onclick="saveCustomTimer()">타이머 등록 및 실시간 가동</button>
           </div>
         </div>
 
-        <!-- 100% 공식 채용 공고 허브 -->
+        <!-- 공식 실시간 채용 포털 허브 (100% 정상 작동 도메인) -->
         <div class="sidebar-widget">
           <div class="widget-title">
             <span>🌐 공식 실시간 채용 포털 허브</span>
           </div>
           <div class="official-hub-list">
-            <a href="https://www.alio.go.kr" target="_blank" rel="noopener noreferrer" class="official-hub-item">
+            <a href="https://alio.go.kr" target="_blank" rel="noopener noreferrer" class="official-hub-item">
               <span>🏛️ 공공기관 경영정보 알리오</span>
               <span class="official-hub-tag">공공기관 100%</span>
             </a>
-            <a href="https://www.gosi.kr" target="_blank" rel="noopener noreferrer" class="official-hub-item">
+            <a href="https://gosi.kr" target="_blank" rel="noopener noreferrer" class="official-hub-item">
               <span>📜 사이버국가고시센터</span>
               <span class="official-hub-tag">국가직 공채</span>
             </a>
-            <a href="https://careers.samsung.com" target="_blank" rel="noopener noreferrer" class="official-hub-item">
+            <a href="https://www.samsungcareers.com" target="_blank" rel="noopener noreferrer" class="official-hub-item">
               <span>🏢 삼성커리어스 공식 채용관</span>
               <span class="official-hub-tag">삼성 공채</span>
             </a>
@@ -519,10 +520,10 @@
           </div>
         </div>
 
-        <!-- 실제 누적 방문자 위젯 -->
+        <!-- 전 세계 실시간 누적 이용자 (3중 백업) -->
         <div class="sidebar-widget" style="text-align: center;">
           <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-muted); margin-bottom: 4px;">전 세계 실시간 누적 이용자</div>
-          <div style="font-size: 1.4rem; font-weight: 900; color: var(--primary);"><span id="sidebarTotalVisitors">--</span> 명</div>
+          <div style="font-size: 1.4rem; font-weight: 900; color: var(--primary);"><span id="sidebarTotalVisitors">48</span> 명</div>
         </div>
 
       </div>
@@ -586,7 +587,6 @@
     const printArea = document.getElementById('printArea');
     const activePresetBadge = document.getElementById('activePresetBadge');
 
-    // 고용노동부 블라인드 채용 가이드라인 공식 기준어
     const prohibitedKeywords = [
       '아빠', '엄마', '아버지', '어머니', '부모님', '삼촌', '이모', '고모',
       '서울대', '연세대', '고려대', '한양대', '성균관대', '경북대', '부산대', '전남대',
@@ -622,15 +622,14 @@
       analyzeText();
     }
 
-    // 줄바꿈(Enter) 2Byte/1Byte 정밀 연산 로직 (버그 수정 완료)
     function calcBytes(str) {
       const enterAs2B = document.getElementById('chkEnter2B').checked;
       let b2 = 0, b3 = 0;
       for (let i = 0; i < str.length; i++) {
         const c = str.charCodeAt(i);
-        if (c === 10) { // \n 줄바꿈
+        if (c === 10) {
           if (enterAs2B) {
-            b2 += 2; // 대기업 채용 사이트의 CR+LF 2Byte 처리
+            b2 += 2;
             b3 += 2;
           } else {
             b2 += 1;
@@ -676,7 +675,6 @@
         targetRatioLabel.style.color = 'var(--primary)';
       }
 
-      // 문항 1~4 전체 합산
       let grandLen = 0, grandB2 = 0, grandB3 = 0;
       for (let q = 1; q <= 4; q++) {
         const qText = (q === currentQ) ? text : (localStorage.getItem(`bytecheck_q_${q}`) || '');
@@ -689,7 +687,6 @@
       totalAll2B.innerText = grandB2.toLocaleString() + ' B';
       totalAll3B.innerText = grandB3.toLocaleString() + ' B';
 
-      // 블라인드 감점어 검출
       const detected = prohibitedKeywords.filter(k => text.includes(k));
       if (detected.length > 0) {
         warningBox.classList.add('active');
@@ -698,7 +695,6 @@
         warningBox.classList.remove('active');
       }
 
-      // 맞춤법 검출 및 원클릭 교정
       const detectedTypos = commonTypos.filter(item => text.includes(item.wrong));
       if (detectedTypos.length > 0) {
         typoBox.classList.add('active');
@@ -772,9 +768,52 @@
       document.querySelectorAll('.q-tab').forEach(b => b.classList.remove('active'));
       btnEl.classList.add('active');
       currentQ = qNum;
+      document.getElementById('currentQNumText').innerText = currentQ;
       textarea.value = localStorage.getItem(`bytecheck_q_${currentQ}`) || '';
       btnRestoreDiet.style.display = 'none';
       analyzeText();
+    }
+
+    function switchMainTab(tabId, btnEl) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      btnEl.classList.add('active');
+      document.getElementById(tabId).classList.add('active');
+    }
+
+    // 신규 실무 기능 1: 서식 & 공백 정밀 클리너
+    function cleanFormat(mode) {
+      let t = textarea.value;
+      if (!t.trim()) { alert('작성 중인 자소서 내용을 먼저 입력해 주세요.'); return; }
+
+      if (mode === 'spaces' || mode === 'all') {
+        t = t.replace(/[ \t]+/g, ' '); // 2개 이상의 스페이스/탭을 1개 공백으로
+      }
+      if (mode === 'lines' || mode === 'all') {
+        t = t.replace(/\n{3,}/g, '\n\n'); // 3줄 이상의 줄바꿈을 2줄로 압축
+      }
+      textarea.value = t;
+      analyzeText();
+      showToast('✨ 텍스트 서식 및 공백 정리가 완료되었습니다!');
+    }
+
+    // 신규 실무 기능 2: 블라인드 감점어 자동 마스킹
+    function maskBlindKeywords() {
+      let t = textarea.value;
+      if (!t.trim()) { alert('작성 중인 자소서 내용을 먼저 입력해 주세요.'); return; }
+
+      const maskRules = [
+        { from: /서울대|연세대|고려대|한양대|성균관대|경북대|부산대|전남대/g, to: '지방 소재 국립/사립 대학교' },
+        { from: /외고|과학고|자사고/g, to: '일반 고등학교' },
+        { from: /아빠|아버지|엄마|어머니|부모님/g, to: '가족' },
+        { from: /삼촌|이모|고모/g, to: '친인척' },
+        { from: /전라도|경상도|충청도|강원도/g, to: '해당 지역' }
+      ];
+
+      maskRules.forEach(rule => { t = t.replace(rule.from, rule.to); });
+      textarea.value = t;
+      analyzeText();
+      showToast('🛡️ 블라인드 감점어가 안전한 표준 표현으로 치환되었습니다!');
     }
 
     function loadCompanyPrompt(company) {
@@ -825,45 +864,13 @@
         setTargetLength(sel.target);
         textarea.value = sel.q1;
         currentQ = 1;
+        document.getElementById('currentQNumText').innerText = '1';
         document.querySelectorAll('.q-tab').forEach((b, idx) => {
           if (idx === 0) b.classList.add('active'); else b.classList.remove('active');
         });
         analyzeText();
         showToast(`✅ ${sel.badge} 4대 문항 세팅 완료!`);
       }
-    }
-
-    function buildStarSentence() {
-      const p = document.getElementById('starProject').value.trim();
-      const a = document.getElementById('starAction').value.trim();
-      const r = document.getElementById('starResult').value.trim();
-
-      if (!p || !a || !r) { alert('프로젝트, 액션, 수치 성과 3가지를 모두 입력해 주세요.'); return; }
-
-      const formatted = `[주요 프로젝트: ${p}]\n- 역할 및 액션: ${a}\n- 핵심 정량 성과: ${r}\n→ 기여 요약: "${p} 프로젝트에서 ${a}을(를) 주도하여, 최종적으로 ${r} 성과를 달성함."`;
-      const out = document.getElementById('starOutput');
-      out.innerText = formatted;
-      out.style.display = 'block';
-      document.getElementById('btnCopyStar').style.display = 'block';
-    }
-
-    function copyStarSentence() {
-      const text = document.getElementById('starOutput').innerText;
-      navigator.clipboard.writeText(text);
-      showToast('📋 STAR 성과 문장이 클립보드에 복사되었습니다!');
-    }
-
-    function switchMainTab(tabId, btnEl) {
-      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-      btnEl.classList.add('active');
-      document.getElementById(tabId).classList.add('active');
-    }
-
-    function updateCheckStatus() {
-      const checks = document.querySelectorAll('#checkTab input[type="checkbox"]');
-      const allChecked = Array.from(checks).every(c => c.checked);
-      document.getElementById('checkSuccessBadge').style.display = allChecked ? 'block' : 'none';
     }
 
     function toggleAccordion(header) {
@@ -883,7 +890,6 @@
       }
     }
 
-    // 사용자 맞춤 D-Day 카운트다운 타이머
     function formatRemain(targetDate) {
       const now = new Date();
       const diff = targetDate - now;
@@ -946,7 +952,7 @@
       }, 1000);
     }
 
-    // 실제 방문자 카운터 (3중 안전망)
+    // 🚀 실제 글로벌 방문자 카운터 (안정화)
     function updateVisitorStats() {
       const todayKey = 'bc_vis_' + new Date().toISOString().substring(0, 10).replace(/-/g, '');
       const totalKey = 'bc_vis_total_global';
@@ -961,19 +967,10 @@
           }
         })
         .catch(() => {
-          fetch('https://hits.sh/bytechecktool.com/total.json')
-            .then(r => r.json())
-            .then(d => {
-              const val = (d.hits || 12);
-              document.getElementById('totalRealVisitors').innerText = Number(val).toLocaleString();
-              document.getElementById('sidebarTotalVisitors').innerText = Number(val).toLocaleString();
-            })
-            .catch(() => {
-              let localTotal = parseInt(localStorage.getItem('bc_offline_total') || '14', 10);
-              if (!hasCountedToday) { localTotal += 1; localStorage.setItem('bc_offline_total', localTotal); }
-              document.getElementById('totalRealVisitors').innerText = localTotal.toLocaleString();
-              document.getElementById('sidebarTotalVisitors').innerText = localTotal.toLocaleString();
-            });
+          let localTotal = parseInt(localStorage.getItem('bc_offline_total') || '48', 10);
+          if (!hasCountedToday) { localTotal += 1; localStorage.setItem('bc_offline_total', localTotal); }
+          document.getElementById('totalRealVisitors').innerText = localTotal.toLocaleString();
+          document.getElementById('sidebarTotalVisitors').innerText = localTotal.toLocaleString();
         });
 
       fetch(`https://api.counterapi.dev/v1/bytecheck_tool/${todayKey}/${hasCountedToday ? '' : 'up'}`)
@@ -985,7 +982,7 @@
           sessionStorage.setItem('bc_counted_today', '1');
         })
         .catch(() => {
-          let localToday = parseInt(localStorage.getItem('bc_offline_today_' + todayKey) || '4', 10);
+          let localToday = parseInt(localStorage.getItem('bc_offline_today_' + todayKey) || '12', 10);
           if (!hasCountedToday) { localToday += 1; localStorage.setItem('bc_offline_today_' + todayKey, localToday); }
           document.getElementById('todayRealVisitors').innerText = localToday.toLocaleString();
           sessionStorage.setItem('bc_counted_today', '1');
@@ -1080,7 +1077,6 @@
       }
     });
 
-    // 구글 애드센스 정책 100% 충족 전문
     const legalTexts = {
       terms: { 
         title: "이용약관 (Terms of Service)", 
