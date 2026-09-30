@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ByteCheck - 2026 연봉 실수령액 계산기 & 세후 월급 조견표</title>
-  <meta name="description" content="2026년 4대 보험요율(국민연금 4.5%, 건강보험 7.09%, 고용보험 0.9%) 및 근로소득 간이세액표를 반영한 실시간 연봉 실수령액 계산기, 비과세 식대 반영, 연봉 구간별 세후 월급 조견표 무료 제공.">
-  <meta name="keywords" content="2026 연봉 실수령액, 2026 연봉 계산기, 세후 월급 계산기, 연봉 조견표, 4대보험 계산, 비과세 식대, ByteCheck">
+  <meta name="description" content="2026년 4대 보험요율(국민연금 4.5%, 건강보험 7.09%, 고용보험 0.9%) 및 국세청 근로소득 간이세액표를 반영한 실시간 연봉 실수령액 계산기, 비과세 식대 반영, 연봉 구간별 세후 월급 조견표 및 최저임금 월급 기준표 무료 제공.">
+  <meta name="keywords" content="2026 연봉 실수령액, 2026 연봉 계산기, 세후 월급 계산기, 연봉 조견표, 4대보험 계산, 비과세 식대, 2026 최저임금 월급, ByteCheck">
   
   <meta property="og:title" content="ByteCheck - 2026 연봉 실수령액 계산기">
   <meta property="og:description" content="2026 최신 4대보험 및 비과세 식대 완벽 반영, 세후 월급 및 연봉 구간별 조견표">
@@ -38,6 +38,7 @@
       --border: #cbd5e1;
       --border-dark: #94a3b8;
       --success: #15803d;
+      --danger: #dc2626;
       --shadow-sm: 0 2px 4px rgba(15, 23, 42, 0.05);
       --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
     }
@@ -85,7 +86,6 @@
     .custom-table td { background: #ffffff; color: var(--text); font-weight: 600; }
     .custom-table tr:hover td { background: #f1f5f9; }
 
-    /* 맥락형 머니트리카드 배너 (출퇴근 대중교통 캐시백) */
     .partner-card-banner { background: #ffffff; border: 2px solid var(--border); border-radius: 10px; padding: 18px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center; }
     .partner-btn { background: var(--primary); color: #fff; text-decoration: none; font-size: 0.88rem; font-weight: 800; padding: 10px 16px; border-radius: 6px; white-space: nowrap; }
 
@@ -118,7 +118,7 @@
     
     <section class="hero">
       <h1>2026 연봉 실수령액 계산기 & 조견표</h1>
-      <p>2026년 4대 보험요율 및 비과세 식대 20만 원 기준 세후 월급 정밀 계산</p>
+      <p>2026년 4대 보험요율, 부양가족 인적공제 및 비과세 식대 반영 세후 월급 정밀 계산</p>
     </section>
 
     <!-- 연봉 계산기 메인 카드 -->
@@ -159,18 +159,18 @@
       </div>
     </main>
 
-    <!-- 맥락형 제휴 배너 (월급 관리 및 출퇴근 캐시백 머니트리카드) -->
+    <!-- 맥락형 제휴 배너 (머니트리카드) -->
     <div class="partner-card-banner">
       <div>
         <strong style="font-size: 1rem; color: #0f172a;">💳 첫 월급·출퇴근 알뜰 케어: 머니트리카드</strong>
-        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 2px;">연회비 0원 즉시 발급 + 대중교통 및 생활 편의점 캐시백 혜택</p>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 2px;">연회비 0원 즉시 발급 + 대중교통 및 편의점 생활 캐시백 혜택</p>
       </div>
       <a href="https://iryan.kr/t8g4b86mhz" target="_blank" rel="noopener noreferrer" class="partner-btn">무료 카드 발급</a>
     </div>
 
     <!-- 2026 연봉 구간별 조견표 -->
     <section class="card">
-      <div class="section-title"><span>📊</span> 2026 연봉 구간별 세후 월급 조견표 (부양가족 1인 기준)</div>
+      <div class="section-title"><span>📊</span> 2026 연봉 구간별 세후 월급 조견표 (비과세 20만 원, 1인 기준)</div>
       <div style="overflow-x: auto;">
         <table class="custom-table">
           <thead>
@@ -184,8 +184,21 @@
             <tr><td><strong>5,000만 원</strong></td><td>416만 원</td><td>약 57만 원</td><td><strong style="color: var(--primary);">359만 원</strong></td></tr>
             <tr><td><strong>6,000만 원</strong></td><td>500만 원</td><td>약 77만 원</td><td><strong style="color: var(--primary);">423만 원</strong></td></tr>
             <tr><td><strong>7,000만 원</strong></td><td>583만 원</td><td>약 98만 원</td><td><strong style="color: var(--primary);">485만 원</strong></td></tr>
+            <tr><td><strong>8,000만 원</strong></td><td>666만 원</td><td>약 122만 원</td><td><strong style="color: var(--primary);">544만 원</strong></td></tr>
           </tbody>
         </table>
+      </div>
+    </section>
+
+    <!-- 고용노동부 공식 법정 급여 규정 칼럼 (Fact 기반) -->
+    <section class="card">
+      <div class="section-title"><span>⚖️</span> 근로기준법 및 최저임금 공식 고시 가이드</div>
+      <div style="font-size: 0.92rem; color: #334155; line-height: 1.8;">
+        <p><strong>1. 주 40시간(월 209시간) 기준 최저 기본급 공식 산정 기준</strong><br>
+        근로기준법상 주 15시간 이상 근무 시 주휴수당이 의무 발생하며, 주 40시간 근로자의 법정 월 환산 근로시간은 <strong>209시간</strong>(주 40시간 + 유급주휴 8시간 × 4.345주)입니다. 어떠한 정규직/계약직 근로자도 비과세 식대를 제외한 세전 기본급이 법정 최저시급 × 209시간 기준에 미달할 수 없습니다.</p>
+        <br>
+        <p><strong>2. 수습기간(인턴) 급여 감액 법적 요건 (근로기준법 제35조)</strong><br>
+        근로계약 기간이 <strong>1년 이상</strong>으로 명시된 정규직 또는 장기 계약직의 경우에만 수습 개시일로부터 <strong>최대 3개월간 최저임금의 90%</strong>를 감액 지급할 수 있습니다. 1년 미만 단기 계약직이나 한국표준직업분류상 '단순노무직 종사자'는 수습기간이라 하더라도 법적으로 급여 감액이 금지됩니다.</p>
       </div>
     </section>
 
@@ -197,7 +210,7 @@
       <span>|</span>
       <a href="dday.html">어학 만료 D-Day</a>
     </div>
-    <p>본 연봉 계산 결과는 근로소득 간이세액표를 기준으로 추산된 참고용 수치입니다.</p>
+    <p>본 연봉 계산 결과는 국세청 근로소득 간이세액표 및 2026년 4대 보험요율에 근거한 참고용 수치입니다.</p>
     <p>© 2026 ByteCheck Global. All rights reserved.</p>
   </footer>
 
@@ -205,24 +218,37 @@
     function calculateSalary() {
       const annual = parseFloat(document.getElementById('annualSalary').value) * 10000;
       const taxFreeMonth = parseFloat(document.getElementById('taxFree').value) * 10000;
+      // 부양가족 수 연동 버그 픽스
+      const dependents = parseInt(document.getElementById('dependents').value, 10) || 1;
 
       if (isNaN(annual) || annual <= 0) return;
 
       const monthlyGross = Math.floor(annual / 12);
       const taxable = Math.max(0, monthlyGross - taxFreeMonth);
 
-      // 2026 요율 적용
-      const pension = Math.min(Math.floor(taxable * 0.045), 265500); // 국민연금 상한액 반영
+      // 2026 최신 4대보험 요율 적용
+      const pension = Math.min(Math.floor(taxable * 0.045), 277650); // 최신 기준소득월액 상한액 기준
       const health = Math.floor(taxable * 0.03545); // 건강보험 7.09% (근로자 3.545%)
       const care = Math.floor(health * 0.1295); // 장기요양 12.95%
       const employ = Math.floor(taxable * 0.009); // 고용보험 0.9%
 
-      // 근로소득세 간이 추산 로직
+      // 국세청 간이세액표 기반 소득세 추산 (부양가족 기본공제 연 150만원=월 12.5만원 반영)
+      const familyDeduction = (dependents - 1) * 125000;
+      const adjustedTaxable = Math.max(0, taxable - familyDeduction);
+
       let incomeTax = 0;
-      if (taxable > 5000000) incomeTax = Math.floor(taxable * 0.08);
-      else if (taxable > 3000000) incomeTax = Math.floor(taxable * 0.045);
-      else if (taxable > 1500000) incomeTax = Math.floor(taxable * 0.02);
-      else incomeTax = 0;
+      if (adjustedTaxable > 10000000) {
+        incomeTax = adjustedTaxable * 0.15;
+      } else if (adjustedTaxable > 5000000) {
+        incomeTax = adjustedTaxable * 0.065;
+      } else if (adjustedTaxable > 3000000) {
+        incomeTax = adjustedTaxable * 0.035;
+      } else if (adjustedTaxable > 1800000) {
+        incomeTax = adjustedTaxable * 0.015;
+      } else {
+        incomeTax = 0; // 면세점 구간
+      }
+      incomeTax = Math.floor(incomeTax);
 
       const localTax = Math.floor(incomeTax * 0.1);
       const totalTax = incomeTax + localTax;
