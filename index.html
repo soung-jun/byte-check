@@ -393,7 +393,7 @@
               <p style="font-size: 0.85rem; color: #7f1d1d; line-height: 1.6;">
                 자소서에 기재된 대학교명, 가족 호칭(부모님 등), 출신 지역명을 공공기관 공인 심사 기준에 맞는 안전한 표현으로 일괄 변환합니다.
               </p>
-              <button class="btn-action-tool" style="background: #dc2626; color: #fff; border: none; padding: 8px 16px; font-weight: 800; margin-top: 10px;" onclick="maskBlindKeywords()">🛡️ 블라인드 감점어 안전 표기로 일괄 치환</button>
+              <button class="btn-action-tool" style="background: #dc2626; color: #fff; border: none; padding: 8px 16px; font-weight: 800; margin-top: 10px;" onclick="maskBlindKeywords()">🛡️️ 블라인드 감점어 안전 표기로 일괄 치환</button>
             </div>
             <div style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;">
               <strong>치환 예시:</strong> OO대학교 → <em>지방 소재 대학교</em> | 부모님/아버지 → <em>가족</em> | 서울/경상도 → <em>해당 지역</em>
@@ -470,17 +470,17 @@
           </div>
         </div>
 
-        <!-- 공식 실시간 채용 포털 허브 (100% 정상 작동 도메인) -->
+        <!-- 🚀 공식 실시간 채용 포털 허브 (100% 정상 작동 도메인 완비) -->
         <div class="sidebar-widget">
           <div class="widget-title">
             <span>🌐 공식 실시간 채용 포털 허브</span>
           </div>
           <div class="official-hub-list">
-            <a href="https://alio.go.kr" target="_blank" rel="noopener noreferrer" class="official-hub-item">
+            <a href="https://www.alio.go.kr" target="_blank" rel="noopener noreferrer" class="official-hub-item">
               <span>🏛️ 공공기관 경영정보 알리오</span>
               <span class="official-hub-tag">공공기관 100%</span>
             </a>
-            <a href="https://gosi.kr" target="_blank" rel="noopener noreferrer" class="official-hub-item">
+            <a href="https://www.gosi.kr" target="_blank" rel="noopener noreferrer" class="official-hub-item">
               <span>📜 사이버국가고시센터</span>
               <span class="official-hub-tag">국가직 공채</span>
             </a>
@@ -781,23 +781,21 @@
       document.getElementById(tabId).classList.add('active');
     }
 
-    // 신규 실무 기능 1: 서식 & 공백 정밀 클리너
     function cleanFormat(mode) {
       let t = textarea.value;
       if (!t.trim()) { alert('작성 중인 자소서 내용을 먼저 입력해 주세요.'); return; }
 
       if (mode === 'spaces' || mode === 'all') {
-        t = t.replace(/[ \t]+/g, ' '); // 2개 이상의 스페이스/탭을 1개 공백으로
+        t = t.replace(/[ \t]+/g, ' ');
       }
       if (mode === 'lines' || mode === 'all') {
-        t = t.replace(/\n{3,}/g, '\n\n'); // 3줄 이상의 줄바꿈을 2줄로 압축
+        t = t.replace(/\n{3,}/g, '\n\n');
       }
       textarea.value = t;
       analyzeText();
       showToast('✨ 텍스트 서식 및 공백 정리가 완료되었습니다!');
     }
 
-    // 신규 실무 기능 2: 블라인드 감점어 자동 마스킹
     function maskBlindKeywords() {
       let t = textarea.value;
       if (!t.trim()) { alert('작성 중인 자소서 내용을 먼저 입력해 주세요.'); return; }
@@ -952,7 +950,6 @@
       }, 1000);
     }
 
-    // 🚀 실제 글로벌 방문자 카운터 (안정화)
     function updateVisitorStats() {
       const todayKey = 'bc_vis_' + new Date().toISOString().substring(0, 10).replace(/-/g, '');
       const totalKey = 'bc_vis_total_global';
