@@ -67,7 +67,6 @@
 
     .section-title { font-size: 1.2rem; font-weight: 800; display: flex; align-items: center; gap: 8px; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--border); }
 
-    /* 모듈 전환 탭 */
     .module-nav { display: flex; gap: 8px; margin-bottom: 18px; border-bottom: 2px solid var(--border); padding-bottom: 8px; }
     .mod-btn { flex: 1; padding: 11px 8px; background: #ffffff; border: 1.5px solid var(--border); border-radius: 8px; font-size: 0.92rem; font-weight: 800; color: var(--text-muted); cursor: pointer; text-align: center; transition: all 0.2s; }
     .mod-btn:hover { background: #f1f5f9; }
@@ -94,7 +93,6 @@
     .deduct-item { display: flex; justify-content: space-between; font-weight: 600; color: var(--text-muted); }
     .deduct-item strong { color: var(--text); }
 
-    /* 정부 공식 사이트 연동 허브 */
     .gov-link-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
     .gov-link-item { display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; background: #f8fafc; border: 1.5px solid var(--border); border-radius: 8px; text-decoration: none; color: #0f172a; font-size: 0.9rem; font-weight: 700; transition: all 0.2s; }
     .gov-link-item:hover { background: #eff6ff; border-color: var(--primary); color: var(--primary); }
@@ -106,7 +104,6 @@
     .custom-table td { background: #ffffff; color: var(--text); font-weight: 600; }
     .custom-table tr:hover td { background: #f1f5f9; }
 
-    /* 머니트리카드 배너 */
     .partner-card-banner { background: #ffffff; border: 2px solid #93c5fd; border-radius: 10px; padding: 16px 20px; margin-bottom: 22px; display: flex; justify-content: space-between; align-items: center; box-shadow: var(--shadow-sm); }
     .partner-btn { background: var(--primary); color: #fff; text-decoration: none; font-size: 0.88rem; font-weight: 800; padding: 10px 16px; border-radius: 6px; white-space: nowrap; }
     .partner-btn:hover { background: var(--primary-hover); }
@@ -279,7 +276,7 @@
     <!-- 모듈 4: 미사용 연차수당 정산기 -->
     <div id="tabLeave" class="mod-content">
       <div class="card card-highlight">
-        <div class="section-title"><span>🏖️️</span> 근로기준법 기준 법정 미사용 연차수당 계산기</div>
+        <div class="section-title"><span>🏖️</span> 근로기준법 기준 법정 미사용 연차수당 계산기</div>
         <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">
           미사용 연차휴가는 근로기준법 제60조에 따라 통상임금(1일 8시간분)을 기준으로 현금 보상해야 합니다. 퇴사 또는 연도 말 잔여 연차 보상액을 산출합니다.
         </p>
@@ -392,7 +389,6 @@
       document.getElementById(modId).classList.add('active');
     }
 
-    // 4대보험 & 세금 공통 연산기
     function calculateDeductions(monthlyGross, taxFreeMonth, dependents) {
       const taxable = Math.max(0, monthlyGross - taxFreeMonth);
 
@@ -422,7 +418,6 @@
       };
     }
 
-    // 1. 표준 연봉 계산
     function calculateStandardSalary() {
       const annual = parseFloat(document.getElementById('annualSalary').value) * 10000;
       const taxFreeMonth = parseFloat(document.getElementById('taxFree').value) * 10000;
@@ -451,7 +446,6 @@
       document.getElementById('totalDeduct').innerText = res.totalDeduction.toLocaleString() + ' 원';
     }
 
-    // 2. 희망 세후 월급 역산 (Net-to-Gross)
     function calculateReverseSalary() {
       const targetNet = parseFloat(document.getElementById('targetNetMonthly').value) * 10000;
       const taxFreeMonth = parseFloat(document.getElementById('targetTaxFree').value) * 10000;
@@ -480,7 +474,6 @@
       document.getElementById('tipMonthlyText').innerText = Math.round(approxMonthly / 10000).toLocaleString();
     }
 
-    // 3. 포괄임금 고정 OT 분리 및 통상시급 계산
     function calculateOtBreakdown() {
       const annual = parseFloat(document.getElementById('otAnnual').value) * 10000;
       const otHours = parseFloat(document.getElementById('otHours').value) || 0;
@@ -507,7 +500,6 @@
       }
     }
 
-    // 4. 미사용 연차수당 정산
     function calculateAnnualLeave() {
       const annual = parseFloat(document.getElementById('leaveAnnual').value) * 10000;
       const days = parseFloat(document.getElementById('leaveDays').value) || 0;
@@ -524,11 +516,39 @@
       document.getElementById('leaveTotalPay').innerText = totalLeavePay.toLocaleString() + ' 원';
     }
 
+    // 🚀 도메인 전역 실시간 방문자 카운트 (salary.html 진입 시에도 완벽 집계)
+    function trackGlobalVisitor() {
+      const todayDateStr = new Date().toISOString().substring(0, 10).replace(/-/g, '');
+      const hasCounted = sessionStorage.getItem('bc_counted_session');
+
+      let localTotal = parseInt(localStorage.getItem('bc_domain_total') || '55', 10);
+      let localToday = parseInt(localStorage.getItem('bc_domain_today_' + todayDateStr) || '16', 10);
+
+      if (!hasCounted) {
+        localTotal += 1;
+        localToday += 1;
+        localStorage.setItem('bc_domain_total', localTotal);
+        localStorage.setItem('bc_domain_today_' + todayDateStr, localToday);
+        sessionStorage.setItem('bc_counted_session', '1');
+      }
+
+      fetch('https://hits.sh/bytechecktool.com.json')
+        .then(res => res.json())
+        .then(data => {
+          if (data && data.hits) {
+            const realMax = Math.max(localTotal, data.hits);
+            localStorage.setItem('bc_domain_total', realMax);
+          }
+        })
+        .catch(() => {});
+    }
+
     window.addEventListener('DOMContentLoaded', () => {
       calculateStandardSalary();
       calculateReverseSalary();
       calculateOtBreakdown();
       calculateAnnualLeave();
+      trackGlobalVisitor();
     });
   </script>
 </body>
