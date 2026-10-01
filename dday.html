@@ -272,7 +272,7 @@
       </div>
     </div>
 
-    <!-- 공공기관 5년 인정 사전등록 공식 가이드 (정부 공식 시스템 100% 정상 작동) -->
+    <!-- 공공기관 5년 인정 사전등록 공식 가이드 -->
     <div class="notice-card">
       <h4>
         <span>💡 공공기관·공무원 필수: 인사혁신처 어학 성적 5년 사전등록</span>
@@ -395,14 +395,11 @@
       if (!dateVal) return;
 
       const examDate = new Date(dateVal);
-      // 1. 2년 공식 만료일
       const expireDate = new Date(examDate.getFullYear() + 2, examDate.getMonth(), examDate.getDate());
 
-      // 2. 인사혁신처 공공기관 5년 사전등록 인정 기한: 응시 연도로부터 5년 후 12월 31일
       const gosiYear = examDate.getFullYear() + 5;
       document.getElementById('gosi5YearText').innerText = `${gosiYear}년 12월 31일`;
 
-      // 3. 시험 종류별 예상 성적 발표일 계산
       let releaseDays = 10;
       if (examType === 'toeic') releaseDays = 10;
       else if (examType === 'opic') releaseDays = 6;
@@ -486,7 +483,6 @@
 
     function judgePublicCompany() {
       const s = parseInt(document.getElementById('publicToeicInput').value, 10) || 0;
-      
       const elKepco = document.getElementById('pubKepco');
       const elNhis = document.getElementById('pubNhis');
       const elKorail = document.getElementById('pubKorail');
@@ -533,7 +529,6 @@
 
     function judgePassStatus() {
       const score = parseInt(document.getElementById('userScore').value, 10) || 0;
-      
       const el7th = document.getElementById('pass7th');
       const elGun7th = document.getElementById('passGun7th');
       const elGun9th = document.getElementById('passGun9th');
@@ -563,31 +558,28 @@
       }
     }
 
-    // 🚀 도메인 전역 실시간 방문자 카운트 (dday.html 진입 시에도 완벽 집계)
-    function trackGlobalVisitor() {
-      const todayDateStr = new Date().toISOString().substring(0, 10).replace(/-/g, '');
-      const hasCounted = sessionStorage.getItem('bc_counted_session');
+    // 🚀 [100% 정직한 서버 기반 실시간 카운터 연동]
+    function trackHonestVisitor() {
+      const now = new Date();
+      const kstFormatter = new Intl.DateTimeFormat('ko-KR', {
+        timeZone: 'Asia/Seoul',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit'
+      });
+      const parts = kstFormatter.formatToParts(now);
+      const y = parts.find(p => p.type === 'year').value;
+      const m = parts.find(p => p.type === 'month').value;
+      const d = parts.find(p => p.type === 'day').value;
+      const kstDayKey = `today_${y}${m}${d}`;
 
-      let localTotal = parseInt(localStorage.getItem('bc_domain_total') || '55', 10);
-      let localToday = parseInt(localStorage.getItem('bc_domain_today_' + todayDateStr) || '16', 10);
-
-      if (!hasCounted) {
-        localTotal += 1;
-        localToday += 1;
-        localStorage.setItem('bc_domain_total', localTotal);
-        localStorage.setItem('bc_domain_today_' + todayDateStr, localToday);
-        sessionStorage.setItem('bc_counted_session', '1');
+      const isFirstSession = !sessionStorage.getItem('bc_counted_session_v2');
+      if (isFirstSession) {
+        fetch(`https://abacus.jasoncameron.dev/hit/bytechecktool.com/total`).catch(() => {});
+        fetch(`https://abacus.jasoncameron.dev/hit/bytechecktool.com/${kstDayKey}`)
+          .then(() => sessionStorage.setItem('bc_counted_session_v2', '1'))
+          .catch(() => {});
       }
-
-      fetch('https://hits.sh/bytechecktool.com.json')
-        .then(res => res.json())
-        .then(data => {
-          if (data && data.hits) {
-            const realMax = Math.max(localTotal, data.hits);
-            localStorage.setItem('bc_domain_total', realMax);
-          }
-        })
-        .catch(() => {});
     }
 
     window.addEventListener('DOMContentLoaded', () => {
@@ -597,7 +589,7 @@
       convertScoreAuto();
       judgePublicCompany();
       judgePassStatus();
-      trackGlobalVisitor();
+      trackHonestVisitor();
     });
   </script>
 </body>
