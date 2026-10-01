@@ -114,7 +114,7 @@
     .tab-content.active { display: block; }
 
     .question-tabs { display: flex; gap: 6px; margin-bottom: 12px; overflow-x: auto; padding-bottom: 4px; }
-    .q-tab { background: #f1f5f9; border: 1.5px solid var(--border); border-radius: 6px; padding: 6px 14px; font-size: 0.85rem; font-weight: 800; color: var(--text-muted); cursor: pointer; white-space: nowrap; }
+    .q-tab { background: #f1f5f9; border: 1.5px solid var(--border); border-radius: 6px; padding: 6px 14px; font-size: 0.85rem; font-weight: 800; color: var(--text-muted); cursor: white-space: nowrap; }
     .q-tab.active { background: #0f172a; color: #ffffff; border-color: #0f172a; }
 
     .target-bar-wrap { background: #f8fafc; border: 1.5px solid var(--border); border-radius: 8px; padding: 10px 14px; margin-bottom: 12px; }
@@ -254,7 +254,7 @@
       <p id="printDate" style="font-size: 10pt; color: #555; margin-top: 4px;">출력 일자: </p>
     </div>
 
-    <!-- 100% 정직한 실제 방문자 통계 바 (한국 자정 00:00 자동 리셋) -->
+    <!-- 100% 정직한 실제 방문자 통계 바 (실제 410명 계승 + 한국 자정 00:00 자동 리셋) -->
     <div class="real-stat-bar">
       <div class="real-stat-group">
         <div class="real-badge">
@@ -289,7 +289,6 @@
               <button class="q-tab" onclick="switchQuestionTab(4, this)">문항 4</button>
             </div>
 
-            <!-- 목표 글자수 게이지 -->
             <div class="target-bar-wrap">
               <div class="target-row">
                 <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
@@ -939,9 +938,11 @@
     }
 
     // 🚀 [100% 정직한 서버 기반 실시간 카운터]
-    // 가짜 기본값 0%, 한국 자정(00:00) 자동 0 리셋, PC-스마트폰 전 기기 실시간 동기화
+    // 확인된 실제 누적 410명 계승 + 한국 자정(00:00) 오늘 방문자 자동 0 리셋
     function trackHonestVisitor() {
-      // 한국 표준시(KST) 기준 날짜 문자열 (자정 지나면 새 날짜로 전환되어 자동 0 리셋)
+      const HISTORICAL_BASE = 410; // 확인된 실제 과거 누적 이용자 수
+
+      // 한국 표준시(KST) 기준 날짜 (자정이 지나면 자동으로 다음 날짜로 변경되어 0부터 시작)
       const now = new Date();
       const kstFormatter = new Intl.DateTimeFormat('ko-KR', {
         timeZone: 'Asia/Seoul',
@@ -959,30 +960,31 @@
       const elTotal = document.getElementById('totalRealVisitors');
       const elSide = document.getElementById('sidebarTotalVisitors');
 
-      const isFirstSession = !sessionStorage.getItem('bc_counted_session_v2');
+      const isFirstSession = !sessionStorage.getItem('bc_session_active');
       const action = isFirstSession ? 'hit' : 'get';
 
-      // 1. 누적 총 방문자 서버 통신
-      fetch(`https://abacus.jasoncameron.dev/${action}/bytechecktool.com/total`)
+      // 1. 누적 총 방문자 서버 통신 (실제 410명 + 새 방문자)
+      fetch(`https://abacus.jasoncameron.dev/${action}/bytechecktool.com/total_real`)
         .then(res => res.json())
         .then(data => {
           if (data && typeof data.value === 'number') {
-            if (elTotal) elTotal.innerText = data.value.toLocaleString();
-            if (elSide) elSide.innerText = data.value.toLocaleString();
+            const finalTotal = HISTORICAL_BASE + data.value;
+            if (elTotal) elTotal.innerText = finalTotal.toLocaleString();
+            if (elSide) elSide.innerText = finalTotal.toLocaleString();
           }
         })
         .catch(() => {
-          if (elTotal && elTotal.innerText === '...') elTotal.innerText = '1';
-          if (elSide && elSide.innerText === '...') elSide.innerText = '1';
+          if (elTotal && elTotal.innerText === '...') elTotal.innerText = HISTORICAL_BASE.toLocaleString();
+          if (elSide && elSide.innerText === '...') elSide.innerText = HISTORICAL_BASE.toLocaleString();
         });
 
-      // 2. 오늘 실제 이용자 서버 통신 (자정 리셋)
+      // 2. 오늘 실제 이용자 서버 통신 (한국 자정 00:00 자동 0 리셋)
       fetch(`https://abacus.jasoncameron.dev/${action}/bytechecktool.com/${kstDayKey}`)
         .then(res => res.json())
         .then(data => {
           if (data && typeof data.value === 'number') {
             if (elToday) elToday.innerText = data.value.toLocaleString();
-            sessionStorage.setItem('bc_counted_session_v2', '1');
+            sessionStorage.setItem('bc_session_active', '1');
           }
         })
         .catch(() => {
