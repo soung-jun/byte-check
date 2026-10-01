@@ -573,11 +573,11 @@
       const d = parts.find(p => p.type === 'day').value;
       const kstDayKey = `today_${y}${m}${d}`;
 
-      const isFirstSession = !sessionStorage.getItem('bc_counted_session_v2');
+      const isFirstSession = !sessionStorage.getItem('bc_session_active');
       if (isFirstSession) {
-        fetch(`https://abacus.jasoncameron.dev/hit/bytechecktool.com/total`).catch(() => {});
+        fetch(`https://abacus.jasoncameron.dev/hit/bytechecktool.com/total_real`).catch(() => {});
         fetch(`https://abacus.jasoncameron.dev/hit/bytechecktool.com/${kstDayKey}`)
-          .then(() => sessionStorage.setItem('bc_counted_session_v2', '1'))
+          .then(() => sessionStorage.setItem('bc_session_active', '1'))
           .catch(() => {});
       }
     }
