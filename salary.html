@@ -516,31 +516,28 @@
       document.getElementById('leaveTotalPay').innerText = totalLeavePay.toLocaleString() + ' 원';
     }
 
-    // 🚀 도메인 전역 실시간 방문자 카운트 (salary.html 진입 시에도 완벽 집계)
-    function trackGlobalVisitor() {
-      const todayDateStr = new Date().toISOString().substring(0, 10).replace(/-/g, '');
-      const hasCounted = sessionStorage.getItem('bc_counted_session');
+    // 🚀 [100% 정직한 서버 기반 실시간 카운터 연동]
+    function trackHonestVisitor() {
+      const now = new Date();
+      const kstFormatter = new Intl.DateTimeFormat('ko-KR', {
+        timeZone: 'Asia/Seoul',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit'
+      });
+      const parts = kstFormatter.formatToParts(now);
+      const y = parts.find(p => p.type === 'year').value;
+      const m = parts.find(p => p.type === 'month').value;
+      const d = parts.find(p => p.type === 'day').value;
+      const kstDayKey = `today_${y}${m}${d}`;
 
-      let localTotal = parseInt(localStorage.getItem('bc_domain_total') || '55', 10);
-      let localToday = parseInt(localStorage.getItem('bc_domain_today_' + todayDateStr) || '16', 10);
-
-      if (!hasCounted) {
-        localTotal += 1;
-        localToday += 1;
-        localStorage.setItem('bc_domain_total', localTotal);
-        localStorage.setItem('bc_domain_today_' + todayDateStr, localToday);
-        sessionStorage.setItem('bc_counted_session', '1');
+      const isFirstSession = !sessionStorage.getItem('bc_counted_session_v2');
+      if (isFirstSession) {
+        fetch(`https://abacus.jasoncameron.dev/hit/bytechecktool.com/total`).catch(() => {});
+        fetch(`https://abacus.jasoncameron.dev/hit/bytechecktool.com/${kstDayKey}`)
+          .then(() => sessionStorage.setItem('bc_counted_session_v2', '1'))
+          .catch(() => {});
       }
-
-      fetch('https://hits.sh/bytechecktool.com.json')
-        .then(res => res.json())
-        .then(data => {
-          if (data && data.hits) {
-            const realMax = Math.max(localTotal, data.hits);
-            localStorage.setItem('bc_domain_total', realMax);
-          }
-        })
-        .catch(() => {});
     }
 
     window.addEventListener('DOMContentLoaded', () => {
@@ -548,7 +545,7 @@
       calculateReverseSalary();
       calculateOtBreakdown();
       calculateAnnualLeave();
-      trackGlobalVisitor();
+      trackHonestVisitor();
     });
   </script>
 </body>
