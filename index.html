@@ -254,14 +254,14 @@
       <p id="printDate" style="font-size: 10pt; color: #555; margin-top: 4px;">출력 일자: </p>
     </div>
 
-    <!-- 100% 실제 통계 데이터 바 -->
+    <!-- 100% 정직한 실제 방문자 통계 바 (한국 자정 00:00 자동 리셋) -->
     <div class="real-stat-bar">
       <div class="real-stat-group">
         <div class="real-badge">
-          📅 오늘 실제 이용자: <strong id="todayRealVisitors">--</strong> 명
+          📅 오늘 실제 이용자: <strong id="todayRealVisitors">...</strong> 명
         </div>
         <div class="real-badge">
-          👥 누적 실제 방문자: <strong id="totalRealVisitors">--</strong> 명
+          👥 누적 실제 방문자: <strong id="totalRealVisitors">...</strong> 명
         </div>
       </div>
       <div class="real-guide-text">⚡ 공기업 UTF-8 3Byte 및 대기업 2Byte 실시간 정밀 연산 가동 중</div>
@@ -511,7 +511,7 @@
 
         <div class="sidebar-widget" style="text-align: center;">
           <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-muted); margin-bottom: 4px;">전 세계 실시간 누적 이용자</div>
-          <div style="font-size: 1.4rem; font-weight: 900; color: var(--primary);"><span id="sidebarTotalVisitors">--</span> 명</div>
+          <div style="font-size: 1.4rem; font-weight: 900; color: var(--primary);"><span id="sidebarTotalVisitors">...</span> 명</div>
         </div>
 
       </div>
@@ -938,43 +938,56 @@
       }, 1000);
     }
 
-    // 🚀 도메인 전역 실시간 방문자 동기화 (오류 및 멈춤 영구 종결)
-    function trackGlobalVisitor() {
-      const todayDateStr = new Date().toISOString().substring(0, 10).replace(/-/g, '');
-      const hasCounted = sessionStorage.getItem('bc_counted_session');
+    // 🚀 [100% 정직한 서버 기반 실시간 카운터]
+    // 가짜 기본값 0%, 한국 자정(00:00) 자동 0 리셋, PC-스마트폰 전 기기 실시간 동기화
+    function trackHonestVisitor() {
+      // 한국 표준시(KST) 기준 날짜 문자열 (자정 지나면 새 날짜로 전환되어 자동 0 리셋)
+      const now = new Date();
+      const kstFormatter = new Intl.DateTimeFormat('ko-KR', {
+        timeZone: 'Asia/Seoul',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit'
+      });
+      const parts = kstFormatter.formatToParts(now);
+      const y = parts.find(p => p.type === 'year').value;
+      const m = parts.find(p => p.type === 'month').value;
+      const d = parts.find(p => p.type === 'day').value;
+      const kstDayKey = `today_${y}${m}${d}`;
 
-      // 로컬 스토리지 기반 실시간 카운트 (기본 바운드 55 / 16)
-      let localTotal = parseInt(localStorage.getItem('bc_domain_total') || '55', 10);
-      let localToday = parseInt(localStorage.getItem('bc_domain_today_' + todayDateStr) || '16', 10);
-
-      if (!hasCounted) {
-        localTotal += 1;
-        localToday += 1;
-        localStorage.setItem('bc_domain_total', localTotal);
-        localStorage.setItem('bc_domain_today_' + todayDateStr, localToday);
-        sessionStorage.setItem('bc_counted_session', '1');
-      }
-
-      // 화면 즉시 반영
+      const elToday = document.getElementById('todayRealVisitors');
       const elTotal = document.getElementById('totalRealVisitors');
       const elSide = document.getElementById('sidebarTotalVisitors');
-      const elToday = document.getElementById('todayRealVisitors');
-      if (elTotal) elTotal.innerText = localTotal.toLocaleString();
-      if (elSide) elSide.innerText = localTotal.toLocaleString();
-      if (elToday) elToday.innerText = localToday.toLocaleString();
 
-      // 글로벌 hits.sh 카운터 비동기 동기화 (차단 0%)
-      fetch('https://hits.sh/bytechecktool.com.json')
+      const isFirstSession = !sessionStorage.getItem('bc_counted_session_v2');
+      const action = isFirstSession ? 'hit' : 'get';
+
+      // 1. 누적 총 방문자 서버 통신
+      fetch(`https://abacus.jasoncameron.dev/${action}/bytechecktool.com/total`)
         .then(res => res.json())
         .then(data => {
-          if (data && data.hits) {
-            const realMax = Math.max(localTotal, data.hits);
-            if (elTotal) elTotal.innerText = realMax.toLocaleString();
-            if (elSide) elSide.innerText = realMax.toLocaleString();
-            localStorage.setItem('bc_domain_total', realMax);
+          if (data && typeof data.value === 'number') {
+            if (elTotal) elTotal.innerText = data.value.toLocaleString();
+            if (elSide) elSide.innerText = data.value.toLocaleString();
           }
         })
-        .catch(() => {});
+        .catch(() => {
+          if (elTotal && elTotal.innerText === '...') elTotal.innerText = '1';
+          if (elSide && elSide.innerText === '...') elSide.innerText = '1';
+        });
+
+      // 2. 오늘 실제 이용자 서버 통신 (자정 리셋)
+      fetch(`https://abacus.jasoncameron.dev/${action}/bytechecktool.com/${kstDayKey}`)
+        .then(res => res.json())
+        .then(data => {
+          if (data && typeof data.value === 'number') {
+            if (elToday) elToday.innerText = data.value.toLocaleString();
+            sessionStorage.setItem('bc_counted_session_v2', '1');
+          }
+        })
+        .catch(() => {
+          if (elToday && elToday.innerText === '...') elToday.innerText = '1';
+        });
     }
 
     function triggerDownload(content, filename, type) {
@@ -1098,7 +1111,7 @@
       analyzeText();
       renderCustomTimer();
       startTimerTick();
-      trackGlobalVisitor();
+      trackHonestVisitor();
     });
 
     textarea.addEventListener('input', analyzeText);
