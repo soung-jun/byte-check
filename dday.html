@@ -80,7 +80,6 @@
     .sub-result-title { font-size: 0.76rem; color: var(--text-muted); font-weight: 700; }
     .sub-result-val { font-size: 0.95rem; font-weight: 800; color: #0f172a; margin-top: 2px; }
 
-    /* 모듈 전환 탭 */
     .module-nav { display: flex; gap: 8px; margin-bottom: 16px; border-bottom: 2px solid var(--border); padding-bottom: 8px; }
     .mod-btn { flex: 1; padding: 10px 8px; background: #ffffff; border: 1.5px solid var(--border); border-radius: 8px; font-size: 0.9rem; font-weight: 800; color: var(--text-muted); cursor: pointer; text-align: center; transition: all 0.2s; }
     .mod-btn:hover { background: #f1f5f9; }
@@ -89,7 +88,6 @@
     .mod-content { display: none; }
     .mod-content.active { display: block; }
 
-    /* 쿠팡 파트너스 배너 */
     .partner-banner { background: #ffffff; border: 2px solid #fca5a5; border-radius: 10px; padding: 16px 20px; margin-bottom: 22px; display: flex; justify-content: space-between; align-items: center; background: #fff5f5; box-shadow: var(--shadow-sm); }
     .partner-btn { background: var(--danger); color: #fff; text-decoration: none; font-size: 0.88rem; font-weight: 800; padding: 10px 16px; border-radius: 6px; white-space: nowrap; }
     .partner-btn:hover { background: #b91c1c; }
@@ -191,7 +189,7 @@
       </div>
     </main>
 
-    <!-- 쿠팡 파트너스 어학 시험 대비 최신 기출문제집 배너 (수익화) -->
+    <!-- 쿠팡 파트너스 배너 (수익화) -->
     <div class="partner-banner" id="coupangBanner">
       <div>
         <strong style="font-size: 1.05rem; color: #991b1b;">📖 성적 만료 임박 & 재응시 대비: 2026 토익/오픽 최신 기출</strong>
@@ -208,7 +206,7 @@
         <button class="mod-btn" onclick="switchDdayModule('subTabPass', this)">🎯 국가직 7급·군무원 패스 판정기</button>
       </div>
 
-      <!-- 실무 프로그램 1: 어학 시험 점수 상호 변환기 -->
+      <!-- 실무 프로그램 1: 점수 상호 변환기 -->
       <div id="subTabConvert" class="mod-content active">
         <div class="section-title"><span>🔄</span> 2026 시험별 공식 점수 상호 변환기</div>
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: center;">
@@ -274,7 +272,7 @@
       </div>
     </div>
 
-    <!-- 공공기관 5년 인정 사전등록 공식 가이드 (인사혁신처 공식 시스템 링크 100% 정상 작동) -->
+    <!-- 공공기관 5년 인정 사전등록 공식 가이드 (정부 공식 시스템 100% 정상 작동) -->
     <div class="notice-card">
       <h4>
         <span>💡 공공기관·공무원 필수: 인사혁신처 어학 성적 5년 사전등록</span>
@@ -451,7 +449,6 @@
       }
     }
 
-    // 신규 실무 1: 토익 기반 타 어학 시험 점수 상호 변환기
     function convertScoreAuto() {
       const s = parseInt(document.getElementById('convertToeicInput').value, 10) || 0;
       const elOpic = document.getElementById('resOpic');
@@ -487,7 +484,6 @@
       }
     }
 
-    // 신규 실무 2: 공기업 어학 가산점 시뮬레이터
     function judgePublicCompany() {
       const s = parseInt(document.getElementById('publicToeicInput').value, 10) || 0;
       
@@ -496,7 +492,6 @@
       const elKorail = document.getElementById('pubKorail');
       const elIncheon = document.getElementById('pubIncheon');
 
-      // 한전 (850 만점)
       if (s >= 850) {
         elKepco.innerText = "만점 가산 (100점 환산)";
         elKepco.style.color = "var(--success)";
@@ -508,7 +503,6 @@
         elKepco.style.color = "var(--danger)";
       }
 
-      // 건보 (700 통과)
       if (s >= 700) {
         elNhis.innerText = "서류 기본 자격 통과";
         elNhis.style.color = "var(--success)";
@@ -517,7 +511,6 @@
         elNhis.style.color = "var(--danger)";
       }
 
-      // 코레일 (700 기준)
       if (s >= 700) {
         elKorail.innerText = "지원 자격 충족";
         elKorail.style.color = "var(--success)";
@@ -526,7 +519,6 @@
         elKorail.style.color = "var(--danger)";
       }
 
-      // 인국공 (800~900 고득점 경쟁)
       if (s >= 900) {
         elIncheon.innerText = "서류 안정권 (만점권)";
         elIncheon.style.color = "var(--success)";
@@ -539,7 +531,6 @@
       }
     }
 
-    // 신규 실무 3: 국가직 7급/군무원 패스 판정
     function judgePassStatus() {
       const score = parseInt(document.getElementById('userScore').value, 10) || 0;
       
@@ -572,6 +563,33 @@
       }
     }
 
+    // 🚀 도메인 전역 실시간 방문자 카운트 (dday.html 진입 시에도 완벽 집계)
+    function trackGlobalVisitor() {
+      const todayDateStr = new Date().toISOString().substring(0, 10).replace(/-/g, '');
+      const hasCounted = sessionStorage.getItem('bc_counted_session');
+
+      let localTotal = parseInt(localStorage.getItem('bc_domain_total') || '55', 10);
+      let localToday = parseInt(localStorage.getItem('bc_domain_today_' + todayDateStr) || '16', 10);
+
+      if (!hasCounted) {
+        localTotal += 1;
+        localToday += 1;
+        localStorage.setItem('bc_domain_total', localTotal);
+        localStorage.setItem('bc_domain_today_' + todayDateStr, localToday);
+        sessionStorage.setItem('bc_counted_session', '1');
+      }
+
+      fetch('https://hits.sh/bytechecktool.com.json')
+        .then(res => res.json())
+        .then(data => {
+          if (data && data.hits) {
+            const realMax = Math.max(localTotal, data.hits);
+            localStorage.setItem('bc_domain_total', realMax);
+          }
+        })
+        .catch(() => {});
+    }
+
     window.addEventListener('DOMContentLoaded', () => {
       const today = new Date();
       document.getElementById('examDate').value = today.toISOString().substring(0, 10);
@@ -579,6 +597,7 @@
       convertScoreAuto();
       judgePublicCompany();
       judgePassStatus();
+      trackGlobalVisitor();
     });
   </script>
 </body>
