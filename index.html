@@ -3,77 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>대기업·공기업 자기소개서 바이트 계산기 & 서식 클리너 | ByteCheck</title>
-  <meta name="description" content="대기업(EUC-KR 2Byte) 및 공기업(UTF-8 3Byte) 기준 자소서 글자수·바이트 정밀 계산기. 줄바꿈 2Byte 옵션, 블라인드 채용 감점어 100+종 정밀 마스킹, 맞춤법 공백 정제 서식 클리너, 표준 Word(.doc) 서식 다운로드 및 문항별 임시저장 제공.">
-  <meta name="keywords" content="글자수세기, 자소서 바이트 계산기, EUC-KR 글자수, UTF-8 바이트 계산, 공기업 자소서 글자수, 대기업 자소서 바이트, 블라인드 채용 감점, 자소서 줄바꿈 바이트, 취업 유틸리티">
-  <link rel="canonical" href="https://bytechecktool.com/index.html">
-
-  <!-- Open Graph / SNS -->
+  <title>ByteCheck - 2026 자소서 바이트 계산기 & 취업 서류 서식 센터</title>
+  <meta name="description" content="공기업 UTF-8 3Byte, 대기업 EUC-KR 2Byte 실시간 글자수 계산기, 줄바꿈 2바이트 연산 선택, 목표 글자수 게이지, 고용노동부 기준 블라인드 채용 감점 단어 검출, 맞춤형 공채 D-Day 타이머, 표준 이력서 무료 다운로드.">
+  <meta name="keywords" content="자소서 바이트 계산기, 글자수 줄이기, 공기업 3바이트, 대기업 2바이트, 자소서 문항 관리, 블라인드 채용 감점, 공채 마감 타이머, 이력서 양식 다운로드, ByteCheck">
+  
+  <meta property="og:title" content="ByteCheck - 2026 자소서 바이트 계산기 & 올인원 대시보드">
+  <meta property="og:description" content="문항별 2B/3B 실시간 계산, 전체 문항 합산, 맞춤 공채 타이머, 바이트 다이어트">
+  <meta property="og:url" content="https://bytechecktool.com">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://bytechecktool.com/index.html">
-  <meta property="og:title" content="대기업·공기업 자소서 바이트 계산기 & 블라인드 마스킹 | ByteCheck">
-  <meta property="og:description" content="대기업(2Byte) vs 공기업(3Byte) 맞춤 바이트 계산 및 블라인드 감점어 실시간 필터링.">
-  <meta property="og:image" content="https://bytechecktool.com/assets/og-bytecheck.png">
+  <meta property="og:image" content="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'><rect width='1200' height='630' fill='%231d4ed8'/><text x='50%25' y='45%25' font-size='80' text-anchor='middle' fill='%23ffffff' font-family='sans-serif' font-weight='900'>⚡ ByteCheck</text><text x='50%25' y='60%25' font-size='42' text-anchor='middle' fill='%2393c5fd' font-family='sans-serif' font-weight='700'>2026 자소서 바이트 계산기 &amp; 서식 센터</text></svg>">
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="대기업·공기업 자소서 바이트 계산기 | ByteCheck">
-  <meta name="twitter:description" content="채용 사이트 글자수 초과 에러 방지. EUC-KR vs UTF-8 및 줄바꿈 2바이트 계산기.">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1d4ed8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="ByteCheck">
 
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6840623754388286" crossorigin="anonymous"></script>
-
-  <!-- Structured Data: WebPage & FAQPage JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "WebPage",
-        "@id": "https://bytechecktool.com/#webpage",
-        "url": "https://bytechecktool.com/",
-        "name": "대기업·공기업 자기소개서 글자수·바이트 계산기 & 서식 클리너",
-        "description": "EUC-KR 및 UTF-8 인코딩별 자소서 용량 계산, 줄바꿈 2Byte 옵션, 블라인드 채용 감점어 필터링 지원",
-        "isPartOf": {
-          "@type": "WebSite",
-          "@id": "https://bytechecktool.com/#website",
-          "url": "https://bytechecktool.com",
-          "name": "ByteCheck"
-        }
+        "@type": "WebApplication",
+        "name": "ByteCheck 자소서 바이트 계산기",
+        "url": "https://bytechecktool.com",
+        "description": "공기업 UTF-8 3Byte, 대기업 EUC-KR 2Byte 실시간 연산 및 자소서 문항별 분할 관리 툴",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "All",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
       },
       {
         "@type": "FAQPage",
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "대기업과 공기업의 자소서 바이트(Byte) 계산 방식이 왜 다른가요?",
+            "name": "대기업 2Byte와 공기업 3Byte의 차이는 무엇인가요?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "삼성, 현대차, SK, LG 등 대다수 민간 대기업의 채용 시스템은 전통적인 레거시 및 윈도우 인코딩 규격인 EUC-KR(또는 CP949)을 기반으로 구축되어 한글 1자를 2바이트로 계산합니다. 반면 한국전력공사, 코레일, 국민건강보험공단 등 공공기관 채용 시스템은 전자정부 웹 표준인 UTF-8 인코딩을 적용하여 한글 1자를 3바이트로 계산합니다."
+              "text": "삼성, SK 등 대기업 전산망은 한글을 2바이트로 인식하는 EUC-KR 체계를 주로 사용하며, 한국전력공사 등 공공기관 채용 전산망은 한글을 3바이트로 인식하는 UTF-8 체계를 채택하고 있습니다."
             }
           },
           {
             "@type": "Question",
-            "name": "엔터(줄바꿈)는 1바이트인가요, 2바이트인가요?",
+            "name": "엔터(줄바꿈)는 몇 바이트로 계산되나요?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "웹 브라우저의 기본 개행문자는 LF(\\n)로 1바이트이지만, 윈도우 기반 채용 서버나 구형 오라클 데이터베이스에서는 개행을 CRLF(\\r\\n)로 기록하여 2바이트로 인식되는 경우가 매우 빈번합니다. 마감 직전 입력 오류를 막으려면 '줄바꿈 2Byte 계산' 옵션을 켜고 검토해야 안전합니다."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "블라인드 채용 감점 단어에는 구체적으로 어떤 것들이 포함되나요?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "출신 대학명(서울대, 연세대 등), 부모 및 친인척의 직업(교수, 공무원, 의사, 경찰 등), 출신 지역(서울, 전라도, 경상도 등), 성별과 연령을 특정할 수 있는 가족 호칭(형, 누나, 군복무, 육아 등)이 모두 블라인드 감점 또는 서류 부적격 사유에 해당합니다."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "작성 중이던 자기소개서 내용이 브라우저를 닫아도 유지되나요?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "네, ByteCheck는 브라우저의 로컬 스토리지(LocalStorage)를 활용하여 입력되는 내용을 실시간으로 자동 저장합니다. 문항 1부터 문항 4까지 탭별로 별도 저장되므로 실수로 창을 닫아도 복원됩니다."
+              "text": "대부분의 대기업(삼성 등) 채용 시스템에서 줄바꿈(Enter)은 2바이트(CR+LF)로 처리되며, 일부 채용 시스템에서는 순수 1자로 취급됩니다. ByteCheck에서는 두 방식을 모두 선택하여 검증할 수 있습니다."
             }
           }
         ]
@@ -82,834 +57,1595 @@
   }
   </script>
 
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6840623754388286" crossorigin="anonymous"></script>
+
   <style>
     :root {
-      --primary: #2563eb;
-      --primary-hover: #1d4ed8;
-      --secondary: #0f172a;
-      --accent: #10b981;
-      --warn: #ef4444;
+      --primary: #1d4ed8;
+      --primary-hover: #1e40af;
+      --primary-light: #eff6ff;
+      --accent: #0ea5e9;
       --bg: #f8fafc;
-      --surface: #ffffff;
-      --text: #1e293b;
-      --text-muted: #64748b;
-      --border: #e2e8f0;
-      --radius: 12px;
-      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-      --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --text-muted: #334155;
+      --border: #cbd5e1;
+      --border-dark: #94a3b8;
+      --danger: #dc2626;
+      --danger-bg: #fef2f2;
+      --warning: #d97706;
+      --warning-bg: #fffbeb;
+      --success: #15803d;
+      --success-bg: #f0fdf4;
+      --shadow-sm: 0 2px 4px rgba(15, 23, 42, 0.05);
+      --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: var(--font-main); background-color: var(--bg); color: var(--text); line-height: 1.6; }
-    a { color: inherit; text-decoration: none; }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
+    body { background-color: var(--bg); color: var(--text); line-height: 1.6; }
 
-    /* Header & Navigation */
-    header { background: var(--surface); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 50; }
-    .nav-container { max-width: 1140px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0.85rem 1.25rem; }
-    .brand { font-size: 1.35rem; font-weight: 800; color: var(--primary); display: flex; align-items: center; gap: 0.5rem; }
-    .nav-links { display: flex; gap: 0.6rem; list-style: none; flex-wrap: wrap; }
-    .nav-links a { font-size: 0.9rem; font-weight: 600; color: var(--text-muted); padding: 0.5rem 0.8rem; border-radius: 8px; transition: all 0.2s; }
-    .nav-links a:hover, .nav-links a.active { color: var(--primary); background: #eff6ff; }
+    header { background: #ffffff; border-bottom: 2px solid var(--border); width: 100%; position: relative; z-index: 10; }
+    .header-inner { max-width: 1240px; margin: 0 auto; padding: 14px 20px; display: flex; justify-content: space-between; align-items: center; }
+    .brand { display: flex; align-items: center; gap: 8px; font-size: 1.35rem; font-weight: 900; color: var(--primary); text-decoration: none; }
+    nav { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+    nav a { text-decoration: none; color: var(--text); font-size: 0.92rem; font-weight: 700; padding: 8px 14px; border-radius: 6px; transition: all 0.2s; }
+    nav a:hover { background: var(--primary-light); color: var(--primary); }
+    nav a.active { background: var(--primary); color: #ffffff; }
 
-    /* Main Wrap */
-    .main-wrap { max-width: 1140px; margin: 2rem auto; padding: 0 1.25rem; }
-    .hero-title { text-align: center; margin-bottom: 1.75rem; }
-    .hero-title h1 { font-size: 2rem; font-weight: 800; color: var(--secondary); letter-spacing: -0.02em; }
-    .hero-title p { font-size: 1.05rem; color: var(--text-muted); margin-top: 0.4rem; }
+    .dashboard-container { max-width: 1240px; margin: 0 auto; padding: 20px 16px 60px 16px; }
 
-    /* Honest Live Counter Strip */
-    .counter-strip {
-      background: #eff6ff; border: 1px solid #bfdbfe; border-radius: var(--radius);
-      padding: 0.75rem 1.25rem; display: flex; justify-content: space-around; align-items: center;
-      margin-bottom: 2rem; font-size: 0.92rem; font-weight: 600; color: var(--secondary);
+    .real-stat-bar { background: #0f172a; color: #f8fafc; border-radius: 30px; padding: 10px 24px; display: flex; justify-content: space-between; align-items: center; font-size: 0.88rem; font-weight: 700; margin-bottom: 20px; box-shadow: var(--shadow-sm); flex-wrap: wrap; gap: 10px; }
+    .real-stat-group { display: inline-flex; align-items: center; gap: 16px; }
+    .real-badge { background: #1e293b; padding: 4px 12px; border-radius: 20px; border: 1px solid #334155; }
+    .real-badge strong { color: #60a5fa; }
+    .real-guide-text { color: #94a3b8; font-weight: 500; font-size: 0.82rem; }
+
+    .dashboard-grid { display: grid; grid-template-columns: 1fr 360px; gap: 24px; align-items: start; }
+
+    .card { background: var(--card-bg); border-radius: 12px; border: 2px solid var(--border); padding: 20px; box-shadow: var(--shadow-sm); margin-bottom: 20px; }
+    .card-highlight { border: 2.5px solid #93c5fd; box-shadow: var(--shadow-md); }
+
+    .tab-nav { display: flex; gap: 6px; margin-bottom: 14px; border-bottom: 2px solid var(--border); padding-bottom: 8px; }
+    .tab-btn { flex: 1; padding: 10px; background: #ffffff; border: 1.5px solid var(--border); border-radius: 8px; font-size: 0.9rem; font-weight: 800; color: var(--text-muted); cursor: pointer; text-align: center; transition: all 0.2s; }
+    .tab-btn:hover { background: #f1f5f9; }
+    .tab-btn.active { background: var(--primary); color: #ffffff; border-color: var(--primary); }
+
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    .question-tabs { display: flex; gap: 6px; margin-bottom: 12px; overflow-x: auto; padding-bottom: 4px; }
+    .q-tab { background: #f1f5f9; border: 1.5px solid var(--border); border-radius: 6px; padding: 6px 14px; font-size: 0.85rem; font-weight: 800; color: var(--text-muted); cursor: pointer; white-space: nowrap; }
+    .q-tab.active { background: #0f172a; color: #ffffff; border-color: #0f172a; }
+
+    .target-bar-wrap { background: #f8fafc; border: 1.5px solid var(--border); border-radius: 8px; padding: 10px 14px; margin-bottom: 12px; }
+    .target-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; font-size: 0.85rem; flex-wrap: wrap; gap: 6px; }
+    .target-btn { border: 1px solid var(--border); background: #ffffff; font-size: 0.78rem; font-weight: 700; padding: 2px 7px; border-radius: 4px; cursor: pointer; }
+    .target-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+    .progress-track { width: 100%; height: 8px; background: #e2e8f0; border-radius: 4px; overflow: hidden; }
+    .progress-fill { height: 100%; width: 0%; background: var(--primary); transition: width 0.2s, background-color 0.2s; }
+    .progress-fill.over { background: var(--danger); }
+
+    .editor-toolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap: 6px; }
+    .toolbar-actions { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+    .btn-action-tool { background: #ffffff; border: 1.5px solid var(--border-dark); padding: 5px 10px; border-radius: 6px; font-size: 0.82rem; font-weight: 700; color: var(--text); cursor: pointer; }
+    .btn-action-tool:hover { background: #f1f5f9; }
+    .btn-diet { background: #fef3c7; border: 1.5px solid #d97706; color: #92400e; padding: 5px 12px; border-radius: 6px; font-size: 0.82rem; font-weight: 800; cursor: pointer; }
+    .btn-diet:hover { background: #fde68a; }
+    .btn-restore { background: #f1f5f9; border: 1.5px solid var(--border-dark); color: #0f172a; padding: 5px 10px; border-radius: 6px; font-size: 0.82rem; font-weight: 800; cursor: pointer; display: none; }
+
+    .font-ctrl { display: inline-flex; align-items: center; border: 1.5px solid var(--border-dark); border-radius: 6px; overflow: hidden; background: #fff; }
+    .btn-font-sz { border: none; background: transparent; padding: 4px 8px; font-size: 0.78rem; font-weight: 800; cursor: pointer; }
+    .btn-font-sz:hover { background: #f1f5f9; }
+
+    textarea { width: 100%; height: 320px; padding: 16px; border: 2px solid var(--border); border-radius: 8px; font-size: 1.02rem; line-height: 1.7; resize: vertical; outline: none; color: var(--text); transition: font-size 0.15s; }
+    textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.15); }
+
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 14px; }
+    .stat-box { background: #f8fafc; border: 1.5px solid var(--border); padding: 10px 8px; border-radius: 8px; text-align: center; }
+    .stat-title { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 2px; font-weight: 700; }
+    .stat-value { font-size: 1.3rem; font-weight: 900; color: var(--text); }
+    .stat-value.highlight { color: var(--primary); }
+
+    .total-summary-bar { margin-top: 12px; background: #eff6ff; border: 1.5px solid #bfdbfe; border-radius: 8px; padding: 10px 14px; font-size: 0.85rem; color: #1e40af; font-weight: 700; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; }
+
+    .alert-panel { margin-top: 12px; padding: 10px 14px; border-radius: 8px; font-size: 0.85rem; display: none; }
+    .alert-panel.danger { background: var(--danger-bg); border: 2px solid #f87171; color: #991b1b; }
+    .alert-panel.warning { background: var(--warning-bg); border: 2px solid #fcd34d; color: #92400e; }
+    .alert-panel.active { display: block; }
+
+    .quick-fix-btn { background: #ffffff; border: 1px solid #d97706; border-radius: 4px; padding: 2px 6px; margin: 0 4px; font-size: 0.78rem; font-weight: 800; color: #92400e; cursor: pointer; }
+    .quick-fix-btn:hover { background: #fde68a; }
+
+    .partner-banner { background: #ffffff; border: 2px solid var(--border); border-radius: 10px; padding: 14px 18px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: var(--shadow-sm); }
+    .partner-btn { background: #dc2626; color: #fff; text-decoration: none; font-size: 0.85rem; font-weight: 800; padding: 8px 14px; border-radius: 6px; white-space: nowrap; }
+    .partner-btn:hover { background: #b91c1c; }
+
+    /* ==========================================================================
+       취업 포털 스타일 표준 이력서·자소서 서식 갤러리 다운로드 허브
+       ========================================================================== */
+    .resume-center-wrap { margin-top: 25px; margin-bottom: 25px; }
+    .section-header-box { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 14px; flex-wrap: wrap; gap: 10px; }
+    .section-header-box h2 { font-size: 1.25rem; font-weight: 900; color: #0f172a; letter-spacing: -0.02em; }
+    .section-header-box p { font-size: 0.85rem; color: var(--text-muted); margin-top: 2px; }
+
+    .filter-pills { display: flex; gap: 5px; flex-wrap: wrap; }
+    .filter-pill {
+      padding: 4px 10px; font-size: 0.8rem; font-weight: 700; border-radius: 20px;
+      border: 1.5px solid var(--border); background: #fff; cursor: pointer; color: var(--text-muted); transition: 0.2s;
     }
-    .counter-item span { color: var(--primary); font-size: 1.15rem; font-weight: 800; }
+    .filter-pill.active, .filter-pill:hover { background: #0f172a; color: #fff; border-color: #0f172a; }
 
-    /* Top AdSense Banner */
-    .banner-slot { margin: 2rem 0; padding: 1.25rem; background: #fff; border: 1px solid var(--border); border-radius: var(--radius); text-align: center; }
-    .banner-title { font-size: 0.75rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
-
-    /* Main Grid Layout */
-    .editor-layout { display: grid; grid-template-columns: 1.65fr 1fr; gap: 2rem; align-items: start; }
-    @media (max-width: 900px) { .editor-layout { grid-template-columns: 1fr; } }
-
-    /* Cards */
-    .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.75rem; box-shadow: var(--shadow); }
-
-    /* Multi-tab System */
-    .tab-header { display: flex; gap: 0.4rem; border-bottom: 1px solid var(--border); padding-bottom: 0.75rem; margin-bottom: 1rem; overflow-x: auto; }
-    .tab-btn {
-      padding: 0.5rem 0.9rem; font-size: 0.85rem; font-weight: 700; border-radius: 6px; border: 1px solid var(--border);
-      background: #f8fafc; color: var(--text-muted); cursor: pointer; white-space: nowrap; transition: 0.2s;
+    .template-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
     }
-    .tab-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
-    .tab-add { background: #e2e8f0; color: var(--secondary); border: none; padding: 0.5rem 0.8rem; border-radius: 6px; cursor: pointer; font-weight: 800; }
+    @media (max-width: 1024px) { .template-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .template-grid { grid-template-columns: 1fr; } }
 
-    /* Textarea & Toolbar */
-    .editor-title-input {
-      width: 100%; padding: 0.65rem 0.85rem; border: 1px solid var(--border); border-radius: 6px;
-      font-size: 0.92rem; font-weight: 700; margin-bottom: 0.75rem; outline: none;
+    .tmpl-card {
+      background: var(--card-bg); border: 2px solid var(--border); border-radius: 10px;
+      overflow: hidden; box-shadow: var(--shadow-sm); transition: transform 0.2s, box-shadow 0.2s;
+      display: flex; flex-direction: column;
     }
-    .editor-title-input:focus { border-color: var(--primary); }
+    .tmpl-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--primary); }
 
-    textarea {
-      width: 100%; height: 420px; padding: 1.1rem; border: 1px solid var(--border); border-radius: 8px;
-      font-size: 0.98rem; font-family: inherit; line-height: 1.75; resize: vertical; outline: none;
-      transition: border-color 0.2s; background: #fff;
+    .tmpl-preview-box {
+      background: #f1f5f9; padding: 14px; height: 180px; display: flex; flex-direction: column;
+      justify-content: center; align-items: center; border-bottom: 1.5px solid var(--border); position: relative;
     }
-    textarea:focus { border-color: var(--primary); }
-
-    .tool-bar { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; align-items: center; }
-    .btn {
-      padding: 0.55rem 0.9rem; font-size: 0.85rem; font-weight: 600; border-radius: 6px; cursor: pointer;
-      border: 1px solid var(--border); background: #f8fafc; color: var(--secondary); transition: all 0.2s;
+    .doc-mini-sheet {
+      width: 110px; height: 145px; background: #ffffff; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.12);
+      border-radius: 3px; padding: 7px; display: flex; flex-direction: column; gap: 4px;
     }
-    .btn:hover { background: #e2e8f0; }
-    .btn-primary { background: var(--primary); color: #fff; border-color: var(--primary); }
-    .btn-primary:hover { background: var(--primary-hover); }
-    .btn-danger { background: #fef2f2; color: #dc2626; border-color: #fecaca; }
-    .btn-danger:hover { background: #fee2e2; }
+    .doc-line-hdr { height: 8px; background: #cbd5e1; border-radius: 2px; width: 60%; }
+    .doc-line-hdr.blue { background: #60a5fa; }
+    .doc-line-hdr.green { background: #34d399; }
+    .doc-grid-mini { display: grid; grid-template-columns: 30px 1fr; gap: 4px; margin-top: 2px; }
+    .doc-pic-box { height: 35px; background: #e2e8f0; border-radius: 2px; }
+    .doc-col-lines { display: flex; flex-direction: column; gap: 3px; }
+    .doc-line-sub { height: 5px; background: #e2e8f0; border-radius: 2px; width: 100%; }
+    .doc-table-mini { border: 1px solid #e2e8f0; border-radius: 2px; height: 32px; margin-top: 3px; display: flex; flex-direction: column; justify-content: space-around; padding: 2px; }
+    .doc-tbl-row { height: 3px; background: #f1f5f9; border-radius: 1px; }
 
-    /* Right Column: Statistics & Inspection */
-    .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; margin-bottom: 1.25rem; }
-    .stat-box { background: #f8fafc; border: 1px solid var(--border); border-radius: 8px; padding: 1rem; text-align: center; }
-    .stat-box.highlight-blue { background: #eff6ff; border-color: #bfdbfe; }
-    .stat-box.highlight-purple { background: #faf5ff; border-color: #e9d5ff; }
-    .stat-label { font-size: 0.8rem; font-weight: 700; color: var(--text-muted); }
-    .stat-val { font-size: 1.8rem; font-weight: 900; color: var(--primary); margin: 0.2rem 0; }
-    .stat-sub { font-size: 0.75rem; color: #64748b; }
-
-    /* Target Limit Progress Bar */
-    .limit-container { margin: 1.25rem 0; padding: 1rem; background: #f8fafc; border: 1px solid var(--border); border-radius: 8px; }
-    .limit-header { display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 700; margin-bottom: 0.5rem; }
-    .progress-bar-bg { width: 100%; height: 8px; background: #e2e8f0; border-radius: 4px; overflow: hidden; }
-    .progress-bar-fill { height: 100%; width: 0%; background: var(--primary); transition: width 0.2s, background-color 0.2s; }
-
-    /* Inspection Alert Panels */
-    .inspection-panel { margin-top: 1.25rem; }
-    .alert-box { padding: 0.9rem 1rem; border-radius: 8px; font-size: 0.85rem; margin-top: 0.75rem; line-height: 1.5; }
-    .alert-warn { background: #fef2f2; border: 1px solid #fecaca; color: #991b1b; }
-    .alert-ok { background: #f0fdf4; border: 1px solid #bbf7d0; color: #166534; }
-    .alert-info { background: #eff6ff; border: 1px solid #bfdbfe; color: #1e40af; }
-
-    /* Affiliate Affiliate Slots */
-    .affiliate-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 1.5rem; }
-    .aff-card {
-      background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 1rem; text-align: center;
-      transition: transform 0.15s, box-shadow 0.15s;
+    .tmpl-badge {
+      position: absolute; top: 8px; left: 8px; font-size: 0.7rem; font-weight: 800;
+      padding: 2px 6px; border-radius: 4px; background: rgba(15, 23, 42, 0.85); color: #fff;
     }
-    .aff-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
-    .aff-btn {
-      display: inline-block; padding: 0.5rem 1rem; font-size: 0.85rem; font-weight: 700; border-radius: 6px;
-      color: #fff; margin-top: 0.5rem;
+
+    .tmpl-info-box { padding: 12px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between; }
+    .tmpl-title { font-size: 0.92rem; font-weight: 800; color: #0f172a; margin-bottom: 3px; }
+    .tmpl-desc { font-size: 0.78rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 8px; }
+    .tmpl-tags { display: flex; gap: 4px; margin-bottom: 10px; flex-wrap: wrap; }
+    .tmpl-tag { font-size: 0.7rem; background: #f1f5f9; color: #475569; padding: 2px 5px; border-radius: 4px; font-weight: 700; }
+    .tmpl-down-btn {
+      width: 100%; padding: 7px; background: var(--primary); color: #fff; border: none; border-radius: 6px;
+      font-size: 0.82rem; font-weight: 800; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 4px;
+      transition: background 0.2s;
     }
-    .aff-coupang { background: #ef4444; }
-    .aff-cardbenefit { background: #059669; }
+    .tmpl-down-btn:hover { background: var(--primary-hover); }
 
-    /* SEO Rich Article (2,500+ Words Guide) */
-    .seo-article { margin-top: 3.5rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 2.5rem; }
-    .seo-article h2 { font-size: 1.5rem; font-weight: 800; color: var(--secondary); margin-bottom: 1.25rem; border-left: 5px solid var(--primary); padding-left: 0.75rem; }
-    .seo-article h3 { font-size: 1.2rem; font-weight: 700; color: var(--secondary); margin: 1.8rem 0 0.8rem; }
-    .seo-article p { font-size: 0.98rem; color: #334155; margin-bottom: 1.2rem; line-height: 1.8; text-align: justify; }
-    .seo-article ul, .seo-article ol { margin-left: 1.5rem; margin-bottom: 1.2rem; color: #334155; font-size: 0.95rem; }
-    .seo-article li { margin-bottom: 0.5rem; }
+    .sidebar-widget { background: #ffffff; border: 2px solid var(--border); border-radius: 12px; padding: 18px; margin-bottom: 18px; box-shadow: var(--shadow-sm); }
+    .widget-title { font-size: 1.05rem; font-weight: 800; color: #0f172a; margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between; }
 
-    .data-table-wrap { overflow-x: auto; margin: 1.5rem 0; }
-    .data-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem; }
-    .data-table th, .data-table td { padding: 0.85rem 1rem; border: 1px solid var(--border); }
-    .data-table th { background: #f1f5f9; color: var(--secondary); font-weight: 700; }
-    .data-table tr:hover { background: #f8fafc; }
+    .timer-card { background: #eff6ff; border: 2px solid #93c5fd; border-radius: 10px; padding: 12px; text-align: center; margin-bottom: 10px; }
+    .timer-badge { display: inline-block; font-size: 0.72rem; font-weight: 800; background: var(--primary); color: #fff; padding: 2px 6px; border-radius: 4px; margin-bottom: 3px; }
+    .timer-company { font-size: 0.95rem; font-weight: 800; color: #0f172a; }
+    .timer-deadline-text { font-size: 0.75rem; color: #64748b; margin-top: 1px; }
+    .timer-countdown { font-size: 1.35rem; font-weight: 900; color: var(--primary); letter-spacing: 0.5px; margin-top: 3px; font-family: monospace; }
 
-    /* FAQ Section */
-    .faq-item { margin-bottom: 1rem; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
-    .faq-q { background: #f8fafc; padding: 1rem 1.25rem; font-weight: 700; font-size: 0.98rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-    .faq-a { padding: 1.25rem; font-size: 0.92rem; color: #334155; background: #fff; border-top: 1px solid var(--border); }
+    .custom-timer-form { background: #f8fafc; border: 1.5px dashed var(--border-dark); border-radius: 8px; padding: 10px; margin-top: 10px; font-size: 0.82rem; }
+    .custom-timer-form input { width: 100%; padding: 6px 8px; border: 1px solid var(--border); border-radius: 4px; margin-bottom: 6px; font-size: 0.82rem; }
+    .btn-custom-timer { width: 100%; background: #0f172a; color: #fff; border: none; padding: 6px; border-radius: 4px; font-weight: 800; cursor: pointer; }
+    .btn-custom-timer:hover { background: #334155; }
 
-    /* Footer */
-    footer { background: #0f172a; color: #94a3b8; padding: 3rem 1.25rem; margin-top: 4rem; font-size: 0.88rem; }
-    .footer-wrap { max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; }
-    @media (max-width: 768px) { .footer-wrap { grid-template-columns: 1fr; } }
-    .footer-links a { color: #cbd5e1; margin-right: 1rem; text-decoration: underline; }
+    .official-hub-list { display: flex; flex-direction: column; gap: 8px; }
+    .official-hub-item { display: flex; justify-content: space-between; align-items: center; padding: 10px 12px; background: #f8fafc; border: 1.5px solid var(--border); border-radius: 6px; text-decoration: none; color: #0f172a; font-size: 0.88rem; font-weight: 700; transition: background 0.2s; }
+    .official-hub-item:hover { background: #eff6ff; border-color: var(--primary); color: var(--primary); }
+    .official-hub-tag { font-size: 0.75rem; padding: 2px 6px; border-radius: 4px; background: #e2e8f0; color: #475569; }
+
+    .prompt-chip-list { display: flex; flex-direction: column; gap: 8px; }
+    .prompt-chip { background: #f8fafc; border: 1.5px solid var(--border); border-radius: 8px; padding: 10px 12px; text-align: left; cursor: pointer; transition: all 0.2s; }
+    .prompt-chip:hover { border-color: var(--primary); background: #eff6ff; }
+    .prompt-chip strong { display: block; font-size: 0.88rem; color: #0f172a; margin-bottom: 2px; }
+    .prompt-chip span { font-size: 0.78rem; color: var(--text-muted); }
+
+    .accordion-item { border: 1.5px solid var(--border); border-radius: 8px; margin-bottom: 8px; background: #ffffff; overflow: hidden; }
+    .accordion-header { padding: 12px 14px; background: #f8fafc; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 800; font-size: 0.92rem; color: #0f172a; }
+    .accordion-body { padding: 14px; display: none; border-top: 1.5px solid var(--border); font-size: 0.88rem; color: #334155; line-height: 1.7; }
+    .accordion-item.active .accordion-body { display: block; }
+    .accordion-arrow { font-size: 0.8rem; transition: transform 0.2s; }
+    .accordion-item.active .accordion-arrow { transform: rotate(180deg); }
+
+    .floating-box { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 8px; z-index: 100; }
+    .btn-float { width: 44px; height: 44px; border-radius: 50%; background: #0f172a; color: #ffffff; border: 2px solid #ffffff; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+    .btn-float:hover { background: var(--primary); }
+
+    .toast-msg { position: fixed; top: 20px; left: 50%; transform: translateX(-50%); background: #0f172a; color: #ffffff; padding: 8px 18px; border-radius: 30px; font-size: 0.88rem; font-weight: 800; z-index: 300; display: none; box-shadow: var(--shadow-md); }
+
+    footer { background: #ffffff; border-top: 2px solid var(--border); padding: 24px 20px; font-size: 0.82rem; color: var(--text-muted); line-height: 1.8; text-align: center; }
+    .footer-links { display: flex; justify-content: center; gap: 14px; margin-bottom: 8px; }
+    .footer-links a { color: var(--primary); text-decoration: none; font-weight: 700; }
+    .crawler-legal-text { font-size: 0.78rem; color: #64748b; margin-top: 10px; line-height: 1.6; }
+
+    .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 200; align-items: center; justify-content: center; padding: 20px; }
+    .modal-content { background: #fff; max-width: 620px; width: 100%; max-height: 80vh; overflow-y: auto; border-radius: 12px; border: 2px solid var(--border-dark); padding: 24px; position: relative; }
+    .modal-close { position: absolute; top: 14px; right: 14px; cursor: pointer; font-size: 1.3rem; font-weight: bold; }
+
+    @media (max-width: 1024px) {
+      .dashboard-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .header-inner { flex-direction: column; gap: 10px; }
+      nav { width: 100%; overflow-x: auto; white-space: nowrap; justify-content: flex-start; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .real-stat-bar { flex-direction: column; align-items: flex-start; }
+    }
+
+    @media print {
+      body { background: #fff; padding: 0; }
+      header, nav, .real-stat-bar, .tab-nav, .question-tabs, .target-bar-wrap, .editor-toolbar, .stats-grid, .total-summary-bar, .alert-panel, .partner-banner, .resume-center-wrap, .dashboard-grid > div:last-child, .floating-box, footer, #resumeText { display: none !important; }
+      .dashboard-grid { display: block; }
+      .card { border: none; padding: 0; }
+      .print-header { display: block !important; margin-bottom: 20px; border-bottom: 2px solid #000; padding-bottom: 10px; }
+      .print-content { display: block !important; font-size: 11pt; line-height: 1.8; white-space: pre-wrap; font-family: "Batang", serif; }
+    }
+    .print-header, .print-content { display: none; }
   </style>
 </head>
 <body>
 
+  <div id="toast" class="toast-msg"></div>
+
   <!-- Global Header & 5-Menu Navigation -->
   <header>
-    <div class="nav-container">
-      <a href="index.html" class="brand">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>
-        ByteCheck
-      </a>
+    <div class="header-inner">
+      <a href="index.html" class="brand"><span>⚡</span> ByteCheck</a>
       <nav>
-        <ul class="nav-links">
-          <li><a href="index.html" class="active">자소서 바이트 계산기</a></li>
-          <li><a href="salary.html">2026 연봉 계산기</a></li>
-          <li><a href="dday.html">어학 만료 D-Day</a></li>
-          <li><a href="point-calc.html">공기업 가산점 계산기</a></li>
-          <li><a href="convert.html">어학 점수 변환기</a></li>
-        </ul>
+        <a href="index.html" class="active">자소서 바이트 계산기</a>
+        <a href="salary.html">2026 연봉 계산기</a>
+        <a href="dday.html">어학 만료 D-Day</a>
+        <a href="point-calc.html">공기업 가산점 계산기</a>
+        <a href="convert.html">어학 점수 변환기</a>
       </nav>
     </div>
   </header>
 
-  <div class="main-wrap">
-    <!-- Top Hero Section -->
-    <div class="hero-title">
-      <h1>대기업·공기업 자기소개서 바이트 계산기</h1>
-      <p>대기업(EUC-KR 2Byte) vs 공기업(UTF-8 3Byte) 실시간 정밀 연산 · 블라인드 감점어 마스킹 · 서식 클리너</p>
+  <div class="dashboard-container">
+    
+    <div class="print-header">
+      <h2 style="font-size: 18pt;">2026 입사지원 서류 최종 검증본</h2>
+      <p id="printDate" style="font-size: 10pt; color: #555; margin-top: 4px;">출력 일자: </p>
     </div>
 
-    <!-- Verified Live Real Visitor Counter Strip -->
-    <div class="counter-strip">
-      <div class="counter-item">오늘 방문자: <span id="today-visitors">...</span>명</div>
-      <div class="counter-item">누적 방문자: <span id="total-visitors">...</span>명</div>
-      <div class="counter-item" style="color: #059669; font-weight:700;">● 실시간 집계 연동 중</div>
+    <!-- 100% 정직한 실제 방문자 통계 바 (실제 410명 계승 + 한국 자정 00:00 자동 리셋) -->
+    <div class="real-stat-bar">
+      <div class="real-stat-group">
+        <div class="real-badge">
+          📅 오늘 실제 이용자: <strong id="todayRealVisitors">...</strong> 명
+        </div>
+        <div class="real-badge">
+          👥 누적 실제 방문자: <strong id="totalRealVisitors">...</strong> 명
+        </div>
+      </div>
+      <div class="real-guide-text">⚡ 공기업 UTF-8 3Byte 및 대기업 2Byte 실시간 정밀 연산 가동 중</div>
     </div>
 
-    <!-- Top AdSense Banner -->
-    <div class="banner-slot">
-      <div class="banner-title">SPONSORED</div>
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-6840623754388286"
-           data-ad-slot="1234567890"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    <div class="dashboard-grid">
+      
+      <!-- [좌측 메인 작업 영역] -->
+      <div>
+        
+        <main class="card card-highlight">
+          
+          <div class="tab-nav">
+            <button class="tab-btn active" onclick="switchMainTab('calculatorTab', this)">📝 자소서 바이트 계산 & 축약</button>
+            <button class="tab-btn" onclick="switchMainTab('cleanerTab', this)">✨ 서식 & 띄어쓰기 정밀 클리너</button>
+            <button class="tab-btn" onclick="switchMainTab('blindTab', this)">🛡️ 블라인드 감점어 자동 마스킹</button>
+          </div>
+
+          <!-- 탭 1: 자소서 메인 에디터 -->
+          <div id="calculatorTab" class="tab-content active">
+            <div class="question-tabs">
+              <button class="q-tab active" onclick="switchQuestionTab(1, this)">문항 1</button>
+              <button class="q-tab" onclick="switchQuestionTab(2, this)">문항 2</button>
+              <button class="q-tab" onclick="switchQuestionTab(3, this)">문항 3</button>
+              <button class="q-tab" onclick="switchQuestionTab(4, this)">문항 4</button>
+            </div>
+
+            <div class="target-bar-wrap">
+              <div class="target-row">
+                <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
+                  <span style="font-weight: 800; color: #0f172a;">🎯 목표:</span>
+                  <button class="target-btn" onclick="setTargetLength(500, this)">500자</button>
+                  <button class="target-btn" onclick="setTargetLength(700, this)">700자</button>
+                  <button class="target-btn active" onclick="setTargetLength(1000, this)">1,000자</button>
+                  <button class="target-btn" onclick="setTargetLength(1500, this)">1,500자</button>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <label style="font-size: 0.8rem; font-weight: 700; color: #475569; cursor: pointer;">
+                    <input type="checkbox" id="chkEnter2B" checked onchange="analyzeText()"> 줄바꿈(Enter) 2Byte 계산
+                  </label>
+                  <strong id="targetRatioLabel" style="color: var(--primary);">0%</strong> 
+                  <span id="targetStatusText" style="font-size: 0.8rem; color: var(--text-muted);">(0 / 1,000자)</span>
+                </div>
+              </div>
+              <div class="progress-track">
+                <div id="targetProgressFill" class="progress-fill"></div>
+              </div>
+            </div>
+
+            <div class="editor-toolbar">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span id="activePresetBadge" style="font-size: 0.78rem; font-weight: 800; background: #dbeafe; color: #1e40af; padding: 3px 8px; border-radius: 4px;">범용 모드</span>
+                <div class="font-ctrl">
+                  <button class="btn-font-sz" onclick="adjustFontSize(-1)" title="글자 작게">A-</button>
+                  <button class="btn-font-sz" onclick="adjustFontSize(1)" title="글자 크게">A+</button>
+                </div>
+                <span style="color: var(--success); font-weight: 700; font-size: 0.82rem;">● 로컬 자동 저장 (Ctrl+S)</span>
+              </div>
+              <div class="toolbar-actions">
+                <button class="btn-diet" onclick="autoDietText()">✂️ 바이트 다이어트</button>
+                <button id="btnRestoreDiet" class="btn-restore" onclick="restoreOriginalText()">↩️ 원본 복원</button>
+                <button class="btn-action-tool" onclick="copyFullResume()">📋 복사</button>
+                <button class="btn-action-tool" onclick="clearCurrentResume()">🗑️ 비우기</button>
+                <button class="btn-action-tool" onclick="printDoc()">📄 A4 출력</button>
+              </div>
+            </div>
+
+            <textarea id="resumeText" placeholder="자기소개서 문항이나 본문을 입력하세요. 글자수, 공백, 2Byte/3Byte가 실시간 연산되며 브라우저를 닫아도 안전 복구됩니다..."></textarea>
+            <div id="printArea" class="print-content"></div>
+
+            <div class="stats-grid">
+              <div class="stat-box">
+                <div class="stat-title">공백 포함</div>
+                <div class="stat-value" id="countWithSpace">0</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-title">공백 제외</div>
+                <div class="stat-value" id="countWithoutSpace">0</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-title">대기업 (2Byte)</div>
+                <div class="stat-value highlight" id="count2Byte">0 B</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-title">공기업 (3Byte)</div>
+                <div class="stat-value highlight" id="count3Byte">0 B</div>
+              </div>
+            </div>
+
+            <div class="total-summary-bar">
+              <span>📊 <strong>문항 1~4 전체 작성 합계:</strong></span>
+              <span>총 <strong id="totalAllChars">0</strong> 자 | 2Byte <strong id="totalAll2B">0 B</strong> | 3Byte <strong id="totalAll3B">0 B</strong></span>
+            </div>
+
+            <div class="alert-panel danger" id="warningBox">
+              <strong>⚠️ 블라인드 감점 단어 감지:</strong> <span id="warningWords"></span>
+            </div>
+            <div class="alert-panel warning" id="typoBox">
+              <strong>✍️ 맞춤법 주의 (클릭 시 자동 교정):</strong> <span id="typoWords"></span>
+            </div>
+          </div>
+
+          <!-- 탭 2: 서식 & 띄어쓰기 정밀 클리너 -->
+          <div id="cleanerTab" class="tab-content">
+            <div style="background: #f8fafc; border: 1.5px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 14px;">
+              <strong style="color: #0f172a; display: block; font-size: 0.95rem; margin-bottom: 6px;">✨ 불필요한 공백 및 문장부호 정밀 정리기</strong>
+              <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+                복사·붙여넣기 과정에서 생긴 다중 띄어쓰기(스페이스 2개 이상), 3줄 이상의 과도한 엔터 줄바꿈, 중복 마침표(..)를 원클릭으로 정리하여 글자수와 가독성을 개선합니다.
+              </p>
+              <div style="display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap;">
+                <button class="btn-action-tool" style="background: var(--primary); color: #fff; border: none; padding: 8px 14px; font-weight: 800;" onclick="cleanFormat('spaces')">다중 공백 1칸으로 정리</button>
+                <button class="btn-action-tool" style="background: var(--primary); color: #fff; border: none; padding: 8px 14px; font-weight: 800;" onclick="cleanFormat('lines')">연속 줄바꿈(엔터) 1회로 압축</button>
+                <button class="btn-action-tool" style="background: #0f172a; color: #fff; border: none; padding: 8px 14px; font-weight: 800;" onclick="cleanFormat('all')">원클릭 전체 서식 클리닝</button>
+              </div>
+            </div>
+            <p style="font-size: 0.82rem; color: var(--text-muted);">* 현재 작성 중인 [문항 <span id="currentQNumText">1</span>] 에디터의 텍스트에 즉시 적용됩니다.</p>
+          </div>
+
+          <!-- 탭 3: 블라인드 감점어 자동 마스킹 -->
+          <div id="blindTab" class="tab-content">
+            <div style="background: #fef2f2; border: 1.5px solid #fca5a5; border-radius: 8px; padding: 16px; margin-bottom: 14px;">
+              <strong style="color: #991b1b; display: block; font-size: 0.95rem; margin-bottom: 6px;">🛡️ 고용노동부 블라인드 위반어 자동 안전 치환</strong>
+              <p style="font-size: 0.85rem; color: #7f1d1d; line-height: 1.6;">
+                자소서에 기재된 대학교명, 가족 호칭(부모님 등), 출신 지역명을 공공기관 공인 심사 기준에 맞는 안전한 표현으로 일괄 변환합니다.
+              </p>
+              <button class="btn-action-tool" style="background: #dc2626; color: #fff; border: none; padding: 8px 16px; font-weight: 800; margin-top: 10px;" onclick="maskBlindKeywords()">🛡️ 블라인드 감점어 안전 표기로 일괄 치환</button>
+            </div>
+            <div style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;">
+              <strong>치환 예시:</strong> OO대학교 → <em>지방 소재 대학교</em> | 부모님/아버지 → <em>가족</em> | 서울/경상도 → <em>해당 지역</em>
+            </div>
+          </div>
+
+        </main>
+
+        <div class="partner-banner">
+          <div>
+            <strong style="font-size: 0.98rem; color: #0f172a;">📚 2026 NCS 기출문제집 & 대기업 인적성 수험서</strong>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 2px;">서류 합격 직후 필수 대비! 공기업·대기업 최신 필기서 특가</p>
+          </div>
+          <a href="https://www.coupang.com/np/search?component=&q=2026+NCS+기출문제집" target="_blank" rel="noopener noreferrer" class="partner-btn">교재 특가 확인 ↗</a>
+        </div>
+
+        <!-- ==========================================================================
+             취업 포털 스타일 표준 이력서·자소서 서식 갤러리 다운로드 허브
+             ========================================================================== -->
+        <section class="resume-center-wrap card" id="resumeGallerySection">
+          <div class="section-header-box">
+            <div>
+              <h2>📥 표준 이력서·자기소개서 무료 양식 갤러리</h2>
+              <p>취업 포털(사람인·잡코리아) 수준의 완성형 서식 8종. 사진 부착형, 경력형, 공기업 블라인드 표준 규격 지원</p>
+            </div>
+            <div class="filter-pills">
+              <button type="button" class="filter-pill active" onclick="filterTemplates('all', this)">전체보기</button>
+              <button type="button" class="filter-pill" onclick="filterTemplates('new', this)">신입/인턴</button>
+              <button type="button" class="filter-pill" onclick="filterTemplates('career', this)">경력직</button>
+              <button type="button" class="filter-pill" onclick="filterTemplates('blind', this)">공기업/블라인드</button>
+            </div>
+          </div>
+
+          <div class="template-grid" id="template-card-container">
+            
+            <!-- Template 1: 신입 표준 기본형 -->
+            <div class="tmpl-card" data-category="new">
+              <div class="tmpl-preview-box">
+                <span class="tmpl-badge">신입 BEST</span>
+                <div class="doc-mini-sheet">
+                  <div class="doc-line-hdr blue"></div>
+                  <div class="doc-grid-mini">
+                    <div class="doc-pic-box"></div>
+                    <div class="doc-col-lines">
+                      <div class="doc-line-sub"></div>
+                      <div class="doc-line-sub"></div>
+                      <div class="doc-line-sub"></div>
+                    </div>
+                  </div>
+                  <div class="doc-table-mini">
+                    <div class="doc-tbl-row"></div>
+                    <div class="doc-tbl-row"></div>
+                    <div class="doc-tbl-row"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tmpl-info-box">
+                <div>
+                  <div class="tmpl-title">신입 표준 입사지원서</div>
+                  <div class="tmpl-desc">사진 부착란, 기본 인적사항, 학력, 자격사항, 어학, 자소서 문항 정석 서식</div>
+                  <div class="tmpl-tags">
+                    <span class="tmpl-tag">신입</span>
+                    <span class="tmpl-tag">인턴</span>
+                    <span class="tmpl-tag">워드(.doc)</span>
+                  </div>
+                </div>
+                <button type="button" class="tmpl-down-btn" onclick="downloadTemplate('basic_new')">
+                  📥 무료 다운로드
+                </button>
+              </div>
+            </div>
+
+            <!-- Template 2: 경력직 상세 기술형 -->
+            <div class="tmpl-card" data-category="career">
+              <div class="tmpl-preview-box">
+                <span class="tmpl-badge" style="background:#0284c7;">경력 추천</span>
+                <div class="doc-mini-sheet">
+                  <div class="doc-line-hdr"></div>
+                  <div class="doc-table-mini" style="height: 50px;">
+                    <div class="doc-tbl-row" style="background:#bfdbfe;"></div>
+                    <div class="doc-tbl-row"></div>
+                    <div class="doc-tbl-row"></div>
+                    <div class="doc-tbl-row"></div>
+                  </div>
+                  <div class="doc-table-mini" style="height: 30px; margin-top:2px;">
+                    <div class="doc-tbl-row"></div>
+                    <div class="doc-tbl-row"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tmpl-info-box">
+                <div>
+                  <div class="tmpl-title">경력직 상세 경력기술서</div>
+                  <div class="tmpl-desc">프로젝트 성과, 담당 역할, 기여도, 보유 기술 스택을 표 형태로 강조하는 경력자 특화 양식</div>
+                  <div class="tmpl-tags">
+                    <span class="tmpl-tag">경력직</span>
+                    <span class="tmpl-tag">이직</span>
+                    <span class="tmpl-tag">성과중심</span>
+                  </div>
+                </div>
+                <button type="button" class="tmpl-down-btn" onclick="downloadTemplate('career_detail')">
+                  📥 무료 다운로드
+                </button>
+              </div>
+            </div>
+
+            <!-- Template 3: 공기업 블라인드 표준형 -->
+            <div class="tmpl-card" data-category="blind">
+              <div class="tmpl-preview-box">
+                <span class="tmpl-badge" style="background:#059669;">공기업 표준</span>
+                <div class="doc-mini-sheet">
+                  <div class="doc-line-hdr green"></div>
+                  <div style="font-size:7px; color:#94a3b8; margin: 3px 0 1px;">(사진/학벌/성별/나이 비공개)</div>
+                  <div class="doc-table-mini" style="height: 55px;">
+                    <div class="doc-tbl-row" style="background:#a7f3d0;"></div>
+                    <div class="doc-tbl-row"></div>
+                    <div class="doc-tbl-row"></div>
+                    <div class="doc-tbl-row"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tmpl-info-box">
+                <div>
+                  <div class="tmpl-title">공기업 NCS 블라인드 표준형</div>
+                  <div class="tmpl-desc">사진·학벌·성별란 전면 배제. 직무기술서 기반 교육사항, 직무자격, 직무경험 중심 법정 규격</div>
+                  <div class="tmpl-tags">
+                    <span class="tmpl-tag">공기업</span>
+                    <span class="tmpl-tag">블라인드</span>
+                    <span class="tmpl-tag">공공기관</span>
+                  </div>
+                </div>
+                <button type="button" class="tmpl-down-btn" onclick="downloadTemplate('public_blind')">
+                  📥 무료 다운로드
+                </button>
+              </div>
+            </div>
+
+            <!-- Template 4: 모던 심플 비즈니스형 -->
+            <div class="tmpl-card" data-category="new">
+              <div class="tmpl-preview-box">
+                <span class="tmpl-badge" style="background:#7c3aed;">스타트업/IT</span>
+                <div class="doc-mini-sheet">
+                  <div style="background:#7c3aed; height:14px; border-radius:2px; margin-bottom:3px;"></div>
+                  <div class="doc-col-lines">
+                    <div class="doc-line-sub" style="width:80%;"></div>
+                    <div class="doc-line-sub" style="width:60%;"></div>
+                  </div>
+                  <div class="doc-table-mini" style="height:35px; margin-top:4px;">
+                    <div class="doc-tbl-row"></div>
+                    <div class="doc-tbl-row"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tmpl-info-box">
+                <div>
+                  <div class="tmpl-title">모던 심플 비즈니스형</div>
+                  <div class="tmpl-desc">세련된 상단 컬러 바와 간결한 그리드 레이아웃. IT, 기획, 마케팅, 스타트업 서류에 최적화</div>
+                  <div class="tmpl-tags">
+                    <span class="tmpl-tag">모던</span>
+                    <span class="tmpl-tag">IT·마케팅</span>
+                    <span class="tmpl-tag">자유양식</span>
+                  </div>
+                </div>
+                <button type="button" class="tmpl-down-btn" onclick="downloadTemplate('modern_simple')">
+                  📥 무료 다운로드
+                </button>
+              </div>
+            </div>
+
+            <!-- Template 5: 2단 분할 포트폴리오형 -->
+            <div class="tmpl-card" data-category="career">
+              <div class="tmpl-preview-box">
+                <span class="tmpl-badge">2단 레이아웃</span>
+                <div class="doc-mini-sheet" style="flex-direction:row; gap:3px;">
+                  <div style="width:35%; background:#f1f5f9; height:100%; border-radius:2px; padding:2px; display:flex; flex-direction:column; gap:3px;">
+                    <div class="doc-pic-box" style="height:25px;"></div>
+                    <div class="doc-line-sub"></div>
+                    <div class="doc-line-sub"></div>
+                  </div>
+                  <div style="width:65%; height:100%; display:flex; flex-direction:column; gap:3px;">
+                    <div class="doc-line-hdr blue" style="width:90%;"></div>
+                    <div class="doc-line-sub"></div>
+                    <div class="doc-table-mini" style="height:40px;">
+                      <div class="doc-tbl-row"></div>
+                      <div class="doc-tbl-row"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tmpl-info-box">
+                <div>
+                  <div class="tmpl-title">좌우 2단 분할 포트폴리오형</div>
+                  <div class="tmpl-desc">좌측엔 인적사항 및 핵심 스킬 요약, 우측엔 상세 학력/경력/자소서를 배치한 가독성 중심 서식</div>
+                  <div class="tmpl-tags">
+                    <span class="tmpl-tag">2단분할</span>
+                    <span class="tmpl-tag">디자인</span>
+                    <span class="tmpl-tag">개발자</span>
+                  </div>
+                </div>
+                <button type="button" class="tmpl-down-btn" onclick="downloadTemplate('two_column')">
+                  📥 무료 다운로드
+                </button>
+              </div>
+            </div>
+
+            <!-- Template 6: 사무·행정 클래식 표 서식 -->
+            <div class="tmpl-card" data-category="new">
+              <div class="tmpl-preview-box">
+                <span class="tmpl-badge">행정/총무</span>
+                <div class="doc-mini-sheet">
+                  <div class="doc-line-hdr" style="margin:0 auto 3px auto; text-align:center;"></div>
+                  <div class="doc-table-mini" style="height:75px;">
+                    <div class="doc-tbl-row" style="background:#e2e8f0;"></div>
+                    <div class="doc-tbl-row"></div>
+                    <div class="doc-tbl-row"></div>
+                    <div class="doc-tbl-row"></div>
+                    <div class="doc-tbl-row"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tmpl-info-box">
+                <div>
+                  <div class="tmpl-title">사무·행정 표준 표(Table) 서식</div>
+                  <div class="tmpl-desc">전통적이고 정돈된 바둑판형 테이블. 보수적인 기업문화나 중소·중견기업 입사지원에 가장 무난한 서식</div>
+                  <div class="tmpl-tags">
+                    <span class="tmpl-tag">사무직</span>
+                    <span class="tmpl-tag">기본표형</span>
+                    <span class="tmpl-tag">한글호환</span>
+                  </div>
+                </div>
+                <button type="button" class="tmpl-down-btn" onclick="downloadTemplate('classic_table')">
+                  📥 무료 다운로드
+                </button>
+              </div>
+            </div>
+
+            <!-- Template 7: 영문 이력서 (English Resume) -->
+            <div class="tmpl-card" data-category="career">
+              <div class="tmpl-preview-box">
+                <span class="tmpl-badge" style="background:#475569;">외국계/글로벌</span>
+                <div class="doc-mini-sheet">
+                  <div class="doc-line-hdr" style="width:40%; height:10px; margin-bottom:3px;"></div>
+                  <div class="doc-line-sub" style="width:90%;"></div>
+                  <div style="height:1px; background:#cbd5e1; margin:3px 0;"></div>
+                  <div class="doc-col-lines">
+                    <div class="doc-line-sub" style="width:70%; font-weight:bold;"></div>
+                    <div class="doc-line-sub" style="width:100%;"></div>
+                    <div class="doc-line-sub" style="width:85%;"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tmpl-info-box">
+                <div>
+                  <div class="tmpl-title">영문 이력서 (English Resume)</div>
+                  <div class="tmpl-desc">Education, Experience, Skills, Awards 순서의 글로벌 스탠다드 레주메 1페이지 서식</div>
+                  <div class="tmpl-tags">
+                    <span class="tmpl-tag">외국계</span>
+                    <span class="tmpl-tag">영문CV</span>
+                    <span class="tmpl-tag">글로벌</span>
+                  </div>
+                </div>
+                <button type="button" class="tmpl-down-btn" onclick="downloadTemplate('english_resume')">
+                  📥 무료 다운로드
+                </button>
+              </div>
+            </div>
+
+            <!-- Template 8: 공공기관 직무수행계획서 -->
+            <div class="tmpl-card" data-category="blind">
+              <div class="tmpl-preview-box">
+                <span class="tmpl-badge" style="background:#059669;">직무수행계획서</span>
+                <div class="doc-mini-sheet">
+                  <div class="doc-line-hdr green" style="width:70%; margin:0 auto 4px auto;"></div>
+                  <div class="doc-table-mini" style="height:30px;">
+                    <div class="doc-tbl-row"></div>
+                    <div class="doc-tbl-row"></div>
+                  </div>
+                  <div class="doc-col-lines" style="margin-top:4px;">
+                    <div class="doc-line-sub"></div>
+                    <div class="doc-line-sub"></div>
+                    <div class="doc-line-sub"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tmpl-info-box">
+                <div>
+                  <div class="tmpl-title">공기업 직무수행계획서 표준형</div>
+                  <div class="tmpl-desc">직무 이해도, 정책 목표, 추진 전략, 세부 추진 계획, 기대효과가 체계적으로 수납된 전문 서식</div>
+                  <div class="tmpl-tags">
+                    <span class="tmpl-tag">공기업</span>
+                    <span class="tmpl-tag">직무수행</span>
+                    <span class="tmpl-tag">경력직</span>
+                  </div>
+                </div>
+                <button type="button" class="tmpl-down-btn" onclick="downloadTemplate('job_plan')">
+                  📥 무료 다운로드
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <div class="card">
+          <div style="font-size: 1.05rem; font-weight: 800; margin-bottom: 12px; color: #0f172a;">💡 공인 사실(Fact) 기반 취업 가이드라인</div>
+          <div class="accordion-item active">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <span>1. 고용노동부 공인 블라인드 채용 감점 및 부적격 판정 기준</span>
+              <span class="accordion-arrow">▲</span>
+            </div>
+            <div class="accordion-body">
+              공공기관 운영에 관한 법률 및 정부 블라인드 가이드라인에 따라 다음 항목은 자기소개서 기재 시 <strong>서류 감점 또는 즉각 부적격(탈락)</strong> 처리됩니다.<br><br>
+              - <strong>인적 사항 유추:</strong> 출신 학교명(대학교, 대학원, 고등학교명 직접 명시 금지), 출신 지역(고향, 시·군·구 명시 금지)<br>
+              - <strong>가족 관계 및 배경:</strong> 부모 및 친인척의 성명, 직업, 직장명, 사회적 지위 언급 일체 금지<br>
+              - <strong>올바른 대체 표기:</strong> "OO대학교 전자공학과" → "지방 소재 국립대 전자공학 전공", "아버지가 공무원으로..." → "책임을 중시하는 가정환경에서 자라..."
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <span>2. 삼성(EUC-KR) vs 공기업(UTF-8) 전산망 바이트 규격 총정리</span>
+              <span class="accordion-arrow">▼</span>
+            </div>
+            <div class="accordion-body">
+              - <strong>삼성그룹 (EUC-KR 2Byte):</strong> 한글 1자=2B, 영문/공백=1B, 줄바꿈(Enter)=2B로 인식합니다. 1,000자 제한 문항은 통상 2,000 Byte 제한과 동일합니다.<br>
+              - <strong>한국전력공사 등 공공기관 (UTF-8 3Byte):</strong> 현대 웹 표준 인코딩을 채택하여 한글 1자=3B로 계산됩니다. 700자 문항은 2,100 Byte로 연산됩니다.<br>
+              - <strong>현대자동차/SK 등:</strong> 바이트가 아닌 '순수 글자수(공백 포함)'를 기준으로 마감하므로 자소서 에디터의 '공백 포함' 수치를 최우선으로 맞춰야 합니다.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- [우측 실시간 취준 라운지 & 사이드바] -->
+      <div>
+        
+        <div class="sidebar-widget">
+          <div class="widget-title">
+            <span>⏰ 내 목표 기업 마감 타이머</span>
+            <span style="font-size: 0.75rem; color: var(--danger); font-weight: 800;">D-DAY</span>
+          </div>
+
+          <div id="customTimerArea" style="display: none;"></div>
+
+          <div class="custom-timer-form">
+            <strong style="color: #0f172a; display: block; margin-bottom: 6px;">🎯 공채 마감일 직접 등록</strong>
+            <input type="text" id="myCompName" placeholder="기업명 (예: 현대자동차)" maxlength="15">
+            <input type="datetime-local" id="myCompDate">
+            <button class="btn-custom-timer" onclick="saveCustomTimer()">타이머 등록 및 실시간 가동</button>
+          </div>
+        </div>
+
+        <div class="sidebar-widget">
+          <div class="widget-title">
+            <span>🌐 공식 실시간 채용 포털 허브</span>
+          </div>
+          <div class="official-hub-list">
+            <a href="https://job.alio.go.kr" target="_blank" rel="noopener noreferrer" class="official-hub-item">
+              <span>🏛️ 잡알리오 공공기관 채용관</span>
+              <span class="official-hub-tag">공공기관 100%</span>
+            </a>
+            <a href="https://www.work.go.kr" target="_blank" rel="noopener noreferrer" class="official-hub-item">
+              <span>📜 고용노동부 워크넷 공채관</span>
+              <span class="official-hub-tag">정부 공인</span>
+            </a>
+            <a href="https://www.samsungcareers.com" target="_blank" rel="noopener noreferrer" class="official-hub-item">
+              <span>🏢 삼성커리어스 공식 채용관</span>
+              <span class="official-hub-tag">삼성 공채</span>
+            </a>
+            <a href="https://talent.hyundai.com" target="_blank" rel="noopener noreferrer" class="official-hub-item">
+              <span>🚗 현대자동차 공식 채용포털</span>
+              <span class="official-hub-tag">현대차 공채</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="sidebar-widget">
+          <div class="widget-title">
+            <span>🏢 기업별 빈출 문항 템플릿</span>
+          </div>
+          <div class="prompt-chip-list">
+            <div class="prompt-chip" onclick="loadCompanyPrompt('samsung')">
+              <strong>삼성그룹</strong>
+              <span>EUC-KR (2B) • 문항당 1,000자 • 4대 문항 자동 세팅</span>
+            </div>
+            <div class="prompt-chip" onclick="loadCompanyPrompt('hyundai')">
+              <strong>현대자동차</strong>
+              <span>글자수 엄격 • 공백포함 글자수 기준 템플릿</span>
+            </div>
+            <div class="prompt-chip" onclick="loadCompanyPrompt('kepco')">
+              <strong>한국전력공사</strong>
+              <span>UTF-8 (3B) • NCS 직무역량 기반 4개 문항</span>
+            </div>
+            <div class="prompt-chip" onclick="loadCompanyPrompt('nhis')">
+              <strong>국민건강보험공단</strong>
+              <span>UTF-8 (3B) • 직업윤리 및 대인관계 문항</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-widget" style="text-align: center;">
+          <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-muted); margin-bottom: 4px;">전 세계 실시간 누적 이용자</div>
+          <div style="font-size: 1.4rem; font-weight: 900; color: var(--primary);"><span id="sidebarTotalVisitors">...</span> 명</div>
+        </div>
+
+      </div>
+
     </div>
 
-    <!-- Editor & Analysis Layout -->
-    <div class="editor-layout">
-      <!-- Left: Editor & Action Controls -->
-      <div class="card">
-        <!-- Multi-tab for questions -->
-        <div class="tab-header">
-          <button type="button" class="tab-btn active" onclick="selectTab(0)">문항 1</button>
-          <button type="button" class="tab-btn" onclick="selectTab(1)">문항 2</button>
-          <button type="button" class="tab-btn" onclick="selectTab(2)">문항 3</button>
-          <button type="button" class="tab-btn" onclick="selectTab(3)">문항 4</button>
-        </div>
+  </div>
 
-        <input type="text" id="tab-title" class="editor-title-input" placeholder="문항 제목을 입력하세요 (예: 1. 지원동기 및 입사 후 포부)">
-        <textarea id="resume-text" placeholder="자기소개서 문항 내용 또는 작성 중인 초안을 여기에 붙여넣으세요... (브라우저 로컬 저장소에 자동 저장됩니다)"></textarea>
+  <div class="floating-box">
+    <button class="btn-float" onclick="shareSite()" title="단톡방 공유">🔗</button>
+    <button class="btn-float" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="맨 위로">⬆</button>
+  </div>
 
-        <!-- Tool bar actions -->
-        <div class="tool-bar">
-          <label style="font-size: 0.85rem; font-weight: 700; display: flex; align-items: center; gap: 0.35rem; cursor: pointer; margin-right: 0.5rem; color: #334155;">
-            <input type="checkbox" id="opt-crlf" checked> 줄바꿈 2Byte 계산 (윈도우/CRLF 대비)
-          </label>
-          <button type="button" class="btn" onclick="cleanFormatting()">서식 클리너(다중공백/특수문자)</button>
-          <button type="button" class="btn" onclick="runInspection()">블라인드 감점어 검사</button>
-          <button type="button" class="btn btn-primary" onclick="downloadWordDoc()">표준 Word(.doc) 다운로드</button>
-          <button type="button" class="btn btn-danger" onclick="clearCurrentTab()">내용 비우기</button>
-        </div>
-
-        <!-- Inspection Results Panel -->
-        <div class="inspection-panel">
-          <div id="blind-alert-box" class="alert-box alert-ok" style="display: none;"></div>
-          <div id="spell-alert-box" class="alert-box alert-info" style="display: none;"></div>
-        </div>
-      </div>
-
-      <!-- Right: Live Statistics & Metrics -->
-      <div class="card">
-        <h2 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 1rem; color: var(--secondary);">실시간 분량 분석 지표</h2>
-
-        <div class="stat-grid">
-          <div class="stat-box">
-            <div class="stat-label">공백 포함 글자수</div>
-            <div class="stat-val" id="cnt-char-with-sp">0</div>
-            <div class="stat-sub">자 (띄어쓰기 포함)</div>
-          </div>
-          <div class="stat-box">
-            <div class="stat-label">공백 제외 글자수</div>
-            <div class="stat-val" id="cnt-char-no-sp">0</div>
-            <div class="stat-sub">자 (순수 텍스트)</div>
-          </div>
-          <div class="stat-box highlight-blue">
-            <div class="stat-label">대기업 (EUC-KR)</div>
-            <div class="stat-val" id="cnt-byte-euckr" style="color: #0284c7;">0</div>
-            <div class="stat-sub">한글 2Byte / 영숫자 1Byte</div>
-          </div>
-          <div class="stat-box highlight-purple">
-            <div class="stat-label">공기업 (UTF-8)</div>
-            <div class="stat-val" id="cnt-byte-utf8" style="color: #7c3aed;">0</div>
-            <div class="stat-sub">한글 3Byte / 영숫자 1Byte</div>
-          </div>
-        </div>
-
-        <!-- Target Limit Monitor -->
-        <div class="limit-container">
-          <div class="limit-header">
-            <span>목표 제한 모니터링:</span>
-            <select id="target-mode" style="padding: 2px 6px; font-size: 0.8rem; border-radius: 4px; border: 1px solid var(--border);">
-              <option value="char_with">글자수 (공백포함)</option>
-              <option value="euckr">대기업 바이트 (EUC-KR)</option>
-              <option value="utf8">공기업 바이트 (UTF-8)</option>
-            </select>
-          </div>
-          <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
-            <input type="number" id="target-limit-val" value="1000" step="100" style="width: 100px; padding: 4px 8px; font-size: 0.85rem; border: 1px solid var(--border); border-radius: 4px;">
-            <span style="font-size: 0.85rem; color: #64748b;">기준 달성률: <strong id="progress-percent-txt">0%</strong></span>
-          </div>
-          <div class="progress-bar-bg">
-            <div class="progress-bar-fill" id="progress-fill"></div>
-          </div>
-        </div>
-
-        <!-- Detail Breakdown Box -->
-        <div style="background: #f8fafc; border-radius: 8px; padding: 1rem; font-size: 0.85rem; border: 1px solid var(--border); margin-top: 1rem;">
-          <div style="font-weight: 700; margin-bottom: 0.4rem; color: var(--secondary);">세부 구성 명세</div>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; color: #475569;">
-            <div>줄 수(Line): <strong id="cnt-lines">0</strong></div>
-            <div>단어 수(Word): <strong id="cnt-words">0</strong></div>
-            <div>공백(Space): <strong id="cnt-spaces">0</strong></div>
-            <div>한글 글자수: <strong id="cnt-korean">0</strong></div>
-            <div>영문/숫자: <strong id="cnt-english">0</strong></div>
-            <div>문장부호/특수문자: <strong id="cnt-symbols">0</strong></div>
-          </div>
-        </div>
-
-        <!-- Affiliate / Partner Boxes -->
-        <div class="affiliate-grid">
-          <div class="aff-card">
-            <div style="font-size: 0.75rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">취업 필수 교재 특가전</div>
-            <div style="font-size: 0.88rem; font-weight: 700; margin: 0.3rem 0;">2026 NCS 기출문제집 & 대기업 면접 합격 노트</div>
-            <a href="https://link.coupang.com" target="_blank" rel="noopener noreferrer" class="aff-btn aff-coupang">쿠팡 최저가 보기 &rarr;</a>
-          </div>
-          <div class="aff-card">
-            <div style="font-size: 0.75rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">직장인·취준생 금융 혜택</div>
-            <div style="font-size: 0.88rem; font-weight: 700; margin: 0.3rem 0;">취업준비생 응시료 캐시백 & 생활비 체크카드 혜택</div>
-            <a href="https://www.moneytreecard.com" target="_blank" rel="noopener noreferrer" class="aff-btn aff-cardbenefit">머니트리카드 혜택 확인 &rarr;</a>
-          </div>
-        </div>
-      </div>
+  <footer>
+    <div class="footer-links">
+      <a href="javascript:void(0)" onclick="openModal('terms')">이용약관</a>
+      <span>|</span>
+      <a href="javascript:void(0)" onclick="openModal('privacy')">개인정보처리방침</a>
+      <span>|</span>
+      <a href="javascript:void(0)" onclick="openModal('disclaimer')">면책조항</a>
+      <span>|</span>
+      <a href="javascript:void(0)" onclick="openModal('contact')">문의하기</a>
     </div>
+    <p>본 사이트에서 제공하는 계산 및 서식, 채용 관련 정보는 참고용이며 법적 효력이 없습니다.</p>
+    <p class="crawler-legal-text">
+      <strong>개인정보 보호 정책 요약:</strong> ByteCheck는 이용자의 회원가입을 요구하지 않으며 어떠한 개인정보나 자기소개서 원문도 자체 서버에 수집·저장하지 않습니다. 모든 텍스트는 이용자의 기기(로컬 브라우저)에만 안전하게 임시 보관됩니다. | 문의: official.bytecheck@gmail.com
+    </p>
+    <p style="margin-top: 6px;">© 2026 ByteCheck Global. All rights reserved.</p>
+  </footer>
 
-    <!-- SEO Rich Text: 2,500+ Words Guide for Search Robots & Job Seekers -->
-    <article class="seo-article">
-      <h2>대기업(EUC-KR) vs 공기업(UTF-8) 자기소개서 바이트 체계 정밀 가이드</h2>
-      <p>
-        채용 시장에서 수험생들이 가장 빈번하게 겪는 비극 중 하나는 마감 시각 5분을 남겨두고 공들여 작성한 자기소개서를 채용 사이트에 붙여넣었을 때 발생하는 '입력 글자수 초과' 팝업입니다. 워드나 한글 문서 프로그램에서는 분명히 1,000자로 계산되었던 문장이 채용 사이트에서는 1,003자 혹은 수십 바이트 초과로 인식되어 문장이 강제로 잘려 나가거나 최종 제출이 거부되는 현상입니다. 이러한 불일치는 웹 브라우저, 서버 운영체제(OS), 그리고 데이터베이스가 사용하는 '문자 인코딩(Encoding)'과 '줄바꿈(Newline)' 규격의 차이에서 비롯됩니다.
-      </p>
-
-      <h3>1. 문자 인코딩 규격별 바이트 계산 원리</h3>
-      <p>
-        컴퓨터는 모든 문자를 0과 1로 이루어진 바이너리 데이터로 인식합니다. 영문 알파벳과 숫자, 기본 기호는 1963년에 제정된 ASCII 표준에 따라 글자당 1바이트(Byte)로 고정 처리되지만, 한글이나 한자와 같은 동아시아 다국어 문자는 시스템 인코딩 체계에 따라 차지하는 바이트 용량이 근본적으로 달라집니다.
-      </p>
-
-      <div class="data-table-wrap">
-        <table class="data-table">
-          <thead>
-            <tr>
-              <th>인코딩 규격</th>
-              <th>대표 채용 사이트</th>
-              <th>한글 1자 용량</th>
-              <th>영문/숫자/기본공백</th>
-              <th>특징 및 시스템 배경</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>EUC-KR / CP949</strong></td>
-              <td>삼성그룹, 현대자동차, SK그룹 등 주요 민간 대기업</td>
-              <td><strong>2 Byte</strong></td>
-              <td>1 Byte</td>
-              <td>윈도우 레거시 시스템 및 오라클 DB 환경에서 완성형 2,350자 표현</td>
-            </tr>
-            <tr>
-              <td><strong>UTF-8</strong></td>
-              <td>한국전력공사, 코레일, 건보, 한국토지주택공사 등 공공기관</td>
-              <td><strong>3 Byte</strong></td>
-              <td>1 Byte</td>
-              <td>유니코드 국제 표준 웹 규격. 전 세계 모든 언어를 3~4바이트로 처리</td>
-            </tr>
-            <tr>
-              <td><strong>순수 글자수(Count)</strong></td>
-              <td>네이버, 카카오, 주요 IT 스타트업 및 플랫폼 기업</td>
-              <td>1 글자 단위 카운트</td>
-              <td>1 글자 단위 카운트</td>
-              <td>바이트 용량이 아닌 공백 포함/제외 순수 문자 수 기준 적용</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h3>2. 엔터(줄바꿈) 계산의 함정: LF(1Byte) vs CRLF(2Byte)</h3>
-      <p>
-        바이트 계산기 이용 시 반드시 주의해야 할 기술적 변수는 '엔터(개행)'의 처리 방식입니다. 사용자가 줄바꿈을 할 때 웹 브라우저의 기본 자바스크립트는 라인 피드(Line Feed, `\n`) 하나만을 생성하여 1바이트로 인식합니다. 하지만 마이크로소프트 윈도우 기반 서버나 전통적인 관계형 데이터베이스(RDBMS) 환경에서는 캐리지 리턴(Carriage Return, `\r`)과 라인 피드(`\n`)가 결합된 `\r\n` 규격을 사용하여 줄바꿈 1회당 정확히 2바이트를 소비합니다. 문단 구분을 위해 엔터를 10번 사용했다면, 사용자 컴퓨터에서는 10바이트로 보이던 것이 채용 서버 전송 시 20바이트로 팽창하게 됩니다. ByteCheck가 기본값으로 제공하는 '줄바꿈 2Byte 계산' 옵션은 이러한 서버 측 팽창을 사전에 방어해 줍니다.
-      </p>
-
-      <h3>3. 2026 공공기관 블라인드 채용 감점 키워드 필터링 원칙</h3>
-      <p>
-        정부 가이드라인에 따른 공공기관 및 지방공기업 채용에서는 공정성을 해치는 인적 사항 기재를 엄격히 금지합니다. 자기소개서 내용 중 지원자의 학벌(대학교 및 대학원 명칭), 부모나 친인척의 직업과 직위, 출신 지역, 성별, 연령을 유추할 수 있는 특정 표현이 단 한 번이라도 등장하면 서류 심사위원에게 블라인드 마스킹 처리되거나 정량 감점, 심할 경우 부적격 탈락 처리가 내려집니다. 따라서 공기업 제출 직전에는 출신 대학교 약칭(예: 연대, 고대, 성대 등)뿐만 아니라 가족의 사회적 지위(교수, 공무원 등)가 기술되지 않았는지 철저한 교차 검증을 진행해야 합니다.
-      </p>
-    </article>
-
-    <!-- FAQ Accordion Section -->
-    <div style="margin-top: 2rem;">
-      <h2 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 1rem; color: var(--secondary);">자주 묻는 질문 (FAQ)</h2>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          Q. 채용 공고에 '1000자 이내'라고만 적혀 있으면 공백을 포함하나요?
-          <span>+</span>
-        </div>
-        <div class="faq-a" style="display: none;">
-          특별한 별도 언급 없이 '1,000자 이내'로 명시된 경우 대부분의 입사지원 시스템은 <strong>띄어쓰기(공백)를 포함</strong>하여 산출합니다. 공백을 제외하는 시스템의 경우 반드시 문항 옆에 '(공백 제외)'라고 명기합니다. ByteCheck의 '공백 포함 글자수'를 기본 기준으로 삼는 것이 가장 안전합니다.
-        </div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          Q. 한글(HWP)이나 워드(Word)에서 복사해 붙여넣으면 바이트가 달라지는 이유는 무엇인가요?
-          <span>+</span>
-        </div>
-        <div class="faq-a" style="display: none;">
-          문서 작성 프로그램에서 작성한 텍스트에는 눈에 보이지 않는 제어문자(Zero-width space), 비표준 큰따옴표(’ “), 탭(Tab) 공백 등이 포함되어 있어 웹 브라우저 복사 시 바이트가 불필요하게 팽창합니다. 본 계산기의 '서식 클리너' 버튼을 클릭하면 불필요한 유령 공백과 제어문자가 깔끔하게 순수 텍스트로 정제됩니다.
-        </div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          Q. 표준 Word(.doc) 서식 다운로드 기능은 어떤 형식으로 저장되나요?
-          <span>+</span>
-        </div>
-        <div class="faq-a" style="display: none;">
-          현재 작성 중인 문항 제목과 본문 내용을 마이크로소프트 워드 표준 MIME 규격에 맞추어 깔끔한 여백과 가독성 높은 폰트 서식이 적용된 `.doc` 파일로 즉시 생성하여 다운로드합니다. 포트폴리오 보관 및 오프라인 제출용으로 바로 활용하실 수 있습니다.
-        </div>
-      </div>
-    </div>
-
-    <!-- Bottom AdSense Slot -->
-    <div class="banner-slot" style="margin-top: 3rem;">
-      <div class="banner-title">SPONSORED</div>
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-6840623754388286"
-           data-ad-slot="9876543210"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  <div id="legalModal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeModal()">&times;</span>
+      <h3 id="modalTitle" style="font-size: 1.15rem; font-weight: 800; margin-bottom: 12px; color: #0f172a;"></h3>
+      <div id="modalBody" style="font-size: 0.88rem; color: #334155; line-height: 1.7; white-space: pre-wrap;"></div>
     </div>
   </div>
 
-  <!-- Global Footer -->
-  <footer>
-    <div class="footer-wrap">
-      <div>
-        <h4 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem;">ByteCheck (바이트체크)</h4>
-        <p>취준생 및 직장인을 위한 정밀 자소서 바이트 계산기, 연봉 계산기, 공기업 가산점 및 어학 환산 유틸리티 플랫폼.</p>
-        <p style="margin-top: 0.5rem; font-size: 0.8rem; color: #64748b;">본 플랫폼의 모든 계산 알고리즘은 2026년도 최신 웹 표준 인코딩 및 주요 공기업/대기업 채용 공고를 기준으로 실시간 동작합니다.</p>
-      </div>
-      <div>
-        <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 0.5rem;">빠른 바로가기</h4>
-        <div class="footer-links" style="display: flex; flex-direction: column; gap: 0.3rem;">
-          <a href="index.html">자소서 바이트 계산기</a>
-          <a href="salary.html">2026 연봉 실수령액 계산기</a>
-          <a href="dday.html">어학 만료 D-Day 계산기</a>
-          <a href="point-calc.html">공기업 가산점 계산기</a>
-          <a href="convert.html">어학 점수 상호 변환기</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Core JavaScript: Honest Tracker, Tab Storage, Detailed Inspection, Byte Engines -->
   <script>
-    /* ==========================================================================
-       1. Honest & Real Live Visitor Counter (ByteCheck Global Tracker)
-       - Historical Base: 410
-       - Endpoint: abacus.jasoncameron.dev
-       - KST 00:00 midnight reset for today counter
-       - Strictly zero synthetic or fake random numbers
-       ========================================================================== */
-    async function trackHonestVisitor() {
-      const HISTORICAL_BASE = 410;
-      const todayElem = document.getElementById('today-visitors');
-      const totalElem = document.getElementById('total-visitors');
+    let currentQ = 1;
+    let targetLength = 1000;
+    let preDietBackupText = '';
+    let currentFontSize = 16;
 
-      const now = new Date();
-      const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
-      const kstDate = new Date(utc + (9 * 60 * 60 * 1000));
-      const yyyy = kstDate.getFullYear();
-      const mm = String(kstDate.getMonth() + 1).padStart(2, '0');
-      const dd = String(kstDate.getDate()).padStart(2, '0');
-      const todayKey = `${yyyy}${mm}${dd}`;
+    const textarea = document.getElementById('resumeText');
+    const countWithSpace = document.getElementById('countWithSpace');
+    const countWithoutSpace = document.getElementById('countWithoutSpace');
+    const count2Byte = document.getElementById('count2Byte');
+    const count3Byte = document.getElementById('count3Byte');
+    const targetProgressFill = document.getElementById('targetProgressFill');
+    const targetRatioLabel = document.getElementById('targetRatioLabel');
+    const targetStatusText = document.getElementById('targetStatusText');
+    const totalAllChars = document.getElementById('totalAllChars');
+    const totalAll2B = document.getElementById('totalAll2B');
+    const totalAll3B = document.getElementById('totalAll3B');
+    const btnRestoreDiet = document.getElementById('btnRestoreDiet');
+    const warningBox = document.getElementById('warningBox');
+    const warningWords = document.getElementById('warningWords');
+    const typoBox = document.getElementById('typoBox');
+    const typoWords = document.getElementById('typoWords');
+    const printArea = document.getElementById('printArea');
+    const activePresetBadge = document.getElementById('activePresetBadge');
 
-      const hasHit = sessionStorage.getItem('bc_session_active');
-      const action = hasHit ? 'get' : 'hit';
-
-      try {
-        const [totalRes, todayRes] = await Promise.all([
-          fetch(`https://abacus.jasoncameron.dev/${action}/bytechecktool.com/total_real`),
-          fetch(`https://abacus.jasoncameron.dev/${action}/bytechecktool.com/today_${todayKey}`)
-        ]);
-
-        if (totalRes.ok && todayRes.ok) {
-          const totalData = await totalRes.json();
-          const todayData = await todayRes.json();
-
-          const honestTotal = HISTORICAL_BASE + (totalData.value || 0);
-          const honestToday = todayData.value || 0;
-
-          if (totalElem) totalElem.textContent = honestTotal.toLocaleString();
-          if (todayElem) todayElem.textContent = honestToday.toLocaleString();
-
-          sessionStorage.setItem('bc_session_active', 'true');
-        } else {
-          fallbackDisplay();
-        }
-      } catch (err) {
-        fallbackDisplay();
-      }
-
-      function fallbackDisplay() {
-        if (totalElem && totalElem.textContent === '...') totalElem.textContent = (HISTORICAL_BASE).toLocaleString();
-        if (todayElem && todayElem.textContent === '...') todayElem.textContent = '1';
-      }
-    }
-
-    /* ==========================================================================
-       2. Multi-tab & LocalStorage Persistence System
-       ========================================================================== */
-    let currentTabIndex = 0;
-    const STORAGE_KEY = 'bytecheck_resume_data_v2';
-
-    function loadSavedTabs() {
-      const raw = localStorage.getItem(STORAGE_KEY);
-      if (raw) {
-        try {
-          return JSON.parse(raw);
-        } catch (e) {
-          console.error(e);
-        }
-      }
-      return [
-        { title: '1. 지원동기 및 입사 후 포부', text: '' },
-        { title: '2. 직무 관련 역량 및 프로젝트 경험', text: '' },
-        { title: '3. 공동의 목표를 달성한 협업 경험', text: '' },
-        { title: '4. 어려움을 극복한 문제해결 사례', text: '' }
-      ];
-    }
-
-    let tabData = loadSavedTabs();
-
-    function saveCurrentTab() {
-      tabData[currentTabIndex].title = document.getElementById('tab-title').value;
-      tabData[currentTabIndex].text = document.getElementById('resume-text').value;
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(tabData));
-    }
-
-    function selectTab(index) {
-      saveCurrentTab();
-      currentTabIndex = index;
-
-      const buttons = document.querySelectorAll('.tab-btn');
-      buttons.forEach((btn, idx) => {
-        if (idx === index) btn.classList.add('active');
-        else btn.classList.remove('active');
-      });
-
-      document.getElementById('tab-title').value = tabData[index].title || '';
-      document.getElementById('resume-text').value = tabData[index].text || '';
-      updateMetrics();
-      hideInspectionAlerts();
-    }
-
-    function clearCurrentTab() {
-      if (confirm('현재 문항의 내용을 모두 삭제하시겠습니까?')) {
-        document.getElementById('resume-text').value = '';
-        saveCurrentTab();
-        updateMetrics();
-        hideInspectionAlerts();
-      }
-    }
-
-    /* ==========================================================================
-       3. Precision Metrics & Byte Calculation Engine
-       ========================================================================== */
-    function updateMetrics() {
-      const text = document.getElementById('resume-text').value;
-      const crlf = document.getElementById('opt-crlf').checked;
-
-      // 1. Basic Characters
-      const charWithSp = text.length;
-      const charNoSp = text.replace(/\s/g, '').length;
-
-      // 2. Lines, Words, Spaces
-      const lines = text ? text.split('\n').length : 0;
-      const words = text.trim() ? text.trim().split(/\s+/).length : 0;
-      const spaces = (text.match(/ /g) || []).length;
-
-      // 3. Detailed Character Typings
-      let koreanCount = 0;
-      let englishCount = 0;
-      let symbolCount = 0;
-
-      // 4. Precision Bytes Calculation
-      let byteEuckr = 0;
-      let byteUtf8 = 0;
-
-      for (let i = 0; i < text.length; i++) {
-        const ch = text[i];
-        const code = text.charCodeAt(i);
-
-        if (ch === '\n') {
-          const nl = crlf ? 2 : 1;
-          byteEuckr += nl;
-          byteUtf8 += nl;
-        } else if (code >= 0xAC00 && code <= 0xD7A3) {
-          // Hangul Syllables
-          koreanCount++;
-          byteEuckr += 2;
-          byteUtf8 += 3;
-        } else if ((code >= 0x3131 && code <= 0x318E) || (code >= 0x1100 && code <= 0x11FF)) {
-          // Hangul Jamo
-          koreanCount++;
-          byteEuckr += 2;
-          byteUtf8 += 3;
-        } else if ((code >= 0x0041 && code <= 0x005A) || (code >= 0x0061 && code <= 0x007A) || (code >= 0x0030 && code <= 0x0039)) {
-          // Alphabet & Numbers
-          englishCount++;
-          byteEuckr += 1;
-          byteUtf8 += 1;
-        } else if (code <= 0x007F) {
-          // Basic ASCII symbols & spaces
-          symbolCount++;
-          byteEuckr += 1;
-          byteUtf8 += 1;
-        } else if (code <= 0x07FF) {
-          symbolCount++;
-          byteEuckr += 2;
-          byteUtf8 += 2;
-        } else if (code <= 0xFFFF) {
-          symbolCount++;
-          byteEuckr += 2;
-          byteUtf8 += 3;
-        } else {
-          symbolCount++;
-          byteEuckr += 2;
-          byteUtf8 += 4;
-        }
-      }
-
-      // Update Metric Displays
-      document.getElementById('cnt-char-with-sp').textContent = charWithSp.toLocaleString();
-      document.getElementById('cnt-char-no-sp').textContent = charNoSp.toLocaleString();
-      document.getElementById('cnt-byte-euckr').textContent = byteEuckr.toLocaleString();
-      document.getElementById('cnt-byte-utf8').textContent = byteUtf8.toLocaleString();
-
-      document.getElementById('cnt-lines').textContent = lines.toLocaleString();
-      document.getElementById('cnt-words').textContent = words.toLocaleString();
-      document.getElementById('cnt-spaces').textContent = spaces.toLocaleString();
-      document.getElementById('cnt-korean').textContent = koreanCount.toLocaleString();
-      document.getElementById('cnt-english').textContent = englishCount.toLocaleString();
-      document.getElementById('cnt-symbols').textContent = symbolCount.toLocaleString();
-
-      // Target Limit Calculation
-      updateTargetMonitor(charWithSp, byteEuckr, byteUtf8);
-    }
-
-    function updateTargetMonitor(charWithSp, byteEuckr, byteUtf8) {
-      const mode = document.getElementById('target-mode').value;
-      const limit = parseInt(document.getElementById('target-limit-val').value, 10) || 1000;
-
-      let currentVal = charWithSp;
-      if (mode === 'euckr') currentVal = byteEuckr;
-      if (mode === 'utf8') currentVal = byteUtf8;
-
-      const percent = Math.min(100, Math.round((currentVal / limit) * 100));
-      const fillBar = document.getElementById('progress-fill');
-      const textElem = document.getElementById('progress-percent-txt');
-
-      textElem.textContent = `${percent}% (${currentVal.toLocaleString()} / ${limit.toLocaleString()})`;
-      fillBar.style.width = `${percent}%`;
-
-      if (currentVal > limit) {
-        fillBar.style.backgroundColor = '#ef4444'; // Red (Over limit)
-        textElem.style.color = '#ef4444';
-      } else if (percent >= 90) {
-        fillBar.style.backgroundColor = '#f59e0b'; // Amber (Almost there)
-        textElem.style.color = '#d97706';
-      } else {
-        fillBar.style.backgroundColor = '#2563eb'; // Blue normal
-        textElem.style.color = '#2563eb';
-      }
-    }
-
-    /* ==========================================================================
-       4. Comprehensive Blind Deduction Keyword Dictionary (100+ Keywords)
-       ========================================================================== */
-    const BLIND_DICTIONARY = [
-      // Major Universities (Full & Short terms)
-      '서울대', '연세대', '고려대', '서강대', '성균관대', '한양대', '중앙대', '경희대', '한국외대', '시립대',
-      '이화여대', '숙명여대', '건국대', '동국대', '홍익대', '국민대', '숭실대', '세종대', '단국대', '카이스트',
-      '포항공대', '유니스트', '디지스트', '지스트', '부산대', '경북대', '전남대', '충남대', '충북대', '전북대',
-      '강원대', '제주대', '인하대', '아주대', '영남대', '동아대', '부경대', '금오공대', '조선대', '해양대',
-      '서울대학교', '연세대학교', '고려대학교', '성균관대학교', '한양대학교', '경북대학교', '부산대학교',
-      // Family & Social Status
-      '아버지', '어머니', '부모님', '아빠', '엄마', '외삼촌', '삼촌', '이모', '고모', '형', '누나', '오빠', '언니',
-      '할아버지', '할머니', '배우자', '남편', '아내', '자녀', '아들', '딸', '장남', '차남', '장녀',
-      // High-status / Influential Professions
-      '교수', '의사', '변호사', '검사', '판사', '공무원', '경찰', '장군', '장교', '국회의원', '장관', '시장',
-      '구청장', '회장', '대표이사', '사장', '임원', '고위공직자', '세무사', '회계사', '변리사', '병원장',
-      // Age & Gender specific terms
-      '군복무', '병역필', '만기전역', '육군', '해군', '공군', '해병대', '여성으로서', '남성으로서', '출산', '육아',
-      // Specific Hometown & Origin Regions
-      '고향', '출신지', '전라도', '경상도', '충청도', '강원도', '제주도', '호남', '영남', '서울 태생', '지방 출신'
+    const prohibitedKeywords = [
+      '아빠', '엄마', '아버지', '어머니', '부모님', '삼촌', '이모', '고모',
+      '서울대', '연세대', '고려대', '한양대', '성균관대', '경북대', '부산대', '전남대',
+      '외고', '과학고', '자사고', '고향', '출신지', '전라도', '경상도', '충청도', '강원도'
     ];
 
-    function runInspection() {
-      const text = document.getElementById('resume-text').value;
-      const blindBox = document.getElementById('blind-alert-box');
-      const spellBox = document.getElementById('spell-alert-box');
+    const commonTypos = [
+      { wrong: '됫', correct: '됐' },
+      { wrong: '되서', correct: '돼서' },
+      { wrong: '안되', correct: '안돼' },
+      { wrong: '몇일', correct: '며칠' },
+      { wrong: '바램', correct: '바람' },
+      { wrong: '어의없', correct: '어처구니없' }
+    ];
 
-      if (!text.trim()) {
-        alert('검사할 자기소개서 내용이 비어 있습니다.');
-        return;
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.innerText = msg;
+      t.style.display = 'block';
+      setTimeout(() => { t.style.display = 'none'; }, 2000);
+    }
+
+    function adjustFontSize(delta) {
+      currentFontSize = Math.max(13, Math.min(22, currentFontSize + delta));
+      textarea.style.fontSize = currentFontSize + 'px';
+      showToast(`폰트 크기: ${currentFontSize}px`);
+    }
+
+    function setTargetLength(val, btnEl) {
+      targetLength = val;
+      document.querySelectorAll('.target-btn').forEach(b => b.classList.remove('active'));
+      if (btnEl) btnEl.classList.add('active');
+      analyzeText();
+    }
+
+    function calcBytes(str) {
+      const enterAs2B = document.getElementById('chkEnter2B').checked;
+      let b2 = 0, b3 = 0;
+      for (let i = 0; i < str.length; i++) {
+        const c = str.charCodeAt(i);
+        if (c === 10) {
+          if (enterAs2B) {
+            b2 += 2;
+            b3 += 2;
+          } else {
+            b2 += 1;
+            b3 += 1;
+          }
+        } else if (c <= 0x007f) {
+          b2 += 1;
+          b3 += 1;
+        } else if (c <= 0x07ff) {
+          b2 += 2;
+          b3 += 2;
+        } else {
+          b2 += 2;
+          b3 += 3;
+        }
+      }
+      return { b2, b3 };
+    }
+
+    function analyzeText() {
+      const text = textarea.value;
+      localStorage.setItem(`bytecheck_q_${currentQ}`, text);
+
+      const lenWithSpace = text.length;
+      const lenWithoutSpace = text.replace(/\s/g, '').length;
+      const curBytes = calcBytes(text);
+
+      countWithSpace.innerText = lenWithSpace.toLocaleString();
+      countWithoutSpace.innerText = lenWithoutSpace.toLocaleString();
+      count2Byte.innerText = curBytes.b2.toLocaleString() + ' B';
+      count3Byte.innerText = curBytes.b3.toLocaleString() + ' B';
+
+      const ratio = Math.min(Math.round((lenWithSpace / targetLength) * 100), 100);
+      targetRatioLabel.innerText = `${Math.round((lenWithSpace / targetLength) * 100)}%`;
+      targetStatusText.innerText = `(${lenWithSpace.toLocaleString()} / ${targetLength.toLocaleString()}자)`;
+      targetProgressFill.style.width = `${ratio}%`;
+
+      if (lenWithSpace > targetLength) {
+        targetProgressFill.classList.add('over');
+        targetRatioLabel.style.color = 'var(--danger)';
+      } else {
+        targetProgressFill.classList.remove('over');
+        targetRatioLabel.style.color = 'var(--primary)';
       }
 
-      // 1. Blind Inspection
-      const detectedBlind = [];
-      BLIND_DICTIONARY.forEach(word => {
-        if (text.includes(word) && !detectedBlind.includes(word)) {
-          detectedBlind.push(word);
+      let grandLen = 0, grandB2 = 0, grandB3 = 0;
+      for (let q = 1; q <= 4; q++) {
+        const qText = (q === currentQ) ? text : (localStorage.getItem(`bytecheck_q_${q}`) || '');
+        grandLen += qText.length;
+        const qB = calcBytes(qText);
+        grandB2 += qB.b2;
+        grandB3 += qB.b3;
+      }
+      totalAllChars.innerText = grandLen.toLocaleString();
+      totalAll2B.innerText = grandB2.toLocaleString() + ' B';
+      totalAll3B.innerText = grandB3.toLocaleString() + ' B';
+
+      const detected = prohibitedKeywords.filter(k => text.includes(k));
+      if (detected.length > 0) {
+        warningBox.classList.add('active');
+        warningWords.innerText = detected.join(', ');
+      } else {
+        warningBox.classList.remove('active');
+      }
+
+      const detectedTypos = commonTypos.filter(item => text.includes(item.wrong));
+      if (detectedTypos.length > 0) {
+        typoBox.classList.add('active');
+        typoWords.innerHTML = detectedTypos.map(item => 
+          `<span><strong>${item.wrong}</strong> <button class="quick-fix-btn" onclick="fixTypo('${item.wrong}', '${item.correct}')">➡ '${item.correct}'(으)로 교정</button></span>`
+        ).join(' | ');
+      } else {
+        typoBox.classList.remove('active');
+      }
+    }
+
+    function fixTypo(wrong, correct) {
+      let t = textarea.value;
+      t = t.replaceAll(wrong, correct);
+      textarea.value = t;
+      analyzeText();
+      showToast(`'${wrong}'을(를) '${correct}'(으)로 일괄 교정했습니다.`);
+    }
+
+    function autoDietText() {
+      let t = textarea.value;
+      if (!t.trim()) { alert('축약할 자기소개서 내용을 먼저 입력해 주세요.'); return; }
+
+      preDietBackupText = t;
+      const dietRules = [
+        { from: /에 대하여/g, to: '에 대해' },
+        { from: /의 경우/g, to: '은' },
+        { from: /를 진행하였습니다/g, to: '를 수행했습니다' },
+        { from: /을 진행하였습니다/g, to: '을 수행했습니다' },
+        { from: /생각하고 있습니다/g, to: '생각합니다' },
+        { from: /할 수 있었습니다/g, to: '했습니다' },
+        { from: /다양한 /g, to: '' },
+        { from: /매우 /g, to: '' },
+        { from: /정말로 /g, to: '' }
+      ];
+
+      const beforeLen = t.length;
+      dietRules.forEach(rule => { t = t.replace(rule.from, rule.to); });
+      textarea.value = t;
+      analyzeText();
+
+      btnRestoreDiet.style.display = 'inline-block';
+      showToast(`✂️ 바이트 다이어트 완료: 총 ${beforeLen - t.length}자를 절감했습니다!`);
+    }
+
+    function restoreOriginalText() {
+      if (preDietBackupText) {
+        textarea.value = preDietBackupText;
+        analyzeText();
+        btnRestoreDiet.style.display = 'none';
+        showToast('↩️ 다이어트 이전 원본으로 복원되었습니다.');
+      }
+    }
+
+    function copyFullResume() {
+      if (!textarea.value.trim()) { alert('복사할 내용이 없습니다.'); return; }
+      navigator.clipboard.writeText(textarea.value);
+      showToast('📋 현재 문항 내용이 클립보드에 복사되었습니다!');
+    }
+
+    function clearCurrentResume() {
+      if (!textarea.value.trim()) return;
+      if (confirm('현재 문항 작성 내용을 모두 비우시겠습니까?')) {
+        textarea.value = '';
+        analyzeText();
+        showToast('🗑️ 내용이 비워졌습니다.');
+      }
+    }
+
+    function switchQuestionTab(qNum, btnEl) {
+      document.querySelectorAll('.q-tab').forEach(b => b.classList.remove('active'));
+      btnEl.classList.add('active');
+      currentQ = qNum;
+      document.getElementById('currentQNumText').innerText = currentQ;
+      textarea.value = localStorage.getItem(`bytecheck_q_${currentQ}`) || '';
+      btnRestoreDiet.style.display = 'none';
+      analyzeText();
+    }
+
+    function switchMainTab(tabId, btnEl) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      btnEl.classList.add('active');
+      document.getElementById(tabId).classList.add('active');
+    }
+
+    function cleanFormat(mode) {
+      let t = textarea.value;
+      if (!t.trim()) { alert('작성 중인 자소서 내용을 먼저 입력해 주세요.'); return; }
+
+      if (mode === 'spaces' || mode === 'all') {
+        t = t.replace(/[ \t]+/g, ' ');
+      }
+      if (mode === 'lines' || mode === 'all') {
+        t = t.replace(/\n{3,}/g, '\n\n');
+      }
+      textarea.value = t;
+      analyzeText();
+      showToast('✨ 텍스트 서식 및 공백 정리가 완료되었습니다!');
+    }
+
+    function maskBlindKeywords() {
+      let t = textarea.value;
+      if (!t.trim()) { alert('작성 중인 자소서 내용을 먼저 입력해 주세요.'); return; }
+
+      const maskRules = [
+        { from: /서울대|연세대|고려대|한양대|성균관대|경북대|부산대|전남대/g, to: '지방 소재 국립/사립 대학교' },
+        { from: /외고|과학고|자사고/g, to: '일반 고등학교' },
+        { from: /아빠|아버지|엄마|어머니|부모님/g, to: '가족' },
+        { from: /삼촌|이모|고모/g, to: '친인척' },
+        { from: /전라도|경상도|충청도|강원도/g, to: '해당 지역' }
+      ];
+
+      maskRules.forEach(rule => { t = t.replace(rule.from, rule.to); });
+      textarea.value = t;
+      analyzeText();
+      showToast('🛡️️ 블라인드 감점어가 안전한 표준 표현으로 치환되었습니다!');
+    }
+
+    function loadCompanyPrompt(company) {
+      const prompts = {
+        samsung: {
+          badge: "삼성그룹 (2B/1000자)",
+          target: 1000,
+          q1: "[취미/특기 및 존경인물 (각 40자, 100자)]\n- 취미/특기:\n- 존경인물 및 이유:\n\n[자기소개 문항 1]\n삼성전자를 지원한 이유와 입사 후 회사에서 이루고 싶은 꿈을 기술하십시오. (1,000자 이내)",
+          q2: "[자기소개 문항 2]\n본인의 성장과정을 간략히 기술하되 현재의 자신에게 가장 큰 영향을 끼친 사건, 인물 등을 포함하여 기술하십시오. (1,500자 이내)",
+          q3: "[자기소개 문항 3]\n최근 사회이슈 중 중요하다고 생각되는 한 가지를 선택하고 이에 관한 자신의 견해를 기술하십시오. (1,000자 이내)",
+          q4: "[자기소개 문항 4]\n지원 직무 관련 본인의 전공 역량 및 프로젝트 수행 경험을 기술하십시오. (1,000자 이내)"
+        },
+        hyundai: {
+          badge: "현대자동차 (글자수 엄격)",
+          target: 1000,
+          q1: "[현대자동차 문항 1]\n자신이 회사를 선택할 때의 기준과 현대자동차가 그 기준에 적합한 이유를 기술해 주십시오. (1,000자 이내)",
+          q2: "[현대자동차 문항 2]\n지원 직무와 관련된 본인의 핵심 역량과 이를 개발하기 위해 노력했던 경험을 구체적으로 서술해 주십시오. (1,000자 이내)",
+          q3: "[현대자동차 문항 3]\n도전적인 목표를 세우고 이를 달성하기 위해 끈기 있게 노력했던 경험을 기술해 주십시오. (1,000자 이내)",
+          q4: "[현대자동차 문항 4]\n조직 또는 팀의 목표를 달성하는 과정에서 발생한 갈등을 해결했던 경험을 기술해 주십시오. (1,000자 이내)"
+        },
+        kepco: {
+          badge: "한국전력공사 (UTF-8 3B)",
+          target: 700,
+          q1: "[한국전력공사 문항 1]\n한국전력공사의 4대 인재상 중 본인과 가장 부합하는 한 가지를 선택하여 그에 부합함을 입증할 수 있는 경험을 기술해 주십시오. (700자 / 2,100 Byte)",
+          q2: "[한국전력공사 문항 2]\n공동의 과업을 수행하는 과정에서 본인과 다른 의견을 가진 구성원과 원활하게 소통하여 합의를 이끌어낸 경험을 서술해 주십시오. (700자 / 2,100 Byte)",
+          q3: "[한국전력공사 문항 3]\n귀하가 지원한 직무와 관련하여 전문성을 확보하기 위해 기울인 노력과 이를 실무에 어떻게 적용할 수 있는지 기술해 주십시오. (700자 / 2,100 Byte)",
+          q4: "[한국전력공사 문항 4]\n원칙을 준수하며 공정하게 업무를 처리하여 타인에게 신뢰를 얻었던 경험을 구체적으로 기술해 주십시오. (700자 / 2,100 Byte)"
+        },
+        nhis: {
+          badge: "국민건강보험공단 (UTF-8 3B)",
+          target: 700,
+          q1: "[건보 문항 1]\n자신이 속한 조직이나 집단에서 원칙과 절차를 준수하여 공정하게 과업을 완수한 경험을 기술해 주십시오. (700자 / 2,100 Byte)",
+          q2: "[건보 문항 2]\n자신의 이익보다 공동의 목표를 우선시하여 헌신적으로 과업에 기여했던 경험을 서술해 주십시오. (700자 / 2,100 Byte)",
+          q3: "[건보 문항 3]\n예상치 못한 문제에 부딪혔을 때 문제의 원인을 다각도로 분석하여 해결한 사례를 기술해 주십시오. (700자 / 2,100 Byte)",
+          q4: "[건보 문항 4]\n다양한 배경을 가진 사람들과 원활히 소통하고 협력하여 긍정적인 결과를 도출한 경험을 기술해 주십시오. (700자 / 2,100 Byte)"
         }
+      };
+
+      const sel = prompts[company];
+      if (!sel) return;
+
+      if (confirm(`'${sel.badge}'의 실제 빈출 자소서 문항 1~4를 불러오시겠습니까? (기존 내용은 덮어씌워집니다)`)) {
+        localStorage.setItem('bytecheck_q_1', sel.q1);
+        localStorage.setItem('bytecheck_q_2', sel.q2);
+        localStorage.setItem('bytecheck_q_3', sel.q3);
+        localStorage.setItem('bytecheck_q_4', sel.q4);
+        activePresetBadge.innerText = sel.badge;
+        setTargetLength(sel.target);
+        textarea.value = sel.q1;
+        currentQ = 1;
+        document.getElementById('currentQNumText').innerText = '1';
+        document.querySelectorAll('.q-tab').forEach((b, idx) => {
+          if (idx === 0) b.classList.add('active'); else b.classList.remove('active');
+        });
+        analyzeText();
+        showToast(`✅ ${sel.badge} 4대 문항 세팅 완료!`);
+      }
+    }
+
+    function toggleAccordion(header) {
+      const item = header.parentElement;
+      const arrow = header.querySelector('.accordion-arrow');
+      const isActive = item.classList.contains('active');
+      
+      document.querySelectorAll('.accordion-item').forEach(el => {
+        el.classList.remove('active');
+        const a = el.querySelector('.accordion-arrow');
+        if (a) a.innerText = '▼';
       });
 
-      blindBox.style.display = 'block';
-      if (detectedBlind.length > 0) {
-        blindBox.className = 'alert-box alert-warn';
-        blindBox.innerHTML = `<strong>⚠️ 블라인드 감점 주의 키워드 (${detectedBlind.length}건 감지):</strong><br>
-          <span style="color:#b91c1c; font-weight:700;">[${detectedBlind.join(', ')}]</span><br>
-          공기업 및 공공기관 서류 제출 시 학벌, 친인척 직업, 성별, 출신지역 유추 단어는 서류 탈락 사유가 될 수 있습니다. 익명 표현(예: '지방 소재 국립대', '지인의 조언')으로 수정하세요.`;
-      } else {
-        blindBox.className = 'alert-box alert-ok';
-        blindBox.innerHTML = `<strong>✅ 블라인드 규정 준수:</strong> 학벌, 가족 직업, 출신지역 등 100+종 감점 키워드가 감지되지 않았습니다.`;
-      }
-
-      // 2. Formatting & Typing Habit Inspection
-      const habitWarnings = [];
-      if (/ {2,}/.test(text)) habitWarnings.push('연속된 2회 이상의 불필요한 다중 공백 존재');
-      if (/\n{3,}/.test(text)) habitWarnings.push('3회 이상의 과도한 연속 빈 줄(Enter)');
-      if (/[\u200B-\u200D\uFEFF]/.test(text)) habitWarnings.push('복사/붙여넣기 과정에서 유입된 유령 공백(Zero-width space)');
-      if (/[ㄱ-ㅎㅏ-ㅣ]/.test(text)) habitWarnings.push('완성되지 않은 자모음(예: ㅋㅋ, ㅠㅠ, ㅎㅎ)');
-
-      spellBox.style.display = 'block';
-      if (habitWarnings.length > 0) {
-        spellBox.className = 'alert-box alert-info';
-        spellBox.innerHTML = `<strong>💡 문장 서식 개선 제안 (${habitWarnings.length}건):</strong><br>
-          - ${habitWarnings.join('<br>- ')}<br>
-          <em>'서식 클리너' 버튼을 클릭하면 불필요한 공백과 특수문자가 원클릭으로 자동 정제됩니다.</em>`;
-      } else {
-        spellBox.className = 'alert-box alert-ok';
-        spellBox.innerHTML = `<strong>✅ 서식 상태 양호:</strong> 과도한 공백이나 유령 제어문자 없이 깔끔하게 정돈되어 있습니다.`;
+      if (!isActive) {
+        item.classList.add('active');
+        if (arrow) arrow.innerText = '▲';
       }
     }
 
-    function cleanFormatting() {
-      const area = document.getElementById('resume-text');
-      let val = area.value;
-      if (!val.trim()) return;
-
-      // 1. Remove Zero-width spaces
-      val = val.replace(/[\u200B-\u200D\uFEFF]/g, '');
-      // 2. Reduce multiple spaces/tabs to single space
-      val = val.replace(/[ \t]+/g, ' ');
-      // 3. Reduce 3+ newlines to double newline
-      val = val.replace(/\n{3,}/g, '\n\n');
-      // 4. Standardize quotes
-      val = val.replace(/[“”]/g, '"').replace(/[‘’]/g, "'");
-
-      area.value = val;
-      saveCurrentTab();
-      updateMetrics();
-      runInspection();
+    function formatRemain(targetDate) {
+      const now = new Date();
+      const diff = targetDate - now;
+      if (diff <= 0) return "접수 마감";
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = String(Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+      const m = String(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+      const s = String(Math.floor((diff % (1000 * 60)) / 1000)).padStart(2, '0');
+      return `${d}일 ${h}:${m}:${s}`;
     }
 
-    function hideInspectionAlerts() {
-      document.getElementById('blind-alert-box').style.display = 'none';
-      document.getElementById('spell-alert-box').style.display = 'none';
+    function saveCustomTimer() {
+      const name = document.getElementById('myCompName').value.trim();
+      const dateVal = document.getElementById('myCompDate').value;
+      if (!name || !dateVal) { alert('기업명과 마감 일시를 모두 입력해 주세요.'); return; }
+
+      const payload = { name: name, date: dateVal };
+      localStorage.setItem('bytecheck_custom_timer', JSON.stringify(payload));
+      renderCustomTimer();
+      showToast(`🎯 '${name}' 마감 타이머가 등록되었습니다!`);
+    }
+
+    function removeCustomTimer() {
+      localStorage.removeItem('bytecheck_custom_timer');
+      document.getElementById('customTimerArea').style.display = 'none';
+      showToast('맞춤 타이머가 삭제되었습니다.');
+    }
+
+    function renderCustomTimer() {
+      const customData = localStorage.getItem('bytecheck_custom_timer');
+      const area = document.getElementById('customTimerArea');
+      if (!customData || !area) return;
+
+      try {
+        const parsed = JSON.parse(customData);
+        area.innerHTML = `
+          <div class="timer-card" style="background: #eff6ff; border-color: #93c5fd; position: relative;">
+            <button onclick="removeCustomTimer()" style="position: absolute; top: 6px; right: 8px; border: none; background: transparent; cursor: pointer; font-size: 1rem; color: #64748b;" title="삭제">×</button>
+            <span class="timer-badge" style="background: #1d4ed8;">내 목표 기업</span>
+            <div class="timer-company">${parsed.name}</div>
+            <div class="timer-deadline-text">마감: ${parsed.date.replace('T', ' ')}</div>
+            <div class="timer-countdown" id="customTimerVal" style="color: #1d4ed8;">계산 중...</div>
+          </div>
+        `;
+        area.style.display = 'block';
+      } catch (e) {}
+    }
+
+    function startTimerTick() {
+      setInterval(() => {
+        const customData = localStorage.getItem('bytecheck_custom_timer');
+        if (customData) {
+          try {
+            const parsed = JSON.parse(customData);
+            const targetCustom = new Date(parsed.date);
+            const customTimerVal = document.getElementById('customTimerVal');
+            if (customTimerVal) customTimerVal.innerText = formatRemain(targetCustom);
+          } catch (e) {}
+        }
+      }, 1000);
+    }
+
+    // 🚀 [100% 정직한 서버 기반 실시간 카운터]
+    // 확인된 실제 누적 410명 계승 + 한국 자정(00:00) 오늘 방문자 자동 0 리셋
+    function trackHonestVisitor() {
+      const HISTORICAL_BASE = 410;
+
+      const now = new Date();
+      const kstFormatter = new Intl.DateTimeFormat('ko-KR', {
+        timeZone: 'Asia/Seoul',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit'
+      });
+      const parts = kstFormatter.formatToParts(now);
+      const y = parts.find(p => p.type === 'year').value;
+      const m = parts.find(p => p.type === 'month').value;
+      const d = parts.find(p => p.type === 'day').value;
+      const kstDayKey = `today_${y}${m}${d}`;
+
+      const elToday = document.getElementById('todayRealVisitors');
+      const elTotal = document.getElementById('totalRealVisitors');
+      const elSide = document.getElementById('sidebarTotalVisitors');
+
+      const isFirstSession = !sessionStorage.getItem('bc_session_active');
+      const action = isFirstSession ? 'hit' : 'get';
+
+      // 1. 누적 총 방문자 서버 통신 (실제 410명 + 새 방문자)
+      fetch(`https://abacus.jasoncameron.dev/${action}/bytechecktool.com/total_real`)
+        .then(res => res.json())
+        .then(data => {
+          if (data && typeof data.value === 'number') {
+            const finalTotal = HISTORICAL_BASE + data.value;
+            if (elTotal) elTotal.innerText = finalTotal.toLocaleString();
+            if (elSide) elSide.innerText = finalTotal.toLocaleString();
+          }
+        })
+        .catch(() => {
+          if (elTotal && elTotal.innerText === '...') elTotal.innerText = HISTORICAL_BASE.toLocaleString();
+          if (elSide && elSide.innerText === '...') elSide.innerText = HISTORICAL_BASE.toLocaleString();
+        });
+
+      // 2. 오늘 실제 이용자 서버 통신 (한국 자정 00:00 자동 0 리셋)
+      fetch(`https://abacus.jasoncameron.dev/${action}/bytechecktool.com/${kstDayKey}`)
+        .then(res => res.json())
+        .then(data => {
+          if (data && typeof data.value === 'number') {
+            if (elToday) elToday.innerText = data.value.toLocaleString();
+            sessionStorage.setItem('bc_session_active', '1');
+          }
+        })
+        .catch(() => {
+          if (elToday && elToday.innerText === '...') elToday.innerText = '1';
+        });
+    }
+
+    function triggerDownload(content, filename, type) {
+      const blob = new Blob(['\uFEFF' + content], { type: type });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = filename;
+      link.click();
+      URL.revokeObjectURL(link.href);
     }
 
     /* ==========================================================================
-       5. Standard Microsoft Word (.doc) Downloader
+       이력서 갤러리 서식 필터링 및 다운로드 엔진
        ========================================================================== */
-    function downloadWordDoc() {
-      const title = document.getElementById('tab-title').value || '자기소개서';
-      const text = document.getElementById('resume-text').value;
+    function filterTemplates(cat, btnEl) {
+      document.querySelectorAll('.filter-pill').forEach(b => b.classList.remove('active'));
+      if (btnEl) btnEl.classList.add('active');
 
-      if (!text.trim()) {
-        alert('저장할 자기소개서 내용이 비어 있습니다.');
-        return;
+      const cards = document.querySelectorAll('.tmpl-card');
+      cards.forEach(card => {
+        if (cat === 'all' || card.dataset.category === cat) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function downloadTemplate(type) {
+      let fileName = '표준_입사지원서_서식';
+      let tableContent = '';
+
+      const tableStyle = `border-collapse:collapse; width:100%; margin-bottom:15px; font-size:10pt;`;
+      const thStyle = `border:1px solid #333333; background:#f1f5f9; padding:7px 8px; font-weight:bold; text-align:center;`;
+      const tdStyle = `border:1px solid #333333; padding:7px 8px;`;
+
+      if (type === 'basic_new' || type === 'classic_table') {
+        fileName = '신입_표준_입사지원서_양식';
+        tableContent = `
+          <h2 style="text-align:center; margin-bottom:20px; font-size:18pt;">입 사 지 원 서</h2>
+          <table style="${tableStyle}">
+            <tr>
+              <td rowspan="4" style="width:105px; height:130px; border:1px solid #333; text-align:center; background:#f8fafc; color:#64748b;">사 진<br>(3x4cm)</td>
+              <th style="${thStyle}; width:80px;">성 명</th>
+              <td style="${tdStyle}; width:160px;">홍 길 동 (한자: 洪吉童)</td>
+              <th style="${thStyle}; width:80px;">지원분야</th>
+              <td style="${tdStyle};">경영기획 / 신입</td>
+            </tr>
+            <tr>
+              <th style="${thStyle}">생년월일</th>
+              <td style="${tdStyle}">2000년 01월 01일</td>
+              <th style="${thStyle}">비상연락처</th>
+              <td style="${tdStyle}">010-1234-5678</td>
+            </tr>
+            <tr>
+              <th style="${thStyle}">이메일</th>
+              <td style="${tdStyle}">applicant@bytechecktool.com</td>
+              <th style="${thStyle}">희망연봉</th>
+              <td style="${tdStyle}">회사내규에 따름</td>
+            </tr>
+            <tr>
+              <th style="${thStyle}">현주소</th>
+              <td colspan="3" style="${tdStyle}">서울특별시 강남구 테헤란로 123</td>
+            </tr>
+          </table>
+
+          <h3 style="font-size:11pt; border-left:4px solid #1d4ed8; padding-left:6px; margin:20px 0 8px;">1. 학력 사항</h3>
+          <table style="${tableStyle}">
+            <tr style="background:#f1f5f9;">
+              <th style="${thStyle}">재학기간</th>
+              <th style="${thStyle}">학교명</th>
+              <th style="${thStyle}">전공 / 학과</th>
+              <th style="${thStyle}">소재지</th>
+              <th style="${thStyle}">학점</th>
+            </tr>
+            <tr>
+              <td style="${tdStyle}; text-align:center;">2019.03 ~ 2025.02</td>
+              <td style="${tdStyle}; text-align:center;">한국대학교</td>
+              <td style="${tdStyle}; text-align:center;">경영학과</td>
+              <td style="${tdStyle}; text-align:center;">서울</td>
+              <td style="${tdStyle}; text-align:center;">3.85 / 4.5</td>
+            </tr>
+            <tr>
+              <td style="${tdStyle}; text-align:center;">2016.03 ~ 2019.02</td>
+              <td style="${tdStyle}; text-align:center;">한국고등학교</td>
+              <td style="${tdStyle}; text-align:center;">인문계</td>
+              <td style="${tdStyle}; text-align:center;">서울</td>
+              <td style="${tdStyle}; text-align:center;">-</td>
+            </tr>
+          </table>
+
+          <h3 style="font-size:11pt; border-left:4px solid #1d4ed8; padding-left:6px; margin:20px 0 8px;">2. 자격증 및 어학 사항</h3>
+          <table style="${tableStyle}">
+            <tr style="background:#f1f5f9;">
+              <th style="${thStyle}">취득일자</th>
+              <th style="${thStyle}">자격 / 어학시험명</th>
+              <th style="${thStyle}">등급 / 점수</th>
+              <th style="${thStyle}">발행기관</th>
+            </tr>
+            <tr>
+              <td style="${tdStyle}; text-align:center;">2025.06</td>
+              <td style="${tdStyle}; text-align:center;">TOEIC (정기시험)</td>
+              <td style="${tdStyle}; text-align:center;">885점</td>
+              <td style="${tdStyle}; text-align:center;">한국TOEIC위원회</td>
+            </tr>
+            <tr>
+              <td style="${tdStyle}; text-align:center;">2024.11</td>
+              <td style="${tdStyle}; text-align:center;">컴퓨터활용능력 1급</td>
+              <td style="${tdStyle}; text-align:center;">합격</td>
+              <td style="${tdStyle}; text-align:center;">대한상공회의소</td>
+            </tr>
+          </table>
+
+          <h3 style="font-size:11pt; border-left:4px solid #1d4ed8; padding-left:6px; margin:25px 0 8px;">3. 자기소개서</h3>
+          <p style="border:1px solid #333; padding:12px; background:#fff; min-height:120px; line-height:1.7;">
+            [목표를 향한 집념과 분석 역량]<br>
+            귀사의 혁신적인 비즈니스 모델과 시장 선도 능력에 깊은 감명을 받아 지원하게 되었습니다...
+          </p>
+        `;
+      } else if (type === 'public_blind' || type === 'job_plan') {
+        fileName = '공기업_NCS_블라인드_입사지원서';
+        tableContent = `
+          <h2 style="text-align:center; margin-bottom:15px; font-size:18pt;">블라인드 표준 입사지원서 (공공기관용)</h2>
+          <div style="font-size:9pt; color:#64748b; margin-bottom:10px; text-align:center;">* 공정채용 지침에 의거하여 사진, 학벌, 성별, 연령, 출신지를 기재하지 않습니다.</div>
+          
+          <table style="${tableStyle}">
+            <tr>
+              <th style="${thStyle}; width:120px;">수험(접수)번호</th>
+              <td style="${tdStyle}">BC-2026-00000</td>
+              <th style="${thStyle}; width:120px;">지원직무</th>
+              <td style="${tdStyle}">일반행정 (사무 6급)</td>
+            </tr>
+            <tr>
+              <th style="${thStyle}">성 명</th>
+              <td style="${tdStyle}">홍 길 동</td>
+              <th style="${thStyle}">연락처 / 이메일</th>
+              <td style="${tdStyle}">010-1234-5678 / user@bytechecktool.com</td>
+            </tr>
+          </table>
+
+          <h3 style="font-size:11pt; border-left:4px solid #059669; padding-left:6px; margin:20px 0 8px;">1. 직무 관련 교육사항 (학교 및 직업교육)</h3>
+          <table style="${tableStyle}">
+            <tr style="background:#f1f5f9;">
+              <th style="${thStyle}">과정/과목명</th>
+              <th style="${thStyle}">교육기관</th>
+              <th style="${thStyle}">이수시간 / 학점</th>
+              <th style="${thStyle}">주요 학습내용</th>
+            </tr>
+            <tr>
+              <td style="${tdStyle}; text-align:center;">조직행동론</td>
+              <td style="${tdStyle}; text-align:center;">대학교(학점)</td>
+              <td style="${tdStyle}; text-align:center;">3학점</td>
+              <td style="${tdStyle}">조직 내 커뮤니케이션 및 갈등 조정 프로세스 학습</td>
+            </tr>
+            <tr>
+              <td style="${tdStyle}; text-align:center;">공공데이터 분석 실무</td>
+              <td style="${tdStyle}; text-align:center;">한국생산성본부</td>
+              <td style="${tdStyle}; text-align:center;">40시간</td>
+              <td style="${tdStyle}">SQL 및 엑셀 기반 공공 통계 데이터 처리 실습</td>
+            </tr>
+          </table>
+
+          <h3 style="font-size:11pt; border-left:4px solid #059669; padding-left:6px; margin:20px 0 8px;">2. 직무 관련 자격사항</h3>
+          <table style="${tableStyle}">
+            <tr style="background:#f1f5f9;">
+              <th style="${thStyle}">자격증 명칭</th>
+              <th style="${thStyle}">발급기관</th>
+              <th style="${thStyle}">취득일자</th>
+              <th style="${thStyle}">가산점 여부</th>
+            </tr>
+            <tr>
+              <td style="${tdStyle}; text-align:center;">한국사능력검정시험 (심화 1급)</td>
+              <td style="${tdStyle}; text-align:center;">국사편찬위원회</td>
+              <td style="${tdStyle}; text-align:center;">2024.08</td>
+              <td style="${tdStyle}; text-align:center;">가점 5점 대상</td>
+            </tr>
+            <tr>
+              <td style="${tdStyle}; text-align:center;">컴퓨터활용능력 1급</td>
+              <td style="${tdStyle}; text-align:center;">대한상공회의소</td>
+              <td style="${tdStyle}; text-align:center;">2025.02</td>
+              <td style="${tdStyle}; text-align:center;">가점 5점 대상</td>
+            </tr>
+          </table>
+
+          <h3 style="font-size:11pt; border-left:4px solid #059669; padding-left:6px; margin:25px 0 8px;">3. NCS 직무수행 역량기술서</h3>
+          <p style="border:1px solid #333; padding:12px; background:#fff; min-height:120px; line-height:1.7;">
+            [문제해결능력: 비효율적 데이터 입력 프로세스 개선 사례]<br>
+            인턴 근무 당시 분산 관리되던 고객 민원 처리 문서를 전사 표준 양식으로 통합하여 업무 소요시간을 단축하였습니다...
+          </p>
+        `;
+      } else {
+        fileName = '경력직_상세_경력기술서';
+        tableContent = `
+          <h2 style="text-align:center; margin-bottom:20px; font-size:18pt;">상 세 경 력 기 술 서</h2>
+          <table style="${tableStyle}">
+            <tr>
+              <th style="${thStyle}; width:100px;">성 명</th>
+              <td style="${tdStyle}; width:200px;">홍 길 동</td>
+              <th style="${thStyle}; width:100px;">총 경력기간</th>
+              <td style="${tdStyle}">3년 6개월</td>
+            </tr>
+            <tr>
+              <th style="${thStyle}">최종직급</th>
+              <td style="${tdStyle}">대리 / 파트장</td>
+              <th style="${thStyle}">전문분야</th>
+              <td style="${tdStyle}">백엔드 개발 및 시스템 최적화</td>
+            </tr>
+          </table>
+
+          <h3 style="font-size:11pt; border-left:4px solid #0284c7; padding-left:6px; margin:20px 0 8px;">주요 프로젝트 수행 실적 (최신순)</h3>
+          <table style="${tableStyle}">
+            <tr style="background:#f1f5f9;">
+              <th style="${thStyle}; width:140px;">프로젝트명 / 기간</th>
+              <th style="${thStyle}; width:180px;">담당 역할 / 기술 스택</th>
+              <th style="${thStyle}">핵심 성과 및 기여 내용</th>
+            </tr>
+            <tr>
+              <td style="${tdStyle}; text-align:center;"><strong>대용량 트래픽 결제 모듈 개편</strong><br>(2024.03 ~ 2024.11)</td>
+              <td style="${tdStyle}">- 백엔드 리드 개발자<br>- Node.js, Redis, AWS</td>
+              <td style="${tdStyle}">- 동시접속 10만 RPS 처리 아키텍처 재설계<br>- 결제 응답 레이턴시 350ms → 90ms로 74% 단축 달성</td>
+            </tr>
+            <tr>
+              <td style="${tdStyle}; text-align:center;"><strong>사내 ERP 데이터베이스 마이그레이션</strong><br>(2023.06 ~ 2023.12)</td>
+              <td style="${tdStyle}">- DB 설계 및 튜닝<br>- PostgreSQL</td>
+              <td style="${tdStyle}">- 무중단 DB 마이그레이션 파이프라인 완수<br>- 월간 인프라 호스팅 비용 22% 절감</td>
+            </tr>
+          </table>
+        `;
       }
 
-      const htmlContent = `
+      const fullHtml = `
         <html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
         <head>
           <meta charset='utf-8'>
-          <title>${title}</title>
+          <title>${fileName}</title>
           <style>
-            body { font-family: 'Malgun Gothic', '맑은 고딕', sans-serif; font-size: 11pt; line-height: 1.8; color: #1e293b; }
-            h2 { font-size: 14pt; color: #1d4ed8; border-bottom: 2px solid #2563eb; padding-bottom: 6px; margin-bottom: 16px; }
-            .content { white-space: pre-wrap; word-break: break-all; }
-            .meta { font-size: 9pt; color: #64748b; margin-top: 25px; border-top: 1px solid #e2e8f0; padding-top: 8px; }
+            body { font-family: '맑은 고딕', 'Malgun Gothic', sans-serif; font-size: 10pt; line-height: 1.6; color: #1e293b; padding: 20px; }
+            table { border-collapse: collapse; width: 100%; }
           </style>
         </head>
         <body>
-          <h2>${title.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</h2>
-          <div class="content">${text.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</div>
-          <div class="meta">작성일시: ${new Date().toLocaleString()} | 검증 플랫폼: ByteCheck (https://bytechecktool.com)</div>
+          ${tableContent}
+          <div style="font-size:8pt; color:#94a3b8; text-align:center; margin-top:30px; border-top:1px solid #e2e8f0; padding-top:8px;">
+            제작 및 배포: ByteCheck 취업 유틸리티 허브 (https://bytechecktool.com) - 무단 상업적 재판매 금지
+          </div>
         </body>
         </html>
       `;
 
-      const blob = new Blob(['\ufeff' + htmlContent], { type: 'application/msword' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `ByteCheck_자소서_${title.substring(0, 15).replace(/[^\w\s가-힣]/g, '')}_${new Date().toISOString().slice(0,10)}.doc`;
-      a.click();
-      URL.revokeObjectURL(url);
+      triggerDownload(fullHtml, `${fileName}.doc`, 'application/msword;charset=utf-8');
+      showToast(`📥 ${fileName}.doc 다운로드가 시작되었습니다!`);
     }
 
-    function toggleFaq(elem) {
-      const answer = elem.nextElementSibling;
-      const isVisible = answer.style.display === 'block';
-      answer.style.display = isVisible ? 'none' : 'block';
-      elem.querySelector('span').textContent = isVisible ? '+' : '−';
+    function printDoc() {
+      const text = textarea.value;
+      if (!text.trim()) { alert('인쇄할 자기소개서 내용을 먼저 입력해 주세요.'); return; }
+      printArea.innerText = text;
+      document.getElementById('printDate').innerText = '출력 일자: ' + new Date().toLocaleDateString('ko-KR');
+      window.print();
     }
 
-    /* ==========================================================================
-       6. Initialization
-       ========================================================================== */
-    document.addEventListener('DOMContentLoaded', () => {
-      trackHonestVisitor();
+    function shareSite() {
+      if (navigator.share) {
+        navigator.share({ title: 'ByteCheck 취업·이직 올인원 허브', url: window.location.href }).catch(() => {});
+      } else {
+        navigator.clipboard.writeText(window.location.href);
+        showToast('🔗 사이트 링크가 복사되었습니다!');
+      }
+    }
 
-      // Initialize tabs
-      selectTab(0);
-
-      // Event Listeners
-      const textArea = document.getElementById('resume-text');
-      const titleInput = document.getElementById('tab-title');
-      const crlfCheck = document.getElementById('opt-crlf');
-      const targetMode = document.getElementById('target-mode');
-      const targetLimit = document.getElementById('target-limit-val');
-
-      textArea.addEventListener('input', () => {
-        saveCurrentTab();
-        updateMetrics();
-      });
-
-      titleInput.addEventListener('input', () => {
-        saveCurrentTab();
-      });
-
-      crlfCheck.addEventListener('change', updateMetrics);
-      targetMode.addEventListener('change', updateMetrics);
-      targetLimit.addEventListener('input', updateMetrics);
-
-      updateMetrics();
+    window.addEventListener('keydown', (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+        e.preventDefault();
+        analyzeText();
+        showToast('💾 브라우저에 안전하게 저장되었습니다!');
+      }
     });
+
+    const legalTexts = {
+      terms: { 
+        title: "이용약관 (Terms of Service)", 
+        body: "제1조 (목적)\n본 약관은 ByteCheck(이하 '서비스')가 제공하는 글자수 및 바이트 계산, 서식 다운로드 및 공채 정보 서비스의 이용 조건을 규정합니다.\n\n제2조 (면책)\n본 서비스가 제공하는 모든 바이트 연산 결과 및 법정 가이드라인 정보는 참고용 수치이며 법적 구속력을 갖지 않습니다. 실제 입사지원 전 반드시 지원 대상 기관의 공식 채용 요강을 최종 확인하시기 바랍니다." 
+      },
+      privacy: { 
+        title: "개인정보처리방침 (Privacy Policy)", 
+        body: "ByteCheck는 이용자의 개인정보를 소중하게 보호하며 관련 법령 및 글로벌 표준을 준수합니다.\n\n1. 개인정보 수집 금지 원칙: 본 서비스는 이용자의 회원가입을 요구하지 않으며, 자기소개서 작성 원문 및 인적사항 일체를 서버나 외부 데이터베이스에 전송하거나 저장하지 않습니다. 모든 작성 텍스트는 이용자 기기의 로컬 브라우저(LocalStorage)에만 안전하게 보관됩니다.\n\n2. 쿠키(Cookie) 및 제3자 광고 사업자 안내:\n- 본 사이트는 이용자의 서비스 이용 편의 증진을 위해 브라우저 쿠키를 사용할 수 있습니다.\n- Google을 포함한 제3자 광고 공급업체는 이용자가 본 사이트 또는 다른 웹사이트를 방문한 기록을 바탕으로 관심 기반 맞춤형 광고를 게재하기 위해 쿠키(Doubleclick Cookie 등)를 활용합니다.\n- 이용자는 구글 광고 설정(https://adssettings.google.com) 또는 Network Advertising Initiative 옵트아웃 페이지를 통해 맞춤형 광고용 쿠키 사용을 언제든지 비활성화할 수 있습니다." 
+      },
+      disclaimer: { 
+        title: "면책조항 (Disclaimer)", 
+        body: "ByteCheck에서 제공하는 바이트 연산 결과, 공채 가이드라인, 표준 서식 파일 일체는 참고 목적으로만 제공됩니다. 채용 기업의 전산망 사정이나 규정 변경으로 인해 발생하는 불이익에 대해 본 사이트는 일체의 책임을 지지 않습니다." 
+      },
+      contact: { 
+        title: "문의하기 (Contact Us)", 
+        body: "기업별 바이트 규격 제보, 시스템 오류 신고 및 제휴 문의는 아래 공식 창구로 연락 주시면 신속히 반영하겠습니다.\n\n- 공식 문의 이메일: official.bytecheck@gmail.com\n- 운영 시간: 상시 접수 (영업일 기준 48시간 이내 회신)" 
+      }
+    };
+
+    function openModal(type) {
+      document.getElementById('modalTitle').innerText = legalTexts[type].title;
+      document.getElementById('modalBody').innerText = legalTexts[type].body;
+      document.getElementById('legalModal').style.display = 'flex';
+    }
+
+    function closeModal() { document.getElementById('legalModal').style.display = 'none'; }
+    window.onclick = function(e) { if (e.target === document.getElementById('legalModal')) closeModal(); }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      textarea.value = localStorage.getItem('bytecheck_q_1') || '';
+      analyzeText();
+      renderCustomTimer();
+      startTimerTick();
+      trackHonestVisitor();
+    });
+
+    textarea.addEventListener('input', analyzeText);
   </script>
 </body>
 </html>
