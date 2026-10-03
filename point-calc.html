@@ -20,9 +20,6 @@
   <meta name="twitter:title" content="2026 공기업 자격증 서류 가산점 계산기 | ByteCheck">
   <meta name="twitter:description" content="내 자격증 스펙으로 공기업 서류 통과 가능할까? 기관별 가산점 한도 및 배점 실시간 계산.">
 
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6840623754388286" crossorigin="anonymous"></script>
-
   <!-- Structured Data: FAQPage & WebPage JSON-LD -->
   <script type="application/ld+json">
   {
@@ -76,8 +73,8 @@
 
   <style>
     :root {
-      --primary: #2563eb;
-      --primary-hover: #1d4ed8;
+      --primary: #1d4ed8;
+      --primary-hover: #1e40af;
       --secondary: #0f172a;
       --accent: #10b981;
       --bg: #f8fafc;
@@ -87,123 +84,134 @@
       --border: #e2e8f0;
       --radius: 12px;
       --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-      --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      --font-main: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: var(--font-main); background-color: var(--bg); color: var(--text); line-height: 1.6; }
     a { color: inherit; text-decoration: none; }
 
-    /* Header & Navigation */
-    header { background: var(--surface); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 50; }
-    .nav-container { max-width: 1140px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0.85rem 1.25rem; }
-    .brand { font-size: 1.35rem; font-weight: 800; color: var(--primary); display: flex; align-items: center; gap: 0.5rem; }
-    .nav-links { display: flex; gap: 0.6rem; list-style: none; flex-wrap: wrap; }
-    .nav-links a { font-size: 0.9rem; font-weight: 600; color: var(--text-muted); padding: 0.5rem 0.8rem; border-radius: 8px; transition: all 0.2s; }
-    .nav-links a:hover, .nav-links a.active { color: var(--primary); background: #eff6ff; }
+    /* Header & Navigation (원본 규격 통일) */
+    header { background: var(--surface); border-bottom: 2px solid var(--border); position: sticky; top: 0; z-index: 50; }
+    .header-inner { max-width: 1240px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; }
+    .brand { display: flex; align-items: center; gap: 6px; font-size: 1.35rem; font-weight: 900; color: #1d4ed8; text-decoration: none; }
+    .brand-icon { color: #f97316; font-size: 1.45rem; line-height: 1; }
+    nav { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+    nav a { text-decoration: none; color: #0f172a; font-size: 0.92rem; font-weight: 700; padding: 8px 14px; border-radius: 6px; transition: all 0.2s; }
+    nav a:hover { background: #eff6ff; color: var(--primary); }
+    nav a.active { background: var(--primary); color: #ffffff; }
 
     /* Main Container */
-    .main-wrap { max-width: 1140px; margin: 2rem auto; padding: 0 1.25rem; }
-    .hero-title { text-align: center; margin-bottom: 2rem; }
-    .hero-title h1 { font-size: 2rem; font-weight: 800; color: var(--secondary); letter-spacing: -0.02em; }
-    .hero-title p { font-size: 1.05rem; color: var(--text-muted); margin-top: 0.5rem; }
+    .main-wrap { max-width: 1240px; margin: 1.5rem auto 3rem auto; padding: 0 16px; }
+    .hero-title { text-align: center; margin-bottom: 1.75rem; }
+    .hero-title h1 { font-size: 2rem; font-weight: 900; color: var(--secondary); letter-spacing: -0.02em; }
+    .hero-title p { font-size: 1rem; color: var(--text-muted); margin-top: 0.4rem; font-weight: 500; }
 
-    /* Live Counter Strip */
-    .counter-strip {
-      background: #eff6ff; border: 1px solid #bfdbfe; border-radius: var(--radius);
-      padding: 0.75rem 1.25rem; display: flex; justify-content: space-around; align-items: center;
-      margin-bottom: 2rem; font-size: 0.92rem; font-weight: 600; color: var(--secondary);
+    /* Live Counter Strip (기존 규격 일원화) */
+    .real-stat-bar {
+      background: #0f172a; color: #f8fafc; border-radius: 30px; padding: 10px 24px;
+      display: flex; justify-content: space-between; align-items: center; font-size: 0.88rem;
+      font-weight: 700; margin-bottom: 20px; box-shadow: var(--shadow); flex-wrap: wrap; gap: 10px;
     }
-    .counter-item span { color: var(--primary); font-size: 1.15rem; font-weight: 800; }
+    .real-stat-group { display: inline-flex; align-items: center; gap: 16px; }
+    .real-badge { background: #1e293b; padding: 4px 12px; border-radius: 20px; border: 1px solid #334155; }
+    .real-badge strong { color: #60a5fa; }
+    .real-guide-text { color: #94a3b8; font-weight: 500; font-size: 0.82rem; }
 
     /* Grid Layout */
-    .calc-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 2rem; align-items: start; }
-    @media (max-width: 900px) { .calc-grid { grid-template-columns: 1fr; } }
+    .calc-grid { display: grid; grid-template-columns: 1fr 360px; gap: 24px; align-items: start; }
+    @media (max-width: 1024px) { .calc-grid { grid-template-columns: 1fr; } }
 
     /* Cards */
-    .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.75rem; box-shadow: var(--shadow); }
-    .card h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1.25rem; color: var(--secondary); display: flex; align-items: center; gap: 0.5rem; }
+    .card { background: var(--surface); border: 2px solid var(--border); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow); }
+    .card h2 { font-size: 1.2rem; font-weight: 800; margin-bottom: 1.2rem; color: var(--secondary); display: flex; align-items: center; gap: 0.5rem; }
 
     /* Form Components */
-    .form-group { margin-bottom: 1.5rem; }
-    label.group-label { display: block; font-weight: 700; font-size: 0.95rem; margin-bottom: 0.6rem; color: var(--secondary); }
-    .sub-desc { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem; }
-    select, input[type="text"] {
-      width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 8px;
-      font-size: 0.95rem; background: #fff; transition: border-color 0.2s;
+    .form-group { margin-bottom: 1.4rem; }
+    label.group-label { display: block; font-weight: 800; font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--secondary); }
+    .sub-desc { font-size: 0.82rem; color: var(--primary); margin-top: 0.4rem; font-weight: 600; }
+    select {
+      width: 100%; padding: 0.75rem; border: 1.5px solid var(--border); border-radius: 8px;
+      font-size: 0.95rem; background: #fff; font-weight: 600; outline: none; transition: border-color 0.2s;
     }
-    select:focus { border-color: var(--primary); outline: none; }
+    select:focus { border-color: var(--primary); }
 
-    .check-grid { display: grid; grid-template-columns: 1fr; gap: 0.6rem; }
+    .check-grid { display: grid; grid-template-columns: 1fr; gap: 0.5rem; }
     .check-item {
-      display: flex; align-items: center; justify-content: space-between; padding: 0.7rem 0.9rem;
-      border: 1px solid var(--border); border-radius: 8px; cursor: pointer; transition: background 0.15s;
+      display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 0.9rem;
+      border: 1.5px solid var(--border); border-radius: 8px; cursor: pointer; transition: background 0.15s;
     }
     .check-item:hover { background: #f8fafc; }
-    .check-item input { margin-right: 0.75rem; width: 18px; height: 18px; accent-color: var(--primary); }
-    .check-title { display: flex; align-items: center; font-size: 0.92rem; font-weight: 600; }
-    .check-score { font-size: 0.85rem; font-weight: 700; color: var(--primary); background: #eff6ff; padding: 2px 8px; border-radius: 6px; }
+    .check-item input { margin-right: 0.75rem; width: 17px; height: 17px; accent-color: var(--primary); }
+    .check-title { display: flex; align-items: center; font-size: 0.92rem; font-weight: 700; color: #1e293b; }
+    .check-score { font-size: 0.82rem; font-weight: 800; color: var(--primary); background: #eff6ff; padding: 3px 8px; border-radius: 6px; }
 
     /* Sticky Result Card */
-    .sticky-result { position: sticky; top: 5rem; }
+    .sticky-result { position: sticky; top: 5.5rem; }
     .total-score-box {
-      text-align: center; background: #1e293b; color: #fff; padding: 1.75rem;
+      text-align: center; background: #0f172a; color: #fff; padding: 1.6rem;
       border-radius: var(--radius); margin-bottom: 1.25rem;
     }
-    .total-score-label { font-size: 0.9rem; color: #94a3b8; font-weight: 600; text-transform: uppercase; }
-    .total-score-num { font-size: 3rem; font-weight: 900; color: #38bdf8; margin: 0.3rem 0; line-height: 1; }
-    .total-score-cap { font-size: 0.85rem; color: #cbd5e1; }
-    .score-breakdown { list-style: none; font-size: 0.9rem; }
+    .total-score-label { font-size: 0.85rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; }
+    .total-score-num { font-size: 2.8rem; font-weight: 900; color: #38bdf8; margin: 0.2rem 0; line-height: 1; }
+    .total-score-cap { font-size: 0.82rem; color: #cbd5e1; font-weight: 600; }
+    .score-breakdown { list-style: none; font-size: 0.88rem; }
     .score-breakdown li { display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px dashed var(--border); }
     .score-breakdown li:last-child { border-bottom: none; }
 
-    /* Affiliate & Banner */
-    .banner-slot { margin: 2rem 0; padding: 1.25rem; background: #fff; border: 1px solid var(--border); border-radius: var(--radius); text-align: center; }
-    .banner-title { font-size: 0.75rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+    /* Coupang Native Partner Banner */
+    .partner-banner {
+      background: #ffffff; border: 2px solid var(--border); border-radius: 10px;
+      padding: 14px 18px; margin-top: 1.25rem; display: flex; flex-direction: column; gap: 8px; box-shadow: var(--shadow);
+    }
+    .partner-title { font-size: 0.92rem; font-weight: 800; color: #0f172a; }
+    .partner-desc { font-size: 0.8rem; color: var(--text-muted); }
+    .partner-btn {
+      background: #dc2626; color: #fff; text-decoration: none; font-size: 0.82rem; font-weight: 800;
+      padding: 8px 12px; border-radius: 6px; text-align: center; display: inline-block; transition: background 0.2s;
+    }
+    .partner-btn:hover { background: #b91c1c; }
 
     /* Comprehensive Guide & Tables (SEO Rich Text) */
-    .seo-article { margin-top: 3.5rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 2.5rem; }
-    .seo-article h2 { font-size: 1.5rem; font-weight: 800; color: var(--secondary); margin-bottom: 1.25rem; border-left: 5px solid var(--primary); padding-left: 0.75rem; }
-    .seo-article h3 { font-size: 1.2rem; font-weight: 700; color: var(--secondary); margin: 1.8rem 0 0.8rem; }
-    .seo-article p { font-size: 0.98rem; color: #334155; margin-bottom: 1.2rem; line-height: 1.75; text-align: justify; }
-    .seo-article ul, .seo-article ol { margin-left: 1.5rem; margin-bottom: 1.2rem; color: #334155; font-size: 0.95rem; }
+    .seo-article { margin-top: 2.5rem; background: var(--surface); border: 2px solid var(--border); border-radius: var(--radius); padding: 2.2rem; }
+    .seo-article h2 { font-size: 1.4rem; font-weight: 900; color: var(--secondary); margin-bottom: 1.2rem; border-left: 5px solid var(--primary); padding-left: 0.75rem; }
+    .seo-article h3 { font-size: 1.15rem; font-weight: 800; color: var(--secondary); margin: 1.6rem 0 0.8rem; }
+    .seo-article p { font-size: 0.95rem; color: #334155; margin-bottom: 1.2rem; line-height: 1.75; text-align: justify; }
+    .seo-article ul { margin-left: 1.5rem; margin-bottom: 1.2rem; color: #334155; font-size: 0.93rem; }
     .seo-article li { margin-bottom: 0.5rem; }
 
-    .data-table-wrap { overflow-x: auto; margin: 1.5rem 0; }
-    .data-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem; }
-    .data-table th, .data-table td { padding: 0.85rem 1rem; border: 1px solid var(--border); }
-    .data-table th { background: #f1f5f9; color: var(--secondary); font-weight: 700; }
+    .data-table-wrap { overflow-x: auto; margin: 1.25rem 0; }
+    .data-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.88rem; }
+    .data-table th, .data-table td { padding: 0.75rem 0.9rem; border: 1px solid var(--border); }
+    .data-table th { background: #f1f5f9; color: var(--secondary); font-weight: 800; }
     .data-table tr:hover { background: #f8fafc; }
 
     /* FAQ Section */
-    .faq-item { margin-bottom: 1rem; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
-    .faq-q { background: #f8fafc; padding: 1rem 1.25rem; font-weight: 700; font-size: 0.98rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-    .faq-a { padding: 1.25rem; font-size: 0.92rem; color: #334155; background: #fff; border-top: 1px solid var(--border); }
+    .faq-item { margin-bottom: 0.8rem; border: 1.5px solid var(--border); border-radius: 8px; overflow: hidden; }
+    .faq-q { background: #f8fafc; padding: 0.9rem 1.1rem; font-weight: 800; font-size: 0.95rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .faq-a { padding: 1.1rem; font-size: 0.9rem; color: #334155; background: #fff; border-top: 1.5px solid var(--border); }
 
     /* Footer */
-    footer { background: #0f172a; color: #94a3b8; padding: 3rem 1.25rem; margin-top: 4rem; font-size: 0.88rem; }
-    .footer-wrap { max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; }
-    @media (max-width: 768px) { .footer-wrap { grid-template-columns: 1fr; } }
-    .footer-links a { color: #cbd5e1; margin-right: 1rem; text-decoration: underline; }
+    footer { background: #ffffff; border-top: 2px solid var(--border); padding: 24px 20px; font-size: 0.82rem; color: var(--text-muted); line-height: 1.8; text-align: center; margin-top: 3.5rem; }
+    .footer-links { display: flex; justify-content: center; gap: 14px; margin-bottom: 8px; flex-wrap: wrap; }
+    .footer-links a { color: var(--primary); text-decoration: none; font-weight: 700; }
   </style>
 </head>
 <body>
 
-  <!-- Global Header & 5-Menu Navigation -->
+  <!-- Global Header & 5-Menu Navigation (동일 로고 + 5개 메뉴 동기화) -->
   <header>
-    <div class="nav-container">
+    <div class="header-inner">
       <a href="index.html" class="brand">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>
-        ByteCheck
+        <span class="brand-icon">⚡</span>
+        <span>ByteCheck</span>
       </a>
       <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">자소서 바이트 계산기</a></li>
-          <li><a href="salary.html">2026 연봉 계산기</a></li>
-          <li><a href="dday.html">어학 만료 D-Day</a></li>
-          <li><a href="point-calc.html" class="active">공기업 가산점 계산기</a></li>
-          <li><a href="convert.html">어학 점수 변환기</a></li>
-        </ul>
+        <a href="index.html">자소서 바이트 계산기</a>
+        <a href="salary.html">2026 연봉 계산기</a>
+        <a href="dday.html">어학 만료 D-Day</a>
+        <a href="point-calc.html" class="active">공기업 가산점 계산기</a>
+        <a href="convert.html">어학 점수 변환기</a>
       </nav>
     </div>
   </header>
@@ -212,26 +220,20 @@
     <!-- Top Hero Section -->
     <div class="hero-title">
       <h1>2026 공기업 자격증 서류 가산점 계산기</h1>
-      <p>목표 공기업별 배점표 완벽 반영 · 한능검, 컴활, 한국어, 기사 자격증 서류 합산 및 서류 통과선 가이드</p>
+      <p>목표 공기업별 배점표 반영 · 한능검, 컴활, 한국어, 기사 자격증 서류 합산 및 커트라인 가이드</p>
     </div>
 
-    <!-- Verified Live Real Visitor Counter Strip -->
-    <div class="counter-strip">
-      <div class="counter-item">오늘 방문자: <span id="today-visitors">...</span>명</div>
-      <div class="counter-item">누적 방문자: <span id="total-visitors">...</span>명</div>
-      <div class="counter-item" style="color: #059669; font-weight:700;">● 실시간 집계 연동 중</div>
-    </div>
-
-    <!-- Top AdSense Banner -->
-    <div class="banner-slot">
-      <div class="banner-title">SPONSORED</div>
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-6840623754388286"
-           data-ad-slot="1234567890"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    <!-- Verified Live Real Visitor Counter Strip (오리지널 스타일) -->
+    <div class="real-stat-bar">
+      <div class="real-stat-group">
+        <div class="real-badge">
+          📅 오늘 실제 이용자: <strong id="todayRealVisitors">...</strong> 명
+        </div>
+        <div class="real-badge">
+          👥 누적 실제 방문자: <strong id="totalRealVisitors">...</strong> 명
+        </div>
+      </div>
+      <div class="real-guide-text">⚡ 2026 주요 공기업 최신 서류 가산점 배점 규칙 연산 가동 중</div>
     </div>
 
     <!-- Interactive Calculator Workspace -->
@@ -239,8 +241,8 @@
       <!-- Input Left Column -->
       <div class="card">
         <h2>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-          자격증 및 어학 스펙 체크
+          <span>📋</span>
+          <span>자격증 및 어학 스펙 체크</span>
         </h2>
 
         <!-- Organization Select -->
@@ -252,7 +254,7 @@
             <option value="nhis">국민건강보험공단 (건보 행정직렬)</option>
             <option value="iia">인천국제공항공사 (인국공 일반직 5급)</option>
           </select>
-          <div class="sub-desc" id="org-desc" style="margin-top: 0.4rem; color: #2563eb;">* 한전: 공통자격증 최대 20점 + 기사/기술 가산점 적용 (최대 상한선 반영)</div>
+          <div class="sub-desc" id="org-desc">* 한전: 공통자격증 최대 20점 + 기사/기술 가산점 적용 (최대 상한선 반영)</div>
         </div>
 
         <!-- 1. 한국사능력검정시험 -->
@@ -353,7 +355,6 @@
             </label>
           </div>
         </div>
-
       </div>
 
       <!-- Right Column: Real-time Dynamic Score Result -->
@@ -366,7 +367,7 @@
             <div class="total-score-cap" id="display-cap-info">기관 최대 한도: 20점 만점</div>
           </div>
 
-          <h3 style="font-size: 1rem; margin-bottom: 0.8rem;">항목별 가산점 명세</h3>
+          <h3 style="font-size: 0.95rem; margin-bottom: 0.6rem; font-weight: 800;">항목별 가산점 명세</h3>
           <ul class="score-breakdown">
             <li><span>한국사능력검정:</span> <strong id="det-hist">0점</strong></li>
             <li><span>컴퓨터활용/사무:</span> <strong id="det-oa">0점</strong></li>
@@ -375,22 +376,22 @@
             <li><span>어학스피킹 우대:</span> <strong id="det-spk">0점</strong></li>
           </ul>
 
-          <div style="margin-top: 1.5rem; padding: 1rem; background: #f8fafc; border-radius: 8px; font-size: 0.85rem; color: #475569;">
-            <strong>서류 통과 진단 의견:</strong>
+          <div style="margin-top: 1.25rem; padding: 0.85rem; background: #f8fafc; border-radius: 8px; font-size: 0.82rem; color: #475569; border: 1.5px solid var(--border);">
+            <strong style="color: #0f172a;">서류 통과 진단 의견:</strong>
             <p id="eval-message" style="margin-top: 0.3rem;">자격증을 체크하여 목표 기관별 서류 통과 가능성을 진단해 보세요.</p>
           </div>
         </div>
 
-        <!-- Coupang Partners Affiliate Box -->
-        <div class="banner-slot" style="margin-top: 1.5rem;">
-          <div class="banner-title">추천 수험서 및 자격증 교재</div>
-          <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 0.5rem;">2026 공기업 NCS 및 한능검 1급 2주 완성 수험서 특가전</p>
-          <a href="https://link.coupang.com" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #ef4444; color: #fff; padding: 0.6rem 1.2rem; border-radius: 6px; font-weight: 700; font-size: 0.88rem;">쿠팡 최저가 교재 보러가기 &rarr;</a>
+        <!-- Coupang Affiliate Card -->
+        <div class="partner-banner">
+          <div class="partner-title">📚 추천 수험서 및 자격증 교재</div>
+          <div class="partner-desc">2026 공기업 NCS 및 한능검 1급 2주 완성 수험서 특가전</div>
+          <a href="https://www.coupang.com/np/search?component=&q=2026+공기업+NCS+기출문제집" target="_blank" rel="noopener noreferrer" class="partner-btn">쿠팡 최저가 교재 보러가기 ↗</a>
         </div>
       </div>
     </div>
 
-    <!-- SEO Rich Text Content: 2,500+ Words Guide for Search Robots & Job Seekers -->
+    <!-- SEO Rich Text Content -->
     <article class="seo-article">
       <h2>2026 주요 공기업 서류전형 가산점 체계 완벽 해부 가이드</h2>
       <p>
@@ -464,11 +465,11 @@
     </article>
 
     <!-- FAQ Accordion Section -->
-    <div style="margin-top: 2rem;">
-      <h2 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 1rem; color: var(--secondary);">자주 묻는 질문 (FAQ)</h2>
+    <div style="margin-top: 1.5rem;">
+      <h2 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 1rem; color: var(--secondary);">자주 묻는 질문 (FAQ)</h2>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">
-          Q. 한국사능력검정시험 유효기간이 공기업에서도 완전히 폐지되었나요?
+          <span>Q. 한국사능력검정시험 유효기간이 공기업에서도 완전히 폐지되었나요?</span>
           <span>+</span>
         </div>
         <div class="faq-a" style="display: none;">
@@ -477,7 +478,7 @@
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">
-          Q. 토익(TOEIC) 850점과 토익스피킹 AL이 있으면 중복으로 인정받을 수 있나요?
+          <span>Q. 토익(TOEIC) 850점과 토익스피킹 AL이 있으면 중복으로 인정받을 수 있나요?</span>
           <span>+</span>
         </div>
         <div class="faq-a" style="display: none;">
@@ -486,7 +487,7 @@
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">
-          Q. 사무직 지원자도 정보처리기사 가산점을 받을 수 있나요?
+          <span>Q. 사무직 지원자도 정보처리기사 가산점을 받을 수 있나요?</span>
           <span>+</span>
         </div>
         <div class="faq-a" style="display: none;">
@@ -494,102 +495,76 @@
         </div>
       </div>
     </div>
-
-    <!-- Bottom AdSense Slot -->
-    <div class="banner-slot" style="margin-top: 3rem;">
-      <div class="banner-title">SPONSORED</div>
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-6840623754388286"
-           data-ad-slot="9876543210"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
   </div>
 
   <!-- Global Footer -->
   <footer>
-    <div class="footer-wrap">
-      <div>
-        <h4 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem;">ByteCheck (바이트체크)</h4>
-        <p>취준생 및 직장인을 위한 정밀 자소서 바이트 계산기, 연봉 계산기, 공기업 가산점 및 어학 환산 유틸리티 플랫폼.</p>
-        <p style="margin-top: 0.5rem; font-size: 0.8rem; color: #64748b;">본 계산기의 가산점 배점 규칙은 2026년도 최신 주요 공기업 채용 공고를 기준으로 설계되었으며, 개별 공고의 세부 변경 사항에 따라 실제 서류 결과와 차이가 있을 수 있습니다.</p>
-      </div>
-      <div>
-        <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 0.5rem;">빠른 바로가기</h4>
-        <div class="footer-links" style="display: flex; flex-direction: column; gap: 0.3rem;">
-          <a href="index.html">자소서 바이트 계산기</a>
-          <a href="salary.html">2026 연봉 실수령액 계산기</a>
-          <a href="dday.html">어학 만료 D-Day 계산기</a>
-          <a href="point-calc.html">공기업 가산점 계산기</a>
-          <a href="convert.html">어학 점수 상호 변환기</a>
-        </div>
-      </div>
+    <div class="footer-links">
+      <a href="index.html">자소서 바이트 계산기</a>
+      <span>|</span>
+      <a href="salary.html">2026 연봉 계산기</a>
+      <span>|</span>
+      <a href="dday.html">어학 만료 D-Day</a>
+      <span>|</span>
+      <a href="point-calc.html">공기업 가산점 계산기</a>
+      <span>|</span>
+      <a href="convert.html">어학 점수 변환기</a>
     </div>
+    <p>본 계산기의 가산점 배점 규칙은 2026년도 최신 주요 공기업 채용 공고를 기준으로 설계되었습니다.</p>
+    <p style="margin-top: 6px;">© 2026 ByteCheck Global. All rights reserved.</p>
   </footer>
 
   <!-- Core JavaScript: Rule Engines, Dynamic Updates, Real Visitor Tracker -->
   <script>
-    /* ==========================================================================
-       1. Honest & Real Live Visitor Counter (ByteCheck Global Tracker)
-       - Historical Base: 410
-       - Endpoint: abacus.jasoncameron.dev
-       - KST 00:00 midnight reset for today counter
-       - Strictly zero synthetic or fake random numbers
-       ========================================================================== */
-    async function trackHonestVisitor() {
+    /* 1. Honest & Real Live Visitor Counter (ByteCheck Global Tracker) */
+    function trackHonestVisitor() {
       const HISTORICAL_BASE = 410;
-      const todayElem = document.getElementById('today-visitors');
-      const totalElem = document.getElementById('total-visitors');
 
-      // KST (UTC+9) Date string YYYYMMDD calculation
       const now = new Date();
-      const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
-      const kstDate = new Date(utc + (9 * 60 * 60 * 1000));
-      const yyyy = kstDate.getFullYear();
-      const mm = String(kstDate.getMonth() + 1).padStart(2, '0');
-      const dd = String(kstDate.getDate()).padStart(2, '0');
-      const todayKey = `${yyyy}${mm}${dd}`;
+      const kstFormatter = new Intl.DateTimeFormat('ko-KR', {
+        timeZone: 'Asia/Seoul',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit'
+      });
+      const parts = kstFormatter.formatToParts(now);
+      const y = parts.find(p => p.type === 'year').value;
+      const m = parts.find(p => p.type === 'month').value;
+      const d = parts.find(p => p.type === 'day').value;
+      const kstDayKey = `today_${y}${m}${d}`;
 
-      // Session deduplication check
-      const hasHit = sessionStorage.getItem('bc_session_active');
-      const action = hasHit ? 'get' : 'hit';
+      const elToday = document.getElementById('todayRealVisitors');
+      const elTotal = document.getElementById('totalRealVisitors');
 
-      try {
-        const [totalRes, todayRes] = await Promise.all([
-          fetch(`https://abacus.jasoncameron.dev/${action}/bytechecktool.com/total_real`),
-          fetch(`https://abacus.jasoncameron.dev/${action}/bytechecktool.com/today_${todayKey}`)
-        ]);
+      const isFirstSession = !sessionStorage.getItem('bc_session_active');
+      const action = isFirstSession ? 'hit' : 'get';
 
-        if (totalRes.ok && todayRes.ok) {
-          const totalData = await totalRes.json();
-          const todayData = await todayRes.json();
+      fetch(`https://abacus.jasoncameron.dev/${action}/bytechecktool.com/total_real`)
+        .then(res => res.json())
+        .then(data => {
+          if (data && typeof data.value === 'number') {
+            const finalTotal = HISTORICAL_BASE + data.value;
+            if (elTotal) elTotal.innerText = finalTotal.toLocaleString();
+          }
+        })
+        .catch(() => {
+          if (elTotal && elTotal.innerText === '...') elTotal.innerText = HISTORICAL_BASE.toLocaleString();
+        });
 
-          const honestTotal = HISTORICAL_BASE + (totalData.value || 0);
-          const honestToday = todayData.value || 0;
-
-          if (totalElem) totalElem.textContent = honestTotal.toLocaleString();
-          if (todayElem) todayElem.textContent = honestToday.toLocaleString();
-
-          sessionStorage.setItem('bc_session_active', 'true');
-        } else {
-          fallbackDisplay();
-        }
-      } catch (err) {
-        console.warn('Real-time counter sync offline:', err);
-        fallbackDisplay();
-      }
-
-      function fallbackDisplay() {
-        if (totalElem && totalElem.textContent === '...') totalElem.textContent = (HISTORICAL_BASE).toLocaleString();
-        if (todayElem && todayElem.textContent === '...') todayElem.textContent = '1';
-      }
+      fetch(`https://abacus.jasoncameron.dev/${action}/bytechecktool.com/${kstDayKey}`)
+        .then(res => res.json())
+        .then(data => {
+          if (data && typeof data.value === 'number') {
+            if (elToday) elToday.innerText = data.value.toLocaleString();
+            sessionStorage.setItem('bc_session_active', '1');
+          }
+        })
+        .catch(() => {
+          if (elToday && elToday.innerText === '...') elToday.innerText = '1';
+        });
     }
 
-    /* ==========================================================================
-       2. Public Corporation Qualification Point Calculation Engine
-       ========================================================================== */
+    /* 2. Public Corporation Qualification Point Calculation Engine */
     const RULES = {
       kepco: {
         name: "한국전력공사",
@@ -599,7 +574,7 @@
           hist: { '1': 5, '2': 3, '3': 1, '0': 0 },
           oa: { 'com1': 5, 'com2': 3, '0': 0 },
           kr: { 'kbs1': 5, 'kbs3': 3, '0': 0 },
-          tech: { eng1: 10, eng2: 0, ind_eng: 5 }, // 사무/공통 1개 한정 (10점)
+          tech: { eng1: 10, eng2: 0, ind_eng: 5 },
           spk: { 'high': 5, 'mid': 3, '0': 0 }
         }
       },
@@ -612,7 +587,7 @@
           oa: { 'com1': 4.5, 'com2': 3, '0': 0 },
           kr: { 'kbs1': 3, 'kbs3': 1.5, '0': 0 },
           tech: { eng1: 6, eng2: 4.5, ind_eng: 3 },
-          spk: { 'high': 0, 'mid': 0, '0': 0 } // 코레일 필기 가산에는 어학스피킹 미반영
+          spk: { 'high': 0, 'mid': 0, '0': 0 }
         }
       },
       nhis: {
@@ -646,7 +621,6 @@
       document.getElementById('org-desc').textContent = rule.desc;
       document.getElementById('display-cap-info').textContent = `기관 최대 한도: ${rule.cap}점 만점`;
 
-      // Update displayed tag badges
       document.getElementById('score-hist-1').textContent = `+${rule.scores.hist['1']}점`;
       document.getElementById('score-hist-2').textContent = `+${rule.scores.hist['2']}점`;
       document.getElementById('score-hist-3').textContent = `+${rule.scores.hist['3']}점`;
@@ -669,7 +643,6 @@
       const orgKey = document.getElementById('org-select').value;
       const rule = RULES[orgKey];
 
-      // Radio values
       const histVal = document.querySelector('input[name="history"]:checked')?.value || '0';
       const oaVal = document.querySelector('input[name="oa"]:checked')?.value || '0';
       const krVal = document.querySelector('input[name="lang_kr"]:checked')?.value || '0';
@@ -680,7 +653,6 @@
       const krScore = rule.scores.kr[krVal] || 0;
       const spkScore = rule.scores.spk[spkVal] || 0;
 
-      // Tech Checkboxes
       let techScore = 0;
       const techBoxes = document.querySelectorAll('input[name="tech_cert"]:checked');
       techBoxes.forEach(box => {
@@ -689,7 +661,6 @@
         if (box.value === 'ind_eng') techScore += rule.scores.tech.ind_eng;
       });
 
-      // Update Breakdown List
       document.getElementById('det-hist').textContent = `${histScore}점`;
       document.getElementById('det-oa').textContent = `${oaScore}점`;
       document.getElementById('det-kr').textContent = `${krScore}점`;
@@ -701,16 +672,15 @@
 
       document.getElementById('display-total-score').textContent = cappedSum.toFixed(1);
 
-      // Diagnostic message update
       const evalElem = document.getElementById('eval-message');
       const ratio = cappedSum / rule.cap;
 
       if (ratio >= 0.95) {
-        evalElem.innerHTML = `<span style="color:#059669; font-weight:700;">[최상위 안정권]</span> ${rule.name} 기준 가산점 만점에 도달했습니다. 서류 통과 가능성이 매우 높으니 전공 및 NCS 필기 대비에 집중하세요.`;
+        evalElem.innerHTML = `<span style="color:#059669; font-weight:800;">[최상위 안정권]</span> ${rule.name} 기준 가산점 만점에 도달했습니다. 서류 통과 가능성이 매우 높으니 전공 및 NCS 필기 대비에 집중하세요.`;
       } else if (ratio >= 0.65) {
-        evalElem.innerHTML = `<span style="color:#2563eb; font-weight:700;">[보통 / 적정권]</span> 안정적인 가산점을 확보 중이나, 경쟁률이 높은 사무직렬의 경우 한능검이나 한국어 상위 등급 취득 시 확실한 안정권 진입이 가능합니다.`;
+        evalElem.innerHTML = `<span style="color:#1d4ed8; font-weight:800;">[보통 / 적정권]</span> 안정적인 가산점을 확보 중이나, 경쟁률이 높은 사무직렬의 경우 한능검이나 한국어 상위 등급 취득 시 확실한 안정권 진입이 가능합니다.`;
       } else {
-        evalElem.innerHTML = `<span style="color:#dc2626; font-weight:700;">[보완 권장]</span> 서류 배수 컷 통과를 위해 컴활 1급 또는 한능검 1급을 추가 확보하여 가산점을 더 확보하는 것을 강력히 추천합니다.`;
+        evalElem.innerHTML = `<span style="color:#dc2626; font-weight:800;">[보완 권장]</span> 서류 배수 컷 통과를 위해 컴활 1급 또는 한능검 1급을 추가 확보하여 가산점을 더 확보하는 것을 추천합니다.`;
       }
     }
 
@@ -718,10 +688,9 @@
       const answer = elem.nextElementSibling;
       const isVisible = answer.style.display === 'block';
       answer.style.display = isVisible ? 'none' : 'block';
-      elem.querySelector('span').textContent = isVisible ? '+' : '−';
+      elem.querySelectorAll('span')[1].textContent = isVisible ? '+' : '−';
     }
 
-    // Event Listeners Initialization
     document.addEventListener('DOMContentLoaded', () => {
       trackHonestVisitor();
 
