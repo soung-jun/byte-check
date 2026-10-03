@@ -50,7 +50,7 @@
     header { background: #ffffff; border-bottom: 2px solid var(--border); width: 100%; position: relative; }
     .header-inner { max-width: 1060px; margin: 0 auto; padding: 14px 20px; display: flex; justify-content: space-between; align-items: center; }
     .brand { display: flex; align-items: center; gap: 8px; font-size: 1.35rem; font-weight: 900; color: var(--primary); text-decoration: none; }
-    nav { display: flex; align-items: center; gap: 8px; }
+    nav { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
     nav a { text-decoration: none; color: var(--text); font-size: 0.92rem; font-weight: 700; padding: 8px 14px; border-radius: 6px; transition: all 0.2s; }
     nav a:hover { background: var(--primary-light); color: var(--primary); }
     nav a.active { background: var(--primary); color: #ffffff; }
@@ -113,7 +113,7 @@
     .rule-card strong { color: var(--primary); display: block; margin-bottom: 4px; }
 
     footer { background: #ffffff; border-top: 2px solid var(--border); padding: 30px 20px; font-size: 0.85rem; color: var(--text-muted); line-height: 1.8; text-align: center; }
-    .footer-links { display: flex; justify-content: center; gap: 16px; margin-bottom: 12px; }
+    .footer-links { display: flex; justify-content: center; gap: 16px; margin-bottom: 12px; flex-wrap: wrap; }
     .footer-links a { color: var(--primary); text-decoration: none; font-weight: 700; }
 
     @media (max-width: 768px) {
@@ -130,6 +130,7 @@
 </head>
 <body>
 
+  <!-- Global Header & 5-Menu Navigation (동일 로고 + 5대 메뉴 일괄 동기화) -->
   <header>
     <div class="header-inner">
       <a href="index.html" class="brand"><span>⚡</span> ByteCheck</a>
@@ -137,6 +138,8 @@
         <a href="index.html">자소서 바이트 & 서식</a>
         <a href="salary.html">2026 연봉 계산기</a>
         <a href="dday.html" class="active">어학 만료 D-Day</a>
+        <a href="point-calc.html">공기업 가산점 계산기</a>
+        <a href="convert.html">어학 점수 변환기</a>
       </nav>
     </div>
   </header>
@@ -264,9 +267,9 @@
             </p>
           </div>
           <div style="background: #f8fafc; border: 1.5px solid var(--border); border-radius: 8px; padding: 14px; text-align: left; font-size: 0.88rem;">
-            <div style="margin-bottom: 6px;"><strong>국가직 7급 공무원:</strong> <span id="pass7th" style="font-weight: 800; color: var(--success);">PASS (통과)</span></div>
-            <div style="margin-bottom: 6px;"><strong>군무원 7급 공채:</strong> <span id="passGun7th" style="font-weight: 800; color: var(--success);">PASS (통과)</span></div>
-            <div><strong>군무원 9급 공채:</strong> <span id="passGun9th" style="font-weight: 800; color: var(--success);">PASS (통과)</span></div>
+            <div style="margin-bottom: 6px;"><strong>국가직 7급 공무원:</strong> <span id="pass7th" style="font-weight: 800; color: var(--success);">PASS (통과 가능)</span></div>
+            <div style="margin-bottom: 6px;"><strong>군무원 7급 공채:</strong> <span id="passGun7th" style="font-weight: 800; color: var(--success);">PASS (통과 가능)</span></div>
+            <div><strong>군무원 9급 공채:</strong> <span id="passGun9th" style="font-weight: 800; color: var(--success);">PASS (통과 가능)</span></div>
           </div>
         </div>
       </div>
@@ -298,7 +301,7 @@
       </div>
     </section>
 
-    <!-- 공식 시험 주관사 및 정부 채용 포털 허브 (보안 경고 0%) -->
+    <!-- 공식 시험 주관사 및 정부 채용 포털 허브 -->
     <div class="card">
       <div class="section-title"><span>🌐</span> 공인 어학시험 주관사 & 정부 채용 포털 바로가기</div>
       <div class="hub-grid">
@@ -371,11 +374,18 @@
 
   </div>
 
+  <!-- Global Footer (5대 메뉴 일괄 동기화) -->
   <footer>
     <div class="footer-links">
       <a href="index.html">자소서 바이트 계산기</a>
       <span>|</span>
       <a href="salary.html">2026 연봉 계산기</a>
+      <span>|</span>
+      <a href="dday.html">어학 만료 D-Day</a>
+      <span>|</span>
+      <a href="point-calc.html">공기업 가산점 계산기</a>
+      <span>|</span>
+      <a href="convert.html">어학 점수 변환기</a>
     </div>
     <p>본 어학 만료 계산 결과는 시험 주관사 기본 규정(2년) 및 인사혁신처 사전등록 고시(5년 인정)에 근거한 수치입니다.</p>
     <p>© 2026 ByteCheck Global. All rights reserved.</p>
