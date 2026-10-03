@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2026 토익·토스·오픽·지텔프·텝스 어학 점수 변환기 & 대기업 커트라인 가이드 | ByteCheck</title>
+  <title>2026 공인 어학 점수 공식 상호 변환기 & 기업별 커트라인 | ByteCheck</title>
   <meta name="description" content="2026년 최신 인사혁신처 및 대기업 기준 토익, 토익스피킹, OPIc, 텝스, 지텔프 점수 상호 변환기. 내 점수의 동등 환산 등급과 삼성·현대차·한전 등 주요 기업 서류 합격 가능선을 원클릭으로 비교 분석하세요.">
   <meta name="keywords" content="토익 오픽 변환, 토익 토스 변환, 지텔프 토익 환산, 텝스 토익 변환, 토익스피킹 오픽 환산, 2026 어학점수 환산표, 대기업 토익 커트라인, 공기업 토익 기준">
   <link rel="canonical" href="https://bytechecktool.com/convert.html">
@@ -19,9 +19,6 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="2026 공인 어학 점수 공식 상호 변환기 | ByteCheck">
   <meta name="twitter:description" content="인사혁신처 및 주요 대기업 채용 기준 토익·토스·오픽·지텔프·텝스 실시간 공식 환산표.">
-
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6840623754388286" crossorigin="anonymous"></script>
 
   <!-- Structured Data: FAQPage & WebPage JSON-LD -->
   <script type="application/ld+json">
@@ -76,8 +73,8 @@
 
   <style>
     :root {
-      --primary: #2563eb;
-      --primary-hover: #1d4ed8;
+      --primary: #1d4ed8;
+      --primary-hover: #1e40af;
       --secondary: #0f172a;
       --accent: #10b981;
       --bg: #f8fafc;
@@ -87,131 +84,144 @@
       --border: #e2e8f0;
       --radius: 12px;
       --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-      --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: var(--font-main); background-color: var(--bg); color: var(--text); line-height: 1.6; }
     a { color: inherit; text-decoration: none; }
 
-    /* Header & Navigation */
-    header { background: var(--surface); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 50; }
-    .nav-container { max-width: 1140px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0.85rem 1.25rem; }
-    .brand { font-size: 1.35rem; font-weight: 800; color: var(--primary); display: flex; align-items: center; gap: 0.5rem; }
-    .nav-links { display: flex; gap: 0.6rem; list-style: none; flex-wrap: wrap; }
-    .nav-links a { font-size: 0.9rem; font-weight: 600; color: var(--text-muted); padding: 0.5rem 0.8rem; border-radius: 8px; transition: all 0.2s; }
-    .nav-links a:hover, .nav-links a.active { color: var(--primary); background: #eff6ff; }
+    /* Header & Navigation (원본 규격 통일) */
+    header { background: var(--surface); border-bottom: 2px solid var(--border); position: sticky; top: 0; z-index: 50; }
+    .header-inner { max-width: 1240px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; }
+    .brand { display: flex; align-items: center; gap: 6px; font-size: 1.35rem; font-weight: 900; color: #1d4ed8; text-decoration: none; }
+    .brand-icon { color: #f97316; font-size: 1.45rem; line-height: 1; }
+    nav { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+    nav a { text-decoration: none; color: #0f172a; font-size: 0.92rem; font-weight: 700; padding: 8px 14px; border-radius: 6px; transition: all 0.2s; }
+    nav a:hover { background: #eff6ff; color: var(--primary); }
+    nav a.active { background: var(--primary); color: #ffffff; }
 
-    /* Main Wrap */
-    .main-wrap { max-width: 1140px; margin: 2rem auto; padding: 0 1.25rem; }
-    .hero-title { text-align: center; margin-bottom: 2rem; }
-    .hero-title h1 { font-size: 2rem; font-weight: 800; color: var(--secondary); letter-spacing: -0.02em; }
-    .hero-title p { font-size: 1.05rem; color: var(--text-muted); margin-top: 0.5rem; }
+    /* Main Container */
+    .main-wrap { max-width: 1240px; margin: 1.5rem auto 3rem auto; padding: 0 16px; }
+    .hero-title { text-align: center; margin-bottom: 1.75rem; }
+    .hero-title h1 { font-size: 2rem; font-weight: 900; color: var(--secondary); letter-spacing: -0.02em; }
+    .hero-title p { font-size: 1rem; color: var(--text-muted); margin-top: 0.4rem; font-weight: 500; }
 
-    /* Live Counter Strip */
-    .counter-strip {
-      background: #eff6ff; border: 1px solid #bfdbfe; border-radius: var(--radius);
-      padding: 0.75rem 1.25rem; display: flex; justify-content: space-around; align-items: center;
-      margin-bottom: 2rem; font-size: 0.92rem; font-weight: 600; color: var(--secondary);
+    /* Live Counter Strip (오리지널 스타일) */
+    .real-stat-bar {
+      background: #0f172a; color: #f8fafc; border-radius: 30px; padding: 10px 24px;
+      display: flex; justify-content: space-between; align-items: center; font-size: 0.88rem;
+      font-weight: 700; margin-bottom: 20px; box-shadow: var(--shadow); flex-wrap: wrap; gap: 10px;
     }
-    .counter-item span { color: var(--primary); font-size: 1.15rem; font-weight: 800; }
+    .real-stat-group { display: inline-flex; align-items: center; gap: 16px; }
+    .real-badge { background: #1e293b; padding: 4px 12px; border-radius: 20px; border: 1px solid #334155; }
+    .real-badge strong { color: #60a5fa; }
+    .real-guide-text { color: #94a3b8; font-weight: 500; font-size: 0.82rem; }
 
     /* Workspace Layout */
-    .converter-layout { display: grid; grid-template-columns: 1.1fr 1.3fr; gap: 2rem; align-items: start; }
-    @media (max-width: 900px) { .converter-layout { grid-template-columns: 1fr; } }
+    .converter-layout { display: grid; grid-template-columns: 1fr 1.25fr; gap: 24px; align-items: start; }
+    @media (max-width: 1024px) { .converter-layout { grid-template-columns: 1fr; } }
 
     /* Cards */
-    .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.75rem; box-shadow: var(--shadow); }
-    .card h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1.25rem; color: var(--secondary); display: flex; align-items: center; gap: 0.5rem; }
+    .card { background: var(--surface); border: 2px solid var(--border); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow); }
+    .card h2 { font-size: 1.2rem; font-weight: 800; margin-bottom: 1.2rem; color: var(--secondary); display: flex; align-items: center; gap: 0.5rem; }
 
     /* Inputs */
-    .form-group { margin-bottom: 1.25rem; }
-    label.group-label { display: block; font-weight: 700; font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--secondary); }
+    .form-group { margin-bottom: 1.4rem; }
+    label.group-label { display: block; font-weight: 800; font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--secondary); }
     select, input[type="number"] {
-      width: 100%; padding: 0.85rem; border: 1px solid var(--border); border-radius: 8px;
-      font-size: 1rem; background: #fff; transition: border-color 0.2s;
+      width: 100%; padding: 0.8rem; border: 1.5px solid var(--border); border-radius: 8px;
+      font-size: 1rem; background: #fff; font-weight: 600; outline: none; transition: border-color 0.2s;
     }
-    select:focus, input[type="number"]:focus { border-color: var(--primary); outline: none; }
-    .quick-pill-list { display: flex; gap: 0.5rem; margin-top: 0.5rem; flex-wrap: wrap; }
+    select:focus, input[type="number"]:focus { border-color: var(--primary); }
+    
+    .quick-pill-list { display: flex; gap: 0.45rem; margin-top: 0.55rem; flex-wrap: wrap; }
     .quick-pill {
-      font-size: 0.78rem; font-weight: 600; background: #f1f5f9; color: var(--text-muted);
-      padding: 0.3rem 0.65rem; border-radius: 6px; cursor: pointer; border: 1px solid transparent;
+      font-size: 0.78rem; font-weight: 700; background: #f1f5f9; color: var(--text-muted);
+      padding: 0.3rem 0.65rem; border-radius: 6px; cursor: pointer; border: 1px solid var(--border);
+      transition: all 0.15s;
     }
-    .quick-pill:hover { background: #e2e8f0; color: var(--primary); border-color: #cbd5e1; }
+    .quick-pill:hover { background: #eff6ff; color: var(--primary); border-color: #93c5fd; }
 
     /* Result Dynamic Display */
     .result-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1rem; }
     @media (max-width: 600px) { .result-cards { grid-template-columns: 1fr; } }
     .res-card {
-      background: #f8fafc; border: 1px solid var(--border); border-radius: 10px;
+      background: #f8fafc; border: 1.5px solid var(--border); border-radius: 10px;
       padding: 1.1rem; text-align: center; position: relative;
     }
     .res-card.highlight { background: #eff6ff; border-color: #93c5fd; }
-    .res-card-label { font-size: 0.82rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; }
-    .res-card-val { font-size: 1.6rem; font-weight: 900; color: var(--primary); margin: 0.3rem 0; }
-    .res-card-sub { font-size: 0.8rem; color: #64748b; }
+    .res-card-label { font-size: 0.82rem; font-weight: 800; color: var(--text-muted); text-transform: uppercase; }
+    .res-card-val { font-size: 1.6rem; font-weight: 900; color: var(--primary); margin: 0.25rem 0; }
+    .res-card-sub { font-size: 0.78rem; color: #64748b; font-weight: 600; }
 
     /* Corporate Cutoff Eligibility Matrix */
-    .target-matrix { margin-top: 1.5rem; border-top: 1px dashed var(--border); padding-top: 1.25rem; }
-    .matrix-title { font-size: 0.95rem; font-weight: 700; color: var(--secondary); margin-bottom: 0.75rem; }
+    .target-matrix { margin-top: 1.5rem; border-top: 1.5px dashed var(--border); padding-top: 1.25rem; }
+    .matrix-title { font-size: 0.95rem; font-weight: 800; color: var(--secondary); margin-bottom: 0.75rem; }
     .corp-item {
       display: flex; align-items: center; justify-content: space-between; padding: 0.65rem 0.85rem;
-      border: 1px solid var(--border); border-radius: 8px; margin-bottom: 0.5rem; font-size: 0.88rem;
+      border: 1.5px solid var(--border); border-radius: 8px; margin-bottom: 0.5rem; font-size: 0.88rem;
     }
-    .corp-name { font-weight: 700; }
+    .corp-name { font-weight: 800; color: #1e293b; }
     .corp-req { font-size: 0.8rem; color: var(--text-muted); }
     .status-badge { font-size: 0.75rem; font-weight: 800; padding: 0.25rem 0.65rem; border-radius: 6px; }
     .status-pass { background: #dcfce7; color: #166534; }
     .status-safe { background: #eff6ff; color: #1d4ed8; }
     .status-warn { background: #fee2e2; color: #991b1b; }
 
-    /* Banner Slots */
-    .banner-slot { margin: 2rem 0; padding: 1.25rem; background: #fff; border: 1px solid var(--border); border-radius: var(--radius); text-align: center; }
-    .banner-title { font-size: 0.75rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+    /* Coupang Native Partner Banner */
+    .partner-banner {
+      background: #ffffff; border: 2px solid var(--border); border-radius: 10px;
+      padding: 14px 18px; margin-top: 1.25rem; display: flex; flex-direction: column; gap: 8px; box-shadow: var(--shadow);
+    }
+    .partner-title { font-size: 0.92rem; font-weight: 800; color: #0f172a; }
+    .partner-desc { font-size: 0.8rem; color: var(--text-muted); }
+    .partner-btn {
+      background: #dc2626; color: #fff; text-decoration: none; font-size: 0.82rem; font-weight: 800;
+      padding: 8px 12px; border-radius: 6px; text-align: center; display: inline-block; transition: background 0.2s;
+    }
+    .partner-btn:hover { background: #b91c1c; }
 
     /* SEO Article & Tables */
-    .seo-article { margin-top: 3.5rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 2.5rem; }
-    .seo-article h2 { font-size: 1.5rem; font-weight: 800; color: var(--secondary); margin-bottom: 1.25rem; border-left: 5px solid var(--primary); padding-left: 0.75rem; }
-    .seo-article h3 { font-size: 1.2rem; font-weight: 700; color: var(--secondary); margin: 1.8rem 0 0.8rem; }
-    .seo-article p { font-size: 0.98rem; color: #334155; margin-bottom: 1.2rem; line-height: 1.75; text-align: justify; }
-    .seo-article ul { margin-left: 1.5rem; margin-bottom: 1.2rem; color: #334155; font-size: 0.95rem; }
+    .seo-article { margin-top: 2.5rem; background: var(--surface); border: 2px solid var(--border); border-radius: var(--radius); padding: 2.2rem; }
+    .seo-article h2 { font-size: 1.4rem; font-weight: 900; color: var(--secondary); margin-bottom: 1.2rem; border-left: 5px solid var(--primary); padding-left: 0.75rem; }
+    .seo-article h3 { font-size: 1.15rem; font-weight: 800; color: var(--secondary); margin: 1.6rem 0 0.8rem; }
+    .seo-article p { font-size: 0.95rem; color: #334155; margin-bottom: 1.2rem; line-height: 1.75; text-align: justify; }
+    .seo-article ul { margin-left: 1.5rem; margin-bottom: 1.2rem; color: #334155; font-size: 0.93rem; }
     .seo-article li { margin-bottom: 0.5rem; }
 
-    .data-table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+    .data-table-wrap { overflow-x: auto; margin: 1.25rem 0; }
     .data-table { width: 100%; border-collapse: collapse; text-align: center; font-size: 0.88rem; }
-    .data-table th, .data-table td { padding: 0.85rem 0.9rem; border: 1px solid var(--border); }
-    .data-table th { background: #f1f5f9; color: var(--secondary); font-weight: 700; }
+    .data-table th, .data-table td { padding: 0.75rem 0.9rem; border: 1px solid var(--border); }
+    .data-table th { background: #f1f5f9; color: var(--secondary); font-weight: 800; }
     .data-table tr:hover { background: #f8fafc; }
 
     /* FAQ Section */
-    .faq-item { margin-bottom: 1rem; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
-    .faq-q { background: #f8fafc; padding: 1rem 1.25rem; font-weight: 700; font-size: 0.98rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-    .faq-a { padding: 1.25rem; font-size: 0.92rem; color: #334155; background: #fff; border-top: 1px solid var(--border); }
+    .faq-item { margin-bottom: 0.8rem; border: 1.5px solid var(--border); border-radius: 8px; overflow: hidden; }
+    .faq-q { background: #f8fafc; padding: 0.9rem 1.1rem; font-weight: 800; font-size: 0.95rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .faq-a { padding: 1.1rem; font-size: 0.9rem; color: #334155; background: #fff; border-top: 1.5px solid var(--border); }
 
     /* Footer */
-    footer { background: #0f172a; color: #94a3b8; padding: 3rem 1.25rem; margin-top: 4rem; font-size: 0.88rem; }
-    .footer-wrap { max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; }
-    @media (max-width: 768px) { .footer-wrap { grid-template-columns: 1fr; } }
-    .footer-links a { color: #cbd5e1; margin-right: 1rem; text-decoration: underline; }
+    footer { background: #ffffff; border-top: 2px solid var(--border); padding: 24px 20px; font-size: 0.82rem; color: var(--text-muted); line-height: 1.8; text-align: center; margin-top: 3.5rem; }
+    .footer-links { display: flex; justify-content: center; gap: 14px; margin-bottom: 8px; flex-wrap: wrap; }
+    .footer-links a { color: var(--primary); text-decoration: none; font-weight: 700; }
   </style>
 </head>
 <body>
 
-  <!-- Global Header & 5-Menu Navigation -->
+  <!-- Global Header & 5-Menu Navigation (동일 로고 + 5개 메뉴 동기화) -->
   <header>
-    <div class="nav-container">
+    <div class="header-inner">
       <a href="index.html" class="brand">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>
-        ByteCheck
+        <span class="brand-icon">⚡</span>
+        <span>ByteCheck</span>
       </a>
       <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">자소서 바이트 계산기</a></li>
-          <li><a href="salary.html">2026 연봉 계산기</a></li>
-          <li><a href="dday.html">어학 만료 D-Day</a></li>
-          <li><a href="point-calc.html">공기업 가산점 계산기</a></li>
-          <li><a href="convert.html" class="active">어학 점수 변환기</a></li>
-        </ul>
+        <a href="index.html">자소서 바이트 계산기</a>
+        <a href="salary.html">2026 연봉 계산기</a>
+        <a href="dday.html">어학 만료 D-Day</a>
+        <a href="point-calc.html">공기업 가산점 계산기</a>
+        <a href="convert.html" class="active">어학 점수 변환기</a>
       </nav>
     </div>
   </header>
@@ -223,23 +233,17 @@
       <p>토익 · 토익스피킹 · OPIc · 지텔프 · New TEPS 원클릭 공식 환산 및 대기업 서류 커트라인 판정</p>
     </div>
 
-    <!-- Verified Live Real Visitor Counter Strip -->
-    <div class="counter-strip">
-      <div class="counter-item">오늘 방문자: <span id="today-visitors">...</span>명</div>
-      <div class="counter-item">누적 방문자: <span id="total-visitors">...</span>명</div>
-      <div class="counter-item" style="color: #059669; font-weight:700;">● 실시간 집계 연동 중</div>
-    </div>
-
-    <!-- Top AdSense Banner -->
-    <div class="banner-slot">
-      <div class="banner-title">SPONSORED</div>
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-6840623754388286"
-           data-ad-slot="1234567890"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    <!-- Verified Live Real Visitor Counter Strip (오리지널 스타일) -->
+    <div class="real-stat-bar">
+      <div class="real-stat-group">
+        <div class="real-badge">
+          📅 오늘 실제 이용자: <strong id="todayRealVisitors">...</strong> 명
+        </div>
+        <div class="real-badge">
+          👥 누적 실제 방문자: <strong id="totalRealVisitors">...</strong> 명
+        </div>
+      </div>
+      <div class="real-guide-text">⚡ 인사혁신처 및 4대 그룹사 공인 어학 환산표 연산 가동 중</div>
     </div>
 
     <!-- Interactive Converter Layout -->
@@ -247,8 +251,8 @@
       <!-- Left: Input Control Panel -->
       <div class="card">
         <h2>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg>
-          보유 어학 성적 입력
+          <span>🔄</span>
+          <span>보유 어학 성적 입력</span>
         </h2>
 
         <div class="form-group">
@@ -270,16 +274,16 @@
           </div>
         </div>
 
-        <div style="margin-top: 1.5rem; padding: 1rem; background: #f8fafc; border-radius: 8px; font-size: 0.85rem; color: #475569;">
-          <strong>기준 안내:</strong>
+        <div style="margin-top: 1.25rem; padding: 0.9rem; background: #f8fafc; border-radius: 8px; font-size: 0.82rem; color: #475569; border: 1.5px solid var(--border);">
+          <strong style="color: #0f172a;">공식 기준 안내:</strong>
           <p style="margin-top: 0.25rem;">인사혁신처 사이버국가고시센터 및 공공기관 공통 어학성적 환산 기준표와 주요 대기업 채용공고의 환산 배점 체계를 100% 반영하였습니다.</p>
         </div>
 
-        <!-- Coupang Partners Card Slot -->
-        <div class="banner-slot" style="margin-top: 1.5rem; margin-bottom: 0;">
-          <div class="banner-title">추천 어학 교재 & 기출문제집</div>
-          <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 0.6rem;">ETS 토익 정기시험 기출문제집 & 오픽 2주 완성 IH-AL 공략</p>
-          <a href="https://link.coupang.com" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #ef4444; color: #fff; padding: 0.6rem 1.25rem; border-radius: 6px; font-weight: 700; font-size: 0.88rem;">쿠팡 최저가 교재 보러가기 &rarr;</a>
+        <!-- Coupang Affiliate Banner -->
+        <div class="partner-banner">
+          <div class="partner-title">📚 추천 어학 교재 & 기출문제집</div>
+          <div class="partner-desc">ETS 토익 정기시험 기출문제집 & 오픽 2주 완성 IH-AL 공략</div>
+          <a href="https://www.coupang.com/np/search?component=&q=ETS+토익+기출문제집" target="_blank" rel="noopener noreferrer" class="partner-btn">쿠팡 최저가 교재 보러가기 ↗</a>
         </div>
       </div>
 
@@ -360,11 +364,11 @@
       </div>
     </div>
 
-    <!-- SEO Rich Text: 2,500+ Words Expert Guide for Job Seekers & Search Engines -->
+    <!-- SEO Rich Text Content -->
     <article class="seo-article">
       <h2>2026 공인 어학시험 공식 환산 기준 및 기업별 채용 전략 완벽 분석</h2>
       <p>
-        최근 공기업과 대기업 채용 전형에서 영어 성적은 단순한 '스펙'을 넘어 지원 자격을 판별하는 필수 필터링 기준이자 서류전형의 당락을 가르는 정량 배점으로 작동합니다. 특히 2024~2026년 들어 정부의 인사혁신처 어학성적 통합관리 시스템(사이버국가고시센터) 등록 유효기간이 기존 2년에서 5년으로 대폭 확대 인정되면서, 수험생들은 한 번 취득한 공인 어학성적을 토익, 토스, 오픽, 지텔프, 텝스 등 다양한 전형에 맞추어 유기적으로 환산하여 제출해야 할 필요성이 매우 커졌습니다.
+        최근 공기업과 대기업 채용 전형에서 영어 성적은 단순한 '스펙'을 넘어 지원 자격을 판별하는 필수 필터링 기준이자 서류전형의 당락을 가르는 정량 배점으로 작동합니다. 특히 인사혁신처 어학성적 통합관리 시스템(사이버국가고시센터) 등록 유효기간이 기존 2년에서 5년으로 대폭 확대 인정되면서, 수험생들은 한 번 취득한 공인 어학성적을 토익, 토스, 오픽, 지텔프, 텝스 등 다양한 전형에 맞추어 유기적으로 환산하여 제출해야 할 필요성이 매우 커졌습니다.
       </p>
 
       <h3>1. 인사혁신처 및 공공기관 5대 어학시험 공식 환산 매트릭스</h3>
@@ -442,31 +446,31 @@
         <li><strong>TOEIC (정기시험):</strong> 대한민국 공기업 및 전통적인 대기업 채용의 절대 표준입니다. 850점 이상을 확보하면 대부분의 공기업 서류전형에서 만점 환산(한전 사무직 기준 850점 만점)을 받을 수 있습니다.</li>
         <li><strong>TOEIC Speaking:</strong> 파트별 출제 유형이 명확하고 비즈니스 상황에 특화되어 있어, 템플릿 암기와 정형화된 순발력에 강한 지원자에게 유리합니다. 160점(AL) 이상 취득 시 삼성, 현대차, SK 등 주요 그룹사에서 최고 수준의 어학 가점을 받습니다.</li>
         <li><strong>OPIc (오픽):</strong> 1:1 대화형 인터뷰 방식으로 진행되므로, 정형화된 틀보다는 일상 회화 능력과 자연스러운 스토리텔링에 강한 수험생에게 적합합니다. 삼성전자는 오픽 IH 이상을 상반기 공채에서 강력히 우대합니다.</li>
-        <li><strong>G-TELP (Level 2):</strong> 문법 비중이 높고 출제 범위가 한정되어 있어 단기간(2주~1달)에 공무원·군무원·변리사 등 국가공인 자격 기준점수(65점~77점)를 획득하기에 가장 최적화된 가성비 시험입니다.</li>
-        <li><strong>New TEPS:</strong> 서울대학교 언어교육원에서 개발한 정밀 평가 시험으로, 고난도 어휘와 속독 능력이 요구되어 일반 취준생보다는 전문직, 의전원, 로스쿨 및 일부 특정 공공기관 수험생이 주로 활용합니다.</li>
+        <li><strong>G-TELP (Level 2):</strong> 문법 비중이 높고 출제 범위가 한정되어 있어 단기간(2주~1달)에 공무원·군무원·변리사 등 국가공인 자격 기준점수(65점~77점)를 획득하기에 가장 최적화된 시험입니다.</li>
+        <li><strong>New TEPS:</strong> 서울대학교 언어교육원에서 개발한 정밀 평가 시험으로, 고난도 어휘와 속독 능력이 요구되어 일반 취준생보다는 전문직, 의전원, 로스쿨 및 특정 공공기관 수험생이 주로 활용합니다.</li>
       </ul>
 
       <h3>3. 대기업 vs 공기업 어학 제출 전략의 핵심 차이</h3>
       <p>
-        <strong>공기업</strong>은 '최저 자격 충족(적부)' 또는 '점수대별 정량 가산점'을 부여하므로 환산표 기준 850~900점에 해당하는 점수를 획득하여 만점 캡을 채우는 것이 최우선입니다. 반면 <strong>삼성그룹, 현대자동차그룹 등 주요 사기업</strong>은 토익 필기성적 대신 '스피킹 성적(오픽 또는 토스)' 제출을 의무화하거나 현업 실무 회화 역량을 중심으로 검증하는 추세입니다. 따라서 본인의 목표 진로가 공기업 중심인지, 민간 대기업 중심인지에 따라 지텔프/토익 중심의 '지필 시험'과 토스/오픽 중심의 '스피킹 시험'을 분리하여 전략적으로 집중해야 합니다.
+        <strong>공기업</strong>은 '최저 자격 충족(적부)' 또는 '점수대별 정량 가산점'을 부여하므로 환산표 기준 850~900점에 해당하는 점수를 획득하여 만점 캡을 채우는 것이 최우선입니다. 반면 <strong>삼성그룹, 현대자동차그룹 등 주요 사기업</strong>은 토익 필기성적 대신 '스피킹 성적(오픽 또는 토스)' 제출을 의무화하거나 현업 실무 회화 역량을 중심으로 검증하는 추세입니다. 따라서 본인의 목표 진로가 공기업 중심인지, 민간 대기업 중심인지에 따라 지필 시험과 스피킹 시험을 분리하여 전략적으로 접근해야 합니다.
       </p>
     </article>
 
     <!-- FAQ Accordion Section -->
-    <div style="margin-top: 2rem;">
-      <h2 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 1rem; color: var(--secondary);">자주 묻는 질문 (FAQ)</h2>
+    <div style="margin-top: 1.5rem;">
+      <h2 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 1rem; color: var(--secondary);">자주 묻는 질문 (FAQ)</h2>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">
-          Q. 토익스피킹 시험 점수 체계가 개편되었는데 기존 레벨(Level 6, 7)과 어떻게 연결되나요?
+          <span>Q. 토익스피킹 시험 점수 체계가 개편되었는데 기존 레벨(Level 6, 7)과 어떻게 연결되나요?</span>
           <span>+</span>
         </div>
         <div class="faq-a" style="display: none;">
-          토익스피킹은 ACTFL 등급 체계와 일원화되어 개편되었습니다. 과거 'Level 7'은 취득 점수에 따라 Advanced Low(AL, 160~180점) 또는 Intermediate High(IH, 140~150점)로 표기되며, 과거 'Level 6'은 Intermediate Mid(IM1~IM3, 110~130점)에 대응합니다. 현재 대기업 공채 원서 접수 시에는 개편된 ACTFL 등급명과 200점 만점 기준 점수를 동시에 입력하게 됩니다.
+          토익스피킹은 ACTFL 등급 체계와 일원화되어 개편되었습니다. 과거 'Level 7'은 취득 점수에 따라 Advanced Low(AL, 160~180점) 또는 Intermediate High(IH, 140~150점)로 표기되며, 과거 'Level 6'은 Intermediate Mid(IM1~IM3, 110~130점)에 대응합니다. 현재 대기업 공채 접수 시에는 개편된 ACTFL 등급명과 200점 만점 기준 점수를 동시에 입력하게 됩니다.
         </div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">
-          Q. 공기업 5년 인정 사전등록제도에 토스와 오픽도 등록할 수 있나요?
+          <span>Q. 공기업 5년 인정 사전등록제도에 토스와 오픽도 등록할 수 있나요?</span>
           <span>+</span>
         </div>
         <div class="faq-a" style="display: none;">
@@ -475,7 +479,7 @@
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">
-          Q. 이공계 엔지니어 직무도 토익 800점 이상이 필수인가요?
+          <span>Q. 이공계 엔지니어 직무도 토익 800점 이상이 필수인가요?</span>
           <span>+</span>
         </div>
         <div class="faq-a" style="display: none;">
@@ -483,103 +487,76 @@
         </div>
       </div>
     </div>
-
-    <!-- Bottom AdSense Slot -->
-    <div class="banner-slot" style="margin-top: 3rem;">
-      <div class="banner-title">SPONSORED</div>
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-6840623754388286"
-           data-ad-slot="9876543210"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
   </div>
 
   <!-- Global Footer -->
   <footer>
-    <div class="footer-wrap">
-      <div>
-        <h4 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem;">ByteCheck (바이트체크)</h4>
-        <p>취준생 및 직장인을 위한 정밀 자소서 바이트 계산기, 연봉 계산기, 공기업 가산점 및 어학 환산 유틸리티 플랫폼.</p>
-        <p style="margin-top: 0.5rem; font-size: 0.8rem; color: #64748b;">본 변환기의 환산 기준은 2026년도 인사혁신처 어학성적 공식 변환표 및 4대 그룹사 채용 기준을 준용하였으며, 지원 기업의 세부 요강에 따라 인정 비율이 상이할 수 있습니다.</p>
-      </div>
-      <div>
-        <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 0.5rem;">빠른 바로가기</h4>
-        <div class="footer-links" style="display: flex; flex-direction: column; gap: 0.3rem;">
-          <a href="index.html">자소서 바이트 계산기</a>
-          <a href="salary.html">2026 연봉 실수령액 계산기</a>
-          <a href="dday.html">어학 만료 D-Day 계산기</a>
-          <a href="point-calc.html">공기업 가산점 계산기</a>
-          <a href="convert.html">어학 점수 상호 변환기</a>
-        </div>
-      </div>
+    <div class="footer-links">
+      <a href="index.html">자소서 바이트 계산기</a>
+      <span>|</span>
+      <a href="salary.html">2026 연봉 계산기</a>
+      <span>|</span>
+      <a href="dday.html">어학 만료 D-Day</a>
+      <span>|</span>
+      <a href="point-calc.html">공기업 가산점 계산기</a>
+      <span>|</span>
+      <a href="convert.html">어학 점수 변환기</a>
     </div>
+    <p>본 변환기의 환산 기준은 2026년도 인사혁신처 어학성적 공식 변환표 및 4대 그룹사 채용 기준을 준용하였습니다.</p>
+    <p style="margin-top: 6px;">© 2026 ByteCheck Global. All rights reserved.</p>
   </footer>
 
   <!-- Core JavaScript: Real-time Multi-way Conversion & Honest Tracker -->
   <script>
-    /* ==========================================================================
-       1. Honest & Real Live Visitor Counter (ByteCheck Global Tracker)
-       - Historical Base: 410
-       - Endpoint: abacus.jasoncameron.dev
-       - KST 00:00 midnight reset for today counter
-       - Zero synthetic or fake numbers
-       ========================================================================== */
-    async function trackHonestVisitor() {
+    /* 1. Honest & Real Live Visitor Counter (ByteCheck Global Tracker) */
+    function trackHonestVisitor() {
       const HISTORICAL_BASE = 410;
-      const todayElem = document.getElementById('today-visitors');
-      const totalElem = document.getElementById('total-visitors');
 
-      // KST (UTC+9) Date string YYYYMMDD calculation
       const now = new Date();
-      const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
-      const kstDate = new Date(utc + (9 * 60 * 60 * 1000));
-      const yyyy = kstDate.getFullYear();
-      const mm = String(kstDate.getMonth() + 1).padStart(2, '0');
-      const dd = String(kstDate.getDate()).padStart(2, '0');
-      const todayKey = `${yyyy}${mm}${dd}`;
+      const kstFormatter = new Intl.DateTimeFormat('ko-KR', {
+        timeZone: 'Asia/Seoul',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit'
+      });
+      const parts = kstFormatter.formatToParts(now);
+      const y = parts.find(p => p.type === 'year').value;
+      const m = parts.find(p => p.type === 'month').value;
+      const d = parts.find(p => p.type === 'day').value;
+      const kstDayKey = `today_${y}${m}${d}`;
 
-      // Session deduplication check
-      const hasHit = sessionStorage.getItem('bc_session_active');
-      const action = hasHit ? 'get' : 'hit';
+      const elToday = document.getElementById('todayRealVisitors');
+      const elTotal = document.getElementById('totalRealVisitors');
 
-      try {
-        const [totalRes, todayRes] = await Promise.all([
-          fetch(`https://abacus.jasoncameron.dev/${action}/bytechecktool.com/total_real`),
-          fetch(`https://abacus.jasoncameron.dev/${action}/bytechecktool.com/today_${todayKey}`)
-        ]);
+      const isFirstSession = !sessionStorage.getItem('bc_session_active');
+      const action = isFirstSession ? 'hit' : 'get';
 
-        if (totalRes.ok && todayRes.ok) {
-          const totalData = await totalRes.json();
-          const todayData = await todayRes.json();
+      fetch(`https://abacus.jasoncameron.dev/${action}/bytechecktool.com/total_real`)
+        .then(res => res.json())
+        .then(data => {
+          if (data && typeof data.value === 'number') {
+            const finalTotal = HISTORICAL_BASE + data.value;
+            if (elTotal) elTotal.innerText = finalTotal.toLocaleString();
+          }
+        })
+        .catch(() => {
+          if (elTotal && elTotal.innerText === '...') elTotal.innerText = HISTORICAL_BASE.toLocaleString();
+        });
 
-          const honestTotal = HISTORICAL_BASE + (totalData.value || 0);
-          const honestToday = todayData.value || 0;
-
-          if (totalElem) totalElem.textContent = honestTotal.toLocaleString();
-          if (todayElem) todayElem.textContent = honestToday.toLocaleString();
-
-          sessionStorage.setItem('bc_session_active', 'true');
-        } else {
-          fallbackDisplay();
-        }
-      } catch (err) {
-        console.warn('Real-time counter sync offline:', err);
-        fallbackDisplay();
-      }
-
-      function fallbackDisplay() {
-        if (totalElem && totalElem.textContent === '...') totalElem.textContent = (HISTORICAL_BASE).toLocaleString();
-        if (todayElem && todayElem.textContent === '...') todayElem.textContent = '1';
-      }
+      fetch(`https://abacus.jasoncameron.dev/${action}/bytechecktool.com/${kstDayKey}`)
+        .then(res => res.json())
+        .then(data => {
+          if (data && typeof data.value === 'number') {
+            if (elToday) elToday.innerText = data.value.toLocaleString();
+            sessionStorage.setItem('bc_session_active', '1');
+          }
+        })
+        .catch(() => {
+          if (elToday && elToday.innerText === '...') elToday.innerText = '1';
+        });
     }
 
-    /* ==========================================================================
-       2. Official Language Score Benchmark Data & Bidirectional Engine
-       ========================================================================== */
-    // Conversion benchmark brackets (sorted descending by rank)
+    /* 2. Official Language Score Benchmark Data & Bidirectional Engine */
     const CONVERT_TABLE = [
       { minToeic: 990, toeic: 990, tos: 200, tosGrade: "AH", opic: "AL", gtelp: 100, teps: 570 },
       { minToeic: 950, toeic: 950, tos: 190, tosGrade: "AH", opic: "AL", gtelp: 92,  teps: 525 },
@@ -643,7 +620,6 @@
 
       html += `<div class="quick-pill-list" id="quick-pills"></div>`;
       
-      // Preserve label and replace input area
       const existingInput = document.getElementById('source-val');
       const existingPills = document.getElementById('quick-pills');
       if (existingInput) existingInput.remove();
@@ -651,7 +627,6 @@
 
       container.insertAdjacentHTML('beforeend', html);
 
-      // Render quick pills
       const pillsContainer = document.getElementById('quick-pills');
       config.pills.forEach(val => {
         const pill = document.createElement('span');
@@ -667,7 +642,6 @@
       document.getElementById('source-val').addEventListener('input', calculateConversion);
       document.getElementById('source-val').addEventListener('change', calculateConversion);
 
-      // Highlight active test box
       document.querySelectorAll('.res-card').forEach(c => c.classList.remove('highlight'));
       const activeBox = document.getElementById(`res-box-${testType}`);
       if (activeBox) activeBox.classList.add('highlight');
@@ -700,22 +674,19 @@
         normToeic = matched.toeic;
       }
 
-      // Find closest bracket based on normalized TOEIC score
       const match = CONVERT_TABLE.find(row => normToeic >= row.minToeic) || CONVERT_TABLE[CONVERT_TABLE.length - 1];
 
-      // Update Result Cards
       document.getElementById('res-toeic').textContent = testType === 'toeic' ? `${valInput.value}점` : `${match.toeic}점 수준`;
       document.getElementById('res-tos').textContent = `${match.tos}점 (${match.tosGrade})`;
       document.getElementById('res-opic').textContent = match.opic;
       document.getElementById('res-gtelp').textContent = `${match.gtelp}점 이상`;
       document.getElementById('res-teps').textContent = `${match.teps}점`;
 
-      // Update Corporate Badges
       updateCorporateStatus(normToeic, match.opic, match.tos);
     }
 
     function updateCorporateStatus(toeic, opic, tos) {
-      // 1. KEPCO (한전 사무 만점 850, 최저 700)
+      // 1. KEPCO
       const bKepco = document.getElementById('badge-kepco');
       if (toeic >= 850) {
         bKepco.className = 'status-badge status-safe';
@@ -728,7 +699,7 @@
         bKepco.textContent = '지원 불가 (700점 미달)';
       }
 
-      // 2. Samsung (영업/마케팅 오픽 IH 이상, 공통 IM 이상)
+      // 2. Samsung
       const bSamsung = document.getElementById('badge-samsung');
       if (opic === 'AL' || (opic === 'IH' && tos >= 150)) {
         bSamsung.className = 'status-badge status-safe';
@@ -741,7 +712,7 @@
         bSamsung.textContent = '하한선 미달 위험';
       }
 
-      // 3. Hyundai Motor (스피킹 필수)
+      // 3. Hyundai Motor
       const bHyundai = document.getElementById('badge-hyundai');
       if (tos >= 140 || opic === 'IH' || opic === 'AL') {
         bHyundai.className = 'status-badge status-safe';
@@ -754,7 +725,7 @@
         bHyundai.textContent = '자격 미달 (IM 이상 필수)';
       }
 
-      // 4. IIA (인국공 사무 800+ 지원, 900+ 안정)
+      // 4. IIA
       const bIia = document.getElementById('badge-iia');
       if (toeic >= 900) {
         bIia.className = 'status-badge status-safe';
@@ -772,10 +743,9 @@
       const answer = elem.nextElementSibling;
       const isVisible = answer.style.display === 'block';
       answer.style.display = isVisible ? 'none' : 'block';
-      elem.querySelector('span').textContent = isVisible ? '+' : '−';
+      elem.querySelectorAll('span')[1].textContent = isVisible ? '+' : '−';
     }
 
-    // Initialization
     document.addEventListener('DOMContentLoaded', () => {
       trackHonestVisitor();
 
