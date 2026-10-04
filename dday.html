@@ -52,7 +52,7 @@
     ======================================================== */
     header { background: #ffffff; border-bottom: 2px solid var(--border); width: 100%; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.04); }
     .header-inner { max-width: 1240px; margin: 0 auto; padding: 10px 16px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
-    .brand { display: inline-flex; align-items: center; gap: 8px; font-size: 1.35rem; font-weight: 900; color: var(--primary); text-decoration: none; white-space: nowrap; flex-shrink: 0; }
+    .brand { display: inline-flex; align-items: center; gap: 8px; font-size: 1.25rem; font-weight: 900; color: var(--primary); text-decoration: none; white-space: nowrap; flex-shrink: 0; }
     nav { 
       display: flex !important; 
       flex-direction: row !important; 
@@ -93,9 +93,23 @@
     .section-title { font-size: 1.2rem; font-weight: 800; display: flex; align-items: center; gap: 8px; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--border); }
 
     .dday-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-    .form-group { margin-bottom: 14px; }
+    .form-group { margin-bottom: 14px; width: 100%; }
     .form-label { display: block; font-size: 0.88rem; font-weight: 800; color: #0f172a; margin-bottom: 5px; }
-    .form-input { width: 100%; padding: 11px 14px; border: 2px solid var(--border); border-radius: 8px; font-size: 1rem; font-weight: 700; outline: none; }
+    
+    /* 인풋 삐져나옴 완벽 방지 */
+    .form-input { 
+      width: 100% !important; 
+      max-width: 100% !important; 
+      box-sizing: border-box !important; 
+      padding: 11px 14px; 
+      border: 2px solid var(--border); 
+      border-radius: 8px; 
+      font-size: 1rem; 
+      font-weight: 700; 
+      outline: none; 
+      -webkit-appearance: none;
+      background-color: #fff;
+    }
     .form-input:focus { border-color: var(--primary); }
 
     .result-box { background: #f8fafc; border: 2px solid var(--border); border-radius: 10px; padding: 18px; text-align: center; display: flex; flex-direction: column; justify-content: center; }
@@ -129,8 +143,29 @@
     .hub-item:hover { background: #eff6ff; border-color: var(--primary); color: var(--primary); }
     .hub-tag { font-size: 0.75rem; padding: 3px 8px; border-radius: 4px; background: #e2e8f0; color: #334155; font-weight: 800; }
 
-    .custom-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; margin-top: 10px; }
-    .custom-table th, .custom-table td { padding: 11px 14px; border: 1.5px solid var(--border); text-align: center; }
+    /* ========================================================
+       [모바일 완벽 대응] 테이블 글자 세로 깨짐 방지 스타일
+    ======================================================== */
+    .table-scroll-wrap {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin-top: 10px;
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+    }
+    .custom-table { 
+      width: 100%; 
+      border-collapse: collapse; 
+      font-size: 0.9rem; 
+      min-width: 600px; /* 테이블 최소 너비 확보로 글자 찌그러짐 원천 차단 */
+    }
+    .custom-table th, .custom-table td { 
+      padding: 10px 14px; 
+      border: 1px solid var(--border); 
+      text-align: center; 
+      white-space: nowrap; /* 억지 세로 줄바꿈 방지 */
+    }
     .custom-table th { background: #e2e8f0; color: #0f172a; font-weight: 800; }
     .custom-table td { background: #ffffff; color: var(--text); font-weight: 600; }
 
@@ -366,28 +401,28 @@
       </div>
     </div>
 
-    <!-- 토익 / 오픽 점수 환산 조견표 -->
+    <!-- 토익 / 오픽 점수 환산 조견표 (가로 스크롤 래퍼 적용) -->
     <section class="card">
       <div class="section-title"><span>📊</span> 2026 주요 대기업 토익 vs 오픽 점수 환산 기준표</div>
-      <div style="overflow-x: auto;">
+      <div class="table-scroll-wrap">
         <table class="custom-table">
           <thead>
             <tr><th>토익 (TOEIC)</th><th>오픽 (OPIc)</th><th>토익스피킹</th><th>수준 및 지원 추천</th></tr>
           </thead>
           <tbody>
-            <tr><td>900점 이상</td><td>AL (Advanced Low)</td><td>AH (Advanced High)</td><td>대기업 해외영업 / 전략기획 서류 안정권</td></tr>
-            <tr><td>850 ~ 895점</td><td>IH (Intermediate High)</td><td>AM (Advanced Mid)</td><td>주요 대기업 및 금융권 서류 적정권</td></tr>
-            <tr><td>750 ~ 845점</td><td>IM3</td><td>IM3</td><td>공기업 일반 사무직 기본 지원 자격</td></tr>
-            <tr><td>700점 미만</td><td>IM1 ~ IM2</td><td>IM1 ~ IM2</td><td>이공계 R&D 및 생산기술 지원 자격 기준</td></tr>
+            <tr><td><strong>900점 이상</strong></td><td>AL (Advanced Low)</td><td>AH (Advanced High)</td><td>대기업 해외영업 / 전략기획 서류 안정권</td></tr>
+            <tr><td><strong>850 ~ 895점</strong></td><td>IH (Intermediate High)</td><td>AM (Advanced Mid)</td><td>주요 대기업 및 금융권 서류 적정권</td></tr>
+            <tr><td><strong>750 ~ 845점</strong></td><td>IM3</td><td>IM3</td><td>공기업 일반 사무직 기본 지원 자격</td></tr>
+            <tr><td><strong>700점 미만</strong></td><td>IM1 ~ IM2</td><td>IM1 ~ IM2</td><td>이공계 R&D 및 생산기술 지원 자격 기준</td></tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <!-- 국가고시/공무원 영어 대체 기준표 -->
+    <!-- 국가고시/공무원 영어 대체 기준표 (가로 스크롤 래퍼 적용) -->
     <section class="card">
       <div class="section-title"><span>📜</span> 국가직 7급·군무원 공채 공인영어 공식 대체 인정 기준표</div>
-      <div style="overflow-x: auto;">
+      <div class="table-scroll-wrap">
         <table class="custom-table">
           <thead>
             <tr><th>채용 직급</th><th>토익 (TOEIC)</th><th>지텔프 (G-TELP)</th><th>텝스 (TEPS)</th></tr>
