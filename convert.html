@@ -91,7 +91,7 @@
     body { font-family: var(--font-main); background-color: var(--bg); color: var(--text); line-height: 1.6; }
     a { color: inherit; text-decoration: none; }
 
-    /* Header & Navigation (원본 규격 통일) */
+    /* Header & Navigation */
     header { background: var(--surface); border-bottom: 2px solid var(--border); position: sticky; top: 0; z-index: 50; }
     .header-inner { max-width: 1240px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; }
     .brand { display: flex; align-items: center; gap: 6px; font-size: 1.35rem; font-weight: 900; color: #1d4ed8; text-decoration: none; }
@@ -107,7 +107,7 @@
     .hero-title h1 { font-size: 2rem; font-weight: 900; color: var(--secondary); letter-spacing: -0.02em; }
     .hero-title p { font-size: 1rem; color: var(--text-muted); margin-top: 0.4rem; font-weight: 500; }
 
-    /* Live Counter Strip (오리지널 스타일) */
+    /* Live Counter Strip */
     .real-stat-bar {
       background: #0f172a; color: #f8fafc; border-radius: 30px; padding: 10px 24px;
       display: flex; justify-content: space-between; align-items: center; font-size: 0.88rem;
@@ -209,7 +209,7 @@
 </head>
 <body>
 
-  <!-- Global Header & 5-Menu Navigation (동일 로고 + 5개 메뉴 동기화) -->
+  <!-- Global Header & 6-Menu Navigation (실시간 채용공고 추가 동기화) -->
   <header>
     <div class="header-inner">
       <a href="index.html" class="brand">
@@ -222,6 +222,7 @@
         <a href="dday.html">어학 만료 D-Day</a>
         <a href="point-calc.html">공기업 가산점 계산기</a>
         <a href="convert.html" class="active">어학 점수 변환기</a>
+        <a href="jobs.html">실시간 채용공고</a>
       </nav>
     </div>
   </header>
@@ -489,7 +490,7 @@
     </div>
   </div>
 
-  <!-- Global Footer -->
+  <!-- Global Footer (6대 메뉴 일괄 동기화) -->
   <footer>
     <div class="footer-links">
       <a href="index.html">자소서 바이트 계산기</a>
@@ -501,6 +502,8 @@
       <a href="point-calc.html">공기업 가산점 계산기</a>
       <span>|</span>
       <a href="convert.html">어학 점수 변환기</a>
+      <span>|</span>
+      <a href="jobs.html">실시간 채용공고</a>
     </div>
     <p>본 변환기의 환산 기준은 2026년도 인사혁신처 어학성적 공식 변환표 및 4대 그룹사 채용 기준을 준용하였습니다.</p>
     <p style="margin-top: 6px;">© 2026 ByteCheck Global. All rights reserved.</p>
