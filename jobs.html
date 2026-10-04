@@ -48,9 +48,6 @@
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: var(--font-main); }
     body { background-color: var(--bg); color: var(--text); line-height: 1.6; }
 
-    /* ========================================================
-       [모바일 완벽 대응] GNB 고정 및 가로 스크롤
-    ======================================================== */
     header { background: #ffffff; border-bottom: 2px solid var(--border); width: 100%; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.04); }
     .header-inner { max-width: 1240px; margin: 0 auto; padding: 10px 16px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
     .brand { display: inline-flex; align-items: center; gap: 8px; font-size: 1.35rem; font-weight: 900; color: var(--primary); text-decoration: none; white-space: nowrap; flex-shrink: 0; }
@@ -126,6 +123,7 @@
     .job-badges { display: flex; gap: 6px; margin-bottom: 6px; align-items: center; flex-wrap: wrap; }
     .badge { font-size: 0.76rem; font-weight: 800; padding: 3px 8px; border-radius: 4px; }
     .badge-dday { background: #fee2e2; color: var(--danger); border: 1px solid #fca5a5; }
+    .badge-dday.imminent { background: #dc2626; color: #ffffff; border-color: #b91c1c; }
     .badge-tag { background: #f1f5f9; color: var(--text-muted); border: 1px solid var(--border); }
     .company-name { font-size: 0.92rem; font-weight: 800; color: var(--primary); margin-bottom: 3px; }
     .job-title { font-size: 1.15rem; font-weight: 900; color: var(--secondary); margin-bottom: 6px; line-height: 1.4; }
@@ -138,8 +136,8 @@
     }
     .btn-primary { background: var(--primary); color: #fff; }
     .btn-primary:hover { background: var(--primary-hover); }
-    .btn-secondary { background: #f1f5f9; color: var(--secondary); border: 1px solid var(--border); }
-    .btn-secondary:hover { background: #e2e8f0; }
+    .btn-secondary { background: #f1f5f9; color: var(--secondary); border: 1.5px solid var(--border); }
+    .btn-secondary:hover { background: #e2e8f0; border-color: var(--border-dark); }
 
     .pagination {
       display: flex; justify-content: center; align-items: center; gap: 6px;
@@ -270,23 +268,37 @@
     let filteredJobs = [];
     let currentPage = 1;
 
-    // 🚀 [해결 핵심] 3단계 다중 Fallback 데이터 로더
-    // 1순위: 상대 경로 jobs.json (Vercel 배포 루트)
-    // 2순위: Bytecheck-bot 저장소 jsDelivr CDN (CORS 문제 없음, 캐시 버스팅)
-    // 3순위: GitHub Raw URL
-    // ※ 아래 'GITHUB_USERNAME'에 본인의 GitHub 아이디를 적어두시면 봇 레포가 분리되어 있어도 즉각 로드됩니다.
-    const GITHUB_USERNAME = 'YOUR_GITHUB_ID'; 
+    // 마감일 기준 실시간 D-Day 계산 함수
+    function calculateDDay(endDateStr) {
+      if (!endDateStr) return { text: "접수중", isImminent: false };
+      
+      const cleanDate = endDateStr.replace(/\./g, '-').replace(/\//g, '-').trim();
+      const parts = cleanDate.split('-');
+      if (parts.length !== 3) return { text: "접수중", isImminent: false };
+      
+      const endYear = parseInt(parts[0], 10);
+      const endMonth = parseInt(parts[1], 10) - 1;
+      const endDay = parseInt(parts[2], 10);
+      
+      const targetDate = new Date(endYear, endMonth, endDay, 23, 59, 59);
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      
+      const diffTime = targetDate.getTime() - today.getTime();
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      
+      if (diffDays < 0) return { text: "마감됨", isImminent: false };
+      if (diffDays === 0) return { text: "오늘 마감!", isImminent: true };
+      if (diffDays <= 3) return { text: `D-${diffDays} (마감임박)`, isImminent: true };
+      return { text: `D-${diffDays}`, isImminent: false };
+    }
 
     async function fetchWithFallback() {
       const timestamp = Date.now();
       const urls = [
-        `jobs.json?v=${timestamp}`
+        `jobs.json?v=${timestamp}`,
+        `jobs.json`
       ];
-
-      if (GITHUB_USERNAME && GITHUB_USERNAME !== 'YOUR_GITHUB_ID') {
-        urls.push(`https://cdn.jsdelivr.net/gh/${GITHUB_USERNAME}/Bytecheck-bot@main/jobs.json?v=${timestamp}`);
-        urls.push(`https://raw.githubusercontent.com/${GITHUB_USERNAME}/Bytecheck-bot/main/jobs.json?v=${timestamp}`);
-      }
 
       for (const url of urls) {
         try {
@@ -295,9 +307,7 @@
             const data = await res.json();
             if (Array.isArray(data) && data.length > 0) return data;
           }
-        } catch (e) {
-          // 다음 경로로 자동 폴백
-        }
+        } catch (e) {}
       }
       throw new Error('공고 데이터를 찾을 수 없습니다.');
     }
@@ -305,16 +315,23 @@
     async function loadJobs() {
       const container = document.getElementById('jobsContainer');
       try {
-        allJobs = await fetchWithFallback();
+        const rawData = await fetchWithFallback();
         
-        // 마감일 필터링 (당일 00:00 이전 공고 제외)
         const today = new Date();
         today.setHours(0, 0, 0, 0);
 
-        allJobs = allJobs.filter(job => {
-          if (!job.endDate) return true;
-          const end = new Date(job.endDate.replace(/\./g, '-'));
-          return isNaN(end.getTime()) || end >= today;
+        // 마감일 유효성 필터링 및 데이터 정규화
+        allJobs = rawData.filter(job => {
+          const endDateStr = job.endDate || job.pbancEndYmd || "";
+          if (!endDateStr) return true;
+          
+          const cleanDate = endDateStr.replace(/\./g, '-').replace(/\//g, '-').trim();
+          const parts = cleanDate.split('-');
+          if (parts.length === 3) {
+            const end = new Date(parseInt(parts[0], 10), parseInt(parts[1], 10) - 1, parseInt(parts[2], 10), 23, 59, 59);
+            return isNaN(end.getTime()) || end >= today;
+          }
+          return true;
         });
 
         filteredJobs = [...allJobs];
@@ -322,8 +339,8 @@
       } catch (err) {
         container.innerHTML = `
           <div class="empty-state">
-            <p style="font-size:1.1rem; color:#0f172a; margin-bottom:8px;">⚠️ 공고 데이터를 갱신 중이거나 등록된 활성 공고가 없습니다.</p>
-            <p style="font-size:0.88rem; color:#64748b;">(GitHub Actions 봇이 jobs.json을 생성/푸시하면 자동으로 실시간 표시됩니다)</p>
+            <p style="font-size:1.1rem; color:#0f172a; margin-bottom:8px;">⚠️ 채용공고 데이터를 갱신 중이거나 최신 파일 동기화 대기 중입니다.</p>
+            <p style="font-size:0.88rem; color:#64748b;">(잠시 후 새로고침하시면 자동으로 최신 공고가 표시됩니다)</p>
           </div>
         `;
       }
@@ -334,12 +351,12 @@
       const region = document.getElementById('regionSelect').value;
 
       filteredJobs = allJobs.filter(job => {
-        const title = (job.title || '').toLowerCase();
-        const company = (job.company || '').toLowerCase();
-        const workRgn = (job.workRgn || '');
+        const title = (job.title || job.pblntTitle || job.recrutPblntSnDesc || '').toLowerCase();
+        const company = (job.company || job.instNm || '').toLowerCase();
+        const location = (job.location || job.workRgn || job.workRgnNm || '');
 
         const matchesSearch = !search || company.includes(search) || title.includes(search);
-        const matchesRegion = !region || workRgn.includes(region);
+        const matchesRegion = !region || location.includes(region);
 
         return matchesSearch && matchesRegion;
       });
@@ -363,23 +380,31 @@
       const currentItems = filteredJobs.slice(startIdx, startIdx + ITEMS_PER_PAGE);
 
       container.innerHTML = currentItems.map(job => {
-        const safeTitle = escapeHtml(job.title || '채용 공고');
-        const safeCompany = escapeHtml(job.company || '공공기관');
-        const applyBtn = job.applyUrl ? 
-          `<a href="${job.applyUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">공식 접수처 ↗</a>` : '';
+        const title = job.title || job.pblntTitle || job.recrutPblntSnDesc || '채용 공고';
+        const company = job.company || job.instNm || '공공기관';
+        const location = job.location || job.workRgn || job.workRgnNm || '전국';
+        const hireType = job.hireType || job.hireTypeNm || '정규직/계약직';
+        const endDate = job.endDate || job.pbancEndYmd || '채용 마감 시';
+        const applyUrl = job.url || job.applyUrl || job.srcUrl || '';
+
+        const ddayInfo = calculateDDay(endDate);
+        const ddayBadgeClass = ddayInfo.isImminent ? 'badge badge-dday imminent' : 'badge badge-dday';
+
+        const applyBtn = applyUrl ? 
+          `<a href="${escapeHtml(applyUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">공식 접수처 ↗</a>` : '';
 
         return `
           <article class="job-card">
             <div class="job-info">
               <div class="job-badges">
-                <span class="badge badge-dday">${escapeHtml(job.dDay || '접수중')}</span>
-                <span class="badge badge-tag">${escapeHtml(job.hireType || '정규직')}</span>
-                <span class="badge badge-tag">${escapeHtml(job.workRgn || '전국')}</span>
+                <span class="${ddayBadgeClass}">${escapeHtml(ddayInfo.text)}</span>
+                <span class="badge badge-tag">${escapeHtml(hireType)}</span>
+                <span class="badge badge-tag">${escapeHtml(location)}</span>
               </div>
-              <div class="company-name">${safeCompany}</div>
-              <h2 class="job-title">${safeTitle}</h2>
+              <div class="company-name">${escapeHtml(company)}</div>
+              <h2 class="job-title">${escapeHtml(title)}</h2>
               <div class="job-meta">
-                <span>마감일: ~${escapeHtml(job.endDate || '채용 마감 시')}</span>
+                <span>접수 기한: ~${escapeHtml(endDate)}</span>
               </div>
             </div>
             <div class="job-actions">
@@ -434,6 +459,12 @@
 
     function trackHonestVisitor() {
       const HISTORICAL_BASE = 410;
+      const cachedTotal = localStorage.getItem('bc_cache_total_visitors');
+      const elToday = document.getElementById('todayRealVisitors');
+      const elTotal = document.getElementById('totalRealVisitors');
+
+      if (cachedTotal && elTotal) elTotal.innerText = parseInt(cachedTotal, 10).toLocaleString();
+
       const now = new Date();
       const kstFormatter = new Intl.DateTimeFormat('ko-KR', {
         timeZone: 'Asia/Seoul',
@@ -447,9 +478,6 @@
       const d = parts.find(p => p.type === 'day').value;
       const kstDayKey = `today_${y}${m}${d}`;
 
-      const elToday = document.getElementById('todayRealVisitors');
-      const elTotal = document.getElementById('totalRealVisitors');
-
       const isFirstSession = !sessionStorage.getItem('bc_session_active');
       const action = isFirstSession ? 'hit' : 'get';
 
@@ -458,6 +486,7 @@
         .then(data => {
           if (data && typeof data.value === 'number') {
             const finalTotal = HISTORICAL_BASE + data.value;
+            localStorage.setItem('bc_cache_total_visitors', finalTotal);
             if (elTotal) elTotal.innerText = finalTotal.toLocaleString();
           }
         })
