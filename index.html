@@ -84,9 +84,6 @@
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
     body { background-color: var(--bg); color: var(--text); line-height: 1.6; }
 
-    /* ========================================================
-       [모바일 완벽 대응] GNB 고정 및 가로 스크롤
-    ======================================================== */
     header { background: #ffffff; border-bottom: 2px solid var(--border); width: 100%; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.04); }
     .header-inner { max-width: 1240px; margin: 0 auto; padding: 10px 16px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
     .brand { display: inline-flex; align-items: center; gap: 8px; font-size: 1.25rem; font-weight: 900; color: var(--primary); text-decoration: none; white-space: nowrap; flex-shrink: 0; }
@@ -506,7 +503,6 @@
           </div>
 
           <div class="template-grid" id="template-card-container">
-            
             <!-- Template 1 -->
             <div class="tmpl-card" data-category="new">
               <div class="tmpl-preview-box">
@@ -981,8 +977,14 @@
 
     function setTargetLength(val, btnEl) {
       targetLength = val;
-      document.querySelectorAll('.target-btn').forEach(b => b.classList.remove('active'));
-      if (btnEl) btnEl.classList.add('active');
+      localStorage.setItem(`bytecheck_target_${currentQ}`, val);
+      document.querySelectorAll('.target-btn').forEach(b => {
+        if (parseInt(b.innerText.replace(/[^0-9]/g, ''), 10) === val) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
       analyzeText();
     }
 
@@ -1135,6 +1137,18 @@
       document.getElementById('currentQNumText').innerText = currentQ;
       textarea.value = localStorage.getItem(`bytecheck_q_${currentQ}`) || '';
       btnRestoreDiet.style.display = 'none';
+
+      // 문항별 저장된 개별 목표 글자수 복원
+      const savedTarget = parseInt(localStorage.getItem(`bytecheck_target_${currentQ}`), 10) || 1000;
+      targetLength = savedTarget;
+      document.querySelectorAll('.target-btn').forEach(b => {
+        if (parseInt(b.innerText.replace(/[^0-9]/g, ''), 10) === savedTarget) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+
       analyzeText();
     }
 
@@ -1316,6 +1330,16 @@
 
     function trackHonestVisitor() {
       const HISTORICAL_BASE = 410;
+      const cachedTotal = localStorage.getItem('bc_cache_total_visitors');
+      const elToday = document.getElementById('todayRealVisitors');
+      const elTotal = document.getElementById('totalRealVisitors');
+      const elSide = document.getElementById('sidebarTotalVisitors');
+
+      if (cachedTotal) {
+        const num = parseInt(cachedTotal, 10).toLocaleString();
+        if (elTotal) elTotal.innerText = num;
+        if (elSide) elSide.innerText = num;
+      }
 
       const now = new Date();
       const kstFormatter = new Intl.DateTimeFormat('ko-KR', {
@@ -1330,10 +1354,6 @@
       const d = parts.find(p => p.type === 'day').value;
       const kstDayKey = `today_${y}${m}${d}`;
 
-      const elToday = document.getElementById('todayRealVisitors');
-      const elTotal = document.getElementById('totalRealVisitors');
-      const elSide = document.getElementById('sidebarTotalVisitors');
-
       const isFirstSession = !sessionStorage.getItem('bc_session_active');
       const action = isFirstSession ? 'hit' : 'get';
 
@@ -1342,6 +1362,7 @@
         .then(data => {
           if (data && typeof data.value === 'number') {
             const finalTotal = HISTORICAL_BASE + data.value;
+            localStorage.setItem('bc_cache_total_visitors', finalTotal);
             if (elTotal) elTotal.innerText = finalTotal.toLocaleString();
             if (elSide) elSide.innerText = finalTotal.toLocaleString();
           }
@@ -1605,11 +1626,11 @@
             제작 및 배포: ByteCheck 취업 유틸리티 허브 (https://bytechecktool.com) - 무단 상업적 재판매 금지
           </div>
         </body>
-        </html>
+      </html>
       `;
 
       triggerDownload(fullHtml, `${fileName}.doc`, 'application/msword;charset=utf-8');
-      showToast(`📥 ${fileName}.doc 다운로드가 시작되었습니다!`);
+      showToast(`📥 ${fileName}.doc 다운로드 시작! (Word 실행 시 '예' 클릭)`);
     }
 
     function printDoc() {
@@ -1667,6 +1688,17 @@
 
     window.addEventListener('DOMContentLoaded', () => {
       textarea.value = localStorage.getItem('bytecheck_q_1') || '';
+      
+      const savedTarget = parseInt(localStorage.getItem('bytecheck_target_1'), 10) || 1000;
+      targetLength = savedTarget;
+      document.querySelectorAll('.target-btn').forEach(b => {
+        if (parseInt(b.innerText.replace(/[^0-9]/g, ''), 10) === savedTarget) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+
       analyzeText();
       renderCustomTimer();
       startTimerTick();
