@@ -48,13 +48,39 @@
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
     body { background-color: var(--bg); color: var(--text); line-height: 1.6; }
 
-    header { background: #ffffff; border-bottom: 2px solid var(--border); width: 100%; position: relative; }
-    .header-inner { max-width: 1080px; margin: 0 auto; padding: 14px 20px; display: flex; justify-content: space-between; align-items: center; }
-    .brand { display: flex; align-items: center; gap: 8px; font-size: 1.35rem; font-weight: 900; color: var(--primary); text-decoration: none; }
-    nav { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
-    nav a { text-decoration: none; color: var(--text); font-size: 0.92rem; font-weight: 700; padding: 8px 14px; border-radius: 6px; transition: all 0.2s; }
-    nav a:hover { background: var(--primary-light); color: var(--primary); }
-    nav a.active { background: var(--primary); color: #ffffff; }
+    /* ========================================================
+       [모바일 완벽 대응] GNB 고정 및 가로 스크롤
+    ======================================================== */
+    header { background: #ffffff; border-bottom: 2px solid var(--border); width: 100%; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.04); }
+    .header-inner { max-width: 1240px; margin: 0 auto; padding: 10px 16px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .brand { display: inline-flex; align-items: center; gap: 8px; font-size: 1.25rem; font-weight: 900; color: var(--primary); text-decoration: none; white-space: nowrap; flex-shrink: 0; }
+    nav { 
+      display: flex !important; 
+      flex-direction: row !important; 
+      align-items: center !important; 
+      gap: 6px !important; 
+      overflow-x: auto !important; 
+      white-space: nowrap !important; 
+      -webkit-overflow-scrolling: touch; 
+      scrollbar-width: none; 
+      padding: 4px 0; 
+    }
+    nav::-webkit-scrollbar { display: none; }
+    nav a { 
+      display: inline-block !important; 
+      text-decoration: none; 
+      color: var(--text); 
+      font-size: 0.88rem; 
+      font-weight: 700; 
+      padding: 7px 12px; 
+      border-radius: 20px; 
+      background: #f8fafc; 
+      border: 1px solid var(--border); 
+      transition: all 0.2s; 
+      flex-shrink: 0 !important; 
+    }
+    nav a:hover { background: var(--primary-light); color: var(--primary); border-color: #93c5fd; }
+    nav a.active { background: var(--primary) !important; color: #ffffff !important; border-color: var(--primary) !important; }
 
     .container { max-width: 1080px; margin: 0 auto; padding: 24px 16px 70px 16px; }
 
@@ -115,27 +141,30 @@
     .footer-links a { color: var(--primary); text-decoration: none; font-weight: 700; }
 
     @media (max-width: 768px) {
-      .header-inner { flex-direction: column; gap: 10px; }
-      nav { width: 100%; overflow-x: auto; white-space: nowrap; justify-content: flex-start; }
+      .header-inner { flex-direction: column !important; align-items: stretch !important; padding: 8px 12px !important; gap: 6px !important; }
+      .brand { justify-content: flex-start; font-size: 1.15rem; }
+      nav { width: 100% !important; padding-bottom: 2px !important; }
+      nav a { font-size: 0.82rem !important; padding: 5px 11px !important; }
       .calc-grid { grid-template-columns: 1fr; }
       .module-nav { flex-direction: column; }
       .gov-link-grid { grid-template-columns: 1fr; }
       .partner-card-banner { flex-direction: column; gap: 12px; text-align: center; }
+      .hero h1 { font-size: 1.45rem !important; line-height: 1.35 !important; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Global Header & 6-Menu Navigation (실시간 채용공고 추가) -->
+  <!-- Global Header & 6-Menu Navigation -->
   <header>
     <div class="header-inner">
       <a href="index.html" class="brand"><span>⚡</span> ByteCheck</a>
       <nav>
-        <a href="index.html">자소서 바이트 & 서식</a>
-        <a href="salary.html" class="active">2026 연봉 계산기</a>
-        <a href="dday.html">어학 만료 D-Day</a>
-        <a href="point-calc.html">공기업 가산점 계산기</a>
-        <a href="convert.html">어학 점수 변환기</a>
+        <a href="index.html">자소서 바이트</a>
+        <a href="salary.html" class="active">연봉 계산기</a>
+        <a href="dday.html">어학 D-Day</a>
+        <a href="point-calc.html">공기업 가산점</a>
+        <a href="convert.html">점수 변환기</a>
         <a href="jobs.html">실시간 채용공고</a>
       </nav>
     </div>
@@ -375,23 +404,23 @@
 
   </div>
 
-  <!-- Global Footer (채용공고 메뉴 추가 일괄 동기화) -->
+  <!-- Global Footer -->
   <footer>
     <div class="footer-links">
-      <a href="index.html">자소서 바이트 계산기</a>
+      <a href="index.html">자소서 바이트</a>
       <span>|</span>
-      <a href="salary.html">2026 연봉 계산기</a>
+      <a href="salary.html">연봉 계산기</a>
       <span>|</span>
-      <a href="dday.html">어학 만료 D-Day</a>
+      <a href="dday.html">어학 D-Day</a>
       <span>|</span>
-      <a href="point-calc.html">공기업 가산점 계산기</a>
+      <a href="point-calc.html">공기업 가산점</a>
       <span>|</span>
-      <a href="convert.html">어학 점수 변환기</a>
+      <a href="convert.html">점수 변환기</a>
       <span>|</span>
       <a href="jobs.html">실시간 채용공고</a>
     </div>
     <p>본 연봉 및 세무·노무 계산 결과는 국세청 근로소득 간이세액표 및 2026년 4대 보험요율에 근거한 참고용 수치입니다.</p>
-    <p>© 2026 ByteCheck Global. All rights reserved.</p>
+    <p style="margin-top: 6px;">© 2026 ByteCheck Global. All rights reserved.</p>
   </footer>
 
   <script>
@@ -529,7 +558,6 @@
       document.getElementById('leaveTotalPay').innerText = totalLeavePay.toLocaleString() + ' 원';
     }
 
-    // 🚀 [100% 정직한 서버 기반 실시간 카운터 연동]
     function trackHonestVisitor() {
       const now = new Date();
       const kstFormatter = new Intl.DateTimeFormat('ko-KR', {
