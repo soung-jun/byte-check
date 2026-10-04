@@ -91,15 +91,40 @@
     body { font-family: var(--font-main); background-color: var(--bg); color: var(--text); line-height: 1.6; }
     a { color: inherit; text-decoration: none; }
 
-    /* Header & Navigation */
-    header { background: var(--surface); border-bottom: 2px solid var(--border); position: sticky; top: 0; z-index: 50; }
-    .header-inner { max-width: 1240px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; }
-    .brand { display: flex; align-items: center; gap: 6px; font-size: 1.35rem; font-weight: 900; color: #1d4ed8; text-decoration: none; }
+    /* ========================================================
+       [모바일 완벽 대응] GNB 고정 및 가로 스크롤
+    ======================================================== */
+    header { background: var(--surface); border-bottom: 2px solid var(--border); width: 100%; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.04); }
+    .header-inner { max-width: 1240px; margin: 0 auto; padding: 10px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .brand { display: inline-flex; align-items: center; gap: 6px; font-size: 1.35rem; font-weight: 900; color: #1d4ed8; text-decoration: none; white-space: nowrap; flex-shrink: 0; }
     .brand-icon { color: #f97316; font-size: 1.45rem; line-height: 1; }
-    nav { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
-    nav a { text-decoration: none; color: #0f172a; font-size: 0.92rem; font-weight: 700; padding: 8px 14px; border-radius: 6px; transition: all 0.2s; }
-    nav a:hover { background: #eff6ff; color: var(--primary); }
-    nav a.active { background: var(--primary); color: #ffffff; }
+    nav { 
+      display: flex !important; 
+      flex-direction: row !important; 
+      align-items: center !important; 
+      gap: 6px !important; 
+      overflow-x: auto !important; 
+      white-space: nowrap !important; 
+      -webkit-overflow-scrolling: touch; 
+      scrollbar-width: none; 
+      padding: 4px 0; 
+    }
+    nav::-webkit-scrollbar { display: none; }
+    nav a { 
+      display: inline-block !important; 
+      text-decoration: none; 
+      color: #0f172a; 
+      font-size: 0.88rem; 
+      font-weight: 700; 
+      padding: 7px 12px; 
+      border-radius: 20px; 
+      background: #f8fafc; 
+      border: 1px solid var(--border); 
+      transition: all 0.2s; 
+      flex-shrink: 0 !important; 
+    }
+    nav a:hover { background: #eff6ff; color: var(--primary); border-color: #93c5fd; }
+    nav a.active { background: var(--primary) !important; color: #ffffff !important; border-color: var(--primary) !important; }
 
     /* Main Container */
     .main-wrap { max-width: 1240px; margin: 1.5rem auto 3rem auto; padding: 0 16px; }
@@ -205,11 +230,20 @@
     footer { background: #ffffff; border-top: 2px solid var(--border); padding: 24px 20px; font-size: 0.82rem; color: var(--text-muted); line-height: 1.8; text-align: center; margin-top: 3.5rem; }
     .footer-links { display: flex; justify-content: center; gap: 14px; margin-bottom: 8px; flex-wrap: wrap; }
     .footer-links a { color: var(--primary); text-decoration: none; font-weight: 700; }
+
+    @media (max-width: 768px) {
+      .header-inner { flex-direction: column !important; align-items: stretch !important; padding: 8px 12px !important; gap: 6px !important; }
+      .brand { justify-content: flex-start; font-size: 1.15rem; }
+      nav { width: 100% !important; padding-bottom: 2px !important; }
+      nav a { font-size: 0.82rem !important; padding: 5px 11px !important; }
+      .hero-title h1 { font-size: 1.45rem !important; line-height: 1.35 !important; }
+      .real-stat-bar { flex-direction: column; align-items: flex-start; }
+    }
   </style>
 </head>
 <body>
 
-  <!-- Global Header & 6-Menu Navigation (실시간 채용공고 추가 동기화) -->
+  <!-- Global Header & 6-Menu Navigation -->
   <header>
     <div class="header-inner">
       <a href="index.html" class="brand">
@@ -217,11 +251,11 @@
         <span>ByteCheck</span>
       </a>
       <nav>
-        <a href="index.html">자소서 바이트 계산기</a>
-        <a href="salary.html">2026 연봉 계산기</a>
-        <a href="dday.html">어학 만료 D-Day</a>
-        <a href="point-calc.html">공기업 가산점 계산기</a>
-        <a href="convert.html" class="active">어학 점수 변환기</a>
+        <a href="index.html">자소서 바이트</a>
+        <a href="salary.html">연봉 계산기</a>
+        <a href="dday.html">어학 D-Day</a>
+        <a href="point-calc.html">공기업 가산점</a>
+        <a href="convert.html" class="active">점수 변환기</a>
         <a href="jobs.html">실시간 채용공고</a>
       </nav>
     </div>
@@ -234,7 +268,7 @@
       <p>토익 · 토익스피킹 · OPIc · 지텔프 · New TEPS 원클릭 공식 환산 및 대기업 서류 커트라인 판정</p>
     </div>
 
-    <!-- Verified Live Real Visitor Counter Strip (오리지널 스타일) -->
+    <!-- Verified Live Real Visitor Counter Strip -->
     <div class="real-stat-bar">
       <div class="real-stat-group">
         <div class="real-badge">
@@ -490,18 +524,18 @@
     </div>
   </div>
 
-  <!-- Global Footer (6대 메뉴 일괄 동기화) -->
+  <!-- Global Footer -->
   <footer>
     <div class="footer-links">
-      <a href="index.html">자소서 바이트 계산기</a>
+      <a href="index.html">자소서 바이트</a>
       <span>|</span>
-      <a href="salary.html">2026 연봉 계산기</a>
+      <a href="salary.html">연봉 계산기</a>
       <span>|</span>
-      <a href="dday.html">어학 만료 D-Day</a>
+      <a href="dday.html">어학 D-Day</a>
       <span>|</span>
-      <a href="point-calc.html">공기업 가산점 계산기</a>
+      <a href="point-calc.html">공기업 가산점</a>
       <span>|</span>
-      <a href="convert.html">어학 점수 변환기</a>
+      <a href="convert.html">점수 변환기</a>
       <span>|</span>
       <a href="jobs.html">실시간 채용공고</a>
     </div>
@@ -509,9 +543,7 @@
     <p style="margin-top: 6px;">© 2026 ByteCheck Global. All rights reserved.</p>
   </footer>
 
-  <!-- Core JavaScript: Real-time Multi-way Conversion & Honest Tracker -->
   <script>
-    /* 1. Honest & Real Live Visitor Counter (ByteCheck Global Tracker) */
     function trackHonestVisitor() {
       const HISTORICAL_BASE = 410;
 
@@ -559,7 +591,6 @@
         });
     }
 
-    /* 2. Official Language Score Benchmark Data & Bidirectional Engine */
     const CONVERT_TABLE = [
       { minToeic: 990, toeic: 990, tos: 200, tosGrade: "AH", opic: "AL", gtelp: 100, teps: 570 },
       { minToeic: 950, toeic: 950, tos: 190, tosGrade: "AH", opic: "AL", gtelp: 92,  teps: 525 },
