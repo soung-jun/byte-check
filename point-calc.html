@@ -8,19 +8,16 @@
   <meta name="keywords" content="공기업 가산점 계산기, 2026 공기업 서류, 한전 가산점, LH 가산점, 코레일 가산점, 건보 가산점, 공기업 평균 가산점, 컴활 1급 가산점, 한국사 1급 공기업, 기사 자격증 가산점">
   <link rel="canonical" href="https://bytechecktool.com/point-calc.html">
 
-  <!-- Open Graph / SNS -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://bytechecktool.com/point-calc.html">
   <meta property="og:title" content="2026 공기업 자격증 서류 가산점 계산기 | ByteCheck">
   <meta property="og:description" content="10대 공기업 및 기타 공공기관 표준 서류 가산점 원클릭 자동 합산. 컴활, 한국사, 어학, 기사 배점 실시간 분석.">
   <meta property="og:image" content="https://bytechecktool.com/assets/og-point-calc.png">
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="2026 공기업 자격증 서류 가산점 계산기 | ByteCheck">
   <meta name="twitter:description" content="내 자격증 스펙으로 공기업 서류 통과 가능할까? 기관별 가산점 한도 및 배점 실시간 계산.">
 
-  <!-- Structured Data: FAQPage & WebPage JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -93,9 +90,7 @@
     body { font-family: var(--font-main); background-color: var(--bg); color: var(--text); line-height: 1.6; }
     a { color: inherit; text-decoration: none; }
 
-    /* ========================================================
-       [모바일 완벽 대응] GNB 고정 및 가로 스크롤
-    ======================================================== */
+    /* GNB */
     header { background: var(--surface); border-bottom: 2px solid var(--border); width: 100%; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.04); }
     .header-inner { max-width: 1240px; margin: 0 auto; padding: 10px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
     .brand { display: inline-flex; align-items: center; gap: 6px; font-size: 1.35rem; font-weight: 900; color: #1d4ed8; text-decoration: none; white-space: nowrap; flex-shrink: 0; }
@@ -154,11 +149,11 @@
     .card h2 { font-size: 1.2rem; font-weight: 800; margin-bottom: 1.2rem; color: var(--secondary); display: flex; align-items: center; gap: 0.5rem; }
 
     /* Form Components */
-    .form-group { margin-bottom: 1.4rem; }
+    .form-group { margin-bottom: 1.4rem; width: 100%; }
     label.group-label { display: block; font-weight: 800; font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--secondary); }
     .sub-desc { font-size: 0.82rem; color: var(--primary); margin-top: 0.4rem; font-weight: 600; line-height: 1.4; }
     select {
-      width: 100%; padding: 0.8rem; border: 1.5px solid var(--border); border-radius: 8px;
+      width: 100% !important; max-width: 100% !important; box-sizing: border-box !important; padding: 0.8rem; border: 1.5px solid var(--border); border-radius: 8px;
       font-size: 0.95rem; background: #fff; font-weight: 700; outline: none; transition: border-color 0.2s;
     }
     select:focus { border-color: var(--primary); }
@@ -199,7 +194,7 @@
     }
     .partner-btn:hover { background: #b91c1c; }
 
-    /* Comprehensive Guide & Tables */
+    /* Comprehensive Guide & Tables (모바일 가로스크롤 완벽 방어) */
     .seo-article { margin-top: 2.5rem; background: var(--surface); border: 2px solid var(--border); border-radius: var(--radius); padding: 2.2rem; }
     .seo-article h2 { font-size: 1.4rem; font-weight: 900; color: var(--secondary); margin-bottom: 1.2rem; border-left: 5px solid var(--primary); padding-left: 0.75rem; }
     .seo-article h3 { font-size: 1.15rem; font-weight: 800; color: var(--secondary); margin: 1.6rem 0 0.8rem; }
@@ -207,10 +202,26 @@
     .seo-article ul { margin-left: 1.5rem; margin-bottom: 1.2rem; color: #334155; font-size: 0.93rem; }
     .seo-article li { margin-bottom: 0.5rem; }
 
-    .data-table-wrap { overflow-x: auto; margin: 1.25rem 0; }
-    .data-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.88rem; }
-    .data-table th, .data-table td { padding: 0.75rem 0.9rem; border: 1px solid var(--border); }
-    .data-table th { background: #f1f5f9; color: var(--secondary); font-weight: 800; }
+    .data-table-wrap { 
+      overflow-x: auto; 
+      -webkit-overflow-scrolling: touch; 
+      margin: 1.25rem 0; 
+      border: 1.5px solid var(--border); 
+      border-radius: 8px; 
+    }
+    .data-table { 
+      width: 100%; 
+      border-collapse: collapse; 
+      text-align: left; 
+      font-size: 0.88rem; 
+      min-width: 680px; /* 테이블 최소 너비 확보로 세로 쪼개짐 방지 */
+    }
+    .data-table th, .data-table td { 
+      padding: 0.85rem 1rem; 
+      border: 1px solid var(--border); 
+      white-space: nowrap; /* 억지 세로 줄바꿈 방지 */
+    }
+    .data-table th { background: #f1f5f9; color: var(--secondary); font-weight: 800; text-align: center; }
     .data-table tr:hover { background: #f8fafc; }
 
     /* FAQ Section */
@@ -231,6 +242,7 @@
       .hero-title h1 { font-size: 1.45rem !important; line-height: 1.35 !important; }
       .real-stat-bar { flex-direction: column; align-items: flex-start; }
       .sticky-result { position: static; }
+      .seo-article { padding: 1.25rem; }
     }
   </style>
 </head>
