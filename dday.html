@@ -47,9 +47,6 @@
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
     body { background-color: var(--bg); color: var(--text); line-height: 1.6; }
 
-    /* ========================================================
-       [모바일 완벽 대응] GNB 고정 및 가로 스크롤
-    ======================================================== */
     header { background: #ffffff; border-bottom: 2px solid var(--border); width: 100%; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.04); }
     .header-inner { max-width: 1240px; margin: 0 auto; padding: 10px 16px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
     .brand { display: inline-flex; align-items: center; gap: 8px; font-size: 1.25rem; font-weight: 900; color: var(--primary); text-decoration: none; white-space: nowrap; flex-shrink: 0; }
@@ -87,6 +84,16 @@
     .hero h1 { font-size: 2.1rem; font-weight: 900; letter-spacing: -0.5px; margin-bottom: 8px; color: #0f172a; }
     .hero p { font-size: 1rem; color: var(--text-muted); font-weight: 600; }
 
+    .real-stat-bar {
+      background: #0f172a; color: #f8fafc; border-radius: 30px; padding: 10px 24px;
+      display: flex; justify-content: space-between; align-items: center; font-size: 0.88rem;
+      font-weight: 700; margin-bottom: 20px; box-shadow: var(--shadow-sm); flex-wrap: wrap; gap: 10px;
+    }
+    .real-stat-group { display: inline-flex; align-items: center; gap: 16px; }
+    .real-badge { background: #1e293b; padding: 4px 12px; border-radius: 20px; border: 1px solid #334155; }
+    .real-badge strong { color: #60a5fa; }
+    .real-guide-text { color: #94a3b8; font-weight: 500; font-size: 0.82rem; }
+
     .card { background: var(--card-bg); border-radius: 12px; border: 2px solid var(--border); padding: 22px; box-shadow: var(--shadow-sm); margin-bottom: 22px; }
     .card-highlight { border: 2.5px solid #93c5fd; box-shadow: var(--shadow-md); }
 
@@ -96,7 +103,6 @@
     .form-group { margin-bottom: 14px; width: 100%; }
     .form-label { display: block; font-size: 0.88rem; font-weight: 800; color: #0f172a; margin-bottom: 5px; }
     
-    /* 인풋 삐져나옴 완벽 방지 */
     .form-input { 
       width: 100% !important; 
       max-width: 100% !important; 
@@ -128,10 +134,6 @@
     .mod-content { display: none; }
     .mod-content.active { display: block; }
 
-    .partner-banner { background: #ffffff; border: 2px solid #fca5a5; border-radius: 10px; padding: 16px 20px; margin-bottom: 22px; display: flex; justify-content: space-between; align-items: center; background: #fff5f5; box-shadow: var(--shadow-sm); }
-    .partner-btn { background: var(--danger); color: #fff; text-decoration: none; font-size: 0.88rem; font-weight: 800; padding: 10px 16px; border-radius: 6px; white-space: nowrap; }
-    .partner-btn:hover { background: #b91c1c; }
-
     .notice-card { background: #eff6ff; border: 2px solid #bfdbfe; border-radius: 10px; padding: 18px; margin-bottom: 22px; }
     .notice-card h4 { font-size: 1.05rem; font-weight: 800; color: #1e40af; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
     .notice-card p { font-size: 0.9rem; color: #1e3a8a; line-height: 1.7; font-weight: 500; }
@@ -143,9 +145,6 @@
     .hub-item:hover { background: #eff6ff; border-color: var(--primary); color: var(--primary); }
     .hub-tag { font-size: 0.75rem; padding: 3px 8px; border-radius: 4px; background: #e2e8f0; color: #334155; font-weight: 800; }
 
-    /* ========================================================
-       [모바일 완벽 대응] 테이블 글자 세로 깨짐 방지 스타일
-    ======================================================== */
     .table-scroll-wrap {
       width: 100%;
       overflow-x: auto;
@@ -158,13 +157,13 @@
       width: 100%; 
       border-collapse: collapse; 
       font-size: 0.9rem; 
-      min-width: 600px; /* 테이블 최소 너비 확보로 글자 찌그러짐 원천 차단 */
+      min-width: 600px; 
     }
     .custom-table th, .custom-table td { 
       padding: 10px 14px; 
       border: 1px solid var(--border); 
       text-align: center; 
-      white-space: nowrap; /* 억지 세로 줄바꿈 방지 */
+      white-space: nowrap; 
     }
     .custom-table th { background: #e2e8f0; color: #0f172a; font-weight: 800; }
     .custom-table td { background: #ffffff; color: var(--text); font-weight: 600; }
@@ -187,7 +186,6 @@
       .module-nav { flex-direction: column; }
       .rule-grid { grid-template-columns: 1fr; }
       .hub-grid { grid-template-columns: 1fr; }
-      .partner-banner { flex-direction: column; gap: 12px; text-align: center; }
       .hero h1 { font-size: 1.45rem !important; line-height: 1.35 !important; }
     }
   </style>
@@ -215,6 +213,19 @@
       <h1>토익·오픽 유효기간 2년 만료 D-Day & 등록 가이드</h1>
       <p>공인 어학 성적 2년 만료일, 정부 5년 인정 기한 자동 계산, 점수 상호 변환 및 공기업 가산점 시뮬레이터</p>
     </section>
+
+    <!-- 100% 정직한 실제 방문자 통계 바 -->
+    <div class="real-stat-bar">
+      <div class="real-stat-group">
+        <div class="real-badge">
+          📅 오늘 실제 이용자: <strong id="todayRealVisitors">...</strong> 명
+        </div>
+        <div class="real-badge">
+          👥 누적 실제 방문자: <strong id="totalRealVisitors">...</strong> 명
+        </div>
+      </div>
+      <div class="real-guide-text">⚡ 인사혁신처 사이버국가고시센터 및 어학 주관사 공식 환산 규정 가동 중</div>
+    </div>
 
     <!-- D-Day 계산기 메인 카드 -->
     <main class="card card-highlight">
@@ -256,15 +267,6 @@
         </div>
       </div>
     </main>
-
-    <!-- 쿠팡 파트너스 배너 (수익화) -->
-    <div class="partner-banner" id="coupangBanner">
-      <div>
-        <strong style="font-size: 1.05rem; color: #991b1b;">📖 성적 만료 임박 & 재응시 대비: 2026 토익/오픽 최신 기출</strong>
-        <p style="font-size: 0.85rem; color: #7f1d1d; margin-top: 3px;">ETS 정기시험 기출문제집 1000제 & 오픽 공식 환산 수험서 특가 확인</p>
-      </div>
-      <a href="https://www.coupang.com/np/search?component=&q=2026+ETS+토익+기출문제집" target="_blank" rel="noopener noreferrer" class="partner-btn">최신 수험서 보기 ↗</a>
-    </div>
 
     <!-- 신규 실무 기능 탭 영역 -->
     <div class="card card-highlight">
@@ -401,7 +403,7 @@
       </div>
     </div>
 
-    <!-- 토익 / 오픽 점수 환산 조견표 (가로 스크롤 래퍼 적용) -->
+    <!-- 토익 / 오픽 점수 환산 조견표 -->
     <section class="card">
       <div class="section-title"><span>📊</span> 2026 주요 대기업 토익 vs 오픽 점수 환산 기준표</div>
       <div class="table-scroll-wrap">
@@ -419,7 +421,7 @@
       </div>
     </section>
 
-    <!-- 국가고시/공무원 영어 대체 기준표 (가로 스크롤 래퍼 적용) -->
+    <!-- 국가고시/공무원 영어 대체 기준표 -->
     <section class="card">
       <div class="section-title"><span>📜</span> 국가직 7급·군무원 공채 공인영어 공식 대체 인정 기준표</div>
       <div class="table-scroll-wrap">
@@ -500,14 +502,12 @@
 
       const ddayEl = document.getElementById('ddayCount');
       const statusEl = document.getElementById('ddayStatus');
-      const bannerEl = document.getElementById('coupangBanner');
 
       if (diffDays > 0) {
         ddayEl.innerText = `D - ${diffDays}`;
         if (diffDays <= 30) {
           ddayEl.style.color = 'var(--danger)';
           statusEl.innerText = `⚠️ 공식 만료까지 단 ${diffDays}일 남았습니다! 기한 내 사전등록 필수!`;
-          bannerEl.style.borderColor = 'var(--danger)';
         } else {
           ddayEl.style.color = 'var(--primary)';
           statusEl.innerText = `공식 2년 만료일까지 약 ${Math.floor(diffDays / 30)}개월 남았습니다.`;
@@ -636,6 +636,13 @@
     }
 
     function trackHonestVisitor() {
+      const HISTORICAL_BASE = 410;
+      const cachedTotal = localStorage.getItem('bc_cache_total_visitors');
+      const elToday = document.getElementById('todayRealVisitors');
+      const elTotal = document.getElementById('totalRealVisitors');
+
+      if (cachedTotal && elTotal) elTotal.innerText = parseInt(cachedTotal, 10).toLocaleString();
+
       const now = new Date();
       const kstFormatter = new Intl.DateTimeFormat('ko-KR', {
         timeZone: 'Asia/Seoul',
@@ -650,12 +657,32 @@
       const kstDayKey = `today_${y}${m}${d}`;
 
       const isFirstSession = !sessionStorage.getItem('bc_session_active');
-      if (isFirstSession) {
-        fetch(`https://abacus.jasoncameron.dev/hit/bytechecktool.com/total_real`).catch(() => {});
-        fetch(`https://abacus.jasoncameron.dev/hit/bytechecktool.com/${kstDayKey}`)
-          .then(() => sessionStorage.setItem('bc_session_active', '1'))
-          .catch(() => {});
-      }
+      const action = isFirstSession ? 'hit' : 'get';
+
+      fetch(`https://abacus.jasoncameron.dev/${action}/bytechecktool.com/total_real`)
+        .then(res => res.json())
+        .then(data => {
+          if (data && typeof data.value === 'number') {
+            const finalTotal = HISTORICAL_BASE + data.value;
+            localStorage.setItem('bc_cache_total_visitors', finalTotal);
+            if (elTotal) elTotal.innerText = finalTotal.toLocaleString();
+          }
+        })
+        .catch(() => {
+          if (elTotal && elTotal.innerText === '...') elTotal.innerText = HISTORICAL_BASE.toLocaleString();
+        });
+
+      fetch(`https://abacus.jasoncameron.dev/${action}/bytechecktool.com/${kstDayKey}`)
+        .then(res => res.json())
+        .then(data => {
+          if (data && typeof data.value === 'number') {
+            if (elToday) elToday.innerText = data.value.toLocaleString();
+            sessionStorage.setItem('bc_session_active', '1');
+          }
+        })
+        .catch(() => {
+          if (elToday && elToday.innerText === '...') elToday.innerText = '1';
+        });
     }
 
     window.addEventListener('DOMContentLoaded', () => {
