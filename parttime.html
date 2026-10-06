@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실시간 단기·알바 채용공고 & 시급 정산 | ByteCheck</title>
+  <meta name="description" content="전국 편의점, 카페, 물류센터, 식당 실시간 아르바이트 및 단기 알바 채용공고와 주휴수당·시급 계산기를 즉시 확인하세요.">
+  <meta name="keywords" content="알바 채용공고, 단기알바, 주휴수당 계산기, 알바몬, 알바천국, 알바 실수령액, ByteCheck">
+  <link rel="canonical" href="https://bytechecktool.com/parttime.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bytechecktool.com/parttime.html">
+  <meta property="og:title" content="실시간 단기·알바 채용공고 & 시급 계산 | ByteCheck">
+  <meta property="og:description" content="전국 실시간 알바 채용공고 및 주휴수당·시급 계산기.">
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6840623754388286" crossorigin="anonymous"></script>
+
+  <style>
+    :root {
+      --primary: #f59e0b;
+      --primary-hover: #d97706;
+      --primary-light: #fef3c7;
+      --secondary: #0f172a;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --text-muted: #475569;
+      --border: #cbd5e1;
+      --border-dark: #94a3b8;
+      --danger: #dc2626;
+      --shadow-sm: 0 2px 4px rgba(15, 23, 42, 0.05);
+      --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
+      --font-main: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: var(--font-main); }
+    body { background-color: var(--bg); color: var(--text); line-height: 1.6; }
+
+    header { background: #ffffff; border-bottom: 2px solid var(--border); width: 100%; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.04); }
+    .header-inner { max-width: 1240px; margin: 0 auto; padding: 10px 16px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .brand { display: inline-flex; align-items: center; gap: 8px; font-size: 1.35rem; font-weight: 900; color: #1d4ed8; text-decoration: none; white-space: nowrap; flex-shrink: 0; }
+    nav { 
+      display: flex !important; 
+      flex-direction: row !important; 
+      align-items: center !important; 
+      gap: 6px !important; 
+      overflow-x: auto !important; 
+      white-space: nowrap !important; 
+      -webkit-overflow-scrolling: touch; 
+      scrollbar-width: none; 
+      padding: 4px 0; 
+    }
+    nav::-webkit-scrollbar { display: none; }
+    nav a { 
+      display: inline-block !important; 
+      text-decoration: none; 
+      color: var(--text); 
+      font-size: 0.88rem; 
+      font-weight: 700; 
+      padding: 7px 12px; 
+      border-radius: 20px; 
+      background: #f8fafc; 
+      border: 1px solid var(--border); 
+      transition: all 0.2s; 
+      flex-shrink: 0 !important; 
+    }
+    nav a:hover { background: var(--primary-light); color: var(--primary-hover); border-color: #fcd34d; }
+    nav a.active { background: #f59e0b !important; color: #ffffff !important; border-color: #f59e0b !important; }
+
+    .main-container { max-width: 1240px; margin: 0 auto; padding: 24px 16px 70px 16px; }
+
+    .hero-title { text-align: center; margin-bottom: 1.5rem; }
+    .hero-title h1 { font-size: 2rem; font-weight: 900; color: var(--secondary); letter-spacing: -0.02em; }
+    .hero-title p { font-size: 1rem; color: var(--text-muted); margin-top: 0.4rem; font-weight: 600; }
+
+    .quick-calc-banner {
+      background: #fffbeb; border: 2px solid #fcd34d; border-radius: 12px; padding: 14px 20px;
+      display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;
+      flex-wrap: wrap; gap: 12px;
+    }
+    .quick-calc-text strong { color: #92400e; font-size: 1.05rem; }
+    .quick-calc-btn {
+      background: #f59e0b; color: #fff; padding: 8px 16px; border-radius: 8px; font-weight: 800;
+      text-decoration: none; font-size: 0.9rem; transition: background 0.2s;
+    }
+    .quick-calc-btn:hover { background: #d97706; }
+
+    .filter-card {
+      background: #ffffff; border: 2px solid var(--border); border-radius: 12px;
+      padding: 16px; margin-bottom: 20px; box-shadow: var(--shadow-sm);
+      display: flex; gap: 12px; flex-wrap: wrap; align-items: center;
+    }
+    .search-input {
+      flex: 1; min-width: 260px; padding: 10px 14px; border: 1.5px solid var(--border);
+      border-radius: 8px; font-size: 0.95rem; font-weight: 600; outline: none;
+    }
+    .search-input:focus { border-color: var(--primary); }
+    .region-select {
+      padding: 10px 14px; border: 1.5px solid var(--border); border-radius: 8px;
+      font-size: 0.95rem; font-weight: 700; background: #fff; cursor: pointer; outline: none;
+    }
+
+    .jobs-container { display: grid; gap: 14px; min-height: 400px; }
+    .job-card {
+      background: var(--card-bg); border: 2px solid var(--border); border-radius: 12px;
+      padding: 18px 22px; display: flex; justify-content: space-between; align-items: center;
+      box-shadow: var(--shadow-sm); transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+    }
+    .job-card:hover {
+      box-shadow: var(--shadow-md); transform: translateY(-2px); border-color: var(--primary);
+    }
+    .job-info { flex: 1; margin-right: 1.5rem; }
+    .job-badges { display: flex; gap: 6px; margin-bottom: 6px; align-items: center; flex-wrap: wrap; }
+    .badge { font-size: 0.76rem; font-weight: 800; padding: 3px 8px; border-radius: 4px; }
+    .badge-dday { background: #fee2e2; color: var(--danger); border: 1px solid #fca5a5; }
+    .badge-wage { background: #fef3c7; color: #92400e; border: 1px solid #fcd34d; }
+    .badge-loc { background: #f1f5f9; color: var(--text-muted); border: 1px solid var(--border); }
+
+    .company-name { font-size: 0.92rem; font-weight: 800; color: #b45309; margin-bottom: 3px; }
+    .job-title { font-size: 1.15rem; font-weight: 900; color: var(--secondary); margin-bottom: 6px; line-height: 1.4; }
+    .job-meta { font-size: 0.85rem; color: var(--text-muted); font-weight: 600; display: flex; gap: 14px; flex-wrap: wrap; }
+
+    .job-actions { display: flex; flex-direction: column; gap: 8px; min-width: 145px; }
+    .btn {
+      display: inline-block; text-align: center; padding: 9px 14px; font-size: 0.85rem;
+      font-weight: 800; border-radius: 6px; text-decoration: none; transition: background 0.2s;
+    }
+    .btn-primary { background: #f59e0b; color: #fff; }
+    .btn-primary:hover { background: #d97706; }
+    .btn-secondary { background: #f1f5f9; color: var(--secondary); border: 1px solid var(--border); }
+    .btn-secondary:hover { background: #e2e8f0; border-color: var(--border-dark); }
+
+    .pagination {
+      display: flex; justify-content: center; align-items: center; gap: 6px;
+      margin-top: 2.5rem; margin-bottom: 2rem; flex-wrap: wrap;
+    }
+    .page-btn {
+      min-width: 40px; height: 40px; padding: 0 10px; display: flex; align-items: center;
+      justify-content: center; border: 1.5px solid var(--border); background: #fff;
+      color: var(--secondary); font-weight: 800; font-size: 0.92rem; border-radius: 8px;
+      cursor: pointer; transition: all 0.2s;
+    }
+    .page-btn:hover:not(:disabled) { background: #f1f5f9; border-color: var(--border-dark); }
+    .page-btn.active { background: #f59e0b; color: #fff; border-color: #f59e0b; }
+    .page-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+
+    .empty-state { text-align: center; padding: 4.5rem 1rem; color: var(--text-muted); font-weight: 700; }
+
+    footer { background: #ffffff; border-top: 2px solid var(--border); padding: 24px 20px; font-size: 0.82rem; color: var(--text-muted); line-height: 1.8; text-align: center; margin-top: 3rem; }
+    .footer-links { display: flex; justify-content: center; gap: 14px; margin-bottom: 8px; flex-wrap: wrap; }
+    .footer-links a { color: #1d4ed8; text-decoration: none; font-weight: 700; }
+
+    @media (max-width: 768px) {
+      .header-inner { flex-direction: column !important; align-items: stretch !important; padding: 8px 12px !important; gap: 6px !important; }
+      .job-card { flex-direction: column; align-items: flex-start; }
+      .job-actions { width: 100%; margin-top: 1rem; flex-direction: row; }
+      .job-actions .btn { flex: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Global Header -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="brand"><span>⚡</span> ByteCheck</a>
+      <nav>
+        <a href="index.html">자소서 바이트</a>
+        <a href="salary.html">연봉/시급 계산기</a>
+        <a href="dday.html">어학 D-Day</a>
+        <a href="point-calc.html">공기업 가산점</a>
+        <a href="convert.html">점수 변환기</a>
+        <a href="jobs.html">공기업 채용</a>
+        <a href="parttime.html" class="active">⚡ 단기·알바</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <div class="hero-title">
+      <h1>실시간 단기·아르바이트 채용관</h1>
+      <p>전국 편의점·카페·물류센터 실시간 단기 구인 정보 & 법정 주휴수당 정산</p>
+    </div>
+
+    <!-- 주휴수당 계산기 바로가기 배너 -->
+    <div class="quick-calc-banner">
+      <div class="quick-calc-text">
+        <strong>💡 2026 최저시급 10,030원! 내 알바 주휴수당과 세후 월급이 궁금하다면?</strong>
+        <p style="font-size:0.85rem; color:#78350f; margin-top:2px;">주 15시간 이상 근무 시 법정 주휴수당 및 3.3% 공제액을 실시간으로 확인하세요.</p>
+      </div>
+      <a href="salary.html" class="quick-calc-btn">주휴수당 즉시 계산기 ↗</a>
+    </div>
+
+    <!-- 검색 & 지역 필터 바 -->
+    <div class="filter-card">
+      <input type="text" id="searchInput" class="search-input" placeholder="업체명, 업직종 검색 (예: 스타벅스, 편의점, 물류, 서빙, 피킹)...">
+      <select id="regionSelect" class="region-select">
+        <option value="">지역 전체</option>
+        <option value="전국">전국</option>
+        <option value="서울">서울</option>
+        <option value="경기">경기</option>
+        <option value="인천">인천</option>
+        <option value="부산">부산</option>
+        <option value="대구">대구</option>
+        <option value="대전">대전</option>
+        <option value="광주">광주</option>
+      </select>
+    </div>
+
+    <!-- 알바 공고 카드 목록 -->
+    <div id="jobsContainer" class="jobs-container">
+      <div class="empty-state">실시간 알바 공고를 불러오는 중입니다...</div>
+    </div>
+
+    <!-- 1~5 슬라이딩 페이지네이션 -->
+    <div id="pagination" class="pagination"></div>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">자소서 바이트</a>
+      <span>|</span>
+      <a href="salary.html">연봉/시급 계산기</a>
+      <span>|</span>
+      <a href="jobs.html">공기업 채용</a>
+      <span>|</span>
+      <a href="parttime.html">단기·알바</a>
+    </div>
+    <p>본 구인 정보는 고용노동부 워크넷 오픈API를 기반으로 제공되는 공식 구인 정보입니다.</p>
+    <p style="margin-top: 6px;">© 2026 ByteCheck Global. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const ITEMS_PER_PAGE = 10;
+    let allJobs = [];
+    let filteredJobs = [];
+    let currentPage = 1;
+
+    async function loadParttimeJobs() {
+      const container = document.getElementById('jobsContainer');
+      try {
+        const res = await fetch(`parttime_jobs.json?v=${Date.now()}`);
+        if (!res.ok) throw new Error();
+        allJobs = await res.json();
+        applyFilter();
+      } catch (e) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <p style="font-size:1.1rem; color:#0f172a; margin-bottom:8px;">⚡ 알바 공고 데이터를 안전하게 갱신 중입니다.</p>
+            <p style="font-size:0.88rem; color:#64748b;">(잠시 후 새로고침하시면 최신 알바 정보가 표시됩니다)</p>
+          </div>
+        `;
+      }
+    }
+
+    function applyFilter() {
+      const search = document.getElementById('searchInput').value.trim().toLowerCase();
+      const region = document.getElementById('regionSelect').value;
+
+      filteredJobs = allJobs.filter(job => {
+        const title = (job.title || '').toLowerCase();
+        const company = (job.company || '').toLowerCase();
+        const location = (job.location || '');
+
+        const matchesSearch = !search || company.includes(search) || title.includes(search);
+        const matchesRegion = !region || location.includes(region) || location.includes('전국');
+        return matchesSearch && matchesRegion;
+      });
+
+      currentPage = 1;
+      renderPage();
+    }
+
+    function renderPage() {
+      const container = document.getElementById('jobsContainer');
+      const pagination = document.getElementById('pagination');
+
+      if (filteredJobs.length === 0) {
+        container.innerHTML = '<div class="empty-state">조건에 부합하는 활성 알바 공고가 없습니다.</div>';
+        pagination.innerHTML = '';
+        return;
+      }
+
+      const totalPages = Math.ceil(filteredJobs.length / ITEMS_PER_PAGE);
+      const startIdx = (currentPage - 1) * ITEMS_PER_PAGE;
+      const currentItems = filteredJobs.slice(startIdx, startIdx + ITEMS_PER_PAGE);
+
+      container.innerHTML = currentItems.map(job => {
+        const applyBtn = job.url ? 
+          `<a href="${escapeHtml(job.url)}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">공식 지원처 ↗</a>` : '';
+
+        return `
+          <article class="job-card">
+            <div class="job-info">
+              <div class="job-badges">
+                <span class="badge badge-wage">💰 ${escapeHtml(job.wage)}</span>
+                <span class="badge badge-loc">${escapeHtml(job.location)}</span>
+              </div>
+              <div class="company-name">${escapeHtml(job.company)}</div>
+              <h2 class="job-title">${escapeHtml(job.title)}</h2>
+              <div class="job-meta">
+                <span>접수 마감: ~${escapeHtml(job.endDate)}</span>
+              </div>
+            </div>
+            <div class="job-actions">
+              <a href="salary.html" class="btn btn-primary">시급·주휴 계산</a>
+              ${applyBtn}
+            </div>
+          </article>
+        `;
+      }).join('');
+
+      renderPagination(totalPages);
+    }
+
+    function renderPagination(totalPages) {
+      const pagination = document.getElementById('pagination');
+      if (totalPages <= 1) {
+        pagination.innerHTML = '';
+        return;
+      }
+
+      let html = `<button class="page-btn" ${currentPage === 1 ? 'disabled' : ''} onclick="goToPage(${currentPage - 1})">‹</button>`;
+      let startPage = Math.max(1, currentPage - 2);
+      let endPage = Math.min(totalPages, startPage + 4);
+      if (endPage - startPage < 4) startPage = Math.max(1, endPage - 4);
+
+      for (let i = startPage; i <= endPage; i++) {
+        html += `<button class="page-btn ${i === currentPage ? 'active' : ''}" onclick="goToPage(${i})">${i}</button>`;
+      }
+      html += `<button class="page-btn" ${currentPage === totalPages ? 'disabled' : ''} onclick="goToPage(${currentPage + 1})">›</button>`;
+      pagination.innerHTML = html;
+    }
+
+    function goToPage(page) {
+      currentPage = page;
+      renderPage();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    document.getElementById('searchInput').addEventListener('input', applyFilter);
+    document.getElementById('regionSelect').addEventListener('change', applyFilter);
+    window.addEventListener('DOMContentLoaded', loadParttimeJobs);
+  </script>
+</body>
+</html>
