@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>실시간 공기업·쿠팡·알바 채용공고 & 접수 D-Day | ByteCheck</title>
-  <meta name="description" content="잡알리오(ALIO) 공기업부터 쿠팡 단기 알바, 스타트업 및 대기업 실시간 채용 공고와 D-Day, 공식 지원처를 확인하고 자기소개서 바이트를 즉시 검증하세요.">
+  <title>실시간 공기업·쿠팡·알바 채용공고 & D-Day | ByteCheck</title>
+  <meta name="description" content="기획재정부 잡알리오 공기업부터 쿠팡 단기 알바, 스타트업 및 대기업 실시간 채용 공고와 D-Day, 공식 지원처를 확인하고 자기소개서 바이트를 즉시 검증하세요.">
   <meta name="keywords" content="공기업 채용공고, 쿠팡 알바, 단기 알바, 대기업 채용, 실시간 채용공고, 잡알리오, 알바 D-Day, ByteCheck">
   <link rel="canonical" href="https://bytechecktool.com/jobs.html">
 
@@ -95,7 +95,7 @@
     .real-badge strong { color: #60a5fa; }
     .real-guide-text { color: #94a3b8; font-weight: 500; font-size: 0.82rem; }
 
-    /* 카테고리 탭 스타일 */
+    /* 카테고리 탭 */
     .cat-tabs { display: flex; gap: 8px; margin-bottom: 14px; overflow-x: auto; padding-bottom: 4px; }
     .cat-tab {
       padding: 9px 16px; background: #ffffff; border: 2px solid var(--border); border-radius: 24px;
@@ -233,7 +233,7 @@
     <div class="cat-tabs">
       <button class="cat-tab active" onclick="switchCategory('all', this)">🌐 전체보기</button>
       <button class="cat-tab" onclick="switchCategory('parttime', this)">⚡ 단기·알바·쿠팡</button>
-      <button class="cat-tab" onclick="switchCategory('public', this)">🏛️ 공공기관·공기업</button>
+      <button class="cat-tab" onclick="switchCategory('public', this)">🏛️️ 공공기관·공기업</button>
       <button class="cat-tab" onclick="switchCategory('corporate', this)">🏢 대기업·사기업</button>
     </div>
 
@@ -279,7 +279,7 @@
 
       <h3>1. 단기 알바 및 물류직 지원 시 주휴수당·시급 체크</h3>
       <ul>
-        <li><strong>주휴수당 충족 기준:</strong> 1주일 소정근로시간이 15시간 이상이고 약속된 근무일을 개근할 경우 법정 주휴수당(1일분 일당)이 지급됩니다. ByteCheck의 연봉/시급 계산기를 통해 실수령액을 미리 계산해 보세요.</li>
+        <li><strong>주휴수당 충족 기준:</strong> 1주일 소정근로시간이 15시간 이상이고 약속된 근무일을 개근할 경우 법정 주휴수당이 지급됩니다. ByteCheck의 연봉/시급 계산기를 통해 실수령액을 미리 계산해 보세요.</li>
         <li><strong>간편 지원서 및 이력서:</strong> 알바 지원 시 복잡한 자소서 대신 ByteCheck의 표준 이력서 무료 서식을 활용하여 신속하게 서류를 준비할 수 있습니다.</li>
       </ul>
 
@@ -531,12 +531,7 @@
       if (cachedTotal && elTotal) elTotal.innerText = parseInt(cachedTotal, 10).toLocaleString();
 
       const now = new Date();
-      const kstFormatter = new Intl.DateTimeFormat('ko-KR', {
-        timeZone: 'Asia/Seoul',
-        year: 'numeric',
-        month: '2-digit',
-        day: '2-digit'
-      });
+      const kstFormatter = new Intl.DateTimeFormat('ko-KR', { timeZone: 'Asia/Seoul', year: 'numeric', month: '2-digit', day: '2-digit' });
       const parts = kstFormatter.formatToParts(now);
       const y = parts.find(p => p.type === 'year').value;
       const m = parts.find(p => p.type === 'month').value;
@@ -554,10 +549,7 @@
             localStorage.setItem('bc_cache_total_visitors', finalTotal);
             if (elTotal) elTotal.innerText = finalTotal.toLocaleString();
           }
-        })
-        .catch(() => {
-          if (elTotal && elTotal.innerText === '...') elTotal.innerText = HISTORICAL_BASE.toLocaleString();
-        });
+        }).catch(() => {});
 
       fetch(`https://abacus.jasoncameron.dev/${action}/bytechecktool.com/${kstDayKey}`)
         .then(res => res.json())
@@ -566,10 +558,7 @@
             if (elToday) elToday.innerText = data.value.toLocaleString();
             sessionStorage.setItem('bc_session_active', '1');
           }
-        })
-        .catch(() => {
-          if (elToday && elToday.innerText === '...') elToday.innerText = '1';
-        });
+        }).catch(() => {});
     }
 
     document.getElementById('searchInput').addEventListener('input', applyFilter);
