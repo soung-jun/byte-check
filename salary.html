@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ByteCheck - 2026 연봉 실수령액 계산기 & 세후 월급 역산·포괄임금 분석 센터</title>
-  <meta name="description" content="2026년 4대 보험요율 및 국세청 근로소득 간이세액표 반영 실시간 연봉 계산기, 희망 세후 월급 기준 계약 연봉 역산(Net-to-Gross), 포괄임금제 고정 OT 통상시급 분리 계산, 법정 미사용 연차수당 계산기 무료 제공.">
-  <meta name="keywords" content="2026 연봉 실수령액, 연봉 역산 계산기, 실수령 300 연봉, 실수령 400 연봉, 포괄임금 계산기, 통상시급 계산, 연차수당 계산기, 4대보험 계산, 국세청 홈택스, 최저임금위원회, ByteCheck">
-  
-  <meta property="og:title" content="ByteCheck - 2026 연봉 실수령액 & 세후 역산 올인원 계산기">
-  <meta property="og:description" content="2026 최신 4대보험, 세후 희망 월급 역산, 포괄임금 통상시급 분리, 연차수당 정산기">
-  <meta property="og:url" content="https://bytechecktool.com/salary.html">
+  <title>ByteCheck - 2026 연봉 실수령액 & 알바 시급·주휴수당·포괄임금 계산기</title>
+  <meta name="description" content="2026년 최저시급(10,030원) 반영 알바 시급 및 주휴수당 계산기, 4대보험 연봉 실수령액, 세후 월급 역산, 포괄임금 고정 OT 통상시급 분리, 연차수당 계산기 무료 제공.">
+  <meta name="keywords" content="2026 알바 시급 계산기, 주휴수당 계산기, 알바 실수령액, 2026 연봉 실수령액, 실수령 300 연봉, 포괄임금 계산기, 통상시급, 연차수당, ByteCheck">
+  <link rel="canonical" href="https://bytechecktool.com/salary.html">
+
   <meta property="og:type" content="website">
+  <meta property="og:title" content="ByteCheck - 2026 연봉 실수령액 & 알바 시급·주휴수당 계산기">
+  <meta property="og:description" content="2026 최저임금 반영 시급/주휴수당, 세후 실수령액, 포괄임금 통상시급 분리 정산기.">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "ByteCheck 2026 연봉 실수령액 & 역산 계산기",
+    "name": "ByteCheck 2026 연봉 및 알바 시급·주휴수당 계산기",
     "url": "https://bytechecktool.com/salary.html",
-    "description": "2026년 4대 보험요율 및 세후 역산, 포괄임금 통상시급 분석 툴",
+    "description": "2026 최저시급 반영 알바 시급/주휴수당 및 4대보험 연봉 실수령액 계산 툴",
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "All"
   }
@@ -100,8 +100,8 @@
 
     .section-title { font-size: 1.2rem; font-weight: 800; display: flex; align-items: center; gap: 8px; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--border); }
 
-    .module-nav { display: flex; gap: 8px; margin-bottom: 18px; border-bottom: 2px solid var(--border); padding-bottom: 8px; }
-    .mod-btn { flex: 1; padding: 11px 8px; background: #ffffff; border: 1.5px solid var(--border); border-radius: 8px; font-size: 0.92rem; font-weight: 800; color: var(--text-muted); cursor: pointer; text-align: center; transition: all 0.2s; }
+    .module-nav { display: flex; gap: 8px; margin-bottom: 18px; border-bottom: 2px solid var(--border); padding-bottom: 8px; overflow-x: auto; }
+    .mod-btn { flex: 1; min-width: 160px; padding: 11px 8px; background: #ffffff; border: 1.5px solid var(--border); border-radius: 8px; font-size: 0.9rem; font-weight: 800; color: var(--text-muted); cursor: pointer; text-align: center; transition: all 0.2s; white-space: nowrap; }
     .mod-btn:hover { background: #f1f5f9; }
     .mod-btn.active { background: var(--primary); color: #ffffff; border-color: var(--primary); }
 
@@ -120,16 +120,11 @@
     .result-box { background: #f8fafc; border: 2px solid var(--border); border-radius: 10px; padding: 20px; display: flex; flex-direction: column; justify-content: center; }
     .result-main { text-align: center; margin-bottom: 16px; padding-bottom: 14px; border-bottom: 2px dashed var(--border); }
     .result-main-title { font-size: 0.92rem; color: var(--text-muted); font-weight: 700; margin-bottom: 4px; }
-    .result-main-val { font-size: 2.2rem; font-weight: 900; color: var(--primary); }
+    .result-main-val { font-size: 2.1rem; font-weight: 900; color: var(--primary); }
 
     .deduct-list { display: flex; flex-direction: column; gap: 7px; font-size: 0.9rem; }
     .deduct-item { display: flex; justify-content: space-between; font-weight: 600; color: var(--text-muted); }
     .deduct-item strong { color: var(--text); }
-
-    .gov-link-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    .gov-link-item { display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; background: #f8fafc; border: 1.5px solid var(--border); border-radius: 8px; text-decoration: none; color: #0f172a; font-size: 0.9rem; font-weight: 700; transition: all 0.2s; }
-    .gov-link-item:hover { background: #eff6ff; border-color: var(--primary); color: var(--primary); }
-    .gov-tag { font-size: 0.75rem; padding: 3px 8px; border-radius: 4px; background: #e2e8f0; color: #334155; font-weight: 800; }
 
     .custom-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; margin-top: 10px; }
     .custom-table th, .custom-table td { padding: 11px 14px; border: 1.5px solid var(--border); text-align: center; }
@@ -158,8 +153,6 @@
       nav { width: 100% !important; padding-bottom: 2px !important; }
       nav a { font-size: 0.82rem !important; padding: 5px 11px !important; }
       .calc-grid { grid-template-columns: 1fr; }
-      .module-nav { flex-direction: column; }
-      .gov-link-grid { grid-template-columns: 1fr; }
       .hero h1 { font-size: 1.45rem !important; line-height: 1.35 !important; }
     }
   </style>
@@ -184,8 +177,8 @@
   <div class="container">
     
     <section class="hero">
-      <h1>2026 연봉 실수령액 계산기 & 실무 분석 센터</h1>
-      <p>연봉 실수령액 산출, 세후 희망 월급 역산, 포괄임금 고정 OT 분리, 미사용 연차수당 정밀 정산</p>
+      <h1>2026 연봉 실수령액 & 알바 시급·주휴수당 센터</h1>
+      <p>연봉 4대보험 실수령액, 알바 시급 및 주휴수당 정산, 세후 월급 역산, 포괄임금 통상시급 분리</p>
     </section>
 
     <!-- 100% 정직한 실제 방문자 통계 바 -->
@@ -198,20 +191,66 @@
           👥 누적 실제 방문자: <strong id="totalRealVisitors">...</strong> 명
         </div>
       </div>
-      <div class="real-guide-text">⚡ 2026 최신 4대보험요율 및 국세청 근로소득 간이세액표 정밀 연산 가동 중</div>
+      <div class="real-guide-text">⚡ 2026 법정 최저시급(10,030원) 및 최신 4대보험 간이세액표 적용 중</div>
     </div>
 
-    <!-- 모듈 전환 탭 -->
+    <!-- 모듈 전환 탭 (알바 시급/주휴수당 탭 1순위 추가) -->
     <div class="module-nav">
-      <button class="mod-btn active" onclick="switchModule('tabStandard', this)">💰 표준 연봉/월급 계산기</button>
+      <button class="mod-btn active" onclick="switchModule('tabHourly', this)">⚡ 알바 시급 & 주휴수당</button>
+      <button class="mod-btn" onclick="switchModule('tabStandard', this)">💰 표준 연봉/월급 계산기</button>
       <button class="mod-btn" onclick="switchModule('tabReverse', this)">🎯 희망 세후 월급 역산기</button>
-      <button class="mod-btn" onclick="switchModule('tabOtCalc', this)">⏱️ 포괄임금 O/T 통상시급 분리</button>
+      <button class="mod-btn" onclick="switchModule('tabOtCalc', this)">⏱️ 포괄임금 O/T 통상시급</button>
       <button class="mod-btn" onclick="switchModule('tabLeave', this)">🏖️ 미사용 연차수당 계산기</button>
     </div>
 
-    <!-- 모듈 1: 표준 연봉 실수령액 계산기 -->
-    <div id="tabStandard" class="mod-content active">
+    <!-- 신규 모듈 0: 알바 시급 & 주휴수당 계산기 -->
+    <div id="tabHourly" class="mod-content active">
       <main class="card card-highlight">
+        <div class="section-title"><span>⚡</span> 2026 알바 시급 & 법정 주휴수당 정밀 계산기</div>
+        <div class="calc-grid">
+          <div>
+            <div class="form-group">
+              <label class="form-label">기본 시급 (원 단위, 2026 법정 최저: 10,030원)</label>
+              <input type="number" id="hourlyRate" class="form-input" value="10030" step="100" oninput="calculateParttimeSalary()">
+            </div>
+            <div class="form-group">
+              <label class="form-label">1주일 총 근무 시간 (시간)</label>
+              <input type="number" id="weeklyHours" class="form-input" value="20" min="1" max="60" oninput="calculateParttimeSalary()">
+            </div>
+            <div class="form-group">
+              <label class="form-label">1주일 근무 일수 (일)</label>
+              <input type="number" id="workDaysPerWeek" class="form-input" value="4" min="1" max="7" oninput="calculateParttimeSalary()">
+            </div>
+            <div class="option-row">
+              <label>
+                <input type="checkbox" id="chkTax33" checked onchange="calculateParttimeSalary()">
+                <span>프리랜서 3.3% 원천징수 공제 적용</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="result-box">
+            <div class="result-main">
+              <div class="result-main-title">예상 월 실수령액 (주휴수당 포함)</div>
+              <div class="result-main-val" id="parttimeNetMonthly">0 원</div>
+            </div>
+            <div class="deduct-list">
+              <div class="deduct-item"><span>주휴수당 지급 대상 여부:</span><strong id="holidayCheck" style="color: var(--success);">대상 (주 15시간 이상)</strong></div>
+              <div class="deduct-item"><span>주간 기본 급여:</span><strong id="weeklyBasePay">0 원</strong></div>
+              <div class="deduct-item"><span>주간 법정 주휴수당:</span><strong id="weeklyHolidayPay" style="color: var(--primary);">0 원</strong></div>
+              <div class="deduct-item"><span>월 예상 세전 총액 (4.345주):</span><strong id="parttimeGrossMonthly">0 원</strong></div>
+              <div class="deduct-item" style="border-top: 1.5px solid var(--border); padding-top: 6px;">
+                <span>공제 세금 (3.3%):</span><strong id="parttimeTaxDeduct" style="color: var(--danger);">0 원</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- 모듈 1: 표준 연봉 실수령액 계산기 -->
+    <div id="tabStandard" class="mod-content">
+      <div class="card card-highlight">
         <div class="section-title"><span>💰</span> 실시간 연봉/월급 실수령액 정밀 산출</div>
         <div class="calc-grid">
           <div>
@@ -220,11 +259,11 @@
               <input type="number" id="annualSalary" class="form-input" value="4000" step="100" oninput="calculateStandardSalary()">
             </div>
             <div class="form-group">
-              <label class="form-label">월 비과세액 (식대 등, 법정 기본 20만 원)</label>
+              <label class="form-label">월 비과세액 (식대 등, 기본 20만 원)</label>
               <input type="number" id="taxFree" class="form-input" value="20" step="5" oninput="calculateStandardSalary()">
             </div>
             <div class="form-group">
-              <label class="form-label">부양가족 수 (본인 포함, 2인 이상 시 소득세 감면)</label>
+              <label class="form-label">부양가족 수 (본인 포함)</label>
               <input type="number" id="dependents" class="form-input" value="1" min="1" max="10" oninput="calculateStandardSalary()">
             </div>
             <div class="option-row">
@@ -249,23 +288,20 @@
               <div class="deduct-item"><span>건강보험 (7.09%)</span><strong id="deductHealth">0 원</strong></div>
               <div class="deduct-item"><span>장기요양보험 (건보의 12.95%)</span><strong id="deductCare">0 원</strong></div>
               <div class="deduct-item"><span>고용보험 (0.9%)</span><strong id="deductEmploy">0 원</strong></div>
-              <div class="deduct-item"><span>근로소득세 + 지방소득세</span><strong id="deductTax">0 원</strong></div>
-              <div class="deduct-item" style="border-top: 1.5px solid var(--border); padding-top: 6px; margin-top: 4px;">
+              <div class="deduct-item"><span>근로소득세 + 지방세</span><strong id="deductTax">0 원</strong></div>
+              <div class="deduct-item" style="border-top: 1.5px solid var(--border); padding-top: 6px;">
                 <span>총 월 공제액 합계</span><strong id="totalDeduct" style="color: var(--danger);">0 원</strong>
               </div>
             </div>
           </div>
         </div>
-      </main>
+      </div>
     </div>
 
-    <!-- 모듈 2: 희망 세후 월급 역산기 (Net-to-Gross) -->
+    <!-- 모듈 2: 희망 세후 월급 역산기 -->
     <div id="tabReverse" class="mod-content">
       <div class="card card-highlight">
         <div class="section-title"><span>🎯</span> 이직 연봉협상용: 희망 실수령액 기준 계약 연봉 역산</div>
-        <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">
-          "통장에 딱 350만 원 찍히려면 연봉 협상 때 얼마를 불러야 할까?" 희망하는 순수 실수령 월급을 입력하면 역산 산식으로 필요 세전 계약 연봉을 산출합니다.
-        </p>
         <div class="calc-grid">
           <div>
             <div class="form-group">
@@ -277,30 +313,27 @@
               <input type="number" id="targetTaxFree" class="form-input" value="20" step="5" oninput="calculateReverseSalary()">
             </div>
             <div class="form-group">
-              <label class="form-label">부양가족 수 (본인 포함)</label>
+              <label class="form-label">부양가족 수</label>
               <input type="number" id="targetDependents" class="form-input" value="1" min="1" max="10" oninput="calculateReverseSalary()">
             </div>
           </div>
           <div class="result-box">
             <div class="result-main">
-              <div class="result-main-title">협상 시 요구해야 할 세전 계약 연봉</div>
+              <div class="result-main-title">요구해야 할 세전 계약 연봉</div>
               <div class="result-main-val" id="neededAnnualGross">0 만원</div>
             </div>
             <div class="info-box">
-              💡 <strong>협상 팁:</strong> 계약 연봉 <strong id="tipAnnualText">--</strong>만 원(월 세전 약 <strong id="tipMonthlyText">--</strong>만 원)으로 계약해야 4대 보험과 소득세를 원천징수한 뒤 원하시는 실수령액이 계좌에 입금됩니다.
+              💡 계약 연봉 <strong id="tipAnnualText">--</strong>만 원(월 세전 <strong id="tipMonthlyText">--</strong>만 원)으로 체결해야 희망 실수령액을 받게 됩니다.
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- 모듈 3: 포괄임금제 고정 OT 분리 및 통상시급 계산기 -->
+    <!-- 모듈 3: 포괄임금제 고정 OT 분리 -->
     <div id="tabOtCalc" class="mod-content">
       <div class="card card-highlight">
-        <div class="section-title"><span>⏱️</span> 포괄임금제 고정 연장근로(O/T) 분리 & 진짜 통상시급 판정</div>
-        <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">
-          근로계약서에 "연장근로 OO시간 포함"으로 명시된 포괄임금 근로자의 실제 기본급과 법정 통상시급(1.5배 가산수당 기준)을 분리 계산합니다.
-        </p>
+        <div class="section-title"><span>⏱️</span> 포괄임금제 고정 연장근로(O/T) 분리 & 진짜 통상시급</div>
         <div class="calc-grid">
           <div>
             <div class="form-group">
@@ -308,21 +341,20 @@
               <input type="number" id="otAnnual" class="form-input" value="4500" step="100" oninput="calculateOtBreakdown()">
             </div>
             <div class="form-group">
-              <label class="form-label">계약서상 고정 연장근로(OT) 시간 (월간 시간)</label>
+              <label class="form-label">월 고정 연장근로(OT) 시간 (시간)</label>
               <input type="number" id="otHours" class="form-input" value="20" min="0" max="52" oninput="calculateOtBreakdown()">
             </div>
-            <p style="font-size: 0.8rem; color: var(--text-muted);">* 주 40시간 소정근로시간: 월 209시간 기준 (주휴 포함)</p>
           </div>
           <div class="result-box">
             <div class="result-main">
               <div class="result-main-title">나의 법정 통상시급</div>
-              <div class="result-main-val" id="pureHourlyWage" style="font-size: 1.9rem;">0 원</div>
+              <div class="result-main-val" id="pureHourlyWage">0 원</div>
             </div>
             <div class="deduct-list">
               <div class="deduct-item"><span>월 순수 기본급:</span><strong id="pureBaseSalary">0 원</strong></div>
-              <div class="deduct-item"><span>월 고정 연장수당(1.5배):</span><strong id="pureOtSalary" style="color: var(--primary);">0 원</strong></div>
+              <div class="deduct-item"><span>월 고정 연장수당:</span><strong id="pureOtSalary" style="color: var(--primary);">0 원</strong></div>
               <div class="deduct-item" style="border-top: 1.5px solid var(--border); padding-top: 6px;">
-                <span>최저시급 위반 여부:</span><strong id="otWageCheck" style="color: var(--success);">정상</strong>
+                <span>최저임금 위반 여부:</span><strong id="otWageCheck" style="color: var(--success);">정상</strong>
               </div>
             </div>
           </div>
@@ -333,10 +365,7 @@
     <!-- 모듈 4: 미사용 연차수당 정산기 -->
     <div id="tabLeave" class="mod-content">
       <div class="card card-highlight">
-        <div class="section-title"><span>🏖️</span> 근로기준법 기준 법정 미사용 연차수당 계산기</div>
-        <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">
-          미사용 연차휴가는 근로기준법 제60조에 따라 통상임금(1일 8시간분)을 기준으로 현금 보상해야 합니다. 퇴사 또는 연도 말 잔여 연차 보상액을 산출합니다.
-        </p>
+        <div class="section-title"><span>🏖️</span> 근로기준법 기준 미사용 연차수당 계산기</div>
         <div class="calc-grid">
           <div>
             <div class="form-group">
@@ -350,11 +379,10 @@
           </div>
           <div class="result-box">
             <div class="result-main">
-              <div class="result-main-title">예상 미사용 연차수당 (세전)</div>
-              <div class="result-main-val" id="leaveTotalPay" style="font-size: 2rem; color: var(--success);">0 원</div>
+              <div class="result-main-title">예상 미사용 연차수당</div>
+              <div class="result-main-val" id="leaveTotalPay" style="color: var(--success);">0 원</div>
             </div>
             <div class="deduct-list">
-              <div class="deduct-item"><span>월 통상임금 기준:</span><strong id="leaveMonthly">0 원</strong></div>
               <div class="deduct-item"><span>1일(8시간) 통상임금:</span><strong id="leaveDaily">0 원</strong></div>
             </div>
           </div>
@@ -362,67 +390,18 @@
       </div>
     </div>
 
-    <!-- 🏛️ 국세청 및 고용노동부 공식 포털 연동 허브 -->
-    <div class="card">
-      <div class="section-title"><span>🏛️</span> 과세·노무 기준 공인 출처 확인 포털</div>
-      <div class="gov-link-grid">
-        <a href="https://www.hometax.go.kr" target="_blank" rel="noopener noreferrer" class="gov-link-item">
-          <div>
-            <strong style="display: block; font-size: 0.95rem;">국세청 홈택스 (Hometax)</strong>
-            <span style="font-size: 0.8rem; color: var(--text-muted);">근로소득 간이세액표 원문 및 세액 조회</span>
-          </div>
-          <span class="gov-tag">국세청 공식 ↗</span>
-        </a>
-        <a href="https://www.minimumwage.go.kr" target="_blank" rel="noopener noreferrer" class="gov-link-item">
-          <div>
-            <strong style="display: block; font-size: 0.95rem;">고용노동부 최저임금위원회</strong>
-            <span style="font-size: 0.8rem; color: var(--text-muted);">2026 법정 최저임금 공식 고시 전문</span>
-          </div>
-          <span class="gov-tag">고용부 공식 ↗</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- 2026 연봉 구간별 세후 월급 조견표 -->
-    <section class="card">
-      <div class="section-title"><span>📊</span> 2026 연봉 구간별 세후 실수령 월급 조견표 (비과세 20만 원, 1인 기준)</div>
-      <div style="overflow-x: auto;">
-        <table class="custom-table">
-          <thead>
-            <tr><th>계약 연봉</th><th>세전 월급</th><th>총 월 공제액</th><th>세후 실수령 월급</th></tr>
-          </thead>
-          <tbody>
-            <tr><td><strong>3,000만 원</strong></td><td>250만 원</td><td>약 26만 원</td><td><strong style="color: var(--primary);">224만 원</strong></td></tr>
-            <tr><td><strong>3,500만 원</strong></td><td>291만 원</td><td>약 33만 원</td><td><strong style="color: var(--primary);">258만 원</strong></td></tr>
-            <tr><td><strong>4,000만 원</strong></td><td>333만 원</td><td>약 41만 원</td><td><strong style="color: var(--primary);">292만 원</strong></td></tr>
-            <tr><td><strong>4,500만 원</strong></td><td>375만 원</td><td>약 48만 원</td><td><strong style="color: var(--primary);">327만 원</strong></td></tr>
-            <tr><td><strong>5,000만 원</strong></td><td>416만 원</td><td>약 57만 원</td><td><strong style="color: var(--primary);">359만 원</strong></td></tr>
-            <tr><td><strong>6,000만 원</strong></td><td>500만 원</td><td>약 77만 원</td><td><strong style="color: var(--primary);">423만 원</strong></td></tr>
-            <tr><td><strong>7,000만 원</strong></td><td>583만 원</td><td>약 98만 원</td><td><strong style="color: var(--primary);">485만 원</strong></td></tr>
-            <tr><td><strong>8,000만 원</strong></td><td>666만 원</td><td>약 122만 원</td><td><strong style="color: var(--primary);">544만 원</strong></td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- 구글 애드센스 심사용 고품질 법정 근로기준 정적 아티클 -->
+    <!-- 2026 최저임금 & 주휴수당 법정 안내 아티클 -->
     <article class="seo-article">
-      <h2>2026년도 급여 산정 체계 및 4대 사회보험 공제 메커니즘</h2>
+      <h2>2026년 법정 최저시급(10,030원) 및 주휴수당 발생 핵심 요건</h2>
       <p>
-        대한민국 근로자의 실질 소득은 계약 연봉 총액에서 4대 사회보험료와 국세청 근로소득세(지방소득세 포함)를 원천징수한 후 결정됩니다. 사업주와 근로자 간 임금 분쟁을 예방하고 공정한 보상 체계를 수립하기 위해 법정 공제 항목과 근로기준법상 산정 기준을 정확히 숙지해야 합니다.
+        근로기준법 제55조에 따라 1주일 동안 소정의 근로일수를 개근하고 <strong>주 15시간 이상 근무한 모든 근로자(단기알바, 일용직, 계약직 포함)</strong>에게는 주 1회의 유급휴일(주휴수당)이 반드시 보장되어야 합니다.
       </p>
-
-      <h3>1. 4대 사회보험료율 산정 공식</h3>
+      <h3>주휴수당 계산 산식</h3>
       <ul>
-        <li><strong>국민연금:</strong> 비과세 식대를 제외한 월 과세소득의 4.5%를 근로자가 부담하며, 기준소득월액 상한액(월 617만 원 기준 최대 277,650원)이 적용됩니다.</li>
-        <li><strong>건강보험 및 장기요양보험:</strong> 건강보험료는 과세급여의 3.545%가 부과되며, 노인장기요양보험료는 산정된 건강보험료의 12.95%가 추가로 합산 원천징수됩니다.</li>
-        <li><strong>고용보험:</strong> 실업급여 계정으로 과세급여의 0.9%가 근로자 본인 부담금으로 공제됩니다.</li>
+        <li><strong>주 40시간 미만 단시간 근로자:</strong> (1주일 총 근로시간 ÷ 40시간) × 8시간 × 시급</li>
+        <li><strong>주 40시간 이상 정규 근로자:</strong> 8시간 × 시급 (1일분 일당 전액)</li>
+        <li><strong>주휴수당 미지급 시:</strong> 임금체불에 해당하여 3년 이하의 징역 또는 3천만 원 이하의 벌금 대상이 됩니다.</li>
       </ul>
-
-      <h3>2. 포괄임금제 고정 OT와 주휴수당(월 209시간) 기준</h3>
-      <p>
-        근로기준법상 1주 40시간 정규 근로자의 월 소정근로시간은 주휴수당 8시간을 합산한 209시간으로 계산됩니다. 연봉계약서상에 "연장근로수당 OO시간 포함"으로 체결된 포괄임금 계약의 경우, 총 급여에서 고정 연장시간(1.5배 가산)에 상응하는 금액을 차감한 순수 기본급을 209시간으로 나눈 통상시급이 법정 최저임금(10,030원) 이상이어야 적법합니다.
-      </p>
     </article>
 
   </div>
@@ -442,7 +421,7 @@
       <span>|</span>
       <a href="jobs.html">실시간 채용공고</a>
     </div>
-    <p>본 연봉 및 세무·노무 계산 결과는 국세청 근로소득 간이세액표 및 2026년 4대 보험요율에 근거한 참고용 수치입니다.</p>
+    <p>본 계산 결과는 2026 최저임금 고시 및 국세청 근로소득 간이세액표에 근거한 참고용 자료입니다.</p>
     <p style="margin-top: 6px;">© 2026 ByteCheck Global. All rights reserved.</p>
   </footer>
 
@@ -454,9 +433,42 @@
       document.getElementById(modId).classList.add('active');
     }
 
+    function calculateParttimeSalary() {
+      const rate = parseFloat(document.getElementById('hourlyRate').value) || 10030;
+      const hours = parseFloat(document.getElementById('weeklyHours').value) || 0;
+      const isTax33 = document.getElementById('chkTax33').checked;
+
+      const baseWeekly = rate * hours;
+      let holidayWeekly = 0;
+
+      const checkEl = document.getElementById('holidayCheck');
+      if (hours >= 15) {
+        checkEl.innerText = "지급 대상 (주 15시간 이상)";
+        checkEl.style.color = "var(--success)";
+        if (hours >= 40) {
+          holidayWeekly = rate * 8;
+        } else {
+          holidayWeekly = (hours / 40) * 8 * rate;
+        }
+      } else {
+        checkEl.innerText = "미지급 대상 (주 15시간 미만)";
+        checkEl.style.color = "var(--danger)";
+      }
+
+      const totalWeekly = baseWeekly + holidayWeekly;
+      const monthlyGross = Math.floor(totalWeekly * 4.345);
+      const tax = isTax33 ? Math.floor(monthlyGross * 0.033) : 0;
+      const netPay = monthlyGross - tax;
+
+      document.getElementById('weeklyBasePay').innerText = Math.floor(baseWeekly).toLocaleString() + ' 원';
+      document.getElementById('weeklyHolidayPay').innerText = Math.floor(holidayWeekly).toLocaleString() + ' 원';
+      document.getElementById('parttimeGrossMonthly').innerText = monthlyGross.toLocaleString() + ' 원';
+      document.getElementById('parttimeTaxDeduct').innerText = tax.toLocaleString() + ' 원';
+      document.getElementById('parttimeNetMonthly').innerText = netPay.toLocaleString() + ' 원';
+    }
+
     function calculateDeductions(monthlyGross, taxFreeMonth, dependents) {
       const taxable = Math.max(0, monthlyGross - taxFreeMonth);
-
       const pension = Math.min(Math.floor(taxable * 0.045), 277650);
       const health = Math.floor(taxable * 0.03545);
       const care = Math.floor(health * 0.1295);
@@ -470,17 +482,13 @@
       else if (adjustedTaxable > 5000000) incomeTax = adjustedTaxable * 0.065;
       else if (adjustedTaxable > 3000000) incomeTax = adjustedTaxable * 0.035;
       else if (adjustedTaxable > 1800000) incomeTax = adjustedTaxable * 0.015;
-      else incomeTax = 0;
       incomeTax = Math.floor(incomeTax);
 
       const localTax = Math.floor(incomeTax * 0.1);
       const totalTax = incomeTax + localTax;
       const totalDeduction = pension + health + care + employ + totalTax;
 
-      return {
-        pension, health, care, employ, totalTax, totalDeduction,
-        netPay: monthlyGross - totalDeduction
-      };
+      return { pension, health, care, employ, totalTax, totalDeduction, netPay: monthlyGross - totalDeduction };
     }
 
     function calculateStandardSalary() {
@@ -518,10 +526,7 @@
 
       if (isNaN(targetNet) || targetNet <= 0) return;
 
-      let low = targetNet;
-      let high = targetNet * 2;
-      let approxMonthly = targetNet;
-
+      let low = targetNet, high = targetNet * 2, approxMonthly = targetNet;
       for (let i = 0; i < 30; i++) {
         let mid = Math.floor((low + high) / 2);
         let res = calculateDeductions(mid, taxFreeMonth, dependents);
@@ -542,7 +547,6 @@
     function calculateOtBreakdown() {
       const annual = parseFloat(document.getElementById('otAnnual').value) * 10000;
       const otHours = parseFloat(document.getElementById('otHours').value) || 0;
-
       if (isNaN(annual) || annual <= 0) return;
 
       const monthlyGross = Math.floor(annual / 12);
@@ -568,7 +572,6 @@
     function calculateAnnualLeave() {
       const annual = parseFloat(document.getElementById('leaveAnnual').value) * 10000;
       const days = parseFloat(document.getElementById('leaveDays').value) || 0;
-
       if (isNaN(annual) || annual <= 0) return;
 
       const monthly = Math.floor(annual / 12);
@@ -576,7 +579,6 @@
       const daily = Math.floor(hourly * 8);
       const totalLeavePay = Math.floor(daily * days);
 
-      document.getElementById('leaveMonthly').innerText = monthly.toLocaleString() + ' 원';
       document.getElementById('leaveDaily').innerText = daily.toLocaleString() + ' 원';
       document.getElementById('leaveTotalPay').innerText = totalLeavePay.toLocaleString() + ' 원';
     }
@@ -590,12 +592,7 @@
       if (cachedTotal && elTotal) elTotal.innerText = parseInt(cachedTotal, 10).toLocaleString();
 
       const now = new Date();
-      const kstFormatter = new Intl.DateTimeFormat('ko-KR', {
-        timeZone: 'Asia/Seoul',
-        year: 'numeric',
-        month: '2-digit',
-        day: '2-digit'
-      });
+      const kstFormatter = new Intl.DateTimeFormat('ko-KR', { timeZone: 'Asia/Seoul', year: 'numeric', month: '2-digit', day: '2-digit' });
       const parts = kstFormatter.formatToParts(now);
       const y = parts.find(p => p.type === 'year').value;
       const m = parts.find(p => p.type === 'month').value;
@@ -613,10 +610,7 @@
             localStorage.setItem('bc_cache_total_visitors', finalTotal);
             if (elTotal) elTotal.innerText = finalTotal.toLocaleString();
           }
-        })
-        .catch(() => {
-          if (elTotal && elTotal.innerText === '...') elTotal.innerText = HISTORICAL_BASE.toLocaleString();
-        });
+        }).catch(() => {});
 
       fetch(`https://abacus.jasoncameron.dev/${action}/bytechecktool.com/${kstDayKey}`)
         .then(res => res.json())
@@ -625,13 +619,11 @@
             if (elToday) elToday.innerText = data.value.toLocaleString();
             sessionStorage.setItem('bc_session_active', '1');
           }
-        })
-        .catch(() => {
-          if (elToday && elToday.innerText === '...') elToday.innerText = '1';
-        });
+        }).catch(() => {});
     }
 
     window.addEventListener('DOMContentLoaded', () => {
+      calculateParttimeSalary();
       calculateStandardSalary();
       calculateReverseSalary();
       calculateOtBreakdown();
