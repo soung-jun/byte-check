@@ -95,7 +95,7 @@
     .btn { display: inline-block; text-align: center; padding: 9px 14px; font-size: 0.85rem; font-weight: 800; border-radius: 6px; text-decoration: none; transition: background 0.2s; }
     .btn-primary { background: var(--primary); color: #fff; }
     .btn-primary:hover { background: var(--primary-hover); }
-    .btn-secondary { background: #f1f5f9; color: var(--secondary); border: 1px solid var(--border); }
+    .btn-secondary { background: #f1f5f9; color: var(--secondary); border: 1.5px solid var(--border); }
     .btn-secondary:hover { background: #e2e8f0; border-color: var(--border-dark); }
 
     .pagination { display: flex; justify-content: center; align-items: center; gap: 6px; margin-top: 2.5rem; margin-bottom: 2rem; flex-wrap: wrap; }
@@ -292,14 +292,19 @@
       try {
         const rawData = await fetchJobsData();
         
-        allJobs = rawData.map(job => ({
-          company: job.company || job.instNm || '공공기관',
-          title: job.title || job.recrutPblntSnDesc || job.pblntTitle || '채용 공고',
-          location: job.location || job.workRgnNm || job.workRgn || '전국',
-          hireType: job.hireType || job.hireTypeNm || '정규직/계약직',
-          endDate: job.endDate || job.pbancEndYmd || '상시채용',
-          url: job.url || job.srcUrl || ''
-        }));
+        allJobs = rawData.map(job => {
+          let directUrl = (job.url || job.srcUrl || job.alioUrl || '').trim();
+          if (!directUrl) directUrl = 'https://job.alio.go.kr';
+          
+          return {
+            company: job.company || job.instNm || '공공기관',
+            title: job.title || job.recrutPblntSnDesc || job.pblntTitle || '채용 공고',
+            location: job.location || job.workRgnNm || job.workRgn || '전국',
+            hireType: job.hireType || job.hireTypeNm || '정규직/계약직',
+            endDate: job.endDate || job.pbancEndYmd || '상시채용',
+            url: directUrl
+          };
+        });
 
         applyFilter();
       } catch (err) {
@@ -356,8 +361,9 @@
         const ddayInfo = calculateDDay(job.endDate);
         const ddayBadgeClass = ddayInfo.isImminent ? 'badge badge-dday imminent' : 'badge badge-dday';
 
-        const applyBtn = job.url ? 
-          `<a href="${escapeHtml(job.url)}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">공식 접수처 ↗</a>` : '';
+        // 공식 접수처 링크 버튼 무조건 보장
+        const applyTargetUrl = job.url || 'https://job.alio.go.kr';
+        const applyBtn = `<a href="${escapeHtml(applyTargetUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">공식 접수처 ↗</a>`;
 
         return `
           <article class="job-card">
@@ -392,9 +398,7 @@
       }
 
       let html = '';
-      // 첫 페이지 이동
       html += `<button class="page-btn" ${currentPage === 1 ? 'disabled' : ''} onclick="goToPage(1)">«</button>`;
-      // 이전 페이지 이동
       html += `<button class="page-btn" ${currentPage === 1 ? 'disabled' : ''} onclick="goToPage(${currentPage - 1})">‹</button>`;
 
       let startPage = Math.max(1, currentPage - 2);
@@ -408,9 +412,7 @@
         html += `<button class="page-btn ${i === currentPage ? 'active' : ''}" onclick="goToPage(${i})">${i}</button>`;
       }
 
-      // 다음 페이지 이동
       html += `<button class="page-btn" ${currentPage === totalPages ? 'disabled' : ''} onclick="goToPage(${currentPage + 1})">›</button>`;
-      // 마지막 페이지 이동
       html += `<button class="page-btn" ${currentPage === totalPages ? 'disabled' : ''} onclick="goToPage(${totalPages})">»</button>`;
 
       pagination.innerHTML = html;
