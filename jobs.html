@@ -131,7 +131,6 @@
 </head>
 <body>
 
-  <!-- Global Header & 6-Menu Navigation -->
   <header>
     <div class="header-inner">
       <a href="index.html" class="brand"><span>⚡</span> ByteCheck</a>
@@ -152,7 +151,6 @@
       <p>기획재정부 잡알리오(ALIO) 오픈API 연동 실시간 채용 정보 & D-Day 알림</p>
     </div>
 
-    <!-- 100% 정직한 실제 방문자 통계 바 -->
     <div class="real-stat-bar">
       <div class="real-stat-group">
         <div class="real-badge">
@@ -167,7 +165,7 @@
 
     <!-- 검색 & 지역 필터 바 -->
     <div class="filter-card">
-      <input type="text" id="searchInput" class="search-input" placeholder="기관명, 공고명 검색 (예: 한국전력, 건강보험, 토지주택, 행정)...">
+      <input type="text" id="searchInput" class="search-input" placeholder="기관명, 공고명 검색 (예: 국립중앙의료원, 대한적십자사, 한국보훈복지의료공단)...">
       <select id="regionSelect" class="region-select">
         <option value="">지역 전체</option>
         <option value="전국">전국</option>
@@ -223,7 +221,6 @@
     </article>
   </main>
 
-  <!-- Global Footer -->
   <footer>
     <div class="footer-links">
       <a href="index.html">자소서 바이트</a>
@@ -293,11 +290,16 @@
         const rawData = await fetchJobsData();
         
         allJobs = rawData.map(job => {
+          const company = (job.company || job.instNm || '공공기관').trim();
           let directUrl = (job.url || job.srcUrl || job.alioUrl || '').trim();
-          if (!directUrl) directUrl = 'https://job.alio.go.kr';
+          
+          // 💡 URL이 비어있으면 잡알리오 해당 기관 검색 주소로 무조건 100% 매핑
+          if (!directUrl || directUrl === '') {
+            directUrl = `https://job.alio.go.kr/recruitment.do?search_keyword=${encodeURIComponent(company)}`;
+          }
           
           return {
-            company: job.company || job.instNm || '공공기관',
+            company: company,
             title: job.title || job.recrutPblntSnDesc || job.pblntTitle || '채용 공고',
             location: job.location || job.workRgnNm || job.workRgn || '전국',
             hireType: job.hireType || job.hireTypeNm || '정규직/계약직',
@@ -361,9 +363,9 @@
         const ddayInfo = calculateDDay(job.endDate);
         const ddayBadgeClass = ddayInfo.isImminent ? 'badge badge-dday imminent' : 'badge badge-dday';
 
-        // 공식 접수처 링크 버튼 무조건 보장
-        const applyTargetUrl = job.url || 'https://job.alio.go.kr';
-        const applyBtn = `<a href="${escapeHtml(applyTargetUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">공식 접수처 ↗</a>`;
+        // 💡 예외 없이 모든 카드에 100% 무조건 공식 접수처 버튼 생성
+        const targetUrl = job.url || `https://job.alio.go.kr/recruitment.do?search_keyword=${encodeURIComponent(job.company)}`;
+        const applyBtn = `<a href="${escapeHtml(targetUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">공식 접수처 ↗</a>`;
 
         return `
           <article class="job-card">
