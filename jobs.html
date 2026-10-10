@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>실시간 공공기관·공기업 채용공고 & 접수 D-Day | ByteCheck</title>
-  <meta name="description" content="기획재정부 잡알리오(ALIO) 오픈API 기반 전국 공공기관·공기업 실시간 채용공고 및 서류접수 D-Day 카운트다운을 제공합니다.">
-  <meta name="keywords" content="공기업 채용공고, 공공기관 채용, 잡알리오, ALIO, 공기업 D-Day, 채용일정, ByteCheck">
+  <title>실시간 공기업·공공기관 채용공고 & 접수 D-Day | ByteCheck</title>
+  <meta name="description" content="기획재정부 잡알리오(ALIO) 기준 실시간 공공기관·공기업 채용 공고와 D-Day, 공식 접수처를 확인하고 자기소개서 글자수와 바이트를 즉시 검증하세요.">
+  <meta name="keywords" content="공기업 채용공고, 공공기관 채용, 잡알리오 채용, 실시간 채용공고, 공기업 D-Day, 알리오 채용일정, ByteCheck">
   <link rel="canonical" href="https://bytechecktool.com/jobs.html">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://bytechecktool.com/jobs.html">
-  <meta property="og:title" content="실시간 공공기관·공기업 채용공고 & D-Day | ByteCheck">
-  <meta property="og:description" content="전국 공기업·공공기관 실시간 채용공고 및 D-Day 카운트다운.">
+  <meta property="og:title" content="실시간 공기업·공공기관 채용공고 | ByteCheck">
+  <meta property="og:description" content="마감 공고 자동 삭제, 실시간 활성 공공기관 채용 공고 및 D-Day 카운트다운.">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "ByteCheck 실시간 공기업 채용공고",
+    "name": "ByteCheck 실시간 공공기관 채용공고",
     "url": "https://bytechecktool.com/jobs.html",
-    "description": "잡알리오 기반 전국 공공기관 실시간 채용공고 및 D-Day 제공",
+    "description": "잡알리오 API 연동 실시간 공공기관 채용공고 및 D-Day 제공",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "All"
   }
@@ -51,9 +51,31 @@
     header { background: #ffffff; border-bottom: 2px solid var(--border); width: 100%; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.04); }
     .header-inner { max-width: 1240px; margin: 0 auto; padding: 10px 16px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
     .brand { display: inline-flex; align-items: center; gap: 8px; font-size: 1.35rem; font-weight: 900; color: var(--primary); text-decoration: none; white-space: nowrap; flex-shrink: 0; }
-    nav { display: flex !important; flex-direction: row !important; align-items: center !important; gap: 6px !important; overflow-x: auto !important; white-space: nowrap !important; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding: 4px 0; }
+    nav { 
+      display: flex !important; 
+      flex-direction: row !important; 
+      align-items: center !important; 
+      gap: 6px !important; 
+      overflow-x: auto !important; 
+      white-space: nowrap !important; 
+      -webkit-overflow-scrolling: touch; 
+      scrollbar-width: none; 
+      padding: 4px 0; 
+    }
     nav::-webkit-scrollbar { display: none; }
-    nav a { display: inline-block !important; text-decoration: none; color: var(--text); font-size: 0.88rem; font-weight: 700; padding: 7px 12px; border-radius: 20px; background: #f8fafc; border: 1px solid var(--border); transition: all 0.2s; flex-shrink: 0 !important; }
+    nav a { 
+      display: inline-block !important; 
+      text-decoration: none; 
+      color: var(--text); 
+      font-size: 0.88rem; 
+      font-weight: 700; 
+      padding: 7px 12px; 
+      border-radius: 20px; 
+      background: #f8fafc; 
+      border: 1px solid var(--border); 
+      transition: all 0.2s; 
+      flex-shrink: 0 !important; 
+    }
     nav a:hover { background: var(--primary-light); color: var(--primary); border-color: #93c5fd; }
     nav a.active { background: var(--primary) !important; color: #ffffff !important; border-color: var(--primary) !important; }
 
@@ -63,50 +85,81 @@
     .hero-title h1 { font-size: 2rem; font-weight: 900; color: var(--secondary); letter-spacing: -0.02em; }
     .hero-title p { font-size: 1rem; color: var(--text-muted); margin-top: 0.4rem; font-weight: 600; }
 
-    .real-stat-bar { background: #0f172a; color: #f8fafc; border-radius: 30px; padding: 10px 24px; display: flex; justify-content: space-between; align-items: center; font-size: 0.88rem; font-weight: 700; margin-bottom: 20px; box-shadow: var(--shadow-sm); flex-wrap: wrap; gap: 10px; }
+    .real-stat-bar {
+      background: #0f172a; color: #f8fafc; border-radius: 30px; padding: 10px 24px;
+      display: flex; justify-content: space-between; align-items: center; font-size: 0.88rem;
+      font-weight: 700; margin-bottom: 20px; box-shadow: var(--shadow-sm); flex-wrap: wrap; gap: 10px;
+    }
     .real-stat-group { display: inline-flex; align-items: center; gap: 16px; }
     .real-badge { background: #1e293b; padding: 4px 12px; border-radius: 20px; border: 1px solid #334155; }
     .real-badge strong { color: #60a5fa; }
     .real-guide-text { color: #94a3b8; font-weight: 500; font-size: 0.82rem; }
 
-    .filter-card { background: #ffffff; border: 2px solid var(--border); border-radius: 12px; padding: 16px; margin-bottom: 14px; box-shadow: var(--shadow-sm); display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
-    .search-input { flex: 1; min-width: 260px; padding: 10px 14px; border: 1.5px solid var(--border); border-radius: 8px; font-size: 0.95rem; font-weight: 600; outline: none; }
+    .filter-card {
+      background: #ffffff; border: 2px solid var(--border); border-radius: 12px;
+      padding: 16px; margin-bottom: 20px; box-shadow: var(--shadow-sm);
+      display: flex; gap: 12px; flex-wrap: wrap; align-items: center;
+    }
+    .search-input {
+      flex: 1; min-width: 260px; padding: 10px 14px; border: 1.5px solid var(--border);
+      border-radius: 8px; font-size: 0.95rem; font-weight: 600; outline: none;
+    }
     .search-input:focus { border-color: var(--primary); }
-    .region-select { padding: 10px 14px; border: 1.5px solid var(--border); border-radius: 8px; font-size: 0.95rem; font-weight: 700; background: #fff; cursor: pointer; outline: none; }
-
-    .count-status-bar { display: flex; justify-content: space-between; align-items: center; font-size: 0.88rem; font-weight: 700; color: var(--text-muted); margin-bottom: 14px; padding: 0 4px; }
-    .count-status-bar strong { color: var(--primary); }
+    .region-select {
+      padding: 10px 14px; border: 1.5px solid var(--border); border-radius: 8px;
+      font-size: 0.95rem; font-weight: 700; background: #fff; cursor: pointer; outline: none;
+    }
 
     .jobs-container { display: grid; gap: 14px; min-height: 400px; }
-    .job-card { background: var(--card-bg); border: 2px solid var(--border); border-radius: 12px; padding: 18px 22px; display: flex; justify-content: space-between; align-items: center; box-shadow: var(--shadow-sm); transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s; }
-    .job-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); border-color: var(--primary); }
+    .job-card {
+      background: var(--card-bg); border: 2px solid var(--border); border-radius: 12px;
+      padding: 18px 22px; display: flex; justify-content: space-between; align-items: center;
+      box-shadow: var(--shadow-sm); transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+    }
+    .job-card:hover {
+      box-shadow: var(--shadow-md); transform: translateY(-2px); border-color: var(--primary);
+    }
     .job-info { flex: 1; margin-right: 1.5rem; }
     .job-badges { display: flex; gap: 6px; margin-bottom: 6px; align-items: center; flex-wrap: wrap; }
     .badge { font-size: 0.76rem; font-weight: 800; padding: 3px 8px; border-radius: 4px; }
     .badge-dday { background: #fee2e2; color: var(--danger); border: 1px solid #fca5a5; }
     .badge-dday.imminent { background: #dc2626; color: #ffffff; border-color: #b91c1c; }
     .badge-tag { background: #f1f5f9; color: var(--text-muted); border: 1px solid var(--border); }
-
     .company-name { font-size: 0.92rem; font-weight: 800; color: var(--primary); margin-bottom: 3px; }
     .job-title { font-size: 1.15rem; font-weight: 900; color: var(--secondary); margin-bottom: 6px; line-height: 1.4; }
     .job-meta { font-size: 0.85rem; color: var(--text-muted); font-weight: 600; display: flex; gap: 14px; flex-wrap: wrap; }
 
     .job-actions { display: flex; flex-direction: column; gap: 8px; min-width: 145px; }
-    .btn { display: inline-block; text-align: center; padding: 9px 14px; font-size: 0.85rem; font-weight: 800; border-radius: 6px; text-decoration: none; transition: background 0.2s; }
+    .btn {
+      display: inline-block; text-align: center; padding: 9px 14px; font-size: 0.85rem;
+      font-weight: 800; border-radius: 6px; text-decoration: none; transition: background 0.2s;
+    }
     .btn-primary { background: var(--primary); color: #fff; }
     .btn-primary:hover { background: var(--primary-hover); }
-    .btn-secondary { background: #f1f5f9; color: var(--secondary); border: 1.5px solid var(--border); }
+    .btn-secondary { background: #f1f5f9; color: var(--secondary); border: 1px solid var(--border); }
     .btn-secondary:hover { background: #e2e8f0; border-color: var(--border-dark); }
 
-    .pagination { display: flex; justify-content: center; align-items: center; gap: 6px; margin-top: 2.5rem; margin-bottom: 2rem; flex-wrap: wrap; }
-    .page-btn { min-width: 40px; height: 40px; padding: 0 10px; display: flex; align-items: center; justify-content: center; border: 1.5px solid var(--border); background: #fff; color: var(--secondary); font-weight: 800; font-size: 0.92rem; border-radius: 8px; cursor: pointer; transition: all 0.2s; }
+    .pagination {
+      display: flex; justify-content: center; align-items: center; gap: 6px;
+      margin-top: 2.2rem; margin-bottom: 2rem; flex-wrap: wrap;
+    }
+    .page-btn {
+      min-width: 38px; height: 38px; padding: 0 10px; display: flex; align-items: center;
+      justify-content: center; border: 1.5px solid var(--border); background: #fff;
+      color: var(--secondary); font-weight: 800; font-size: 0.9rem; border-radius: 6px;
+      cursor: pointer; transition: all 0.2s;
+    }
     .page-btn:hover:not(:disabled) { background: #f1f5f9; border-color: var(--border-dark); }
     .page-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
     .page-btn:disabled { opacity: 0.35; cursor: not-allowed; }
 
     .empty-state { text-align: center; padding: 4.5rem 1rem; color: var(--text-muted); font-weight: 700; }
 
-    .seo-article { margin-top: 3rem; background: #ffffff; border: 2px solid var(--border); border-radius: 12px; padding: 28px 24px; box-shadow: var(--shadow-sm); }
+    /* 애드센스 승인용 정적 콘텐츠 아티클 */
+    .seo-article {
+      margin-top: 3rem; background: #ffffff; border: 2px solid var(--border);
+      border-radius: 12px; padding: 28px 24px; box-shadow: var(--shadow-sm);
+    }
     .seo-article h2 { font-size: 1.35rem; font-weight: 900; color: var(--secondary); margin-bottom: 1rem; border-left: 5px solid var(--primary); padding-left: 10px; }
     .seo-article h3 { font-size: 1.1rem; font-weight: 800; color: var(--secondary); margin: 1.5rem 0 0.6rem 0; }
     .seo-article p { font-size: 0.92rem; color: #334155; line-height: 1.8; margin-bottom: 1rem; }
@@ -131,26 +184,28 @@
 </head>
 <body>
 
+  <!-- Global Header & 6-Menu Navigation -->
   <header>
     <div class="header-inner">
       <a href="index.html" class="brand"><span>⚡</span> ByteCheck</a>
       <nav>
         <a href="index.html">자소서 바이트</a>
-        <a href="salary.html">연봉/시급 계산기</a>
+        <a href="salary.html">연봉 계산기</a>
         <a href="dday.html">어학 D-Day</a>
         <a href="point-calc.html">공기업 가산점</a>
         <a href="convert.html">점수 변환기</a>
-        <a href="jobs.html" class="active">공기업 채용</a>
+        <a href="jobs.html" class="active">실시간 채용공고</a>
       </nav>
     </div>
   </header>
 
   <main class="main-container">
     <div class="hero-title">
-      <h1>실시간 공공기관·공기업 채용공고</h1>
-      <p>기획재정부 잡알리오(ALIO) 오픈API 연동 실시간 채용 정보 & D-Day 알림</p>
+      <h1>실시간 공기업·공공기관 채용공고</h1>
+      <p>기획재정부 잡알리오(ALIO) 기준 최신 실시간 공고 · 마감 공고 자동 삭제 및 D-Day 제공</p>
     </div>
 
+    <!-- 100% 정직한 실제 방문자 통계 바 -->
     <div class="real-stat-bar">
       <div class="real-stat-group">
         <div class="real-badge">
@@ -160,15 +215,14 @@
           👥 누적 실제 방문자: <strong id="totalRealVisitors">...</strong> 명
         </div>
       </div>
-      <div class="real-guide-text">⚡ 잡알리오 실시간 채용공고 1일 4회 자동 갱신 가동 중</div>
+      <div class="real-guide-text">⚡ 실시간 공공기관 채용 공고 1일 4회 자동 갱신 가동 중</div>
     </div>
 
-    <!-- 검색 & 지역 필터 바 -->
+    <!-- 검색 & 필터 바 -->
     <div class="filter-card">
-      <input type="text" id="searchInput" class="search-input" placeholder="기관명, 공고명 검색 (예: 한국전력, 건강보험, 토지주택, 행정)...">
+      <input type="text" id="searchInput" class="search-input" placeholder="기관명 또는 공고 제목을 검색하세요 (예: 한국전력공사, 행정, 전기)...">
       <select id="regionSelect" class="region-select">
         <option value="">지역 전체</option>
-        <option value="전국">전국</option>
         <option value="서울">서울</option>
         <option value="경기">경기</option>
         <option value="인천">인천</option>
@@ -186,13 +240,8 @@
         <option value="경남">경남</option>
         <option value="경북">경북</option>
         <option value="제주">제주</option>
+        <option value="전국">전국</option>
       </select>
-    </div>
-
-    <!-- 공고 수 및 페이지 안내 바 -->
-    <div class="count-status-bar">
-      <div>검색 결과: 총 <strong id="totalCountText">0</strong>건</div>
-      <div id="pageStatusText">1 / 1 페이지</div>
     </div>
 
     <!-- 공고 카드 목록 -->
@@ -200,32 +249,36 @@
       <div class="empty-state">실시간 채용공고 데이터를 불러오는 중입니다...</div>
     </div>
 
-    <!-- 1~5 단위 슬라이딩 페이지네이션 -->
+    <!-- 1~5 단위 페이지네이션 -->
     <div id="pagination" class="pagination"></div>
 
+    <!-- 구글 애드센스 심사용 고품질 정적 가이드 아티클 -->
     <article class="seo-article">
-      <h2>2026 공공기관·공기업 채용 탐색 및 서류 접수 핵심 가이드</h2>
+      <h2>공공기관 채용정보시스템(잡알리오) 공고 탐색 및 서류 접수 핵심 가이드</h2>
       <p>
-        ByteCheck 채용 플랫폼은 기획재정부 잡알리오(ALIO) 공공기관 채용정보시스템의 공식 오픈API를 연동하여 전국 공기업, 준정부기관, 기타공공기관의 신규 채용 및 청년인턴 공고를 실시간으로 제공합니다.
+        대한민국 공공기관 채용은 기획재정부 산하 잡알리오(ALIO) 시스템을 통해 공정하고 투명하게 공시됩니다. 공기업 및 준정부기관, 기타 공공기관 취업을 준비할 때 공고를 정확히 분석하고 마감 시한을 놓치지 않는 전략적 접근이 필수적입니다.
       </p>
 
-      <h3>1. 공공기관 전산망 UTF-8 3Byte 규격 주의점</h3>
-      <p>
-        대부분의 공기업 전산망은 한글 1글자를 3Byte로 계산합니다. 일반 포털의 글자수 검사기(한글 2Byte)로 작성할 경우 서류 제출 시 분량 초과로 잘리거나 감점될 수 있으므로, 반드시 ByteCheck의 자소서 바이트 계산기에서 규격을 사전 검증하시기 바랍니다.
-      </p>
+      <h3>1. 공공기관 채용 공고 확인 시 3대 핵심 점검 사항</h3>
+      <ul>
+        <li><strong>서류전형 선발 배수 확인:</strong> 적격자 전원 통과(적부)인지, 정량 배점(15배수~30배수) 선발인지 확인해야 합니다. 배수 제한이 엄격한 기관은 가산점 만점 확보가 선결 과제입니다.</li>
+        <li><strong>공식 접수 마감 시간 엄수:</strong> 대부분의 공공기관 채용 웹사이트는 마감일 17:00 또는 18:00 정각에 전산망 접수를 즉각 차단합니다. 마감 당일 접속 폭주로 인한 전산 오류를 피하기 위해 마감 24시간 전 제출을 권장합니다.</li>
+        <li><strong>블라인드 채용 규정 준수:</strong> 자기소개서 및 입사지원서 작성 시 학교명, 출신 지역, 가족의 직업 등 인적 사항을 유추할 수 있는 키워드를 기재할 경우 자동 감점 또는 불합격 처리됩니다.</li>
+      </ul>
 
-      <h3>2. 공기업 블라인드 채용 가산점 전략</h3>
+      <h3>2. 공공기관 전산망 UTF-8 3Byte 자소서 제출 주의점</h3>
       <p>
-        한국사능력검정시험, 토익(TOEIC), 컴활 등 주요 공통 가산점은 서류 전형 통과의 필수 요건입니다. 상단 '공기업 가산점 계산기'와 '어학 D-Day'를 통해 자신의 서류 통과 가능 점수를 즉시 시뮬레이션해 보세요.
+        민간 대기업의 일부 전산망이 한글을 2바이트로 계산하는 반면, 정부 및 공공기관의 채용 포털은 웹 표준 인코딩인 UTF-8 체계를 채택하여 한글 1글자를 3Byte로 연산합니다. 공고문에 "700자 / 2,100 Byte 이내"로 명시된 경우 한글 700자를 초과하면 시스템에 저장되지 않으므로 ByteCheck의 자소서 바이트 계산기를 통해 정확한 용량을 사전 검증해야 합니다.
       </p>
     </article>
   </main>
 
+  <!-- Global Footer -->
   <footer>
     <div class="footer-links">
       <a href="index.html">자소서 바이트</a>
       <span>|</span>
-      <a href="salary.html">연봉/시급 계산기</a>
+      <a href="salary.html">연봉 계산기</a>
       <span>|</span>
       <a href="dday.html">어학 D-Day</a>
       <span>|</span>
@@ -233,9 +286,9 @@
       <span>|</span>
       <a href="convert.html">점수 변환기</a>
       <span>|</span>
-      <a href="jobs.html">공기업 채용</a>
+      <a href="jobs.html">실시간 채용공고</a>
     </div>
-    <p>본 채용공고 정보는 기획재정부 공공기관 채용정보시스템(ALIO) 오픈API 데이터를 기반으로 제공되는 공식 참고용 자료입니다.</p>
+    <p>본 채용공고 정보는 기획재정부 공공기관 채용정보시스템(잡알리오) 공공데이터에 근거한 참고용 자료입니다.</p>
     <p style="margin-top: 6px;">© 2026 ByteCheck Global. All rights reserved.</p>
   </footer>
 
@@ -246,14 +299,15 @@
     let currentPage = 1;
 
     function calculateDDay(endDateStr) {
-      if (!endDateStr) return { text: "상시채용", isImminent: false };
+      if (!endDateStr) return { text: "접수중", isImminent: false };
       
-      const clean = endDateStr.replace(/[^0-9]/g, '');
-      if (clean.length < 8) return { text: "접수중", isImminent: false };
+      const cleanDate = endDateStr.replace(/\./g, '-').replace(/\//g, '-').trim();
+      const parts = cleanDate.split('-');
+      if (parts.length !== 3) return { text: "접수중", isImminent: false };
       
-      const endYear = parseInt(clean.substring(0, 4), 10);
-      const endMonth = parseInt(clean.substring(4, 6), 10) - 1;
-      const endDay = parseInt(clean.substring(6, 8), 10);
+      const endYear = parseInt(parts[0], 10);
+      const endMonth = parseInt(parts[1], 10) - 1;
+      const endDay = parseInt(parts[2], 10);
       
       const targetDate = new Date(endYear, endMonth, endDay, 23, 59, 59);
       const today = new Date();
@@ -268,9 +322,12 @@
       return { text: `D-${diffDays}`, isImminent: false };
     }
 
-    async function fetchJobsData() {
+    async function fetchWithFallback() {
       const timestamp = Date.now();
-      const urls = [`jobs.json?v=${timestamp}`, `jobs.json`];
+      const urls = [
+        `jobs.json?v=${timestamp}`,
+        `jobs.json`
+      ];
 
       for (const url of urls) {
         try {
@@ -281,29 +338,37 @@
           }
         } catch (e) {}
       }
-      throw new Error('데이터 로드 실패');
+      throw new Error('공고 데이터를 찾을 수 없습니다.');
     }
 
     async function loadJobs() {
       const container = document.getElementById('jobsContainer');
       try {
-        const rawData = await fetchJobsData();
+        const rawData = await fetchWithFallback();
         
-        allJobs = rawData.map(job => ({
-          company: (job.company || job.instNm || '공공기관').trim(),
-          title: job.title || job.recrutPblntSnDesc || job.pblntTitle || '채용 공고',
-          location: job.location || job.workRgnNm || job.workRgn || '전국',
-          hireType: job.hireType || job.hireTypeNm || '정규직/계약직',
-          endDate: job.endDate || job.pbancEndYmd || '상시채용',
-          url: (job.url || job.srcUrl || '').trim()
-        }));
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
 
-        applyFilter();
+        allJobs = rawData.filter(job => {
+          const endDateStr = job.endDate || job.pbancEndYmd || "";
+          if (!endDateStr) return true;
+          
+          const cleanDate = endDateStr.replace(/\./g, '-').replace(/\//g, '-').trim();
+          const parts = cleanDate.split('-');
+          if (parts.length === 3) {
+            const end = new Date(parseInt(parts[0], 10), parseInt(parts[1], 10) - 1, parseInt(parts[2], 10), 23, 59, 59);
+            return isNaN(end.getTime()) || end >= today;
+          }
+          return true;
+        });
+
+        filteredJobs = [...allJobs];
+        renderPage();
       } catch (err) {
         container.innerHTML = `
           <div class="empty-state">
-            <p style="font-size:1.1rem; color:#0f172a; margin-bottom:8px;">⚠️ 실시간 공고 데이터를 불러오는 중입니다.</p>
-            <p style="font-size:0.88rem; color:#64748b;">(잠시 후 새로고침하시면 최신 공고가 자동으로 표시됩니다)</p>
+            <p style="font-size:1.1rem; color:#0f172a; margin-bottom:8px;">⚠️ 채용공고 데이터를 갱신 중이거나 최신 파일 동기화 대기 중입니다.</p>
+            <p style="font-size:0.88rem; color:#64748b;">(잠시 후 새로고침하시면 자동으로 최신 공고가 표시됩니다)</p>
           </div>
         `;
       }
@@ -314,12 +379,12 @@
       const region = document.getElementById('regionSelect').value;
 
       filteredJobs = allJobs.filter(job => {
-        const title = job.title.toLowerCase();
-        const company = job.company.toLowerCase();
-        const location = job.location;
+        const title = (job.title || job.pblntTitle || job.recrutPblntSnDesc || '').toLowerCase();
+        const company = (job.company || job.instNm || '').toLowerCase();
+        const location = (job.location || job.workRgn || job.workRgnNm || '');
 
         const matchesSearch = !search || company.includes(search) || title.includes(search);
-        const matchesRegion = !region || location.includes(region) || location.includes('전국');
+        const matchesRegion = !region || location.includes(region);
 
         return matchesSearch && matchesRegion;
       });
@@ -331,44 +396,43 @@
     function renderPage() {
       const container = document.getElementById('jobsContainer');
       const pagination = document.getElementById('pagination');
-      const totalCountText = document.getElementById('totalCountText');
-      const pageStatusText = document.getElementById('pageStatusText');
-
-      totalCountText.innerText = filteredJobs.length.toLocaleString();
 
       if (filteredJobs.length === 0) {
         container.innerHTML = '<div class="empty-state">조건에 부합하는 활성 채용 공고가 없습니다.</div>';
         pagination.innerHTML = '';
-        pageStatusText.innerText = '0 / 0 페이지';
         return;
       }
 
       const totalPages = Math.ceil(filteredJobs.length / ITEMS_PER_PAGE);
-      pageStatusText.innerText = `${currentPage} / ${totalPages} 페이지`;
-
       const startIdx = (currentPage - 1) * ITEMS_PER_PAGE;
       const currentItems = filteredJobs.slice(startIdx, startIdx + ITEMS_PER_PAGE);
 
       container.innerHTML = currentItems.map(job => {
-        const ddayInfo = calculateDDay(job.endDate);
+        const title = job.title || job.pblntTitle || job.recrutPblntSnDesc || '채용 공고';
+        const company = job.company || job.instNm || '공공기관';
+        const location = job.location || job.workRgn || job.workRgnNm || '전국';
+        const hireType = job.hireType || job.hireTypeNm || '정규직/계약직';
+        const endDate = job.endDate || job.pbancEndYmd || '채용 마감 시';
+        const applyUrl = job.url || job.applyUrl || job.srcUrl || '';
+
+        const ddayInfo = calculateDDay(endDate);
         const ddayBadgeClass = ddayInfo.isImminent ? 'badge badge-dday imminent' : 'badge badge-dday';
 
-        // 💡 원본 실제 유효 링크가 있을 때만 안전하게 공식 접수처 버튼 표시 (404 원천 차단)
-        const applyBtn = (job.url && job.url.startsWith('http')) ? 
-          `<a href="${escapeHtml(job.url)}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">공식 접수처 ↗</a>` : '';
+        const applyBtn = applyUrl ? 
+          `<a href="${escapeHtml(applyUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">공식 접수처 ↗</a>` : '';
 
         return `
           <article class="job-card">
             <div class="job-info">
               <div class="job-badges">
                 <span class="${ddayBadgeClass}">${escapeHtml(ddayInfo.text)}</span>
-                <span class="badge badge-tag">${escapeHtml(job.hireType)}</span>
-                <span class="badge badge-tag">${escapeHtml(job.location)}</span>
+                <span class="badge badge-tag">${escapeHtml(hireType)}</span>
+                <span class="badge badge-tag">${escapeHtml(location)}</span>
               </div>
-              <div class="company-name">${escapeHtml(job.company)}</div>
-              <h2 class="job-title">${escapeHtml(job.title)}</h2>
+              <div class="company-name">${escapeHtml(company)}</div>
+              <h2 class="job-title">${escapeHtml(title)}</h2>
               <div class="job-meta">
-                <span>접수 기한: ~${escapeHtml(job.endDate)}</span>
+                <span>접수 기한: ~${escapeHtml(endDate)}</span>
               </div>
             </div>
             <div class="job-actions">
@@ -384,20 +448,16 @@
 
     function renderPagination(totalPages) {
       const pagination = document.getElementById('pagination');
-      if (totalPages <= 1) {
-        pagination.innerHTML = '';
-        return;
-      }
-
       let html = '';
-      html += `<button class="page-btn" ${currentPage === 1 ? 'disabled' : ''} onclick="goToPage(1)">«</button>`;
+
       html += `<button class="page-btn" ${currentPage === 1 ? 'disabled' : ''} onclick="goToPage(${currentPage - 1})">‹</button>`;
 
-      let startPage = Math.max(1, currentPage - 2);
-      let endPage = Math.min(totalPages, startPage + 4);
+      const windowSize = 5;
+      let startPage = Math.max(1, currentPage - Math.floor(windowSize / 2));
+      let endPage = Math.min(totalPages, startPage + windowSize - 1);
 
-      if (endPage - startPage < 4) {
-        startPage = Math.max(1, endPage - 4);
+      if (endPage - startPage + 1 < windowSize) {
+        startPage = Math.max(1, endPage - windowSize + 1);
       }
 
       for (let i = startPage; i <= endPage; i++) {
@@ -405,7 +465,6 @@
       }
 
       html += `<button class="page-btn" ${currentPage === totalPages ? 'disabled' : ''} onclick="goToPage(${currentPage + 1})">›</button>`;
-      html += `<button class="page-btn" ${currentPage === totalPages ? 'disabled' : ''} onclick="goToPage(${totalPages})">»</button>`;
 
       pagination.innerHTML = html;
     }
