@@ -155,6 +155,7 @@
 
     .empty-state { text-align: center; padding: 4.5rem 1rem; color: var(--text-muted); font-weight: 700; }
 
+    /* 애드센스 승인용 정적 콘텐츠 아티클 */
     .seo-article {
       margin-top: 3rem; background: #ffffff; border: 2px solid var(--border);
       border-radius: 12px; padding: 28px 24px; box-shadow: var(--shadow-sm);
@@ -413,13 +414,13 @@
         const hireType = job.hireType || job.hireTypeNm || '정규직/계약직';
         const endDate = job.endDate || job.pbancEndYmd || '채용 마감 시';
         
-        // 원본 실제 링크 우선 확인 (절대 가짜 주소 생성 금지)
+        // 원본 실제 링크 우선 확인
         let applyUrl = (job.url || job.applyUrl || job.srcUrl || job.alioUrl || '').trim();
 
         const ddayInfo = calculateDDay(endDate);
         const ddayBadgeClass = ddayInfo.isImminent ? 'badge badge-dday imminent' : 'badge badge-dday';
 
-        // 💡 유효한 웹 주소(http)가 있을 때만 공식 접수처 버튼 표시 (404 원천 차단)
+        // 💡 실제 링크가 있을 때만 공식 접수처 버튼 표시 (404 원천 차단)
         const applyBtn = (applyUrl && applyUrl.startsWith('http')) ? 
           `<a href="${escapeHtml(applyUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">공식 접수처 ↗</a>` : '';
 
