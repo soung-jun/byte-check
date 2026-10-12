@@ -375,7 +375,7 @@
 
     function applyFilter() {
       const search = document.getElementById('searchInput').value.trim().toLowerCase();
-      const region = document.getElementById('regionSelect').value;
+      const region = document.getElementById('regionSelect').value.trim();
 
       filteredJobs = allJobs.filter(job => {
         const title = (job.title || job.pblntTitle || job.recrutPblntSnDesc || '').toLowerCase();
@@ -383,7 +383,14 @@
         const location = (job.location || job.workRgn || job.workRgnNm || '');
 
         const matchesSearch = !search || company.includes(search) || title.includes(search);
-        const matchesRegion = !region || location.includes(region);
+        
+        // 💡 [지역 필터 버그 정밀 수정]
+        // 선택한 지역이 location, company, title 중 하나에라도 포함되거나, '전국' 공고인 경우 정상 매칭
+        const combinedLocText = `${location} ${company} ${title}`;
+        const matchesRegion = !region || 
+                              location.includes(region) || 
+                              combinedLocText.includes(region) || 
+                              location.includes('전국');
 
         return matchesSearch && matchesRegion;
       });
@@ -416,7 +423,7 @@
         // 원본 링크 추출 및 정밀 보정
         let applyUrl = (job.applyUrl || job.url || job.srcUrl || job.alioUrl || '').trim();
 
-        // 💡 오타 및 누락 프로토콜 보정 (404 원천 차단)
+        // 오타 및 누락 프로토콜 보정 (404 원천 차단)
         if (applyUrl === '없음' || applyUrl === 'null' || !applyUrl) {
           applyUrl = '';
         } else if (applyUrl.startsWith('http//')) {
@@ -430,7 +437,7 @@
         const ddayInfo = calculateDDay(endDate);
         const ddayBadgeClass = ddayInfo.isImminent ? 'badge badge-dday imminent' : 'badge badge-dday';
 
-        // 💡 정상 웹 URL인 경우에만 공식 접수처 버튼 표시
+        // 정상 웹 URL인 경우에만 공식 접수처 버튼 표시
         const applyBtn = (applyUrl && applyUrl.startsWith('http')) ? 
           `<a href="${escapeHtml(applyUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">공식 접수처 ↗</a>` : '';
 
