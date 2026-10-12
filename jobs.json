@@ -1,5 +1,104 @@
 [
   {
+    "company": "한국도로공사",
+    "title": "한국도로공사 파주지사 기간제근로자(안전순찰원) 채용공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-12",
+    "applyUrl": "https://www.ex.co.kr",
+    "url": "https://www.ex.co.kr"
+  },
+  {
+    "company": "한국의료분쟁조정중재원",
+    "title": "[공고] 한국의료분쟁조정중재원 제3차 상임감정위원(비전일) 공개모집",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-12",
+    "applyUrl": "https://www.k-medi.or.kr/web/lay1/bbs/S1T13C148/A/47/list.do",
+    "url": "https://www.k-medi.or.kr/web/lay1/bbs/S1T13C148/A/47/list.do"
+  },
+  {
+    "company": "(재)한국통계정보원",
+    "title": "[제2026-10] 한국통계정보원 무기계약직(경력직) 제한경쟁 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-12",
+    "applyUrl": "https://www.kosii.or.kr/kosii/dc/pstmng/dcCmPstMngDetail.do?menuCd=DC0505010000&bbsId=BBS00000000000000060&pstId=PST00000000000004094&page=1&srchTxt=",
+    "url": "https://www.kosii.or.kr/kosii/dc/pstmng/dcCmPstMngDetail.do?menuCd=DC0505010000&bbsId=BBS00000000000000060&pstId=PST00000000000004094&page=1&srchTxt="
+  },
+  {
+    "company": "(재)한국통계정보원",
+    "title": "[제2026-09] 한국통계정보원 기간제 근로자 채용 재공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-12",
+    "applyUrl": "https://www.kosii.or.kr/kosii/dc/pstmng/dcCmPstMngDetail.do?menuCd=DC0505010000&bbsId=BBS00000000000000060&pstId=PST00000000000004095&page=1&srchTxt=",
+    "url": "https://www.kosii.or.kr/kosii/dc/pstmng/dcCmPstMngDetail.do?menuCd=DC0505010000&bbsId=BBS00000000000000060&pstId=PST00000000000004095&page=1&srchTxt="
+  },
+  {
+    "company": "국립암센터",
+    "title": "임시직(장애) 채용공고[261012]",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-12",
+    "applyUrl": "https://ncc.recruiter.co.kr/career/jobs/130808",
+    "url": "https://ncc.recruiter.co.kr/career/jobs/130808"
+  },
+  {
+    "company": "한국고전번역원",
+    "title": "한국고전번역원 2026년 4분기 직원 신규 채용",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-12",
+    "applyUrl": "https://www.itkc.or.kr/bbs/boardView.do?id=2&bIdx=316475&menuId=99",
+    "url": "https://www.itkc.or.kr/bbs/boardView.do?id=2&bIdx=316475&menuId=99"
+  },
+  {
+    "company": "국립암센터",
+    "title": "임시직 채용공고[261012]",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-12",
+    "applyUrl": "https://ncc.recruiter.co.kr/career/jobs/130809",
+    "url": "https://ncc.recruiter.co.kr/career/jobs/130809"
+  },
+  {
+    "company": "한국청소년상담복지개발원",
+    "title": "제2026-6호 한국청소년상담복지개발원 직원 모집",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-12",
+    "applyUrl": "https://kyci.fairyhr.com",
+    "url": "https://kyci.fairyhr.com"
+  },
+  {
+    "company": "한국제품안전관리원",
+    "title": "한국제품안전관리원 개방형직위(본부장) 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-12",
+    "applyUrl": "http://kips.kr/",
+    "url": "http://kips.kr/"
+  },
+  {
+    "company": "근로복지공단",
+    "title": "[동해병원] 기간제 의사(산부인과) 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-12",
+    "applyUrl": "https://www.comwel.or.kr/recruit/hp/main.do",
+    "url": "https://www.comwel.or.kr/recruit/hp/main.do"
+  },
+  {
+    "company": "근로복지공단",
+    "title": "[태백요양병원] 기간제(사무원) 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-12",
+    "applyUrl": "https://www.comwel.or.kr/recruit/hp/main.do",
+    "url": "https://www.comwel.or.kr/recruit/hp/main.do"
+  },
+  {
     "company": "충북대학교병원",
     "title": "충북대학교병원 마취통증의학과 전임의사 모집 공고",
     "location": "전국",
