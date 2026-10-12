@@ -298,15 +298,14 @@
     let currentPage = 1;
 
     function calculateDDay(endDateStr) {
-      if (!endDateStr) return { text: "접수중", isImminent: false };
+      if (!endDateStr || endDateStr === "상시채용") return { text: "상시채용", isImminent: false };
       
-      const cleanDate = endDateStr.replace(/\./g, '-').replace(/\//g, '-').trim();
-      const parts = cleanDate.split('-');
-      if (parts.length !== 3) return { text: "접수중", isImminent: false };
+      const cleanDigits = endDateStr.replace(/[^0-9]/g, '');
+      if (cleanDigits.length < 8) return { text: "접수중", isImminent: false };
       
-      const endYear = parseInt(parts[0], 10);
-      const endMonth = parseInt(parts[1], 10) - 1;
-      const endDay = parseInt(parts[2], 10);
+      const endYear = parseInt(cleanDigits.substring(0, 4), 10);
+      const endMonth = parseInt(cleanDigits.substring(4, 6), 10) - 1;
+      const endDay = parseInt(cleanDigits.substring(6, 8), 10);
       
       const targetDate = new Date(endYear, endMonth, endDay, 23, 59, 59);
       const today = new Date();
@@ -344,23 +343,8 @@
       const container = document.getElementById('jobsContainer');
       try {
         const rawData = await fetchWithFallback();
-        
-        const today = new Date();
-        today.setHours(0, 0, 0, 0);
-
-        allJobs = rawData.filter(job => {
-          const endDateStr = job.endDate || job.pbancEndYmd || "";
-          if (!endDateStr) return true;
-          
-          const cleanDate = endDateStr.replace(/\./g, '-').replace(/\//g, '-').trim();
-          const parts = cleanDate.split('-');
-          if (parts.length === 3) {
-            const end = new Date(parseInt(parts[0], 10), parseInt(parts[1], 10) - 1, parseInt(parts[2], 10), 23, 59, 59);
-            return isNaN(end.getTime()) || end >= today;
-          }
-          return true;
-        });
-
+        // 봇에서 이미 유효한 활성 공고만 저장하므로 배열 그대로 안전하게 연결합니다.
+        allJobs = Array.isArray(rawData) ? rawData : [];
         filteredJobs = [...allJobs];
         renderPage();
       } catch (err) {
@@ -384,9 +368,6 @@
 
         const matchesSearch = !search || company.includes(search) || title.includes(search);
         
-        // 💡 [지역 필터 정상화]
-        // 1. '지역 전체'(!region) 선택 시에만 모든 공고 통과
-        // 2. 특정 지역 선택 시 해당 지역 키워드가 명시된 공고만 엄격 통과 (무조건 통과되던 전국 누수 차단)
         let matchesRegion = true;
         if (region) {
           if (region === '전국') {
@@ -427,7 +408,6 @@
         // 원본 링크 추출 및 정밀 보정
         let applyUrl = (job.applyUrl || job.url || job.srcUrl || job.alioUrl || '').trim();
 
-        // 오타 및 누락 프로토콜 보정 (404 원천 차단)
         if (applyUrl === '없음' || applyUrl === 'null' || !applyUrl) {
           applyUrl = '';
         } else if (applyUrl.startsWith('http//')) {
@@ -441,7 +421,6 @@
         const ddayInfo = calculateDDay(endDate);
         const ddayBadgeClass = ddayInfo.isImminent ? 'badge badge-dday imminent' : 'badge badge-dday';
 
-        // 정상 웹 URL인 경우에만 공식 접수처 버튼 표시
         const applyBtn = (applyUrl && applyUrl.startsWith('http')) ? 
           `<a href="${escapeHtml(applyUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">공식 접수처 ↗</a>` : '';
 
@@ -520,3 +499,52 @@
       const now = new Date();
       const kstFormatter = new Intl.DateTimeFormat('ko-KR', {
         timeZone: 'Asia/Seoul',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit'
+      });
+      const parts = kstFormatter.formatToParts(now);
+      const y = parts.find(p => p.type === 'year').value;
+      const m = parts.find(p => p.type === 'month').value;
+      const d = parts.find(p => p.type === 'day').value;
+      const kstDayKey = `today_${y}${m}${d}`;
+
+      const isFirstSession = !sessionStorage.getItem('bc_session_active');
+      const action = isFirstSession ? 'hit' : 'get';
+
+      fetch(`https://abacus.jasoncameron.dev/${action}/bytechecktool.com/total_real`)
+        .then(res => res.json())
+        .then(data => {
+          if (data && typeof data.value === 'number') {
+            const finalTotal = HISTORICAL_BASE + data.value;
+            localStorage.setItem('bc_cache_total_visitors', finalTotal);
+            if (elTotal) elTotal.innerText = finalTotal.toLocaleString();
+          }
+        })
+        .catch(() => {
+          if (elTotal && elTotal.innerText === '...') elTotal.innerText = HISTORICAL_BASE.toLocaleString();
+        });
+
+      fetch(`https://abacus.jasoncameron.dev/${action}/bytechecktool.com/${kstDayKey}`)
+        .then(res => res.json())
+        .then(data => {
+          if (data && typeof data.value === 'number') {
+            if (elToday) elToday.innerText = data.value.toLocaleString();
+            sessionStorage.setItem('bc_session_active', '1');
+          }
+        })
+        .catch(() => {
+          if (elToday && elToday.innerText === '...') elToday.innerText = '1';
+        });
+    }
+
+    document.getElementById('searchInput').addEventListener('input', applyFilter);
+    document.getElementById('regionSelect').addEventListener('change', applyFilter);
+
+    document.addEventListener('DOMContentLoaded', () => {
+      loadJobs();
+      trackHonestVisitor();
+    });
+  </script>
+</body>
+</html>
