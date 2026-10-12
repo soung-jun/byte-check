@@ -384,13 +384,17 @@
 
         const matchesSearch = !search || company.includes(search) || title.includes(search);
         
-        // 💡 [지역 필터 버그 정밀 수정]
-        // 선택한 지역이 location, company, title 중 하나에라도 포함되거나, '전국' 공고인 경우 정상 매칭
-        const combinedLocText = `${location} ${company} ${title}`;
-        const matchesRegion = !region || 
-                              location.includes(region) || 
-                              combinedLocText.includes(region) || 
-                              location.includes('전국');
+        // 💡 [지역 필터 정상화]
+        // 1. '지역 전체'(!region) 선택 시에만 모든 공고 통과
+        // 2. 특정 지역 선택 시 해당 지역 키워드가 명시된 공고만 엄격 통과 (무조건 통과되던 전국 누수 차단)
+        let matchesRegion = true;
+        if (region) {
+          if (region === '전국') {
+            matchesRegion = location.includes('전국');
+          } else {
+            matchesRegion = location.includes(region) || company.includes(region) || title.includes(region);
+          }
+        }
 
         return matchesSearch && matchesRegion;
       });
@@ -516,52 +520,3 @@
       const now = new Date();
       const kstFormatter = new Intl.DateTimeFormat('ko-KR', {
         timeZone: 'Asia/Seoul',
-        year: 'numeric',
-        month: '2-digit',
-        day: '2-digit'
-      });
-      const parts = kstFormatter.formatToParts(now);
-      const y = parts.find(p => p.type === 'year').value;
-      const m = parts.find(p => p.type === 'month').value;
-      const d = parts.find(p => p.type === 'day').value;
-      const kstDayKey = `today_${y}${m}${d}`;
-
-      const isFirstSession = !sessionStorage.getItem('bc_session_active');
-      const action = isFirstSession ? 'hit' : 'get';
-
-      fetch(`https://abacus.jasoncameron.dev/${action}/bytechecktool.com/total_real`)
-        .then(res => res.json())
-        .then(data => {
-          if (data && typeof data.value === 'number') {
-            const finalTotal = HISTORICAL_BASE + data.value;
-            localStorage.setItem('bc_cache_total_visitors', finalTotal);
-            if (elTotal) elTotal.innerText = finalTotal.toLocaleString();
-          }
-        })
-        .catch(() => {
-          if (elTotal && elTotal.innerText === '...') elTotal.innerText = HISTORICAL_BASE.toLocaleString();
-        });
-
-      fetch(`https://abacus.jasoncameron.dev/${action}/bytechecktool.com/${kstDayKey}`)
-        .then(res => res.json())
-        .then(data => {
-          if (data && typeof data.value === 'number') {
-            if (elToday) elToday.innerText = data.value.toLocaleString();
-            sessionStorage.setItem('bc_session_active', '1');
-          }
-        })
-        .catch(() => {
-          if (elToday && elToday.innerText === '...') elToday.innerText = '1';
-        });
-    }
-
-    document.getElementById('searchInput').addEventListener('input', applyFilter);
-    document.getElementById('regionSelect').addEventListener('change', applyFilter);
-
-    document.addEventListener('DOMContentLoaded', () => {
-      loadJobs();
-      trackHonestVisitor();
-    });
-  </script>
-</body>
-</html>
