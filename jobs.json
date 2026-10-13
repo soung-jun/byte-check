@@ -1710,6 +1710,24 @@
     "url": "https://www.nrf.re.kr/page/54?ac=view&searchType=&searchText=&pageNum=1&menuNo=54&boardNo=7&menuTypeCd=MENU_TYPE_02&code=&postNo=282771"
   },
   {
+    "company": "학교법인한국폴리텍",
+    "title": "한국폴리텍대학 화성캠퍼스 청년인턴(장애인 제한경쟁) 공개채용(2차)공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-20",
+    "applyUrl": "https://www.kopo.ac.kr/hwaseong/board.do?menu=7078&mode=view&post=786987",
+    "url": "https://www.kopo.ac.kr/hwaseong/board.do?menu=7078&mode=view&post=786987"
+  },
+  {
+    "company": "국립공원공단",
+    "title": "[한려동부] 2026년 한려해상국립공원동부사무소 한시인력(수익시설) 직원 2차 채용",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-20",
+    "applyUrl": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019889",
+    "url": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019889"
+  },
+  {
     "company": "한국도로공사",
     "title": "한국도로공사 창녕지사 기간제근로자(안전순찰원) 채용공고",
     "location": "전국",
@@ -2385,6 +2403,15 @@
     "url": "https://www.kywa.or.kr/about/about05_5_view.jsp?bgubun=&currPage=1&searchText=&searchColumn=&searchTextEn=&bgubun=&no=36828"
   },
   {
+    "company": "한국보훈복지의료공단",
+    "title": "[부산보훈병원] 정규직(방사선사, 전산, 간호조무사) 긴급채용공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-23",
+    "applyUrl": "https://www.bohun.or.kr/busan/na/ntt/selectNttInfo.do?mi=33215&bbsId=1158&bbsSysId=busan&nttSn=190351",
+    "url": "https://www.bohun.or.kr/busan/na/ntt/selectNttInfo.do?mi=33215&bbsId=1158&bbsSysId=busan&nttSn=190351"
+  },
+  {
     "company": "국립암센터",
     "title": "임시직(장애) 채용공고[261012]",
     "location": "전국",
@@ -2842,14 +2869,5 @@
     "endDate": "2026-12-31",
     "applyUrl": "https://cnuh.recruiter.co.kr/",
     "url": "https://cnuh.recruiter.co.kr/"
-  },
-  {
-    "company": "경상국립대학교병원",
-    "title": "[창원경상국립대학교병원] 약무직 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-12-31",
-    "applyUrl": "http://recruit.gnuch.co.kr/",
-    "url": "http://recruit.gnuch.co.kr/"
   }
 ]
