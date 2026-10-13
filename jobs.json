@@ -1873,6 +1873,15 @@
   },
   {
     "company": "한국장애인고용공단",
+    "title": "[한국장애인고용공단 고용개발원] 특정업무직(시설정비원 3조3교대) 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-21",
+    "applyUrl": "https://www.kead.or.kr/bbs/deptgongji/bbsPage.do?menuId=MENU0895",
+    "url": "https://www.kead.or.kr/bbs/deptgongji/bbsPage.do?menuId=MENU0895"
+  },
+  {
+    "company": "한국장애인고용공단",
     "title": "[한국장애인고용공단 경북지사] 대체근로자(체험형 인턴) 채용 공고",
     "location": "전국",
     "hireType": "정규직/계약직",
@@ -2131,6 +2140,33 @@
     "endDate": "2026-10-21",
     "applyUrl": "https://lh.or.kr/board.es?mid=a10602050000&bid=0036&act=view&list_no=734317&tag=&nPage=1",
     "url": "https://lh.or.kr/board.es?mid=a10602050000&bid=0036&act=view&list_no=734317&tag=&nPage=1"
+  },
+  {
+    "company": "강원대학교치과병원",
+    "title": "계약직(치과위생사) 모집공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-22",
+    "applyUrl": "http://www.knudh.or.kr",
+    "url": "http://www.knudh.or.kr"
+  },
+  {
+    "company": "강원대학교치과병원",
+    "title": "정규직(간호사) 모집 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-22",
+    "applyUrl": "https://www.knudh.or.kr",
+    "url": "https://www.knudh.or.kr"
+  },
+  {
+    "company": "강원대학교치과병원",
+    "title": "전임의사 모집 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-22",
+    "applyUrl": "https://www.knudh.or.kr",
+    "url": "https://www.knudh.or.kr"
   },
   {
     "company": "한국농촌경제연구원",
@@ -2403,6 +2439,42 @@
     "url": "https://www.kywa.or.kr/about/about05_5_view.jsp?bgubun=&currPage=1&searchText=&searchColumn=&searchTextEn=&bgubun=&no=36828"
   },
   {
+    "company": "국립공원공단",
+    "title": "[태안] 2026년 태안해안 기간제(한시인력_탐방로보수) 직원 채용 재공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-23",
+    "applyUrl": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019893",
+    "url": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019893"
+  },
+  {
+    "company": "국립중앙의료원",
+    "title": "계약직 연구원(모자의료지원팀, 인력양성정책팀) 채용 재공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-23",
+    "applyUrl": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=269054",
+    "url": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=269054"
+  },
+  {
+    "company": "국립중앙의료원",
+    "title": "계약직 연구원-휴직대체(공공의료교육팀) 채용 재공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-23",
+    "applyUrl": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=269049",
+    "url": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=269049"
+  },
+  {
+    "company": "국립중앙의료원",
+    "title": "계약직 간호사-코디네이터(외상센터) 채용 재공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-23",
+    "applyUrl": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=269045",
+    "url": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=269045"
+  },
+  {
     "company": "한국보훈복지의료공단",
     "title": "[부산보훈병원] 정규직(방사선사, 전산, 간호조무사) 긴급채용공고",
     "location": "전국",
@@ -2547,6 +2619,96 @@
     "url": "https://www.kopo.ac.kr/jeonnam/board.do?menu=10543&mode=view&post=786696"
   },
   {
+    "company": "동남권원자력의학원",
+    "title": "[직원채용] 동남권원자력의학원 박사후 연수연구원(첨단방사선AI융합연구팀) 공개 채용",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-26",
+    "applyUrl": "https://diramsjob.recruiter.co.kr/career/home",
+    "url": "https://diramsjob.recruiter.co.kr/career/home"
+  },
+  {
+    "company": "동남권원자력의학원",
+    "title": "[직원채용] 정규직 의사직(방사선비상진료센터) 채용",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-26",
+    "applyUrl": "https://diramsjob.recruiter.co.kr/career/jobs/74345",
+    "url": "https://diramsjob.recruiter.co.kr/career/jobs/74345"
+  },
+  {
+    "company": "동남권원자력의학원",
+    "title": "[직원채용] 별정직 의사직(산부인과) 채용",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-26",
+    "applyUrl": "https://diramsjob.recruiter.co.kr/career/jobs/74348",
+    "url": "https://diramsjob.recruiter.co.kr/career/jobs/74348"
+  },
+  {
+    "company": "동남권원자력의학원",
+    "title": "[직원채용] 별정직 의사직(감염내과) 채용",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-26",
+    "applyUrl": "https://diramsjob.recruiter.co.kr/career/jobs/74349",
+    "url": "https://diramsjob.recruiter.co.kr/career/jobs/74349"
+  },
+  {
+    "company": "동남권원자력의학원",
+    "title": "[직원채용] 별정직 의사직(호흡기내과) 초빙",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-26",
+    "applyUrl": "https://diramsjob.recruiter.co.kr/career/jobs/74350",
+    "url": "https://diramsjob.recruiter.co.kr/career/jobs/74350"
+  },
+  {
+    "company": "동남권원자력의학원",
+    "title": "[직원채용] 별정직 의사직(응급실) 공개채용",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-26",
+    "applyUrl": "https://diramsjob.recruiter.co.kr/career/home",
+    "url": "https://diramsjob.recruiter.co.kr/career/home"
+  },
+  {
+    "company": "동남권원자력의학원",
+    "title": "[직원채용] 별정직 의사직(병동 당직의) 공개 채용",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-26",
+    "applyUrl": "https://diramsjob.recruiter.co.kr/career/home",
+    "url": "https://diramsjob.recruiter.co.kr/career/home"
+  },
+  {
+    "company": "동남권원자력의학원",
+    "title": "[직원채용] 별정직 의사직(신경외과 전임의) 공개 채용(재공고)",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-26",
+    "applyUrl": "https://diramsjob.recruiter.co.kr/career/home",
+    "url": "https://diramsjob.recruiter.co.kr/career/home"
+  },
+  {
+    "company": "동남권원자력의학원",
+    "title": "[직원채용] 정규직 의사직(핵의학과) 공개 채용",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-26",
+    "applyUrl": "https://diramsjob.recruiter.co.kr/career/home",
+    "url": "https://diramsjob.recruiter.co.kr/career/home"
+  },
+  {
+    "company": "동남권원자력의학원",
+    "title": "[직원채용] 동남권원자력의학원 박사후 연수연구원(첨단방사선종양연구팀) 공개 채용",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-26",
+    "applyUrl": "https://diramsjob.recruiter.co.kr/career/home",
+    "url": "https://diramsjob.recruiter.co.kr/career/home"
+  },
+  {
     "company": "한전KDN",
     "title": "한전KDN(주) 목포지사 AMI분야 비정규직(장애인) 모집공고(재공고)",
     "location": "전국",
@@ -2662,6 +2824,33 @@
     "endDate": "2026-10-26",
     "applyUrl": "https://www.kocca.kr/shortUrl/60Cq",
     "url": "https://www.kocca.kr/shortUrl/60Cq"
+  },
+  {
+    "company": "한국보훈복지의료공단",
+    "title": "[대전보훈요양원] 체험형 청년인턴 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-27",
+    "applyUrl": "https://www.bohun.or.kr/main/na/ntt/selectNttInfo.do?mi=37031&bbsId=1158&bbsSysId=main&nttSn=190359",
+    "url": "https://www.bohun.or.kr/main/na/ntt/selectNttInfo.do?mi=37031&bbsId=1158&bbsSysId=main&nttSn=190359"
+  },
+  {
+    "company": "국립공원공단",
+    "title": "[계룡산] 2026년 계룡산국립공원사무소 기간제(한시인력-산불감시) 직원 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-27",
+    "applyUrl": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019892",
+    "url": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019892"
+  },
+  {
+    "company": "한국보훈복지의료공단",
+    "title": "[대전보훈요양원] 정규직 요양보호사 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-27",
+    "applyUrl": "https://www.bohun.or.kr/main/na/ntt/selectNttInfo.do?mi=37031&bbsId=1158&bbsSysId=main&nttSn=190354",
+    "url": "https://www.bohun.or.kr/main/na/ntt/selectNttInfo.do?mi=37031&bbsId=1158&bbsSysId=main&nttSn=190354"
   },
   {
     "company": "대한법률구조공단",
@@ -2864,15 +3053,6 @@
   {
     "company": "전남대학교병원",
     "title": "2026년도 전임의사 상시 공개채용 변경 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-12-31",
-    "applyUrl": "https://cnuh.recruiter.co.kr/",
-    "url": "https://cnuh.recruiter.co.kr/"
-  },
-  {
-    "company": "전남대학교병원",
-    "title": "2026년 진료전담의사 상시 공개채용 공고",
     "location": "전국",
     "hireType": "정규직/계약직",
     "endDate": "2026-12-31",
