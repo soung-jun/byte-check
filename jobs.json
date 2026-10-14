@@ -225,24 +225,6 @@
     "url": "https://kimst.recruiter.co.kr/"
   },
   {
-    "company": "한국토지주택공사",
-    "title": "한국토지주택공사 경기북부지역본부 기간제근로자(안전관리자) 채용공고('26년 9월)",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-10-14",
-    "applyUrl": "https://www.lh.or.kr/board.es?mid=a10602050000&bid=0036&act=view&list_no=734233&tag=&nPage=1",
-    "url": "https://www.lh.or.kr/board.es?mid=a10602050000&bid=0036&act=view&list_no=734233&tag=&nPage=1"
-  },
-  {
-    "company": "한국수력원자력(주)",
-    "title": "2026년도 제9차 경력사원(고위직) 선발",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-10-14",
-    "applyUrl": "https://khnp.co.kr/recruit",
-    "url": "https://khnp.co.kr/recruit"
-  },
-  {
     "company": "경북대학교병원",
     "title": "칠곡경북대학교병원 2026년 10월 1차 임시직원 채용공고(행정, 간호사, 사회복지사, 업무보조)",
     "location": "전국",
@@ -2511,6 +2493,24 @@
     "url": "https://www.kopo.ac.kr/jeonnam/board.do?menu=10543&mode=view&post=786696"
   },
   {
+    "company": "한국보훈복지의료공단",
+    "title": "[광주보훈병원] 의사직(일반의) 직원 채용",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-26",
+    "applyUrl": "https://www.bohun.or.kr/gwangju/na/ntt/selectNttInfo.do?mi=32890&bbsId=1158&bbsSysId=gwangju&nttSn=190404",
+    "url": "https://www.bohun.or.kr/gwangju/na/ntt/selectNttInfo.do?mi=32890&bbsId=1158&bbsSysId=gwangju&nttSn=190404"
+  },
+  {
+    "company": "국립공원공단",
+    "title": "[소백산] 소백산사무소 기간제(한시인력) 산불감시원 채용",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-26",
+    "applyUrl": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019900",
+    "url": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019900"
+  },
+  {
     "company": "근로복지공단",
     "title": "[대전병원] 별정직 의사(직업환경의학과) 채용 공고",
     "location": "전국",
@@ -2952,6 +2952,60 @@
     "url": "https://ibs.re.kr/prog/recruit/kor/sub04_01/list.do"
   },
   {
+    "company": "국가생명윤리정책원",
+    "title": "제2026-4차 개방형 직위(경영지원본부장) 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-28",
+    "applyUrl": "https://recruit.incruit.com/nibp/",
+    "url": "https://recruit.incruit.com/nibp/"
+  },
+  {
+    "company": "한국기상산업기술원",
+    "title": "2026년도 제5회 공개채용",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-28",
+    "applyUrl": "https://kmiti.recruitlab.co.kr/",
+    "url": "https://kmiti.recruitlab.co.kr/"
+  },
+  {
+    "company": "공무원연금공단",
+    "title": "자금운용 전문계약직(해외투자팀장) 채용 재공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-28",
+    "applyUrl": "https://www.geps.or.kr/notiCommunication_info_incruit/43372?curPage=1",
+    "url": "https://www.geps.or.kr/notiCommunication_info_incruit/43372?curPage=1"
+  },
+  {
+    "company": "예금보험공사",
+    "title": "예금보험공사 통신·시설관리직 채용 안내",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-28",
+    "applyUrl": "https://www.kdic.or.kr",
+    "url": "https://www.kdic.or.kr"
+  },
+  {
+    "company": "한국수자원공사",
+    "title": "[한국수자원공사] 충남중부권지사 논산수도센터 특수직(기술관리_건설사업) 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-28",
+    "applyUrl": "https://k-water.recruiter.co.kr/",
+    "url": "https://k-water.recruiter.co.kr/"
+  },
+  {
+    "company": "한국수자원공사",
+    "title": "[한국수자원공사] 충남중부권지사 논산수도센터 특수직(사무관리_건설사업) 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-28",
+    "applyUrl": "https://k-water.recruiter.co.kr/",
+    "url": "https://k-water.recruiter.co.kr/"
+  },
+  {
     "company": "한국수자원공사",
     "title": "[한국수자원공사] 대산산업용수관리단 대산해수담수센터 단기계약근로자(점검정비) 채용 공고",
     "location": "전국",
@@ -3106,6 +3160,15 @@
   },
   {
     "company": "대한적십자사",
+    "title": "2026년 대한적십자사 전북특별자치도지사 비정규직(장애인) 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-29",
+    "applyUrl": "https://www.kead.or.kr/",
+    "url": "https://www.kead.or.kr/"
+  },
+  {
+    "company": "대한적십자사",
     "title": "2026년도 제12차 혈액관리본부 소속기관 의무직 신규채용(서울중앙혈액원 품질관리팀장)",
     "location": "전국",
     "hireType": "정규직/계약직",
@@ -3130,6 +3193,60 @@
     "endDate": "2026-10-29",
     "applyUrl": "https://www.hnibr.re.kr/ko/M000000515/bbs/view?pstNo=33822&pageUnit=10&pageIndex=1&searchCnd=01&searchWrd=&searchPstClCdId=",
     "url": "https://www.hnibr.re.kr/ko/M000000515/bbs/view?pstNo=33822&pageUnit=10&pageIndex=1&searchCnd=01&searchWrd=&searchPstClCdId="
+  },
+  {
+    "company": "대한적십자사",
+    "title": "서울적십자병원 2027년도 졸업예정 간호사 신규채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-30",
+    "applyUrl": "https://www.redcross.or.kr/redrecruit",
+    "url": "https://www.redcross.or.kr/redrecruit"
+  },
+  {
+    "company": "대한적십자사",
+    "title": "서울적십자병원 정규직 간호조무사 신규채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-30",
+    "applyUrl": "https://www.redcross.or.kr/redrecruit",
+    "url": "https://www.redcross.or.kr/redrecruit"
+  },
+  {
+    "company": "대한적십자사",
+    "title": "서울적십자병원 계약직 기능직(장애인제한경쟁) 신규채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-30",
+    "applyUrl": "https://www.redcross.or.kr/redrecruit",
+    "url": "https://www.redcross.or.kr/redrecruit"
+  },
+  {
+    "company": "대한적십자사",
+    "title": "서울적십자병원 정규직 간호사(병동) 신규채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-30",
+    "applyUrl": "https://www.redcross.or.kr/redrecruit",
+    "url": "https://www.redcross.or.kr/redrecruit"
+  },
+  {
+    "company": "대한적십자사",
+    "title": "서울적십자병원 정규직 간호사(내시경실) 신규채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-30",
+    "applyUrl": "https://www.redcross.or.kr/redrecruit",
+    "url": "https://www.redcross.or.kr/redrecruit"
+  },
+  {
+    "company": "대한적십자사",
+    "title": "서울적십자병원 정규직 간호사(내과전담) 신규채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-30",
+    "applyUrl": "https://www.redcross.or.kr/redrecruit",
+    "url": "https://www.redcross.or.kr/redrecruit"
   },
   {
     "company": "기초과학연구원",
@@ -3213,6 +3330,15 @@
     "url": "https://www.kipf.re.kr/kor/Plaza/Recruitment/kiRecruitment/view.do?cntNo=451"
   },
   {
+    "company": "한국개발연구원",
+    "title": "KDI 연구위원급 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-12-02",
+    "applyUrl": "https://www.kdi.re.kr/share/recruitView?rec_no=307&pg=1&rec_type=",
+    "url": "https://www.kdi.re.kr/share/recruitView?rec_no=307&pg=1&rec_type="
+  },
+  {
     "company": "강원대학교병원",
     "title": "2026-46 의사직 수시 채용 공고",
     "location": "전국",
@@ -3247,14 +3373,5 @@
     "endDate": "2026-12-31",
     "applyUrl": "https://www.knuh.kr/content/04information/02_01.asp",
     "url": "https://www.knuh.kr/content/04information/02_01.asp"
-  },
-  {
-    "company": "전남대학교병원",
-    "title": "2026년도 전임의사 상시 공개채용 변경 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-12-31",
-    "applyUrl": "https://cnuh.recruiter.co.kr/",
-    "url": "https://cnuh.recruiter.co.kr/"
   }
 ]
