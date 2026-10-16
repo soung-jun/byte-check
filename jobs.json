@@ -936,6 +936,15 @@
     "url": "https://www.ekr.or.kr/planweb/board/view.krc?dataUid=8a8bb352a08a300001a0f0b32faf7d9e&page=1&boardUid=402880317cc0644a017cc5e8000f06b7&contentUid=8a8bb3529665d7140199501cd3ef6280&searchType=&keyword=&categoryUid1=&categoryUid2=8a8bb3529665d714019951996437"
   },
   {
+    "company": "한전KPS(주)",
+    "title": "한전KPS(주)강원충북전력지사 단기노무원(신청주지점 송전업무정비보조) 채용 공고(35차)",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-20",
+    "applyUrl": "https://www.kps.co.kr",
+    "url": "https://www.kps.co.kr"
+  },
+  {
     "company": "경북대학교병원",
     "title": "2026년 10월 제2차 임시직원 모집 공고(간호조무, 기계설비, 응급구조사, 장례물품판매, 임상병리사)",
     "location": "전국",
@@ -1852,6 +1861,15 @@
     "endDate": "2026-10-22",
     "applyUrl": "https://www.kywa.or.kr/about/about05_5_view.jsp?bgubun=&currPage=1&searchText=&searchColumn=&searchTextEn=&bgubun=&no=36828",
     "url": "https://www.kywa.or.kr/about/about05_5_view.jsp?bgubun=&currPage=1&searchText=&searchColumn=&searchTextEn=&bgubun=&no=36828"
+  },
+  {
+    "company": "근로복지공단",
+    "title": "[인천병원] 기간제(사무원) 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-23",
+    "applyUrl": "https://www.comwel.or.kr/recruit/hp/main.do",
+    "url": "https://www.comwel.or.kr/recruit/hp/main.do"
   },
   {
     "company": "한국문화관광연구원",
@@ -3033,6 +3051,15 @@
     "url": "https://www.hnibr.re.kr/ko/M000000515/bbs/view?pstNo=33822&pageUnit=10&pageIndex=1&searchCnd=01&searchWrd=&searchPstClCdId="
   },
   {
+    "company": "한국수자원공사",
+    "title": "[한국수자원공사] 파주수도지사 특수직(수탁운영_지방상수도 시설운영) 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-30",
+    "applyUrl": "https://k-water.recruiter.co.kr",
+    "url": "https://k-water.recruiter.co.kr"
+  },
+  {
     "company": "한국농어촌공사",
     "title": "한국농어촌공사 남원지사 계약직근로자(휴직 대체인력) 채용 공고",
     "location": "전국",
@@ -3339,6 +3366,42 @@
     "url": "https://www.redcross.or.kr/redrecruit"
   },
   {
+    "company": "대한적십자사",
+    "title": "[강원혈액원] 2026년 대체인력(사무보조) 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-02",
+    "applyUrl": "https://www.redcross.or.kr/redrecruit",
+    "url": "https://www.redcross.or.kr/redrecruit"
+  },
+  {
+    "company": "한국재정정보원",
+    "title": "한국재정정보원 2026년도 제5차 채용(정규직, 체험형 청년인턴)",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-02",
+    "applyUrl": "https://fis.kr/",
+    "url": "https://fis.kr/"
+  },
+  {
+    "company": "대한적십자사",
+    "title": "인천적십자병원 장애인 비정규직 고용원(사무보조원) 채용공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-02",
+    "applyUrl": "https://www.redcross.or.kr/redrecruit",
+    "url": "https://www.redcross.or.kr/redrecruit"
+  },
+  {
+    "company": "대한적십자사",
+    "title": "인천적십자병원 보훈특별고용 비정규직 고용원(보조인력) 채용공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-02",
+    "applyUrl": "https://www.rch.or.kr/web/rchincheon/bbs/employment",
+    "url": "https://www.rch.or.kr/web/rchincheon/bbs/employment"
+  },
+  {
     "company": "경북대학교병원",
     "title": "칠곡경북대학교병원 2026년 제3차 단기 결원 대체 인력풀(간호사, 간호조무사, 방사선사, 임상병리사, 업무보조, 원무지원) 모집 공고",
     "location": "전국",
@@ -3391,6 +3454,15 @@
     "endDate": "2026-11-06",
     "applyUrl": "https://ibs.re.kr/prog/recruit/kor/sub04_01/list.do",
     "url": "https://ibs.re.kr/prog/recruit/kor/sub04_01/list.do"
+  },
+  {
+    "company": "국립암센터",
+    "title": "2027년도 국립암센터 수련과정(전임의, 대장내시경아카데미생, 전임의학물리원, 의학물리아카데미생) 교육생 모집 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-11",
+    "applyUrl": "https://ncc.re.kr/boardView.ncc?uri=notice06&ntcId=8758&searchKey=total&searchValue=&pageNum=1",
+    "url": "https://ncc.re.kr/boardView.ncc?uri=notice06&ntcId=8758&searchKey=total&searchValue=&pageNum=1"
   },
   {
     "company": "국립암센터",
