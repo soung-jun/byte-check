@@ -783,15 +783,6 @@
     "url": "https://kei.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=268300"
   },
   {
-    "company": "건축공간연구원",
-    "title": "건축공간연구원 위촉직 모집",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-10-19",
-    "applyUrl": "https://recruit.auri.re.kr",
-    "url": "https://recruit.auri.re.kr"
-  },
-  {
     "company": "한국보훈복지의료공단",
     "title": "[원주보훈요양원] 2026년 제3차 체험형 청년인턴(장애인) 채용",
     "location": "전국",
@@ -1458,6 +1449,15 @@
     "url": "https://lh.or.kr/board.es?mid=a10602050000&bid=0036&act=view&list_no=734317&tag=&nPage=1"
   },
   {
+    "company": "(재)우체국물류지원단",
+    "title": "우체국물류지원단 서울지사 동서울물류사업소 기간제(발착직) 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-22",
+    "applyUrl": "https://www.pola.or.kr",
+    "url": "https://www.pola.or.kr"
+  },
+  {
     "company": "학교법인한국폴리텍",
     "title": "2026년 한국폴리텍대학 영주캠퍼스 체험형 청년인턴(장애) 채용",
     "location": "전국",
@@ -2077,6 +2077,33 @@
     "endDate": "2026-10-25",
     "applyUrl": "https://www.kopo.ac.kr/jeonnam/board.do?menu=10543&mode=view&post=786696",
     "url": "https://www.kopo.ac.kr/jeonnam/board.do?menu=10543&mode=view&post=786696"
+  },
+  {
+    "company": "한국보훈복지의료공단",
+    "title": "[광주보훈병원] 계약직 업무지원직(진료지원) 직원 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-26",
+    "applyUrl": "https://www.bohun.or.kr/gwangju/na/ntt/selectNttInfo.do?mi=32890&bbsId=1158&bbsSysId=gwangju&nttSn=190473",
+    "url": "https://www.bohun.or.kr/gwangju/na/ntt/selectNttInfo.do?mi=32890&bbsId=1158&bbsSysId=gwangju&nttSn=190473"
+  },
+  {
+    "company": "한국보훈복지의료공단",
+    "title": "[광주보훈병원] 계약직 보건직(작업치료사) - 휴직대체 직원 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-26",
+    "applyUrl": "https://www.bohun.or.kr/gwangju/na/ntt/selectNttInfo.do?mi=32890&bbsId=1158&bbsSysId=gwangju&nttSn=190472",
+    "url": "https://www.bohun.or.kr/gwangju/na/ntt/selectNttInfo.do?mi=32890&bbsId=1158&bbsSysId=gwangju&nttSn=190472"
+  },
+  {
+    "company": "근로복지공단",
+    "title": "[고객센터] 공무직(일반상담사) 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-26",
+    "applyUrl": "https://www.comwel.or.kr/recruit/hp/main.do",
+    "url": "https://www.comwel.or.kr/recruit/hp/main.do"
   },
   {
     "company": "국립공원공단",
@@ -3051,6 +3078,24 @@
     "url": "https://www.hnibr.re.kr/ko/M000000515/bbs/view?pstNo=33822&pageUnit=10&pageIndex=1&searchCnd=01&searchWrd=&searchPstClCdId="
   },
   {
+    "company": "한국여성인권진흥원",
+    "title": "2026년 한국여성인권진흥원 제6차 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-30",
+    "applyUrl": "https://www.stop.or.kr/home/kor/M810741449/board.do?deleteAt=N&act=detail&idx=cb00d1a0008a85e71a41b8741facbffedbc6102471471ae2d4a252417ad38c33&searchValue1=0&searchKeyword=&searchDate5=&searchDate6=&pageIndex=1",
+    "url": "https://www.stop.or.kr/home/kor/M810741449/board.do?deleteAt=N&act=detail&idx=cb00d1a0008a85e71a41b8741facbffedbc6102471471ae2d4a252417ad38c33&searchValue1=0&searchKeyword=&searchDate5=&searchDate6=&pageIndex=1"
+  },
+  {
+    "company": "한국자산관리공사",
+    "title": "2026년도 2차 한국자산관리공사 장애인 단기계약직 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-30",
+    "applyUrl": "https://kamcointern.saramin.co.kr/service/kamcointern/4015/applicant/apply/recruit_default.asp",
+    "url": "https://kamcointern.saramin.co.kr/service/kamcointern/4015/applicant/apply/recruit_default.asp"
+  },
+  {
     "company": "한국수자원공사",
     "title": "[한국수자원공사] 파주수도지사 특수직(수탁운영_지방상수도 시설운영) 채용 공고",
     "location": "전국",
@@ -3227,8 +3272,8 @@
     "location": "전국",
     "hireType": "정규직/계약직",
     "endDate": "2026-10-30",
-    "applyUrl": "https://newhome.bohun.or.kr/bohunedu/na/ntt/selectNttList.do?mi=34395&bbsId=1403",
-    "url": "https://newhome.bohun.or.kr/bohunedu/na/ntt/selectNttList.do?mi=34395&bbsId=1403"
+    "applyUrl": "https://www.bohun.or.kr/bohunedu/na/ntt/selectNttInfo.do?mi=34395&bbsId=1403&bbsSysId=bohunedu&nttSn=190418",
+    "url": "https://www.bohun.or.kr/bohunedu/na/ntt/selectNttInfo.do?mi=34395&bbsId=1403&bbsSysId=bohunedu&nttSn=190418"
   },
   {
     "company": "KDI국제정책대학원",
@@ -3364,6 +3409,42 @@
     "endDate": "2026-11-01",
     "applyUrl": "https://www.redcross.or.kr/redrecruit",
     "url": "https://www.redcross.or.kr/redrecruit"
+  },
+  {
+    "company": "건축공간연구원",
+    "title": "건축공간연구원 위촉직 모집",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-02",
+    "applyUrl": "https://recruit.auri.re.kr",
+    "url": "https://recruit.auri.re.kr"
+  },
+  {
+    "company": "한국원산지정보원",
+    "title": "한국원산지정보원 FTA총괄본부장(개방형 직위) 공개모집",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-02",
+    "applyUrl": "https://www.origin.or.kr/lay1/bbs/S1T12C49/A/12/view.do?article_seq=1754&cpage=&rows=&condition=&keyword=",
+    "url": "https://www.origin.or.kr/lay1/bbs/S1T12C49/A/12/view.do?article_seq=1754&cpage=&rows=&condition=&keyword="
+  },
+  {
+    "company": "한국보건사회연구원",
+    "title": "한국보건사회연구원 청년인턴 채용 공고(학술정보 및 홍보 분야)",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-02",
+    "applyUrl": "https://kihasa.recruiter.co.kr",
+    "url": "https://kihasa.recruiter.co.kr"
+  },
+  {
+    "company": "대한적십자사",
+    "title": "[강원혈액원] 2026년 장애인 한시적근로자(운전원) 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-02",
+    "applyUrl": "https://www.bloodinfo.net/knrcbs/na/ntt/selectNttInfo.do?mi=1088&bbsId=1044&nttSn=559174",
+    "url": "https://www.bloodinfo.net/knrcbs/na/ntt/selectNttInfo.do?mi=1088&bbsId=1044&nttSn=559174"
   },
   {
     "company": "대한적십자사",
