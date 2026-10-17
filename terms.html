@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>서비스 이용약관 | ByteCheck</title>
+  <meta name="description" content="ByteCheck 취업 유틸리티 플랫폼의 서비스 이용 조건 및 운영 정책 안내입니다.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --primary: #1d4ed8;
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --text: #0f172a;
+      --text-muted: #475569;
+      --border: #e2e8f0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
+    body { background-color: var(--bg); color: var(--text); line-height: 1.7; }
+    header { background: var(--surface); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 1000; }
+    .header-inner { max-width: 1280px; margin: 0 auto; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; }
+    .brand { display: inline-flex; align-items: center; gap: 8px; font-size: 1.35rem; font-weight: 900; color: var(--primary); text-decoration: none; }
+    nav { display: flex; align-items: center; gap: 8px; overflow-x: auto; }
+    nav a { text-decoration: none; color: var(--text-muted); font-size: 0.9rem; font-weight: 700; padding: 8px 14px; border-radius: 10px; }
+    nav a:hover { background: #eff6ff; color: var(--primary); }
+    
+    .doc-container { max-width: 860px; margin: 36px auto 60px; padding: 36px 32px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; box-shadow: 0 1px 3px rgba(15,23,42,0.05); }
+    .doc-container h1 { font-size: 1.6rem; color: #0f172a; margin-bottom: 20px; border-bottom: 2px solid var(--primary); padding-bottom: 12px; font-weight: 900; }
+    .doc-container h2 { font-size: 1.15rem; color: #1e293b; margin-top: 28px; margin-bottom: 10px; font-weight: 800; }
+    .doc-container p, .doc-container li { font-size: 0.95rem; color: #334155; margin-bottom: 8px; }
+    .doc-container ol { padding-left: 20px; margin-bottom: 14px; }
+    
+    footer { background: #ffffff; border-top: 1px solid var(--border); padding: 36px 20px; font-size: 0.84rem; color: var(--text-muted); line-height: 1.8; text-align: center; }
+    .footer-nav, .footer-legal-bar { display: flex; justify-content: center; gap: 14px; margin-bottom: 10px; flex-wrap: wrap; }
+    .footer-nav a { color: var(--primary); text-decoration: none; font-weight: 700; }
+    .footer-legal-bar a { color: #334155; text-decoration: none; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="brand"><span>⚡</span> ByteCheck</a>
+      <nav>
+        <a href="index.html">자소서 바이트</a>
+        <a href="salary.html">연봉 계산기</a>
+        <a href="dday.html">어학 D-Day</a>
+        <a href="point-calc.html">공기업 가산점</a>
+        <a href="convert.html">점수 변환기</a>
+        <a href="jobs.html">실시간 채용공고</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="doc-container">
+    <h1>서비스 이용약관 (Terms of Service)</h1>
+    <p>본 약관은 ByteCheck(이하 '서비스')가 제공하는 온라인 글자수/바이트 연산기, 이력서 서식 제공, 채용 일정 모니터링 등 전반적인 웹 도구의 이용 조건 및 절차를 규정함을 목적으로 합니다.</p>
+
+    <h2>제1조 (목적 및 성격)</h2>
+    <ol>
+      <li>본 서비스는 공기업, 대기업 등 입사 지원을 준비하는 구직자를 위한 자소서 글자수·바이트 정밀 계산, 감점어 마스킹, 표준 서식 다운로드 등 무료 유틸리티를 제공합니다.</li>
+      <li>서비스가 산출하는 바이트 및 글자수 계산치는 기술 표준(UTF-8, EUC-KR)에 입각하여 제공되나, 채용 주관 기관의 개별 접수 전산망 알고리즘 차이로 인한 변동이 있을 수 있습니다.</li>
+    </ol>
+
+    <h2>제2조 (회원가입 및 개인정보 수집 배제)</h2>
+    <ol>
+      <li>서비스는 원칙적으로 회원가입 없이 모든 도구를 자유롭게 이용할 수 있도록 개방되어 있습니다.</li>
+      <li>이용자가 작성한 자기소개서 본문 텍스트는 서비스의 원격 서버로 일체 전송되지 않으며, 이용자의 웹 브라우저 로컬 저장소(LocalStorage)에만 보관됩니다.</li>
+    </ol>
+
+    <h2>제3조 (지식재산권 및 서식 템플릿 이용 규정)</h2>
+    <ol>
+      <li>서비스가 자체 제공하는 8종 이력서 서식 파일(.doc), UI 레이아웃, 독자적 계산 로직에 대한 저작권은 ByteCheck에 귀속됩니다.</li>
+      <li>이용자는 제공되는 서식을 취업 지원 목적으로 자유롭게 다운로드하고 수정하여 사용할 수 있으나, 영리적 목적의 재판매 및 무단 재배포는 엄격히 금지됩니다.</li>
+    </ol>
+
+    <h2>제4조 (서비스의 변경 및 면책)</h2>
+    <ol>
+      <li>공공데이터포털(기재부 잡알리오) API 장애, 호스팅 서버 점검 등 불가피한 사유가 발생할 경우 사전 고지 없이 서비스 제공이 일시 중단될 수 있습니다.</li>
+      <li>이용자가 서비스의 계산 결과만을 신뢰하여 발생한 원서 접수 누락, 글자수 초과 불이익에 대해 서비스는 직접적인 법적 책임을 지지 않습니다.</li>
+    </ol>
+
+    <p style="margin-top: 32px; font-size: 0.85rem; color: #94a3b8;">공고일자: 2026년 10월 17일 | 시행일자: 2026년 10월 17일</p>
+  </main>
+
+  <footer>
+    <div class="footer-nav">
+      <a href="index.html">자소서 바이트</a>
+      <span>|</span>
+      <a href="salary.html">연봉 계산기</a>
+      <span>|</span>
+      <a href="dday.html">어학 D-Day</a>
+      <span>|</span>
+      <a href="point-calc.html">공기업 가산점</a>
+      <span>|</span>
+      <a href="convert.html">점수 변환기</a>
+      <span>|</span>
+      <a href="jobs.html">실시간 채용공고</a>
+    </div>
+    <div class="footer-legal-bar">
+      <a href="terms.html">이용약관</a>
+      <span>|</span>
+      <a href="privacy.html">개인정보처리방침</a>
+      <span>|</span>
+      <a href="privacy.html#disclaimer">법적 면책조항</a>
+      <span>|</span>
+      <a href="contact.html">문의하기 (Contact Us)</a>
+    </div>
+    <p>© ByteCheck Global. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
