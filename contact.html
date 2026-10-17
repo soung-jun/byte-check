@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>문의하기 (Contact Us) | ByteCheck</title>
+  <meta name="description" content="ByteCheck 서비스 오류 신고, 기업별 바이트 규격 제보, 제휴 문의 창구입니다.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --primary: #1d4ed8;
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --text: #0f172a;
+      --text-muted: #475569;
+      --border: #e2e8f0;
+      --border-dark: #cbd5e1;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
+    body { background-color: var(--bg); color: var(--text); line-height: 1.7; }
+    header { background: var(--surface); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 1000; }
+    .header-inner { max-width: 1280px; margin: 0 auto; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; }
+    .brand { display: inline-flex; align-items: center; gap: 8px; font-size: 1.35rem; font-weight: 900; color: var(--primary); text-decoration: none; }
+    nav { display: flex; align-items: center; gap: 8px; overflow-x: auto; }
+    nav a { text-decoration: none; color: var(--text-muted); font-size: 0.9rem; font-weight: 700; padding: 8px 14px; border-radius: 10px; }
+    nav a:hover { background: #eff6ff; color: var(--primary); }
+    
+    .doc-container { max-width: 860px; margin: 36px auto 60px; padding: 36px 32px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; box-shadow: 0 1px 3px rgba(15,23,42,0.05); }
+    .doc-container h1 { font-size: 1.6rem; color: #0f172a; margin-bottom: 20px; border-bottom: 2px solid var(--primary); padding-bottom: 12px; font-weight: 900; }
+    .doc-container h2 { font-size: 1.15rem; color: #1e293b; margin-top: 28px; margin-bottom: 10px; font-weight: 800; }
+    .doc-container p, .doc-container li { font-size: 0.95rem; color: #334155; margin-bottom: 8px; }
+    .doc-container ul { padding-left: 20px; margin-bottom: 14px; }
+    
+    .contact-card { background: #eff6ff; border: 1.5px solid #bfdbfe; border-radius: 10px; padding: 20px; margin: 20px 0; }
+    .contact-row { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; font-size: 0.95rem; }
+    .contact-row strong { color: #1e40af; min-width: 110px; }
+    
+    .contact-form { background: #f8fafc; border: 1.5px solid var(--border); border-radius: 12px; padding: 24px; margin-top: 20px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 0.88rem; font-weight: 700; color: #0f172a; margin-bottom: 6px; }
+    .form-group input, .form-group textarea {
+      width: 100%; padding: 10px 12px; border: 1.5px solid var(--border-dark); border-radius: 8px; font-size: 0.92rem; color: #0f172a; outline: none;
+    }
+    .form-group input:focus, .form-group textarea:focus { border-color: var(--primary); }
+    .form-group textarea { height: 130px; resize: vertical; }
+    .btn-send { width: 100%; background: var(--primary); color: #fff; border: none; padding: 12px; border-radius: 8px; font-size: 0.95rem; font-weight: 800; cursor: pointer; transition: background 0.2s; }
+    .btn-send:hover { background: #1e40af; }
+
+    footer { background: #ffffff; border-top: 1px solid var(--border); padding: 36px 20px; font-size: 0.84rem; color: var(--text-muted); line-height: 1.8; text-align: center; }
+    .footer-nav, .footer-legal-bar { display: flex; justify-content: center; gap: 14px; margin-bottom: 10px; flex-wrap: wrap; }
+    .footer-nav a { color: var(--primary); text-decoration: none; font-weight: 700; }
+    .footer-legal-bar a { color: #334155; text-decoration: none; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="brand"><span>⚡</span> ByteCheck</a>
+      <nav>
+        <a href="index.html">자소서 바이트</a>
+        <a href="salary.html">연봉 계산기</a>
+        <a href="dday.html">어학 D-Day</a>
+        <a href="point-calc.html">공기업 가산점</a>
+        <a href="convert.html">점수 변환기</a>
+        <a href="jobs.html">실시간 채용공고</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="doc-container">
+    <h1>문의하기 (Contact Us)</h1>
+    <p>ByteCheck 취업 지원 플랫폼을 이용해 주셔서 감사합니다. 시스템 오류 제보, 기업별 전산망 바이트 규격 제보, 콘텐츠 제휴 등은 아래 공식 창구를 통해 접수받고 있습니다.</p>
+
+    <div class="contact-card">
+      <div class="contact-row">
+        <strong>📧 공식 이메일</strong>
+        <span>contact@bytechecktool.com</span>
+      </div>
+      <div class="contact-row">
+        <strong>⏰ 운영 시간</strong>
+        <span>평일 09:00 ~ 18:00 (영업일 기준 24~48시간 이내 회신)</span>
+      </div>
+      <div class="contact-row">
+        <strong>🏢 소관 도구</strong>
+        <span>ByteCheck 자소서 바이트 계산기 & 취업 서식 센터</span>
+      </div>
+    </div>
+
+    <h2>주요 문의 및 제보 안내</h2>
+    <ul>
+      <li><strong>기업별 전산망 규격 제보</strong>: 특정 대기업이나 공기업의 원서 접수창에서 한글 또는 엔터 바이트 산정 규칙이 변경된 경우 제보해 주시면 시스템 연산 로직에 반영합니다.</li>
+      <li><strong>블라인드 감점 키워드 제안</strong>: 최근 채용 트렌드에 따른 새로운 감점 주의 단어 제보</li>
+      <li><strong>기술 지원 및 버그 신고</strong>: 웹 브라우저 호환성 오류 및 서식 파일 다운로드 장애 접수</li>
+    </ul>
+
+    <h2>온라인 간편 문의 접수</h2>
+    <div class="contact-form">
+      <form onsubmit="handleSendMail(event)">
+        <div class="form-group">
+          <label for="cName">성명 또는 기업·단체명</label>
+          <input type="text" id="cName" placeholder="성함을 입력해주세요" required>
+        </div>
+        <div class="form-group">
+          <label for="cEmail">회신받으실 이메일 주소</label>
+          <input type="email" id="cEmail" placeholder="example@domain.com" required>
+        </div>
+        <div class="form-group">
+          <label for="cSubject">문의 제목</label>
+          <input type="text" id="cSubject" placeholder="예: 바이트 연산 규격 제보 / 제휴 문의" required>
+        </div>
+        <div class="form-group">
+          <label for="cMessage">문의 내용</label>
+          <textarea id="cMessage" placeholder="상세 내용을 작성해 주세요." required></textarea>
+        </div>
+        <button type="submit" class="btn-send">이메일 클라이언트로 전송하기</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-nav">
+      <a href="index.html">자소서 바이트</a>
+      <span>|</span>
+      <a href="salary.html">연봉 계산기</a>
+      <span>|</span>
+      <a href="dday.html">어학 D-Day</a>
+      <span>|</span>
+      <a href="point-calc.html">공기업 가산점</a>
+      <span>|</span>
+      <a href="convert.html">점수 변환기</a>
+      <span>|</span>
+      <a href="jobs.html">실시간 채용공고</a>
+    </div>
+    <div class="footer-legal-bar">
+      <a href="terms.html">이용약관</a>
+      <span>|</span>
+      <a href="privacy.html">개인정보처리방침</a>
+      <span>|</span>
+      <a href="privacy.html#disclaimer">법적 면책조항</a>
+      <span>|</span>
+      <a href="contact.html">문의하기 (Contact Us)</a>
+    </div>
+    <p>© ByteCheck Global. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function handleSendMail(e) {
+      e.preventDefault();
+      const name = document.getElementById('cName').value;
+      const email = document.getElementById('cEmail').value;
+      const subject = document.getElementById('cSubject').value;
+      const msg = document.getElementById('cMessage').value;
+
+      const bodyText = `성명/단체: ${name}\n회신 이메일: ${email}\n\n[문의 내용]\n${msg}`;
+      window.location.href = `mailto:contact@bytechecktool.com?subject=${encodeURIComponent('[ByteCheck 문의] ' + subject)}&body=${encodeURIComponent(bodyText)}`;
+    }
+  </script>
+
+</body>
+</html>
