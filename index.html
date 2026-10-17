@@ -84,7 +84,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
     body { background-color: var(--bg); color: var(--text); line-height: 1.65; }
 
-    /* 상단 헤더 (단 1개의 정돈된 내비게이션) */
+    /* 상단 헤더 */
     header { background: var(--surface); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 1000; box-shadow: var(--shadow-sm); }
     .header-inner { max-width: 1280px; margin: 0 auto; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
     .brand { display: inline-flex; align-items: center; gap: 8px; font-size: 1.35rem; font-weight: 900; color: var(--primary); text-decoration: none; letter-spacing: -0.02em; }
@@ -247,11 +247,6 @@
     .btn-timer-reg { width: 100%; background: #0f172a; color: #fff; border: none; padding: 8px; border-radius: 6px; font-weight: 800; cursor: pointer; transition: background 0.2s; }
     .btn-timer-reg:hover { background: #1e293b; }
 
-    .portal-link-list { display: flex; flex-direction: column; gap: 8px; }
-    .portal-link-item { display: flex; justify-content: space-between; align-items: center; padding: 10px 12px; background: #f8fafc; border: 1px solid var(--border); border-radius: 8px; text-decoration: none; color: #0f172a; font-size: 0.88rem; font-weight: 700; transition: all 0.2s; }
-    .portal-link-item:hover { background: #eff6ff; border-color: var(--primary); color: var(--primary); }
-    .portal-tag { font-size: 0.72rem; padding: 2px 6px; border-radius: 4px; background: #e2e8f0; color: #475569; }
-
     .prompt-list { display: flex; flex-direction: column; gap: 8px; }
     .prompt-unit { background: #f8fafc; border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; cursor: pointer; transition: all 0.2s; }
     .prompt-unit:hover { border-color: var(--primary); background: #eff6ff; }
@@ -302,7 +297,7 @@
 
   <div id="toast" class="toast-popup"></div>
 
-  <!-- 상단 글로벌 헤더 (단 1개의 내비게이션, 2026 배지 삭제) -->
+  <!-- 상단 글로벌 헤더 -->
   <header>
     <div class="header-inner">
       <a href="index.html" class="brand">
@@ -710,7 +705,7 @@
 
       </div>
 
-      <!-- [우측 사이드바: 중복 메뉴 삭제 후 필수 위젯만 정돈] -->
+      <!-- [우측 사이드바: 채용 포털 허브가 깔끔하게 빠진 정돈된 사이드바] -->
       <aside class="sidebar-wrapper">
         
         <!-- 1. 목표 기업 마감 타이머 -->
@@ -728,32 +723,7 @@
           </div>
         </div>
 
-        <!-- 2. 공식 실시간 채용 포털 허브 -->
-        <div class="side-widget">
-          <div class="side-widget-title">
-            <span>🌐 공식 채용 포털 허브</span>
-          </div>
-          <div class="portal-link-list">
-            <a href="https://job.alio.go.kr" target="_blank" rel="noopener noreferrer" class="portal-link-item">
-              <span>🏛️ 기재부 잡알리오</span>
-              <span class="portal-tag">공공기관 100%</span>
-            </a>
-            <a href="https://www.work.go.kr" target="_blank" rel="noopener noreferrer" class="portal-link-item">
-              <span>📜 고용노동부 워크넷</span>
-              <span class="portal-tag">정부 공인</span>
-            </a>
-            <a href="https://www.samsungcareers.com" target="_blank" rel="noopener noreferrer" class="portal-link-item">
-              <span>🏢 삼성커리어스 공식</span>
-              <span class="portal-tag">삼성 공채</span>
-            </a>
-            <a href="https://talent.hyundai.com" target="_blank" rel="noopener noreferrer" class="portal-link-item">
-              <span>🚗 현대자동차 채용포털</span>
-              <span class="portal-tag">현대차 공채</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- 3. 기업별 빈출 문항 템플릿 -->
+        <!-- 2. 기업별 빈출 문항 템플릿 -->
         <div class="side-widget">
           <div class="side-widget-title">
             <span>🏢 기업별 빈출 문항 프리셋</span>
@@ -778,7 +748,7 @@
           </div>
         </div>
 
-        <!-- 4. 전 세계 실시간 누적 이용자 카운터 -->
+        <!-- 3. 전 세계 실시간 누적 이용자 카운터 -->
         <div class="side-widget" style="text-align: center;">
           <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-muted); margin-bottom: 4px;">전 세계 실시간 누적 이용자</div>
           <div style="font-size: 1.45rem; font-weight: 900; color: var(--primary);"><span id="sidebarTotalVisitors">...</span> 명</div>
