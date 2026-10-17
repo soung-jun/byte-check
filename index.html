@@ -1319,7 +1319,7 @@
       }, 1000);
     }
 
-    // 💡 사이드바 카드가 없어도 에러 없이 상단 방문자 숫자가 100% 정상 작동하도록 안전 참조 처리
+    // 💡 Abacus 404/미등록 응답 시에도 멈추지 않고 100% 정상 수치를 렌더링하도록 완전 픽스
     function trackHonestVisitor() {
       const HISTORICAL_BASE = 410;
       const cachedTotal = localStorage.getItem('bc_cache_total_visitors');
@@ -1350,13 +1350,21 @@
       const action = isFirstSession ? 'hit' : 'get';
 
       fetch(`https://abacus.jasoncameron.dev/${action}/bytechecktool.com/total_real`)
-        .then(res => res.json())
+        .then(res => {
+          if (!res.ok) {
+            return fetch(`https://abacus.jasoncameron.dev/hit/bytechecktool.com/total_real`).then(r => r.json());
+          }
+          return res.json();
+        })
         .then(data => {
           if (data && typeof data.value === 'number') {
             const finalTotal = HISTORICAL_BASE + data.value;
             localStorage.setItem('bc_cache_total_visitors', finalTotal);
             if (elTotal) elTotal.innerText = finalTotal.toLocaleString();
             if (elSide) elSide.innerText = finalTotal.toLocaleString();
+          } else {
+            if (elTotal && elTotal.innerText === '...') elTotal.innerText = HISTORICAL_BASE.toLocaleString();
+            if (elSide && elSide.innerText === '...') elSide.innerText = HISTORICAL_BASE.toLocaleString();
           }
         })
         .catch(() => {
@@ -1365,11 +1373,18 @@
         });
 
       fetch(`https://abacus.jasoncameron.dev/${action}/bytechecktool.com/${kstDayKey}`)
-        .then(res => res.json())
+        .then(res => {
+          if (!res.ok) {
+            return fetch(`https://abacus.jasoncameron.dev/hit/bytechecktool.com/${kstDayKey}`).then(r => r.json());
+          }
+          return res.json();
+        })
         .then(data => {
           if (data && typeof data.value === 'number') {
             if (elToday) elToday.innerText = data.value.toLocaleString();
             sessionStorage.setItem('bc_session_active', '1');
+          } else {
+            if (elToday && elToday.innerText === '...') elToday.innerText = '1';
           }
         })
         .catch(() => {
@@ -1400,6 +1415,7 @@
       });
     }
 
+    // 💡 [8종 전면 개편] 각 이력서별 실제 취업포털 규격 100% 개별 독립 생성 엔진
     function downloadTemplate(type) {
       let fileName = '표준_입사지원서_서식';
       let tableContent = '';
@@ -1409,6 +1425,7 @@
       const tdStyle = `border:1px solid #334155; padding:8px 8px; color:#1e293b;`;
 
       if (type === 'basic_new') {
+        // 1. 신입 표준 입사지원서 (기본 인적사항, 병역/보훈, 학력, 자격, 어학, 자소서 문항 4종 정석)
         fileName = '신입_표준_입사지원서_서식';
         tableContent = `
           <h2 style="text-align:center; margin-bottom:20px; font-size:19pt; letter-spacing:3px;">입 사 지 원 서 (신입)</h2>
@@ -1518,6 +1535,7 @@
           </div>
         `;
       } else if (type === 'career_detail') {
+        // 2. 경력직 상세 경력기술서 (회사별 매출/규모, 직급, 세부 프로젝트별 성과, 수치 중심)
         fileName = '경력직_상세_경력기술서';
         tableContent = `
           <h2 style="text-align:center; margin-bottom:20px; font-size:19pt; letter-spacing:2px;">상 세 경 력 기 술 서 (경력직)</h2>
@@ -1602,6 +1620,7 @@
           </table>
         `;
       } else if (type === 'public_blind') {
+        // 3. 공기업 NCS 블라인드 표준형 (법정 서식, 학교교육/직업교육시간, NCS 직무경험기술서)
         fileName = '공기업_NCS_블라인드_입사지원서';
         tableContent = `
           <h2 style="text-align:center; margin-bottom:12px; font-size:18pt; letter-spacing:2px;">블라인드 표준 입사지원서 (공공기관용)</h2>
@@ -1674,6 +1693,7 @@
           </div>
         `;
       } else if (type === 'modern_simple') {
+        // 4. 모던 심플 비즈니스형 (스타트업, IT, 마케팅 자유양식, 컬러바, 불렛포인트)
         fileName = '모던_심플_비즈니스_이력서';
         tableContent = `
           <div style="border-top:6px solid #7c3aed; padding-top:14px; margin-bottom:18px;">
@@ -1712,11 +1732,13 @@
           </div>
         `;
       } else if (type === 'two_column') {
+        // 5. 좌우 2단 분할 포트폴리오형 (좌측 스킬/인적/어학 요약, 우측 타임라인 경력)
         fileName = '좌우2단_분할_포트폴리오_이력서';
         tableContent = `
           <h2 style="text-align:center; margin-bottom:16px; font-size:18pt;">입 사 지 원 서 (2단 포트폴리오형)</h2>
           <table style="width:100%; border-collapse:collapse; font-family:'맑은 고딕', sans-serif;">
             <tr>
+              <!-- 좌측 사이드바 컬럼 (32%) -->
               <td style="width:32%; vertical-align:top; background:#f1f5f9; padding:16px; border:1px solid #cbd5e1;">
                 <div style="width:100px; height:130px; background:#e2e8f0; border:1px solid #cbd5e1; margin:0 auto 12px auto; text-align:center; padding-top:45px; font-size:9pt; color:#64748b;">
                   증명사진 부착
@@ -1746,6 +1768,7 @@
                 </div>
               </td>
 
+              <!-- 우측 본문 컬럼 (68%) -->
               <td style="width:68%; vertical-align:top; padding:16px 20px; border:1px solid #cbd5e1; border-left:none;">
                 <h3 style="font-size:11pt; border-bottom:2px solid #2563eb; padding-bottom:4px; color:#2563eb; margin-top:0;">WORK EXPERIENCE (경력사항)</h3>
                 <div style="margin-bottom:16px;">
@@ -1773,6 +1796,7 @@
           </table>
         `;
       } else if (type === 'classic_table') {
+        // 6. 사무·행정 표준 표 서식 (호적 주소, 본적, 가족사항, 신체조건, 상세 발령 이력 정통 표)
         fileName = '사무행정_표준_입사지원서';
         tableContent = `
           <h2 style="text-align:center; margin-bottom:18px; font-size:19pt; letter-spacing:4px;">이 력 서</h2>
@@ -1851,6 +1875,7 @@
           <p style="text-align:right; margin-top:20px; font-size:10pt;">위의 기재사항은 사실과 틀림없음을 서약합니다.<br><br><strong>지원자 : 홍 길 동 (인)</strong></p>
         `;
       } else if (type === 'english_resume') {
+        // 7. 영문 이력서 (100% 글로벌 표준 English Resume / CV 서식)
         fileName = 'English_Standard_Resume_CV';
         tableContent = `
           <div style="text-align:center; border-bottom:2px solid #0f172a; padding-bottom:12px; margin-bottom:18px;">
@@ -1908,6 +1933,7 @@
           </p>
         `;
       } else if (type === 'job_plan') {
+        // 8. 공기업 직무수행계획서 (직무 이해 및 목표, 추진 전략, 연차별 실행 과제 공문서 양식)
         fileName = '공기업_직무수행계획서_표준형';
         tableContent = `
           <h1 style="text-align:center; margin-bottom:22px; font-size:20pt; letter-spacing:3px;">직 무 수 행 계 획 서</h1>
