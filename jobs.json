@@ -1,68 +1,5 @@
 [
   {
-    "company": "학교법인한국폴리텍",
-    "title": "2026년 한국폴리텍대학 충주캠퍼스 청년인턴(일반) 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-10-18",
-    "applyUrl": "https://www.kopo.ac.kr/chungju/board.do?menu=2839&mode=view&post=786708",
-    "url": "https://www.kopo.ac.kr/chungju/board.do?menu=2839&mode=view&post=786708"
-  },
-  {
-    "company": "대한석탄공사",
-    "title": "2026년 한시적계약직 특별채용 2차 재공고(팀장급)",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-10-18",
-    "applyUrl": "https://www.kocoal.or.kr/newpage/newpage.php?f_id=recruit_apply",
-    "url": "https://www.kocoal.or.kr/newpage/newpage.php?f_id=recruit_apply"
-  },
-  {
-    "company": "대한적십자사",
-    "title": "경인권역재활병원 비정규직(대체인력) 물리치료사 채용 공고(2026.11.2.임용)(1)",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-10-18",
-    "applyUrl": "https://www.redcross.or.kr/redrecruit/",
-    "url": "https://www.redcross.or.kr/redrecruit/"
-  },
-  {
-    "company": "대한적십자사",
-    "title": "부산혈액원 비정규직 초단시간 임상병리사 채용 공고(3차)",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-10-18",
-    "applyUrl": "https://www.redcross.or.kr/redrecruit/",
-    "url": "https://www.redcross.or.kr/redrecruit/"
-  },
-  {
-    "company": "대한적십자사",
-    "title": "경인권역재활병원 비정규직(대체인력) 물리치료사 채용 공고(2026.11.2.임용)(2)",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-10-18",
-    "applyUrl": "https://www.redcross.or.kr/redrecruit/",
-    "url": "https://www.redcross.or.kr/redrecruit/"
-  },
-  {
-    "company": "대한적십자사",
-    "title": "경인권역재활병원 비정규직(대체인력) 작업치료사 채용 공고(2026.11.2.임용)",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-10-18",
-    "applyUrl": "https://www.redcross.or.kr/redrecruit/",
-    "url": "https://www.redcross.or.kr/redrecruit/"
-  },
-  {
-    "company": "대한적십자사",
-    "title": "경인권역재활병원 정규직 간호사 채용 공고(2026.11.1.임용)",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-10-18",
-    "applyUrl": "https://www.redcross.or.kr/redrecruit/",
-    "url": "https://www.redcross.or.kr/redrecruit/"
-  },
-  {
     "company": "한전KPS(주)",
     "title": "한전KPS(주) 신보령사업소 2026년도 경상정비공사 사무보조 단기노무원 모집",
     "location": "전국",
@@ -1665,6 +1602,15 @@
     "url": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019909"
   },
   {
+    "company": "한전KPS(주)",
+    "title": "한전KPS(주) 보령사업처 제 26-13차 단기노무원 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-26",
+    "applyUrl": "https://www.kps.co.kr",
+    "url": "https://www.kps.co.kr"
+  },
+  {
     "company": "한국보훈복지의료공단",
     "title": "[광주보훈병원] 의사직(일반의) 직원 채용",
     "location": "전국",
@@ -3042,6 +2988,24 @@
     "url": "https://www.rch.or.kr/web/rchincheon/bbs/employment"
   },
   {
+    "company": "서울올림픽기념국민체육진흥공단",
+    "title": "'2026 장애인선수 현장밀착형 스포츠과학지원사업' 분석연구원(가급) 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-02",
+    "applyUrl": "https://www.sports.re.kr/front/board/job/boardView.do?board_seq=115&pageNo=1&menu_seq=+997&con_seq=6751&keyKind3=&keyKind4=&keyKind5=&keyKind6=&keyKind7=&keyKind=TITLE&keyWord=",
+    "url": "https://www.sports.re.kr/front/board/job/boardView.do?board_seq=115&pageNo=1&menu_seq=+997&con_seq=6751&keyKind3=&keyKind4=&keyKind5=&keyKind6=&keyKind7=&keyKind=TITLE&keyWord="
+  },
+  {
+    "company": "한국토지주택공사",
+    "title": "한국토지주택공사 서울지역본부 기간제근로자(매입행정역, 매입기술역, 공사원가검토역, 매입변호사, 매입감정평가사) 채용공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-02",
+    "applyUrl": "http://lh.or.kr",
+    "url": "http://lh.or.kr"
+  },
+  {
     "company": "경북대학교병원",
     "title": "칠곡경북대학교병원 2026년 제3차 단기 결원 대체 인력풀(간호사, 간호조무사, 방사선사, 임상병리사, 업무보조, 원무지원) 모집 공고",
     "location": "전국",
@@ -3049,6 +3013,33 @@
     "endDate": "2026-11-02",
     "applyUrl": "https://www.knuch.kr:442/content/04info/11_01.asp?proc_type=view&b_num=5095&rtn_url=%2Fcontent%2F04info%2F11%5F01%2Easp",
     "url": "https://www.knuch.kr:442/content/04info/11_01.asp?proc_type=view&b_num=5095&rtn_url=%2Fcontent%2F04info%2F11%5F01%2Easp"
+  },
+  {
+    "company": "신용보증기금",
+    "title": "(보훈 및 장애인 제한경쟁) 육아휴직자 대체 시간선택제 일자리 채용",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-02",
+    "applyUrl": "https://kodit2.saramin.co.kr",
+    "url": "https://kodit2.saramin.co.kr"
+  },
+  {
+    "company": "(주)한국가스기술공사",
+    "title": "광주전남지사 기간제 계약직(육아휴직 대체인력) 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-02",
+    "applyUrl": "https://kogastech.recruiter.co.kr",
+    "url": "https://kogastech.recruiter.co.kr"
+  },
+  {
+    "company": "한국임업진흥원",
+    "title": "2026년도 한국임업진흥원 제4차 인재채용(공무직) 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-02",
+    "applyUrl": "https://www.kofpi.or.kr/notice/notice_04view.do",
+    "url": "https://www.kofpi.or.kr/notice/notice_04view.do"
   },
   {
     "company": "한국나노기술원",
@@ -3080,15 +3071,6 @@
   {
     "company": "기초과학연구원",
     "title": "제2026-6회 기초과학연구원 지하실험연구단 박사후연구원 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-06",
-    "applyUrl": "https://ibs.re.kr/prog/recruit/kor/sub04_01/list.do",
-    "url": "https://ibs.re.kr/prog/recruit/kor/sub04_01/list.do"
-  },
-  {
-    "company": "기초과학연구원",
-    "title": "2026-10회 의생명 및 화학 연구클러스터(시냅스 뇌질환 연구단) 연구직 채용 공고",
     "location": "전국",
     "hireType": "정규직/계약직",
     "endDate": "2026-11-06",
