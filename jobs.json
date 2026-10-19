@@ -2376,6 +2376,15 @@
     "url": "https://ibs.recruiter.co.kr/career/job"
   },
   {
+    "company": "국립중앙의료원",
+    "title": "의사직 채용 공고(응급의학과)",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-29",
+    "applyUrl": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=269700",
+    "url": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=269700"
+  },
+  {
     "company": "국립공원공단",
     "title": "[금정산] 2026년 국립공원지킴이(녹색순찰대) 모집 공고",
     "location": "전국",
@@ -3016,7 +3025,7 @@
   },
   {
     "company": "한국환경산업기술원",
-    "title": "2026년도 제3차 신규직원 및 기간제직 채용 공고",
+    "title": "2026년도 제3차 한국환경산업기술원 신규직원 및 기간제직 채용 공고",
     "location": "전국",
     "hireType": "정규직/계약직",
     "endDate": "2026-11-02",
