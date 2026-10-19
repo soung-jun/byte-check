@@ -2295,6 +2295,15 @@
     "url": "https://ibs.recruiter.co.kr/career/job"
   },
   {
+    "company": "국립중앙의료원",
+    "title": "계약직 단시간근로자(장애인 미술작가) 채용 재공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-29",
+    "applyUrl": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=269630",
+    "url": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=269630"
+  },
+  {
     "company": "한국관세정보원",
     "title": "한국관세정보원 2026년도 제3차 직원(관세행정운영본부장) 채용공고",
     "location": "전국",
@@ -2907,6 +2916,15 @@
     "url": "https://www.redcross.or.kr/redrecruit"
   },
   {
+    "company": "한국수자원공사",
+    "title": "[한국수자원공사] 낙동강북부사업단 특수직(사무관리_건설사업) 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-02",
+    "applyUrl": "https://k-water.recruiter.co.kr/",
+    "url": "https://k-water.recruiter.co.kr/"
+  },
+  {
     "company": "한국수산자원공단",
     "title": "2026년도 제1차 직원(일반정규직, 실무직(보훈제한경쟁 포함), 조사직, 기간제 근로자, 체험형 청년인턴(장애인 제한경쟁채용 포함) 채용 공고",
     "location": "전국",
@@ -3067,6 +3085,24 @@
     "endDate": "2026-11-02",
     "applyUrl": "https://www.kofpi.or.kr/notice/notice_04view.do",
     "url": "https://www.kofpi.or.kr/notice/notice_04view.do"
+  },
+  {
+    "company": "대한법률구조공단",
+    "title": "대한법률구조공단 상용직(기술관리직 갑종) 직원 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-03",
+    "applyUrl": "https://klac.or.kr/notification/hireNotice/selectHireNoticeView.do?boardCode=241&contentId=AD_0000168618&pageIndex=1&searchCnd=0&searchWrd=",
+    "url": "https://klac.or.kr/notification/hireNotice/selectHireNoticeView.do?boardCode=241&contentId=AD_0000168618&pageIndex=1&searchCnd=0&searchWrd="
+  },
+  {
+    "company": "대한법률구조공단",
+    "title": "대한법률구조공단 주택 및 상가건물임대차분쟁조정위원회 2026년 심사관(수원,대구) 신규 채용",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-03",
+    "applyUrl": "https://klac.or.kr/notification/hireNotice/selectHireNoticeView.do?boardCode=241&contentId=AD_0000168169",
+    "url": "https://klac.or.kr/notification/hireNotice/selectHireNoticeView.do?boardCode=241&contentId=AD_0000168169"
   },
   {
     "company": "기초과학연구원",
