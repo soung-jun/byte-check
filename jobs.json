@@ -675,6 +675,15 @@
     "url": "https://www.kopo.ac.kr/jeonnam/board.do?menu=10543&mode=view&post=786696"
   },
   {
+    "company": "한전KPS(주)",
+    "title": "한전KPS(주)울산사업소 기계부 단기노무원 모집(2차)",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-26",
+    "applyUrl": "https://www.kps.co.kr/",
+    "url": "https://www.kps.co.kr/"
+  },
+  {
     "company": "국립공원공단",
     "title": "[한려동부] 2026년 한려해상국립공원동부사무소 한시인력(수익시설) 직원 2차 채용 재공고",
     "location": "전국",
@@ -1384,6 +1393,15 @@
     "endDate": "2026-10-27",
     "applyUrl": "https://ibs.re.kr/prog/recruit/kor/sub04_01/list.do",
     "url": "https://ibs.re.kr/prog/recruit/kor/sub04_01/list.do"
+  },
+  {
+    "company": "한국도로공사",
+    "title": "한국도로공사 서울경기본부 기간제근로자(상황관리원) 채용공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-28",
+    "applyUrl": "https://www.ex.co.kr",
+    "url": "https://www.ex.co.kr"
   },
   {
     "company": "한국도로공사",
@@ -2772,6 +2790,42 @@
     "url": "https://koreajobworld.recruiter.co.kr"
   },
   {
+    "company": "한국보훈복지의료공단",
+    "title": "[대전보훈병원] 전문의(심장내과, 내분비내과, 외과, 진단검사의학과, 응급의학과) 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-05",
+    "applyUrl": "https://www.bohun.or.kr/daejeon/na/ntt/selectNttInfo.do?mi=33414&bbsId=1158&bbsSysId=daejeon&nttSn=190617",
+    "url": "https://www.bohun.or.kr/daejeon/na/ntt/selectNttInfo.do?mi=33414&bbsId=1158&bbsSysId=daejeon&nttSn=190617"
+  },
+  {
+    "company": "서울올림픽기념국민체육진흥공단",
+    "title": "서울올림픽기념국민체육진흥공단 무기계약직(전임직 및 지원직) 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-05",
+    "applyUrl": "https://kspo.or.kr/kspo/singl/empmn/view.do?empmnId=777&menuNo=200186&pageIndex=1",
+    "url": "https://kspo.or.kr/kspo/singl/empmn/view.do?empmnId=777&menuNo=200186&pageIndex=1"
+  },
+  {
+    "company": "부산대학교병원",
+    "title": "2026년도 일반직(약무직) 신규직원 블라인드 공개채용 모집 공고(양산)",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-05",
+    "applyUrl": "https://pnuyh.recruiter.co.kr/career/jobs/125112",
+    "url": "https://pnuyh.recruiter.co.kr/career/jobs/125112"
+  },
+  {
+    "company": "부산대학교병원",
+    "title": "2026년도 업무지원직(시설지원직) 신규직원 블라인드 공개채용 모집 공고(양산)",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-05",
+    "applyUrl": "https://pnuyh.recruiter.co.kr/career/jobs/123757",
+    "url": "https://pnuyh.recruiter.co.kr/career/jobs/123757"
+  },
+  {
     "company": "부산대학교병원",
     "title": "2026년도 일반직(약무, 연구직) 신규직원 블라인드 공개채용 모집 공고",
     "location": "전국",
@@ -2943,6 +2997,15 @@
     "url": "https://kospo.machuda.kr"
   },
   {
+    "company": "국립암센터",
+    "title": "국립암센터 호흡기내과 의사직 또는 임상스텝전문의 초빙공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-06",
+    "applyUrl": "https://ncc.recruiter.co.kr/career/jobs/131986",
+    "url": "https://ncc.recruiter.co.kr/career/jobs/131986"
+  },
+  {
     "company": "한전KPS(주)",
     "title": "[한전KPS(주)] 2026년도 체험형 인턴(자립준비청년) 채용공고",
     "location": "전국",
@@ -3020,8 +3083,8 @@
     "location": "전국",
     "hireType": "정규직/계약직",
     "endDate": "2026-11-08",
-    "applyUrl": "https://www.koreatech.ac.kr/notice/list.es?mid=a10604040000&board_id=150",
-    "url": "https://www.koreatech.ac.kr/notice/list.es?mid=a10604040000&board_id=150"
+    "applyUrl": "https://www.koreatech.ac.kr/notice/view.es?mid=a10604040000&board_id=150&post_seq=855&prefix_id=",
+    "url": "https://www.koreatech.ac.kr/notice/view.es?mid=a10604040000&board_id=150&post_seq=855&prefix_id="
   },
   {
     "company": "국립암센터",
