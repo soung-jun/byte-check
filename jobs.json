@@ -621,15 +621,6 @@
     "url": "https://www.lh.or.kr/board.es?mid=a10602050000&bid=0036&act=view&list_no=734348&tag=&nPage=1"
   },
   {
-    "company": "한국토지주택공사",
-    "title": "한국토지주택공사 대전충남지역본부 기간제근로자(보상일반역, 보상전문역) 채용공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-10-23",
-    "applyUrl": "https://www.lh.or.kr/board.es?mid=a10602050000&bid=0036&act=view&list_no=734329&tag=&nPage=1",
-    "url": "https://www.lh.or.kr/board.es?mid=a10602050000&bid=0036&act=view&list_no=734329&tag=&nPage=1"
-  },
-  {
     "company": "(재)우체국물류지원단",
     "title": "우체국물류지원단 대구지사 안동,포항사업소 기간제(운전직) 채용 공고",
     "location": "전국",
@@ -1692,6 +1683,15 @@
     "url": "https://ibs.recruiter.co.kr/career/job"
   },
   {
+    "company": "대한적십자사",
+    "title": "서울적십자병원 계약직 간호사(수술실) 신규채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-29",
+    "applyUrl": "https://www.redcross.or.kr/redrecruit",
+    "url": "https://www.redcross.or.kr/redrecruit"
+  },
+  {
     "company": "국립중앙의료원",
     "title": "의사직 채용 재공고(응급의학과)",
     "location": "전국",
@@ -2332,6 +2332,15 @@
   },
   {
     "company": "국립공원공단",
+    "title": "[치악산] 2026년 치악산사무소 기간제(국립공원지킴이) 직원 채용",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-02",
+    "applyUrl": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019937",
+    "url": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019937"
+  },
+  {
+    "company": "국립공원공단",
     "title": "[국립공원연구원] 2026년 국립공원연구원 국립공원지킴이(한시인력) 모집 공고",
     "location": "전국",
     "hireType": "정규직/계약직",
@@ -2817,6 +2826,15 @@
     "url": "https://koreajobworld.recruiter.co.kr"
   },
   {
+    "company": "한국고전번역원",
+    "title": "한국고전번역원 2026년 4분기 제2차 직원 신규 채용",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-05",
+    "applyUrl": "https://www.itkc.or.kr/bbs/boardView.do?id=2&bIdx=316490&page=1&menuId=99&bc=0&sortName=&sortType=",
+    "url": "https://www.itkc.or.kr/bbs/boardView.do?id=2&bIdx=316490&page=1&menuId=99&bc=0&sortName=&sortType="
+  },
+  {
     "company": "근로복지공단",
     "title": "[울산병원] 기술기능직(기술_환경관리) 채용 공고",
     "location": "전국",
@@ -3049,6 +3067,24 @@
     "endDate": "2026-11-05",
     "applyUrl": "https://kospo.machuda.kr",
     "url": "https://kospo.machuda.kr"
+  },
+  {
+    "company": "한국산업기술진흥원",
+    "title": "[한국산업기술진흥원] 2026년 하반기 전문분야 신규직원 공개채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-06",
+    "applyUrl": "https://www.kiat.or.kr",
+    "url": "https://www.kiat.or.kr"
+  },
+  {
+    "company": "영화진흥위원회",
+    "title": "2026년 하반기 영화진흥위원회 정규직 공개채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-06",
+    "applyUrl": "https://kofic.or.kr/kofic/business/board/selectBoardDetail.do?boardNumber=4&boardSeqNumber=76182",
+    "url": "https://kofic.or.kr/kofic/business/board/selectBoardDetail.do?boardNumber=4&boardSeqNumber=76182"
   },
   {
     "company": "국립암센터",
