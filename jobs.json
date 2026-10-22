@@ -676,6 +676,33 @@
   },
   {
     "company": "한전KPS(주)",
+    "title": "한전KPS(주)한빛1사업처 한빛2호기 제28차 O/H공사 단기노무원 채용공고(4차)",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-26",
+    "applyUrl": "https://www.kps.co.kr",
+    "url": "https://www.kps.co.kr"
+  },
+  {
+    "company": "국립공원공단",
+    "title": "[내장산] 2026년 내장산국립공원 기간제(수익시설) 직원 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-26",
+    "applyUrl": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019935",
+    "url": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019935"
+  },
+  {
+    "company": "국립공원공단",
+    "title": "[내장산] 2026년 내장산국립공원 가을철 기간제(산불감시원) 직원 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-26",
+    "applyUrl": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019934",
+    "url": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019934"
+  },
+  {
+    "company": "한전KPS(주)",
     "title": "한전KPS(주)울산사업소 기계부 단기노무원 모집(2차)",
     "location": "전국",
     "hireType": "정규직/계약직",
@@ -1393,6 +1420,15 @@
     "endDate": "2026-10-27",
     "applyUrl": "https://ibs.re.kr/prog/recruit/kor/sub04_01/list.do",
     "url": "https://ibs.re.kr/prog/recruit/kor/sub04_01/list.do"
+  },
+  {
+    "company": "(재)우체국물류지원단",
+    "title": "우체국물류지원단 대전지사 청주사업소 기간제(운전직) 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-10-28",
+    "applyUrl": "https://www.pola.or.kr",
+    "url": "https://www.pola.or.kr"
   },
   {
     "company": "한국도로공사",
@@ -2277,15 +2313,6 @@
     "url": "https://www.krei.re.kr/krei/page/69?cmd=view&pst=505783&pageIndex=1"
   },
   {
-    "company": "(재)우체국물류지원단",
-    "title": "우체국물류지원단 경인지사 안양,부평물류사업소 기간제(일용직_우편물구분) 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-10-31",
-    "applyUrl": "https://www.pola.or.kr",
-    "url": "https://www.pola.or.kr"
-  },
-  {
     "company": "한국환경공단",
     "title": "한국환경공단 수도권동부환경본부 환경시설관리처 기간제근로자(촉탁직) 채용 재공고",
     "location": "전국",
@@ -2790,6 +2817,33 @@
     "url": "https://koreajobworld.recruiter.co.kr"
   },
   {
+    "company": "근로복지공단",
+    "title": "[울산병원] 기술기능직(기술_환경관리) 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-05",
+    "applyUrl": "https://www.comwel.or.kr/recruit/hp/main.do",
+    "url": "https://www.comwel.or.kr/recruit/hp/main.do"
+  },
+  {
+    "company": "한국보훈복지의료공단",
+    "title": "[대전보훈병원] 정규직(약무직(약사), 업무지원직(완화의료)) 및 계약직(일반기능직(시설(영선)), 청년인턴(체험형)) 채용공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-05",
+    "applyUrl": "https://www.bohun.or.kr/daejeon/na/ntt/selectNttInfo.do?mi=33414&bbsId=1158&bbsSysId=daejeon&nttSn=190634",
+    "url": "https://www.bohun.or.kr/daejeon/na/ntt/selectNttInfo.do?mi=33414&bbsId=1158&bbsSysId=daejeon&nttSn=190634"
+  },
+  {
+    "company": "공무원연금공단",
+    "title": "2026년 하반기 신입직원(전산직 및 장애·보훈) 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-05",
+    "applyUrl": "https://www.geps.or.kr/notiCommunication_info_incruit/43491?curPage=1",
+    "url": "https://www.geps.or.kr/notiCommunication_info_incruit/43491?curPage=1"
+  },
+  {
     "company": "한국보훈복지의료공단",
     "title": "[대전보훈병원] 전문의(심장내과, 내분비내과, 외과, 진단검사의학과, 응급의학과) 채용 공고",
     "location": "전국",
@@ -2998,6 +3052,24 @@
   },
   {
     "company": "국립암센터",
+    "title": "국립암센터 부속병원 당직전담의사 초빙공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-06",
+    "applyUrl": "https://ncc.recruiter.co.kr/career/jobs/131989",
+    "url": "https://ncc.recruiter.co.kr/career/jobs/131989"
+  },
+  {
+    "company": "국립암센터",
+    "title": "국립암센터 부속병원 입원전담전문의(내과) 초빙 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-06",
+    "applyUrl": "https://ncc.recruiter.co.kr/career/jobs/131987",
+    "url": "https://ncc.recruiter.co.kr/career/jobs/131987"
+  },
+  {
+    "company": "국립암센터",
     "title": "국립암센터 호흡기내과 의사직 또는 임상스텝전문의 초빙공고",
     "location": "전국",
     "hireType": "정규직/계약직",
@@ -3085,6 +3157,15 @@
     "endDate": "2026-11-08",
     "applyUrl": "https://www.koreatech.ac.kr/notice/view.es?mid=a10604040000&board_id=150&post_seq=855&prefix_id=",
     "url": "https://www.koreatech.ac.kr/notice/view.es?mid=a10604040000&board_id=150&post_seq=855&prefix_id="
+  },
+  {
+    "company": "건축공간연구원",
+    "title": "건축공간연구원 정규직(부연구위원) 모집",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-11",
+    "applyUrl": "https://recruit.auri.re.kr",
+    "url": "https://recruit.auri.re.kr"
   },
   {
     "company": "국립암센터",
