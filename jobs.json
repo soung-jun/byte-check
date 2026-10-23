@@ -693,15 +693,6 @@
     "url": "https://job.alio.go.kr/mobile2021/recruit/recruitView.do?idx=305831"
   },
   {
-    "company": "한국콘텐츠진흥원",
-    "title": "2026년 4분기 한국콘텐츠진흥원 공무직원(환경미화(보훈)) 채용 재공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-10-26",
-    "applyUrl": "https://www.kocca.kr/shortUrl/60Cq",
-    "url": "https://www.kocca.kr/shortUrl/60Cq"
-  },
-  {
     "company": "국립공원공단",
     "title": "[덕유산] 덕유산국립공원 겨울성수기 한시인력(수익시설) 직원 채용 공고",
     "location": "전국",
@@ -2761,6 +2752,24 @@
     "endDate": "2026-11-05",
     "applyUrl": "https://kospo.machuda.kr",
     "url": "https://kospo.machuda.kr"
+  },
+  {
+    "company": "한국개발연구원",
+    "title": "2026년 4분기 1차 KDI 위촉직원(대체인력 등) 채용 공고(연구직)",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-06",
+    "applyUrl": "https://www.kdi.re.kr/share/recruitView?rec_no=309&pg=1&rec_type=",
+    "url": "https://www.kdi.re.kr/share/recruitView?rec_no=309&pg=1&rec_type="
+  },
+  {
+    "company": "한국개발연구원",
+    "title": "2026년 4분기 1차 KDI 위촉직원(대체인력) 채용 공고(행정직_재무팀)",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-06",
+    "applyUrl": "https://www.kdi.re.kr/share/recruitView?rec_no=308&pg=1&rec_type=",
+    "url": "https://www.kdi.re.kr/share/recruitView?rec_no=308&pg=1&rec_type="
   },
   {
     "company": "한국관광공사",
