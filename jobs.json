@@ -1,87 +1,6 @@
 [
   {
     "company": "국립공원공단",
-    "title": "[다도해서부] 다도해해상국립공원서부사무소 기간제[한시인력_환경관리(해양)] 직원 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-10-26",
-    "applyUrl": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019941",
-    "url": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019941"
-  },
-  {
-    "company": "한전KPS(주)",
-    "title": "한전KPS(주)한빛1사업처 한빛2호기 제28차 O/H공사 단기노무원 채용공고(4차)",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-10-26",
-    "applyUrl": "https://www.kps.co.kr",
-    "url": "https://www.kps.co.kr"
-  },
-  {
-    "company": "국립공원공단",
-    "title": "[내장산] 2026년 내장산국립공원 기간제(수익시설) 직원 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-10-26",
-    "applyUrl": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019935",
-    "url": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019935"
-  },
-  {
-    "company": "국립공원공단",
-    "title": "[내장산] 2026년 내장산국립공원 가을철 기간제(산불감시원) 직원 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-10-26",
-    "applyUrl": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019934",
-    "url": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019934"
-  },
-  {
-    "company": "한전KPS(주)",
-    "title": "한전KPS(주)울산사업소 기계부 단기노무원 모집(2차)",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-10-26",
-    "applyUrl": "https://www.kps.co.kr/",
-    "url": "https://www.kps.co.kr/"
-  },
-  {
-    "company": "국립공원공단",
-    "title": "[한려동부] 2026년 한려해상국립공원동부사무소 한시인력(수익시설) 직원 2차 채용 재공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-10-26",
-    "applyUrl": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019928",
-    "url": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019928"
-  },
-  {
-    "company": "국립공원공단",
-    "title": "[치악산] 치악산국립공원사무소 기간제(환경관리) 직원 채용",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-10-26",
-    "applyUrl": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019923",
-    "url": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019923"
-  },
-  {
-    "company": "국립공원공단",
-    "title": "[무등산동부] 2026년 무등산동부사무소 기간제[가을철 산불감시원_한시인력] 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-10-26",
-    "applyUrl": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019922",
-    "url": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019922"
-  },
-  {
-    "company": "한전KPS(주)",
-    "title": "한전KPS(주)부산경남전력지사 통영지점 단기노무원(상주감시) 모집",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-10-26",
-    "applyUrl": "https://www.kps.co.kr",
-    "url": "https://www.kps.co.kr"
-  },
-  {
-    "company": "국립공원공단",
     "title": "[덕유산] 덕유산국립공원 겨울성수기 한시인력(수익시설) 직원 채용 공고",
     "location": "전국",
     "hireType": "정규직/계약직",
@@ -423,31 +342,76 @@
     "url": "https://snubh.recruiter.co.kr"
   },
   {
-    "company": "근로복지공단",
-    "title": "[경기요양병원] 2026년도 하반기 청년(체험형)인턴 장애전형 채용 공고",
+    "company": "한국도로공사",
+    "title": "한국도로공사 대전충남본부 관내 지사(천안, 대전, 영동, 당진, 공주, 부여) 제설 기간제근로자(정비원) 채용",
     "location": "전국",
     "hireType": "정규직/계약직",
-    "endDate": "2026-11-02",
-    "applyUrl": "https://www.comwel.or.kr/recruit/hp/main.do",
-    "url": "https://www.comwel.or.kr/recruit/hp/main.do"
+    "endDate": "2026-11-03",
+    "applyUrl": "https://www.ex.co.kr",
+    "url": "https://www.ex.co.kr"
   },
   {
-    "company": "근로복지공단",
-    "title": "[경기요양병원] 의료직(약사) 4급 채용 공고",
+    "company": "한국도로공사",
+    "title": "한국도로공사 대전충남본부 관내 지사(천안, 대전, 영동, 당진, 공주, 부여) 제설 기간제근로자(운전원) 채용",
     "location": "전국",
     "hireType": "정규직/계약직",
-    "endDate": "2026-11-02",
-    "applyUrl": "https://www.comwel.or.kr/recruit/hp/main.do",
-    "url": "https://www.comwel.or.kr/recruit/hp/main.do"
+    "endDate": "2026-11-03",
+    "applyUrl": "https://www.ex.co.kr",
+    "url": "https://www.ex.co.kr"
   },
   {
-    "company": "근로복지공단",
-    "title": "[태백병원] 의료직(약사) 4급 채용 공고",
+    "company": "한국도로공사",
+    "title": "한국도로공사 대전충남본부 관내 지사(천안, 대전, 영동, 당진, 공주, 부여) 제설 기간제근로자(도로관리원) 채용",
     "location": "전국",
     "hireType": "정규직/계약직",
-    "endDate": "2026-11-02",
-    "applyUrl": "https://www.comwel.or.kr/recruit/hp/main.do",
-    "url": "https://www.comwel.or.kr/recruit/hp/main.do"
+    "endDate": "2026-11-03",
+    "applyUrl": "https://www.ex.co.kr",
+    "url": "https://www.ex.co.kr"
+  },
+  {
+    "company": "한국도로공사",
+    "title": "한국도로공사 전북본부 관내 지사(전주, 부안, 무주, 논산, 진안, 보령) 제설 기간제근로자(정비원) 채용",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-03",
+    "applyUrl": "https://www.ex.co.kr/",
+    "url": "https://www.ex.co.kr/"
+  },
+  {
+    "company": "한국도로공사",
+    "title": "한국도로공사 전북본부 기계화부 및 관내 지사(전주, 부안, 무주, 논산, 진안, 보령) 제설 기간제근로자(운전원) 채용",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-03",
+    "applyUrl": "https://www.ex.co.kr/",
+    "url": "https://www.ex.co.kr/"
+  },
+  {
+    "company": "한국도로공사",
+    "title": "한국도로공사 전북본부 관내 지사(전주, 부안, 무주, 논산, 진안, 보령) 제설 기간제근로자(도로관리원) 채용",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-03",
+    "applyUrl": "https://www.ex.co.kr/",
+    "url": "https://www.ex.co.kr/"
+  },
+  {
+    "company": "국민연금공단",
+    "title": "[국민연금공단 서울북부지역본부] 공무직(시설직) 공개채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-03",
+    "applyUrl": "https://www.nps.or.kr/pnsgdnc/hiregdnc/getOHAE0004M0List.do?menuId=MN24000969",
+    "url": "https://www.nps.or.kr/pnsgdnc/hiregdnc/getOHAE0004M0List.do?menuId=MN24000969"
+  },
+  {
+    "company": "학교법인한국폴리텍",
+    "title": "2026년 한국폴리텍대학 기간제 대학운영직(육아대체_조리원)",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-03",
+    "applyUrl": "https://www.kopo.ac.kr/pohang/board.do?menu=6016&mode=view&post=788055",
+    "url": "https://www.kopo.ac.kr/pohang/board.do?menu=6016&mode=view&post=788055"
   },
   {
     "company": "국립공원공단",
@@ -502,15 +466,6 @@
     "endDate": "2026-11-04",
     "applyUrl": "https://kiep.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=269871",
     "url": "https://kiep.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=269871"
-  },
-  {
-    "company": "서울대학교병원",
-    "title": "2027년도 임상강사(Fellow) 선발 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-04",
-    "applyUrl": "https://recruit.snuh.org/joining/recruit/view.do?notice_type=F&recruit_id=26127",
-    "url": "https://recruit.snuh.org/joining/recruit/view.do?notice_type=F&recruit_id=26127"
   },
   {
     "company": "국립공원공단",
@@ -738,42 +693,6 @@
     "url": "https://www.ekr.or.kr/planweb/board/view.krc?dataUid=8a8bb352a08a300001a15c5ec8b30977&page=1&boardUid=402880317cc0644a017cc5e8000f06b7&contentUid=8a8bb3529665d7140199501cd3ef6280&searchType=&keyword=&categoryUid1=&categoryUid2=8a8bb3529665d714019951996437"
   },
   {
-    "company": "영화진흥위원회",
-    "title": "2026년 공무직(본사 미화) 공개채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-05",
-    "applyUrl": "https://kofic.or.kr/kofic/business/board/selectBoardDetail.do?boardNumber=4&boardSeqNumber=76181",
-    "url": "https://kofic.or.kr/kofic/business/board/selectBoardDetail.do?boardNumber=4&boardSeqNumber=76181"
-  },
-  {
-    "company": "한국예술인복지재단",
-    "title": "한국예술인복지재단 2027년 제1차 직원 채용 공고(정규직, 계약직)",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-05",
-    "applyUrl": "https://www.kawf.kr/notice/sub01View.do?selIdx=19694",
-    "url": "https://www.kawf.kr/notice/sub01View.do?selIdx=19694"
-  },
-  {
-    "company": "한국교통연구원",
-    "title": "2026년 직원 채용(4차) 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-05",
-    "applyUrl": "https://www.koti.re.kr/user/bbs/empmnInfo02View.do?bbs_no=74690",
-    "url": "https://www.koti.re.kr/user/bbs/empmnInfo02View.do?bbs_no=74690"
-  },
-  {
-    "company": "한국전력기술주식회사",
-    "title": "[재공고] 2026년 개방형 직위 채용공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-05",
-    "applyUrl": "https://kepco-enc.cairos.co.kr/kepco-enc-jobs",
-    "url": "https://kepco-enc.cairos.co.kr/kepco-enc-jobs"
-  },
-  {
     "company": "국립공원공단",
     "title": "[태백산] 2026년도 태백산국립공원사무소 국립공원지킴이(5차) 채용 공고",
     "location": "전국",
@@ -961,15 +880,6 @@
     "endDate": "2026-11-06",
     "applyUrl": "https://www.kps.co.kr",
     "url": "https://www.kps.co.kr"
-  },
-  {
-    "company": "대한적십자사",
-    "title": "(통영적십자병원) 정규직 간호사 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-06",
-    "applyUrl": "https://www.redcross.or.kr/redrecruit/",
-    "url": "https://www.redcross.or.kr/redrecruit/"
   },
   {
     "company": "대한적십자사",
@@ -1215,6 +1125,33 @@
     "url": "https://www.koroad.or.kr/main/recruit/recruitment_list.do"
   },
   {
+    "company": "전북대학교병원",
+    "title": "2026년 4분기 전북대학교병원 청년인턴(체험형) 공개채용",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-10",
+    "applyUrl": "https://jbuh.recruiter.co.kr/",
+    "url": "https://jbuh.recruiter.co.kr/"
+  },
+  {
+    "company": "전북대학교병원",
+    "title": "2026년 4분기 전북대학교병원 기간제근로자 공개채용",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-10",
+    "applyUrl": "https://jbuh.recruiter.co.kr/",
+    "url": "https://jbuh.recruiter.co.kr/"
+  },
+  {
+    "company": "전북대학교병원",
+    "title": "2026년 4분기 전북대학교병원 직원 공개채용",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-10",
+    "applyUrl": "https://jbuh.recruiter.co.kr/",
+    "url": "https://jbuh.recruiter.co.kr/"
+  },
+  {
     "company": "한국청소년상담복지개발원",
     "title": "제2026-4호 한국청소년상담복지개발원 청년인턴(체험형) 모집",
     "location": "전국",
@@ -1276,6 +1213,15 @@
     "endDate": "2026-11-10",
     "applyUrl": "https://www.redcross.or.kr/redrecruit",
     "url": "https://www.redcross.or.kr/redrecruit"
+  },
+  {
+    "company": "한국남부발전(주)",
+    "title": "한국남부발전(주) 2026년 하반기 체험형인턴 채용공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-11",
+    "applyUrl": "https://kospo.machuda.kr",
+    "url": "https://kospo.machuda.kr"
   },
   {
     "company": "건축공간연구원",
