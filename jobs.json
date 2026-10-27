@@ -1,14 +1,5 @@
 [
   {
-    "company": "국립공원공단",
-    "title": "[덕유산] 덕유산국립공원 겨울성수기 한시인력(수익시설) 직원 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-10-27",
-    "applyUrl": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019940",
-    "url": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019940"
-  },
-  {
     "company": "한전KPS(주)",
     "title": "한전KPS(주) 무주양수사업소 청평수력 3호기 A급 계획예방정비공사 2차 단기노무원 채용공고",
     "location": "전국",
@@ -52,15 +43,6 @@
     "endDate": "2026-10-28",
     "applyUrl": "https://www.pola.or.kr",
     "url": "https://www.pola.or.kr"
-  },
-  {
-    "company": "한국도로공사",
-    "title": "한국도로공사 서울경기본부 기간제근로자(상황관리원) 채용공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-10-28",
-    "applyUrl": "https://www.ex.co.kr",
-    "url": "https://www.ex.co.kr"
   },
   {
     "company": "(재)우체국물류지원단",
@@ -424,12 +406,111 @@
   },
   {
     "company": "학교법인한국폴리텍",
+    "title": "한국폴리텍대학 전남캠퍼스 행정지원직(휴직대체) 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-04",
+    "applyUrl": "https://www.kopo.ac.kr/jeonnam/board.do?menu=10543&mode=view&post=788267",
+    "url": "https://www.kopo.ac.kr/jeonnam/board.do?menu=10543&mode=view&post=788267"
+  },
+  {
+    "company": "한국도로공사",
+    "title": "한국도로공사 부산경남본부 관내 지사(울산, 양산, 창원, 진주, 산청, 창녕, 고성, 서울산, 밀양, 합천) 제설 기간제근로자(정비원) 채용공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-04",
+    "applyUrl": "https://www.ex.co.kr",
+    "url": "https://www.ex.co.kr"
+  },
+  {
+    "company": "한국도로공사",
+    "title": "한국도로공사 부산경남본부 관내 지사(울산, 양산, 진주, 산청, 창녕, 고성, 서울산, 밀양, 합천) 제설 기간제근로자(운전원) 채용공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-04",
+    "applyUrl": "https://www.ex.co.kr",
+    "url": "https://www.ex.co.kr"
+  },
+  {
+    "company": "한국도로공사",
+    "title": "한국도로공사 부산경남본부 관내 지사(울산, 양산, 창원, 진주, 산청, 경주, 창녕, 고성, 서울산, 밀양, 합천) 제설 기간제근로자(도로관리원) 채용공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-04",
+    "applyUrl": "https://www.ex.co.kr",
+    "url": "https://www.ex.co.kr"
+  },
+  {
+    "company": "한국도로공사",
+    "title": "한국도로공사 강원본부 관내 지사(원주, 대관령, 홍천, 춘천, 강릉, 양양) 제설 기간제근로자(정비원) 채용공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-04",
+    "applyUrl": "https://www.ex.co.kr",
+    "url": "https://www.ex.co.kr"
+  },
+  {
+    "company": "한국도로공사",
+    "title": "한국도로공사 강원본부 관내 지사(원주, 대관령, 홍천, 춘천, 강릉, 양양) 제설 기간제근로자(운전원) 채용공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-04",
+    "applyUrl": "https://www.ex.co.kr",
+    "url": "https://www.ex.co.kr"
+  },
+  {
+    "company": "한국도로공사",
+    "title": "한국도로공사 강원본부 관내 지사(원주, 대관령, 홍천, 춘천, 강릉, 양양) 제설 기간제근로자(도로관리원) 채용공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-04",
+    "applyUrl": "https://www.ex.co.kr",
+    "url": "https://www.ex.co.kr"
+  },
+  {
+    "company": "학교법인한국폴리텍",
     "title": "한국폴리텍대학 부산캠퍼스 2026년 행정지원직(휴직대체_냉난방원) 2차 채용",
     "location": "전국",
     "hireType": "정규직/계약직",
     "endDate": "2026-11-04",
     "applyUrl": "https://www.kopo.ac.kr/busan/board.do?menu=5622&mode=view&post=788199",
     "url": "https://www.kopo.ac.kr/busan/board.do?menu=5622&mode=view&post=788199"
+  },
+  {
+    "company": "분당서울대학교병원",
+    "title": "분당서울대학교병원 단시간일반직(선임급연구원) 채용공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-05",
+    "applyUrl": "http://snubh.recruiter.co.kr",
+    "url": "http://snubh.recruiter.co.kr"
+  },
+  {
+    "company": "분당서울대학교병원",
+    "title": "분당서울대학교병원 단시간업무지원직 채용공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-05",
+    "applyUrl": "https://snubh.recruiter.co.kr",
+    "url": "https://snubh.recruiter.co.kr"
+  },
+  {
+    "company": "분당서울대학교병원",
+    "title": "분당서울대학교병원 직원(계약업무지원직) 채용공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-05",
+    "applyUrl": "http://snubh.recruiter.co.kr",
+    "url": "http://snubh.recruiter.co.kr"
+  },
+  {
+    "company": "분당서울대학교병원",
+    "title": "분당서울대학교병원 직원(계약보건직, 계약기술직) 채용공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-05",
+    "applyUrl": "https://snubh.recruiter.co.kr",
+    "url": "https://snubh.recruiter.co.kr"
   },
   {
     "company": "국립공원공단",
@@ -520,51 +601,6 @@
     "endDate": "2026-11-05",
     "applyUrl": "https://www.itkc.or.kr/bbs/boardView.do?id=2&bIdx=316490&page=1&menuId=99&bc=0&sortName=&sortType=",
     "url": "https://www.itkc.or.kr/bbs/boardView.do?id=2&bIdx=316490&page=1&menuId=99&bc=0&sortName=&sortType="
-  },
-  {
-    "company": "근로복지공단",
-    "title": "[울산병원] 기술기능직(기술_환경관리) 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-05",
-    "applyUrl": "https://www.comwel.or.kr/recruit/hp/main.do",
-    "url": "https://www.comwel.or.kr/recruit/hp/main.do"
-  },
-  {
-    "company": "한국보훈복지의료공단",
-    "title": "[대전보훈병원] 정규직(약무직(약사), 업무지원직(완화의료)) 및 계약직(일반기능직(시설(영선)), 청년인턴(체험형)) 채용공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-05",
-    "applyUrl": "https://www.bohun.or.kr/daejeon/na/ntt/selectNttInfo.do?mi=33414&bbsId=1158&bbsSysId=daejeon&nttSn=190634",
-    "url": "https://www.bohun.or.kr/daejeon/na/ntt/selectNttInfo.do?mi=33414&bbsId=1158&bbsSysId=daejeon&nttSn=190634"
-  },
-  {
-    "company": "공무원연금공단",
-    "title": "2026년 하반기 신입직원(전산직 및 장애·보훈) 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-05",
-    "applyUrl": "https://www.geps.or.kr/notiCommunication_info_incruit/43491?curPage=1",
-    "url": "https://www.geps.or.kr/notiCommunication_info_incruit/43491?curPage=1"
-  },
-  {
-    "company": "한국보훈복지의료공단",
-    "title": "[대전보훈병원] 전문의(심장내과, 내분비내과, 외과, 진단검사의학과, 응급의학과) 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-05",
-    "applyUrl": "https://www.bohun.or.kr/daejeon/na/ntt/selectNttInfo.do?mi=33414&bbsId=1158&bbsSysId=daejeon&nttSn=190617",
-    "url": "https://www.bohun.or.kr/daejeon/na/ntt/selectNttInfo.do?mi=33414&bbsId=1158&bbsSysId=daejeon&nttSn=190617"
-  },
-  {
-    "company": "서울올림픽기념국민체육진흥공단",
-    "title": "서울올림픽기념국민체육진흥공단 무기계약직(전임직 및 지원직) 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-05",
-    "applyUrl": "https://kspo.or.kr/kspo/singl/empmn/view.do?empmnId=777&menuNo=200186&pageIndex=1",
-    "url": "https://kspo.or.kr/kspo/singl/empmn/view.do?empmnId=777&menuNo=200186&pageIndex=1"
   },
   {
     "company": "국립공원공단",
@@ -711,33 +747,6 @@
     "url": "https://kofic.or.kr/kofic/business/board/selectBoardDetail.do?boardNumber=4&boardSeqNumber=76182"
   },
   {
-    "company": "국립암센터",
-    "title": "국립암센터 부속병원 당직전담의사 초빙공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-06",
-    "applyUrl": "https://ncc.recruiter.co.kr/career/jobs/131989",
-    "url": "https://ncc.recruiter.co.kr/career/jobs/131989"
-  },
-  {
-    "company": "국립암센터",
-    "title": "국립암센터 부속병원 입원전담전문의(내과) 초빙 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-06",
-    "applyUrl": "https://ncc.recruiter.co.kr/career/jobs/131987",
-    "url": "https://ncc.recruiter.co.kr/career/jobs/131987"
-  },
-  {
-    "company": "국립암센터",
-    "title": "국립암센터 호흡기내과 의사직 또는 임상스텝전문의 초빙공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-06",
-    "applyUrl": "https://ncc.recruiter.co.kr/career/jobs/131986",
-    "url": "https://ncc.recruiter.co.kr/career/jobs/131986"
-  },
-  {
     "company": "대한적십자사",
     "title": "충북혈액원 비정규직(초단시간/간호사/육군훈련소(토요일)) 채용 모집 공고",
     "location": "전국",
@@ -799,15 +808,6 @@
     "endDate": "2026-11-08",
     "applyUrl": "https://www.redcross.or.kr/redrecruit",
     "url": "https://www.redcross.or.kr/redrecruit"
-  },
-  {
-    "company": "대한적십자사",
-    "title": "(거창적십자병원) 초단시간 근로자 보건직 물리치료사 1차 채용",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-08",
-    "applyUrl": "https://www.redcross.or.kr/redrecruit/",
-    "url": "https://www.redcross.or.kr/redrecruit/"
   },
   {
     "company": "국립암센터",
@@ -1134,15 +1134,6 @@
     "url": "https://www.kiep.go.kr/"
   },
   {
-    "company": "대한적십자사",
-    "title": "2026년도 혈장분획센터 육아휴직대체 사무보조원 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-10",
-    "applyUrl": "https://www.redcross.or.kr/redrecruit",
-    "url": "https://www.redcross.or.kr/redrecruit"
-  },
-  {
     "company": "한국관광공사",
     "title": "한국관광공사 2027년 체험형 청년인턴 및 기간제 근로자 채용공고(1분기)",
     "location": "전국",
@@ -1179,6 +1170,24 @@
     "url": "https://kepco-enc-jobs.cairos.co.kr/kepco-enc-jobs"
   },
   {
+    "company": "정보통신기획평가원",
+    "title": "2026년 정보통신기획평가원 직원채용(공무직(미화관리, 시설관리)) 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-11",
+    "applyUrl": "https://www.iitp.kr/kr/1/notice/hire.it",
+    "url": "https://www.iitp.kr/kr/1/notice/hire.it"
+  },
+  {
+    "company": "한국토지주택공사",
+    "title": "한국토지주택공사 대구경북지역본부 기간제근로자(대체채용) 채용 공고(2026-08)",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-11",
+    "applyUrl": "https://lh.or.kr/",
+    "url": "https://lh.or.kr/"
+  },
+  {
     "company": "한국남부발전(주)",
     "title": "한국남부발전(주) 2026년 하반기 체험형인턴 채용공고",
     "location": "전국",
@@ -1188,13 +1197,22 @@
     "url": "https://kospo.machuda.kr"
   },
   {
-    "company": "건축공간연구원",
-    "title": "건축공간연구원 정규직(부연구위원) 모집",
+    "company": "독립기념관",
+    "title": "2026년 독립기념관 하반기 직원 채용공고",
     "location": "전국",
     "hireType": "정규직/계약직",
-    "endDate": "2026-11-11",
-    "applyUrl": "https://recruit.auri.re.kr",
-    "url": "https://recruit.auri.re.kr"
+    "endDate": "2026-11-12",
+    "applyUrl": "https://i815.or.kr/2018/news/news.do?mode=V&no=997470",
+    "url": "https://i815.or.kr/2018/news/news.do?mode=V&no=997470"
+  },
+  {
+    "company": "국립부산과학관",
+    "title": "2026년도 국립부산과학관 하반기 직원 채용공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-12",
+    "applyUrl": "https://www.sciport.or.kr",
+    "url": "https://www.sciport.or.kr"
   },
   {
     "company": "대한적십자사",
