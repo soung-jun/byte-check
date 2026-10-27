@@ -9,15 +9,6 @@
     "url": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019940"
   },
   {
-    "company": "(재)우체국물류지원단",
-    "title": "우체국물류지원단 부산지사 진주사업소 기간제(운전직, 대체인력)채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-10-27",
-    "applyUrl": "https://www.pola.or.kr",
-    "url": "https://www.pola.or.kr"
-  },
-  {
     "company": "한전KPS(주)",
     "title": "한전KPS(주) 무주양수사업소 청평수력 3호기 A급 계획예방정비공사 2차 단기노무원 채용공고",
     "location": "전국",
@@ -133,6 +124,24 @@
     "endDate": "2026-10-30",
     "applyUrl": "https://www.jejunuh.co.kr/prog/rcrutPbanc/main/sub05_03_03_01/view.do?rcrutPbancNo=2660",
     "url": "https://www.jejunuh.co.kr/prog/rcrutPbanc/main/sub05_03_03_01/view.do?rcrutPbancNo=2660"
+  },
+  {
+    "company": "국립공원공단",
+    "title": "[한려해상] 2026년 국립공원지킴이 한시인력 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-02",
+    "applyUrl": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019961",
+    "url": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019961"
+  },
+  {
+    "company": "(재)우체국물류지원단",
+    "title": "우체국물류지원단 경인지사 안양,부평물류사업소 기간제(발착직) 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-02",
+    "applyUrl": "http://www.pola.or.kr",
+    "url": "http://www.pola.or.kr"
   },
   {
     "company": "한국도로공사",
@@ -298,6 +307,15 @@
   },
   {
     "company": "근로복지공단",
+    "title": "[태백병원] 기간제 의사(병동당직의) 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-03",
+    "applyUrl": "https://www.comwel.or.kr/recruit/hp/main.do",
+    "url": "https://www.comwel.or.kr/recruit/hp/main.do"
+  },
+  {
+    "company": "근로복지공단",
     "title": "[경인지역관내] 공무직(시설경비원) 및 기간제(근로자정보조사원) 채용 공고",
     "location": "전국",
     "hireType": "정규직/계약직",
@@ -430,24 +448,6 @@
     "endDate": "2026-11-04",
     "applyUrl": "https://www.kopo.ac.kr/busan/board.do?menu=5622&mode=view&post=788199",
     "url": "https://www.kopo.ac.kr/busan/board.do?menu=5622&mode=view&post=788199"
-  },
-  {
-    "company": "한국장애인개발원",
-    "title": "[제2026-120호] 2026년도 제1차 대외협력부 장애인식개선팀 기간제 계약직 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-04",
-    "applyUrl": "https://koddi.fairyhr.com",
-    "url": "https://koddi.fairyhr.com"
-  },
-  {
-    "company": "공무원연금공단",
-    "title": "대체투자(기업금융) 전문계약직 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-04",
-    "applyUrl": "https://www.geps.or.kr/notiCommunication_info_incruit/43413",
-    "url": "https://www.geps.or.kr/notiCommunication_info_incruit/43413"
   },
   {
     "company": "국립공원공단",
@@ -657,22 +657,22 @@
     "url": "https://kepco-enc-jobs.cairos.co.kr/kepco-enc-jobs"
   },
   {
-    "company": "한국전력기술주식회사",
-    "title": "2026년도 하반기 장애인 체험형 인턴 채용",
+    "company": "국립공원공단",
+    "title": "[다도해해상]2026년 다도해해상 국립공원지킴이[한시인력/녹색순찰대] 직원 채용(6차)",
     "location": "전국",
     "hireType": "정규직/계약직",
-    "endDate": "2026-11-05",
-    "applyUrl": "https://kepco-enc-jobs.cairos.co.kr/kepco-enc-jobs",
-    "url": "https://kepco-enc-jobs.cairos.co.kr/kepco-enc-jobs"
+    "endDate": "2026-11-06",
+    "applyUrl": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019960",
+    "url": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019960"
   },
   {
-    "company": "한국전력기술주식회사",
-    "title": "2026년도 하반기 청년 체험형 인턴 채용 공고",
+    "company": "국립공원공단",
+    "title": "[지리산전북] 지리산국립공원전북사무소 한시인력(국립공원지킴이) 모집",
     "location": "전국",
     "hireType": "정규직/계약직",
-    "endDate": "2026-11-05",
-    "applyUrl": "https://kepco-enc-jobs.cairos.co.kr/kepco-enc-jobs",
-    "url": "https://kepco-enc-jobs.cairos.co.kr/kepco-enc-jobs"
+    "endDate": "2026-11-06",
+    "applyUrl": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019959",
+    "url": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019959"
   },
   {
     "company": "국립공원공단",
@@ -936,6 +936,15 @@
     "url": "https://www.redcross.or.kr/redrecruit/"
   },
   {
+    "company": "한국기술교육대학교",
+    "title": "한국기술교육대학교 기간제 근로자(대체인력) 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-09",
+    "applyUrl": "https://portal.koreatech.ac.kr/p/EPHOME/",
+    "url": "https://portal.koreatech.ac.kr/p/EPHOME/"
+  },
+  {
     "company": "한국해양수산연수원",
     "title": "한국해양수산연수원 2026년도 제3차 정규직 직원채용 공고",
     "location": "전국",
@@ -1080,15 +1089,6 @@
     "url": "https://www.lh.or.kr/board.es?mid=a10602050000&bid=0036&act=view&list_no=734669&tag=&nPage=1"
   },
   {
-    "company": "한국잡월드",
-    "title": "2026년 한국잡월드 1급 개방형 직위 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-09",
-    "applyUrl": "https://www.koreajobworld.or.kr/main.do?site=6#",
-    "url": "https://www.koreajobworld.or.kr/main.do?site=6#"
-  },
-  {
     "company": "육아정책연구소",
     "title": "[제2026-17호] 육아정책연구소 위촉직 연구원 채용",
     "location": "전국",
@@ -1195,6 +1195,15 @@
     "endDate": "2026-11-10",
     "applyUrl": "https://www.redcross.or.kr/redrecruit",
     "url": "https://www.redcross.or.kr/redrecruit"
+  },
+  {
+    "company": "한국전력기술주식회사",
+    "title": "2026년도 4분기 비정규직(결원보충 대체인력) 채용공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-11",
+    "applyUrl": "https://kepco-enc-jobs.cairos.co.kr/kepco-enc-jobs",
+    "url": "https://kepco-enc-jobs.cairos.co.kr/kepco-enc-jobs"
   },
   {
     "company": "한국남부발전(주)",
