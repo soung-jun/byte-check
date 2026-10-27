@@ -99,15 +99,6 @@
     "url": "https://www.ex.co.kr"
   },
   {
-    "company": "근로복지공단",
-    "title": "[서울남부지사] 기간제(시설미화원-휴직대체) 채용 재공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-10-28",
-    "applyUrl": "https://www.comwel.or.kr/recruit/hp/main.do",
-    "url": "https://www.comwel.or.kr/recruit/hp/main.do"
-  },
-  {
     "company": "(재)우체국물류지원단",
     "title": "우체국물류지원단 서울지사 동서울물류사업소 기간제(발착직) 채용 공고",
     "location": "전국",
@@ -343,6 +334,24 @@
   },
   {
     "company": "한국도로공사",
+    "title": "한국도로공사 충북본부 및 관내 지사(진천, 제천, 충주, 보은, 엄정, 상주) 제설 기간제근로자(운전원) 채용",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-03",
+    "applyUrl": "https://www.ex.co.kr",
+    "url": "https://www.ex.co.kr"
+  },
+  {
+    "company": "한국도로공사",
+    "title": "한국도로공사 충북본부 관내 지사(진천, 제천, 충주, 보은, 엄정, 상주) 제설 기간제근로자(도로관리원) 채용",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-03",
+    "applyUrl": "https://www.ex.co.kr",
+    "url": "https://www.ex.co.kr"
+  },
+  {
+    "company": "한국도로공사",
     "title": "한국도로공사 대전충남본부 관내 지사(천안, 대전, 영동, 당진, 공주, 부여) 제설 기간제근로자(정비원) 채용",
     "location": "전국",
     "hireType": "정규직/계약직",
@@ -457,15 +466,6 @@
     "endDate": "2026-11-04",
     "applyUrl": "https://recruit.krihs.re.kr/ext/rec/rec_5010.do?ANNC_NO=26102101&SUPT_FLD_CD=0&DEG=0",
     "url": "https://recruit.krihs.re.kr/ext/rec/rec_5010.do?ANNC_NO=26102101&SUPT_FLD_CD=0&DEG=0"
-  },
-  {
-    "company": "대외경제정책연구원",
-    "title": "대외경제정책연구원(KIEP) 임시직 전문원급(홍보팀) 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-04",
-    "applyUrl": "https://kiep.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=269871",
-    "url": "https://kiep.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=269871"
   },
   {
     "company": "국립공원공단",
@@ -682,15 +682,6 @@
     "endDate": "2026-11-05",
     "applyUrl": "https://kepco-enc-jobs.cairos.co.kr/kepco-enc-jobs",
     "url": "https://kepco-enc-jobs.cairos.co.kr/kepco-enc-jobs"
-  },
-  {
-    "company": "한국농어촌공사",
-    "title": "한국농어촌공사 농지관리처 계약직(AI전문가, 공간정보전문가) 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-05",
-    "applyUrl": "https://www.ekr.or.kr/planweb/board/view.krc?dataUid=8a8bb352a08a300001a15c5ec8b30977&page=1&boardUid=402880317cc0644a017cc5e8000f06b7&contentUid=8a8bb3529665d7140199501cd3ef6280&searchType=&keyword=&categoryUid1=&categoryUid2=8a8bb3529665d714019951996437",
-    "url": "https://www.ekr.or.kr/planweb/board/view.krc?dataUid=8a8bb352a08a300001a15c5ec8b30977&page=1&boardUid=402880317cc0644a017cc5e8000f06b7&contentUid=8a8bb3529665d7140199501cd3ef6280&searchType=&keyword=&categoryUid1=&categoryUid2=8a8bb3529665d714019951996437"
   },
   {
     "company": "국립공원공단",
@@ -2228,5 +2219,14 @@
     "endDate": "2026.12.31",
     "dDay": "D-88",
     "applyUrl": "https://diramsjob.recruiter.co.kr/career/home"
+  },
+  {
+    "company": "전남대학교병원",
+    "title": "전남대학교병원 직원(방사선취급감독자) 상시 공개채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2027-12-31",
+    "applyUrl": "https://cnuh.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=270421",
+    "url": "https://cnuh.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=270421"
   }
 ]
