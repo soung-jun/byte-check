@@ -1,32 +1,5 @@
 [
   {
-    "company": "한전KPS(주)",
-    "title": "한전KPS(주) 무주양수사업소 청평수력 3호기 A급 계획예방정비공사 2차 단기노무원 채용공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-10-28",
-    "applyUrl": "https://www.kps.co.kr/",
-    "url": "https://www.kps.co.kr/"
-  },
-  {
-    "company": "한국기상산업기술원",
-    "title": "2026년도 제5회 공개채용",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-10-28",
-    "applyUrl": "https://kmiti.recruitlab.co.kr/",
-    "url": "https://kmiti.recruitlab.co.kr/"
-  },
-  {
-    "company": "경북대학교병원",
-    "title": "2026년 10월 제3차 임시직원 모집 공고(기계설비, 응급구조사, 간호조무사, 임상병리사)",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-10-28",
-    "applyUrl": "https://www.knuh.kr/content/04information/02_01.asp",
-    "url": "https://www.knuh.kr/content/04information/02_01.asp"
-  },
-  {
     "company": "(재)우체국물류지원단",
     "title": "우체국물류지원단 서울지사 동서울물류사업소 기간제(발착직) 채용 공고",
     "location": "전국",
@@ -34,15 +7,6 @@
     "endDate": "2026-10-29",
     "applyUrl": "https://www.pola.or.kr",
     "url": "https://www.pola.or.kr"
-  },
-  {
-    "company": "근로복지공단",
-    "title": "[인천병원] 2026년도 하반기 청년(체험형)인턴 장애전형 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-10-30",
-    "applyUrl": "https://www.comwel.or.kr/recruit/hp/main.do",
-    "url": "https://www.comwel.or.kr/recruit/hp/main.do"
   },
   {
     "company": "국립공원공단",
@@ -151,60 +115,6 @@
     "endDate": "2026-11-02",
     "applyUrl": "https://www.kps.co.kr/",
     "url": "https://www.kps.co.kr/"
-  },
-  {
-    "company": "근로복지공단",
-    "title": "[동해병원] 의료직(간호사) 6급 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-02",
-    "applyUrl": "https://www.comwel.or.kr/recruit/hp/main.do",
-    "url": "https://www.comwel.or.kr/recruit/hp/main.do"
-  },
-  {
-    "company": "근로복지공단",
-    "title": "[동해병원] 의료직(약사) 4급 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-02",
-    "applyUrl": "https://www.comwel.or.kr/recruit/hp/main.do",
-    "url": "https://www.comwel.or.kr/recruit/hp/main.do"
-  },
-  {
-    "company": "근로복지공단",
-    "title": "[인천병원] 의료직(간호사) 6급 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-02",
-    "applyUrl": "https://www.comwel.or.kr/recruit/hp/main.do",
-    "url": "https://www.comwel.or.kr/recruit/hp/main.do"
-  },
-  {
-    "company": "근로복지공단",
-    "title": "[순천병원] 의료직(산업위생사) 6급 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-02",
-    "applyUrl": "https://www.comwel.or.kr/recruit/hp/main.do",
-    "url": "https://www.comwel.or.kr/recruit/hp/main.do"
-  },
-  {
-    "company": "근로복지공단",
-    "title": "[인천병원] 별정직 의사(재활의학과) 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-02",
-    "applyUrl": "https://www.comwel.or.kr/recruit/hp/main.do",
-    "url": "https://www.comwel.or.kr/recruit/hp/main.do"
-  },
-  {
-    "company": "근로복지공단",
-    "title": "[인천병원] 별정직 의사(내과 또는 가정의학과) 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-02",
-    "applyUrl": "https://www.comwel.or.kr/recruit/hp/main.do",
-    "url": "https://www.comwel.or.kr/recruit/hp/main.do"
   },
   {
     "company": "국립공원공단",
@@ -394,6 +304,33 @@
     "endDate": "2026-11-03",
     "applyUrl": "https://www.kopo.ac.kr/pohang/board.do?menu=6016&mode=view&post=788055",
     "url": "https://www.kopo.ac.kr/pohang/board.do?menu=6016&mode=view&post=788055"
+  },
+  {
+    "company": "한국도로공사",
+    "title": "한국도로공사 수도권본부 관내 지사(인천, 시흥, 군포, 화성, 파주) 제설 기간제근로자(정비원) 채용",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-04",
+    "applyUrl": "https://www.ex.co.kr",
+    "url": "https://www.ex.co.kr"
+  },
+  {
+    "company": "한국도로공사",
+    "title": "한국도로공사 수도권본부 관내 지사(인천, 시흥, 화성, 파주) 제설 기간제근로자(운전원) 채용",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-04",
+    "applyUrl": "https://ex.co.kr",
+    "url": "https://ex.co.kr"
+  },
+  {
+    "company": "한국도로공사",
+    "title": "한국도로공사 수도권본부 관내 지사(인천, 시흥, 군포, 화성, 파주) 제설 기간제근로자(도로관리원) 채용",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-04",
+    "applyUrl": "https://www.ex.co.kr",
+    "url": "https://www.ex.co.kr"
   },
   {
     "company": "한국장애인고용공단",
@@ -657,15 +594,6 @@
     "url": "https://recruit.snuh.org/joining/recruit/view.do?notice_type=E&recruit_id=26132"
   },
   {
-    "company": "한국개발연구원",
-    "title": "2026년 4분기 1차 KDI 위촉직원(대체인력 등) 채용 공고(연구직)",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-06",
-    "applyUrl": "https://www.kdi.re.kr/share/recruitView?rec_no=309&pg=1&rec_type=",
-    "url": "https://www.kdi.re.kr/share/recruitView?rec_no=309&pg=1&rec_type="
-  },
-  {
     "company": "국립공원공단",
     "title": "[북한산도봉] 2026년 기간제(녹색순찰대) 직원 채용(6차) 공고",
     "location": "전국",
@@ -673,6 +601,24 @@
     "endDate": "2026-11-09",
     "applyUrl": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019985",
     "url": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019985"
+  },
+  {
+    "company": "분당서울대학교병원",
+    "title": "분당서울대학교병원 진료전문의(소아청소년과 당직전담) 및 진료일반의(내과) 채용공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-09",
+    "applyUrl": "https://snubh.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=270687",
+    "url": "https://snubh.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=270687"
+  },
+  {
+    "company": "분당서울대학교병원",
+    "title": "분당서울대학교병원 진료교수요원(핵의학과) 채용공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-09",
+    "applyUrl": "https://snubh.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=270684",
+    "url": "https://snubh.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=270684"
   },
   {
     "company": "국립중앙의료원",
@@ -837,15 +783,6 @@
     "url": "https://knto.or.kr/recruitInfo"
   },
   {
-    "company": "한국토지주택공사",
-    "title": "한국토지주택공사 경기북부지역본부 기간제근로자(매입행정역, 매입기술역, 공사원가검토역) 채용공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-09",
-    "applyUrl": "https://www.lh.or.kr/board.es?mid=a10602050000&bid=0036&act=view&list_no=734721&tag=&nPage=1",
-    "url": "https://www.lh.or.kr/board.es?mid=a10602050000&bid=0036&act=view&list_no=734721&tag=&nPage=1"
-  },
-  {
     "company": "국립공원공단",
     "title": "[월악산] 2026년 월악산국립공원사무소 한시인력(국립공원지킴이) 직원 채용",
     "location": "전국",
@@ -997,24 +934,6 @@
     "endDate": "2026-11-10",
     "applyUrl": "https://komsa.ncsplus.co.kr/",
     "url": "https://komsa.ncsplus.co.kr/"
-  },
-  {
-    "company": "한국산업인력공단",
-    "title": "한국산업인력공단 2026년 하반기 사업지원직 직원 채용공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-10",
-    "applyUrl": "https://www.hrdkorea.or.kr/3/1/2/2",
-    "url": "https://www.hrdkorea.or.kr/3/1/2/2"
-  },
-  {
-    "company": "한국산업인력공단",
-    "title": "한국산업인력공단 기간제 변호사 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-10",
-    "applyUrl": "https://www.hrdkorea.or.kr/3/1/2/2",
-    "url": "https://www.hrdkorea.or.kr/3/1/2/2"
   },
   {
     "company": "국립암센터",
@@ -1197,6 +1116,15 @@
     "url": "https://nypi.recruiter.co.kr/bbs/appsite/notice/read/917341"
   },
   {
+    "company": "한국토지주택공사",
+    "title": "한국토지주택공사 토지주택연구원 기간제근로자 채용공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-12",
+    "applyUrl": "http://lh.or.kr/",
+    "url": "http://lh.or.kr/"
+  },
+  {
     "company": "독립기념관",
     "title": "2026년 독립기념관 하반기 직원 채용공고",
     "location": "전국",
@@ -1224,6 +1152,42 @@
     "url": "https://www.redcross.or.kr/redrecruit/"
   },
   {
+    "company": "대한적십자사",
+    "title": "경인권역재활병원 비정규직(기간제) 물리치료사 채용 공고(2026.12.1.임용)",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-13",
+    "applyUrl": "https://www.redcross.or.kr/redrecruit/",
+    "url": "https://www.redcross.or.kr/redrecruit/"
+  },
+  {
+    "company": "대한적십자사",
+    "title": "경인권역재활병원 비정규직(대체인력) 물리치료사 채용 공고(2026.12.1.임용)(2)",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-13",
+    "applyUrl": "https://www.redcross.or.kr/redrecruit/",
+    "url": "https://www.redcross.or.kr/redrecruit/"
+  },
+  {
+    "company": "대한적십자사",
+    "title": "경인권역재활병원 비정규직(대체인력) 물리치료사 채용 공고(2026.12.1.임용)(1)",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-13",
+    "applyUrl": "https://www.redcross.or.kr/redrecruit/",
+    "url": "https://www.redcross.or.kr/redrecruit/"
+  },
+  {
+    "company": "한국과학기술기획평가원",
+    "title": "한국과학기술기획평가원(KISTEP) 글로벌기술전략본부 전략기술정책센터 육아휴직 대체인력 채용 재공고(2차)",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-13",
+    "applyUrl": "https://www.kistep.re.kr/board.es?mid=a10405020000&bid=0026&list_no=94907&act=view",
+    "url": "https://www.kistep.re.kr/board.es?mid=a10405020000&bid=0026&list_no=94907&act=view"
+  },
+  {
     "company": "민주화운동기념사업회",
     "title": "2026년도 민주화운동기념사업회 제5차 직원(정규직_회계) 채용 공고",
     "location": "전국",
@@ -1249,6 +1213,15 @@
     "endDate": "2026-11-13",
     "applyUrl": "https://www.compa.re.kr/cop/bbs/rnw/selectBoardArticle.do?bbsId=BBSMSTR_000000000091&nttId=4093&goMenuNo=1233000",
     "url": "https://www.compa.re.kr/cop/bbs/rnw/selectBoardArticle.do?bbsId=BBSMSTR_000000000091&nttId=4093&goMenuNo=1233000"
+  },
+  {
+    "company": "기초과학연구원",
+    "title": "제2026-2회 기초과학연구원 중이온가속기연구소 정규직원 채용공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-13",
+    "applyUrl": "https://ibs.recruiter.co.kr/career/job",
+    "url": "https://ibs.recruiter.co.kr/career/job"
   },
   {
     "company": "대외경제정책연구원",
