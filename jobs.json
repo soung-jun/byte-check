@@ -99,24 +99,6 @@
     "url": "https://www.bohun.or.kr/gwangju/na/ntt/selectNttInfo.do?mi=32890&bbsId=1158&bbsSysId=gwangju&nttSn=190673"
   },
   {
-    "company": "근로복지공단",
-    "title": "[인천병원] 의료직(산업위생사) 6급 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-02",
-    "applyUrl": "https://www.comwel.or.kr/recruit/hp/main.do",
-    "url": "https://www.comwel.or.kr/recruit/hp/main.do"
-  },
-  {
-    "company": "한전KPS(주)",
-    "title": "한전KPS(주)남제주사업소 복합ST&HRSG 계획예방정비공사 단기노무원 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-02",
-    "applyUrl": "https://www.kps.co.kr/",
-    "url": "https://www.kps.co.kr/"
-  },
-  {
     "company": "국립공원공단",
     "title": "[지리산경남] 지리산국립공원경남사무소 가을성수기 한시인력(산불감시원) 채용 공고",
     "location": "전국",
@@ -304,6 +286,15 @@
     "endDate": "2026-11-03",
     "applyUrl": "https://www.kopo.ac.kr/pohang/board.do?menu=6016&mode=view&post=788055",
     "url": "https://www.kopo.ac.kr/pohang/board.do?menu=6016&mode=view&post=788055"
+  },
+  {
+    "company": "경상국립대학교병원",
+    "title": "행정직, 의료기술직 채용공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-04",
+    "applyUrl": "https://gnuh.recruiter.co.kr/",
+    "url": "https://gnuh.recruiter.co.kr/"
   },
   {
     "company": "한국도로공사",
@@ -567,33 +558,6 @@
     "url": "https://www.bohun.or.kr/seoul/na/ntt/selectNttInfo.do?mi=32253&bbsId=1158&bbsSysId=seoul&nttSn=190672"
   },
   {
-    "company": "공간정보품질관리원",
-    "title": "공간정보품질관리원 2026년 제4차 채용 공고(기간제근로자)",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-06",
-    "applyUrl": "https://www.siqms.or.kr/M2001000/board_view.do?idx=525741",
-    "url": "https://www.siqms.or.kr/M2001000/board_view.do?idx=525741"
-  },
-  {
-    "company": "한국수자원공사",
-    "title": "[한국수자원공사] 화성권지사 시흥물환경센터 특수직(기술관리_전문기술) 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-06",
-    "applyUrl": "https://k-water.recruiter.co.kr/",
-    "url": "https://k-water.recruiter.co.kr/"
-  },
-  {
-    "company": "서울대학교병원",
-    "title": "서울대학교병원 블라인드 직원채용 (대체근로자) 공고 (장애인 특별우대)",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-06",
-    "applyUrl": "https://recruit.snuh.org/joining/recruit/view.do?notice_type=E&recruit_id=26132",
-    "url": "https://recruit.snuh.org/joining/recruit/view.do?notice_type=E&recruit_id=26132"
-  },
-  {
     "company": "국립공원공단",
     "title": "[북한산도봉] 2026년 기간제(녹색순찰대) 직원 채용(6차) 공고",
     "location": "전국",
@@ -774,15 +738,6 @@
     "url": "https://www.lh.or.kr/board.es?mid=a10602050000&bid=0036&act=view&list_no=734705&tag=&nPage=1"
   },
   {
-    "company": "한국관광공사",
-    "title": "지역관광기업지원센터 구축 및 운영 사업 기간제 근로자 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-09",
-    "applyUrl": "https://knto.or.kr/recruitInfo",
-    "url": "https://knto.or.kr/recruitInfo"
-  },
-  {
     "company": "국립공원공단",
     "title": "[월악산] 2026년 월악산국립공원사무소 한시인력(국립공원지킴이) 직원 채용",
     "location": "전국",
@@ -927,13 +882,13 @@
     "url": "https://www.kisdi.re.kr/bbs/view.do?key=m2101113056115&bbsSn=115171"
   },
   {
-    "company": "한국해양교통안전공단",
-    "title": "2026년도 제5차 신규직원(정규직) 채용",
+    "company": "한전KPS(주)",
+    "title": "한전KPS(주)충남전북전력지사(기술팀) 단기노무원 채용 공고",
     "location": "전국",
     "hireType": "정규직/계약직",
-    "endDate": "2026-11-10",
-    "applyUrl": "https://komsa.ncsplus.co.kr/",
-    "url": "https://komsa.ncsplus.co.kr/"
+    "endDate": "2026-11-11",
+    "applyUrl": "http://www.kps.co.kr",
+    "url": "http://www.kps.co.kr"
   },
   {
     "company": "국립암센터",
@@ -1080,6 +1035,15 @@
     "url": "https://kospo.machuda.kr"
   },
   {
+    "company": "전쟁기념사업회",
+    "title": "전쟁기념사업회 2026-3차 직원 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-12",
+    "applyUrl": "http://www.warmemo.or.kr",
+    "url": "http://www.warmemo.or.kr"
+  },
+  {
     "company": "한국교통안전공단",
     "title": "2026년 하반기 한국교통안전공단 실무직 직원 채용",
     "location": "전국",
@@ -1121,8 +1085,8 @@
     "location": "전국",
     "hireType": "정규직/계약직",
     "endDate": "2026-11-12",
-    "applyUrl": "http://lh.or.kr/",
-    "url": "http://lh.or.kr/"
+    "applyUrl": "https://lh.or.kr/board.es?mid=a10602050000&bid=0036&act=view&list_no=734756&tag=&nPage=1",
+    "url": "https://lh.or.kr/board.es?mid=a10602050000&bid=0036&act=view&list_no=734756&tag=&nPage=1"
   },
   {
     "company": "독립기념관",
@@ -1150,6 +1114,24 @@
     "endDate": "2026-11-12",
     "applyUrl": "https://www.redcross.or.kr/redrecruit/",
     "url": "https://www.redcross.or.kr/redrecruit/"
+  },
+  {
+    "company": "중소벤처기업연구원",
+    "title": "2026년도 제6차 중소벤처기업연구원 공개채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-13",
+    "applyUrl": "https://recruit.kosi.re.kr",
+    "url": "https://recruit.kosi.re.kr"
+  },
+  {
+    "company": "한국농어촌공사",
+    "title": "한국농어촌공사 금강사업단 공무직(청소원) 보훈·장애인 제한경쟁 채용공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-13",
+    "applyUrl": "https://www.ekr.or.kr/planweb/board/view.krc?dataUid=8a8bb352a08a300001a176d48cbf232b&page=1&boardUid=402880317cc0644a017cc5e8000f06b7&contentUid=8a8bb3529665d7140199501cd3ef6280&searchType=&keyword=&categoryUid1=&categoryUid2=8a8bb3529665d714019951996437",
+    "url": "https://www.ekr.or.kr/planweb/board/view.krc?dataUid=8a8bb352a08a300001a176d48cbf232b&page=1&boardUid=402880317cc0644a017cc5e8000f06b7&contentUid=8a8bb3529665d7140199501cd3ef6280&searchType=&keyword=&categoryUid1=&categoryUid2=8a8bb3529665d714019951996437"
   },
   {
     "company": "대한적십자사",
@@ -1267,6 +1249,15 @@
     "endDate": "2026-12-01",
     "applyUrl": "https://www.kiep.go.kr/",
     "url": "https://www.kiep.go.kr/"
+  },
+  {
+    "company": "한국노동연구원",
+    "title": "한국노동연구원 연구위원 직군 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-12-10",
+    "applyUrl": "https://kli.recruiter.co.kr/appsite/company/index",
+    "url": "https://kli.recruiter.co.kr/appsite/company/index"
   },
   {
     "company": "(재)우체국물류지원단",
