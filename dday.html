@@ -6,7 +6,8 @@
   <title>ByteCheck - 토익/오픽 유효기간 2년 만료 D-Day & 공공기관 5년 사전등록 가이드</title>
   <meta name="description" content="토익(TOEIC), 오픽(OPIc), 지텔프 2년 만료일 및 정부 공인 5년 인정 기한(12월 31일) 자동 계산기, 성적 발표일 D-Day, 공무원·공기업 어학 가산점 시뮬레이터 및 점수 상호 변환기 무료 제공.">
   <meta name="keywords" content="토익 유효기간, 오픽 만료일, 어학 D-Day 계산기, 어학성적 사전등록, 국가공무원 채용시스템, 토익 점수 변환, 지텔프 환산표, 공무원 영어 대체, 토익 기출문제집, ByteCheck">
-  
+  <link rel="canonical" href="https://bytechecktool.com/dday.html">
+
   <meta property="og:title" content="ByteCheck - 어학성적 유효기간 D-Day & 공공기관 5년 만료 계산기">
   <meta property="og:description" content="토익/오픽 2년 만료 카운트다운, 공공기관 5년 인정 기한, 점수 변환기 및 공기업 가산점 시뮬레이터">
   <meta property="og:url" content="https://bytechecktool.com/dday.html">
@@ -15,12 +16,54 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "ByteCheck 어학 만료 D-Day 및 5년 사전등록 계산기",
-    "url": "https://bytechecktool.com/dday.html",
-    "description": "토익 및 오픽 어학시험 유효기간 2년 자동 계산 및 공공기관 5년 사전등록 안내 툴",
-    "applicationCategory": "EducationalApplication",
-    "operatingSystem": "All"
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "ByteCheck 어학 만료 D-Day 및 5년 사전등록 계산기",
+        "url": "https://bytechecktool.com/dday.html",
+        "description": "토익 및 오픽 어학시험 유효기간 2년 자동 계산 및 공공기관 5년 사전등록 안내 툴",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "All",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "어학 성적 유효기간 2년과 공공기관 5년 인정의 차이는 무엇인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "YBM, ACTFL 등 주관사의 공식 성적표 발급 및 민간기업 제출 유효기간은 시험일로부터 2년입니다. 반면 인사혁신처 사이버국가고시센터에 유효기간 2년 만료 전 사전등록을 완료하면 정부 공무원 및 공공기관 채용 전산망에서 시험 응시 연도로부터 5년이 되는 해의 12월 31일까지 인정받을 수 있습니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "유효기간 2년이 지난 성적도 5년 사전등록이 가능한가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "불가능합니다. 유효기간 2년이 경과하면 시험 주관사의 데이터베이스 조회가 닫혀 성적 진위 여부를 확인할 수 없으므로, 반드시 2년 만료일 이전에 사전등록을 완료해야 합니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "오픽(OPIc)과 토익(TOEIC)의 사전등록 방법이 다른가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "토익, 토익스피킹, 텝스, 지텔프는 주관사 전산망과 연동되어 365일 상시 실시간 등록이 가능합니다. 반면 오픽, 토플, 텝스, HSK 등은 수기 검증 대상이므로 매월 1일~10일 정기 등록 기간에만 신청할 수 있습니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "국가직 7급 공무원 공인영어 대체 기준 점수는 얼마인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "국가직 7급 일반 기준 토익 700점 이상, 지텔프 Level 2 65점 이상, 텝스 340점 이상입니다. 외무영사직은 토익 790점 이상, 지텔프 Level 2 77점 이상이 요구됩니다."
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
 
@@ -126,8 +169,8 @@
     .sub-result-title { font-size: 0.76rem; color: var(--text-muted); font-weight: 700; }
     .sub-result-val { font-size: 0.95rem; font-weight: 800; color: #0f172a; margin-top: 2px; }
 
-    .module-nav { display: flex; gap: 8px; margin-bottom: 16px; border-bottom: 2px solid var(--border); padding-bottom: 8px; }
-    .mod-btn { flex: 1; padding: 10px 8px; background: #ffffff; border: 1.5px solid var(--border); border-radius: 8px; font-size: 0.9rem; font-weight: 800; color: var(--text-muted); cursor: pointer; text-align: center; transition: all 0.2s; }
+    .module-nav { display: flex; gap: 8px; margin-bottom: 16px; border-bottom: 2px solid var(--border); padding-bottom: 8px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .mod-btn { flex: 1; padding: 10px 8px; background: #ffffff; border: 1.5px solid var(--border); border-radius: 8px; font-size: 0.9rem; font-weight: 800; color: var(--text-muted); cursor: pointer; text-align: center; transition: all 0.2s; white-space: nowrap; }
     .mod-btn:hover { background: #f1f5f9; }
     .mod-btn.active { background: var(--primary); color: #ffffff; border-color: var(--primary); }
 
@@ -172,9 +215,32 @@
     .rule-card { background: #f8fafc; border: 1.5px solid var(--border); border-radius: 8px; padding: 14px; font-size: 0.88rem; line-height: 1.7; }
     .rule-card strong { color: var(--primary); display: block; margin-bottom: 4px; }
 
-    footer { background: #ffffff; border-top: 2px solid var(--border); padding: 30px 20px; font-size: 0.85rem; color: var(--text-muted); line-height: 1.8; text-align: center; }
-    .footer-links { display: flex; justify-content: center; gap: 16px; margin-bottom: 12px; flex-wrap: wrap; }
+    /* SEO Article & FAQ Styling */
+    .seo-article {
+      margin-top: 25px; background: #ffffff; border: 2px solid var(--border);
+      border-radius: 12px; padding: 32px 26px; box-shadow: var(--shadow-sm);
+    }
+    .seo-article h2 { font-size: 1.4rem; font-weight: 900; color: #0f172a; margin-bottom: 1.2rem; border-left: 5px solid var(--primary); padding-left: 12px; }
+    .seo-article h3 { font-size: 1.15rem; font-weight: 800; color: #0f172a; margin: 1.8rem 0 0.8rem 0; }
+    .seo-article p { font-size: 0.94rem; color: #334155; line-height: 1.85; margin-bottom: 1.1rem; }
+    .seo-article ul { margin-left: 1.4rem; margin-bottom: 1.2rem; color: #334155; font-size: 0.94rem; line-height: 1.85; }
+
+    .guide-callout { background: #eff6ff; border-left: 4px solid var(--primary); padding: 14px 18px; border-radius: 0 8px 8px 0; margin-bottom: 18px; font-size: 0.92rem; line-height: 1.75; }
+    .guide-callout strong { color: #1e40af; }
+
+    .accordion-item { border: 1.5px solid var(--border); border-radius: 8px; margin-bottom: 8px; background: #ffffff; overflow: hidden; }
+    .accordion-header { padding: 13px 16px; background: #f8fafc; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 800; font-size: 0.92rem; color: #0f172a; }
+    .accordion-body { padding: 15px 16px; display: none; border-top: 1.5px solid var(--border); font-size: 0.88rem; color: #334155; line-height: 1.75; }
+    .accordion-item.active .accordion-body { display: block; }
+    .accordion-arrow { font-size: 0.8rem; transition: transform 0.2s; }
+    .accordion-item.active .accordion-arrow { transform: rotate(180deg); }
+
+    footer { background: #ffffff; border-top: 2px solid var(--border); padding: 32px 20px; font-size: 0.84rem; color: var(--text-muted); line-height: 1.8; text-align: center; }
+    .footer-links { display: flex; justify-content: center; gap: 14px; margin-bottom: 10px; flex-wrap: wrap; }
     .footer-links a { color: var(--primary); text-decoration: none; font-weight: 700; }
+    .footer-legal-bar { display: flex; justify-content: center; gap: 14px; margin-bottom: 12px; flex-wrap: wrap; }
+    .footer-legal-bar a { color: #334155; text-decoration: none; font-weight: 600; }
+    .footer-disclaimer { max-width: 880px; margin: 0 auto; font-size: 0.78rem; color: #64748b; line-height: 1.6; text-align: center; }
 
     @media (max-width: 768px) {
       .header-inner { flex-direction: column !important; align-items: stretch !important; padding: 8px 12px !important; gap: 6px !important; }
@@ -183,10 +249,13 @@
       nav a { font-size: 0.82rem !important; padding: 5px 11px !important; }
       .dday-grid { grid-template-columns: 1fr; }
       .sub-result-row { grid-template-columns: 1fr; }
-      .module-nav { flex-direction: column; }
       .rule-grid { grid-template-columns: 1fr; }
       .hub-grid { grid-template-columns: 1fr; }
       .hero h1 { font-size: 1.45rem !important; line-height: 1.35 !important; }
+      .hero p { font-size: 0.88rem !important; }
+      .card { padding: 16px !important; }
+      .seo-article { padding: 22px 16px !important; }
+      .seo-article h2 { font-size: 1.25rem !important; }
     }
   </style>
 </head>
@@ -439,6 +508,115 @@
       </div>
     </section>
 
+    <!-- 구글 애드센스 검토 및 사용자 가독성 최적화 심층 정보 아티클 -->
+    <article class="seo-article">
+      <h2>📘 공인 어학시험 유효기간 2년 제도와 정부 5년 사전등록 제도 완벽 분석</h2>
+      <p>
+        취업 준비생과 이직자가 가장 흔하게 겪는 서류 탈락 원인 중 하나는 <strong>공인 어학 성적의 유효기간 만료</strong>입니다. YBM, ACTFL 등 시험 주관사가 부여하는 공식 유효기간은 시험일로부터 만 2년이지만, 정부의 청년 취업 부담 완화 정책에 따라 공공부문에서는 <strong>최대 5년까지 인정 기한이 대폭 연장</strong>되었습니다.
+      </p>
+
+      <div class="guide-callout">
+        <strong>⚠️ 핵심 주의사항:</strong> 주관사 유효기간(2년)이 지나면 데이터 조회 권한이 소멸되어 5년 사전등록이 영구적으로 불가능합니다. 성적표를 취득한 즉시 사이버국가고시센터에 사전 등록해 두는 것이 안전합니다.
+      </div>
+
+      <h3>1. 공공기관 어학성적 5년 사전등록 제도란?</h3>
+      <p>
+        인사혁신처가 운영하는 국가공무원 채용시스템(사이버국가고시센터)에 본인의 공인 어학 성적을 사전 등록하면, 정부 부처 및 지방자치단체, 공공기관, 공기업 채용 전산망에서 <strong>시험 응시 연도로부터 5년이 되는 해의 12월 31일까지</strong> 서류 효력을 공식 보장하는 제도입니다.
+      </p>
+      <ul>
+        <li><strong>적용 기관:</strong> 국가직·지방직 공무원, 공공기관운영법상 공기업·준정부기관·기타공공기관 전원</li>
+        <li><strong>등록 가능 시기:</strong> 시험 응시일로부터 2년 만료일 이전까지 (2년 경과 시 접수 불가)</li>
+        <li><strong>인정 만료 시점:</strong> 응시 연도 + 5년의 12월 31일 (예: 2024년 4월 응시 시 2029년 12월 31일까지 인정)</li>
+      </ul>
+
+      <h3>2. 시험 종류별 등록 방식 비교 (상시 등록 vs 월간 정기 등록)</h3>
+      <p>
+        어학시험 종류에 따라 등록 프로세스에 차이가 있으므로 본인이 취득한 시험의 접수 일정을 반드시 확인해야 합니다.
+      </p>
+
+      <div class="table-scroll-wrap">
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th>구분</th>
+              <th>대상 어학 시험</th>
+              <th>등록 가능 기간</th>
+              <th>검증 및 승인 방식</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>상시 등록</strong></td>
+              <td>토익(TOEIC), 토익스피킹, 텝스(TEPS), 지텔프(G-TELP)</td>
+              <td style="color: var(--primary); font-weight: 700;">연중 365일 24시간 상시</td>
+              <td>주관사 전산망 자동 실시간 매칭 검증</td>
+            </tr>
+            <tr>
+              <td><strong>정기 등록</strong></td>
+              <td>오픽(OPIc), 토플(TOEFL), FLEX, SNULT, HSK, JPT</td>
+              <td style="color: var(--danger); font-weight: 700;">매월 1일 09:00 ~ 10일 24:00</td>
+              <td>수기 검증 및 심사 후 월말 일괄 승인</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>3. 공기업 서류 전형 어학 가산점 배점 전략</h3>
+      <p>
+        한국전력공사, 국민건강보험공단, 코레일, 한국토지주택공사(LH) 등 주요 공기업은 서류 전형에서 토익 성적을 기준으로 서류 배수를 선발합니다.
+      </p>
+      <ul>
+        <li><strong>만점 커트라인:</strong> 통상 일반 사무직 기준 850점~900점 취득 시 어학 가산점 100점 만점으로 환산 처리됩니다.</li>
+        <li><strong>기술직/이공계:</strong> 통상 700점~750점 이상이면 지원 자격 충족 또는 만점 가점을 적용받습니다.</li>
+        <li><strong>스피킹 시험 대체:</strong> 오픽 IH 또는 토익스피킹 AM(160점) 이상 보유 시 토익 850~900점과 동등한 만점 가산으로 인정하는 기관이 확대되고 있습니다.</li>
+      </ul>
+    </article>
+
+    <!-- 공인 어학 FAQ 아코디언 -->
+    <div class="card" style="margin-top: 24px;">
+      <div style="font-size: 1.05rem; font-weight: 800; margin-bottom: 12px; color: #0f172a;">💡 어학 성적 유효기간 & 사전등록 자주 묻는 질문 (FAQ)</div>
+      
+      <div class="accordion-item active">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>Q1. 민간 대기업(삼성, 현대차, SK 등)에도 5년 인정 기한이 적용되나요?</span>
+          <span class="accordion-arrow">▲</span>
+        </div>
+        <div class="accordion-body">
+          아닙니다. 인사혁신처의 5년 인정 사전등록 제도는 정부 부처 및 공공기관에 한정됩니다. 삼성, 현대차, SK, CJ 등 민간 대기업은 주관사 기준 2년 이내의 정기시험 성적만을 인정하는 것이 일반적이므로 민간 공채를 목표로 하신다면 2년 주기 갱신이 필요합니다.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>Q2. 시험일 기준인가요, 성적 발표일 기준인가요?</span>
+          <span class="accordion-arrow">▼</span>
+        </div>
+        <div class="accordion-body">
+          주관사 공식 유효기간 2년과 정부 5년 인정 기한 모두 <strong>'시험 응시일'</strong>을 기준으로 기산합니다. 성적표 발급일이 아니므로 날짜 계산 시 반드시 응시한 시험 날짜를 입력하셔야 합니다.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>Q3. 오픽(OPIc) 성적을 10일 이후에 사전등록하려면 어떻게 하나요?</span>
+          <span class="accordion-arrow">▼</span>
+        </div>
+        <div class="accordion-body">
+          오픽은 매월 1일~10일 사이에만 접수창구가 열립니다. 만약 2년 유효기간 만료일이 당월 15일인데 10일까지 등록하지 못했다면 다음 달 1일에는 이미 만료되어 등록이 불가능해집니다. 따라서 만료 전달 1일~10일에 미리 신청해 두셔야 합니다.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>Q4. 성적 발표일 전에 입사지원서를 먼저 제출해도 되나요?</span>
+          <span class="accordion-arrow">▼</span>
+        </div>
+        <div class="accordion-body">
+          대부분의 채용 시스템은 원서 접수 마감 시점에 유효한 성적 등록번호 및 점수를 요구합니다. 마감일 이후에 발표되는 어학 시험은 해당 차수 공채에 활용할 수 없으므로, 목표 기업의 서류 마감일 최소 2주 전에 시험에 응시해야 합니다.
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <!-- Global Footer -->
@@ -456,8 +634,20 @@
       <span>|</span>
       <a href="jobs.html">실시간 채용공고</a>
     </div>
-    <p>본 어학 만료 계산 결과는 시험 주관사 기본 규정(2년) 및 인사혁신처 사전등록 고시(5년 인정)에 근거한 수치입니다.</p>
-    <p style="margin-top: 6px;">© 2026 ByteCheck Global. All rights reserved.</p>
+    <div class="footer-legal-bar">
+      <a href="terms.html">이용약관</a>
+      <span>|</span>
+      <a href="privacy.html">개인정보처리방침</a>
+      <span>|</span>
+      <a href="privacy.html#disclaimer">법적 면책조항</a>
+      <span>|</span>
+      <a href="contact.html">문의하기 (Contact Us)</a>
+    </div>
+    <div class="footer-disclaimer">
+      본 어학 만료 계산 결과는 시험 주관사 기본 규정(2년) 및 인사혁신처 사전등록 고시(5년 인정)에 근거한 수치이며 법적 구속력을 갖지 않습니다. 실제 원서 접수 전 반드시 해당 시험 주관사 및 채용 기관의 공고를 최종 확인하시기 바랍니다.<br>
+      <strong>개인정보 보호 정책 요약:</strong> ByteCheck는 회원가입을 요구하지 않으며 어떠한 어학 성적 데이터도 서버로 수집·저장하지 않습니다. 모든 텍스트 및 조회 기록은 이용자의 기기(로컬 브라우저)에만 안전하게 임시 보관됩니다.
+      <p style="margin-top: 8px; font-weight:700;">© ByteCheck Global. All rights reserved.</p>
+    </div>
   </footer>
 
   <script>
@@ -466,6 +656,23 @@
       document.querySelectorAll('.mod-content').forEach(c => c.classList.remove('active'));
       btnEl.classList.add('active');
       document.getElementById(tabId).classList.add('active');
+    }
+
+    function toggleAccordion(header) {
+      const item = header.parentElement;
+      const arrow = header.querySelector('.accordion-arrow');
+      const isActive = item.classList.contains('active');
+      
+      document.querySelectorAll('.accordion-item').forEach(el => {
+        el.classList.remove('active');
+        const a = el.querySelector('.accordion-arrow');
+        if (a) a.innerText = '▼';
+      });
+
+      if (!isActive) {
+        item.classList.add('active');
+        if (arrow) arrow.innerText = '▲';
+      }
     }
 
     function calculateDday() {
