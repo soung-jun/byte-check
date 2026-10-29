@@ -16,12 +16,54 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "ByteCheck 실시간 공공기관 채용공고",
-    "url": "https://bytechecktool.com/jobs.html",
-    "description": "잡알리오 API 연동 실시간 공공기관 채용공고 및 D-Day 제공",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "All"
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "ByteCheck 실시간 공공기관 채용공고",
+        "url": "https://bytechecktool.com/jobs.html",
+        "description": "잡알리오 API 연동 실시간 공공기관 채용공고 및 D-Day 제공",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "All",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "공공기관 채용공고는 어떤 주기로 갱신되나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "기획재정부 공공기관 채용정보시스템(잡알리오) 공공데이터와 연동되어 1일 4회 실시간 자동으로 최신 채용 공고를 수집하고 마감된 공고를 자동 정리합니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "공기업 서류 접수 마감 시간은 보통 몇 시인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "대부분의 공기업과 공공기관은 마감 당일 17:00 또는 18:00 정각에 전산 접수를 마감합니다. 마감 직전 서버 트래픽 폭주로 인한 오류를 피하기 위해 최소 마감 3시간 전 제출을 권장합니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "공공기관 자기소개서 바이트 계산 시 주의할 점은 무엇인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "정부 및 공공기관 채용 시스템은 웹 표준 UTF-8 인코딩을 적용하여 한글 1글자를 3Byte로 계산합니다. 700자 제한 문항의 경우 통상 2,100 Byte 규격이 적용되므로 ByteCheck 바이트 계산기로 사전 검증하는 것이 안전합니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "블라인드 채용 서류전형에서 주의해야 할 감점 요인은 무엇인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "출신 학교명(대학교/고등학교), 부모 및 친인척의 직업·사회적 지위, 출신 지역명 기재 시 공정채용 가이드라인에 따라 서류전형에서 즉각 감점 또는 과락(불합격) 처분을 받게 됩니다."
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
 
@@ -155,18 +197,38 @@
 
     .empty-state { text-align: center; padding: 4.5rem 1rem; color: var(--text-muted); font-weight: 700; }
 
+    /* SEO & 정보성 가이드라인 스타일 */
     .seo-article {
       margin-top: 3rem; background: #ffffff; border: 2px solid var(--border);
-      border-radius: 12px; padding: 28px 24px; box-shadow: var(--shadow-sm);
+      border-radius: 12px; padding: 32px 26px; box-shadow: var(--shadow-sm);
     }
-    .seo-article h2 { font-size: 1.35rem; font-weight: 900; color: var(--secondary); margin-bottom: 1rem; border-left: 5px solid var(--primary); padding-left: 10px; }
-    .seo-article h3 { font-size: 1.1rem; font-weight: 800; color: var(--secondary); margin: 1.5rem 0 0.6rem 0; }
-    .seo-article p { font-size: 0.92rem; color: #334155; line-height: 1.8; margin-bottom: 1rem; }
-    .seo-article ul { margin-left: 1.4rem; margin-bottom: 1rem; color: #334155; font-size: 0.92rem; line-height: 1.8; }
+    .seo-article h2 { font-size: 1.4rem; font-weight: 900; color: var(--secondary); margin-bottom: 1.2rem; border-left: 5px solid var(--primary); padding-left: 12px; }
+    .seo-article h3 { font-size: 1.15rem; font-weight: 800; color: var(--secondary); margin: 1.8rem 0 0.8rem 0; }
+    .seo-article p { font-size: 0.94rem; color: #334155; line-height: 1.85; margin-bottom: 1.1rem; }
+    .seo-article ul { margin-left: 1.4rem; margin-bottom: 1.2rem; color: #334155; font-size: 0.94rem; line-height: 1.85; }
 
-    footer { background: #ffffff; border-top: 2px solid var(--border); padding: 24px 20px; font-size: 0.82rem; color: var(--text-muted); line-height: 1.8; text-align: center; margin-top: 3rem; }
-    .footer-links { display: flex; justify-content: center; gap: 14px; margin-bottom: 8px; flex-wrap: wrap; }
+    .data-table-wrap { overflow-x: auto; margin: 1.25rem 0; border: 1.5px solid var(--border); border-radius: 8px; -webkit-overflow-scrolling: touch; }
+    .data-table { width: 100%; border-collapse: collapse; text-align: center; font-size: 0.88rem; min-width: 680px; }
+    .data-table th, .data-table td { padding: 0.85rem 1rem; border: 1px solid var(--border); white-space: nowrap; }
+    .data-table th { background: #f1f5f9; color: var(--secondary); font-weight: 800; }
+    .data-table tr:hover { background: #f8fafc; }
+
+    .guide-callout { background: #eff6ff; border-left: 4px solid var(--primary); padding: 14px 18px; border-radius: 0 8px 8px 0; margin-bottom: 18px; font-size: 0.92rem; line-height: 1.75; }
+    .guide-callout strong { color: #1e40af; }
+
+    .accordion-item { border: 1.5px solid var(--border); border-radius: 8px; margin-bottom: 8px; background: #ffffff; overflow: hidden; }
+    .accordion-header { padding: 13px 16px; background: #f8fafc; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 800; font-size: 0.92rem; color: #0f172a; }
+    .accordion-body { padding: 15px 16px; display: none; border-top: 1.5px solid var(--border); font-size: 0.88rem; color: #334155; line-height: 1.75; }
+    .accordion-item.active .accordion-body { display: block; }
+    .accordion-arrow { font-size: 0.8rem; transition: transform 0.2s; }
+    .accordion-item.active .accordion-arrow { transform: rotate(180deg); }
+
+    footer { background: #ffffff; border-top: 2px solid var(--border); padding: 32px 20px; font-size: 0.84rem; color: var(--text-muted); line-height: 1.8; text-align: center; margin-top: 3.5rem; }
+    .footer-links { display: flex; justify-content: center; gap: 14px; margin-bottom: 10px; flex-wrap: wrap; }
     .footer-links a { color: var(--primary); text-decoration: none; font-weight: 700; }
+    .footer-legal-bar { display: flex; justify-content: center; gap: 14px; margin-bottom: 12px; flex-wrap: wrap; }
+    .footer-legal-bar a { color: #334155; text-decoration: none; font-weight: 600; }
+    .footer-disclaimer { max-width: 880px; margin: 0 auto; font-size: 0.78rem; color: #64748b; line-height: 1.6; text-align: center; }
 
     @media (max-width: 768px) {
       .header-inner { flex-direction: column !important; align-items: stretch !important; padding: 8px 12px !important; gap: 6px !important; }
@@ -178,6 +240,8 @@
       .job-actions .btn { flex: 1; }
       .real-stat-bar { flex-direction: column; align-items: flex-start; }
       .hero-title h1 { font-size: 1.45rem !important; line-height: 1.35 !important; }
+      .seo-article { padding: 22px 16px !important; }
+      .seo-article h2 { font-size: 1.25rem !important; }
     }
   </style>
 </head>
@@ -258,18 +322,101 @@
         대한민국 공공기관 채용은 기획재정부 산하 잡알리오(ALIO) 시스템을 통해 공정하고 투명하게 공시됩니다. 공기업 및 준정부기관, 기타 공공기관 취업을 준비할 때 공고를 정확히 분석하고 마감 시한을 놓치지 않는 전략적 접근이 필수적입니다.
       </p>
 
-      <h3>1. 공공기관 채용 공고 확인 시 3대 핵심 점검 사항</h3>
+      <div class="guide-callout">
+        <strong>⚠️ 접수 마감 핵심 주의사항:</strong> 대다수 공공기관 채용 웹사이트는 마감일 17:00 또는 18:00 정각에 전산 접수를 즉각 차단합니다. 마감 당일 접속 폭주로 인한 전산 세션 만료를 피하기 위해 마감 최소 24시간 전에 최종 제출을 완료하는 것을 강력히 권장합니다.
+      </div>
+
+      <h3>1. 공공기관 채용 전형 유형별 특징 및 대비 전략</h3>
+      <div class="data-table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>구분</th>
+              <th>선발 배수</th>
+              <th>평가 방식</th>
+              <th>합격 핵심 전략</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>적부 전형</strong></td>
+              <td>지원 자격 충족자 전원</td>
+              <td>기본 자격(어학/자격증) 충족 여부만 확인</td>
+              <td>NCS 직업기초능력 및 전공 필기시험 조기 집중</td>
+            </tr>
+            <tr>
+              <td><strong>정량 배수 전형</strong></td>
+              <td>10배수 ~ 40배수 선발</td>
+              <td>어학 성적 + 자격증 가산점 점수 합산</td>
+              <td>목표 기관 배점 만점 캡(한능검 1급, 컴활 1급, 기사) 확보 필수</td>
+            </tr>
+            <tr>
+              <td><strong>정성 심사 전형</strong></td>
+              <td>5배수 ~ 7배수 (엄격 선발)</td>
+              <td>정량 점수 + 자기소개서 블라인드 정밀 평가</td>
+              <td>직무수행계획서 및 STAR 기법 기반 직무 경험 서술 극대화</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>2. 공공기관 채용 공고 확인 시 3대 핵심 점검 사항</h3>
       <ul>
         <li><strong>서류전형 선발 배수 확인:</strong> 적격자 전원 통과(적부)인지, 정량 배점(15배수~30배수) 선발인지 확인해야 합니다. 배수 제한이 엄격한 기관은 가산점 만점 확보가 선결 과제입니다.</li>
-        <li><strong>공식 접수 마감 시간 엄수:</strong> 대부분의 공공기관 채용 웹사이트는 마감일 17:00 또는 18:00 정각에 전산망 접수를 즉각 차단합니다. 마감 당일 접속 폭주로 인한 전산 오류를 피하기 위해 마감 24시간 전 제출을 권장합니다.</li>
+        <li><strong>공식 접수 마감 시간 엄수:</strong> 자정(24:00) 마감이 아닌 주간 업무시간 마감이 대부분이므로 모집요강의 마감 시각을 분 단위까지 정확히 확인해야 합니다.</li>
         <li><strong>블라인드 채용 규정 준수:</strong> 자기소개서 및 입사지원서 작성 시 학교명, 출신 지역, 가족의 직업 등 인적 사항을 유추할 수 있는 키워드를 기재할 경우 자동 감점 또는 불합격 처리됩니다.</li>
       </ul>
 
-      <h3>2. 공공기관 전산망 UTF-8 3Byte 자소서 제출 주의점</h3>
+      <h3>3. 공공기관 전산망 UTF-8 3Byte 자소서 제출 주의점</h3>
       <p>
-        민간 대기업의 일부 전산망이 한글을 2바이트로 계산하는 반면, 정부 및 공공기관의 채용 포털은 웹 표준 인코딩인 UTF-8 체계를 채택하여 한글 1글자를 3Byte로 연산합니다. 공고문에 "700자 / 2,100 Byte 이내"로 명시된 경우 한글 700자를 초과하면 시스템에 저장되지 않으므로 ByteCheck의 자소서 바이트 계산기를 통해 정확한 용량을 사전 검증해야 합니다.
+        민간 대기업의 일부 전산망이 한글을 2바이트(EUC-KR)로 계산하는 반면, 정부 및 공공기관의 채용 포털은 웹 표준 인코딩인 UTF-8 체계를 채택하여 한글 1글자를 3Byte로 연산합니다. 공고문에 "700자 / 2,100 Byte 이내"로 명시된 경우 한글 700자를 초과하면 시스템에 저장되지 않으므로 ByteCheck의 자소서 바이트 계산기를 통해 정확한 용량을 사전 검증해야 합니다.
       </p>
     </article>
+
+    <!-- 공공기관 채용 FAQ 아코디언 -->
+    <div style="margin-top: 1.5rem;">
+      <h2 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 1rem; color: var(--secondary);">공공기관 채용 자주 묻는 질문 (FAQ)</h2>
+      
+      <div class="accordion-item active">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>Q1. 잡알리오 공고와 개별 공기업 채용 홈페이지의 차이는 무엇인가요?</span>
+          <span class="accordion-arrow">▲</span>
+        </div>
+        <div class="accordion-body">
+          기획재정부 잡알리오(ALIO)는 대한민국 전체 공공기관의 공식 채용 공고가 의무 등록되는 중앙 공시 포털입니다. ByteCheck는 잡알리오 공공데이터를 기반으로 최신 활성 공고를 실시간 수집하며, 실제 원서 접수는 공고 카드 우측의 [공식 접수처 ↗] 버튼을 통해 각 기관의 공식 채용 웹사이트로 직접 연결됩니다.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>Q2. 서류 적부(적격/부적격) 기관은 자기소개서를 대충 써도 되나요?</span>
+          <span class="accordion-arrow">▼</span>
+        </div>
+        <div class="accordion-body">
+          절대 그렇지 않습니다. 서류 적부 판정이라 하더라도 글자수 미달, 표절률 과다(타 지원자 또는 기업 소개 복제), 블라인드 위반 단어 기재 시 즉각 부적격(탈락) 처리됩니다. 또한 작성된 자기소개서는 필기시험 이후 최종 면접관에게 그대로 전달되어 면접 질문의 핵심 기초 자료로 활용됩니다.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>Q3. 청년인턴(체험형/채용형) 수료 혜택은 어떤 것들이 있나요?</span>
+          <span class="accordion-arrow">▼</span>
+        </div>
+        <div class="accordion-body">
+          체험형 인턴을 우수한 성적으로 수료한 경우 해당 기관의 정규직 신입 공채 서류전형 면제 또는 필기시험 2~5%의 법정 가산점을 부여받을 수 있습니다. 채용형 인턴의 경우 통상 3~6개월 근무 후 전환 평가를 거쳐 80~90% 이상이 정규직으로 전환 임용됩니다.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>Q4. 공기업 공채 시 어학 성적이 마감일 이후에 발표되면 인정받을 수 있나요?</span>
+          <span class="accordion-arrow">▼</span>
+        </div>
+        <div class="accordion-body">
+          불가능합니다. 공공기관 채용은 엄격한 공정성 기준에 따라 원서 접수 마감 시각까지 공식 성적표가 발급되어 발급 번호를 조회할 수 있는 유효 성적만을 인정합니다. 마감일 이후 발표되는 성적은 다음 차수 공채에 활용하셔야 합니다.
+        </div>
+      </div>
+    </div>
   </main>
 
   <!-- Global Footer -->
@@ -287,8 +434,20 @@
       <span>|</span>
       <a href="jobs.html">실시간 채용공고</a>
     </div>
-    <p>본 채용공고 정보는 기획재정부 공공기관 채용정보시스템(잡알리오) 공공데이터에 근거한 참고용 자료입니다.</p>
-    <p style="margin-top: 6px;">© 2026 ByteCheck Global. All rights reserved.</p>
+    <div class="footer-legal-bar">
+      <a href="terms.html">이용약관</a>
+      <span>|</span>
+      <a href="privacy.html">개인정보처리방침</a>
+      <span>|</span>
+      <a href="privacy.html#disclaimer">법적 면책조항</a>
+      <span>|</span>
+      <a href="contact.html">문의하기 (Contact Us)</a>
+    </div>
+    <div class="footer-disclaimer">
+      본 채용공고 정보는 기획재정부 공공기관 채용정보시스템(잡알리오) 공공데이터에 근거한 참고용 자료이며 법적 효력을 갖지 않습니다. 실제 원서 접수 전 반드시 대상 기관의 공식 채용 공고를 최종 확인하시기 바랍니다.<br>
+      <strong>개인정보 보호 정책 요약:</strong> ByteCheck는 회원가입을 요구하지 않으며 어떠한 이용자 검색 기록이나 개인정보도 서버에 수집·저장하지 않습니다.
+      <p style="margin-top: 8px; font-weight:700;">© ByteCheck Global. All rights reserved.</p>
+    </div>
   </footer>
 
   <script>
@@ -296,6 +455,23 @@
     let allJobs = [];
     let filteredJobs = [];
     let currentPage = 1;
+
+    function toggleAccordion(header) {
+      const item = header.parentElement;
+      const arrow = header.querySelector('.accordion-arrow');
+      const isActive = item.classList.contains('active');
+      
+      document.querySelectorAll('.accordion-item').forEach(el => {
+        el.classList.remove('active');
+        const a = el.querySelector('.accordion-arrow');
+        if (a) a.innerText = '▼';
+      });
+
+      if (!isActive) {
+        item.classList.add('active');
+        if (arrow) arrow.innerText = '▲';
+      }
+    }
 
     function calculateDDay(endDateStr) {
       if (!endDateStr || endDateStr === "상시채용") return { text: "상시채용", isImminent: false };
