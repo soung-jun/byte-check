@@ -153,15 +153,6 @@
     "url": "https://www.ex.co.kr"
   },
   {
-    "company": "한국도로공사",
-    "title": "한국도로공사 대전충남본부 관내 지사(천안, 대전, 영동, 당진, 공주, 부여) 제설 기간제근로자(정비원) 채용",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-03",
-    "applyUrl": "https://www.ex.co.kr",
-    "url": "https://www.ex.co.kr"
-  },
-  {
     "company": "경상국립대학교병원",
     "title": "[창원경상국립대학교병원] 장애인근로자 채용공고",
     "location": "전국",
@@ -241,6 +232,15 @@
     "endDate": "2026-11-04",
     "applyUrl": "https://gnuh.recruiter.co.kr/",
     "url": "https://gnuh.recruiter.co.kr/"
+  },
+  {
+    "company": "경북대학교병원",
+    "title": "칠곡경북대학교병원 2026년 10월 5차 임시직원 채용공고(소방, 방사선사, 임상병리사, 간호조무사)",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-04",
+    "applyUrl": "https://www.knuch.kr:442/content/04info/11_01.asp?proc_type=view&b_num=5097&rtn_url=%2Fcontent%2F04info%2F11%5F01%2Easp",
+    "url": "https://www.knuch.kr:442/content/04info/11_01.asp?proc_type=view&b_num=5097&rtn_url=%2Fcontent%2F04info%2F11%5F01%2Easp"
   },
   {
     "company": "한국도로공사",
@@ -1071,6 +1071,15 @@
     "url": "https://jdc.recruit-zone.co.kr/"
   },
   {
+    "company": "재단법인 한국에너지재단",
+    "title": "2026년 (재)한국에너지재단 제2차 기간제 채용 공고(채용 제2026-06호)",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-13",
+    "applyUrl": "https://www.koref.or.kr",
+    "url": "https://www.koref.or.kr"
+  },
+  {
     "company": "정보통신정책연구원",
     "title": "정보통신정책연구원 무기계약직 직원(위촉행정원) 채용 공고",
     "location": "전국",
@@ -1186,15 +1195,6 @@
     "endDate": "2026-11-16",
     "applyUrl": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019956",
     "url": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019956"
-  },
-  {
-    "company": "중소기업은행",
-    "title": "2027년 동계 IBK기업은행 체험형 청년인턴 채용공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-16",
-    "applyUrl": "https://ibk.incruit.com",
-    "url": "https://ibk.incruit.com"
   },
   {
     "company": "대외경제정책연구원",
