@@ -41,7 +41,7 @@
             "name": "대기업 2Byte와 공기업 3Byte의 차이는 무엇인가요?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "삼성, SK 등 대기업 전산망은 한글을 2바이트로 인식하는 EUC-KR 체계를 주로 사용하며, 한국전력공사 등 공공기관 채용 전산망은 한글을 3바이트로 인식하는 UTF-8 체계를 채택하고 있습니다."
+              "text": "삼성, SK 등 전통적인 대기업 전산망은 한글을 완성형 2바이트로 인식하는 EUC-KR 체계를 주로 사용하며, 한국전력공사 등 공공기관 채용 전산망은 유니코드 표준인 UTF-8 체계를 채택하여 한글 1글자를 3바이트로 계산합니다."
             }
           },
           {
@@ -49,7 +49,23 @@
             "name": "엔터(줄바꿈)는 몇 바이트로 계산되나요?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "대부분의 대기업(삼성 등) 채용 시스템에서 줄바꿈(Enter)은 2바이트(CR+LF)로 처리되며, 일부 채용 시스템에서는 순수 1자로 취급됩니다. ByteCheck에서는 두 방식을 모두 선택하여 검증할 수 있습니다."
+              "text": "대부분의 대기업 채용 시스템에서 줄바꿈(Enter)은 윈도우 개행 문자 기준 2바이트(CR+LF)로 처리되며, 일부 채용 시스템에서는 웹 표준 개행(LF)인 1바이트 또는 순수 1자로 취급됩니다. ByteCheck에서는 체크박스를 통해 두 방식을 모두 선택하여 실시간으로 검증할 수 있습니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "블라인드 채용 감점 단어는 어떤 기준인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "고용노동부 및 공공기관 운영에 관한 법률 기준에 따라 출신 학교명(대학교/고등학교), 부모 및 친인척의 직업·사회적 지위, 출신 지역명 기재 시 서류 감점 또는 즉각 불합격 처리됩니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "작성 중인 자기소개서가 서버에 저장되나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ByteCheck는 회원의 개인정보 보호를 최우선으로 하며, 서버나 외부 데이터베이스로 자기소개서 본문을 전송하지 않습니다. 모든 텍스트는 브라우저 내부 LocalStorage에만 암호화되어 안전하게 보관됩니다."
             }
           }
         ]
@@ -267,12 +283,12 @@
 
     .seo-article {
       margin-top: 25px; margin-bottom: 25px; background: #ffffff; border: 2px solid var(--border);
-      border-radius: 12px; padding: 28px 24px; box-shadow: var(--shadow-sm);
+      border-radius: 12px; padding: 32px 28px; box-shadow: var(--shadow-sm);
     }
-    .seo-article h2 { font-size: 1.35rem; font-weight: 900; color: #0f172a; margin-bottom: 1rem; border-left: 5px solid var(--primary); padding-left: 10px; }
-    .seo-article h3 { font-size: 1.1rem; font-weight: 800; color: #0f172a; margin: 1.5rem 0 0.6rem 0; }
-    .seo-article p { font-size: 0.92rem; color: #334155; line-height: 1.8; margin-bottom: 1rem; }
-    .seo-article ul { margin-left: 1.4rem; margin-bottom: 1rem; color: #334155; font-size: 0.92rem; line-height: 1.8; }
+    .seo-article h2 { font-size: 1.45rem; font-weight: 900; color: #0f172a; margin-bottom: 1.2rem; border-left: 5px solid var(--primary); padding-left: 12px; }
+    .seo-article h3 { font-size: 1.15rem; font-weight: 800; color: #0f172a; margin: 1.8rem 0 0.8rem 0; }
+    .seo-article p { font-size: 0.95rem; color: #334155; line-height: 1.85; margin-bottom: 1.1rem; }
+    .seo-article ul { margin-left: 1.4rem; margin-bottom: 1.2rem; color: #334155; font-size: 0.95rem; line-height: 1.85; }
 
     .floating-box { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 8px; z-index: 100; }
     .btn-float { width: 44px; height: 44px; border-radius: 50%; background: #0f172a; color: #ffffff; border: 2px solid #ffffff; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
@@ -764,7 +780,7 @@
           </div>
         </section>
 
-        <!-- 구글 애드센스 심사용 상세 정적 가이드라인 아티클 -->
+        <!-- 구글 애드센스 가치 창출형 심층 기술 및 합격 가이드라인 아티클 -->
         <article class="seo-article">
           <h2>2026 자기소개서 바이트 계산 규격 및 서류 합격 작성 원칙</h2>
           <p>
@@ -773,8 +789,8 @@
 
           <h3>1. EUC-KR(대기업) vs UTF-8(공공기관) 바이트 산정 기준</h3>
           <p>
-            - <strong>대기업 2바이트(EUC-KR) 전산망:</strong> 삼성그룹, SK그룹 등 전통적인 독자 채용 시스템을 운영하는 주요 대기업은 한글 1글자를 2Byte로 계산합니다. 영문 알파벳, 숫자, 일반 공백(띄어쓰기)은 1Byte로 인식되며, 줄바꿈(Enter)의 경우 윈도우 표준 개행 문자(CR+LF)를 준용하여 2Byte로 처리되는 경우가 대부분입니다.<br>
-            - <strong>공기업 3바이트(UTF-8) 전산망:</strong> 한국전력공사, 국민건강보험공단 등 웹 표준 전산망을 채택한 공공기관은 한글 1글자를 3Byte로 계산합니다. 예를 들어 700자 제한 문항의 경우 최대 용량이 2,100 Byte로 산출됩니다. ByteCheck의 계산기를 활용하면 이 두 가지 규격을 실시간으로 상호 대조하며 검증할 수 있습니다.
+            - <strong>대기업 2바이트(EUC-KR / CP949) 전산망:</strong> 삼성그룹, SK그룹 등 전통적인 독자 채용 시스템을 운영하는 주요 대기업은 한글 1글자를 2Byte로 계산합니다. 영문 알파벳, 숫자, 일반 공백(띄어쓰기)은 1Byte로 인식되며, 줄바꿈(Enter)의 경우 윈도우 표준 개행 문자(CR+LF)를 준용하여 2Byte로 처리되는 경우가 대부분입니다.<br>
+            - <strong>공기업 3바이트(UTF-8) 전산망:</strong> 한국전력공사, 국민건강보험공단, 코레일 등 웹 표준 전산망을 채택한 공공기관은 한글 1글자를 3Byte로 계산합니다. 예를 들어 700자 제한 문항의 경우 최대 용량이 2,100 Byte로 산출됩니다. ByteCheck의 계산기를 활용하면 이 두 가지 규격을 실시간으로 상호 대조하며 검증할 수 있습니다.
           </p>
 
           <h3>2. 고용노동부 공정채용 가이드라인 및 블라인드 감점 방지</h3>
@@ -784,17 +800,28 @@
 
           <h3>3. 엔터(줄바꿈)와 특수기호의 바이트 산정 차이 및 안전 마진</h3>
           <p>
-            자기소개서 작성 시 문단을 나누는 줄바꿈(개행)은 사용 환경에 따라 다르게 계산됩니다. 표준 웹 브라우저는 줄바꿈을 <code>\n</code>(1Byte)으로 전송하지만, 윈도우 기반 서버 환경이나 구형 채용 시스템에서는 <code>\r\n</code>(2Byte)으로 계산합니다. 또한 작은따옴표('), 큰따옴표("), 말줄임표(…) 등 특수기호는 1Byte에서 최대 3Byte까지 가변적으로 처리되므로, 제출 직전 제한 바이트 대비 최소 15~20Byte의 안전 여유 마진을 남겨두는 것이 원서 접수 실패를 막는 가장 안전한 방법입니다.
+            자기소개서 작성 시 문단을 나누는 줄바꿈(개행)은 사용 환경에 따라 다르게 계산됩니다. 표준 웹 브라우저는 줄바꿈을 <code>\n</code>(LF, 1Byte)으로 전송하지만, 윈도우 기반 서버 환경이나 구형 채용 시스템에서는 <code>\r\n</code>(CR+LF, 2Byte)으로 계산합니다. 또한 작은따옴표('), 큰따옴표("), 말줄임표(…) 등 특수기호는 1Byte에서 최대 3Byte까지 가변적으로 처리되므로, 제출 직전 제한 바이트 대비 최소 15~20Byte의 안전 여유 마진을 남겨두는 것이 원서 접수 실패를 막는 가장 안전한 방법입니다.
           </p>
 
           <h3>4. 2026 공기업 NCS 직무능력기반 자소서 핵심 공식 (STAR 기법)</h3>
           <p>
-            공공기관 NCS 자기소개서는 단순한 감정적 서술이 아닌 구조화된 행동 중심 기술이 필수적입니다. Situation(상황)에서 자신이 직면했던 과업을 명확히 정의하고, Task(목표)에서 해결해야 할 난제를 제시한 뒤, Action(구체적 행동)에서 팀원과 어떻게 협력하고 소통했는지 구체적인 수치로 입증해야 합니다. 마지막으로 Result(결과 및 배운 점)를 직무 수행과 연결함으로써 서류 평가위원에게 높은 직무 적합도 점수를 얻을 수 있습니다.
+            공공기관 NCS 자기소개서는 단순한 감정적 서술이 아닌 구조화된 행동 중심 기술이 필수적입니다.
+          </p>
+          <ul>
+            <li><strong>Situation (상황):</strong> 자신이 속했던 조직의 환경과 직면했던 과업을 명확히 정의합니다.</li>
+            <li><strong>Task (문제/목표):</strong> 상황 속에서 본인이 직접 해결해야 했던 핵심 난제나 구체적 목표 수치를 제시합니다.</li>
+            <li><strong>Action (행동):</strong> 문제 해결을 위해 본인이 취한 독창적이고 주도적인 행동, 팀원과의 소통 과정을 기술합니다.</li>
+            <li><strong>Result (성과 및 배운 점):</strong> 행동의 결과로 나타난 정량적 성과와 직무 현장에 어떻게 기여할 것인지 귀결합니다.</li>
+          </ul>
+
+          <h3>5. 마감 직전 서버 트래픽 병목 방지 수칙</h3>
+          <p>
+            원서 접수 마감 당일 오후에는 수만 명의 동시 접속자로 인해 포털 응답 지연 및 세션 만료 현상이 발생합니다. 완성된 서류는 마감 최소 3~4시간 전에 최종 제출을 완료해야 하며, 제출 직전 복사본을 안전하게 로컬 문서에 백업해 두는 것이 필수적입니다.
           </p>
         </article>
 
         <div class="card">
-          <div style="font-size: 1.05rem; font-weight: 800; margin-bottom: 12px; color: #0f172a;">💡 공인 사실(Fact) 기반 취업 가이드라인</div>
+          <div style="font-size: 1.05rem; font-weight: 800; margin-bottom: 12px; color: #0f172a;">💡 공인 사실(Fact) 기반 취업 가이드라인 & FAQ</div>
           <div class="accordion-item active">
             <div class="accordion-header" onclick="toggleAccordion(this)">
               <span>1. 고용노동부 공인 블라인드 채용 감점 및 부적격 판정 기준</span>
@@ -816,6 +843,24 @@
               - <strong>삼성그룹 (EUC-KR 2Byte):</strong> 한글 1자=2B, 영문/공백=1B, 줄바꿈(Enter)=2B로 인식합니다. 1,000자 제한 문항은 통상 2,000 Byte 제한과 동일합니다.<br>
               - <strong>한국전력공사 등 공공기관 (UTF-8 3Byte):</strong> 현대 웹 표준 인코딩을 채택하여 한글 1자=3B로 계산됩니다. 700자 문항은 2,100 Byte로 연산됩니다.<br>
               - <strong>현대자동차/SK 등:</strong> 바이트가 아닌 '순수 글자수(공백 포함)'를 기준으로 마감하므로 자소서 에디터의 '공백 포함' 수치를 최우선으로 맞춰야 합니다.
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <span>3. 공백 포함 vs 공백 제외 글자수 기준 구별법</span>
+              <span class="accordion-arrow">▼</span>
+            </div>
+            <div class="accordion-body">
+              채용 공고에서 별도의 '공백 제외' 표기가 없는 경우, 90% 이상의 기업 시스템은 띄어쓰기와 엔터를 모두 포함한 <strong>'공백 포함 글자수'</strong>를 기준으로 합니다. 다만 글자수 제한 대비 최소 80% 이상, 권장 90~95% 수준을 채워야 성실도 평가에서 감점을 피할 수 있습니다.
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <span>4. 브라우저 종료 시 작성 데이터 복구 안내</span>
+              <span class="accordion-arrow">▼</span>
+            </div>
+            <div class="accordion-body">
+              ByteCheck는 이용자의 텍스트를 실시간으로 브라우저 로컬 스토리지에 자동 암호화 저장합니다. 정전이나 비정상적인 브라우저 종료 후 재접속하더라도 작성 중이던 문항별 텍스트가 100% 온전히 복구됩니다.
             </div>
           </div>
         </div>
@@ -1320,7 +1365,7 @@
       }, 1000);
     }
 
-    // 💡 Abacus 404/미등록 응답 시에도 멈추지 않고 100% 정상 수치를 렌더링하도록 완전 픽스
+    // Abacus 404/미등록 응답 시에도 멈추지 않고 100% 정상 수치를 렌더링하도록 완전 픽스
     function trackHonestVisitor() {
       const HISTORICAL_BASE = 410;
       const cachedTotal = localStorage.getItem('bc_cache_total_visitors');
@@ -1416,7 +1461,7 @@
       });
     }
 
-    // 💡 [8종 전면 개편] 각 이력서별 실제 취업포털 규격 100% 개별 독립 생성 엔진
+    // 8종 전면 개편: 각 이력서별 실제 취업포털 규격 100% 개별 독립 생성 엔진
     function downloadTemplate(type) {
       let fileName = '표준_입사지원서_서식';
       let tableContent = '';
@@ -1426,7 +1471,7 @@
       const tdStyle = `border:1px solid #334155; padding:8px 8px; color:#1e293b;`;
 
       if (type === 'basic_new') {
-        // 1. 신입 표준 입사지원서 (기본 인적사항, 병역/보훈, 학력, 자격, 어학, 자소서 문항 4종 정석)
+        // 1. 신입 표준 입사지원서
         fileName = '신입_표준_입사지원서_서식';
         tableContent = `
           <h2 style="text-align:center; margin-bottom:20px; font-size:19pt; letter-spacing:3px;">입 사 지 원 서 (신입)</h2>
@@ -1536,7 +1581,7 @@
           </div>
         `;
       } else if (type === 'career_detail') {
-        // 2. 경력직 상세 경력기술서 (회사별 매출/규모, 직급, 세부 프로젝트별 성과, 수치 중심)
+        // 2. 경력직 상세 경력기술서
         fileName = '경력직_상세_경력기술서';
         tableContent = `
           <h2 style="text-align:center; margin-bottom:20px; font-size:19pt; letter-spacing:2px;">상 세 경 력 기 술 서 (경력직)</h2>
@@ -1621,7 +1666,7 @@
           </table>
         `;
       } else if (type === 'public_blind') {
-        // 3. 공기업 NCS 블라인드 표준형 (법정 서식, 학교교육/직업교육시간, NCS 직무경험기술서)
+        // 3. 공기업 NCS 블라인드 표준형
         fileName = '공기업_NCS_블라인드_입사지원서';
         tableContent = `
           <h2 style="text-align:center; margin-bottom:12px; font-size:18pt; letter-spacing:2px;">블라인드 표준 입사지원서 (공공기관용)</h2>
@@ -1694,7 +1739,7 @@
           </div>
         `;
       } else if (type === 'modern_simple') {
-        // 4. 모던 심플 비즈니스형 (스타트업, IT, 마케팅 자유양식, 컬러바, 불렛포인트)
+        // 4. 모던 심플 비즈니스형
         fileName = '모던_심플_비즈니스_이력서';
         tableContent = `
           <div style="border-top:6px solid #7c3aed; padding-top:14px; margin-bottom:18px;">
@@ -1733,7 +1778,7 @@
           </div>
         `;
       } else if (type === 'two_column') {
-        // 5. 좌우 2단 분할 포트폴리오형 (좌측 스킬/인적/어학 요약, 우측 타임라인 경력)
+        // 5. 좌우 2단 분할 포트폴리오형
         fileName = '좌우2단_분할_포트폴리오_이력서';
         tableContent = `
           <h2 style="text-align:center; margin-bottom:16px; font-size:18pt;">입 사 지 원 서 (2단 포트폴리오형)</h2>
@@ -1797,7 +1842,7 @@
           </table>
         `;
       } else if (type === 'classic_table') {
-        // 6. 사무·행정 표준 표 서식 (호적 주소, 본적, 가족사항, 신체조건, 상세 발령 이력 정통 표)
+        // 6. 사무·행정 표준 표 서식
         fileName = '사무행정_표준_입사지원서';
         tableContent = `
           <h2 style="text-align:center; margin-bottom:18px; font-size:19pt; letter-spacing:4px;">이 력 서</h2>
@@ -1876,7 +1921,7 @@
           <p style="text-align:right; margin-top:20px; font-size:10pt;">위의 기재사항은 사실과 틀림없음을 서약합니다.<br><br><strong>지원자 : 홍 길 동 (인)</strong></p>
         `;
       } else if (type === 'english_resume') {
-        // 7. 영문 이력서 (100% 글로벌 표준 English Resume / CV 서식)
+        // 7. 영문 이력서
         fileName = 'English_Standard_Resume_CV';
         tableContent = `
           <div style="text-align:center; border-bottom:2px solid #0f172a; padding-bottom:12px; margin-bottom:18px;">
@@ -1934,7 +1979,7 @@
           </p>
         `;
       } else if (type === 'job_plan') {
-        // 8. 공기업 직무수행계획서 (직무 이해 및 목표, 추진 전략, 연차별 실행 과제 공문서 양식)
+        // 8. 공기업 직무수행계획서
         fileName = '공기업_직무수행계획서_표준형';
         tableContent = `
           <h1 style="text-align:center; margin-bottom:22px; font-size:20pt; letter-spacing:3px;">직 무 수 행 계 획 서</h1>
