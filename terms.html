@@ -4,40 +4,148 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>서비스 이용약관 | ByteCheck</title>
-  <meta name="description" content="ByteCheck 취업 유틸리티 플랫폼의 서비스 이용 조건 및 운영 정책 안내입니다.">
+  <meta name="description" content="ByteCheck 취업 유틸리티 플랫폼의 서비스 이용 조건, 권리 및 의무, 운영 정책 안내입니다.">
+  <link rel="canonical" href="https://bytechecktool.com/terms.html">
   <link rel="stylesheet" href="style.css">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bytechecktool.com/terms.html">
+  <meta property="og:title" content="서비스 이용약관 | ByteCheck">
+  <meta property="og:description" content="ByteCheck 취업 지원 플랫폼 서비스 이용약관 및 운영 정책">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://bytechecktool.com/terms.html",
+        "url": "https://bytechecktool.com/terms.html",
+        "name": "ByteCheck 서비스 이용약관 (Terms of Service)",
+        "description": "ByteCheck 웹 도구 이용 규정, 저작권 정책, 면책 고지 및 서비스 조건",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://bytechecktool.com/#website",
+          "url": "https://bytechecktool.com",
+          "name": "ByteCheck"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "ByteCheck에서 무료 제공하는 이력서 서식을 상업적으로 재배포할 수 있나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "불가능합니다. ByteCheck가 자체 개발한 8종의 표준 이력서 및 직무수행계획서 서식은 구직자 개인의 비영리적 취업 준비 목적으로만 자유롭게 수정 및 제출이 가능하며, 상업적 재판매나 타 사이트 무단 배포는 지식재산권 규정에 따라 엄격히 금지됩니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "바이트 계산기 결과와 실제 채용 홈페이지의 글자수가 다를 수 있나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ByteCheck는 웹 표준 UTF-8(3Byte) 및 전통적인 EUC-KR(2Byte) 전산망 공식 알고리즘을 준용합니다. 다만 개별 채용 대행사(사람인, 잡코리아 등) 솔루션의 줄바꿈 개행문자 처리 차이로 미세한 오차가 발생할 수 있으므로, 제한 글자수 대비 15~20Byte 내외의 안전 여유를 두고 작성하시는 것을 권장합니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "서비스 이용을 위해 회원가입이나 유료 결제가 필요한가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "아닙니다. ByteCheck의 모든 기능(바이트 계산기, 연봉 실수령액 계산기, 어학 D-Day, 공기업 가산점 시뮬레이터, 서식 갤러리)은 별도의 회원가입이나 비용 결제 없이 100% 무료로 이용하실 수 있습니다."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <style>
     :root {
       --primary: #1d4ed8;
+      --primary-hover: #1e40af;
       --bg: #f8fafc;
       --surface: #ffffff;
       --text: #0f172a;
       --text-muted: #475569;
       --border: #e2e8f0;
+      --border-dark: #cbd5e1;
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
-    body { background-color: var(--bg); color: var(--text); line-height: 1.7; }
-    header { background: var(--surface); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 1000; }
-    .header-inner { max-width: 1280px; margin: 0 auto; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; }
-    .brand { display: inline-flex; align-items: center; gap: 8px; font-size: 1.35rem; font-weight: 900; color: var(--primary); text-decoration: none; }
-    nav { display: flex; align-items: center; gap: 8px; overflow-x: auto; }
-    nav a { text-decoration: none; color: var(--text-muted); font-size: 0.9rem; font-weight: 700; padding: 8px 14px; border-radius: 10px; }
-    nav a:hover { background: #eff6ff; color: var(--primary); }
+    body { background-color: var(--bg); color: var(--text); line-height: 1.75; }
+    header { background: var(--surface); border-bottom: 2px solid var(--border); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.04); }
+    .header-inner { max-width: 1240px; margin: 0 auto; padding: 10px 16px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .brand { display: inline-flex; align-items: center; gap: 8px; font-size: 1.25rem; font-weight: 900; color: var(--primary); text-decoration: none; white-space: nowrap; flex-shrink: 0; }
+    nav { 
+      display: flex !important; 
+      flex-direction: row !important; 
+      align-items: center !important; 
+      gap: 6px !important; 
+      overflow-x: auto !important; 
+      white-space: nowrap !important; 
+      -webkit-overflow-scrolling: touch; 
+      scrollbar-width: none; 
+      padding: 4px 0; 
+    }
+    nav::-webkit-scrollbar { display: none; }
+    nav a { 
+      display: inline-block !important; 
+      text-decoration: none; 
+      color: var(--text); 
+      font-size: 0.88rem; 
+      font-weight: 700; 
+      padding: 7px 12px; 
+      border-radius: 20px; 
+      background: #f8fafc; 
+      border: 1px solid var(--border); 
+      transition: all 0.2s; 
+      flex-shrink: 0 !important; 
+    }
+    nav a:hover { background: #eff6ff; color: var(--primary); border-color: #93c5fd; }
+    nav a.active { background: var(--primary) !important; color: #ffffff !important; border-color: var(--primary) !important; }
     
-    .doc-container { max-width: 860px; margin: 36px auto 60px; padding: 36px 32px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; box-shadow: 0 1px 3px rgba(15,23,42,0.05); }
-    .doc-container h1 { font-size: 1.6rem; color: #0f172a; margin-bottom: 20px; border-bottom: 2px solid var(--primary); padding-bottom: 12px; font-weight: 900; }
-    .doc-container h2 { font-size: 1.15rem; color: #1e293b; margin-top: 28px; margin-bottom: 10px; font-weight: 800; }
-    .doc-container p, .doc-container li { font-size: 0.95rem; color: #334155; margin-bottom: 8px; }
-    .doc-container ol { padding-left: 20px; margin-bottom: 14px; }
-    
-    footer { background: #ffffff; border-top: 1px solid var(--border); padding: 36px 20px; font-size: 0.84rem; color: var(--text-muted); line-height: 1.8; text-align: center; }
-    .footer-nav, .footer-legal-bar { display: flex; justify-content: center; gap: 14px; margin-bottom: 10px; flex-wrap: wrap; }
+    .doc-container { max-width: 920px; margin: 36px auto 60px; padding: 40px 32px; background: var(--surface); border: 2px solid var(--border); border-radius: 14px; box-shadow: var(--shadow-sm); }
+    .doc-container h1 { font-size: 1.8rem; color: #0f172a; margin-bottom: 16px; border-left: 5px solid var(--primary); padding-left: 12px; font-weight: 900; }
+    .doc-container h2 { font-size: 1.22rem; color: #1e293b; margin-top: 30px; margin-bottom: 12px; font-weight: 800; border-bottom: 1.5px solid var(--border); padding-bottom: 8px; }
+    .doc-container p, .doc-container li { font-size: 0.95rem; color: #334155; margin-bottom: 10px; line-height: 1.85; }
+    .doc-container ol { padding-left: 22px; margin-bottom: 18px; }
+    .doc-container ol li { margin-bottom: 8px; }
+
+    .guide-callout { background: #eff6ff; border-left: 4px solid var(--primary); padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 20px 0; font-size: 0.92rem; line-height: 1.75; color: #334155; }
+    .guide-callout strong { color: #1e40af; }
+
+    .accordion-item { border: 1.5px solid var(--border); border-radius: 8px; margin-bottom: 8px; background: #ffffff; overflow: hidden; }
+    .accordion-header { padding: 13px 16px; background: #f8fafc; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 800; font-size: 0.92rem; color: #0f172a; }
+    .accordion-body { padding: 15px 16px; display: none; border-top: 1.5px solid var(--border); font-size: 0.88rem; color: #334155; line-height: 1.75; }
+    .accordion-item.active .accordion-body { display: block; }
+    .accordion-arrow { font-size: 0.8rem; transition: transform 0.2s; }
+    .accordion-item.active .accordion-arrow { transform: rotate(180deg); }
+
+    footer { background: #ffffff; border-top: 2px solid var(--border); padding: 32px 20px; font-size: 0.84rem; color: var(--text-muted); line-height: 1.8; text-align: center; margin-top: 40px; }
+    .footer-nav { display: flex; justify-content: center; gap: 14px; margin-bottom: 10px; flex-wrap: wrap; }
     .footer-nav a { color: var(--primary); text-decoration: none; font-weight: 700; }
+    .footer-legal-bar { display: flex; justify-content: center; gap: 14px; margin-bottom: 12px; flex-wrap: wrap; }
     .footer-legal-bar a { color: #334155; text-decoration: none; font-weight: 600; }
+    .footer-disclaimer { max-width: 880px; margin: 0 auto; font-size: 0.78rem; color: #64748b; line-height: 1.6; text-align: center; }
+
+    @media (max-width: 768px) {
+      .header-inner { flex-direction: column !important; align-items: stretch !important; padding: 8px 12px !important; gap: 6px !important; }
+      .brand { justify-content: flex-start; font-size: 1.15rem; }
+      nav { width: 100% !important; padding-bottom: 2px !important; }
+      nav a { font-size: 0.82rem !important; padding: 5px 11px !important; }
+      .doc-container { padding: 24px 16px !important; margin: 16px auto 40px !important; }
+      .doc-container h1 { font-size: 1.45rem !important; }
+    }
   </style>
 </head>
 <body>
 
+  <!-- Global Header & 6-Menu Navigation -->
   <header>
     <div class="header-inner">
       <a href="index.html" class="brand"><span>⚡</span> ByteCheck</a>
@@ -54,35 +162,82 @@
 
   <main class="doc-container">
     <h1>서비스 이용약관 (Terms of Service)</h1>
-    <p>본 약관은 ByteCheck(이하 '서비스')가 제공하는 온라인 글자수/바이트 연산기, 이력서 서식 제공, 채용 일정 모니터링 등 전반적인 웹 도구의 이용 조건 및 절차를 규정함을 목적으로 합니다.</p>
+    <p>
+      본 약관은 ByteCheck(이하 '서비스')가 제공하는 온라인 글자수 및 바이트 연산기, 이력서 서식 제공, 4대보험 연봉 계산기, 어학 만료 D-Day 계산기, 실시간 공공기관 채용 정보 모니터링 등 웹 기반 구직 보조 도구(이하 '서비스 일체')의 이용 조건, 절차 및 운영 정책을 규정함을 목적으로 합니다.
+    </p>
 
-    <h2>제1조 (목적 및 성격)</h2>
+    <div class="guide-callout">
+      <strong>📌 이용 전 필수 확인:</strong> ByteCheck는 구직자의 편의를 돕기 위해 무료로 개방된 공익적 보조 플랫폼입니다. 본 서비스가 제공하는 모든 계산 결과 및 서식 파일은 참고용 수치이며 법적 구속력을 갖지 않으므로, 실제 원서 접수 전 반드시 지원 기업의 공식 공고를 확인하시기 바랍니다.
+    </div>
+
+    <h2>제1조 (목적 및 서비스의 성격)</h2>
     <ol>
-      <li>본 서비스는 공기업, 대기업 등 입사 지원을 준비하는 구직자를 위한 자소서 글자수·바이트 정밀 계산, 감점어 마스킹, 표준 서식 다운로드 등 무료 유틸리티를 제공합니다.</li>
-      <li>서비스가 산출하는 바이트 및 글자수 계산치는 기술 표준(UTF-8, EUC-KR)에 입각하여 제공되나, 채용 주관 기관의 개별 접수 전산망 알고리즘 차이로 인한 변동이 있을 수 있습니다.</li>
+      <li>본 서비스는 대기업, 공공기관, 중견·중소기업 입사 지원을 준비하는 취업 준비생과 이직자를 위한 자소서 글자수·바이트 정밀 계산, 감점어 마스킹, 표준 서식 다운로드 등 다양한 무료 유틸리티를 제공합니다.</li>
+      <li>서비스가 산출하는 바이트 및 글자수 계산치는 국제 표준 인코딩 규격(UTF-8, EUC-KR)에 입각하여 정확하게 제공되나, 채용 주관 기관의 개별 접수 전산망 알고리즘 차이(개행 문자 \r\n 파싱 방식 등)로 인한 미세한 변동이 있을 수 있습니다.</li>
     </ol>
 
     <h2>제2조 (회원가입 및 개인정보 수집 배제)</h2>
     <ol>
-      <li>서비스는 원칙적으로 회원가입 없이 모든 도구를 자유롭게 이용할 수 있도록 개방되어 있습니다.</li>
-      <li>이용자가 작성한 자기소개서 본문 텍스트는 서비스의 원격 서버로 일체 전송되지 않으며, 이용자의 웹 브라우저 로컬 저장소(LocalStorage)에만 보관됩니다.</li>
+      <li>서비스는 원칙적으로 회원가입이나 로그인 절차 없이 모든 도구를 자유롭게 이용할 수 있도록 전면 개방되어 있습니다.</li>
+      <li>이용자가 작성한 자기소개서 본문 텍스트 및 입력 수치는 서비스의 원격 데이터베이스나 서버로 일체 전송되지 않으며, 이용자의 웹 브라우저 로컬 저장소(LocalStorage)에만 안전하게 보관됩니다.</li>
+      <li>이용자가 브라우저 캐시 및 방문 기록을 삭제할 경우 저장된 로컬 데이터는 즉시 소멸되므로, 중요한 작성본은 별도의 로컬 문서로 백업해 두어야 합니다.</li>
     </ol>
 
     <h2>제3조 (지식재산권 및 서식 템플릿 이용 규정)</h2>
     <ol>
-      <li>서비스가 자체 제공하는 8종 이력서 서식 파일(.doc), UI 레이아웃, 독자적 계산 로직에 대한 저작권은 ByteCheck에 귀속됩니다.</li>
-      <li>이용자는 제공되는 서식을 취업 지원 목적으로 자유롭게 다운로드하고 수정하여 사용할 수 있으나, 영리적 목적의 재판매 및 무단 재배포는 엄격히 금지됩니다.</li>
+      <li>서비스가 자체 제작하여 제공하는 8종 이력서 서식 파일(.doc), UI 레이아웃, 독자적 계산 알고리즘에 대한 저작권 및 지식재산권은 ByteCheck에 귀속됩니다.</li>
+      <li>이용자는 제공되는 서식을 순수한 취업 준비 및 입사 지원 목적으로 자유롭게 다운로드하고 수정하여 사용할 수 있습니다.</li>
+      <li>사전 서면 동의 없이 서식을 유료로 재판매하거나, 상업적 플랫폼에 무단 복제하여 배포하는 행위는 저작권법에 따라 엄격히 금지됩니다.</li>
     </ol>
 
-    <h2>제4조 (서비스의 변경 및 면책)</h2>
+    <h2>제4조 (서비스의 변경, 중단 및 면책)</h2>
     <ol>
-      <li>공공데이터포털(기재부 잡알리오) API 장애, 호스팅 서버 점검 등 불가피한 사유가 발생할 경우 사전 고지 없이 서비스 제공이 일시 중단될 수 있습니다.</li>
-      <li>이용자가 서비스의 계산 결과만을 신뢰하여 발생한 원서 접수 누락, 글자수 초과 불이익에 대해 서비스는 직접적인 법적 책임을 지지 않습니다.</li>
+      <li>공공데이터포털(기획재정부 잡알리오) API 장애, 호스팅 서버 정기 점검, 통신망 장애 등 불가피한 사유가 발생할 경우 사전 고지 없이 서비스 제공이 일시 중단될 수 있습니다.</li>
+      <li>이용자가 서비스의 계산 결과만을 전적으로 신뢰하여 발생한 원서 접수 누락, 글자수 초과로 인한 서류 탈락, 일정 착오 등의 불이익에 대해 서비스는 직접적인 법적 책임을 지지 않습니다.</li>
+      <li>채용 공고 데이터는 공공기관 공식 공시 자료를 기반으로 연동되나, 각 기관의 긴급 일정 변경이나 공고 취소에 대한 최종 검증 책임은 지원자 본인에게 있습니다.</li>
     </ol>
 
-    <p style="margin-top: 32px; font-size: 0.85rem; color: #94a3b8;">공고일자: 2026년 10월 17일 | 시행일자: 2026년 10월 17일</p>
+    <h2>제5조 (광고 게재 및 제3자 링크 정책)</h2>
+    <ol>
+      <li>서비스는 무료 유틸리티의 지속 가능한 운영비 충당 및 서버 인프라 유지를 위해 웹사이트 내에 Google AdSense 등 제3자 광고를 게재할 수 있습니다.</li>
+      <li>서비스 화면에 표시되는 외부 웹사이트 링크(각 기업 공식 접수처, 주관사 사이트 등)는 이용자의 편의를 돕기 위한 것이며, 외부 링크 사이트의 콘텐츠 신뢰성이나 개인정보 보호 정책에 대해서는 ByteCheck가 보증하거나 책임을 지지 않습니다.</li>
+    </ol>
+
+    <h2>제6조 (약관의 개정 및 고지 의무)</h2>
+    <ol>
+      <li>서비스는 관련 법령이나 운영 방침의 변경에 따라 본 약관을 개정할 수 있습니다.</li>
+      <li>약관이 개정될 경우 변경 사항의 효력 발생일 최소 7일 전부터 웹사이트 하단 공지를 통해 이용자에게 고지합니다.</li>
+    </ol>
+
+    <div style="margin-top: 2rem;">
+      <h2 style="border-bottom: none; margin-bottom: 0.8rem;">자주 묻는 질문 (FAQ)</h2>
+      <div class="accordion-item active">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>Q1. ByteCheck 서식을 편집해서 공기업 실제 입사지원서로 제출해도 되나요?</span>
+          <span class="accordion-arrow">▲</span>
+        </div>
+        <div class="accordion-body">
+          네, 가능합니다. 배포되는 8종 서식(신입 표준, 공기업 블라인드, 경력기술서, 직무수행계획서 등)은 공공기관 및 대기업 표준 규격에 맞추어 설계되었으므로 본인의 필요에 맞게 자유롭게 수정하여 실제 원서 접수에 활용하실 수 있습니다.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>Q2. 계산기 오류나 기업 규격 변경 사항은 어디로 제보하나요?</span>
+          <span class="accordion-arrow">▼</span>
+        </div>
+        <div class="accordion-body">
+          서비스 화면 하단의 '문의하기(Contact Us)' 페이지 또는 공식 이메일(tiptodaylab@gmail.com)로 변경된 기업명과 요강 링크를 전달해 주시면 개발팀에서 즉시 검증 후 연산 알고리즘을 갱신합니다.
+        </div>
+      </div>
+    </div>
+
+    <p style="margin-top: 36px; font-size: 0.85rem; color: #94a3b8; text-align: right;">
+      공고일자: 2026년 10월 17일 | 최근 개정 및 시행일자: 2026년 10월 30일
+    </p>
   </main>
 
+  <!-- Global Footer -->
   <footer>
     <div class="footer-nav">
       <a href="index.html">자소서 바이트</a>
@@ -106,8 +261,30 @@
       <span>|</span>
       <a href="contact.html">문의하기 (Contact Us)</a>
     </div>
-    <p>© ByteCheck Global. All rights reserved.</p>
+    <div class="footer-disclaimer">
+      본 서비스에서 산출되는 바이트 연산 결과, 계산식 및 서식 자료는 구직자의 편의를 위한 참고 자료이며 법적 구속력을 갖지 않습니다. 실제 원서 접수 전 반드시 지원 기업의 공식 공고를 확인하시기 바랍니다.<br>
+      <strong>개인정보 보호 정책 요약:</strong> ByteCheck는 회원가입을 요구하지 않으며 어떠한 작성 텍스트나 개인정보도 서버에 수집·저장하지 않습니다. 모든 작업 데이터는 이용자의 기기(로컬 브라우저)에만 안전하게 보관됩니다.
+      <p style="margin-top: 8px; font-weight:700;">© ByteCheck Global. All rights reserved.</p>
+    </div>
   </footer>
 
+  <script>
+    function toggleAccordion(header) {
+      const item = header.parentElement;
+      const arrow = header.querySelector('.accordion-arrow');
+      const isActive = item.classList.contains('active');
+      
+      document.querySelectorAll('.accordion-item').forEach(el => {
+        el.classList.remove('active');
+        const a = el.querySelector('.accordion-arrow');
+        if (a) a.innerText = '▼';
+      });
+
+      if (!isActive) {
+        item.classList.add('active');
+        if (arrow) arrow.innerText = '▲';
+      }
+    }
+  </script>
 </body>
 </html>
