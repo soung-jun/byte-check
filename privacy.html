@@ -4,44 +4,162 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>개인정보처리방침 & 면책조항 | ByteCheck</title>
-  <meta name="description" content="ByteCheck 서비스의 개인정보처리방침, 쿠키 정책 및 법적 면책조항 안내입니다.">
+  <meta name="description" content="ByteCheck 서비스의 개인정보처리방침, 쿠키 정책, 구글 애드센스 맞춤형 광고 고지 및 법적 면책조항 안내입니다.">
+  <link rel="canonical" href="https://bytechecktool.com/privacy.html">
   <link rel="stylesheet" href="style.css">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bytechecktool.com/privacy.html">
+  <meta property="og:title" content="개인정보처리방침 & 면책조항 | ByteCheck">
+  <meta property="og:description" content="ByteCheck 서비스의 개인정보보호 정책, 쿠키 관리 및 법적 면책조항">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://bytechecktool.com/privacy.html",
+        "url": "https://bytechecktool.com/privacy.html",
+        "name": "ByteCheck 개인정보처리방침 및 법적 면책조항",
+        "description": "ByteCheck 서비스의 개인정보 비수집 원칙, 쿠키 및 구글 맞춤형 광고 정책, 법적 면책 고지",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://bytechecktool.com/#website",
+          "url": "https://bytechecktool.com",
+          "name": "ByteCheck"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "작성 중인 자기소개서 내용이 서버에 저장되거나 수집되나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "아닙니다. ByteCheck는 비회원 기반 서비스로, 입력된 자기소개서 텍스트나 인적 데이터는 외부 서버로 전송되지 않으며 오직 이용자 본인 기기의 브라우저 로컬 저장소(LocalStorage)에만 안전하게 보관됩니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "구글 애드센스 맞춤형 광고 쿠키는 어떻게 비활성화할 수 있나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "이용자는 구글 광고 설정(https://adssettings.google.com) 또는 Network Advertising Initiative 옵트아웃 페이지를 통해 제3자 맞춤형 광고 쿠키 사용을 언제든지 비활성화할 수 있습니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "제공되는 바이트 연산 결과와 공채 데이터에 법적 책임이 보증되나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "본 사이트에서 제공하는 계산 결과, 자격증 가산점, 공채 D-Day 등은 참고용 정보이며 법적 효력을 갖지 않습니다. 실제 원서 접수 전 반드시 지원 기업의 공식 공고를 확인해야 합니다."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <style>
     :root {
       --primary: #1d4ed8;
+      --primary-hover: #1e40af;
       --bg: #f8fafc;
       --surface: #ffffff;
       --text: #0f172a;
       --text-muted: #475569;
       --border: #e2e8f0;
-      --danger-border: #f87171;
+      --border-dark: #cbd5e1;
+      --danger: #dc2626;
+      --danger-border: #fca5a5;
       --danger-bg: #fef2f2;
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
-    body { background-color: var(--bg); color: var(--text); line-height: 1.7; }
-    header { background: var(--surface); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 1000; }
-    .header-inner { max-width: 1280px; margin: 0 auto; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; }
-    .brand { display: inline-flex; align-items: center; gap: 8px; font-size: 1.35rem; font-weight: 900; color: var(--primary); text-decoration: none; }
-    nav { display: flex; align-items: center; gap: 8px; overflow-x: auto; }
-    nav a { text-decoration: none; color: var(--text-muted); font-size: 0.9rem; font-weight: 700; padding: 8px 14px; border-radius: 10px; }
-    nav a:hover { background: #eff6ff; color: var(--primary); }
+    body { background-color: var(--bg); color: var(--text); line-height: 1.75; }
+    header { background: var(--surface); border-bottom: 2px solid var(--border); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.04); }
+    .header-inner { max-width: 1240px; margin: 0 auto; padding: 10px 16px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .brand { display: inline-flex; align-items: center; gap: 8px; font-size: 1.25rem; font-weight: 900; color: var(--primary); text-decoration: none; white-space: nowrap; flex-shrink: 0; }
+    nav { 
+      display: flex !important; 
+      flex-direction: row !important; 
+      align-items: center !important; 
+      gap: 6px !important; 
+      overflow-x: auto !important; 
+      white-space: nowrap !important; 
+      -webkit-overflow-scrolling: touch; 
+      scrollbar-width: none; 
+      padding: 4px 0; 
+    }
+    nav::-webkit-scrollbar { display: none; }
+    nav a { 
+      display: inline-block !important; 
+      text-decoration: none; 
+      color: var(--text); 
+      font-size: 0.88rem; 
+      font-weight: 700; 
+      padding: 7px 12px; 
+      border-radius: 20px; 
+      background: #f8fafc; 
+      border: 1px solid var(--border); 
+      transition: all 0.2s; 
+      flex-shrink: 0 !important; 
+    }
+    nav a:hover { background: #eff6ff; color: var(--primary); border-color: #93c5fd; }
+    nav a.active { background: var(--primary) !important; color: #ffffff !important; border-color: var(--primary) !important; }
     
-    .doc-container { max-width: 860px; margin: 36px auto 60px; padding: 36px 32px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; box-shadow: 0 1px 3px rgba(15,23,42,0.05); }
-    .doc-container h1 { font-size: 1.6rem; color: #0f172a; margin-bottom: 20px; border-bottom: 2px solid var(--primary); padding-bottom: 12px; font-weight: 900; }
-    .doc-container h2 { font-size: 1.15rem; color: #1e293b; margin-top: 28px; margin-bottom: 10px; font-weight: 800; }
-    .doc-container p, .doc-container li { font-size: 0.95rem; color: #334155; margin-bottom: 8px; }
-    .doc-container ul { padding-left: 20px; margin-bottom: 14px; }
-    .disclaimer-card { background: var(--danger-bg); border: 1.5px solid var(--danger-border); border-radius: 10px; padding: 20px; margin: 24px 0; }
-    .disclaimer-card h2 { margin-top: 0; color: #991b1b; }
+    .doc-container { max-width: 920px; margin: 36px auto 60px; padding: 40px 32px; background: var(--surface); border: 2px solid var(--border); border-radius: 14px; box-shadow: var(--shadow-sm); }
+    .doc-container h1 { font-size: 1.8rem; color: #0f172a; margin-bottom: 16px; border-left: 5px solid var(--primary); padding-left: 12px; font-weight: 900; }
+    .doc-container h2 { font-size: 1.25rem; color: #1e293b; margin-top: 32px; margin-bottom: 12px; font-weight: 800; border-bottom: 1.5px solid var(--border); padding-bottom: 8px; }
+    .doc-container p, .doc-container li { font-size: 0.95rem; color: #334155; margin-bottom: 10px; line-height: 1.85; }
+    .doc-container ul { padding-left: 20px; margin-bottom: 18px; }
     
-    footer { background: #ffffff; border-top: 1px solid var(--border); padding: 36px 20px; font-size: 0.84rem; color: var(--text-muted); line-height: 1.8; text-align: center; }
-    .footer-nav, .footer-legal-bar { display: flex; justify-content: center; gap: 14px; margin-bottom: 10px; flex-wrap: wrap; }
+    .guide-callout { background: #eff6ff; border-left: 4px solid var(--primary); padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 20px 0; font-size: 0.92rem; line-height: 1.75; color: #334155; }
+    .guide-callout strong { color: #1e40af; }
+
+    .disclaimer-card { background: var(--danger-bg); border: 2px solid var(--danger-border); border-radius: 12px; padding: 22px; margin: 28px 0; }
+    .disclaimer-card h2 { margin-top: 0; color: #991b1b; border-bottom: 1.5px solid #fecaca; padding-bottom: 8px; font-size: 1.2rem; }
+    .disclaimer-card ul { margin-bottom: 0; }
+    .disclaimer-card li { color: #7f1d1d; }
+
+    .table-scroll-wrap { overflow-x: auto; margin: 18px 0; -webkit-overflow-scrolling: touch; border-radius: 8px; border: 1.5px solid var(--border); }
+    .policy-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; text-align: left; background: #fff; min-width: 580px; }
+    .policy-table th { background: #f1f5f9; padding: 11px 14px; font-weight: 800; color: #0f172a; border-bottom: 2px solid var(--border); }
+    .policy-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); color: #1e293b; }
+    .policy-table tr:last-child td { border-bottom: none; }
+
+    .accordion-item { border: 1.5px solid var(--border); border-radius: 8px; margin-bottom: 8px; background: #ffffff; overflow: hidden; }
+    .accordion-header { padding: 13px 16px; background: #f8fafc; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 800; font-size: 0.92rem; color: #0f172a; }
+    .accordion-body { padding: 15px 16px; display: none; border-top: 1.5px solid var(--border); font-size: 0.88rem; color: #334155; line-height: 1.75; }
+    .accordion-item.active .accordion-body { display: block; }
+    .accordion-arrow { font-size: 0.8rem; transition: transform 0.2s; }
+    .accordion-item.active .accordion-arrow { transform: rotate(180deg); }
+
+    footer { background: #ffffff; border-top: 2px solid var(--border); padding: 32px 20px; font-size: 0.84rem; color: var(--text-muted); line-height: 1.8; text-align: center; margin-top: 40px; }
+    .footer-nav { display: flex; justify-content: center; gap: 14px; margin-bottom: 10px; flex-wrap: wrap; }
     .footer-nav a { color: var(--primary); text-decoration: none; font-weight: 700; }
+    .footer-legal-bar { display: flex; justify-content: center; gap: 14px; margin-bottom: 12px; flex-wrap: wrap; }
     .footer-legal-bar a { color: #334155; text-decoration: none; font-weight: 600; }
+    .footer-disclaimer { max-width: 880px; margin: 0 auto; font-size: 0.78rem; color: #64748b; line-height: 1.6; text-align: center; }
+
+    @media (max-width: 768px) {
+      .header-inner { flex-direction: column !important; align-items: stretch !important; padding: 8px 12px !important; gap: 6px !important; }
+      .brand { justify-content: flex-start; font-size: 1.15rem; }
+      nav { width: 100% !important; padding-bottom: 2px !important; }
+      nav a { font-size: 0.82rem !important; padding: 5px 11px !important; }
+      .doc-container { padding: 24px 16px !important; margin: 16px auto 40px !important; }
+      .doc-container h1 { font-size: 1.45rem !important; }
+      .disclaimer-card { padding: 16px !important; }
+    }
   </style>
 </head>
 <body>
 
+  <!-- Global Header & 6-Menu Navigation -->
   <header>
     <div class="header-inner">
       <a href="index.html" class="brand"><span>⚡</span> ByteCheck</a>
@@ -57,42 +175,126 @@
   </header>
 
   <main class="doc-container">
-    <h1>개인정보처리방침 (Privacy Policy)</h1>
-    <p>ByteCheck(이하 '서비스')는 정보통신망 이용촉진 및 정보보호 등에 관한 법률 및 개인정보보호법을 준수하며 이용자의 권익 보호를 최우선으로 합니다.</p>
+    <h1>개인정보처리방침 & 면책조항 (Privacy Policy)</h1>
+    <p>
+      ByteCheck(이하 '서비스')는 정보통신망 이용촉진 및 정보보호 등에 관한 법률, 개인정보보호법, 그리고 구글 애드센스(Google AdSense) 프로그램 정책을 철저히 준수하며 이용자의 개인정보 및 프라이버시 권익을 최우선으로 보호합니다. 본 방침은 ByteCheck가 제공하는 웹 기반 유틸리티 서비스의 데이터 처리 방식과 쿠키 운영 기준을 설명합니다.
+    </p>
 
-    <h2>1. 개인정보 수집 및 저장 원칙</h2>
-    <p>본 서비스는 회원가입이나 로그인을 요구하지 않으며, 이용자의 개인식별정보(성명, 주민등록번호, 연락처 등)를 자체 데이터베이스에 일체 저장하지 않습니다.</p>
-    <ul>
-      <li><strong>자기소개서 작성 텍스트</strong>: 입력된 글은 서버로 전송되지 않으며, 사용자 본인의 브라우저 캐시 및 LocalStorage에만 암호화 없이 로컬 보관됩니다.</li>
-      <li><strong>자동 생성 접속 로그</strong>: 사이트 트래픽 통계 분석 및 비정상 접근 차단을 위해 IP 주소, 브라우저 종류, 방문 일시 등이 익명화되어 집계될 수 있습니다.</li>
-    </ul>
+    <div class="guide-callout">
+      <strong>🔒 핵심 데이터 보호 원칙:</strong> ByteCheck는 회원가입을 요구하지 않는 100% 비로그인 무료 서비스입니다. 이용자가 입력하는 자기소개서 원문, 연봉 수치, 어학 점수, 자격증 내역 등 일체의 입력 데이터는 당사의 중앙 서버로 전송되지 않으며 오직 이용자 기기의 웹 브라우저(LocalStorage)에만 안전하게 임시 저장됩니다.
+    </div>
+
+    <h2>1. 개인정보 수집 항목 및 저장 원칙</h2>
+    <p>
+      본 서비스는 이용자의 개인식별정보(성명, 식별번호, 연락처, 상세주소 등)를 자체 데이터베이스에 일체 요구하거나 수집·저장하지 않습니다.
+    </p>
+    
+    <div class="table-scroll-wrap">
+      <table class="policy-table">
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>데이터 항목</th>
+            <th>저장 위치 및 처리 방식</th>
+            <th>보유 및 파기 기간</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>자소서 에디터 데이터</strong></td>
+            <td>작성 중인 자기소개서 본문, 목표 글자수 설정값</td>
+            <td>이용자 기기의 로컬 스토리지(LocalStorage)에만 보관 (서버 전송 없음)</td>
+            <td>브라우저 캐시 삭제 시 즉시 파기 / 영구 보관되지 않음</td>
+          </tr>
+          <tr>
+            <td><strong>계산기 입력값</strong></td>
+            <td>연봉, 시급, 어학 점수, 선택 자격증 내역</td>
+            <td>브라우저 런타임 메모리에서 실시간 연산 후 소멸</td>
+            <td>페이지 종료 시 즉시 자동 초기화</td>
+          </tr>
+          <tr>
+            <td><strong>접속 로그 통계</strong></td>
+            <td>익명화된 IP 대역, 브라우저 종류, 방문 일시</td>
+            <td>서버 비정상 트래픽 탐지 및 총 방문자 집계용 익명 카운터 연동</td>
+            <td>통계 목적 달성 후 안전하게 자동 폐기</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     <h2>2. 구글 애드센스(Google AdSense) 및 쿠키(Cookie) 정책</h2>
-    <p>본 사이트는 운영비 충당 및 무료 서비스 유지를 위해 Google Inc.가 제공하는 제3자 맞춤 광고 서비스(AdSense)를 이용합니다.</p>
+    <p>
+      본 사이트는 무료 서비스 운영 및 서버 인프라 유지를 위해 Google Inc.가 제공하는 제3자 맞춤 광고 서비스(Google AdSense)를 이용하고 있습니다.
+    </p>
     <ul>
-      <li>Google 및 공인 공급업체는 사용자가 본 사이트 또는 다른 웹사이트를 방문한 기록을 바탕으로 관심 기반 맞춤형 광고를 게재하기 위해 쿠키를 사용합니다.</li>
-      <li>이용자는 <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer" style="color:var(--primary); font-weight:700;">구글 광고 설정 페이지</a>를 방문하여 맞춤형 광고 게재에 사용되는 쿠키를 비활성화할 수 있습니다.</li>
+      <li><strong>쿠키(Cookie)의 정의 및 사용 목적</strong>: 쿠키는 웹사이트를 방문할 때 이용자의 디바이스에 저장되는 소량의 텍스트 파일입니다. Google을 포함한 제3자 광고 공급업체는 이용자가 본 사이트 또는 다른 웹사이트를 방문한 과거 이력 정보를 바탕으로 사용자의 관심사에 부합하는 맞춤형 광고를 게재하기 위해 쿠키(DoubleClick DART 쿠키 등)를 활용합니다.</li>
+      <li><strong>맞춤형 광고 게재 원리</strong>: Google은 광고 쿠키를 통해 이용자의 비식별 웹 브라우징 활동을 기반으로 적합한 광고를 선별하여 표시합니다. 이 과정에서 이용자의 성명, 이메일 주소, 전화번호 등 민감한 개인 식별 정보는 일체 수집되지 않습니다.</li>
+      <li><strong>쿠키 비활성화 및 옵트아웃(Opt-out) 권리</strong>: 이용자는 언제든지 맞춤형 광고용 쿠키 수집을 거부할 수 있습니다.
+        <ul style="margin-top: 6px;">
+          <li>구글 맞춤 광고 설정 해제: <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer" style="color:var(--primary); font-weight:700;">Google 광고 설정 페이지 ↗</a></li>
+          <li>제3자 공급업체의 쿠키 사용 거부: <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer" style="color:var(--primary); font-weight:700;">AboutAds.info ↗</a> 또는 <a href="https://optout.networkadvertising.org/" target="_blank" rel="noopener noreferrer" style="color:var(--primary); font-weight:700;">Network Advertising Initiative 옵트아웃 페이지 ↗</a></li>
+        </ul>
+      </li>
     </ul>
 
     <div class="disclaimer-card" id="disclaimer">
       <h2>3. 법적 면책조항 (Legal Disclaimer)</h2>
+      <p style="color: #7f1d1d; font-weight: 700; margin-bottom: 10px;">
+        ByteCheck의 모든 서비스는 구직자의 편의를 돕기 위한 참고용 보조 도구로 개발되었습니다. 이용 시 다음 면책 조항을 확인하시기 바랍니다.
+      </p>
       <ul>
-        <li><strong>채용정보 실시간성</strong>: 공공기관 채용 데이터는 기획재정부 잡알리오의 공개 API를 실시간 연계한 자료입니다. 기관 사정으로 인한 조기 마감, 일정 변경 등에 대해 서비스는 보증 책임을 지지 않으므로 최종 제출 전 반드시 공식 채용 공고를 재확인하시기 바랍니다.</li>
-        <li><strong>글자수 및 바이트 계산 한계</strong>: 웹 표준 UTF-8(3Byte) 및 EUC-KR(2Byte) 알고리즘으로 정밀 연산되나, 각 기관 채용 대행사(사람인, 잡코리아 등) 솔루션의 개행(\r\n) 파싱 규칙에 따라 10~20Byte 내외의 오차가 발생할 수 있습니다. 시스템 제한 대비 안전 여유 마진을 둘 것을 권장합니다.</li>
-        <li><strong>서식 파일 활용</strong>: 무료 제공되는 이력서 및 자소서 서식 8종은 참고 양식이며, 지원 기업의 지정 규격 여부를 지원자 본인이 확인해야 합니다.</li>
+        <li><strong>채용정보 실시간성 및 공고 변경</strong>: 공공기관 채용 데이터는 기획재정부 잡알리오(ALIO) 공개 API를 연동한 실시간 자료입니다. 기관 사정으로 인한 조기 마감, 일정 변경, 전형 취소 등에 대해 서비스는 어떠한 법적 보증 책임을 지지 않으므로, 원서 접수 전 반드시 대상 기관의 공식 공고를 확인해야 합니다.</li>
+        <li><strong>글자수 및 바이트 연산 한계</strong>: 웹 표준 UTF-8(3Byte) 및 EUC-KR(2Byte) 알고리즘으로 정밀 연산되나, 각 기관 채용 대행사(사람인, 잡코리아, 인크루트 등) 솔루션의 개행 문자(\r\n) 처리 규격에 따라 10~20Byte 내외의 오차가 발생할 수 있습니다. 시스템 제한 한도 대비 충분한 안전 여유 마진(Safety Margin)을 두고 작성하시기 바랍니다.</li>
+        <li><strong>연봉 및 주휴수당 모의 계산</strong>: 본 계산기의 4대 보험료 및 소득세 공제액은 국세청 근로소득 간이세액표 및 보건복지부 고시 요율을 준용하였으나, 개인별 비과세 수당, 상여금 지급 방식, 회사 내규에 따라 실제 급여 통장 입금액과 차이가 발생할 수 있습니다.</li>
+        <li><strong>서식 파일 활용 및 제출 책임</strong>: 무료 제공되는 표준 입사지원서 및 직무수행계획서 서식 8종은 표준 규격에 맞춘 참고 양식이며, 지원 대상 기업의 지정 서식 준수 여부는 지원자 본인이 확인해야 합니다.</li>
       </ul>
     </div>
 
-    <h2>4. 개인정보 보호 문의처</h2>
-    <p>서비스 이용 중 발생하는 기술적 질문이나 제휴 문의는 아래 공식 창구로 연락 주시기 바랍니다.</p>
+    <h2>4. 개인정보 보호 담당자 및 문의처</h2>
+    <p>
+      서비스 이용 중 발생하는 개인정보 보호 관련 질문, 시스템 오류 제보, 기업별 바이트 규격 제안은 아래 공식 창구로 연락 주시면 신속하고 성실하게 답변해 드립니다.
+    </p>
     <ul>
-      <li>이메일: tiptodaylab@gmail.com</li>
-      <li>온라인 접수 창구: <a href="contact.html" style="color:var(--primary); font-weight:700;">문의하기 페이지 바로가기</a></li>
+      <li><strong>담당 부서</strong>: ByteCheck 플랫폼 운영 및 고객지원팀</li>
+      <li><strong>공식 이메일</strong>: tiptodaylab@gmail.com</li>
+      <li><strong>운영 시간</strong>: 평일 09:00 ~ 18:00 (영업일 기준 24~48시간 이내 회신)</li>
+      <li><strong>온라인 접수 창구</strong>: <a href="contact.html" style="color:var(--primary); font-weight:700;">문의하기 페이지 (Contact Us) 바로가기 ↗</a></li>
     </ul>
 
-    <p style="margin-top: 32px; font-size: 0.85rem; color: #94a3b8;">공고일자: 2026년 10월 17일 | 시행일자: 2026년 10월 17일</p>
+    <h2>5. 개인정보처리방침의 변경 및 고지 의무</h2>
+    <p>
+      현 개인정보처리방침은 정부의 법령, 정책, 보안 기술의 변경 또는 구글 애드센스 운영 지침의 변경에 따라 내용이 추가, 삭제 및 수정될 수 있습니다. 개정 사항이 발생할 경우 웹사이트 공지를 통해 고지합니다.
+    </p>
+
+    <div style="margin-top: 2rem;">
+      <h2 style="border-bottom: none; margin-bottom: 0.8rem;">자주 묻는 질문 (FAQ)</h2>
+      <div class="accordion-item active">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>Q1. 브라우저를 닫거나 컴퓨터를 재부팅해도 작성 중인 글이 안전한가요?</span>
+          <span class="accordion-arrow">▲</span>
+        </div>
+        <div class="accordion-body">
+          네, 안전합니다. ByteCheck는 이용자가 타이핑하는 즉시 브라우저의 로컬 스토리지에 데이터를 안전하게 임시 보관하므로, 브라우저가 비정상적으로 종료되더라도 동일한 브라우저로 재접속 시 이전 작성 내용이 복구됩니다. 단, 브라우저의 '인터넷 사용 기록 삭제'를 실행하면 로컬 데이터가 소멸되므로 별도 백업을 권장합니다.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>Q2. 제 브라우저에서 쿠키를 완전히 차단해도 계산기를 쓸 수 있나요?</span>
+          <span class="accordion-arrow">▼</span>
+        </div>
+        <div class="accordion-body">
+          네, 가능합니다. 브라우저 설정에서 제3자 쿠키를 차단하더라도 글자수 계산, 연봉 실수령액 계산 등 ByteCheck의 모든 핵심 계산기 기능은 정상적으로 작동합니다.
+        </div>
+      </div>
+    </div>
+
+    <p style="margin-top: 36px; font-size: 0.85rem; color: #94a3b8; text-align: right;">
+      공고일자: 2026년 10월 17일 | 최근 개정 및 시행일자: 2026년 10월 30일
+    </p>
   </main>
 
+  <!-- Global Footer -->
   <footer>
     <div class="footer-nav">
       <a href="index.html">자소서 바이트</a>
@@ -116,8 +318,30 @@
       <span>|</span>
       <a href="contact.html">문의하기 (Contact Us)</a>
     </div>
-    <p>© ByteCheck Global. All rights reserved.</p>
+    <div class="footer-disclaimer">
+      본 서비스에서 산출되는 바이트 연산 결과, 계산식 및 서식 자료는 구직자의 편의를 위한 참고 자료이며 법적 구속력을 갖지 않습니다. 실제 원서 접수 전 반드시 지원 기업의 공식 공고를 확인하시기 바랍니다.<br>
+      <strong>개인정보 보호 정책 요약:</strong> ByteCheck는 회원가입을 요구하지 않으며 어떠한 작성 텍스트나 개인정보도 서버에 수집·저장하지 않습니다. 모든 작업 데이터는 이용자의 기기(로컬 브라우저)에만 안전하게 보관됩니다.
+      <p style="margin-top: 8px; font-weight:700;">© ByteCheck Global. All rights reserved.</p>
+    </div>
   </footer>
 
+  <script>
+    function toggleAccordion(header) {
+      const item = header.parentElement;
+      const arrow = header.querySelector('.accordion-arrow');
+      const isActive = item.classList.contains('active');
+      
+      document.querySelectorAll('.accordion-item').forEach(el => {
+        el.classList.remove('active');
+        const a = el.querySelector('.accordion-arrow');
+        if (a) a.innerText = '▼';
+      });
+
+      if (!isActive) {
+        item.classList.add('active');
+        if (arrow) arrow.innerText = '▲';
+      }
+    }
+  </script>
 </body>
 </html>
