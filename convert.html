@@ -61,6 +61,14 @@
               "@type": "Answer",
               "text": "현대자동차, SK, CJ, 포스코 등 대다수 대기업과 공기업은 두 시험에 대해 완전 동등한 등급 변환표를 적용하므로 평가상 유불리는 없습니다. 다만 삼성그룹 등 일부 기업은 오픽을 전통적으로 선호하는 경향이 있으며, 정형화된 템플릿 답변에 익숙하다면 토익스피킹을, 자연스러운 일상 회화에 강하다면 오픽을 선택하는 것이 취득에 유리합니다."
             }
+          },
+          {
+            "@type": "Question",
+            "name": "뉴텝스(New TEPS)와 구텝스의 점수 차이는 어떻게 되나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "뉴텝스는 만점이 600점으로 개편되었으며, 구텝스(990점 만점)와 비교 시 뉴텝스 385점은 구텝스 약 700~720점(토익 850점 수준)에 해당합니다. 공공기관 채용 전산망에서는 개편된 뉴텝스 점수를 기준으로 환산표를 적용합니다."
+            }
           }
         ]
       }
@@ -68,10 +76,13 @@
   }
   </script>
 
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6840623754388286" crossorigin="anonymous"></script>
+
   <style>
     :root {
       --primary: #1d4ed8;
       --primary-hover: #1e40af;
+      --primary-light: #eff6ff;
       --secondary: #0f172a;
       --accent: #10b981;
       --bg: #f8fafc;
@@ -79,6 +90,7 @@
       --text: #1e293b;
       --text-muted: #64748b;
       --border: #e2e8f0;
+      --border-dark: #cbd5e1;
       --radius: 12px;
       --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
       --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
@@ -181,26 +193,33 @@
     .status-safe { background: #eff6ff; color: #1d4ed8; }
     .status-warn { background: #fee2e2; color: #991b1b; }
 
-    .seo-article { margin-top: 2.5rem; background: var(--surface); border: 2px solid var(--border); border-radius: var(--radius); padding: 2.2rem; }
+    /* SEO Article & Table Styling */
+    .seo-article { margin-top: 2.5rem; background: var(--surface); border: 2px solid var(--border); border-radius: var(--radius); padding: 2.2rem; box-shadow: var(--shadow); }
     .seo-article h2 { font-size: 1.4rem; font-weight: 900; color: var(--secondary); margin-bottom: 1.2rem; border-left: 5px solid var(--primary); padding-left: 0.75rem; }
     .seo-article h3 { font-size: 1.15rem; font-weight: 800; color: var(--secondary); margin: 1.6rem 0 0.8rem; }
-    .seo-article p { font-size: 0.95rem; color: #334155; margin-bottom: 1.2rem; line-height: 1.75; text-align: justify; }
-    .seo-article ul { margin-left: 1.5rem; margin-bottom: 1.2rem; color: #334155; font-size: 0.93rem; }
+    .seo-article p { font-size: 0.95rem; color: #334155; margin-bottom: 1.2rem; line-height: 1.85; text-align: justify; }
+    .seo-article ul { margin-left: 1.5rem; margin-bottom: 1.2rem; color: #334155; font-size: 0.94rem; line-height: 1.85; }
     .seo-article li { margin-bottom: 0.5rem; }
 
-    .data-table-wrap { overflow-x: auto; margin: 1.25rem 0; }
-    .data-table { width: 100%; border-collapse: collapse; text-align: center; font-size: 0.88rem; }
-    .data-table th, .data-table td { padding: 0.75rem 0.9rem; border: 1px solid var(--border); }
+    .data-table-wrap { overflow-x: auto; margin: 1.25rem 0; border: 1.5px solid var(--border); border-radius: 8px; -webkit-overflow-scrolling: touch; }
+    .data-table { width: 100%; border-collapse: collapse; text-align: center; font-size: 0.88rem; min-width: 680px; }
+    .data-table th, .data-table td { padding: 0.85rem 1rem; border: 1px solid var(--border); white-space: nowrap; }
     .data-table th { background: #f1f5f9; color: var(--secondary); font-weight: 800; }
     .data-table tr:hover { background: #f8fafc; }
 
-    .faq-item { margin-bottom: 0.8rem; border: 1.5px solid var(--border); border-radius: 8px; overflow: hidden; }
-    .faq-q { background: #f8fafc; padding: 0.9rem 1.1rem; font-weight: 800; font-size: 0.95rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-    .faq-a { padding: 1.1rem; font-size: 0.9rem; color: #334155; background: #fff; border-top: 1.5px solid var(--border); }
+    .guide-callout { background: #eff6ff; border-left: 4px solid var(--primary); padding: 14px 18px; border-radius: 0 8px 8px 0; margin-bottom: 18px; font-size: 0.92rem; line-height: 1.75; }
+    .guide-callout strong { color: #1e40af; }
 
-    footer { background: #ffffff; border-top: 2px solid var(--border); padding: 24px 20px; font-size: 0.82rem; color: var(--text-muted); line-height: 1.8; text-align: center; margin-top: 3.5rem; }
-    .footer-links { display: flex; justify-content: center; gap: 14px; margin-bottom: 8px; flex-wrap: wrap; }
+    .faq-item { margin-bottom: 0.8rem; border: 1.5px solid var(--border); border-radius: 8px; overflow: hidden; }
+    .faq-q { background: #f8fafc; padding: 1rem 1.2rem; font-weight: 800; font-size: 0.95rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: #0f172a; }
+    .faq-a { padding: 1.2rem; font-size: 0.9rem; color: #334155; background: #fff; border-top: 1.5px solid var(--border); line-height: 1.75; }
+
+    footer { background: #ffffff; border-top: 2px solid var(--border); padding: 32px 20px; font-size: 0.84rem; color: var(--text-muted); line-height: 1.8; text-align: center; margin-top: 3.5rem; }
+    .footer-links { display: flex; justify-content: center; gap: 14px; margin-bottom: 10px; flex-wrap: wrap; }
     .footer-links a { color: var(--primary); text-decoration: none; font-weight: 700; }
+    .footer-legal-bar { display: flex; justify-content: center; gap: 14px; margin-bottom: 12px; flex-wrap: wrap; }
+    .footer-legal-bar a { color: #334155; text-decoration: none; font-weight: 600; }
+    .footer-disclaimer { max-width: 880px; margin: 0 auto; font-size: 0.78rem; color: #64748b; line-height: 1.6; text-align: center; }
 
     @media (max-width: 768px) {
       .header-inner { flex-direction: column !important; align-items: stretch !important; padding: 8px 12px !important; gap: 6px !important; }
@@ -209,6 +228,8 @@
       nav a { font-size: 0.82rem !important; padding: 5px 11px !important; }
       .hero-title h1 { font-size: 1.45rem !important; line-height: 1.35 !important; }
       .real-stat-bar { flex-direction: column; align-items: flex-start; }
+      .seo-article { padding: 1.25rem; }
+      .seo-article h2 { font-size: 1.25rem; }
     }
   </style>
 </head>
@@ -351,11 +372,16 @@
       </div>
     </div>
 
+    <!-- 구글 애드센스 심사용 고품질 심층 아티클 -->
     <article class="seo-article">
       <h2>2026 공인 어학시험 공식 환산 기준 및 기업별 채용 전략 완벽 분석</h2>
       <p>
         최근 공기업과 대기업 채용 전형에서 영어 성적은 단순한 '스펙'을 넘어 지원 자격을 판별하는 필수 필터링 기준이자 서류전형의 당락을 가르는 정량 배점으로 작동합니다. 특히 인사혁신처 어학성적 통합관리 시스템(사이버국가고시센터) 등록 유효기간이 기존 2년에서 5년으로 대폭 확대 인정되면서, 수험생들은 한 번 취득한 공인 어학성적을 토익, 토스, 오픽, 지텔프, 텝스 등 다양한 전형에 맞추어 유기적으로 환산하여 제출해야 할 필요성이 매우 커졌습니다.
       </p>
+
+      <div class="guide-callout">
+        <strong>💡 어학 시험 선택 핵심 팁:</strong> 단기간(2~4주)에 공무원·군무원 통과 자격을 맞추려면 문법 위주의 <strong>지텔프 Level 2(65점)</strong>가 가장 효율적이며, 삼성·현대차 등 대기업 취업이 목표라면 실전 회화 중심의 <strong>오픽 IH</strong> 또는 템플릿 대응이 용이한 <strong>토익스피킹 AL(160점)</strong>을 취득하는 것이 가장 유리합니다.
+      </div>
 
       <h3>1. 인사혁신처 및 공공기관 5대 어학시험 공식 환산 매트릭스</h3>
       <p>
@@ -442,33 +468,47 @@
       </p>
     </article>
 
+    <!-- 공인 FAQ 아코디언 -->
     <div style="margin-top: 1.5rem;">
       <h2 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 1rem; color: var(--secondary);">자주 묻는 질문 (FAQ)</h2>
+      
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">
-          <span>Q. 토익스피킹 시험 점수 체계가 개편되었는데 기존 레벨(Level 6, 7)과 어떻게 연결되나요?</span>
+          <span>Q1. 토익스피킹 점수 체계가 개편되었는데 기존 레벨(Level 6, 7)과 어떻게 연결되나요?</span>
           <span>+</span>
         </div>
         <div class="faq-a" style="display: none;">
           토익스피킹은 ACTFL 등급 체계와 일원화되어 개편되었습니다. 과거 'Level 7'은 취득 점수에 따라 Advanced Low(AL, 160~180점) 또는 Intermediate High(IH, 140~150점)로 표기되며, 과거 'Level 6'은 Intermediate Mid(IM1~IM3, 110~130점)에 대응합니다. 현재 대기업 공채 접수 시에는 개편된 ACTFL 등급명과 200점 만점 기준 점수를 동시에 입력하게 됩니다.
         </div>
       </div>
+
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">
-          <span>Q. 공기업 5년 인정 사전등록제도에 토스와 오픽도 등록할 수 있나요?</span>
+          <span>Q2. 공기업 5년 인정 사전등록제도에 토스와 오픽도 등록할 수 있나요?</span>
           <span>+</span>
         </div>
         <div class="faq-a" style="display: none;">
           네, 등록 가능합니다. 인사혁신처 사이버국가고시센터의 '공동활용 어학사전등록' 시스템에는 토익, 토익스피킹뿐만 아니라 OPIc, 텝스, 지텔프 모두 등록할 수 있습니다. 단, 반드시 각 시험의 '유효기간 2년 만료 전'에 등록을 완료해야 최대 5년까지 공공기관 인정 혜택을 받을 수 있습니다.
         </div>
       </div>
+
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">
-          <span>Q. 이공계 엔지니어 직무도 토익 800점 이상이 필수인가요?</span>
+          <span>Q3. 이공계 엔지니어 직무도 토익 800점 이상이 필수인가요?</span>
           <span>+</span>
         </div>
         <div class="faq-a" style="display: none;">
           사기업 이공계(연구개발, 생산기술)의 경우 토익 700점대 또는 오픽 IM1~IM2 수준만으로도 서류 지원 자격을 충족하는 경우가 많습니다. 다만 한전, 발전사 등 서류 배수가 정량적으로 제한되는 메이저 공기업 기술직군은 지원자들의 상향 평준화로 인해 토익 800점 또는 기사 자격증 2개(쌍기사)를 갖추어야 안정적인 서류 통과가 가능합니다.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Q4. 어학 성적의 소수점 환산 시 올림 처리가 되나요?</span>
+          <span>+</span>
+        </div>
+        <div class="faq-a" style="display: none;">
+          대부분의 채용 전산망은 공인 환산표의 구간별 환산점을 그대로 적용하며, 중간 점수에 대한 자의적 올림은 인정하지 않습니다. 예를 들어 지텔프 76점이 토익 850점 구간에 정확히 매핑되어 있다면 해당 점수 그대로 공식 인정됩니다.
         </div>
       </div>
     </div>
@@ -489,8 +529,20 @@
       <span>|</span>
       <a href="jobs.html">실시간 채용공고</a>
     </div>
-    <p>본 변환기의 환산 기준은 2026년도 인사혁신처 어학성적 공식 변환표 및 4대 그룹사 채용 기준을 준용하였습니다.</p>
-    <p style="margin-top: 6px;">© 2026 ByteCheck Global. All rights reserved.</p>
+    <div class="footer-legal-bar">
+      <a href="terms.html">이용약관</a>
+      <span>|</span>
+      <a href="privacy.html">개인정보처리방침</a>
+      <span>|</span>
+      <a href="privacy.html#disclaimer">법적 면책조항</a>
+      <span>|</span>
+      <a href="contact.html">문의하기 (Contact Us)</a>
+    </div>
+    <div class="footer-disclaimer">
+      본 변환기의 환산 기준은 2026년도 인사혁신처 어학성적 공식 변환표 및 4대 그룹사 채용 기준을 준용하였습니다. 각 기업의 채용 차수 및 세부 모집요강에 따라 인정 시험 및 기준 등급이 다를 수 있으므로 지원 전 반드시 공식 공고를 확인하시기 바랍니다.<br>
+      <strong>개인정보 보호 정책 요약:</strong> ByteCheck는 이용자의 어떠한 점수 조회 데이터도 서버로 전송하거나 수집하지 않으며 모든 연산은 이용자 기기(로컬 브라우저)에서 안전하게 실행됩니다.
+      <p style="margin-top: 8px; font-weight:700;">© ByteCheck Global. All rights reserved.</p>
+    </div>
   </footer>
 
   <script>
