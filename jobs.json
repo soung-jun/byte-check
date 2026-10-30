@@ -846,15 +846,6 @@
     "url": "https://www.kalis.or.kr/www/brd/m_630/view.do?seq=325&srchFr=&srchTo=&srchWord=&srchTp=&itm_seq_1=0&itm_seq_2=0&multi_itm_seq=0&company_cd=&company_nm=&p_stat=&p_itmseq1=&diviTp="
   },
   {
-    "company": "한국환경연구원",
-    "title": "[한국환경연구원] 2026년 제14차 인턴직 채용공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "endDate": "2026-11-11",
-    "applyUrl": "https://kei.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=270512",
-    "url": "https://kei.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=270512"
-  },
-  {
     "company": "서민금융진흥원",
     "title": "2026년도 서민금융진흥원 제4차 기간제(민생지킴대출) 직원 채용 공고",
     "location": "전국",
@@ -934,6 +925,15 @@
     "endDate": "2026-11-12",
     "applyUrl": "https://i815.or.kr/2018/news/news.do?mode=V&no=997470",
     "url": "https://i815.or.kr/2018/news/news.do?mode=V&no=997470"
+  },
+  {
+    "company": "한국문화예술위원회",
+    "title": "2026년 하반기 제2차 한국문화예술위원회 휴직대체인력(일반행정) 및 계약직(일반행정) 채용",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "endDate": "2026-11-13",
+    "applyUrl": "https://www.arko.or.kr/board/view/4054?bid=&page=&cid=1811333",
+    "url": "https://www.arko.or.kr/board/view/4054?bid=&page=&cid=1811333"
   },
   {
     "company": "한국보훈복지의료공단",
