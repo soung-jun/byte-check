@@ -456,6 +456,45 @@
     let filteredJobs = [];
     let currentPage = 1;
 
+    // 제목, 기관명, 기존 위치값에서 실제 행정구역(지역)을 정밀 판별하는 헬퍼 함수
+    function detectRegion(job) {
+      const loc = (job.location || job.workRgn || job.workRgnNm || '').trim();
+      const title = (job.title || job.pblntTitle || job.recrutPblntSnDesc || '').trim();
+      const comp = (job.company || job.instNm || '').trim();
+      const combined = `${loc} ${title} ${comp}`;
+
+      // 1. 기존 location 필드가 유효하고 '전국', '기타'가 아니면 우선 적용
+      if (loc && loc !== '전국' && loc !== '기타' && loc !== 'null') {
+        return loc;
+      }
+
+      // 2. 제목과 기관명 텍스트에서 시/도 및 주요 시·군 지명 정밀 매핑
+      const rules = [
+        { regex: /(서울|본사|강남|여의도|송파|종로|마포|영등포)/, name: '서울' },
+        { regex: /(부산|해운대|서면|동래)/, name: '부산' },
+        { regex: /(대구|수성구|달서구)/, name: '대구' },
+        { regex: /(인천|송도|청라|영종)/, name: '인천' },
+        { regex: /(광주|보훈병원|상무지구|첨단)/, name: '광주' },
+        { regex: /(대전|유성|둔산|대덕)/, name: '대전' },
+        { regex: /(울산)/, name: '울산' },
+        { regex: /(세종)/, name: '세종' },
+        { regex: /(경기|수원|성남|판교|분당|고양|일산|용인|안양|평택|화성|동탄|의정부|시흥|파주|김포|부천|광명|하남|남양주|이천|안산)/, name: '경기' },
+        { regex: /(강원|춘천|원주|강릉|동해|속초|삼척|태백|영월|평창|정선|철원|화천|양구|인제|고성|양양)/, name: '강원' },
+        { regex: /(충북|충남|충청|청주|충주|제천|천안|아산|서산|당진|논산|보령|공주|홍성|예산|음성|진천)/, name: '충청' },
+        { regex: /(전북|전남|전라|전주|익산|군산|여수|순천|목포|나주|광양|다도해|남원|정읍|김제|완주|영암)/, name: '전라' },
+        { regex: /(경북|경남|경상|포항|구미|경주|안동|김천|영주|상주|문경|창원|김해|진주|양산|거제|통영|사천|밀양|울진|영덕)/, name: '경상' },
+        { regex: /(제주|서귀포)/, name: '제주' }
+      ];
+
+      for (const rule of rules) {
+        if (rule.regex.test(combined)) {
+          return rule.name;
+        }
+      }
+
+      return '전국';
+    }
+
     function toggleAccordion(header) {
       const item = header.parentElement;
       const arrow = header.querySelector('.accordion-arrow');
@@ -519,7 +558,6 @@
       const container = document.getElementById('jobsContainer');
       try {
         const rawData = await fetchWithFallback();
-        // 봇에서 이미 유효한 활성 공고만 저장하므로 배열 그대로 안전하게 연결합니다.
         allJobs = Array.isArray(rawData) ? rawData : [];
         filteredJobs = [...allJobs];
         renderPage();
@@ -540,16 +578,22 @@
       filteredJobs = allJobs.filter(job => {
         const title = (job.title || job.pblntTitle || job.recrutPblntSnDesc || '').toLowerCase();
         const company = (job.company || job.instNm || '').toLowerCase();
-        const location = (job.location || job.workRgn || job.workRgnNm || '');
+        const resolvedRegion = detectRegion(job);
 
         const matchesSearch = !search || company.includes(search) || title.includes(search);
         
         let matchesRegion = true;
         if (region) {
           if (region === '전국') {
-            matchesRegion = location.includes('전국');
+            matchesRegion = resolvedRegion === '전국';
           } else {
-            matchesRegion = location.includes(region) || company.includes(region) || title.includes(region);
+            // 충청 선택 시 충남/충북 포함, 전라 선택 시 전남/전북 포함, 경상 선택 시 경남/경북 포함
+            matchesRegion = resolvedRegion.includes(region) || 
+                            company.includes(region) || 
+                            title.includes(region) ||
+                            (region.startsWith('충') && resolvedRegion.includes('충')) ||
+                            (region.startsWith('전') && resolvedRegion.includes('전')) ||
+                            (region.startsWith('경') && resolvedRegion.includes('경'));
           }
         }
 
@@ -577,7 +621,7 @@
       container.innerHTML = currentItems.map(job => {
         const title = job.title || job.pblntTitle || job.recrutPblntSnDesc || '채용 공고';
         const company = job.company || job.instNm || '공공기관';
-        const location = job.location || job.workRgn || job.workRgnNm || '전국';
+        const location = detectRegion(job); // 정밀 분석된 지역명 반영
         const hireType = job.hireType || job.hireTypeNm || '정규직/계약직';
         const endDate = job.endDate || job.pbancEndYmd || '채용 마감 시';
         
