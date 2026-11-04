@@ -297,39 +297,6 @@
     "url": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019997"
   },
   {
-    "company": "국립중앙의료원",
-    "title": "계약직 연구원/행정(전북응급의료지원센터) 채용 재공고",
-    "location": "전라",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "1. 계약직 연구원(전북응급의료지원센터) [필수] · 보건학, 의료정보학, 통계학, 경영학 학사 학위 이상 소지자(졸업예정자 미포함) · 전북특별자치도 근무 가능자 [학위 인정 범위] - 졸업증명서 또는 학위수여증명서 상에 해당 학위가 ‘보건학’ 또는 ‘의료정보학’ 또는 ‘통계학’또는 ‘경영학’ 인 경우 - 졸업증명서 또는 학위수여증명서 상 전공(학과)명에 ‘보건’ 또는 ‘의료정보’ 또는 ‘통계’ 또는 ‘경영’이 포함된 경우 2. 계약직 행정(전북응급의료지원센터) [필수] · 보건학, 행정학, 법학, 회계학 학사 학위 이상 소지자(졸업예정자 미포함) · 전북특별자치도 근무 가능자 [학위 인정 범위] - 졸업증명서 또는 학위수여증명서 상에 해당 학위가 ‘보건학’ 또는 ‘행정학’ 또는 ‘법학’또는 ‘회계학’ 인 경우 - 졸업증명서 또는 학위수여증명서 상 전공(학과)명에 ‘보건’ 또는 ‘행정’ 또는 ‘법’ 또는 ‘회계’가 포함된 경우",
-    "endDate": "2026-11-09",
-    "applyUrl": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=270826",
-    "url": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=270826"
-  },
-  {
-    "company": "국립중앙의료원",
-    "title": "계약직 연구원-휴직대체(충남응급의료지원센터) 채용 재공고",
-    "location": "충청",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "[필수] · 보건학, 간호학, 통계학 등 관련 분야 학사학위 소지자 [학위 인정 범위] 1. 졸업증명서 또는 학위수여증명서 상에 해당 학위가 ‘보건학’ 또는 ‘간호학’ 또는 통계학‘인 경우 2. 졸업증명서 또는 학위수여증명서 상 전공(학과)명에 ‘보건’ 또는‘ 간호’ 또는 ‘통계’가 포함된 경우 · 충남지역 근무 가능자(최초근무지: 충남 홍성군 내포신도시) [우대] · 간호학, 보건학, 통계학 석사학위 소지자 · 연구 과제 수행 및 관리 경험자 · 통계(SPSS, SAS, R 등)프로그램 사용 및 GIS 분석 가능자",
-    "endDate": "2026-11-09",
-    "applyUrl": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=270823",
-    "url": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=270823"
-  },
-  {
-    "company": "국립중앙의료원",
-    "title": "계약직 전문의(서울인천광역응급의료상황팀) 채용 재공고",
-    "location": "서울",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "[필수] · 의사 면허 및 응급의학 전문의 자격 소지자 · 전문의 자격 취득 후 5년 이상 진료 및 관련 연구 경력이 있는 자 · 권역 또는 지역응급의료센터에서 2년 이상 부서장 경력이 있는 자 · 서울지역 근무 가능 자",
-    "endDate": "2026-11-09",
-    "applyUrl": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=270820",
-    "url": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=270820"
-  },
-  {
     "company": "(재)우체국물류지원단",
     "title": "우체국물류지원단 경인지사 안양,부평물류사업소 기간제(발착직, 대체인력) 채용 공고",
     "location": "경기",
@@ -625,6 +592,17 @@
     "endDate": "2026-11-13",
     "applyUrl": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019995",
     "url": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM019995"
+  },
+  {
+    "company": "국립공원공단",
+    "title": "[지리산전남] 지리산국립공원전남사무소 기간제(환경관리) 직원 채용 공고",
+    "location": "전라",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "1. 공단 인사규정 제18조(결격사유)에 해당되지 않는 자 2. 근무시작(예정)일부터 근무 가능한 자 3. 연령, 전공, 학력 등 제한 없음",
+    "endDate": "2026-11-16",
+    "applyUrl": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM020013",
+    "url": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM020013"
   },
   {
     "company": "국립공원공단",
@@ -1252,6 +1230,17 @@
     "endDate": "2026-11-17",
     "applyUrl": "https://nierecruit.fairy.im/announcement/detail/120",
     "url": "https://nierecruit.fairy.im/announcement/detail/120"
+  },
+  {
+    "company": "에너지경제연구원",
+    "title": "[에너지경제연구원] 위촉연구원 채용공고(전력정책연구실)",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "○ 재학생, 휴학생, 취업결정자 제외 ○ 남자의 경우 병역필 또는 면제자 ○ 연구원 인사규정 제9조 결격사유에 해당되지 아니하는 자",
+    "endDate": "2026-11-18",
+    "applyUrl": "https://recruit.keei.re.kr:10443/ext/rec/rec_1010.jsp?ANNC_NO=26110401",
+    "url": "https://recruit.keei.re.kr:10443/ext/rec/rec_1010.jsp?ANNC_NO=26110401"
   },
   {
     "company": "충북대학교병원",
