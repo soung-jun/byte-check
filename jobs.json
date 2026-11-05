@@ -23,28 +23,6 @@
   },
   {
     "company": "국립공원공단",
-    "title": "[월출산] 월출산국립공원사무소 한시인력(산불감시) 직원 채용 재공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "1. 공단「인사규정」제18조(결격사유)에 해당되지 않은 자 2. 근무시작(예정)일부터 근무 가능한 자 3. 그 외 전공, 학력 등 제한 없음",
-    "endDate": "2026-11-06",
-    "applyUrl": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM020003",
-    "url": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM020003"
-  },
-  {
-    "company": "국립공원공단",
-    "title": "[주왕산] 2026년도 주왕산국립공원 한시인력(가을철 산불감시원) 직원 채용",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "- 공단 인사규정 제18조(결격사유)에 해당되지 않는 자 - 근무시작(예정)일부터 근무 가능한 자 - 그 외 전공, 학력 등 제한 없음",
-    "endDate": "2026-11-06",
-    "applyUrl": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM020002",
-    "url": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM020002"
-  },
-  {
-    "company": "국립공원공단",
     "title": "[지리산전북] 지리산국립공원전북사무소 한시인력(수익시설) 직원 채용",
     "location": "전라",
     "hireType": "정규직/계약직",
@@ -187,17 +165,6 @@
     "url": "https://www.comwel.or.kr/recruit/hp/main.do"
   },
   {
-    "company": "근로복지공단",
-    "title": "[인천병원] 공무직(시설미화원) 보훈특별전형 채용 공고",
-    "location": "인천",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "ㅇ 채용분야 응시자격 - 시설미화원 : 학력 및 경력 제한 없음 ㅇ 「국가유공자 등 예우 및 지원에 관한 법률」 등 보훈관계법률에 따른 취업지원대상자이면서 국가보훈부의 추천을 받은 자 ㅇ 병역사항: 「병역법」 제76조에서 정한 병역의무 불이행 사실이 없는자 ※ 현재 군복무 중인 경우 임용예정일 이전 전역이 가능한 자 ㅇ 기타: 임용예정일 즉시 근무가 가능한 자 ※ 임용예정일은 공단 사정에 따라 변경될 수 있음 ㅇ 연령제한 없음(단, 임용일 기준 65세(정년) 미만인 자)",
-    "endDate": "2026-11-09",
-    "applyUrl": "https://www.comwel.or.kr/recruit/hp/main.do",
-    "url": "https://www.comwel.or.kr/recruit/hp/main.do"
-  },
-  {
     "company": "(재)우체국물류지원단",
     "title": "우체국물류지원단 경인지사 안양,부평물류사업소 기간제(발착직, 대체인력) 채용 공고",
     "location": "경기",
@@ -253,15 +220,37 @@
     "url": "https://www.nps.or.kr/pnsgdnc/hiregdnc/getOHAE0004M0List.do?menuId=MN24000969"
   },
   {
-    "company": "학교법인한국폴리텍",
-    "title": "한국폴리텍대학 창원캠퍼스 체험형 청년인턴(일반) 채용 공고",
-    "location": "경상",
+    "company": "한국도로공사",
+    "title": "한국도로공사 계양강화건설사업단 기간제근로자(사무원) 채용공고",
+    "location": "전국",
     "hireType": "정규직/계약직",
     "recruitCount": "공고문 참조",
-    "education": "○ (연령) 원서접수 마감일 기준 만 15세 이상 34세 이하인 청년 ※ 청년고용촉진 특별법 시행령 제2조(청년의 나이): 15세 이상 34세 이하 ○ (학력·성별) 제한 없음 ○ 학교법인 인사규정 제19조의 결격사유에 해당하지 않는 자 ○ 최종합격자 발표 후 임용예정일에 근무 가능한 자 ○ 청년 일경험 기회 제공 취지를 감안하여 취업자 및 취업이 결정된 자 등은 원칙적으로 제외 (폴리텍대학 청년인턴 유경험자 제외)",
-    "endDate": "2026-11-10",
-    "applyUrl": "https://www.kopo.ac.kr/changwon/board.do?menu=10551&mode=view&post=788743",
-    "url": "https://www.kopo.ac.kr/changwon/board.do?menu=10551&mode=view&post=788743"
+    "education": "o 연령, 성별, 학력 제한 없음 o 우리공사 기간제근로자관리예규 제6조의1 제2항의 결격사유가 없는 자 o 해당업무 수행에 자질을 갖춘 자",
+    "endDate": "2026-11-11",
+    "applyUrl": "https://www.ex.co.kr",
+    "url": "https://www.ex.co.kr"
+  },
+  {
+    "company": "한국도로공사",
+    "title": "한국도로공사 중부도로개량사업단 기간제근로자(사무원) 채용공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "o 연령, 성별, 학력 제한 없음 o 우리공사 기간제근로자관리예규 제6조의1 제2항의 결격사유가 없는 자 o 채용일로부터 근무 가능한 자",
+    "endDate": "2026-11-11",
+    "applyUrl": "https://www.ex.co.kr",
+    "url": "https://www.ex.co.kr"
+  },
+  {
+    "company": "한국도로공사",
+    "title": "한국도로공사 동서울지사 기간제근로자(안전순찰원) 채용공고",
+    "location": "서울",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "o 연령, 성별, 학력 제한 없음 o 제1종 보통면허 취득 후 운전경력 1년 이상인 자로 차량 운전이 가능한 자 (채용 공고일부터 근무시작일까지 법률 또는 법원의 판결에 의하여 제1종 보통 운전면허가 취소 또는 정지되지 아니한 자) o 우리공사 기간제근로자관리예규 제6조의1 제2항의 결격사유가 없는 자 o 채용일부터 휴일 및 야간 근무수행이 가능한 자",
+    "endDate": "2026-11-11",
+    "applyUrl": "https://www.ex.co.kr",
+    "url": "https://www.ex.co.kr"
   },
   {
     "company": "근로복지공단",
@@ -385,6 +374,28 @@
     "url": "https://www.kopo.ac.kr/namdaegu/board.do?menu=10548&mode=view&post=788808"
   },
   {
+    "company": "주택관리공단(주)",
+    "title": "채용형 인턴 채용공고(주택관리공단 대구경북지사)",
+    "location": "대구",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "○ 응시자격 · 학력, 어학, 성별, 연령 : 제한없음 · 병역 : ?병역법? 제76조에서 정한 병역의무 불이행 사실이 없는 자 * 단, 최종 합격자 발표일까지 전역예정자로서 전형절차에 응시 가능자 지원 가능 · 기타 : 공단 직원채용 결격사유에 해당되지 않는 자",
+    "endDate": "2026-11-12",
+    "applyUrl": "https://www.kohom.or.kr",
+    "url": "https://www.kohom.or.kr"
+  },
+  {
+    "company": "주택관리공단(주)",
+    "title": "채용형 인턴 채용공고(주택관리공단 충북지사)",
+    "location": "충청",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "○ 응시자격 · 학력, 어학, 성별, 연령 : 제한없음 · 병역 : ?병역법? 제76조에서 정한 병역의무 불이행 사실이 없는 자 * 단, 최종 합격자 발표일까지 전역예정자로서 전형절차에 응시 가능자 지원 가능 · 기타 : 공단 직원채용 결격사유에 해당되지 않는 자",
+    "endDate": "2026-11-12",
+    "applyUrl": "https://www.kohom.or.kr",
+    "url": "https://www.kohom.or.kr"
+  },
+  {
     "company": "서민금융진흥원",
     "title": "2026년도 서민금융진흥원 제4차 기간제(민생지킴대출) 직원 채용 공고",
     "location": "전국",
@@ -429,17 +440,6 @@
     "url": "https://www.comwel.or.kr/recruit/hp/main.do"
   },
   {
-    "company": "동남권원자력의학원",
-    "title": "[직원채용] 별정직 간호직(방사선비상진료센터) 채용(재공고)",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "과학기술정보통신부 산하 정부 출연연구기관인 동남권원자력의학원에서 21세기 암치료의 새빛을 열어갈 인재를 찾습니다. 우리 기관은 정부의 블라인드 채용 가이드라인에 따라 응시절차 및 방법을 준수하고 있습니다. 따라서 응시자는 모집 공고문과 블라인드 채용 유의사항을 잘 숙지하여 불이익이 발생하지 않도록 주의 바랍니다. 1. 모집부문 : 별정직 간호직(방사선비상진료센터) 2. 모집인원: 1명 [직무 내용] ㆍ방사선비상진료센터 고유 업무(방사선영향클리닉 운영, 방사선비상진료교육 및 훈련 수행, 방사선비상 시 환자처치 등) ㆍ방사선비상진료센터 기본사업, 수탁사업(찾아가는 의료서비스 및 방사능방재 교육) 등 각종 방사선비상진료센터 사업 관련 업무 수행 ㆍ기타 방사선비상진료센터 운영 업무 대응 [필수사항] ㆍ간호사 면허 소지자 ㆍ병역의 의무를 기피한 사실이 없는 자 ㆍ국가공무원법 제33조의 결격사유가 없는 자 ㆍ의학원 인사 및 채용 규정상 결격사유가 없는 자 ㆍ공고마감일 기준 위 기준을 모두 충족하는 자 [우대사항] ㆍ방사선비상진료 관련 전문지식 및 경력 보유한 자 ㆍ운전면허 소지자 [근무조건] ㆍ근 무 처: 동남권원자력의학원(부산광역시 기장군 장안읍 좌동길 40) ㆍ급 여: 내규에 따라 산정 ㆍ계약기간: 채용 시 ~ 1년 ㆍ근무시간: 08:30 ~ 17:30 [참고사항] · 의학원 사정에 의하여 타 부서로 배치 및 근무형태 전환 될 수 있음 [절차] 1. 서류심사 (채용예정인원의 7배수) 2. 면접전형 (채용예정인원) 3. 채용점검 4. 신원조회 및 신체검사 [심사기준] 1. 서류심사 ㆍ기관적합성 : 자기소개서 등을 바탕으로 의학원의 비전 및 핵심가치 등 ㆍ업무적합성 : 경력기술서 및 경력 등을 바탕으로 직무에 대한 적합성 평가 ㆍ자기소개서 및 경력(임상실습) 기술서에 편견이 개입되어 차별을 야기할 수 있는 인적사항(성명, 성별, 사진, 출신지역(거주지), 나이, 학교명, 가족사항(학력, 재산, 직업, 종교), 병역의무이행, 혼인여부 및 자녀유무 등)과 관련된 내용이 포함되어 있는 경우 부적격 처리함 ㆍ해당 응시부문의 필수사항(간호사 면허) 미기재 시 부적격 처리함 ㆍ응시원서 상 모집부문이 다를 경우 부적격 처리함 2. 면접전형 ㆍ직무분야에 대한 전문성, 혁신성 및 발전가능성 등 ㆍ환자와 국민건강 및 직무에 대한 헌신, 상호존중, 긍정적 사고 및 적극적 행동, 책임성 등 ㆍ의학원에 대한 관심과 이해도, 태도 및 자세 등 * 응시원서에 블라인드 채용에 위배되는 내용 기재시 불합격 처리합니다. 자세한 사항은 모집공고문을 참고하시기 바랍니다.",
-    "endDate": "2026-11-12",
-    "applyUrl": "https://diramsjob.recruiter.co.kr/career/home",
-    "url": "https://diramsjob.recruiter.co.kr/career/home"
-  },
-  {
     "company": "근로복지공단",
     "title": "[정선병원] 별정직 의사(응급실전담의) 채용 공고",
     "location": "강원",
@@ -471,6 +471,17 @@
     "endDate": "2026-11-13",
     "applyUrl": "https://www.bohun.or.kr/main/na/ntt/selectNttList.do?bbsId=1158&rcrut=care&mi=37031",
     "url": "https://www.bohun.or.kr/main/na/ntt/selectNttList.do?bbsId=1158&rcrut=care&mi=37031"
+  },
+  {
+    "company": "근로복지공단",
+    "title": "[동해병원] 의료직(약사) 4급 채용 공고",
+    "location": "강원",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "ㅇ 채용분야 응시자격 - 약사: 약사법상 약사 면허증 소지자 * 모든 전형 응시자격은 응시원서 마감일 기준 ㅇ 병역사항: 병역법 제76조에서 정한 병역의무 불이행 사실이 없는 자 ※ 현재 군복무 중인 경우 임용예정일 이전 전역이 가능한 자 ㅇ 연령요건: 제한없음(단, 임용일 기준 60세 미만(정년)인 자)",
+    "endDate": "2026-11-16",
+    "applyUrl": "https://www.comwel.or.kr/recruit/hp/main.do",
+    "url": "https://www.comwel.or.kr/recruit/hp/main.do"
   },
   {
     "company": "서울대학교치과병원",
@@ -737,28 +748,6 @@
     "url": "https://cnuhinsa.recruiter.co.kr/career/home"
   },
   {
-    "company": "한국스포츠레저(주)",
-    "title": "한국스포츠레저(주) 기간제전임직 채용공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "[공통자격요건] ㅇ학력, 연령, 성별 제한 없음 * 단, 공고일 현재 만 60세 미만인 자 ㅇ한국스포츠레저(주) 인사규정 제22조(임용결격사유)에 해당하지 않는 자 ㅇ채용일 즉시 근무 가능한 자 [직무자격요건] ㅇ IT개발 - IT 관련 자격증 중 1개 이상 소지자(정보처리기사, 정보처리산업기사) ※ 기타 자세한 사항은 첨부파일의 채용공고를 참조",
-    "endDate": "2026-11-16",
-    "applyUrl": "https://www.kospole.co.kr/toto/board/detail/4285?pageNo=1",
-    "url": "https://www.kospole.co.kr/toto/board/detail/4285?pageNo=1"
-  },
-  {
-    "company": "국민연금공단",
-    "title": "국민연금공단 공인노무사 및 정보보안전문가(전문계약직) 공개채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "[일반요건] ○ 연령·성별 등 제한 없음(단, 임용일 기준 공단 정년 만 60세 이상자는 제외) ○ 대한민국 국적을 보유한 사람 ○ 공단 「인사규정」 제11조의 결격사유에 해당하지 않는 사람 ○ 임용(예정)일부터 근무가 가능한 사람 [경력요건] 1. 공인노무사 ○ 「공인노무사법」 제5조에 따른 공인노무사 자격을 취득 후 해당 분야 경력이 3년 이상인 사람 2. 정보보안전문가 ○ (필수) 아래 요건 중 1개 이상을 충족하는 사람 ① 정보화 분야 학사 학위 취득 후 정보보안 분야 실무경력이 5년 이상인 사람 ② 정보화 분야 석사 학위 이상 취득 후 정보보안 분야 실무경력이 3년 이상인 사람 - (실무경력 인정분야) 정보보안 취약점 진단, 정보보안 침해사고 대응·분석, 정보보안시스템 구축·운영, 정보보안 관제 등 ○ (우대) 정보보안 분야 자격증을 소지한 사람 - (인정 자격증) 정보보안기사(구 정보보호전문가(SIS)), 정보시스템감사사(CISA), 정보시스템보안전문가(CISSP), 정보보호 및 개인정보보호 관리체계 인증심사원(ISMS-P), 국제표준 정보보호 인증심사원(ISO27001), 개인정보관리사(CPPG) ※ 유효기간이 있는 자격증은 접수마감일(’26.11.16.) 기준 유효한 것에 한하며, 보수교육 이수 등 자격 유지조건을 충족하여 자격 정지 또는 실효 상태가 아니여야 함",
-    "endDate": "2026-11-16",
-    "applyUrl": "https://nps.recruiter.co.kr",
-    "url": "https://nps.recruiter.co.kr"
-  },
-  {
     "company": "대한석탄공사",
     "title": "2026년 한시적계약직 특별채용 공고(팀원급)",
     "location": "전국",
@@ -933,72 +922,6 @@
     "endDate": "2026-11-17",
     "applyUrl": "https://pnuh.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=271043",
     "url": "https://pnuh.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=271043"
-  },
-  {
-    "company": "건축공간연구원",
-    "title": "건축공간연구원 위촉직 모집",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "<공통 응시자격> o 국가공무원법 제33조의 결격사유가 없는 자 o 최근 5년 이내 공공기관에서 부정한 방법으로 채용되어 채용이 취소된 사실이 없는 자 o 법률에 의하여 공민권이 정지 또는 박탈되지 아니한 자 o 남자일 경우 병역필 또는 면제자 ※ 제출된 서류에 허위가 있을 때에는 합격 또는 임용을 취소할 수 있음 ※ 최종합격자로 결정되더라도 결격사유조회, 학위검증 등에서 결격사유가 판명될 경우 임용이 취소될 수 있음 <모집분야 지원자격> o (위촉연구원) 청사 건립 건축기획 수립 용역 : 1명 - 석사 학위 소지자 - 건축, 도시 등 관련분야 전공자 우대",
-    "endDate": "2026-11-17",
-    "applyUrl": "https://recruit.auri.re.kr",
-    "url": "https://recruit.auri.re.kr"
-  },
-  {
-    "company": "대한적십자사",
-    "title": "2026년도 제14차 혈액관리본부 소속기관 의사 신규채용(중앙혈액검사센터 검사관리부장)",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "1. 모집부문 : 의사 2. 모집형태 : 비정규직(계약직) 3. 채용인원 : 1명 4. 응시 자격 : 의사면허증 소지자",
-    "endDate": "2026-11-17",
-    "applyUrl": "https://www.redcross.or.kr/redrecruit/",
-    "url": "https://www.redcross.or.kr/redrecruit/"
-  },
-  {
-    "company": "대한적십자사",
-    "title": "2026년도 제13차 혈액관리본부 소속기관 의사 신규채용(서울중앙혈액원 품질관리팀장)",
-    "location": "서울",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "1. 모집부문 : 의사 2. 모집형태 : 비정규직(계약직) 3. 채용인원 : 1명 4. 응시 자격 : 의사면허증 소지자",
-    "endDate": "2026-11-17",
-    "applyUrl": "https://www.redcross.or.kr/redrecruit/",
-    "url": "https://www.redcross.or.kr/redrecruit/"
-  },
-  {
-    "company": "한국청소년상담복지개발원",
-    "title": "제2026-1호 국립청소년인터넷드림마을 청년인턴(체험형) 모집",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "ㅇ 청년인턴(체험형)_일반행정(5개월) : 1명 - 지원서 접수마감일 기준 만 34세 이하",
-    "endDate": "2026-11-17",
-    "applyUrl": "https://kyci.fairyhr.com",
-    "url": "https://kyci.fairyhr.com"
-  },
-  {
-    "company": "한국청소년상담복지개발원",
-    "title": "제2026-3호 국립청소년인터넷드림마을 직원 모집",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "ㅇ 공무직 : 일반직 4급(청소년상담복지) 1명 1. 상담관련 분야의 석사학위 취득자 2. 상담관련 분야 학사학위 취득자로서 관련 경력 2년 이상인 자 3. 기타 이와 동등한 자격이 있다고 인정되는 자 ㅇ 공무직 : 일반직 5급(사업운영) 1명 1. 고등학교 이상 졸업자로서 관련 분야의 능력이 있다고 인정되는 자 2. 9급 이상 공무원으로 재직한 자 3. 기타 이와 동등한 자격이 있다고 인정되는 자",
-    "endDate": "2026-11-17",
-    "applyUrl": "https://kyci.fairyhr.com/",
-    "url": "https://kyci.fairyhr.com/"
-  },
-  {
-    "company": "정보통신정책연구원",
-    "title": "2026년도 계약직 행정원 채용공고(휴직대체)",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "o 해당분야 학사학위 이상 소지자 - 경제학, 경영학, 행정학, 법학 등 인문·사회과학분야 전공자 o 결격사유에 해당하지 않는 자 o 대한민국 국적을 가진 자(외국인 또는 이중국적자가 아닌 자)",
-    "endDate": "2026-11-17",
-    "applyUrl": "https://www.kisdi.re.kr/bbs/view.do?key=m2101113056115&bbsSn=115180",
-    "url": "https://www.kisdi.re.kr/bbs/view.do?key=m2101113056115&bbsSn=115180"
   },
   {
     "company": "한국보훈복지의료공단",
@@ -1408,6 +1331,61 @@
     "url": "https://www.kiost.ac.kr/cop/bbs/BBSMSTR_000000000073/selectBoardList.do"
   },
   {
+    "company": "충남대학교병원",
+    "title": "[대전] 2026년 11월 충남대학교병원 업무지원직(기계기사, 전기기사, 보조원, 환경사) 공개채용 공고",
+    "location": "대전",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "직종 및 분야별 응시자격 첨부파일 참고",
+    "endDate": "2026-11-19",
+    "applyUrl": "https://cnuhinsa.recruiter.co.kr/career/home",
+    "url": "https://cnuhinsa.recruiter.co.kr/career/home"
+  },
+  {
+    "company": "충남대학교병원",
+    "title": "[대전] 2026년 11월 충남대학교병원 원무직(취사) 공개채용 공고",
+    "location": "대전",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "직종 및 분야별 응시자격 첨부파일 참고",
+    "endDate": "2026-11-19",
+    "applyUrl": "https://cnuhinsa.recruiter.co.kr/career/home",
+    "url": "https://cnuhinsa.recruiter.co.kr/career/home"
+  },
+  {
+    "company": "충남대학교병원",
+    "title": "[대전] 2026년 11월 충남대학교병원 약무직(면허취득예정자) 공개채용 공고",
+    "location": "대전",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "2027년 약사 면허 취득 예정자",
+    "endDate": "2026-11-19",
+    "applyUrl": "https://cnuhinsa.recruiter.co.kr/career/home",
+    "url": "https://cnuhinsa.recruiter.co.kr/career/home"
+  },
+  {
+    "company": "한국해양수산연수원",
+    "title": "한국해양수산연수원 2026년도 제4차 계약직 직원 채용 공고",
+    "location": "경기",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "○ 채용분야별 공고문의 응시자격기준 참조 [공통적용] ○ 공고기간 내 연수원에서 모집하는 공고에 중복지원 불가(중복지원 시 심사대상에서 제외) ○ 공고일 기준 소지면허 및 자격사항이 유효하여야 함 ○ 채용분야에 적격자가 없는 경우 채용하지 않을 수 있음 ○ 임용 시기는 연수원 사정에 따라 변경될 수 있음",
+    "endDate": "2026-11-19",
+    "applyUrl": "https://kimft.recruiter.co.kr",
+    "url": "https://kimft.recruiter.co.kr"
+  },
+  {
+    "company": "한국전력공사",
+    "title": "기간제근로자(대체인력) 채용공고[부산울산본부]",
+    "location": "부산",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "□ 학력 : 제한없음 □ 연령 : 제한없음 □ 병역 : 병역법 제76조에서 정한 병역의무 불이행 사실이 없는자 □ 지원자격 ○ 사무 : 제한없음(단, 서류심사 시 제출한 관련 자격을 평가요소로 활용) ○ 전기 : 전기(공사)산업기사 이상 ○ 배전담당(가) : 신체조건 - 색맹이 아닌자, 자격요건 - 필수 1,2,3,4 모두 보유 - 필수 1 : 가공배전전공 이상 또는 지중배전전공 이상 - 필수 2 : 전기기능사 이상 또는 전기공사 산업기사 이상 - 필수 3 : 자동차 운전면허 1종 대형 - 필수 4 : 기중기운전기능사 또는 이동식크레인 및 고소작업대 조종자격 교육 이수 □ 기타 : ○ 채용구분별 근무시작일부터 근무 가능한 자(붙임1 모집공고 참조, 채용구분별 상이) ○ 지원서 접수 마감일 기준 한전 부산울산본부에서 비정규직으로 재직중이지 않은 자 ※ 기존 계약기간의 종료일이 금번 계약기간 시작일 이전인 경우는 제외함 ※ 기타 자세한 사항은 채용공고문 참조",
+    "endDate": "2026-11-19",
+    "applyUrl": "http://recruit.kepco.co.kr/sangsi",
+    "url": "http://recruit.kepco.co.kr/sangsi"
+  },
+  {
     "company": "부산대학교병원",
     "title": "2026년도 11월 계약직의사(마취통증의학과) 공개채용 모집 공고",
     "location": "부산",
@@ -1485,6 +1463,28 @@
     "url": "https://kotra.careerlink.kr/"
   },
   {
+    "company": "대한법률구조공단",
+    "title": "대한법률구조공단 창원지부 청년인턴 공개경쟁 채용시험 공고",
+    "location": "경상",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "◇ 연령 : 만 18세 이상 34세 이하(채용공고일 기준) ◇ 성별·학력 및 거주지 제한 없음",
+    "endDate": "2026-11-20",
+    "applyUrl": "https://klac.or.kr/notification/hireNotice/selectHireNoticeView.do?boardCode=241&contentId=AD_0000169664",
+    "url": "https://klac.or.kr/notification/hireNotice/selectHireNoticeView.do?boardCode=241&contentId=AD_0000169664"
+  },
+  {
+    "company": "한국농어촌공사",
+    "title": "한국농어촌공사 영산강사업단 공무직(청소원) 보훈·장애인 제한경쟁 채용공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "- 학력, 전공, 성별, 연령 제한 없음(단, 정년에 도달하지 아니한 자) - 국가유공자 등 예우 및 지원에 관한 법률에 따른 취업지원대상자 또는 장애인 고용촉진 및 직업재활법에 따른 장애인만 지원 가능 - 임용예정일로부터 즉시 업무종사 가능자 - 남자의 경우, 병역법 제76조에서 정한 병역의무 불이행 사실이 없는 자 - 공사 인사규정 제9조의 임용 결격사유가 없는 자(공고문 참조) - 근무지로 출퇴근 가능자(통근버스 미제공)",
+    "endDate": "2026-11-20",
+    "applyUrl": "https://www.ekr.or.kr/planweb/board/view.krc?dataUid=8a8bb352a08a300001a1a583feee4eb5&page=1&boardUid=402880317cc0644a017cc5e8000f06b7&contentUid=8a8bb3529665d7140199501cd3ef6280&searchType=&keyword=&categoryUid1=&categoryUid2=8a8bb3529665d714019951996437",
+    "url": "https://www.ekr.or.kr/planweb/board/view.krc?dataUid=8a8bb352a08a300001a1a583feee4eb5&page=1&boardUid=402880317cc0644a017cc5e8000f06b7&contentUid=8a8bb3529665d7140199501cd3ef6280&searchType=&keyword=&categoryUid1=&categoryUid2=8a8bb3529665d714019951996437"
+  },
+  {
     "company": "국립암센터",
     "title": "임시직(장애) 채용공고[261104]",
     "location": "전국",
@@ -1507,15 +1507,15 @@
     "url": "https://ncc.recruiter.co.kr/career/jobs/133196"
   },
   {
-    "company": "학교법인한국폴리텍",
-    "title": "한국폴리텍대학 충주캠퍼스 산학협력중점교수 채용 공고",
-    "location": "충청",
+    "company": "강원대학교병원",
+    "title": "2026-46 의사직 수시 채용 공고",
+    "location": "강원",
     "hireType": "정규직/계약직",
     "recruitCount": "공고문 참조",
-    "education": "○ 학사학위 취득 후 산업체 10년 이상 경력이 있는 자로 하며 산업체 경력의 범위는「대학교원 자격기준 등에 관한 규정」에서 정하는 적합한 산업체에 한함 ○ 응시연령: 지원당시 만 65세 미만인자",
-    "endDate": "2026-11-27",
-    "applyUrl": "https://www.kopo.ac.kr/chungju/board.do?menu=2839&mode=view&post=788495",
-    "url": "https://www.kopo.ac.kr/chungju/board.do?menu=2839&mode=view&post=788495"
+    "education": "[공통] ㅇ 성별·연령·학력 제한 없음 ㅇ 의사 면허 보유자 ㅇ 임용일부터 근무가 가능한 자 ㅇ 본원 「인사규정」 제22조의 임용결격사유에 해당하지 않는 자 [임상교수] ㅇ 임용예정일 기준 본원 「임상교수요원 임용 등에 관한 규정」 제14조의 정년(만 65세)에 도달하지 않은 자 ㅇ 전문의 자격증 보유자 ㅇ 임용예정일 기준 전임의 2년 이상 수료자 또는 이에 준하는 근무경력 2년 이상인 자(단, 군복무 경력자는 1년 10개월 이상) [진료교수] ㅇ 전문의 자격증 보유자 ㅇ 임용예정일 기준 전임의사 이상 1년 이상(단, 군복무 경력자는 10개월 이상) 근무한 경력이 있는 자 [촉탁전문의] ㅇ 전문의 자격증 보유자 [전임의] ㅇ 전문의 자격증 보유자 [일반의] ㅇ 의사 면허증 보유자",
+    "endDate": "2026-12-31",
+    "applyUrl": "https://knuh.fairyhr.com/announcement/detail/134",
+    "url": "https://knuh.fairyhr.com/announcement/detail/134"
   },
   {
     "company": "부산대학교병원",
