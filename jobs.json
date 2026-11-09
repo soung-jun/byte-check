@@ -660,28 +660,6 @@
     "url": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=271101"
   },
   {
-    "company": "국립중앙의료원",
-    "title": "무기계약직 간호조무사(간호부-인력풀) 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "[필수] 아래의 조건을 모두 충족하는 자 ·간호조무사 자격증 소지자 ·야간 및 휴일근로 가능한 자(3교대 근무)",
-    "endDate": "2026-11-18",
-    "applyUrl": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=271098",
-    "url": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=271098"
-  },
-  {
-    "company": "국립중앙의료원",
-    "title": "무기계약직 간호사A(간호부) 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "[필수] 아래의 조건을 모두 충족하는 자 ·간호사 면허증 소지자 ·종합병원 이상의 의료기관*에서 3년 이상 근무 경력자 * 의료기관: 건강보험심사평가원 등재 기준 ·3교대 근무 가능자 [우대] ·안과 전담간호사 1년 6개월 이상 근무 경력자 ※ 상기 우대조건 부합 시 입사지원의 경력(경험) 기술란에 상세 기술 ※ 임용 후 간호부 운영상 필요에 따라 부서 순환배치 될 수 있음",
-    "endDate": "2026-11-18",
-    "applyUrl": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=271059",
-    "url": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=271059"
-  },
-  {
     "company": "한국보훈복지의료공단",
     "title": "[부산보훈병원] 청년인턴(체험형-장애) 긴급채용공고",
     "location": "부산",
@@ -878,28 +856,6 @@
     "endDate": "2026-11-19",
     "applyUrl": "https://pnuyh.recruiter.co.kr/career/jobs/133165",
     "url": "https://pnuyh.recruiter.co.kr/career/jobs/133165"
-  },
-  {
-    "company": "한국보건사회연구원",
-    "title": "한국보건사회연구원 계약직 채용 공고(보건의료정책분야)",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "[모집개요] - 임용직급: 계약직 연구원 - 모집분야 및 모집인원: 보건의료정책분야 2명 - 계약기간: 임용일로부터 2027. 5. 31.까지 [지원자격] - 직무기술서상 필요자격에 명시된 자격 요건을 충족하는 자 - 국가공무원법 제33조 각 호에 해당하는 결격 사유가 없는 자 - 국가기관 및 다른 공공기관 등에서 채용비리에 연루되어 임용이 취소되거나 직권 면직된 자 또는 부패방지권익위법에 따른 비위면직자로서 각각 해당 결정일로부터 5년이 경과되지 않은 자 지원 불가",
-    "endDate": "2026-11-19",
-    "applyUrl": "https://kihasa.recruiter.co.kr",
-    "url": "https://kihasa.recruiter.co.kr"
-  },
-  {
-    "company": "부산대학교병원",
-    "title": "2026년도 전문의료인력(전임의사) 공개채용(수시) 모집 공고(양산분원)",
-    "location": "부산",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "전임의사- 전문의자격증소지자",
-    "endDate": "2026-11-19",
-    "applyUrl": "https://pnuyh.recruiter.co.kr/career/jobs/133076",
-    "url": "https://pnuyh.recruiter.co.kr/career/jobs/133076"
   },
   {
     "company": "예금보험공사",
@@ -1441,6 +1397,28 @@
     "url": "https://www.kocoal.or.kr/board/board_view.php?view_id=155&board_name=recruit&page=1"
   },
   {
+    "company": "부산대학교병원",
+    "title": "산부인과 진료전문의 모집 공고",
+    "location": "부산",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "산부인과 전문의",
+    "endDate": "2026-11-24",
+    "applyUrl": "https://pnuh.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=271870",
+    "url": "https://pnuh.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=271870"
+  },
+  {
+    "company": "한전KDN",
+    "title": "한전KDN(주) 전북사업처 배전자동화 통신공사 일용근로자 모집공고",
+    "location": "전라",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "○ 조공 - 전기 및 통신 분야 관련 업무 수행 가능자 - 운전면허 소지자(1종보통 이상) 및 1.2ㅌ톤 이상 고소작업차량 운전 가능한자 ※ 작업원 등록신청서 자격사항란에 운전면허자격 필히 기록 요함 - 건설업 기초 안전보건교육 이수자 또는 계약(작업투입)시 증빙가능자 포함",
+    "endDate": "2026-11-24",
+    "applyUrl": "https://없음.",
+    "url": "https://없음."
+  },
+  {
     "company": "한국고용정보원",
     "title": "2026년도 한국고용정보원 2차 계약직(대체인력) 채용 공고",
     "location": "전국",
@@ -1518,6 +1496,17 @@
     "url": "https://www.redcross.or.kr/redrecruit"
   },
   {
+    "company": "한국고용정보원",
+    "title": "2026년도 한국고용정보원 3차 공무직 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "□ 시설기능직(안내[보훈]) ○ 학력 및 전공 제한 없음 ○ 임용예정일(‘27.1.11) 기준 정년(만 60세)이 도래하지 않은 자 ○「국가유공자 등 예우 및 지원에 관한 법률」등 관련 법령에 따른 취업지원대상자」 ※ 상세사항은 첨부파일의 공고문 등 참고",
+    "endDate": "2026-11-25",
+    "applyUrl": "https://keis.or.kr/keis/ko/bbs/236/list.do",
+    "url": "https://keis.or.kr/keis/ko/bbs/236/list.do"
+  },
+  {
     "company": "해양수산과학기술진흥원",
     "title": "2026년도 제4차 신규직원(개방형직위 및 청년인턴) 채용 공고",
     "location": "전국",
@@ -1527,6 +1516,28 @@
     "endDate": "2026-11-25",
     "applyUrl": "https://kimst.recruiter.co.kr/",
     "url": "https://kimst.recruiter.co.kr/"
+  },
+  {
+    "company": "한국고용정보원",
+    "title": "2026년도 한국고용정보원 3차 직원(기록물관리) 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "□ 일반직5급(대리) ○ 기록물관리 ■ (필수자격) 기록물관리 전문요원 자격* 취득 이후 관련 분야 업무** 2년 이상 경력자 *「공공기록물 관리에 관한 법률 시행령」제78조에 따라 다음의 각 호의 어느 하나에 해당하는 자 1. 기록관리학 전공으로 석사 학위 이상을 취득한 자 2. 다음 각 목의 어느 하나에 해당하는 사람으로서 행정안전부령으로 정하는 기록관리학 교육과정을 이수하고, 행정안전부장관이 시행하는 기록물관리 전문요원 시험에 합격한 사람. 가. 기록관리학 학사 학위를 취득한 자 나. 역사학 또는 문헌정보학 학사 학위 이상을 취득한 자 ** 기록물관리, 아카이브관리, 기록물관리시스템 등 기록물 관련 업무(사서 업무는 제외) ※ 상세사항은 첨부파일의 공고문 등 참고",
+    "endDate": "2026-11-25",
+    "applyUrl": "https://keis.or.kr/keis/ko/bbs/236/list.do",
+    "url": "https://keis.or.kr/keis/ko/bbs/236/list.do"
+  },
+  {
+    "company": "기초과학연구원",
+    "title": "2026-6회 광과학 연구클러스터 연구직 채용 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "ㅇ 채용공고문에서 제시한 지원자격을 충족하는 자 - 모집분야별 지원자격 등 세부 내용은 공고문 참고 [응시자격 공통] ㅇ「국가공무원법」제33조 및 연구원 규정에 의한 임용 결격사유가 없는 자 ㅇ「부패방지 및 국민권익위원회의 설치와 운영에 관한 법률」제82조에 따른 비위면직자에 해당하지 않는 자 ㅇ 해외여행에 결격사유가 없는 자로 남자의 경우 병역필 또는 면제자 - 전문연구요원 지원 가능 공고인 경우, 전직자에 한해 지원 가능 ㅇ 응시서류접수 마감일 기준 지원자격 충족자",
+    "endDate": "2026-11-25",
+    "applyUrl": "https://ibs.re.kr/prog/recruit/kor/sub04_01/list.do",
+    "url": "https://ibs.re.kr/prog/recruit/kor/sub04_01/list.do"
   },
   {
     "company": "한국의약품안전관리원",
