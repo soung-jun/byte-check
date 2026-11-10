@@ -649,17 +649,6 @@
     "url": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=271110"
   },
   {
-    "company": "국립중앙의료원",
-    "title": "무기계약직 연구원(데이터기반정책연구팀) 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "[필수] 통계학 학사학위 소지자 [학위 인정 범위] 아래 조건 중 하나를 충족하는 경우 1. 졸업증명서 또는 학위수여증명서 상 학위가 ‘통계학’인 경우 2. 졸업증명서 또는 학위수여증명서 상 전공(학과)명에 ‘통계’ 또는 ‘데이터’가 포함된 경우 [우대] ㆍ통계학 석사학위 이상 소지자 ㆍ국민건강정보 DB(HANA DB) 분석 경험자, SAS, R 등 통계 프로그램 활용 가능자 ㆍ보건의료 연구 수행 및 보고서 작성 경험자",
-    "endDate": "2026-11-18",
-    "applyUrl": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=271101",
-    "url": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=271101"
-  },
-  {
     "company": "한국보훈복지의료공단",
     "title": "[부산보훈병원] 청년인턴(체험형-장애) 긴급채용공고",
     "location": "부산",
@@ -1384,6 +1373,17 @@
     "endDate": "2026-11-23",
     "applyUrl": "https://www.redcross.or.kr/redrecruit",
     "url": "https://www.redcross.or.kr/redrecruit"
+  },
+  {
+    "company": "한국농어촌공사",
+    "title": "한국농어촌공사 제주지역본부 공무직(청소원) 보훈ㆍ장애인 제한경쟁 채용 공고",
+    "location": "제주",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "-학력, 전공, 성별, 연령 제한 없음(단, 정년에 도달하지 아니한 자) -「국가유공자 등 예우 및 지원에 관한 법률」등 관계법령에 따른 취업지원대상자 또는「장애인고용촉진 및 직업재활법」에 따른 장애인만 가능 -임용예정일(2027.1.1)부터 즉시 업무종사 가능자 -남자의 경우, 병역법 제76조에서 정한 병역의무 불이행 사실이 없는 자 -공사 인사규정 제9조의 임용 결격 사유가 없는 자(공고문 참조) -근무지로 출퇴근 가능자",
+    "endDate": "2026-11-24",
+    "applyUrl": "https://www.ekr.or.kr/planweb/board/view.krc?dataUid=8a8bb352a08a300001a1c2c68df32497&page=1&boardUid=402880317cc0644a017cc5e8000f06b7&contentUid=8a8bb3529665d7140199501cd3ef6280&searchType=&keyword=&categoryUid1=&categoryUid2=8a8bb3529665d714019951996437",
+    "url": "https://www.ekr.or.kr/planweb/board/view.krc?dataUid=8a8bb352a08a300001a1c2c68df32497&page=1&boardUid=402880317cc0644a017cc5e8000f06b7&contentUid=8a8bb3529665d7140199501cd3ef6280&searchType=&keyword=&categoryUid1=&categoryUid2=8a8bb3529665d714019951996437"
   },
   {
     "company": "대한석탄공사",
