@@ -242,6 +242,17 @@
     "url": "https://www.bohun.or.kr/daegu/na/ntt/selectNttInfo.do?mi=33151&bbsId=1158&bbsSysId=daegu&nttSn=191049"
   },
   {
+    "company": "주택관리공단(주)",
+    "title": "계약직 채용공고(주택관리공단 경기남부지사)",
+    "location": "경기",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "○ 응시자격 · 학력, 어학, 성별, 연령 : 제한없음 · 병역 : ?병역법? 제76조에서 정한 병역의무 불이행 사실이 없는 자 * 단, 최종 합격자 발표일까지 전역예정자로서 전형절차에 응시 가능자 지원 가능 · 기타 : 공단 직원채용 결격사유에 해당되지 않는 자",
+    "endDate": "2026-11-16",
+    "applyUrl": "https://www.kohom.or.kr",
+    "url": "https://www.kohom.or.kr"
+  },
+  {
     "company": "한국문화관광연구원",
     "title": "한국문화관광연구원 위촉직원 채용 공고 [2026-41]",
     "location": "전국",
@@ -262,17 +273,6 @@
     "endDate": "2026-11-16",
     "applyUrl": "https://www.knuh.kr/content/04information/02_01.asp",
     "url": "https://www.knuh.kr/content/04information/02_01.asp"
-  },
-  {
-    "company": "주택관리공단(주)",
-    "title": "계약직 채용공고(주택관리공단 경기남부지사)",
-    "location": "경기",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "○ 응시자격 · 학력, 어학, 성별, 연령 : 제한없음 · 병역 : 남자의 경우 병역필 또는 면제자 * 단, 최종 합격자 발표일까지 전역예정자로서 전형절차에 응시 가능자 지원 가능 · 기타 : 공단 직원채용 결격사유에 해당되지 않는 자",
-    "endDate": "2026-11-16",
-    "applyUrl": "https://www.kohom.or.kr",
-    "url": "https://www.kohom.or.kr"
   },
   {
     "company": "한국물기술인증원",
@@ -484,6 +484,17 @@
     "url": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=271245"
   },
   {
+    "company": "국민연금공단",
+    "title": "[국민연금공단 대구지역본부] 공무직(보안직) 공개채용 공고",
+    "location": "대구",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "○ 연령·성별·학력 등 제한 없음(단, 공단 정년* 이상자는 제외) *(정년) 보안직: 만 65세 ○ 대한민국 국적을 보유한 사람 ○ 공단 「인사규정」 제11조의 결격사유에 해당하지 않는 사람 ○ 임용(예정)일부터 근무가 가능한 사람 ○ 「경비업법」 제10조의 결격사유에 해당하지 않는 사람 * 관련 분야 유경험자 우대",
+    "endDate": "2026-11-17",
+    "applyUrl": "https://www.nps.or.kr/pnsgdnc/hiregdnc/getOHAE0004M0List.do?menuId=MN24000969",
+    "url": "https://www.nps.or.kr/pnsgdnc/hiregdnc/getOHAE0004M0List.do?menuId=MN24000969"
+  },
+  {
     "company": "학교법인한국폴리텍",
     "title": "한국폴리텍특성화대학 바이오캠퍼스 업무직(대학운영직_조리원) 채용",
     "location": "전국",
@@ -592,61 +603,6 @@
     "endDate": "2026-11-18",
     "applyUrl": "https://snudh.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=271388",
     "url": "https://snudh.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=271388"
-  },
-  {
-    "company": "국립중앙의료원",
-    "title": "업무지원직 콜센터(원무팀) 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "[필수] 제한없음 ※ 근무시간 : (기본) 월~금 08:30~17:30 / 격주 토요근무 08:30~12:30 [우대] ㆍ종합병원 등 의료기관 콜센터 경력자 ㆍ보건행정 관련 학과 전공자 * 상기 우대 조건 부합 시 입사지원서의 경력(경험) 기술란에 기술",
-    "endDate": "2026-11-18",
-    "applyUrl": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=271242",
-    "url": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=271242"
-  },
-  {
-    "company": "국립중앙의료원",
-    "title": "업무지원직 콜센터 매니저(원무팀) 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "[필수] 아래의 조건을 모두 충족한자 ㆍ의료기관1) 콜센터 근무경력2) 3년 이상 경력자 ㆍ3교대 근무 가능자 경력인정 범위 1) 고용형태(직접고용, 파견, 도급, 위탁 등)와 관계없이 인정하되, 경력(재직)증명서 상 실제 근무한 의료기관명이 확인되어야 하며, 공고마감일 기준 건강보험심사평가원 등재된 의료기관이어야 함 2) 경력(재직)증명서 상 부서명(또는 담당업무)에 “콜센터” 또는 “고객센터” 또는 “고객상담” 또는 “예약”이 기재된 경우에 한하여 인정 [우대] ㆍ종합병원 등 의료기관 진료 예약 및 원무 실무 경험자 ㆍ보건행정 관련 학과 전공자 * 상기 우대조건 부합 시, 입사지원서의 경력(경험) 기술란에 상세 기술",
-    "endDate": "2026-11-18",
-    "applyUrl": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=271240",
-    "url": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=271240"
-  },
-  {
-    "company": "국립중앙의료원",
-    "title": "업무지원직 병동지원-보훈제한경쟁(간호부) 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "[필수] 아래 두 가지 조건을 모두 충족한 자 ㆍ「국가유공자 등 예우 및 지원에 관한 법률」에 따른 국가보훈대상자 ㆍ야간 및 휴일근로 가능한 자 (3교대 근무, 시차제 근무)",
-    "endDate": "2026-11-18",
-    "applyUrl": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=271233",
-    "url": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=271233"
-  },
-  {
-    "company": "국립중앙의료원",
-    "title": "무기계약직 전문상담사(치매상담팀) 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "[필수] 아래의 조건을 모두 충족하는 자 ㆍ다음 자격(면허) 중 1가지 이상 취득 후 3년 이상 근무경력이 있는 자 - 사회복지사 1급, 간호사, 정신건강전문요원 2급 이상 ㆍ교대 근무 가능한 자(07:00~16:00 / 13:00~22:00 순환근무) [우대] ㆍ치매업무 관련 근무 경력자 ㆍ상담업무 관련 근무 경력자 ㆍ치매 관련 논문 작성 또는 연구 참여 경험자 ㆍ보건복지 분야 데이터 관리 업무 경험자 ※ 상기 우대 조건 부합 시 입사지원서의 경력(경험) 기술란에 상세 기술",
-    "endDate": "2026-11-18",
-    "applyUrl": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=271223",
-    "url": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=271223"
-  },
-  {
-    "company": "국립중앙의료원",
-    "title": "무기계약직 전산행정(정보운영팀) 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "[필수] 정보처리기사, 정보통신기사, 컴퓨터시스템기사* 중 1개 이상 자격 소지자 * 컴퓨터시스템기사의 경우, 종목 통합 이전 자격증(전자계산기조직응용기사, 전자계산기기사)도 포함하여 인정함 [우대] ㆍ전산분야 또는 종합병원 근무 경력자(2년 이상) ※ 상기 우대 조건 부합 시 입사지원서의 경력(경험) 기술란에 상세 기술",
-    "endDate": "2026-11-18",
-    "applyUrl": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=271110",
-    "url": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=271110"
   },
   {
     "company": "한국보훈복지의료공단",
@@ -834,17 +790,6 @@
     "endDate": "2026-11-19",
     "applyUrl": "http://recruit.kepco.co.kr/sangsi",
     "url": "http://recruit.kepco.co.kr/sangsi"
-  },
-  {
-    "company": "부산대학교병원",
-    "title": "2026년도 11월 계약직의사(마취통증의학과) 공개채용 모집 공고",
-    "location": "부산",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "마취통증의학과 전문의자격증 소지자",
-    "endDate": "2026-11-19",
-    "applyUrl": "https://pnuyh.recruiter.co.kr/career/jobs/133165",
-    "url": "https://pnuyh.recruiter.co.kr/career/jobs/133165"
   },
   {
     "company": "예금보험공사",
@@ -1375,6 +1320,28 @@
     "url": "https://www.redcross.or.kr/redrecruit"
   },
   {
+    "company": "오송첨단의료산업진흥재단",
+    "title": "오송첨단의료산업진흥재단 2026년 제2차 직원 채용 공고",
+    "location": "광주",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "○ 해당 직무를 수행할 수 있다고 인정되는 자 ○ (필수요건) 안전관리자로 선임 가능한자(2개 중 1개 이상 충족 必) 1) 「산업안전보건법 시행령」 제17조 및 별표4 제1호에 따른 산업안전지도사 자격을 가진 자 2) 「산업안전보건법 시행령」 제17조 및 별표4 제2호에 해당하는 자로서, 「국가기술자격법」에 따른 산업안전기사 이상의 자격을 취득한 자",
+    "endDate": "2026-11-24",
+    "applyUrl": "https://www.kbiohealth.kr/board.es?mid=a10304000000&bid=0005#content",
+    "url": "https://www.kbiohealth.kr/board.es?mid=a10304000000&bid=0005#content"
+  },
+  {
+    "company": "한국농어촌공사",
+    "title": "한국농어촌공사 김해양산부산지사 및 의령지사 공무직(청소원) 보훈·장애인 제한경쟁채용 공고",
+    "location": "부산",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "1. 학력, 전공, 성별, 연령 제한 없음(단, 정년에 도달하지 아니한 자) 2. 「국가유공자 등 예우 및 지원에 관한 법률」등 관계법령에 따른 취업지원대상자 또는「장애인고용촉진 및 직업재활법」에 따른 장애인만 가능 3. 공사「인사규정」제9조의 임용 결격 사유가 없는 자(공고문 참조) 4. 남자의 경우,「병역법」제76조에서 정한 병역의무 불이행 사실이 없는 자 5. 근무지로 출퇴근 가능자 6. 임용예정일부터 즉시 업무종사 가능자(임용예정일: 2027. 1. 1.)",
+    "endDate": "2026-11-24",
+    "applyUrl": "https://www.ekr.or.kr/planweb/board/view.krc?dataUid=8a8bb352a08a300001a1c30988972fce&page=1&boardUid=402880317cc0644a017cc5e8000f06b7&contentUid=8a8bb3529665d7140199501cd3ef6280&searchType=&keyword=&categoryUid1=&categoryUid2=8a8bb3529665d714019951996437",
+    "url": "https://www.ekr.or.kr/planweb/board/view.krc?dataUid=8a8bb352a08a300001a1c30988972fce&page=1&boardUid=402880317cc0644a017cc5e8000f06b7&contentUid=8a8bb3529665d7140199501cd3ef6280&searchType=&keyword=&categoryUid1=&categoryUid2=8a8bb3529665d714019951996437"
+  },
+  {
     "company": "한국농어촌공사",
     "title": "한국농어촌공사 제주지역본부 공무직(청소원) 보훈ㆍ장애인 제한경쟁 채용 공고",
     "location": "제주",
@@ -1450,6 +1417,28 @@
     "endDate": "2026-11-24",
     "applyUrl": "https://dware.intojob.co.kr/main/nids.jsp",
     "url": "https://dware.intojob.co.kr/main/nids.jsp"
+  },
+  {
+    "company": "한국환경연구원",
+    "title": "[한국환경연구원] 2026년 제15차 인턴직 채용공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "1) 국가공무원법 제33조에 의한 결격사유가 없는 자 2) 청년고용촉진 특별법 시행령에 따른 청년(만 15세 이상 만 34세 이하) 채용 ※ 제대군인의 경우, 의무복무기간에 따라 청년연령을 연장(제대군인법 시행령 제19조 참조) 3) 병역법 제76조에서 정한 병역의무 불이행 사실이 없는 자 4) 취업자 및 취업이 결정된 자는 원칙적으로 제외 5) 전일근무(09:00-18:00)가 가능한 자",
+    "endDate": "2026-11-25",
+    "applyUrl": "https://kei.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=271924",
+    "url": "https://kei.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=271924"
+  },
+  {
+    "company": "한국사회적기업진흥원",
+    "title": "2027년 한국사회적기업진흥원 기능직(총무·비서) 및 기간제근로자 채용공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "1. 공통 지원자격(해당 요건을 모두 충족하는 자) 1) 연령: 진흥원 정년연령(만 60세)을 초과하지 않은 자(접수 마감일 기준) 2) 규정 ㆍ한국사회적기업진흥원 인사규정 제13조(결격사유)에 해당하지 않는 자 ㆍ국가공무원법 제33조의 규정에 저촉되지 않는 자 ㆍ부패방지 및 국민권익위원회의 설치와 운영에 관한 법률 제82조의 규정에 저촉되지 않는 자 3) 기타: 최종합격 후, 임용일 즉시 근무가 가능한자 2. 직무별 응시자격 1) 기능직(총무·비서): 공공 또는 민간기관에서 1년 이상 총무 또는 비서 업무 관련 근무경력을 보유한 자 2) 기간제근로자 사업전문직(영문에디터): 영어·외교·경제·경영·국제·사회 관련 분야 석사학위 이상 소지자로, 영어 에디팅 실무경력 2년 이상 보유한 자 3) 기간제근로자 사업계약직, 육아휴직대체인력: 자격제한 없음",
+    "endDate": "2026-11-25",
+    "applyUrl": "https://socialenterprise.or.kr/homepage/bbs/boardView.do?bsIdx=10004&bIdx=252827&page=1&menuId=833&bcIdx=0&searchCondition=SUBJECT&searchKeyword=",
+    "url": "https://socialenterprise.or.kr/homepage/bbs/boardView.do?bsIdx=10004&bIdx=252827&page=1&menuId=833&bcIdx=0&searchCondition=SUBJECT&searchKeyword="
   },
   {
     "company": "대한적십자사",
