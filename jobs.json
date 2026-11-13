@@ -1,38 +1,5 @@
 [
   {
-    "company": "한전KPS(주)",
-    "title": "한전KPS(주)충남전북전력지사(대전지점) 단기노무원 채용 공고",
-    "location": "대전",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "■ 채용예정일 즉시 근무가능한 자",
-    "endDate": "2026-11-13",
-    "applyUrl": "http://www.kps.co.kr",
-    "url": "http://www.kps.co.kr"
-  },
-  {
-    "company": "국립공원공단",
-    "title": "[월악산] 2026년 월악산국립공원사무소 한시인력(산불감시) 직원 2차 채용",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "- 공단 인사규정 제18조(결격사유)에 해당되지 않은 자 - 연령, 전공, 학력 제한 없음",
-    "endDate": "2026-11-13",
-    "applyUrl": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM020029",
-    "url": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM020029"
-  },
-  {
-    "company": "국립공원공단",
-    "title": "[경주] 경주국립공원사무소 기간제(산불감시_제한경쟁) 직원 채용 재공고",
-    "location": "경상",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "- 공단 인사규정 제18조(결격사유)에 해당되지 않은 자 - 연령, 전공, 학력 제한 없음 - 장애인고용촉진 및 직업재활법 제2조 제1호의 규정에 의한 장애인",
-    "endDate": "2026-11-13",
-    "applyUrl": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM020027",
-    "url": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM020027"
-  },
-  {
     "company": "국립공원공단",
     "title": "[오대산] 2026년 오대산사무소 기간제(한시인력_가을철 산불감시) 직원 채용 공고",
     "location": "전국",
@@ -75,17 +42,6 @@
     "endDate": "2026-11-16",
     "applyUrl": "https://www.knuh.kr/content/04information/02_01.asp",
     "url": "https://www.knuh.kr/content/04information/02_01.asp"
-  },
-  {
-    "company": "한국물기술인증원",
-    "title": "한국물기술인증원 2026년 제7차 기간제근로자 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "1. 공고일 현재 만 60세 미만인 자 2. 임용예정일부터 즉시 업무종사 가능자 3. 「인사규정」및「기간제근로자 운영규칙」의 결격사유에 해당하지 않는 자 4. 남자의 경우 병역필 또는 면제자(병역특례 근무 중인 자 제외) - 최종합격자 발표일이전 전역 예정자 포함",
-    "endDate": "2026-11-16",
-    "applyUrl": "https://www.kwtc.or.kr/kwha/bbs/view/kwhJobNew.do?&bbsId=61",
-    "url": "https://www.kwtc.or.kr/kwha/bbs/view/kwhJobNew.do?&bbsId=61"
   },
   {
     "company": "학교법인한국폴리텍",
@@ -264,6 +220,17 @@
     "url": "https://www.kopo.ac.kr/busan/board.do?menu=5622&mode=view&post=789727"
   },
   {
+    "company": "경북대학교병원",
+    "title": "칠곡경북대학교병원 2026년 11월 2차 임시직원 채용공고(약사, 간호사, 청소)",
+    "location": "경상",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "1) 약사: (필수) 약사 면허 소지자 2) 간호사 ※다음의 필수 조건을 모두 충족하는 자 (필수1) 간호사 면허 소지자 (필수2) 「간호사의 진료지원업무 수행에 관한 규칙(2026.8.11.)」 제3조,에 따른 전문간호사 또는 진료지원전담간호사 ※붙임 참조 (단, 부칙 제6조제2항에 따라 별도의 교육과정을 이수해야하는 경우 제외) 3) 운영지원A(청소): (필수) 만 60세 이상 고령자 4) 운영지원B(청소): 자격무관",
+    "endDate": "2026-11-19",
+    "applyUrl": "https://www.knuch.kr:442/content/04info/11_01.asp?proc_type=view&b_num=5099&rtn_url=%2Fcontent%2F04info%2F11%5F01%2Easp",
+    "url": "https://www.knuch.kr:442/content/04info/11_01.asp?proc_type=view&b_num=5099&rtn_url=%2Fcontent%2F04info%2F11%5F01%2Easp"
+  },
+  {
     "company": "(재)우체국물류지원단",
     "title": "우체국물류지원단 경인지사 부천사업소 기간제(운전직)채용 공고",
     "location": "경기",
@@ -350,6 +317,17 @@
     "endDate": "2026-11-19",
     "applyUrl": "https://www.ex.co.kr",
     "url": "https://www.ex.co.kr"
+  },
+  {
+    "company": "경북대학교병원",
+    "title": "2026년 의료요원(진료교수, 진료의사) 28차 초빙(긴급) 공고",
+    "location": "경상",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "1. 의사 면허증 소지자 및 해당 분야 전문의 자격증 소지자 - 진료의사는 의사면허증만 해당 2.「경북대학교병원 인사규정」 제12조에서 따른 임용 결격사유에 해당하지 않는 자",
+    "endDate": "2026-11-20",
+    "applyUrl": "https://www.knuh.kr/content/04information/02_01.asp",
+    "url": "https://www.knuh.kr/content/04information/02_01.asp"
   },
   {
     "company": "한전KPS(주)",
@@ -638,6 +616,17 @@
     "url": "https://snubh.recruiter.co.kr"
   },
   {
+    "company": "국립중앙의료원",
+    "title": "의사직 및 계약직 전문의 채용 재공고(내분비대사내과, 중환자전담전문의, 정신건강의학과, 소아청소년과(신생아분과))",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "1. 내분비대사내과 전문의(의사직 1~3급) 1명 [필수] · 의사면허 및 내과 전문의 자격 소지자 · 내분비대사내과 분과 전문의 자격 소지자 2. 내과계 중환자실 전담 전문의(의사직 1~3급) 2명 [필수] - 의사 면허 소지자로서 아래 조건 중 하나 이상을 충족하는 자 - 내과 전문의 자격 소지자 - 신경과 전문의 자격 소지자 - 응급의학과 전문의 자격 소지자 [우대] - 중환자의학 세부전문의 자격 소지자 3. 정신건강의학과 계약직 전문의 1명 [필수] · 의사 면허 및 정신건강의학과 전문의 자격 소지자 · 지도전문의 자격 소지자 4. 소아청소년과-신생아분과 계약직 전문의 1명 채용분야 : 소아청소년과 (신생아실 담당) [필수] · 의사 면허 및 소아청소년과 전문의 자격 소지자 · 신생아 분과전문의 자격 소지자 혹은 종합병원 또는 상급종합병원 신생아 집중치료실 1년 이상 근무경력을 보유한 자",
+    "endDate": "2026-11-23",
+    "applyUrl": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=272442",
+    "url": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=272442"
+  },
+  {
     "company": "분당서울대학교병원",
     "title": "분당서울대학교병원 경력(약무직), 신입(약무직) 직원 채용공고",
     "location": "서울",
@@ -726,28 +715,6 @@
     "url": "https://www.kdic.or.kr"
   },
   {
-    "company": "서울대학교병원",
-    "title": "2027년도 연수의사 등 모집 공고",
-    "location": "서울",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "1. 정신건강임상심리사 - 학위자격 : 임상심리학 관련 석사 학위 소지자 (2027년 2월 학위 취득 예정자 포함) - 어학성적 : 해당사항 없음 - 자격(면허)증 : 해당사항 없음 2. 의공학연수의사 - 학위자격 : 의과대학을 졸업하고 인턴과정 또는 석사과정 수료한 자 - 어학성적 : 해당사항 없음 - 자격(면허)증 : 의사면허증 - 기타사항 : 교수추천서 3. 의학물리임상연수강사 - 학위자격 : 의학물리학 관련 박사 학위 소지자 또는 수료자 - 어학성적 : 해당사항 없음 - 자격(면허)증 : 해당사항 없음 - 기타사항 : 교수추천서 4. 전공약사 (레지던트) - 학위자격 : 다음 각 호의 어느 하나에 해당하는 자 1) 약학대학 6년제 졸업자 또는 2027년 2월 졸업예정자 2) 약학대학 4년제 졸업 및 석사학위 취득자 또는 2027년 2월 취득예정자 - 어학성적 : 원서접수 마감일 기준, 2년 이내 유효한 성적(필수 아님) - 자격(면허)증 : 약사면허증 소지자 또는 2027년 2월 취득예정자 5. 임상연수영양사 - 학위자격 : 다음 각 호의 1에 해당하는 자 1) 임상영양사 교육기관(대학원) 졸업(예정)자 2) 임상영양사 교육기관(대학원) 재학생 중 임상영양실습 이수(예정)자 - 어학성적 : 원서접수 마감일 기준, 2년 이내 유효한 영어 성적 (TOEIC, TEPS, TOEFL 중 택 1) - 자격(면허)증 : 영양사 면허증 6. 임상연수사회복지사 - 학위자격 : 다음 각 호의 1에 해당하는 자 1) 사회복지학 관련 전공 대학교(4년제) 졸업자 2) 사회복지학 관련 전공 대학원 졸업자 - 어학성적 : 원서접수 마감일 기준, 2년 이내 유효한 영어 성적 (TOEIC, TEPS, TOEFL 중 택 1) - 자격(면허)증 : 사회복지사 1급 자격증 (취득 예정자 지원불가) - 기타사항 : 사회복지사 1급 자격증 취득을 위한 실습기관 내역은 지원서 “수련사항”에 기재 7. 융합의학연수생 - 학위자격 1) 석사과정: 국내·외에서 학사학위를 취득한 자(2026년 2월 취득예정자 포함) 또는 법령에 의하여 학사학위 이상의 학력이 있다고 인정된 자 ※ 의사면허 소지자 지원 가능 2) 박사과정: 국내·외에서 석사학위를 취득한 자(2026년 2월 취득예정자 포함) 또는 법령에 의하여 석사학위 이상의 학력이 있다고 인정된 자 ※ 의사면허 소지자 지원 가능 - 어학성적 : 지원서 접수 마감일 기준 2년 이내 응시하여 취득한 영어점수가 TOEIC 775점 이상 혹은 TEPS 298점 이상 혹은 TOEFL IBT 88점 이상 ※ 영어권 대학(원) 졸업(예정)자는 영어성적 제출이 면제(본인 선택)됨. 다만 영어성적 반영 시 최하점을 부여함 - 자격(면허)증 : 의사면허증 등(소지자에 한해 제출) - 기타사항 : 교수 추천서 제출 필수(1장), 연수생 근무 시 타 대학원 및 직장 병행 불가능",
-    "endDate": "2026-11-23",
-    "applyUrl": "https://recruit.snuh.org/joining/recruit/view.do?notice_type=R&recruit_id=26139",
-    "url": "https://recruit.snuh.org/joining/recruit/view.do?notice_type=R&recruit_id=26139"
-  },
-  {
-    "company": "재단법인 장애인기업종합지원센터",
-    "title": "2026년 제6차 장애인기업종합지원센터 직원채용 공고(기간제 채용)_중부_충남, 아산",
-    "location": "충청",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "ㅇ 6급 임용자격기준(공고일 기준) - 아래의 1)~3) 자격요건 중 1개 이상을 충족하는 자 1) 4년제 대학졸업자 2) 전문대학 졸업 후 관련업무 2년 이상인자 3) 고등학교 졸업 후 관련업무 4년 이상인자",
-    "endDate": "2026-11-23",
-    "applyUrl": "https://com",
-    "url": "https://com"
-  },
-  {
     "company": "기초과학연구원",
     "title": "2026-7회 광과학연구클러스터(마이크로바이옴-체-뇌 생리학 연구단) 연구직 채용 공고",
     "location": "전국",
@@ -834,17 +801,6 @@
     "endDate": "2026-11-24",
     "applyUrl": "https://www.kocoal.or.kr/board/board_view.php?view_id=155&board_name=recruit&page=1",
     "url": "https://www.kocoal.or.kr/board/board_view.php?view_id=155&board_name=recruit&page=1"
-  },
-  {
-    "company": "부산대학교병원",
-    "title": "산부인과 진료전문의 모집 공고",
-    "location": "부산",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "산부인과 전문의",
-    "endDate": "2026-11-24",
-    "applyUrl": "https://pnuh.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=271870",
-    "url": "https://pnuh.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=271870"
   },
   {
     "company": "한국산업안전보건공단",
@@ -1188,15 +1144,15 @@
     "url": "https://www.kiost.ac.kr/cop/bbs/BBSMSTR_000000000073/selectBoardList.do"
   },
   {
-    "company": "(주)강원랜드",
-    "title": "㈜강원랜드 2026년 2차 서비스지원직(보훈) 채용 공고",
-    "location": "강원",
+    "company": "식품안전정보원",
+    "title": "식품안전정보원 2026년 제3차 기간제 직원 채용",
+    "location": "전국",
     "hireType": "정규직/계약직",
     "recruitCount": "공고문 참조",
-    "education": "- 연령, 학력(신입직) 제한 없음(단, 강원랜드 정년에 의거 만 60세 미만인 자) - 병역필 또는 면제자(‘26. 12. 31. 이전 전역 가능한 자 포함, 여성은 해당 없음) - 병역법 제76조에서 정한 병역의무 불이행 사실이 없는 자 - 지정된 입사일(2026년 12월 31일 예정)로부터 즉시 근무 가능한 자 - 강원랜드 인사규정 상 채용 결격사유에 해당되지 않는 자(채용 결격사유 참조) - 근무지: 강원특별자치도 정선군 또는 태백시의 사내 복지시설 - 경력기재 시 추후 증빙 가능한 경력만을 기재하여야 하며, 증빙 불가 시 허위사실 기재로 간주하여 합격을 취소할 수 있으며, 향후 5년간 입사지원이 불가할 수 있으니 이점 각별히 유념하시고 자격요건 충족 여부를 사전에 필히 확인하여 주시기 바랍니다.",
-    "endDate": "2026-11-26",
-    "applyUrl": "https://kangwon.cairos.co.kr/kangwon",
-    "url": "https://kangwon.cairos.co.kr/kangwon"
+    "education": "공통, 개별, 직급별 지원자격을 모두 충족하여야 함 ※ 상세 내용은 채용공고문 참조",
+    "endDate": "2026-11-27",
+    "applyUrl": "https://foodinfo.career.co.kr/",
+    "url": "https://foodinfo.career.co.kr/"
   },
   {
     "company": "한국전력공사",
@@ -1406,6 +1362,39 @@
     "endDate": "2026-11-28",
     "applyUrl": "https://www.redcross.or.kr/redrecruit/",
     "url": "https://www.redcross.or.kr/redrecruit/"
+  },
+  {
+    "company": "한국장애인고용공단",
+    "title": "한국장애인고용공단 전남직업능력개발원장 공개모집",
+    "location": "전라",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "○ 「국가공무원법」 제33조 각 호의 어느 하나에 해당되지 아니한 분 ○ 「인사규정」 제12조 각 호의 어느 하나에 해당되지 아니한 분 ○ 최초 임기 2년이내 「인사규정」 제37조제1항제2호(정년)에 해당되지 아니한 분 ○ 공단 직업능력개발원장 직무수행요건의 임용자격요건에 해당하는 분 ※ 구체적인 자격요건 등은 직무수행요건 참조(학력기준, 경력기준 또는 실적요건 중 하나 이상 해당되어야 함)",
+    "endDate": "2026-11-30",
+    "applyUrl": "https://www.kead.or.kr/bbs/recruit/bbsPage.do?menuId=MENU0898",
+    "url": "https://www.kead.or.kr/bbs/recruit/bbsPage.do?menuId=MENU0898"
+  },
+  {
+    "company": "한국장애인고용공단",
+    "title": "한국장애인고용공단 대전직업능력개발원장 공개모집",
+    "location": "대전",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "○ 「국가공무원법」 제33조 각 호의 어느 하나에 해당되지 아니한 분 ○ 「인사규정」 제12조 각 호의 어느 하나에 해당되지 아니한 분 ○ 최초 임기 2년이내 「인사규정」 제37조제1항제2호(정년)에 해당되지 아니한 분 ○ 공단 직업능력개발원장 직무수행요건의 임용자격요건에 해당하는 분 ※ 구체적인 자격요건 등은 직무수행요건 참조(학력기준, 경력기준 또는 실적요건 중 하나 이상 해당되어야 함)",
+    "endDate": "2026-11-30",
+    "applyUrl": "https://www.kead.or.kr/bbs/recruit/bbsPage.do?menuId=MENU0898",
+    "url": "https://www.kead.or.kr/bbs/recruit/bbsPage.do?menuId=MENU0898"
+  },
+  {
+    "company": "한국장애인고용공단",
+    "title": "한국장애인고용공단 경기남부직업능력개발원장 공개모집",
+    "location": "경기",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "○ 「국가공무원법」 제33조 각 호의 어느 하나에 해당되지 아니한 분 ○ 「인사규정」 제12조 각 호의 어느 하나에 해당되지 아니한 분 ○ 최초 임기 2년이내 「인사규정」 제37조제1항제2호(정년)에 해당되지 아니한 분 ○ 공단 직업능력개발원장 직무수행요건의 임용자격요건에 해당하는 분 ※ 구체적인 자격요건 등은 직무수행요건 참조(학력기준, 경력기준 또는 실적요건 중 하나 이상 해당되어야 함)",
+    "endDate": "2026-11-30",
+    "applyUrl": "https://www.kead.or.kr/bbs/recruit/bbsPage.do?menuId=MENU0898",
+    "url": "https://www.kead.or.kr/bbs/recruit/bbsPage.do?menuId=MENU0898"
   },
   {
     "company": "한국나노기술원",
