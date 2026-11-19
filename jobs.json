@@ -209,6 +209,28 @@
     "url": "https://www.comwel.or.kr/recruit/hp/main.do"
   },
   {
+    "company": "경상국립대학교병원",
+    "title": "[창원경상국립대학교병원] 장애인근로자 채용공고",
+    "location": "경상",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "1. 환자 및 내원객 안내, 병원 내외 환경 정리, 병원 내 주차관리 업무 보조, 환자·물품이송, 린넨류 관리 등 진료지원 보조업무 가능자 2. 장애인복지법에 의한 등록장애인 또는 국가 유공자 등 예우 및 지원에 관한 법률에 의한 상이등급으로 판정된 자로서 한국장애인고용공단이 추천한 자 3. 입사지원서 접수 마감일 현재 만18세 이상이면서 60세 미만인 자 4. 남자인 경우, 입사지원서 접수 마감일 현재 병역을 마쳤거나 면제된 자 5. 본원 계약직근무자규정 제6조 제1항 제1호에 따른 결격사유에 해당되지 않는 자",
+    "endDate": "2026-11-25",
+    "applyUrl": "https://gnuh.recruiter.co.kr/",
+    "url": "https://gnuh.recruiter.co.kr/"
+  },
+  {
+    "company": "학교법인한국폴리텍",
+    "title": "한국폴리텍특성화대학 바이오캠퍼스 업무직(대학운영직_조리원) 채용공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "○ (연령) 만 60세 미만(정년 만 60세) ○ (학력ㆍ성별) 제한 없음 ○ 임용예정일**(2026. 12.21.) 기준 유효한 건강진단결과서(보건증) 소지자** ○ 남자의 경우 병역필 또는 면제자 ○ 학교법인 한국폴리텍 인사규정 제19조(결격사유)에 해당되지 않는 자 ○ 최종합격자 발표 후 임용예정일에 근무 가능한 자 (근무 예정일 : 2026. 12.21 )",
+    "endDate": "2026-11-25",
+    "applyUrl": "https://www.kopo.ac.kr/bio/board.do?menu=5899&mode=view&post=790764",
+    "url": "https://www.kopo.ac.kr/bio/board.do?menu=5899&mode=view&post=790764"
+  },
+  {
     "company": "제주대학교병원",
     "title": "제주대학교병원 단시간 계약직(장애인_병원안내 등) 모집공고",
     "location": "제주",
@@ -363,6 +385,17 @@
     "url": "https://www.kopo.ac.kr/gm/board.do?menu=10557&mode=view&post=790421"
   },
   {
+    "company": "국민연금공단",
+    "title": "[국민연금공단 부산지역본부] 부산지역본부 중부산지사 기간제근로자(근로능력평가직-활동능력평가) 공개채용 공고",
+    "location": "부산",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "○ 연령·성별·학력 등 제한 없음(단, 공단 정년* 이상자는 제외) * (정년) 근로능력평가직: 만60세 ○ 대한민국 국적을 보유한 사람 ○ 공단 「인사규정」 제11조의 결격사유에 해당하지 않는 사람 ○ 임용(예정)일부터 근무가 가능한 사람 * 정보·사무 관련 자격증 소지자 우대",
+    "endDate": "2026-11-26",
+    "applyUrl": "https://www.nps.or.kr/pnsgdnc/hiregdnc/getOHAE0004M0List.do?menuId=MN24000969",
+    "url": "https://www.nps.or.kr/pnsgdnc/hiregdnc/getOHAE0004M0List.do?menuId=MN24000969"
+  },
+  {
     "company": "한국도로공사",
     "title": "한국도로공사 전북본부 관내 지사(전주, 논산, 남원) 제설 기간제근로자(정비원) 채용",
     "location": "충청",
@@ -427,17 +460,6 @@
     "endDate": "2026-11-26",
     "applyUrl": "https://www.koem.or.kr/site/insa/ex/board/View.do?cbIdx=478&bcIdx=36506",
     "url": "https://www.koem.or.kr/site/insa/ex/board/View.do?cbIdx=478&bcIdx=36506"
-  },
-  {
-    "company": "분당서울대학교병원",
-    "title": "분당서울대학교병원 경력(간호직, 보건직), 신입(보건직) 직원 채용공고",
-    "location": "서울",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "<경력직원 분야> 1. 모집분야 및 응시요건 등 - 모집분야 : 간호직 / 영상의학과 - 모집인원 : 5명 - 응시요건 : [필수] 간호사 면허증 소지자로서 종합병원 근무 경력 3년 이상인 자 2. 모집분야 및 응시요건 등 - 모집분야 : 간호직 / 핵의학과 - 모집인원 : 1명 - 응시요건 : [필수] 간호사 면허증 소지자로서 종합병원 근무 경력 1년 이상인 자 3. 모집분야 및 응시요건 등 - 모집분야 : 보건직 / 핵의학과 - 모집인원 : 2명 - 응시요건 : [필수] 아래의 요건을 모두 충족하는 자 1. 방사선사 면허증 소지자 2. 방사성동위원소취급자 일반 면허 소지자 3. 종합병원 핵의학과에서 사이클로트론 업무 경력 1년 이상인 자 <신입직원 분야> 1. 모집분야 및 응시요건 등 - 모집분야 : 일반직인턴(보건직) / 진단검사의학과 - 모집인원 : 3명 - 응시요건 : [필수] 임상병리사 면허증 소지자로서 하단 공인영어성적 기준을 충족하는 자 2. 모집분야 및 응시요건 등 - 모집분야 : 일반직인턴(보건직) / 핵의학과 - 모집인원 : 2명 - 응시요건 : [필수] 방사선사 면허증 소지자로서 하단 공인영어성적 기준을 충족하는 자 3. 모집분야 및 응시요건 등 - 모집분야 : 일반직인턴(보건직) / 신경외과 - 모집인원 : 1명 - 응시요건 : [필수] 방사선사 면허증 소지자로서 하단 공인영어성적 기준을 충족하는 자 *공인영어성적 기준(1개 이상 충족 필수) : TOEIC 750점 이상, TOEIC SPEAKING IM3 이상, NEW TEPS 285점 이상 ※자세한 사항은 우리 병원 채용홈페이지 참조(http://snubh.recruiter.co.kr)",
-    "endDate": "2026-11-26",
-    "applyUrl": "http://snubh.recruiter.co.kr",
-    "url": "http://snubh.recruiter.co.kr"
   },
   {
     "company": "한국보훈복지의료공단",
@@ -517,6 +539,17 @@
     "url": "https://nmc.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=272572"
   },
   {
+    "company": "한국산업안전보건공단",
+    "title": "[안전보건공단 경기광역본부] 기간제 근로자(환경미화원ㆍ안내원ㆍ시설관리원) 채용 공고",
+    "location": "경기",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "■ 공단 「인사규정」 제18조(결격사유)에 해당하지 않는 자 ■ 만 18세 이상이며 정년*에 도달하지 않은 자 * 임용예정일 기준 환경미화원 만 65세, 안내원 만 60세, 시설관리원 만 60세) ■ 임용예정일 즉시 근무 가능한 자 [해당분야 추가 필수자격] - 기타 자격요건은 응시분야별 상이함 ※ 보다 자세한 사항은 첨부파일의 채용공고문 참조",
+    "endDate": "2026-11-30",
+    "applyUrl": "https://portal.kosha.or.kr/community/jurisdiction/notice/detail?cityCode=17&officeCode=1722&contsSeCd=20&fdnsIntrcnContsNo=FSCONS261119H4091133&fdnsRgnMclsfCd=1722",
+    "url": "https://portal.kosha.or.kr/community/jurisdiction/notice/detail?cityCode=17&officeCode=1722&contsSeCd=20&fdnsIntrcnContsNo=FSCONS261119H4091133&fdnsRgnMclsfCd=1722"
+  },
+  {
     "company": "한국보훈복지의료공단",
     "title": "[인천보훈병원] 업무지원직(진료지원, 급식) 공개 채용",
     "location": "인천",
@@ -537,61 +570,6 @@
     "endDate": "2026-11-30",
     "applyUrl": "https://www.comwel.or.kr/recruit/hp/main.do",
     "url": "https://www.comwel.or.kr/recruit/hp/main.do"
-  },
-  {
-    "company": "한국개발연구원",
-    "title": "2026년 4분기 2차 한국개발연구원(KDI) 위촉직원 채용 공고(연구직)",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "- 규제연구실: 위촉연구원 6명 / 경제·경영·정책 / 학사학위 이상 소지자 (*학사 학위취득예정자 지원 불가), 모집분야 관련 전공자(경제학·경영학·정책학 등) 우대, 규제 유관기관 등 관련 근무 경력자 우대, 통계프로그램 활용 우수자 우대 - 경제교육·정보센터 정책정보허브팀: 위촉연구원 3명 / 경제정책정보 서비스 및 분석 / 학사학위 이상 소지자 (*학사 학위취득예정자 지원 불가), 모집분야 관련 석사학위 이상 소지자 우대, 모집분야 관련 전공자(상경계열·사회계열·문헌정보학) 우대, 경제정책자료 DB 구축 및 홈페이지 운영 경험자 우대",
-    "endDate": "2026-11-30",
-    "applyUrl": "https://www.kdi.re.kr/share/recruitView?rec_no=311&pg=1&rec_type=",
-    "url": "https://www.kdi.re.kr/share/recruitView?rec_no=311&pg=1&rec_type="
-  },
-  {
-    "company": "서울올림픽기념국민체육진흥공단",
-    "title": "한국스포츠과학원 조리원(지원직) 채용 공고",
-    "location": "서울",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "ㅇ 학력 및 연령 제한 없음 * 단, 채용공고일 기준 만 60세 미만인 사람 ㅇ 공단 인사규정 제20조(임용결격사유)에 해당하지 않는 사람 ㅇ 채용예정일 즉시 근무 가능한 사람 ㅇ 식품위생법 제40조 및 동법 시행규칙 제49조에 의한 건강진단결과서가 정상인 사람 * 채용예정일 이전에 정상판정인 건강진단결과서 제출이 가능한 사람",
-    "endDate": "2026-11-30",
-    "applyUrl": "https://www.sports.re.kr/front/board/job/boardView.do?board_seq=115&pageNo=1&menu_seq=+997&con_seq=6780&keyKind3=&keyKind4=&keyKind5=&keyKind6=&keyKind7=&keyKind=TITLE&keyWord=",
-    "url": "https://www.sports.re.kr/front/board/job/boardView.do?board_seq=115&pageNo=1&menu_seq=+997&con_seq=6780&keyKind3=&keyKind4=&keyKind5=&keyKind6=&keyKind7=&keyKind=TITLE&keyWord="
-  },
-  {
-    "company": "한전KDN",
-    "title": "한전KDN(주) 서울본부 강북지사 전력통신팀 전력통신분야 일용근로자 모집공고",
-    "location": "서울",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "[지원자격] 가. 공통 1. 일반 : 학력, 연령, 외국어 제한없음 2. 병역 : 병역법 제76조에서 정한 병역의무 불이행 사실이 없는 자 3. 필수사항: 건설업 기초 안전보건교육 이수자 4. 모집제외 대상자: · 당사 인사규정 13조(채용 결격사유)*에 해당하는 자 *[붙임1] 신규채용자의 결격사유 참조",
-    "endDate": "2026-11-30",
-    "applyUrl": "https://해당없음",
-    "url": "https://해당없음"
-  },
-  {
-    "company": "(주)한국가스기술공사",
-    "title": "부산경남지사 기간제 계약직(육아휴직 대체인력) 채용 공고",
-    "location": "부산",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "○ 운전면허 2종 보통 이상 소지자 ○ 성별, 연령, 학력, 전공 제한 없음(공고일 기준 미성년자 제외) ○ 우리공사 「인사규정」등에 의한 채용 결격 및 제한 사유가 없는 자 ○ 비위면직자 등 취업제한 대상자 지원불가 ○ 병역법 제76조(병역의무 불이행자에 대한 제재)에서 정한 병역의무 불이행 사실이 없으며 병역을 필하였거나 또는 면제받은 자 ※ 임용일 전까지 전역 가능한 자 포함 ○ (임용일자)부터 근무가능자",
-    "endDate": "2026-11-30",
-    "applyUrl": "http://kogastech.recruiter.co.kr",
-    "url": "http://kogastech.recruiter.co.kr"
-  },
-  {
-    "company": "(주)한국가스기술공사",
-    "title": "수소전주기센터 위·수탁 운영사업(2단계) 기간제 계약직 공개 채용",
-    "location": "전라",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "ㆍ연령, 성별, 학력, 전공 등 제한 없음(공고일 기준 미성년자 제외) ※ 병역법 제76조(병역의무 불이행자에 대한 제재)에서 정한 병역의무 불이행 사실이 없으며 병역을 필하였거나 면제받은 자 ㆍ'27.1.1(금)부터 근무 가능자 (공사사정에 따라 변동가능) ㆍ우리공사 인사규정 등 결격사유 없는 자 ㆍ교대근무 가능자(시험평가 및 가스분석 직무에 한함)",
-    "endDate": "2026-11-30",
-    "applyUrl": "https://kogastech.recruiter.co.kr",
-    "url": "https://kogastech.recruiter.co.kr"
   },
   {
     "company": "(재)우체국물류지원단",
@@ -823,17 +801,6 @@
     "endDate": "2026-12-01",
     "applyUrl": "https://www.aks.ac.kr/cop/bbs/selectBoardArticle.do?nttId=323708&bbsId=BBSMSTR_000000000082",
     "url": "https://www.aks.ac.kr/cop/bbs/selectBoardArticle.do?nttId=323708&bbsId=BBSMSTR_000000000082"
-  },
-  {
-    "company": "신용보증재단중앙회",
-    "title": "2026년 제2차 신용보증재단중앙회 신입직원(5급) 공개채용",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "[공통사항] 1. 모집분야 직무기술서 상의 지식을 보유한 자(직무기술서 참조) 2. 학력, 연령, 성별, 전공 제한 없음 * 채용부문 직무별 별도 자격요건이 있는 경우 제외 * 신용보증재단중앙회 인사규정에 따라 정년(만60세) 미만인 자 3. 병역의무대상자는 병역필 또는 면제자 * 「병역법」 제76조 제1항에 해당하지 않는 자 4. 신용보증재단중앙회 인사규정상 결격사유가 없는 자 5. 임용 예정일로부터 근무 가능한 자(임용일 변경, 입사유예, 겸직 불가) - 보다 자세한 사항은 첨부파일의 채용공고문을 참조",
-    "endDate": "2026-12-01",
-    "applyUrl": "https://koreg.recruiter.co.kr",
-    "url": "https://koreg.recruiter.co.kr"
   },
   {
     "company": "한국수자원공사",
@@ -1100,6 +1067,39 @@
     "url": "https://www.redcross.or.kr/redrecruit"
   },
   {
+    "company": "한국수자원공사",
+    "title": "[한국수자원공사] 한강유역협력단 삼척시3현대화사업팀 특수직(기술관리_건설사업) 채용 공고",
+    "location": "강원",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "□ 연령, 성별, 학력 제한 없음 □ 남자의 경우 병역필 또는 면제자(병역특례 근무중인 자 제외) □ 우리 공사 인사규정에 의한 결격사유가 없는 자 □ 채용예정일부터 현업 전일근무가 가능한 자",
+    "endDate": "2026-12-03",
+    "applyUrl": "https://k-water.recruiter.co.kr/",
+    "url": "https://k-water.recruiter.co.kr/"
+  },
+  {
+    "company": "한국수자원공사",
+    "title": "[한국수자원공사] 한강유역협력단 삼척시3현대화사업팀 특수직(사무관리_건설사업) 채용 공고",
+    "location": "강원",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "□ 연령, 성별, 학력 제한 없음 □ 남자의 경우 병역필 또는 면제자(병역특례 근무중인 자 제외) □ 우리 공사 인사규정에 의한 결격사유가 없는 자 □ 채용예정일부터 현업 전일근무가 가능한 자",
+    "endDate": "2026-12-03",
+    "applyUrl": "https://k-water.recruiter.co.kr/",
+    "url": "https://k-water.recruiter.co.kr/"
+  },
+  {
+    "company": "한전KDN",
+    "title": "한전KDN(주) 부산본부 미터링사업팀 AMI 일괄위탁 작업원 모집공고(26-8차)",
+    "location": "부산",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "1. 일반 : 학력, 연령, 외국어 제한없음 2. 병역 : 병역법 제 76조에서 정한 병역의무 불이행 사실이 없는 자 3. 기타 - 당사 인사규정2.1.4(채용결격사유)에 해당하지 않는자(붙임1 참조) - 주민등록상 거주지가 부산, 김해, 양산시인 자 4. 직종별 자격(KDN조공) - AMI통신망 시설공사의 단순업무 지원이 가능한 자 - 운전면허증 소지자(운전가능자) - 1종 보통 이상의 운전면허 소지 및 화물 차량 운전 가능자",
+    "endDate": "2026-12-03",
+    "applyUrl": "https://없음.",
+    "url": "https://없음."
+  },
+  {
     "company": "부산대학교병원",
     "title": "2026년도 일반직(간호, 행정, 보건직) 신규직원 블라인드 공개채용 모집 공고",
     "location": "부산",
@@ -1211,6 +1211,17 @@
   },
   {
     "company": "한국교통안전공단",
+    "title": "2026년 제5차 한국교통안전공단 철도안전처 기간제근로자 채용공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "위촉연구원6급(철도안전연구)(2명) ㅇ연령 : 정년(60세)을 초과한 자 제외 ㅇ학력 : 기계/안전/토목/건축/도시/교통/컴퓨터/전자통신/IT공학 또는 물리/수학/화학/통계 관련 학사학위 이상 소지자(2027년 2월 졸업예정자 포함, 졸업예정증명서 필수 제출) ㅇ자격 : 없음 ㅇ기타제한 : 없음 청년인턴(사무)(1명) ㅇ연령 : 15세 이상 34세 이하 ㅇ학력 : 제한없음 ㅇ자격 : 제한없음 ㅇ기타제한 : 공고일 기준 취업중인자 지원불가",
+    "endDate": "2026-12-04",
+    "applyUrl": "https://kotsa1.career.co.kr",
+    "url": "https://kotsa1.career.co.kr"
+  },
+  {
+    "company": "한국교통안전공단",
     "title": "2026년 제5차 한국교통안전공단 데이터융복합처 기간제근로자 채용공고",
     "location": "전국",
     "hireType": "정규직/계약직",
@@ -1292,10 +1303,10 @@
     "location": "전라",
     "hireType": "정규직/계약직",
     "recruitCount": "공고문 참조",
-    "education": "ㅇ청년인턴(사무) - 국가자격시험 사무 보조 및 민원응대 등 1명 / 안전관리처(전북) - 연령: 15세 이상 34세 이하 - 학력: 제한없음 - 자격: 제한없음 - 기타제한: 공고일 기준 취업중인자 지원불가 ○ 청년인턴(사무_장애) - 행정업무(사무 보조 및 민원응대(전화,대면)) 1명 / 안전관리처(전북) - 연령 : 15세 이상 34세 이하 - 학력 : 제한없음 - 자격 : '장애인고용촉진 및 직업재활법 시행령'에 의한 장애인 - 기타제한 : 공고일 기준 취업중인자 지원 불가 ○ 청년인턴(검사) - 자동차검사 업무 보조 1명 / 전주검사소 - 연령 : 15세 이상 34세 이하 - 학력 : 제한없음 - 자격 : 자동차운전면허 1종 보통 이상 및 자동차정비(검사)산업기사 이상 자격을 모두 소지한 자 - 기타제한 : 공고일 기준 취업중인자 지원 불가 * 청년인턴의 경우, 제대군인지원에 관한 법률 제16조에 따라 제대군인에 대한 채용시험 응시연령 상한 연장(세부적용 기준은 공고문 참고) * 보다 자세한 사항은 첨부파일의 채용공고문을 참조",
+    "education": "○ 청년인턴(사무) - 국가자격시험 사무 보조 및 민원응대 등 1명 / 안전관리처(전북) - 연령: 15세 이상 34세 이하 - 학력: 제한없음 - 자격: 제한없음 - 기타제한: 공고일 기준 취업중인자 지원불가 ○ 청년인턴(사무_장애) - 행정업무(사무 보조 및 민원응대(전화,대면)) 1명 / 안전관리처(전북) - 연령 : 15세 이상 34세 이하 - 학력 : 제한없음 - 자격 : '장애인고용촉진 및 직업재활법 시행령'에 의한 장애인 - 기타제한 : 공고일 기준 취업중인자 지원 불가 ○ 청년인턴(검사) - 자동차검사 업무 보조 1명 / 전주검사소 - 연령 : 15세 이상 34세 이하 - 학력 : 제한없음 - 자격 : 자동차운전면허 1종 보통 이상 및 자동차정비(검사)산업기사 이상 자격을 모두 소지한 자 - 기타제한 : 공고일 기준 취업중인자 지원 불가 * 청년인턴의 경우, 제대군인지원에 관한 법률 제16조에 따라 제대군인에 대한 채용시험 응시연령 상한 연장(세부적용 기준은 공고문 참고) * 보다 자세한 사항은 첨부파일의 채용공고문을 참조",
     "endDate": "2026-12-04",
-    "applyUrl": "https://kotsa1.career.co.kr/",
-    "url": "https://kotsa1.career.co.kr/"
+    "applyUrl": "https://kotsa1.career.co.kr",
+    "url": "https://kotsa1.career.co.kr"
   },
   {
     "company": "한국교통안전공단",
@@ -1380,7 +1391,7 @@
     "location": "전국",
     "hireType": "정규직/계약직",
     "recruitCount": "공고문 참조",
-    "education": "○ 연령: 정년(60세)을 초과한자 제외 ○ 학력: 제한 없음 ○ 자격: 제한 없음 ○ 기타제한: 없음",
+    "education": "<실무원(사무)> - 연령: 정년(60세)을 초과한 자 제외 - 학력: 제한없음 - 자격: 제한없음 - 기타제한: 없음",
     "endDate": "2026-12-04",
     "applyUrl": "https://kotsa1.career.co.kr/",
     "url": "https://kotsa1.career.co.kr/"
@@ -1474,39 +1485,6 @@
     "url": "https://kotsa1.career.co.kr"
   },
   {
-    "company": "한국교통안전공단",
-    "title": "2026년 제5차 한국교통안전공단 부산본부 기간제근로자 채용공고",
-    "location": "부산",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "○ 모집 분야 : 안전사업처(부산) 청년인턴(사무) ○ 자격 요건 - 연령 : 15세 이상 34세 이하 - 학력 : 제한없음 - 자격 : 제한없음 - 기타제한 : 공고일 기준 취업중인자 지원불가 ○ 모집 분야 : 사하검사소 실무원(사무) ○ 자격 요건 - 연령 : 정년(60세)을 초과한 자 제외 - 학력 : 제한없음 - 자격 : 제한없음 - 기타제한 : 제한없음 * 청년인턴의 경우, 제대군인지원에 관한 법률 제16조에 따라 제대군인에 대한 채용시험 응시연령 상한 연장(세부적용 기준은 공고문 참고)",
-    "endDate": "2026-12-04",
-    "applyUrl": "https://kotsa1.career.co.kr/",
-    "url": "https://kotsa1.career.co.kr/"
-  },
-  {
-    "company": "한국교통안전공단",
-    "title": "2026년 제5차 한국교통안전공단 자동차인증처 기간제근로자 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "□ [청년인턴(사무)] ㅇ담당직무 : 정부위탁사업 소규모 자기인증 업무 보조 등 ㅇ연령 : 15세 이상 34세 이하 ㅇ학력 : 제한없음 ㅇ자격 : 제한없음 ㅇ기타제한 : 공고일 기준 취업중인자 지원불가 □ [청년인턴(사무)] ㅇ담당직무 : 자율주행자동차 안전운행 성능확인 업무 보조 ㅇ연령 : 15세 이상 34세 이하 ㅇ학력 : 제한없음 ㅇ자격 : 제한없음 ㅇ기타제한 : 공고일 기준 취업중인자 지원불가 □ [청년인턴(사무)] ㅇ담당직무 : 제작결함조사사업 자동차 제원관리(검사) 및 시험 업무 보조 ㅇ연령 : 15세 이상 34세 이하 ㅇ학력 : 제한없음 ㅇ자격 : 제한없음 ㅇ기타제한 : 공고일 기준 취업중인자 지원불가 * 청년인턴의 경우, 제대군인 지원에 관한 법률 제16조에 따라 제대군인에 대한 채용시험 응시연령 상한 연장(세부적용 기준은 공고문 참고)",
-    "endDate": "2026-12-04",
-    "applyUrl": "https://kotsa1.career.co.kr/",
-    "url": "https://kotsa1.career.co.kr/"
-  },
-  {
-    "company": "한국교통안전공단",
-    "title": "2026년 제5차 건설기계인증처 기간제근로자 채용공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "ㅇ연령 : 15세 이상 34세 이하 ㅇ학력 : 제한없음 ㅇ자격 : 제한없음 ㅇ기타제한 : 공고일 기준 취업중인자 지원불가",
-    "endDate": "2026-12-04",
-    "applyUrl": "https://kotsa1.career.co.kr",
-    "url": "https://kotsa1.career.co.kr"
-  },
-  {
     "company": "한국노동연구원",
     "title": "한국노동연구원 연구직 연구원 직군 채용 공고",
     "location": "전국",
@@ -1527,6 +1505,28 @@
     "endDate": "2026-12-09",
     "applyUrl": "https://www.kiet.re.kr/communicate/ntcHireView?ntc_no=10759&skey=&sval=&pg=1&pp=10",
     "url": "https://www.kiet.re.kr/communicate/ntcHireView?ntc_no=10759&skey=&sval=&pg=1&pp=10"
+  },
+  {
+    "company": "한국전력국제원자력대학원대학교",
+    "title": "[한국전력국제원자력대학원대학교] 기간제근로자 채용 (휴직대체 및 제한경쟁_장애인)",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "[공개채용_휴직대체 사무행정] ○ 학력, 전공, 성별, 연령 제한 없음 ※ 단, 임용예정일 기준으로 본교 규정에 따른 정년(만61세) 이내여야 함 ○ 병역법 제76조에서 정한 병역의무 불이행 사실이 없는 자 [제한경쟁채용_장애인 업무지원] ○ 「장애인고용촉진 및 직업재활법 시행령」 제3조에 따른 장애인 ○ 차량 운전 가능자 ○ 학력, 전공, 성별, 연령 제한 없음 ※ 단, 임용예정일 기준으로 본교 규정에 따른 정년(만61세) 이내여야 함 ○ 병역법 제76조에서 정한 병역의무 불이행 사실이 없는 자",
+    "endDate": "2026-12-10",
+    "applyUrl": "https://www.kings.ac.kr/cop/bbs/selectBoardArticle.do?bbsId=BBSMSTR_000000000245&nttId=5366",
+    "url": "https://www.kings.ac.kr/cop/bbs/selectBoardArticle.do?bbsId=BBSMSTR_000000000245&nttId=5366"
+  },
+  {
+    "company": "에너지경제연구원",
+    "title": "[에너지경제연구원] 2027년도 상반기 정규직(부연구위원 이상) 채용공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "· 전공분야 박사학위 소지자(’27년 9월 이내 취득예정자 포함) · 해외여행에 결격사유가 없는 자 · 병역문제가 해결된 대한민국 국민 · 인사규정 제9조에 따른 결격 사유가 없는 자 · ’27.8월까지 입사 가능한 자",
+    "endDate": "2026-12-11",
+    "applyUrl": "https://recruit.keei.re.kr:10443/ext/rec/rec_1000.jsp?SCH_ANNC_NM=& id=",
+    "url": "https://recruit.keei.re.kr:10443/ext/rec/rec_1000.jsp?SCH_ANNC_NM=& id="
   },
   {
     "company": "한국생명존중희망재단",
