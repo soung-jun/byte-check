@@ -220,28 +220,6 @@
     "url": "https://www.ex.co.kr/"
   },
   {
-    "company": "한국도로공사",
-    "title": "한국도로공사 전북본부 관내 지사(진안, 보령) 제설 기간제근로자(운전원) 채용",
-    "location": "충청",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "o 연령, 성별, 학력 제한 없음 o 우리공사 기간제근로자관리예규 제6조의1 제2항의 결격사유가 없는 자(공고문 참고) * 타공공기관에서 부정한 방법으로 채용된 사실이 적발되어 채용이 취소된 자는 응시 불가 o 1종 대형면허 취득 후 운전경력 1년 이상인 자 (채용공고일부터 근무시작일까지 법률 또는 법원의 판결에 의하여 제1종 대형 운전면허가 취소 또는 정지되지 아니한 자, 추후 발견 시 채용 취소) o 기관별 채용일(공고문 참조)로부터 근무 가능자",
-    "endDate": "2026-11-26",
-    "applyUrl": "https://www.ex.co.kr/",
-    "url": "https://www.ex.co.kr/"
-  },
-  {
-    "company": "한국도로공사",
-    "title": "한국도로공사 전북본부 관내 지사(논산, 남원) 제설 기간제근로자(도로관리원) 채용",
-    "location": "충청",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "o 연령, 성별, 학력 제한 없음 o 우리공사 기간제근로자관리예규 제6조의1 제2항의 결격사유가 없는 자(공고문 참고) * 타공공기관에서 부정한 방법으로 채용된 사실이 적발되어 채용이 취소된 자는 응시 불가 o 해당 업무 수행에 자질을 갖춘 자 o 기관별 채용일(공고문 참고)로부터 근무 가능자",
-    "endDate": "2026-11-26",
-    "applyUrl": "https://www.ex.co.kr/",
-    "url": "https://www.ex.co.kr/"
-  },
-  {
     "company": "근로복지공단",
     "title": "[대구병원] 2026년도 하반기 청년(체험형)인턴 장애전형 채용 공고",
     "location": "대구",
@@ -418,6 +396,28 @@
     "url": "https://kmedihub.recruiter.co.kr"
   },
   {
+    "company": "한국수자원공사",
+    "title": "[한국수자원공사] 대청댐지사 사회형평적 인재 단기계약근로자(물문화관 운영지원) 채용 공고(장애인 제한채용)",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "□ 「장애인고용촉진 및 직업재활법」 제2조에 따른 장애인 □ 연령, 성별, 학력 제한 없음 □ 남자의 경우 병역필 또는 면제자(병역특례 근무중인 자 제외) □ 우리 공사 인사규정에 의한 결격사유가 없는 자 □ 채용예정일로부터 현업 근무가 가능한 자",
+    "endDate": "2026-12-01",
+    "applyUrl": "https://k-water.recruiter.co.kr/",
+    "url": "https://k-water.recruiter.co.kr/"
+  },
+  {
+    "company": "한국수자원공사",
+    "title": "[한국수자원공사] SKH산업용수관리단 단기계약근로자(수탁운영_산업용수 시설운영(교대근무)) 채용 재공고(육아휴직 대체인력)",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "□ 연령, 성별, 학력 제한 없음 □ 남자의 경우 병역필 또는 면제자(병역특례 근무중인 자 제외) □ 우리 공사 인사규정에 의한 결격사유가 없는 자 □ 채용예정일부터 현업 근무가 가능한 자",
+    "endDate": "2026-12-01",
+    "applyUrl": "https://k-water.recruiter.co.kr",
+    "url": "https://k-water.recruiter.co.kr"
+  },
+  {
     "company": "근로복지공단",
     "title": "[근로복지공단] 공무직(시설미화원, 전기·기계·통신기사-기계분야) 채용 공고",
     "location": "전국",
@@ -506,37 +506,15 @@
     "url": "https://www.redcross.or.kr/redrecruit/"
   },
   {
-    "company": "한국지능정보사회진흥원",
-    "title": "2026년 한국지능정보사회진흥원 5차 계약직[무기계약직(운영직-미화, 시설(서울사무소), 중계직),휴직대체·단기계약직] 채용공고",
+    "company": "학교법인한국폴리텍",
+    "title": "한국폴리텍대학 서울강서캠퍼스 행정지원직(휴직 대체인력) 채용 공",
     "location": "서울",
     "hireType": "정규직/계약직",
     "recruitCount": "공고문 참조",
-    "education": "- 블라인드 채용에 따른 학력, 전공, 성별, 어학성적 등 제한없음(단, 지원분야별 조건 상이) [NIA의 일반직 정년(만 60세)을 초과한 자는 지원 불가] - 해외여행에 결격사유가 없는 자 - 채용 즉시 근무가 가능한 자, 전일근무 가능자 - 한국지능정보사회진흥원 인사규정 제6조(결격사유)에 해당하지 않는 자 분야별 자격요건 관련 자세한 내용은 첨부파일의 채용공고문을 참조바람.",
-    "endDate": "2026-12-02",
-    "applyUrl": "https://nia.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=272671",
-    "url": "https://nia.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=272671"
-  },
-  {
-    "company": "대한적십자사",
-    "title": "부산혈액원 비정규직 한시적근로자(사무보조원) 채용 공고",
-    "location": "부산",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "<필수자격조건> - 만18세이상, 고등학교 졸업(졸업예정자 포함) 이상 학력 소지자 - 사무분야 자격증 1개 이상 소지자(워드프로세서, 컴퓨터활용능력 2급이상, 한글속기 3급이상, 비서 3급이상) <공통자격조건> -「대한적십자사직원운영규정」 제56조(정년)에 해당되지 않는 자(공고일 기준 만60세 미만인 자) - 병역법 제76조의 병역의무 불이행자에 해당하지 않는 자 - 임용예정일(27. 1. 1.)부터 근무 가능한 자",
-    "endDate": "2026-12-02",
-    "applyUrl": "https://www.redcross.or.kr/redrecruit/",
-    "url": "https://www.redcross.or.kr/redrecruit/"
-  },
-  {
-    "company": "한국도로공사",
-    "title": "2026년 한국도로공사 전문직(AI전문가) 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "[기본요건] o 연령·성별 제한 없음 (단, 공사 정년(만 60세)에 도달하는 자 제외) o 공사 인사규정 제8조의 결격 사유가 없는 자 o 임용 예정일(2027년 1월 중)로부터 근무지(본사)에서 계속 근무 가능한 자 o 남자의 경우 병역필 또는 면제자(병역특례 근무 중인 자 제외) - 임용 예정일(2027년 1월 중) 이전 전역 예정자 포함 [자격요건] 아래 기준 중 하나 이상의 기준을 충족하는 자 ㅇ 해당전공 박사학위 소지자 ㅇ 해당전공 석사학위 취득 후 해당분야 3년 이상 경력자 ㅇ 해당전공 학사학위 취득 후 해당분야 6년 이상 경력자 - 해당전공 : 교육부 대학알리미 학과정보-표준분류정보(2026년) 중 응용소프트웨어공학, 전산학·컴퓨터공학, 정보·통신공학, 인공지능공학 - 해당분야 : 빅데이터 분석 및 AI 학습데이터 구축, AI모델 학습 등",
-    "endDate": "2026-12-02",
-    "applyUrl": "https://www.ex.co.kr",
-    "url": "https://www.ex.co.kr"
+    "education": "○ 연령·학력·전공·성별 제한 없음 ○ OA프로그램을 활용해 해당 직무수행이 가능한 자 ○ 남자의 경우 병역필 또는 면제자 ○ 학교법인 폴리텍 인사규정 제19조 결격사유 등에 해당하지 않는 자 ○ 최종합격자 발표 후 즉시 근무 가능한 자(2027. 1. 1. 임용 예정) ※ 부패방지권익위법 제82조에 따른 비위면직자는 5년간 공공기관 취업 제한?연령·학력·전공·성별 제한 없음 ※ 자세한 사항은 공고문 확인",
+    "endDate": "2026-12-03",
+    "applyUrl": "https://www.kopo.ac.kr/kangseo/board.do?menu=259&mode=view&post=791159",
+    "url": "https://www.kopo.ac.kr/kangseo/board.do?menu=259&mode=view&post=791159"
   },
   {
     "company": "분당서울대학교병원",
@@ -737,37 +715,15 @@
     "url": "https://pnuh.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=272458"
   },
   {
-    "company": "영화진흥위원회",
-    "title": "2027년 상반기 청년 체험형 인턴(장애인제한경쟁/단시간근로제) 공개채용 공고",
-    "location": "강원",
+    "company": "국립공원공단",
+    "title": "[다도해해상]2027년 다도해해상 국립공원지킴이[녹색순찰대] 직원 채용",
+    "location": "전라",
     "hireType": "정규직/계약직",
     "recruitCount": "공고문 참조",
-    "education": "- 「장애인고용촉진 및 직업재활법」에 따른 장애인 - 만 34세 이하인 자(서류접수 마감일(2026.12. 3.(목)) 기준) * 단, 「제대군인지원에 관한 법률」에 따라 제대군인의 경우 응시연령 상한을 다음과 같이 정함 · 군 복무기간: 1년 미만/ 응시연령: 만 35세 이하인 자 · 군 복무기간: 1년 이상~ 2년 미만/ 응시연령: 만 36세 이하인 자 · 군 복무기간: 2년 이상/ 응시연령: 만 37세 이하인 자 - 국가공무원법 제33조에 의한 채용 결격 사유가 없는 자 - 위원회 인사규정 제21조에 의한 채용 결격 사유가 없는 자 - 최종 합격 후 바로 근무가 가능한 자 - 학력, 전공, 성별, 병역(미필자 지원가능) 제한 없음 - 재학생, 휴학생 및 취업이 결정된 자는 지원 불가",
-    "endDate": "2026-12-03",
-    "applyUrl": "https://kofic.or.kr/kofic/business/board/selectBoardDetail.do?boardNumber=4&boardSeqNumber=76684",
-    "url": "https://kofic.or.kr/kofic/business/board/selectBoardDetail.do?boardNumber=4&boardSeqNumber=76684"
-  },
-  {
-    "company": "영화진흥위원회",
-    "title": "2027년 상반기 청년 체험형 인턴(일반) 공개채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "- 만 34세 이하인 자(서류접수 마감일(2026.12. 3.(목)) 기준) * 단, 제대군인지원에 관한 법률에 따라 제대군인의 경우 응시연령 상한 연장 - 국가공무원법 제33조에 의한 채용 결격 사유가 없는 자 - 위원회 인사규정 제21조에 의한 채용 결격 사유가 없는 자 - 최종 합격 후 바로 근무가 가능한 자 - 학력, 전공, 성별, 병역(미필자 지원가능) 제한 없음 - 재학생, 휴학생 및 취업이 결정된 자는 지원 불가",
-    "endDate": "2026-12-03",
-    "applyUrl": "https://kofic.or.kr/kofic/business/board/selectBoardDetail.do?boardNumber=4&boardSeqNumber=76705",
-    "url": "https://kofic.or.kr/kofic/business/board/selectBoardDetail.do?boardNumber=4&boardSeqNumber=76705"
-  },
-  {
-    "company": "국립생태원",
-    "title": "2026년 제9차 국립생태원 기간제근로자(수탁과제) 채용 공고",
-    "location": "전국",
-    "hireType": "정규직/계약직",
-    "recruitCount": "공고문 참조",
-    "education": "가. 국립생태원 「기간제근로자 관리세칙」 제8조의 결격사유에 해당되지 않은 자 나. 자격 및 경력 요건: 해당분야 전공자 및 경력자로서 해당 업무 수행이 가능한 자 (※전문위원 가급) 1. 채용예정 직무분야와 관련된 박사학위 취득 후 2년 이상 경력이 있는 자 2. 채용예정 직무분야와 관련된 석사학위 취득 후 11년 이상 경력이 있는 자 3. 채용예정 직무분야와 관련된 학사학위 취득 후 14년 이상 경력이 있는 자 4. 기술사 자격을 취득하고 해당분야에 2년 이상 경력이 있는 자 5. 기사 자격을 취득하고 해당분야에 11년 이상 경력이 있는 자 6. 환경측정분석사 자격을 취득하고 해당분야에 6년 이상 경력이 있는 자 (※전문위원 마급) 위 “가부터 라”의 자격 및 경력요건에 포함할 수 없는 자격·기능 및 경력이 있는 자 * 비교를 위함 - '전문위원 라급' 1. 채용예정 직무분야와 관련된 석사학위 취득 후 2년 이상 경력이 있는 자 2. 채용예정 직무분야와 관련된 학사학위 취득 후 5년 이상 경력이 있는 자 3. 기사 자격을 취득하고 해당 분야에 2년 이상 경력이 있는 자 4. 산업기사 자격을 취득하고 해당 분야에 6년 이상 경력이 있는 자 다. 병역을 필하였거나 면제된 자(남자만 해당) 라. 장애인 또는 보훈대상자 관계법에 따라 우대(관련 서류 제출 시) 마. 최종 합격 후 즉시 출근이 가능한 자",
-    "endDate": "2026-12-03",
-    "applyUrl": "https://nierecruit.fairy.im/announcement/detail/121",
-    "url": "https://nierecruit.fairy.im/announcement/detail/121"
+    "education": "-학력,전공, 나이 제한 없음(만18세이상) -공단 인사규정 제18조(결격사유)에 해당되지 않는 자 -소득,자산 기준 초과자*는 참여 제한 -직접일자리사업 반복** 및 중복*** 참여자는 참여 제한 *,**,***세부내용은 아래 ‘8.기타사항’의 ‘바～자’항 참조",
+    "endDate": "2026-12-04",
+    "applyUrl": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM020082",
+    "url": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM020082"
   },
   {
     "company": "한국장애인고용공단",
@@ -1243,6 +1199,28 @@
     "url": "https://www.redcross.or.kr/main/pt/pst/selectPstInfo.do?mi=2378&bbsId=1422&pstSn=506597"
   },
   {
+    "company": "국립공원공단",
+    "title": "[월악산] 2027년 월악산국립공원사무소 기간제(국립공원지킴이) 직원 채용",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "- 공단 인사규정 제18조(결격사유)에 해당되지 않는 자 - 학력, 전공, 나이 제한 없음 - 소득·자산 기준 초과자는 참여 제한(공고문 참고) - 직접일자리사업 반복 및 중복 참여자는 참여 제한(공고문 참고)",
+    "endDate": "2026-12-08",
+    "applyUrl": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM020081",
+    "url": "https://www.knps.or.kr/front/portal/recruit/recruitDtl.do?menuNo=7070064&emplyId=EMPM020081"
+  },
+  {
+    "company": "국립중앙의료원",
+    "title": "2027년도 한방 전문수련의 모집 공고",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "가. 일반수련의 수료자 또는 수료예정자 (단, 군의요원은 국방부에서 승인된 자로 병역법상의 연령 제한까지 수련과정을 모두 마칠 수 있어야 함) 나. 아동·청소년의 성보호에 관한 법률 제56조, 아동복지법 제29조의3, 노인복지법 제39조의17 및 장애인복지법 제59조의3에 해당되지 않는 자 다. 국가공무원법 제33조 및 본원 인사규정 제19조에 해당되지 않는 자 다. 추천제도 폐지 - 특정 교수, 과장의 추천서 요구 등 추천제도를 폐지하고 모든 지원자에게 동일 균등한 기회 제공",
+    "endDate": "2026-12-08",
+    "applyUrl": "https://www.nmc.or.kr/nmc/board/B0000007/28476",
+    "url": "https://www.nmc.or.kr/nmc/board/B0000007/28476"
+  },
+  {
     "company": "대한적십자사",
     "title": "[대한적십자사 대전세종지사] 2027년도 사무직(재난심리직무/세종) 채용 공고",
     "location": "대전",
@@ -1362,6 +1340,28 @@
     "endDate": "2026-12-08",
     "applyUrl": "https://jbuh.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=272978",
     "url": "https://jbuh.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=272978"
+  },
+  {
+    "company": "한국농어촌공사",
+    "title": "한국농어촌공사 금강사업단 공무직(청소원) 일반공개경쟁 채용공",
+    "location": "전국",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "- 학력, 전공, 성별, 연령 제한 없음(단, 정년에 도달하지 아니한 자) - 국가유공자 등 예우 및 지원에 관한 법률에 따른 취업지원대상자 또는 장애인 고용촉진 및 직업재활법에 따른 장애인만 지원 가능 - 임용예정일로부터 즉시 업무종사 가능자 - 남자의 경우, 병역법 제76조에서 정한 병역의무 불이행 사실이 없는 자 - 공사 인사규정 제9조의 임용 결격사유가 없는 자(공고문 참조) - 근무지로 출퇴근 가능자",
+    "endDate": "2026-12-09",
+    "applyUrl": "https://www.ekr.or.kr/planweb/board/view.krc?dataUid=8a8bb352a1e76c7a01a206a2d58a5d9b&page=1&boardUid=402880317cc0644a017cc5e8000f06b7&contentUid=8a8bb3529665d7140199501cd3ef6280&searchType=&keyword=&categoryUid1=&categoryUid2=8a8bb3529665d714019951996437",
+    "url": "https://www.ekr.or.kr/planweb/board/view.krc?dataUid=8a8bb352a1e76c7a01a206a2d58a5d9b&page=1&boardUid=402880317cc0644a017cc5e8000f06b7&contentUid=8a8bb3529665d7140199501cd3ef6280&searchType=&keyword=&categoryUid1=&categoryUid2=8a8bb3529665d714019951996437"
+  },
+  {
+    "company": "부산대학교병원",
+    "title": "2026년도 전문의료인력(전임의사) 공개채용(수시) 모집 공고(양산분원)",
+    "location": "부산",
+    "hireType": "정규직/계약직",
+    "recruitCount": "공고문 참조",
+    "education": "전임의사- 전문의자격증소지자",
+    "endDate": "2026-12-09",
+    "applyUrl": "https://pnuyh.recruiter.co.kr/career/jobs/133076",
+    "url": "https://pnuyh.recruiter.co.kr/career/jobs/133076"
   },
   {
     "company": "대한적십자사",
